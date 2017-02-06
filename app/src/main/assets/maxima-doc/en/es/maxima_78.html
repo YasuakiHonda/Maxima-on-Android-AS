@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on abril, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Maxima 5.36.0: 78. unit</title>
+
+<meta name="description" content="Manual de Maxima 5.36.0: 78. unit">
+<meta name="keywords" content="Manual de Maxima 5.36.0: 78. unit">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="unit"></a>
+<a name="SEC371"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_77.html#SEC370" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC372" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 78. unit </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC372">78.1 Introducción a units</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC373">78.2 Funciones y variables para units</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Introducci_00f3n-a-units"></a>
+<a name="SEC372"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC371" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC373" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC371" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC371" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 78.1 Introducción a units </h2>
+
+<p>El paquete <code>unit</code> permite al usuario hacer cambios de unidades y
+llevar a cabo el análisis dimensional de las ecuaciones. La forma de operar de
+este paquete es radicalmente diferente de la del paquete original de Maxima;
+mientras que en el paquete original era tan solo una lista de definiciones,
+aquí se utiliza un conjunto de reglas que permiten seleccionar al usuario
+en qué unidades debe devolverse la expresión final. 
+</p>
+<p>Junto con el análisis dimensional, el paquete aporta una serie de 
+herramientas para controlar las opciones de conversión y simplificación.
+Además de la conversión automática adaptable a las necesidades del
+usuario, el paquete <code>unit</code> permite hacer conversiones a la manera
+tradicional.
+</p>
+<p>Nota: Cuando los factores de conversión no son exactos, Maxima los
+transformará a fracciones como consecuencia de la metodología
+utilizada para simplificar las unidades. Los mensajes de aviso concernientes a
+estas transformaciones están desactivados por defecto en el caso de las
+unidades (lo habitual es que estén activados en otros contextos) debido a
+que al ser una operación muy frecuente, serían un estorbo. 
+El estado previo de la variable <code>ratprint</code> queda restaurado tras la
+conversión de las unidades, de manera que se mantendrá la opción
+seleccionada por el usuario; en caso de que éste necesite ver dichos 
+avisos, podrá hacer la asignación <code>unitverbose:on</code> para
+reactivarlos desde el proceso de conversión de unidades.
+</p>
+<p>El paquete <code>unit</code> se aloja en el directorio <code>share/contrib/unit</code>
+y se ajusta a las convenciones de Maxima para la carga de paquetes:
+</p>
+<pre class="example">(%i1) load(&quot;unit&quot;)$
+******************************************************************* 
+*                       Units version 0.50                        * 
+*          Definitions based on the NIST Reference on             * 
+*              Constants, Units, and Uncertainty                  * 
+*       Conversion factors from various sources including         * 
+*                   NIST and the GNU units package                * 
+******************************************************************* 
+ 
+Redefining necessary functions... 
+WARNING: DEFUN/DEFMACRO: 
+         redefining function TOPLEVEL-MACSYMA-EVAL ...
+WARNING: DEFUN/DEFMACRO: redefining function MSETCHK ...
+WARNING: DEFUN/DEFMACRO: redefining function KILL1 ...
+WARNING: DEFUN/DEFMACRO: redefining function NFORMAT ...
+Initializing unit arrays... 
+Done. 
+</pre>
+<p>Los avisos del tipo <code>WARNING</code> son normales y no deben interpretarse
+como errores; tan solo indican que el paquete <code>unit</code> está redefiniendo
+funciones que ya estaban definidas en Maxima. Esto es necesario para que las
+unidades se gestionen de forma correcta. El usuario debe tener en cuenta que si 
+otros paquetes han cambiado las definiciones de estas funciones, tales cambios serán
+ignorados por el proceso de carga de <code>unit</code>.
+</p>
+<p>El paquete <code>unit</code> también carga el fichero de Lisp <code>unit-functions.lisp</code>,
+el cual contiene las funciones Lisp necesarias.
+</p>
+<p>El autor principal de este paquete es Clifford Yapp, quien ha recibido ayuda
+y asistencia, entre otros, de Barton Willis y Robert Dodier.
+</p>
+<hr size="6">
+<a name="Funciones-y-variables-para-units"></a>
+<a name="SEC373"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC372" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC371" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC371" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 78.2 Funciones y variables para units </h2>
+
+
+<dl>
+<dt><u>Función:</u> <b>setunits</b><i> (<var>list</var>)</i>
+<a name="IDX2835"></a>
+</dt>
+<dd><p>El paquete <code>unit</code> no utiliza por defecto dimensiones derivadas, pero convierte
+todas las unidades a las siete fundamentales en unidades MKS.
+</p>
+<pre class="example">(%i2) N;
+                                     kg m
+(%o2)                                ----
+                                       2
+                                      s
+(%i3) dyn;
+                                   1      kg m
+(%o3)                           (------) (----)
+                                 100000     2
+                                           s
+(%i4) g;
+                                    1
+(%o4)                             (----) (kg)
+                                   1000
+(%i5) centigram*inch/minutes^2;
+                                  127        kg m
+(%o5)                       (-------------) (----)
+                             1800000000000     2
+                                              s
+</pre>
+<p>Este es el comportamiento que se desea en ciertos casos. Si
+el usuario necesita utilizar otras unidades, habrá de utilizar la
+instrucción <code>setunits</code>:
+</p><pre class="example">(%i6) setunits([centigram,inch,minute]);
+(%o6)                                done
+(%i7) N;
+                            1800000000000   %in cg
+(%o7)                      (-------------) (------)
+                                 127            2
+                                            %min
+(%i8) dyn;
+                               18000000   %in cg
+(%o8)                         (--------) (------)
+                                 127          2
+                                          %min
+(%i9) g;
+(%o9)                             (100) (cg)
+(%i10) centigram*inch/minutes^2;
+                                    %in cg
+(%o10)                              ------
+                                        2
+                                    %min
+</pre>
+<p>La especificación de las variables es relativamente flexible.
+Por ejemplo, si se quiere volver a utilizar kilogramos, metros y
+segundos como unidades por defecto, podemos hacer:
+</p><pre class="example">(%i11) setunits([kg,m,s]);
+(%o11)                               done
+(%i12) centigram*inch/minutes^2;
+                                  127        kg m
+(%o12)                      (-------------) (----)
+                             1800000000000     2
+                                              s
+</pre>
+<p>Las unidades derivadas también se controlan con esta misma instrucción:
+</p><pre class="example">(%i17) setunits(N);
+(%o17)                               done
+(%i18) N;
+(%o18)                                 N
+(%i19) dyn;
+                                    1
+(%o19)                           (------) (N)
+                                  100000
+(%i20) kg*m/s^2;
+(%o20)                                 N
+(%i21) centigram*inch/minutes^2;
+                                    127
+(%o21)                        (-------------) (N)
+                               1800000000000
+</pre>
+<p>Téngase en cuenta que el paquete <code>unit</code> reconoce que la
+combinación de masa, longitud e inversa del cuadrado del tiempo da
+lugar a una fuerza, convirtiéndola a newtons. Esta es la forma
+general en la que trabaja Maxima. Si el usuario prefiere dinas a newtons,
+tan solo tendrá que hacer lo siguiente:
+</p><pre class="example">(%i22) setunits(dyn);
+(%o22)                               done
+(%i23) kg*m/s^2;
+(%o23)                          (100000) (dyn)
+(%i24) centigram*inch/minutes^2;
+                                  127
+(%o24)                         (--------) (dyn)
+                                18000000
+</pre>
+<p>Para desactivar una unidad se utiliza la instrucción <code>uforget</code>:
+</p><pre class="example">(%i26) uforget(dyn);
+(%o26)                               false
+(%i27) kg*m/s^2;
+                                     kg m
+(%o27)                               ----
+                                       2
+                                      s
+(%i28) centigram*inch/minutes^2;
+                                  127        kg m
+(%o28)                      (-------------) (----)
+                             1800000000000     2
+                                              s
+</pre><p>Esto también hubiese funcionado con <code>uforget(N)</code> o
+<code>uforget(%force)</code>. 
+</p>
+
+<p>Véase también <code>uforget</code>. Para hacer uso de esta función ejecútese <code>load(&quot;unit&quot;)</code>.
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>uforget</b><i> (<var>list</var>)</i>
+<a name="IDX2836"></a>
+</dt>
+<dd><p>Por defecto, el paquete <code>unit</code> convierte todas las unidades a las
+siete fundamentales del sistema MKS. Este comportamiento puede alterarse
+mediante la instrucción <code>setunits</code>. Después, si el usuario quiere
+restaurar el comportamiento por defecto podrá hacerlo para una dimensión
+determinada haciendo uso de la instrucción <code>uforget</code>:
+</p><pre class="example">(%i13) setunits([centigram,inch,minute]);
+(%o13)                               done
+(%i14) centigram*inch/minutes^2;
+                                    %in cg
+(%o14)                              ------
+                                        2
+                                    %min
+(%i15) uforget([cg,%in,%min]);
+(%o15)                      [false, false, false]
+(%i16) centigram*inch/minutes^2;
+                                  127        kg m
+(%o16)                      (-------------) (----)
+                             1800000000000     2
+                                              s
+</pre>
+<p>La instrucción <code>uforget</code> opera
+sobre dimensiones, no sobre unidades, de modo que valdrá para
+cualquier unidad de una dimensión concreta. La propia dimensión
+es una argumento válido para esta función.
+</p>
+<p>Véase también <code>setunits</code>. Para hacer uso de esta función ejecútese <code>load(&quot;unit&quot;)</code>.
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>convert</b><i> (<var>expr</var>, <var>list</var>)</i>
+<a name="IDX2837"></a>
+</dt>
+<dd><p>La función <code>convert</code> permite conversiones de una sola vez sin
+alterar el entorno global de ejecución. Acepta tanto un único argumento
+como una lista de unidades a utilizar en las conversiones. Cuando se realiza
+una llamada a <code>convert</code> se ignora el sistema global de evaluación, con 
+el fin de evitar que el resultado deseado sea nuevamente transformado.
+Como consecuencia de esto, en los cálculos con decimales, los avisos de
+tipo <code>rat</code> se harán visibles si la variable global <code>ratprint</code>
+vale <code>true</code>. Otra propiedad de <code>convert</code> es que permite al
+usuario hacer conversiones al sistema fundamental de dimensiones incluso
+cuando el entorno ha sido ajustado para simplificar a una dimensión
+derivada.
+</p><pre class="example">(%i2) kg*m/s^2;
+                                     kg m
+(%o2)                                ----
+                                       2
+                                      s
+(%i3) convert(kg*m/s^2,[g,km,s]);
+                                     g km
+(%o3)                                ----
+                                       2
+                                      s
+(%i4) convert(kg*m/s^2,[g,inch,minute]);
+
+`rat' replaced 39.37007874015748 by 5000/127 = 39.37007874015748
+                              18000000000   %in g
+(%o4)                        (-----------) (-----)
+                                  127           2
+                                            %min
+(%i5) convert(kg*m/s^2,[N]);
+(%o5)                                  N
+(%i6) convert(kg*m^2/s^2,[N]);
+(%o6)                                 m N
+(%i7) setunits([N,J]);
+(%o7)                                done
+(%i8) convert(kg*m^2/s^2,[N]);
+(%o8)                                 m N
+(%i9) convert(kg*m^2/s^2,[N,inch]);
+
+`rat' replaced 39.37007874015748 by 5000/127 = 39.37007874015748
+                                 5000
+(%o9)                           (----) (%in N)
+                                 127
+(%i10) convert(kg*m^2/s^2,[J]);
+(%o10)                                 J
+(%i11) kg*m^2/s^2;
+(%o11)                                 J
+(%i12) setunits([g,inch,s]);
+(%o12)                               done
+(%i13) kg*m/s^2;
+(%o13)                                 N
+(%i14) uforget(N);
+(%o14)                               false
+(%i15) kg*m/s^2;
+                                5000000   %in g
+(%o15)                         (-------) (-----)
+                                  127       2
+                                           s
+(%i16) convert(kg*m/s^2,[g,inch,s]);
+
+`rat' replaced 39.37007874015748 by 5000/127 = 39.37007874015748
+                                5000000   %in g
+(%o16)                         (-------) (-----)
+                                  127       2
+                                           s
+</pre>
+<p>Véanse también <code>setunits</code> y <code>uforget</code>.
+Para hacer uso de esta función ejecútese <code>load(&quot;unit&quot;)</code>.
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>usersetunits</b>
+<a name="IDX2838"></a>
+</dt>
+<dd><p>Valor por defecto: ninguno
+</p>
+<p>En caso de que el usuario desee que el comportamiento por defecto del
+paquete <code>unit</code> sea distinto del descrito, puede hacer uso del
+fichero <code>maxima-init.mac</code> y de la variable global <code>usersetunits</code>.
+El paquete <code>unit</code> comprobará al ser cargado si se le ha dado a esta
+variable una lista de unidades; en caso afirmativo, aplicará <code>setunits</code>
+a las unidades de esta lista y las utilizará por defecto. Una llamada a la
+función <code>uforget</code> permitirá retornar al comportamiento establecido
+por defecto por el usuario. Por ejemplo, si en el archivo <code>maxima-init.mac</code>
+se tiene el siguiente código:
+</p><pre class="example">usersetunits : [N,J];
+</pre>
+<p>observaríamos el siguiente comportamiento:
+</p><pre class="example">(%i1) load(&quot;unit&quot;)$
+*******************************************************************
+*                       Units version 0.50                        *
+*          Definitions based on the NIST Reference on             *
+*              Constants, Units, and Uncertainty                  *
+*       Conversion factors from various sources including         *
+*                   NIST and the GNU units package                *
+*******************************************************************
+
+Redefining necessary functions...
+WARNING: DEFUN/DEFMACRO: redefining function
+ TOPLEVEL-MACSYMA-EVAL ...
+WARNING: DEFUN/DEFMACRO: redefining function MSETCHK ...
+WARNING: DEFUN/DEFMACRO: redefining function KILL1 ...
+WARNING: DEFUN/DEFMACRO: redefining function NFORMAT ...
+Initializing unit arrays...
+Done.
+User defaults found...
+User defaults initialized.
+(%i2) kg*m/s^2;
+(%o2)                                  N
+(%i3) kg*m^2/s^2;
+(%o3)                                  J
+(%i4) kg*m^3/s^2;
+(%o4)                                 J m
+(%i5) kg*m*km/s^2;
+(%o5)                             (1000) (J)
+(%i6) setunits([dyn,eV]);
+(%o6)                                done
+(%i7) kg*m/s^2;
+(%o7)                           (100000) (dyn)
+(%i8) kg*m^2/s^2;
+(%o8)                     (6241509596477042688) (eV)
+(%i9) kg*m^3/s^2;
+(%o9)                    (6241509596477042688) (eV m)
+(%i10) kg*m*km/s^2;
+(%o10)                   (6241509596477042688000) (eV)
+(%i11) uforget([dyn,eV]);
+(%o11)                           [false, false]
+(%i12) kg*m/s^2;
+(%o12)                                 N
+(%i13) kg*m^2/s^2;
+(%o13)                                 J
+(%i14) kg*m^3/s^2;
+(%o14)                                J m
+(%i15) kg*m*km/s^2;
+(%o15)                            (1000) (J)
+</pre>
+<p>De no haber hecho uso de <code>usersetunits</code>, las entradas iniciales hubiesen
+sido convertidas a unidades MKS y cualquier llamada a <code>uforget</code> hubiese
+retornado también a MKS. Sin embargo, las preferencias establecidas por el
+usuario se respetan en ambos casos. Para eliminar las preferencias del usuario
+y volver a utilizar las establecidas por defecto por el paquete <code>unit</code>,
+debe utilizarse la instrucción <code>dontusedimension</code>. La función
+<code>uforget</code> puede restaurar nuevamente las preferencias del usuario, pero
+sólo si <code>usedimension</code> mantiene su valor. Alternativamente, 
+<code>kill(usersetunits)</code>  eliminará completamente cualquier vestigio de las
+preferencias del usuario durante la sesión actual. Véanse a continuación
+algunos ejemplos de aplicación de estas opciones:
+</p><pre class="example">(%i2) kg*m/s^2;
+(%o2)                                  N
+(%i3) kg*m^2/s^2;
+(%o3)                                  J
+(%i4) setunits([dyn,eV]);
+(%o4)                                done
+(%i5) kg*m/s^2;
+(%o5)                           (100000) (dyn)
+(%i6) kg*m^2/s^2;
+(%o6)                     (6241509596477042688) (eV)
+(%i7) uforget([dyn,eV]);
+(%o7)                          [false, false]
+(%i8) kg*m/s^2;
+(%o8)                                  N
+(%i9) kg*m^2/s^2;
+(%o9)                                  J
+(%i10) dontusedimension(N);
+(%o10)                             [%force]
+(%i11) dontusedimension(J);
+(%o11)                         [%energy, %force]
+(%i12) kg*m/s^2;
+                                     kg m
+(%o12)                               ----
+                                       2
+                                      s
+(%i13) kg*m^2/s^2;
+                                         2
+                                     kg m
+(%o13)                               -----
+                                       2
+                                      s
+(%i14) setunits([dyn,eV]);
+(%o14)                               done
+(%i15) kg*m/s^2;
+                                     kg m
+(%o15)                               ----
+                                       2
+                                      s
+(%i16) kg*m^2/s^2;
+                                         2
+                                     kg m
+(%o16)                               -----
+                                       2
+                                      s
+(%i17) uforget([dyn,eV]);
+(%o17)                         [false, false]
+(%i18) kg*m/s^2;
+                                     kg m
+(%o18)                               ----
+                                       2
+                                      s
+(%i19) kg*m^2/s^2;
+                                         2
+                                     kg m
+(%o19)                               -----
+                                       2
+                                      s
+(%i20) usedimension(N);
+Done.  To have Maxima simplify to this dimension, use
+setunits([unit]) to select a unit.
+(%o20)                               true
+(%i21) usedimension(J);
+Done.  To have Maxima simplify to this dimension, use
+setunits([unit]) to select a unit.
+(%o21)                               true
+(%i22) kg*m/s^2;
+                                     kg m
+(%o22)                               ----
+                                       2
+                                      s
+(%i23) kg*m^2/s^2;
+                                         2
+                                     kg m
+(%o23)                               -----
+                                       2
+                                      s
+(%i24) setunits([dyn,eV]);
+(%o24)                               done
+(%i25) kg*m/s^2;
+(%o25)                          (100000) (dyn)
+(%i26) kg*m^2/s^2;
+(%o26)                    (6241509596477042688) (eV)
+(%i27) uforget([dyn,eV]);
+(%o27)                           [false, false]
+(%i28) kg*m/s^2;
+(%o28)                                 N
+(%i29) kg*m^2/s^2;
+(%o29)                                 J
+(%i30) kill(usersetunits);
+(%o30)                               done
+(%i31) uforget([dyn,eV]);
+(%o31)                          [false, false]
+(%i32) kg*m/s^2;
+                                     kg m
+(%o32)                               ----
+                                       2
+                                      s
+(%i33) kg*m^2/s^2;
+                                         2
+                                     kg m
+(%o33)                               -----
+                                       2
+                                      s
+</pre>
+<p>Desafortunadamente, esta amplia variedad de opciones puede resultar
+confusa en un primer momento, pero una vez se practica un poco con
+ellas, el usuario comprobará que tiene un control absoluto sobre
+su entorno de trabajo.
+</p>
+
+
+
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>metricexpandall</b><i> (<var>x</var>)</i>
+<a name="IDX2839"></a>
+</dt>
+<dd><p>Reconstruye automáticamente las listas globales de unidades creando todas
+los múltiplos y submúltiplos métricos necesarios. El argumento numérico 
+<var>x</var> se utiliza para especificar cuántos prefijos numéricos quiere 
+utilizar el usuario. Los argumentos son los siguientes:
+</p><pre class="example">               0 - none. Only base units
+               1 - kilo, centi, milli
+(por defecto)  2 - giga, mega, kilo, hecto, deka, deci, centi,
+                   milli, micro, nano
+               3 - peta, tera, giga, mega, kilo, hecto, deka,
+                   deci, centi, milli, micro, nano, pico, 
+                   femto
+               4 - todos
+</pre>
+<p>Normalmente, Maxima no definirá el juego completo de múltiplos y 
+submúltiplos, lo que implica un número muy grande de unidades, pero
+<code>metricexpandall</code> puede utilizarse para reconstruir la lista. La
+variable fundamental del paquete <code>unit</code> es <code>%unitexpand</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Variable opcional:</u> <b>%unitexpand</b>
+<a name="IDX2840"></a>
+</dt>
+<dd><p>Valor por defecto: <code>2</code>
+</p>
+<p>Es el valor suministrado a <code>metricexpandall</code> durante la carga del
+paquete <code>unit</code>.
+</p></dd></dl>
+
+
+
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC371" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>abril, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Janeiro, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Maxima 5.35.71.g68475e4: 34. Ambiente em Tempo de Execução</title>
+
+<meta name="description" content="Manual do Maxima 5.35.71.g68475e4: 34. Ambiente em Tempo de Execução">
+<meta name="keywords" content="Manual do Maxima 5.35.71.g68475e4: 34. Ambiente em Tempo de Execução">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Ambiente-em-Tempo-de-Execu_00e7_00e3o"></a>
+<a name="SEC134"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_33.html#SEC133" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC135" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_33.html#SEC132" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_35.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 34. Ambiente em Tempo de Execução </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC135">34.1 Introdução a Ambiente em Tempo de Execução</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC136">34.2 Interrupções</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC137">34.3 Definições para Ambiente em Tempo de Execução</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+</table>
+
+
+<hr size="6">
+<a name="Introdu_00e7_00e3o-a-Ambiente-em-Tempo-de-Execu_00e7_00e3o"></a>
+<a name="SEC135"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC134" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC136" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC134" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC134" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_35.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 34.1 Introdução a Ambiente em Tempo de Execução </h2>
+<p><code>maxima-init.mac</code> é um ficheiro que é chamado automaticamente
+quando o Maxima inicia.  Pode usar <code>maxima-init.mac</code> para
+personalizar o seu ambiente no Maxima.  <code>maxima-init.mac</code>, se existir,
+é tipicamente colocado no directório chamado por
+<code>maxima_userdir</code>, embora possa estar em qualquer outro directório
+procurado pela função <code>file_search</code>.
+</p>
+<p>Aqui está um exemplo do ficheiro <code>maxima-init.mac</code>:
+</p>
+<pre class="example">setup_autoload (&quot;specfun.mac&quot;, ultraspherical, assoc_legendre_p);
+showtime:all;
+</pre>
+<p>Nesse Exemplo, <code>setup_autoload</code> diz ao Maxima para chamar o
+ficheiro especificado (<code>specfun.mac</code>) se qualquer das
+funções (<code>ultraspherical</code>, <code>assoc_legendre_p</code>)
+forem chamadas sem estarem definidas.  Dessa forma, não precisa de se
+lembrar de chamar o ficheiro antes das funções.
+</p>
+<p>A declaração <code>showtime: all</code> diz ao Maxima para
+activar a opção <code>showtime</code>.  O ficheiro
+<code>maxima-init.mac</code> pode conter quaisquer outras
+atribuições ou outras declarações do
+Maxima.
+</p>
+<hr size="6">
+<a name="Interrup_00e7_00f5es"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC135" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC137" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC134" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC134" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_35.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<a name="SEC136"></a>
+<h2 class="section"> 34.2 Interrupções </h2>
+
+<p>O utilizador pode parar uma computação que consome muito
+tempo com o caractere ^C (control-C).  A ação padrão
+é parar a computação e mostrar outra linha de comando
+do utilizador.  Nesse caso, não é possível continuar a
+computação interrompida.
+</p>
+<p>Se a variável <code>*debugger-hook*</code> é escolhida para <code>nil</code>,
+através do comando
+</p>
+<pre class="example">:lisp (setq *debugger-hook* nil)
+</pre>
+
+<p>então na ocasião do recebimento do ^C, Maxima iniciará o depurador
+Lisp, e o utilizador pode usar o depurador para inspecionar o ambiente
+Lisp.  A computação interrompida pode ser retomada
+através do comando <code>continue</code> no depurador Lisp.  O método de
+retorno para ao Maxima partindo do depurador Lisp (outro como executando
+a computação para complementação) é
+diferente para cada versão do Lisp.
+</p>
+<p>Em sistemas Unix, o caratere ^Z (control-Z) faz com que Maxima
+pare tudo e aguarde em segundo plano, e o controle é retornado para a linha de comando do shell.
+O comando <code>fg</code> faz com que o Maxima
+retorne ao primeiro plano e continue a partir do ponto no qual foi interrompido.
+</p>
+<hr size="6">
+<a name="Defini_00e7_00f5es-para-Ambiente-em-Tempo-de-Execu_00e7_00e3o"></a>
+<a name="SEC137"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC136" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_35.html#SEC138" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC134" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC134" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_35.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 34.3 Definições para Ambiente em Tempo de Execução </h2>
+
+<dl>
+<dt><u>Declaração:</u> <b>feature</b>
+<a name="IDX1127"></a>
+</dt>
+<dd><p>Maxima compreende dois tipos distintos de recurso,
+recursos do sistema e recursos aplicados a expressões matemáticas.
+Veja Também <code>status</code> para informações sobre recursos do sistema.
+Veja Também <code>features</code> e <code>featurep</code> para informações sobre recursos matemáticos.
+</p>
+<p><code>feature</code> por si mesmo não é o nome de uma função ou variável.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>featurep</b><i> (<var>a</var>, <var>f</var>)</i>
+<a name="IDX1128"></a>
+</dt>
+<dd><p>Tenta determinar se o objecto <var>a</var> tem o
+recurso <var>f</var> na base dos factos dentro base de dados corrente.  Se possue,
+é retornado <code>true</code>, de outra forma é retornado <code>false</code>.
+</p>
+<p>Note que <code>featurep</code> retorna <code>false</code> quando nem <var>f</var>
+nem a negação de <var>f</var> puderem ser estabelecidas.
+</p>
+<p><code>featurep</code> avalia seus argumentos.
+</p>
+<p>Veja também <code>declare</code> e <code>features</code>.
+</p>       
+<pre class="example">(%i1) declare (j, even)$
+(%i2) featurep (j, integer);
+(%o2)                           true
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de sistema:</u> <b>maxima_tempdir</b>
+<a name="IDX1129"></a>
+</dt>
+<dd><p><code>maxima_tempdir</code> nomeia o directório no qual Maxima cria alguns ficheiros temporários.
+Em particular, ficheiros temporários para impressão são criados no <code>maxima_tempdir</code>.
+</p>
+<p>O valor inicial de <code>maxima_tempdir</code> é o directório do utilizador,
+se o maxima puder localizá-lo; de outra forma Maxima supõe um directório adequado.
+</p>
+<p>A <code>maxima_tempdir</code> pode ser atribuído uma sequência de caracteres que corresponde a um directório.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de sistema:</u> <b>maxima_userdir</b>
+<a name="IDX1130"></a>
+</dt>
+<dd><p><code>maxima_userdir</code> nomeia um directório no qual Maxima espera encontrar seus próprios ficheiros e os do ficheiros do Lisp.
+(Maxima procura em alguns outros directórios também;
+<code>file_search_maxima</code> e <code>file_search_lisp</code> possuem a lista completa.)
+</p>
+<p>O valor inicial de <code>maxima_userdir</code> é um subdirectório do directório do utilizador,
+se Maxima puder localizá-lo; de outra forma Maxima supõe um directório adequado.
+</p>
+<p>A <code>maxima_userdir</code> pode ser atribuído uma sequência de caracteres que corresponde a um directório.
+Todavia, fazendo uma atribuição a <code>maxima_userdir</code> não muda automaticamente o valor de
+<code>file_search_maxima</code> e de <code>file_search_lisp</code>;
+Essas variáveis devem ser modificadas separadamente.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>room</b><i> ()</i>
+<a name="IDX1131"></a>
+</dt>
+<dt><u>Função:</u> <b>room</b><i> (true)</i>
+<a name="IDX1132"></a>
+</dt>
+<dt><u>Função:</u> <b>room</b><i> (false)</i>
+<a name="IDX1133"></a>
+</dt>
+<dd><p>Mostra uma descrição do estado de armazenamento e
+gerenciamento de pilha no Maxima. <code>room</code> chama a função Lisp de
+mesmo nome.
+</p>
+<ul>
+<li>
+<code>room ()</code> mostra uma descrição moderada.
+</li><li>
+<code>room (true)</code> mostra uma descrição detalhada.
+</li><li>
+<code>room (false)</code> mostra uma descrição resumida.
+</li></ul>
+
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>status</b><i> (feature)</i>
+<a name="IDX1134"></a>
+</dt>
+<dt><u>Função:</u> <b>status</b><i> (feature, <var>recurso_ativo</var>)</i>
+<a name="IDX1135"></a>
+</dt>
+<dt><u>Função:</u> <b>status</b><i> (status)</i>
+<a name="IDX1136"></a>
+</dt>
+<dd><p>Retorna informações sobre a presença ou ausência de certos
+recursos dependentes do sistema operacional.
+</p>
+<ul>
+<li>
+<code>status (feature)</code> retorna uma lista dos recursos do sistema.
+Inclui a versão do Lisp, tipo de sistema operacional, etc.
+A lista pode variar de um tipo de Lisp para outro.
+</li><li> <code>status (feature, <var>recurso_ativo</var>)</code> retorna <code>true</code> se <var>recurso_ativo</var>
+está na lista de ítens retornada através de <code>status (feature)</code> e <code>false</code> de outra forma.
+<code>status</code> não avalia o argumento <var>recurso_ativo</var>.
+O operador apóstrofo-apóstrofo, <code>''</code>, evita a avaliação.
+Um recurso cujo nome contém um caractere especial, tal como um hífem,
+deve ser fornecido como um argumento em forma de sequência de caracteres. Por Exemplo,
+<code>status (feature, &quot;ansi-cl&quot;)</code>.
+</li><li>
+<code>status (status)</code> retorna uma lista de dois elementos <code>[feature, status]</code>.
+<code>feature</code> e <code>status</code> são dois argumentos aceitos pela função <code>status</code>;
+Não está claro se essa lista tem significância adicional.
+</li></ul>
+
+<p>A variável <code>features</code> contém uma lista de recursos que se aplicam a
+expressões matemáticas. Veja <code>features</code> e <code>featurep</code> para maiores informações.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>time</b><i> (%o1, %o2, %o3, ...)</i>
+<a name="IDX1137"></a>
+</dt>
+<dd><p>Retorna uma lista de tempos, em segundos, usados para calcular as linhas
+de saída <code>%o1</code>, <code>%o2</code>, <code>%o3</code>, .... O tempo retornado é uma estimativa do Maxima do
+tempo interno de computação, não do tempo decorrido. <code>time</code> pode somente
+ser aplicado a variáveis(rótulos) de saída de linha; para quaisquer outras variáveis, <code>time</code>
+retorna <code>unknown</code> (tempo desconhecido).
+</p>
+<p>Escolha <code>showtime: true</code> para fazer com que Maxima moste o tempo de computação
+e o tempo decorrido a cada linha de saída.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>timedate</b><i> ()</i>
+<a name="IDX1138"></a>
+</dt>
+<dd><p>Retorna uma sequência de caracteres representando a data e hora atuais.
+A sequência de caracteres tem o formato <code>HH:MM:SS Dia, mm/dd/aaaa (GMT-n)</code>,
+Onde os campos são
+horas, minutos, segundos, dia da semana, mês, dia do mês, ano, e horas que diferem da hora GMT.
+</p>
+<p>O valor de retorno é uma sequência de caracteres Lisp.
+</p>
+<p>Exemplo:
+</p>
+<pre class="example">(%i1) d: timedate ();
+(%o1) 08:05:09 Wed, 11/02/2005 (GMT-7)
+(%i2) print (&quot;timedate mostra o tempo actual&quot;, d)$
+timedate reports current time 08:05:09 Wed, 11/02/2005 (GMT-7)
+</pre>
+</dd></dl>
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC134" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_35.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>Janeiro, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

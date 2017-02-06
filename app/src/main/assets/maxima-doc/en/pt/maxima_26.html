@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Janeiro, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Maxima 5.35.71.g68475e4: 26. Funções Afins</title>
+
+<meta name="description" content="Manual do Maxima 5.35.71.g68475e4: 26. Funções Afins">
+<meta name="keywords" content="Manual do Maxima 5.35.71.g68475e4: 26. Funções Afins">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Fun_00e7_00f5es-Afins"></a>
+<a name="SEC86"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_25.html#SEC85" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC87" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_25.html#SEC80" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_27.html#SEC88" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 26. Funções Afins </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC87">26.1 Definições para Funções Afins</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">      
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Defini_00e7_00f5es-para-Fun_00e7_00f5es-Afins"></a>
+<a name="SEC87"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC86" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_27.html#SEC88" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC86" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC86" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_27.html#SEC88" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 26.1 Definições para Funções Afins </h2>
+
+<dl>
+<dt><u>Função:</u> <b>fast_linsolve</b><i> ([<var>expr_1</var>, ..., <var>expr_m</var>], [<var>x_1</var>, ..., <var>x_n</var>])</i>
+<a name="IDX831"></a>
+</dt>
+<dd><p>Resolve equações lineares simultâneas <var>expr_1</var>,
+..., <var>expr_m</var> para as variáveis <var>x_1</var>, ..., <var>x_n</var>.  Cada
+<var>expr_i</var> pode ser uma equação ou uma expressão
+geral; se for dada como uma expressão geral, será tratada como uma
+equação na forma <code><var>expr_i</var> = 0</code>.
+</p>
+<p>O valor de retorno é uma lista de equações da forma
+<code>[<var>x_1</var> = <var>a_1</var>, ..., <var>x_n</var> = <var>a_n</var>]</code> onde
+<var>a_1</var>, ..., <var>a_n</var> são todas livres de <var>x_1</var>, ...,
+<var>x_n</var>.
+</p>
+<p><code>fast_linsolve</code> é mais rápido que <code>linsolve</code> para sistemas
+de equações que são esparsas.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>grobner_basis</b><i> ([<var>expr_1</var>, ..., <var>expr_m</var>])</i>
+<a name="IDX832"></a>
+</dt>
+<dd><p>Retorna uma base de Groebner para as equações <var>expr_1</var>, ..., <var>expr_m</var>.
+A funçã <code>polysimp</code> pode então
+ser usada para simplificar outras funções relativas às equações.
+</p>
+<pre class="example">grobner_basis ([3*x^2+1, y*x])$
+
+polysimp (y^2*x + x^3*9 + 2) ==&gt; -3*x + 2
+</pre>
+<p><code>polysimp(f)</code> produz 0 se e somente se <var>f</var> está no ideal gerado por
+<var>expr_1</var>, ..., <var>expr_m</var>, isto é,
+se e somente se <var>f</var> for uma combinação polinomial dos elementos de
+<var>expr_1</var>, ..., <var>expr_m</var>.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>set_up_dot_simplifications</b><i> (<var>eqns</var>, <var>check_through_degree</var>)</i>
+<a name="IDX833"></a>
+</dt>
+<dt><u>Função:</u> <b>set_up_dot_simplifications</b><i> (<var>eqns</var>)</i>
+<a name="IDX834"></a>
+</dt>
+<dd><p>As <var>eqns</var> são
+equações polinomiais em variáveis não comutativas.
+O valor de <code>current_variables</code>  é uma 
+lista de variáveis usadas para calcular graus.  As equações podem ser
+homogéneas, de forma a que o procedimento termine.  
+</p>
+<p>Se tiver optado por sobreposição de simplificações
+em <code>dot_simplifications</code> acima do grau de <var>f</var>, então o
+seguinte é verdadeiro: <code>dotsimp (<var>f</var>)</code> retorna 0 se, e
+somente se, <var>f</var> está no ideal gerado pelas
+equações, i.e., se e somente se <var>f</var> for uma
+combinação polinomial dos elementos das
+equações.
+</p>
+<p>O grau é aquele retornado por <code>nc_degree</code>.  Isso por sua vez é
+influenciado pelos pesos das variáveis individuais.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>declare_weights</b><i> (<var>x_1</var>, <var>w_1</var>, ..., <var>x_n</var>, <var>w_n</var>)</i>
+<a name="IDX835"></a>
+</dt>
+<dd><p>Atribui pesos <var>w_1</var>, ..., <var>w_n</var> to <var>x_1</var>, ..., <var>x_n</var>, respectivamente.
+Esses são pesos usados em cálculos <code>nc_degree</code>.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>nc_degree</b><i> (<var>p</var>)</i>
+<a name="IDX836"></a>
+</dt>
+<dd><p>Retorna o grau de um polinómio não comutativo <var>p</var>.  Veja <code>declare_weights</code>.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>dotsimp</b><i> (<var>f</var>)</i>
+<a name="IDX837"></a>
+</dt>
+<dd><p>Retorna 0 se e somente se <var>f</var> for um ideal gerado pelas equações, i.e.,
+se e somente se <var>f</var> for uma combinação polinomial dos elementos das equações.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>fast_central_elements</b><i> ([<var>x_1</var>, ..., <var>x_n</var>], <var>n</var>)</i>
+<a name="IDX838"></a>
+</dt>
+<dd><p>Se <code>set_up_dot_simplifications</code> tiver sido feito previamente, ache o polinómio central
+nas variáveis <var>x_1</var>, ..., <var>x_n</var> no grau dado, <var>n</var>.
+</p>
+<p>Por exemplo:
+</p><pre class="example">set_up_dot_simplifications ([y.x + x.y], 3);
+fast_central_elements ([x, y], 2);
+[y.y, x.x];
+</pre>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>check_overlaps</b><i> (<var>n</var>, <var>add_to_simps</var>)</i>
+<a name="IDX839"></a>
+</dt>
+<dd><p>Verifica as sobreposições através do grau <var>n</var>, garantindo
+que tem regras de simplificaçõ suficientes em cada grau,
+para <code>dotsimp</code> trabalhar correctamente.  Esse processo pode ser mais
+rápido se souber de antemão a dimensão do espaço de
+monómios.  Se for de dimensão global finita, então <code>hilbert</code>
+pode ser usada.  Se não conhece as dimensões monomiais, não
+especifique nenhum <code>rank_function</code>.  Um terceiro argumento
+opcional, <code>reset</code>, <code>false</code> diz para não se incomodar em
+perguntar sobre reiniciar coisas.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>mono</b><i> ([<var>x_1</var>, ..., <var>x_n</var>], <var>n</var>)</i>
+<a name="IDX840"></a>
+</dt>
+<dd><p>Retorna a lista de monómios independentes
+relativamente à simplificação actual do grau <var>n</var>
+nas variáveis <var>x_1</var>, ..., <var>x_n</var>.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>monomial_dimensions</b><i> (<var>n</var>)</i>
+<a name="IDX841"></a>
+</dt>
+<dd><p>Calcula a série de Hilbert através do grau <var>n</var> para a algebra corrente.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>extract_linear_equations</b><i> ([<var>p_1</var>, ..., <var>p_n</var>], [<var>m_1</var>, ..., <var>m_n</var>])</i>
+<a name="IDX842"></a>
+</dt>
+<dd><p>Faz uma lista dos coeficientes dos polinómios não comutativos <var>p_1</var>, ..., <var>p_n</var>
+dos monomios não comutatvos <var>m_1</var>, ..., <var>m_n</var>.
+Os coeficientes podem ser escalares.   Use <code>list_nc_monomials</code> para construir a lista dos
+monómios.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>list_nc_monomials</b><i> ([<var>p_1</var>, ..., <var>p_n</var>])</i>
+<a name="IDX843"></a>
+</dt>
+<dt><u>Função:</u> <b>list_nc_monomials</b><i> (<var>p</var>)</i>
+<a name="IDX844"></a>
+</dt>
+<dd><p>Retorna uma lista de monómios não comutativos que ocorrem em um polinómio <var>p</var>
+ou em uma lista de polinómios <var>p_1</var>, ..., <var>p_n</var>.
+</p>
+<p>Para usar essa função escreva primeiramente <code>load(affine)</code>.
+</p></dd></dl>
+
+
+
+<dl>
+<dt><u>Variável de opção:</u> <b>all_dotsimp_denoms</b>
+<a name="IDX845"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Quando <code>all_dotsimp_denoms</code> é uma lista,
+os denominadores encontrados por <code>dotsimp</code> são adicionados ao final da lista.
+<code>all_dotsimp_denoms</code> pode ser iniciado como uma lista vazia <code>[]</code>
+antes chamando <code>dotsimp</code>.
+</p>
+<p>Por padrão, denominadores não são colectados por <code>dotsimp</code>.
+</p>
+</dd></dl>
+
+
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC86" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_27.html#SEC88" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>Janeiro, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

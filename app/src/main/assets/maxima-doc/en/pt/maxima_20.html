@@ -1,0 +1,1527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Janeiro, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Maxima 5.35.71.g68475e4: 20. Integração</title>
+
+<meta name="description" content="Manual do Maxima 5.35.71.g68475e4: 20. Integração">
+<meta name="keywords" content="Manual do Maxima 5.35.71.g68475e4: 20. Integração">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Integra_00e7_00e3o"></a>
+<a name="SEC62"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_19.html#SEC61" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC63" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_19.html#SEC60" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 20. Integração </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC63">20.1 Introdução a Integração</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC64">20.2 Definições para Integração</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC65">20.3 Introdução a QUADPACK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC67">20.4 Definições para QUADPACK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Introdu_00e7_00e3o-a-Integra_00e7_00e3o"></a>
+<a name="SEC63"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC62" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC64" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 20.1 Introdução a Integração </h2>
+
+<p>Maxima tem muitas rotinas para realizar integração.  A
+função <code>integrate</code> faz uso de muitas dessas.  Exite
+também o pacote <code>antid</code>, que manuseia uma função
+não especificada (e suas derivadas, certamente).  Para usos numericos,
+existe um conjunto de integradores adaptativos de QUADPACK, a saber
+<code>quad_qag</code>, <code>quad_qags</code>, etc., os quais são descritos sob o
+tópico <code>QUADPACK</code>.  Funções hipergeométricas
+estão sendo trabalhadas, veja <code>specint</code> para detalhes.
+Geralmente falando, Maxima somente calcula integrais que sejam
+integráveis em termos de &quot;funções elementares&quot;
+(funções racionais, trigonometricas, logarítmicas,
+exponenciais, radicais, etc.) e umas poucas extensões
+(função de erro, dilogaritmo). Nã consegue calcular
+integrais em termos de funções desconhecidas tais como
+<code>g(x)</code> e <code>h(x)</code>.
+</p>
+<hr size="6">
+<a name="Defini_00e7_00f5es-para-Integra_00e7_00e3o"></a>
+<a name="SEC64"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC63" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC65" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 20.2 Definições para Integração </h2>
+<dl>
+<dt><u>Função:</u> <b>changevar</b><i> (<var>expr</var>, <var>f(x,y)</var>, <var>y</var>, <var>x</var>)</i>
+<a name="IDX617"></a>
+</dt>
+<dd><p>Faz a mudança de variável dada por <code><var>f(x,y)</var> =
+0</code> em todos os integrais que existam em <var>expr</var> com
+integração em relação a <var>x</var>.  A nova
+variável é <var>y</var>.
+</p>
+<pre class="example">(%i1) assume(a &gt; 0)$
+(%i2) 'integrate (%e**sqrt(a*y), y, 0, 4);
+                      4
+                     /
+                     [    sqrt(a) sqrt(y)
+(%o2)                I  %e                dy
+                     ]
+                     /
+                      0
+(%i3) changevar (%, y-z^2/a, z, y);
+                      0
+                     /
+                     [                abs(z)
+                   2 I            z %e       dz
+                     ]
+                     /
+                      - 2 sqrt(a)
+(%o3)            - ----------------------------
+                                a
+</pre>
+<p>Uma expressão contendo uma forma substantiva, tais como as
+instâncias de <code>'integrate</code> acima, pode ser avaliada por <code>ev</code>
+com o sinalizador <code>nouns</code>.  Por exemplo, a expressão retornada
+por <code>changevar</code> acima pode ser avaliada por <code>ev (%o3, nouns)</code>.
+</p>
+<p><code>changevar</code> pode também ser usada para alterações
+nos índices de uma soma ou de um produto. No entanto, é
+de salientar que quando seja feita uma alteração a uma
+soma ou produto, essa mudança deverá ser apenas uma
+deslocação do índice, nomeadamente,
+<code>i = j+ ...</code>, e não uma função de grau superior.
+Por exemplo,
+</p>
+<pre class="example">(%i4) sum (a[i]*x^(i-2), i, 0, inf);
+                         inf
+                         ====
+                         \         i - 2
+(%o4)                     &gt;    a  x
+                         /      i
+                         ====
+                         i = 0
+(%i5) changevar (%, i-2-n, n, i);
+                        inf
+                        ====
+                        \               n
+(%o5)                    &gt;      a      x
+                        /        n + 2
+                        ====
+                        n = - 2
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>dblint</b><i> (<var>f</var>, <var>r</var>, <var>s</var>, <var>a</var>, <var>b</var>)</i>
+<a name="IDX618"></a>
+</dt>
+<dd><p>Esta é uma rotina de integral duplo que foi escrita na linguagem de
+alto nível do Maxima sendo logo traduzida e compilada para
+linguagem de máquina. Use <code>load (dblint)</code> para poder usar este
+pacote. Esta função usa o método da regra de Simpson
+em ambas as direções x e y para calcular
+</p>
+<pre class="example">/b /s(x)
+|  |
+|  |    f(x,y) dy dx
+|  |
+/a /r(x)
+</pre>
+<p>A função <var>f</var> deve ser uma função
+traduzida ou compilada de duas variáveis, e <var>r</var> e <var>s</var> devem
+cada uma ser uma função traduzida ou compilada de uma
+variável, enquanto <var>a</var> e <var>b</var> devem ser números em ponto
+flutuante.  A rotina tem duas variáveis globais que determinam o
+número de divisões dos intervalos x e y: <code>dblint_x</code> e
+<code>dblint_y</code>, ambas as quais são inicialmente 10, e podem ser
+alteradas independentemente para outros valores inteiros (existem
+<code>2*dblint_x+1</code> pontos calculados na direção x , e
+<code>2*dblint_y+1</code> na direção y).  A rotina subdivide o
+eixo X e então para cada valor de X primeiro calcula <code><var>r</var>(x)</code>
+e <code><var>s</var>(x)</code>; então o eixo Y entre <code><var>r</var>(x)</code> e
+<code><var>s</var>(x)</code> é subdividido e o integral ao longo do eixo Y é
+executado usando a regra de Simpson; então o integral ao longo do eixo
+X é concluído usando a regra de Simpson com os valores
+da função sendo os integrais em Y.  Esse procedimento
+pode ser numericamente instável por várias razões, mas
+razoávelmente rápido: evite usar este progrma sobre
+funções altamente oscilatórias e
+funções com singularidades (pólos ou pontos de
+ramificação na região).  Os integrais em Y dependem de
+quanto fragmentados <code><var>r</var>(x)</code> e <code><var>s</var>(x)</code> sejam; assim,
+se a distância <code><var>s</var>(x) - <var>r</var>(x)</code> variar rapidamente com
+X, nesse ponto podrão surgir erros substanciais provenientes de
+truncação com saltos de diferentes tamanhos nos vários
+integrais Y. Pode incrementar-se <code>dblint_x</code> e <code>dblint_y</code> numa
+tentativa para melhorar a convergência da região, com um aumento no
+tempo de computação.  Os valores da
+função não são guardados, portanto se a
+função desperdiçr muito tempo, terá de
+esperar pela re-computação cada vez que mudar qualquer
+coisa (pedimos desculpa por esse facto). É necessário que as
+funções <var>f</var>, <var>r</var>, e <var>s</var> sejam ainda
+traduzidas ou compiladas previamente chamando <code>dblint</code>.  Isso
+resultará em ordens de magnitude de melhoramentos de velocidade sobre
+o código interpretado em muitos casos!
+</p>
+<p><code>demo (dblint)</code> executa uma demonstração de <code>dblint</code> aplicado a um problema exemplo.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>defint</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
+<a name="IDX619"></a>
+</dt>
+<dd><p>Tenta calcular um integral definido.
+<code>defint</code> é chamada por <code>integrate</code> quando limites de integração são especificados,
+i.e., quando <code>integrate</code> é chamado como <code>integrate (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code>.
+Dessa forma do ponto de vista do utilizador, isso é suficiente para chamar <code>integrate</code>.
+</p>
+<p><code>defint</code> retorna uma expressão simbólica,
+e executa um dos dois: ou calcula o integral ou a forma substantiva do integral.
+Veja <code>quad_qag</code> e funções rellacionadas para aproximação numérica de integrais definidos.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>erf</b><i> (<var>x</var>)</i>
+<a name="IDX620"></a>
+</dt>
+<dd><p>Representa a função de erro, cuja derivada é:
+<code>2*exp(-x^2)/sqrt(%pi)</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>erfflag</b>
+<a name="IDX621"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Quando <code>erfflag</code> é <code>false</code>, previne <code>risch</code> da introdução da
+função <code>erf</code> na resposta se não houver nenhum no integrando para
+começar.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>ilt</b><i> (<var>expr</var>, <var>t</var>, <var>s</var>)</i>
+<a name="IDX622"></a>
+</dt>
+<dd><p>Calcula a transformação inversa de Laplace de <var>expr</var> em
+relação a <var>t</var> e parâmetro <var>s</var>.  <var>expr</var> deve ser uma razão de
+polinómios cujo denominador tem somente factores lineares e quadráticos.
+Usando a funções <code>laplace</code> e <code>ilt</code> juntas com as funções <code>solve</code> ou
+<code>linsolve</code> o utilizador pode resolver uma diferencial simples ou
+uma equação integral de convolução ou um conjunto delas.
+</p>
+<pre class="example">(%i1) 'integrate (sinh(a*x)*f(t-x), x, 0, t) + b*f(t) = t**2;
+              t
+             /
+             [                                    2
+(%o1)        I  f(t - x) sinh(a x) dx + b f(t) = t
+             ]
+             /
+              0
+(%i2) laplace (%, t, s);
+                               a laplace(f(t), t, s)   2
+(%o2)  b laplace(f(t), t, s) + --------------------- = --
+                                       2    2           3
+                                      s  - a           s
+(%i3) linsolve ([%], ['laplace(f(t), t, s)]);
+                                        2      2
+                                     2 s  - 2 a
+(%o3)     [laplace(f(t), t, s) = --------------------]
+                                    5         2     3
+                                 b s  + (a - a  b) s
+(%i4) ilt (rhs (first (%)), s, t);
+Is  a b (a b - 1)  positive, negative, or zero?
+
+pos;
+               sqrt(a b (a b - 1)) t
+        2 cosh(---------------------)       2
+                         b               a t
+(%o4) - ----------------------------- + -------
+              3  2      2               a b - 1
+             a  b  - 2 a  b + a
+
+                                                       2
+                                             + ------------------
+                                                3  2      2
+                                               a  b  - 2 a  b + a
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>integrate</b><i> (<var>expr</var>, <var>x</var>)</i>
+<a name="IDX623"></a>
+</dt>
+<dt><u>Função:</u> <b>integrate</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
+<a name="IDX624"></a>
+</dt>
+<dd><p>Tenta símbolicamente calcular o integral de <var>expr</var> em relação a <var>x</var>.
+<code>integrate (<var>expr</var>, <var>x</var>)</code> é um integral indefinido,
+enquanto <code>integrate (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code> é um integral definido,
+com limites de integração <var>a</var> e <var>b</var>.
+Os limites não poderam conter <var>x</var>, embora <code>integrate</code> não imponha essa restrição.
+<var>a</var> não precisa ser menor que <var>b</var>.
+Se <var>b</var> é igual a <var>a</var>, <code>integrate</code> retorna zero.
+</p>
+<p>Veja <code>quad_qag</code> e funções relacionadas para aproximação numérica de integrais definidos.
+Veja <code>residue</code> para computação de resíduos (integração complexa).
+Veja <code>antid</code> para uma forma alternativa de calcular integrais indefinidos.
+</p>
+<p>O integral (uma expressão livre de <code>integrate</code>) é calculado se
+<code>integrate</code> for bem sucedido.
+De outra forma o valor de retorno é
+a forma substantiva do integral (o operador com apóstrofo <code>'integrate</code>)
+ou uma expressão contendo uma ou mais formas substantivas.
+A forma substantiva de <code>integrate</code> é apresentada com um símbolo de integração.
+</p>
+<p>Em algumas circunstâncias isso é útil para construir uma forma substantiva manualmente,
+colocando em <code>integrate</code> um apóstrofo, e.g., <code>'integrate (<var>expr</var>, <var>x</var>)</code>.
+Por exemplo, o integral pode depender de alguns parâmetos que não estão ainda calculados.
+A forma substantiva pode ser aplicada a seus argumentos por <code>ev (<var>i</var>, nouns)</code>
+onde <var>i</var> é a forma substantiva de interesse.
+</p>
+<p><code>integrate</code> calcula integrais definidos separadamente dos
+indefinidos, e utiliza uma gama de heurísticas para
+simplificar cada caso.  Casos especiais de integrais definidos incluem
+limites de integração iguais a zero ou infinito
+(<code>inf</code> ou <code>minf</code>), funções trigonométricas
+com limites de integração iguais a zero e <code>%pi</code> ou
+<code>2 %pi</code>, funções racionais, integrais relacionados
+com as definições das funções
+<code>beta</code> e <code>psi</code>, e alguns integrais logarítmicos e
+trigonométricos.  O processamento de funções racionais
+pode incluir cálculo de resíduos.  Se um caso especial
+aplicável não for encontrado, será feita uma tentativa para calcular o
+integral indefinido e avaliá-lo nos limites de
+integração.  Isso pode incluir o cálculo de um limite
+nos casos em que um dos limites do integral for para infinito ou menos
+infinito; veja também <code>ldefint</code>.
+</p>
+<p>Casos especiais de integrais indefinidos incluem funções
+trigonométricas, exponenciais e funções logarítmicas,
+e funções racionais.  <code>integrate</code> pode também
+fazer uso de uma pequena tabela de integais elementares.
+</p>
+<p><code>integrate</code> pode realizar uma mudança de variável
+se o integrando tiver a forma <code>f(g(x)) * diff(g(x), x)</code>.
+<code>integrate</code> tenta achar uma subexpressão <code>g(x)</code> de forma que
+a derivada de <code>g(x)</code> divida o integrando.  Essa busca pode fazer
+uso de derivadas definidas pela função <code>gradef</code>.
+Veja também <code>changevar</code> e <code>antid</code>.
+</p>
+<p>Se nenhum dos procedimentos heurísticos conseguir calcular
+o integral indefinido, o algoritmo de Risch é executado. O sinalizador
+<code>risch</code> pode ser utilizado como um parâmetro para <code>ev</code>, ou
+na linha de comando, nomeadamente, <code>ev (integrate (<var>expr</var>,
+<var>x</var>), risch)</code> ou <code>integrate (<var>expr</var>, <var>x</var>), risch</code>.  Se
+<code>risch</code> estiver presente, <code>integrate</code> chamará a
+função <code>risch</code> sem tentar heurísticas
+primeiro. Veja também <code>risch</code>.
+</p>
+<p><code>integrate</code> trabalha somente com relações funcionais representadas explicitamente com a notação <code>f(x)</code>.
+<code>integrate</code> não respeita dependências implicitas estabelecidas pela função <code>depends</code>.
+<code>integrate</code> pode necessitar conhecer alguma propriedade de um parâmetro no integrando.
+<code>integrate</code> irá primeiro consultar a base de dados do <code>assume</code>,
+e , se a variável de interesse não está lá,
+<code>integrate</code> perguntará ao utilizador.
+Dependendo da pergunta,
+respostas adequadas são <code>yes;</code> ou <code>no;</code>,
+ou <code>pos;</code>, <code>zero;</code>, ou <code>neg;</code>.
+</p>
+<p><code>integrate</code> não é, por padrão, declarada ser linear.  Veja <code>declare</code> e <code>linear</code>.
+</p>
+<p><code>integrate</code> tenta integração por partes somente em uns poucos casos especiais.
+</p>
+<p>Exemplos:
+</p>
+<ul>
+<li>
+Integrais definidos e indefinidos elementares.
+
+<pre class="example">(%i1) integrate (sin(x)^3, x);
+                           3
+                        cos (x)
+(%o1)                   ------- - cos(x)
+                           3
+(%i2) integrate (x/ sqrt (b^2 - x^2), x);
+                                 2    2
+(%o2)                    - sqrt(b  - x )
+(%i3) integrate (cos(x)^2 * exp(x), x, 0, %pi);
+                               %pi
+                           3 %e      3
+(%o3)                      ------- - -
+                              5      5
+(%i4) integrate (x^2 * exp(-x^2), x, minf, inf);
+                            sqrt(%pi)
+(%o4)                       ---------
+                                2
+</pre>
+</li><li>
+Uso de <code>assume</code> e dúvida interativa.
+
+<pre class="example">(%i1) assume (a &gt; 1)$
+(%i2) integrate (x**a/(x+1)**(5/2), x, 0, inf);
+    2 a + 2
+Is  -------  an integer?
+       5
+
+no;
+Is  2 a - 3  positive, negative, or zero?
+
+neg;
+                                   3
+(%o2)                  beta(a + 1, - - a)
+                                   2
+</pre>
+</li><li>
+Mudança de variável.  Existem duas mudanças de variável nesse exemplo:
+uma usando a derivada estabelecida por <code>gradef</code>,
+e uma usando a derivação <code>diff(r(x))</code> de uma função não especificada <code>r(x)</code>.
+
+<pre class="example">(%i3) gradef (q(x), sin(x**2));
+(%o3)                         q(x)
+(%i4) diff (log (q (r (x))), x);
+                      d               2
+                     (-- (r(x))) sin(r (x))
+                      dx
+(%o4)                ----------------------
+                            q(r(x))
+(%i5) integrate (%, x);
+(%o5)                     log(q(r(x)))
+</pre>
+</li><li>
+O resultado contém a forma substantiva <code>'integrate</code>.  Neste
+exemplo, Maxima pode extrair um factor do denominador de uma
+função racional, mas não pode factorizar o restante ou
+de outra forma achar o seu integral.  <code>grind</code> mostra a forma
+substantiva <code>'integrate</code> no resultado.  Veja também
+<code>integrate_use_rootsof</code> para mais informaçes sobre
+integrais de funções racionais.
+
+<pre class="example">(%i1) expand ((x-4) * (x^3+2*x+1));
+                    4      3      2
+(%o1)              x  - 4 x  + 2 x  - 7 x - 4
+(%i2) integrate (1/%, x);
+                              /  2
+                              [ x  + 4 x + 18
+                              I ------------- dx
+                              ]  3
+                 log(x - 4)   / x  + 2 x + 1
+(%o2)            ---------- - ------------------
+                     73               73
+(%i3) grind (%);
+log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
+</pre>
+</li><li>
+Definindo uma função em termos de um integral.  O corpo
+de uma função não é avaliado quando a
+função é definida.  Dessa forma o corpo de <code>f_1</code>
+nesse exemplo contém a forma substantiva de <code>integrate</code>.  O
+operador de doi apóstrofos seguidos <code>''</code> faz com que o
+integral seja avaliado, e o resultado se transforme-se no corpo de
+<code>f_2</code>.
+
+<pre class="example">(%i1) f_1 (a) := integrate (x^3, x, 1, a);
+                                     3
+(%o1)           f_1(a) := integrate(x , x, 1, a)
+(%i2) ev (f_1 (7), nouns);
+(%o2)                          600
+(%i3) /* Note parentheses around integrate(...) here */
+      f_2 (a) := ''(integrate (x^3, x, 1, a));
+                                   4
+                                  a    1
+(%o3)                   f_2(a) := -- - -
+                                  4    4
+(%i4) f_2 (7);
+(%o4)                          600
+</pre></li></ul>
+
+</dd></dl>
+
+<dl>
+<dt><u>Variável de sistema:</u> <b>integration_constant_counter</b>
+<a name="IDX625"></a>
+</dt>
+<dd><p>Valor por omissão: 0
+</p>
+<p><code>integration_constant_counter</code> é um contador que é actualizado
+a cada vez que uma constante de integração (nomeada pelo
+Maxima, por exemplo, <code>integrationconstant1</code>) é introduzida numa
+expressão obtida após a integração indefinida de uma
+equação.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>integrate_use_rootsof</b>
+<a name="IDX626"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Quando <code>integrate_use_rootsof</code> é <code>true</code> e o denominador de
+uma função racional não pode ser factorizado, <code>integrate</code> retorna o integral
+em uma forma que é uma soma sobre as raízes (não conhecidas ainda) do denominador.
+</p>
+<p>Por exemplo, com <code>integrate_use_rootsof</code> escolhido para
+<code>false</code>, <code>integrate</code> retorna um integral não resolvido de
+uma função racional na forma substantiva:
+</p>
+<pre class="example">(%i1) integrate_use_rootsof: false$
+(%i2) integrate (1/(1+x+x^5), x);
+        /  2
+        [ x  - 4 x + 5
+        I ------------ dx                            2 x + 1
+        ]  3    2                2            5 atan(-------)
+        / x  - x  + 1       log(x  + x + 1)          sqrt(3)
+(%o2)   ----------------- - --------------- + ---------------
+                7                 14             7 sqrt(3)
+</pre>
+<p>Agora vamos escolher o sinalizador para ser true e a parte não
+resolvida do integral será escrito como uma soma sobre as
+raízes do denominador da função racional:
+</p>
+<pre class="example">(%i3) integrate_use_rootsof: true$
+(%i4) integrate (1/(1+x+x^5), x);
+      ====        2
+      \       (%r4  - 4 %r4 + 5) log(x - %r4)
+       &gt;      -------------------------------
+      /                    2
+      ====            3 %r4  - 2 %r4
+                      3    2
+      %r4 in rootsof(x  - x  + 1)
+(%o4) ----------------------------------------------------------
+               7
+
+                                                             2 x + 1
+                                         2            5 atan(-------)
+                                    log(x  + x + 1)          sqrt(3)
+                                  - --------------- + ---------------
+                                          14             7 sqrt(3)
+</pre>
+<p>Alternativamente o utilizador pode calcular as raízes do denominador separadamente,
+e então expressar o integrando em termos dessas raízes,
+e.g., <code>1/((x - a)*(x - b)*(x - c))</code> ou <code>1/((x^2 - (a+b)*x + a*b)*(x - c))</code>
+se o denominador for um polinómio cúbico.
+Algumas vezes isso ajudará Maxima a obter resultados mais úteis.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>ldefint</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
+<a name="IDX627"></a>
+</dt>
+<dd><p>Tenta calcular o integral definido de <var>expr</var> pelo uso de 
+<code>limit</code> para avaliar o integral indefinido <var>expr</var> em relação a <var>x</var>
+no limite superior <var>b</var> e no limite inferior <var>a</var>.
+Se isso falha para calcular o integral definido,
+<code>ldefint</code> retorna uma expressão contendo limites como formas substantivas.
+</p>
+<p><code>ldefint</code> não é chamada por <code>integrate</code>,
+então executando <code>ldefint (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code> pode retornar um resultado diferente de
+<code>integrate (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code>.
+<code>ldefint</code> sempre usa o mesmo método para avaliar o integral definido,
+enquanto <code>integrate</code> pode utilizar várias heurísticas e pode reconhecer alguns casos especiais.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>potential</b><i> (<var>givengradient</var>)</i>
+<a name="IDX628"></a>
+</dt>
+<dd><p>O cálculo faz uso da variável global <code>potentialzeroloc[0]</code>
+que deve ser <code>nonlist</code> ou da forma
+</p>
+<pre class="example">[indeterminatej=expressãoj, indeterminatek=expressãok, ...]
+</pre>
+<p>O
+formador sendo equivalente para a expressão nonlist para todos os lados
+direitos-manuseados mais tarde.  Os lados direitos indicados são usados como o
+limite inferior de integração.  O sucesso das integrações pode
+depender de seus valores e de sua ordem.  <code>potentialzeroloc</code> é inicialmente escolhido
+para 0.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>residue</b><i> (<var>expr</var>, <var>z</var>, <var>z_0</var>)</i>
+<a name="IDX629"></a>
+</dt>
+<dd><p>Calcula o resíduo no plano complexo da
+expressão <var>expr</var> quando a variável <var>z</var> assumes o valor <var>z_0</var>.  O
+resíduo é o coeficiente de <code>(<var>z</var> - <var>z_0</var>)^(-1)</code> nas séries de Laurent
+para <var>expr</var>.
+</p>
+<pre class="example">(%i1) residue (s/(s**2+a**2), s, a*%i);
+                                1
+(%o1)                           -
+                                2
+(%i2) residue (sin(a*x)/x**4, x, 0);
+                                 3
+                                a
+(%o2)                         - --
+                                6
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>risch</b><i> (<var>expr</var>, <var>x</var>)</i>
+<a name="IDX630"></a>
+</dt>
+<dd><p>Integra <var>expr</var> em relação a <var>x</var> usando um
+caso transcendental do algoritmo de Risch.  (O caso algébrico do
+algoritmo de Risch foi implementado.)  Isso actualmente
+manuseia os casos de exponenciais aninhadas e logaritmos que a parte
+principal de <code>integrate</code> não pode fazer.  <code>integrate</code> irá aplicar automaticamente <code>risch</code>
+se dados esses casos.
+</p>
+<p><code>erfflag</code>, se <code>false</code>, previne <code>risch</code> da introdução da função
+<code>erf</code> na resposta se não for achado nenhum no integrando para 
+começar.
+</p>
+<pre class="example">(%i1) risch (x^2*erf(x), x);
+                                                        2
+             3                      2                - x
+        %pi x  erf(x) + (sqrt(%pi) x  + sqrt(%pi)) %e
+(%o1)   -------------------------------------------------
+                              3 %pi
+(%i2) diff(%, x), ratsimp;
+                             2
+(%o2)                       x  erf(x)
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>tldefint</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
+<a name="IDX631"></a>
+</dt>
+<dd><p>Equivalente a <code>ldefint</code> com <code>tlimswitch</code> escolhido para <code>true</code>.
+</p>
+</dd></dl>
+
+
+<hr size="6">
+<a name="Introdu_00e7_00e3o-a-QUADPACK"></a>
+<a name="SEC65"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC64" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC66" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 20.3 Introdução a QUADPACK </h2>
+
+
+
+<p>QUADPACK é uma colecção de funções para
+aálculo numérico de integrais definidos unidimensionais.  O pacote
+QUADPACK resultou da junção de um projeto de R. Piessens
+<a name="DOCF1" href="maxima_fot.html#FOOT1">(1)</a>,
+E. de Doncker <a name="DOCF2" href="maxima_fot.html#FOOT2">(2)</a>, C. Ueberhuber <a name="DOCF3" href="maxima_fot.html#FOOT3">(3)</a>, e D. Kahaner <a name="DOCF4" href="maxima_fot.html#FOOT4">(4)</a>.
+</p>
+<p>A biblioteca QUADPACK inclída no Maxima é uma
+tradução automática (feita através do programa
+<code>f2cl</code>) do código fonte em de QUADPACK como aparece na SLATEC
+Common Mathematical Library, Versão 4.1
+<a name="DOCF5" href="maxima_fot.html#FOOT5">(5)</a>.  A biblioteca Fortran SLATEC
+é datada de Julho de 1993, mas as funções QUADPACK
+foram escritas alguns anos antes.  Existe outra versão de QUADPACK em
+Netlib <a name="DOCF6" href="maxima_fot.html#FOOT6">(6)</a>; não está claro no
+que aquela versão difere da versão existente em SLATEC.
+</p>
+<p>As funções QUADPACK incluídas no Maxima são toda automáticas,
+no sentido de que essas funções tentam calcular um resultado para uma precisão específica,
+requerendo um número não especificado de avaliações de função.
+A tradução do Lisp do Maxima da iblioteca QUADPACK também inclui algumas funçe~s não automáticas,
+mas elas não são expostas a nível de Maxima.
+</p>
+<p>Informação adicionalsobre a bilioteca QUADPACK pode ser encontrada no livro do QUADPACK
+<a name="DOCF7" href="maxima_fot.html#FOOT7">(7)</a>.
+</p>
+<hr size="6">
+<a name="SEC66"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC65" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC67" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC65" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 20.3.1 Overview </h3>
+
+<dl compact="compact">
+<dt> <code>quad_qag</code></dt>
+<dd><p>Integração de uma função genérica sobre um intervalo finito.
+<code>quad_qag</code> implementa um integrador adaptativo globalmente simples usando a estratégia de Aind (Piessens, 1973).
+O chamador pode escolher entre 6 pares de formulas da quadratura de 
+Gauss-Kronrod para a componente de avaliação da regra.
+As regras de alto grau são adequadas para integrandos fortemente oscilantes.
+</p>
+</dd>
+<dt> <code>quad_qags</code></dt>
+<dd><p>Integração de uma função genérica sob um intervalo finito.
+<code>quad_qags</code> implementa subdivisão de intervalos globalmente adaptativos com extrapolação
+(de Doncker, 1978) por meio do algoritmo de Epsilon (Wynn, 1956).
+</p>
+</dd>
+<dt> <code>quad_qagi</code></dt>
+<dd><p>Integração de uma função genérica  sobre um intervalo finito ou semi-finito.
+O intervalo é mapeado sobre um intervalo finito e
+então a mesma estratégia de <code>quad_qags</code> é aplicada.
+</p>
+</dd>
+<dt> <code>quad_qawo</code></dt>
+<dd><p>Integração de <em>cos(omega x) f(x)</em> ou <em>sin(omega x) f(x)</em> sobre um intervalo finito,
+onde <em>omega</em> é uma constante.
+A componente de avaliação da regra é baseada na técnica modificada de Clenshaw-Curtis.
+<code>quad_qawo</code> aplica subdivisão adaptativa com extrapolação, similar a <code>quad_qags</code>.
+</p>
+</dd>
+<dt> <code>quad_qawf</code></dt>
+<dd><p>Calcula uma transformação de co-seno de Fourier ou de um seno de Fourier sobre um intervalo semi-finito.
+O mesmo aproxima como <code>quad_qawo</code> aplicado sobre intervalos finitos sucessivos,
+e aceleração de convergência por meio d algorítimo de Epsilon (Wynn, 1956) 
+aplicado a séries de contribuições de integrais.
+</p>
+</dd>
+<dt> <code>quad_qaws</code></dt>
+<dd><p>Integraçào de <em>w(x) f(x)</em> sobre um intervalo finito <em>[a, b]</em>,
+onde <em>w</em> é uma função da forma <em>(x - a)^alpha (b - x)^beta v(x)</em>
+e <em>v(x)</em> é 1 ou <em>log(x - a)</em> ou <em>log(b - x)</em> ou <em>log(x - a) log(b - x)</em>,
+e <em>alpha &gt; -1</em> e <em>beta &gt; -1</em>.
+Auma estratégia de subdivisão adaptativa é aplicada,
+com integração modificada de Clenshaw-Curtis sobre os subintervalos que possuem <em>a</em> ou <em>b</em>.
+</p>
+</dd>
+<dt> <code>quad_qawc</code></dt>
+<dd><p>Calcula o valor principal de Cauchy de <em>f(x)/(x - c)</em> sobre um intervalo finito <em>(a, b)</em>
+e um <em>c</em> especificado.
+A estratégia é globalmente adaptativa, e a integração
+modificada de Clenshaw-Curtis é usada sobre subamplitudes
+que possuírem o ponto <em>x = c</em>.
+</p></dd>
+</dl>
+
+<hr size="6">
+<a name="Defini_00e7_00f5es-para-QUADPACK"></a>
+<a name="SEC67"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC66" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 20.4 Definições para QUADPACK </h2>
+
+<dl>
+<dt><u>Função:</u> <b>quad_qag</b><i> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>chave</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX632"></a>
+</dt>
+<dt><u>Função:</u> <b>quad_qag</b><i> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>chave</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX633"></a>
+</dt>
+<dd><p>Integração de uma função genérica sobre um intervalo finito.
+<code>quad_qag</code> implementa um integrador adaptativo globalmente simples usando a estratégia de Aind (Piessens, 1973).
+O chamador pode escolher entre 6 pares de fórmulas da quadratura de
+Gauss-Kronrod para a componente de avaliação da regra.
+As regras de alto nível são adequadas para integrandos fortemente oscilatórios.
+</p>
+<p><code>quad_qag</code> calcula o integral
+</p>
+<p><em>integrate (f(x), x, a, b)</em>
+</p>
+<p>A função a ser integrada é <var>f(x)</var>, com variável
+dependente <var>x</var>, e a função é para ser integrada entre os
+limites <var>a</var> e <var>b</var>.  <var>chave</var> é o integrador a ser usado
+e pode ser um inteiro entre 1 e 6, inclusive.  O valor de
+<var>chave</var> selecciona a ordem da regra de integração de Gauss-Kronrod.
+Regra de alta ordem são adequadas para integrandos fortemente oscilatórios.
+</p>
+<p>O integrando pode ser especidficado como o nome de uma função Maxima ou uma função Lisp ou um operador,
+uma expressão lambda do Maxima, ou uma expressão geral do Maxima.
+</p>
+<p>A integração numérica é concluída adaptativamente pela subdivisão a
+região de integração até que a precisão desejada for
+completada.
+</p>
+<p>Os argumentos opcionais <var>epsrel</var> e <var>limite</var> são o erro relativo
+desejado e o número máximo de subintervalos respectivamente.
+<var>epsrel</var> padrão em 1e-8 e <var>limite</var> é 200.
+</p>
+<p><code>quad_qag</code> retorna uma lista de quatro elementos:
+</p>
+<ul class="toc">
+<li>
+uma aproximação para o integral,
+</li><li>
+o erro absoluto estimado da aproximação, 
+</li><li>
+o número de avaliações do integrando,
+</li><li>
+um código de erro.
+</li></ul>
+
+<p>O código de erro (quarto elemento do valor de retorno) pode ter os valores:
+</p>
+<dl compact="compact">
+<dt> <code>0</code></dt>
+<dd><p>se nenhum problema foi encontrado; 
+</p></dd>
+<dt> <code>1</code></dt>
+<dd><p>se foram utilizados muitos subintervalos;
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p>se for detectato um erro de arredondamento excessivo;
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p>se o integrando se comportar muito mal;
+</p></dd>
+<dt> <code>6</code></dt>
+<dd><p>se a entrada não for válida.
+</p>
+</dd>
+</dl>
+
+
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) quad_qag (x^(1/2)*log(1/x), x, 0, 1, 3);
+(%o1)    [.4444444444492108, 3.1700968502883E-9, 961, 0]
+(%i2) integrate (x^(1/2)*log(1/x), x, 0, 1);
+                                4
+(%o2)                           -
+                                9
+</pre></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>quad_qags</b><i> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX634"></a>
+</dt>
+<dt><u>Função:</u> <b>quad_qags</b><i> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX635"></a>
+</dt>
+<dd><p>Integração de uma função geral sobre um intervalo finito.
+<code>quad_qags</code> implementa subdivisão de intervalo globalmente adaptativa com extrapolação
+(de Doncker, 1978) através do algoritmo de (Wynn, 1956).
+</p>
+<p><code>quad_qags</code> calcula o integral
+</p>
+<p><em>integrate (f(x), x, a, b)</em>
+</p>
+<p>A função a ser integrada é <var>f(x)</var>, com
+variável dependente <var>x</var>, e a função é para ser integrada
+entre os limites <var>a</var> e <var>b</var>.
+</p>
+<p>O integrando pode ser especidficado como o nome de uma função Maxima ou uma função Lisp ou um operador,
+uma expressão lambda do Maxima, ou uma expressão geral do Maxima.
+</p>
+<p>Os argumentos opcionais <var>epsrel</var> e <var>limite</var> são o erro relativo
+desejado e o número máximo de subintervalos, respectivamente.
+<var>epsrel</var> padrão em 1e-8 e <var>limite</var> é 200.
+</p>
+<p><code>quad_qags</code> retorna uma lista de quatro elementos:
+</p>
+<ul class="toc">
+<li>
+uma aproximação para o integral,
+</li><li>
+o erro absoluto estimado da aproximação, 
+</li><li>
+o número de avaliações do integrando,
+</li><li>
+um código de erro.
+</li></ul>
+
+<p>O código de erro (quarto elemento do valor de retorno) pode ter os valores:
+</p>
+<dl compact="compact">
+<dt> <code>0</code></dt>
+<dd><p>nenhum problema foi encontrado; 
+</p></dd>
+<dt> <code>1</code></dt>
+<dd><p>foram utilizados muitos subintervalos;
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p>foi detectato um erro de arredondamento excessivo;
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p>o integrando comporta-se muito mal;
+</p></dd>
+<dt> <code>4</code></dt>
+<dd><p>não houve convergência
+</p></dd>
+<dt> <code>5</code></dt>
+<dd><p>o integral provavelmente é divergente, o converge lentamente
+</p></dd>
+<dt> <code>6</code></dt>
+<dd><p>a entrada não foi válida.
+</p></dd>
+</dl>
+
+
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) quad_qags (x^(1/2)*log(1/x), x, 0 ,1);
+(%o1)   [.4444444444444448, 1.11022302462516E-15, 315, 0]
+</pre>
+<p>Note que <code>quad_qags</code> é mais preciso e eficiente que <code>quad_qag</code> para esse integrando.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>quad_qagi</b><i> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>inftype</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX636"></a>
+</dt>
+<dt><u>Função:</u> <b>quad_qagi</b><i> (<var>f</var>, <var>x</var>, <var>a</var>, <var>inftype</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX637"></a>
+</dt>
+<dd><p>Integração de uma função genérica sobre um intervalo finito ou semi-finito.
+O intervalo é mapeado sobre um intervalo finito e
+então a mesma estratégia que em <code>quad_qags</code> é aplicada.
+</p>
+<p><code>quad_qagi</code> avalia um dos seguintes integrais
+</p>
+<p><em>integrate (f(x), x, minf, inf)</em>
+</p>
+<p><em>integrate (f(x), x, minf, a)</em>
+</p>
+<p><em>integrate (f(x), x, a, minf, inf)</em>
+</p>
+<p>usando a rotina Quadpack QAGI.  A função a ser integrada é
+<var>f(x)</var>, com variável dependente <var>x</var>, e a função é para
+ser integrada sobre um intervalo infinito.
+</p>
+<p>O integrando pode ser especidficado como o nome de uma função Maxima ou uma função Lisp ou um operador,
+uma expressão lambda do Maxima, ou uma expressão geral do Maxima.
+</p>
+<p>O parâmetro <var>inftype</var> determina o intervalo de integração como segue:
+</p>
+<dl compact="compact">
+<dt> <code>inf</code></dt>
+<dd><p>O intervalo vai de <var>a</var> ao infinito positivo.
+</p></dd>
+<dt> <code>minf</code></dt>
+<dd><p>O intervalo vai do infinito negativo até <var>a</var>.
+</p></dd>
+<dt> <code>both</code></dt>
+<dd><p>O intervalo corresponde a toda reta real.
+</p></dd>
+</dl>
+
+<p>Os argumentos opcionais <var>epsrel</var> e <var>limite</var> são o erro relativo
+desejado e o número maximo de subintervalos, respectivamente.
+<var>epsrel</var> padrão para 1e-8 e <var>limite</var> é 200.
+</p>
+<p><code>quad_qagi</code> retorna uma lista de quatro elementos:
+</p>
+<ul class="toc">
+<li>
+uma aproximação para o integral,
+</li><li>
+o erro absoluto estimado da aproximação, 
+</li><li>
+o número de avaliações do integrando,
+</li><li>
+um código de erro.
+</li></ul>
+
+<p>O código de erro (quarto elemento do valor de retorno) pode ter os valores:
+</p>
+<dl compact="compact">
+<dt> <code>0</code></dt>
+<dd><p>nenhum problema foi encontrado; 
+</p></dd>
+<dt> <code>1</code></dt>
+<dd><p>foram utilizados muitos subintervalos;
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p>foi detectato um erro de arredondamento excessivo;
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p>o integrando comporta-se muito mal;
+</p></dd>
+<dt> <code>4</code></dt>
+<dd><p>não houve convergência
+</p></dd>
+<dt> <code>5</code></dt>
+<dd><p>o integral provavelmente é divergente, o converge lentamente
+</p></dd>
+<dt> <code>6</code></dt>
+<dd><p>a entrada não foi válida.
+</p>
+</dd>
+</dl>
+
+
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) quad_qagi (x^2*exp(-4*x), x, 0, inf);
+(%o1)        [0.03125, 2.95916102995002E-11, 105, 0]
+(%i2) integrate (x^2*exp(-4*x), x, 0, inf);
+                               1
+(%o2)                          --
+                               32
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>quad_qawc</b><i> (<var>f(x)</var>, <var>x</var>, <var>c</var>, <var>a</var>, <var>b</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX638"></a>
+</dt>
+<dt><u>Função:</u> <b>quad_qawc</b><i> (<var>f</var>, <var>x</var>, <var>c</var>, <var>a</var>, <var>b</var>, <var>epsrel</var>, <var>limite</var>)</i>
+<a name="IDX639"></a>
+</dt>
+<dd><p>Calcula o valor principal de Cauchy de <em>f(x)/(x - c)</em> over a finite interval.
+A estratégia é globalmente adaptativa, e a integração de
+Clenshaw-Curtis modificada é usada sobre as subamplitudes
+que possuírem o ponto <em>x = c</em>.
+</p>
+<p><code>quad_qawc</code> calcula o valor principal de Cauchy de
+</p>
+<p><em>integrate (f(x)/(x - c), x, a, b)</em>
+</p>
+<p>usando a rotina Quadpack QAWC.  A função a ser integrada é
+<code><var>f(x)</var>/(<var>x</var> - <var>c</var>)</code>, com variável dependente <var>x</var>, e a função
+é para ser integrada sobre o intervalo que vai de <var>a</var> até <var>b</var>.
+</p>
+<p>O integrando pode ser especidficado como o nome de uma função Maxima ou uma função Lisp ou um operador,
+uma expressão lambda do Maxima, ou uma expressão geral do Maxima.
+</p>
+<p>Os argumentos opcionais <var>epsrel</var> e <var>limite</var> são o erro relativo
+desejado e o máximo número de subintervalos, respectivamente.
+<var>epsrel</var> padrão para 1e-8 e <var>limite</var> é 200.
+</p>
+<p><code>quad_qawc</code> retorna uma lista de quatro elementos:
+</p>
+<ul class="toc">
+<li>
+uma aproximação para o integral,
+</li><li>
+o erro absoluto estimado da aproximação, 
+</li><li>
+o número de avaliações do integrando,
+</li><li>
+um código de erro.
+</li></ul>
+
+<p>O código de erro (quarto elemento do valoor de retorno) pode ter os valores:
+</p>
+<dl compact="compact">
+<dt> <code>0</code></dt>
+<dd><p>nenhum problema foi encontrado; 
+</p></dd>
+<dt> <code>1</code></dt>
+<dd><p>foram utilizados muitos subintervalos;
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p>foi detectato um erro de arredondamento excessivo;
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p>o integrando comporta-se muito mal;
+</p></dd>
+<dt> <code>6</code></dt>
+<dd><p>a entrada não foi válida.
+</p>
+</dd>
+</dl>
+
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) quad_qawc (2^(-5)*((x-1)^2+4^(-5))^(-1), x, 2, 0, 5);
+(%o1)    [- 3.130120337415925, 1.306830140249558E-8, 495, 0]
+(%i2) integrate (2^(-alpha)*(((x-1)^2 + 4^(-alpha))*(x-2))^(-1), x, 0, 5);
+Principal Value
+                       alpha
+        alpha       9 4                 9
+       4      log(------------- + -------------)
+                      alpha           alpha
+                  64 4      + 4   64 4      + 4
+(%o2) (-----------------------------------------
+                        alpha
+                     2 4      + 2
+
+         3 alpha                       3 alpha
+         -------                       -------
+            2            alpha/2          2          alpha/2
+      2 4        atan(4 4       )   2 4        atan(4       )   alpha
+    - --------------------------- - -------------------------)/2
+                alpha                        alpha
+             2 4      + 2                 2 4      + 2
+(%i3) ev (%, alpha=5, numer);
+(%o3)                    - 3.130120337415917
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>quad_qawf</b><i> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>omega</var>, <var>trig</var>, <var>epsabs</var>, <var>limit</var>, <var>maxp1</var>, <var>limlst</var>)</i>
+<a name="IDX640"></a>
+</dt>
+<dt><u>Função:</u> <b>quad_qawf</b><i> (<var>f</var>, <var>x</var>, <var>a</var>, <var>omega</var>, <var>trig</var>, <var>epsabs</var>, <var>limit</var>, <var>maxp1</var>, <var>limlst</var>)</i>
+<a name="IDX641"></a>
+</dt>
+<dd><p>Calcula uma transformação de co-seno de Fourier ou de um seno de Fourier sobre um intervalo semi-finito.
+usando a função QAWF do pacote Quadpack.
+A mesma aproxima como em <code>quad_qawo</code> quando aplicada sobre intervalos finitos sucessivos,
+e aceleração de convergência por meio d algorítimo de Epsilon (Wynn, 1956) 
+aplicado a séries de contribuições de integrais.
+</p>
+<p><code>quad_qawf</code> calcula o integral
+</p>
+<p><em>integrate (f(x)*w(x), x, a, inf)</em>
+</p>
+<p>A função peso <em>w</em> é seleccionada por <var>trig</var>:
+</p>
+<dl compact="compact">
+<dt> <code>cos</code></dt>
+<dd><p><em>w(x) = cos (omega x)</em>
+</p></dd>
+<dt> <code>sin</code></dt>
+<dd><p><em>w(x) = sin (omega x)</em>
+</p></dd>
+</dl>
+
+<p>O integrando pode ser especidficado como o nome de uma função Maxima ou uma função Lisp ou um operador,
+uma expressão lambda do Maxima, ou uma expressão geral do Maxima.
+</p>
+<p>Os argumentos opcionais são:
+</p>
+<dl compact="compact">
+<dt> <code>epsabs</code></dt>
+<dd><p>Erro absoluto de aproximação desejado.  Padrão é 1d-10.
+</p></dd>
+<dt> <code>limit</code></dt>
+<dd><p>Tamanho de array interno de trabalho.  (<var>limit</var> - <var>limlst</var>)/2 é o
+maximo número de subintervalos para usar.  O Padrão é 200.
+</p></dd>
+<dt> <code>maxp1</code></dt>
+<dd><p>O número máximo dos momentos de Chebyshev.  Deve ser maior que 0.  O padrão
+é 100.
+</p></dd>
+<dt> <code>limlst</code></dt>
+<dd><p>Limite superior sobre número de ciclos.  Deve ser maior ou igual a
+3.  O padrão é 10.
+</p></dd>
+</dl>
+
+<p><var>epsabs</var> e <var>limit</var> são o erro relativo
+desejado e o número maximo de subintervalos, respectivamente.
+<var>epsrel</var> padrão para 1e-8 e <var>limit</var> é 200.
+</p>
+<p><code>quad_qawf</code> retorna uma lista de quatro elementos:
+</p>
+<ul class="toc">
+<li>
+uma aproximação para o integral,
+</li><li>
+o erro absoluto estimado da aproximação, 
+</li><li>
+o número de avaliações do integrando,
+</li><li>
+um código de erro.
+</li></ul>
+
+<p>O código de erro (quarto elemento do valor de retorno) pode ter os valores:
+</p>
+<dl compact="compact">
+<dt> <code>0</code></dt>
+<dd><p>nenhum problema foi encontrado; 
+</p></dd>
+<dt> <code>1</code></dt>
+<dd><p>foram utilizados muitos subintervalos;
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p>foi detectato um erro de arredondamento excessivo;
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p>o integrando comporta-se muito mal;
+</p></dd>
+<dt> <code>6</code></dt>
+<dd><p>a entrada não foi válida.
+</p>
+</dd>
+</dl>
+
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) quad_qawf (exp(-x^2), x, 0, 1, 'cos);
+(%o1)   [.6901942235215714, 2.84846300257552E-11, 215, 0]
+(%i2) integrate (exp(-x^2)*cos(x), x, 0, inf);
+                          - 1/4
+                        %e      sqrt(%pi)
+(%o2)                   -----------------
+                                2
+(%i3) ev (%, numer);
+(%o3)                   .6901942235215714
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>quad_qawo</b><i> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>omega</var>, <var>trig</var>, <var>epsabs</var>, <var>limite</var>, <var>maxp1</var>, <var>limlst</var>)</i>
+<a name="IDX642"></a>
+</dt>
+<dt><u>Função:</u> <b>quad_qawo</b><i> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>omega</var>, <var>trig</var>, <var>epsabs</var>, <var>limite</var>, <var>maxp1</var>, <var>limlst</var>)</i>
+<a name="IDX643"></a>
+</dt>
+<dd><p>Integração de <em>cos(omega x) f(x)</em> ou <em>sin(omega x) f(x)</em> sobre um intervalo finito,
+onde <em>omega</em> é uma constante.
+A componente de avaliação da regra é baseada na técnica modificada de Clenshaw-Curtis.
+<code>quad_qawo</code> aplica subdivisão adaptativa com extrapolação, similar a <code>quad_qags</code>.
+</p>
+<p><code>quad_qawo</code> calcula o integral usando a rotina
+Quadpack QAWO:
+</p>
+<p><em>integrate (f(x)*w(x), x, a, b)</em>
+</p>
+
+<p>A função peso <em>w</em> é seleccionada por <var>trig</var>:
+</p>
+<dl compact="compact">
+<dt> <code>cos</code></dt>
+<dd><p><em>w(x) = cos (omega x)</em>
+</p></dd>
+<dt> <code>sin</code></dt>
+<dd><p><em>w(x) = sin (omega x)</em>
+</p></dd>
+</dl>
+
+<p>O integrando pode ser especidficado como o nome de uma função Maxima ou uma função Lisp ou um operador,
+uma expressão lambda do Maxima, ou uma expressão geral do Maxima.
+</p>
+<p>Os argumentos opcionais são:
+</p>
+<dl compact="compact">
+<dt> <code>epsabs</code></dt>
+<dd><p>Erro absoluto desejado de aproximação.  O Padrão é 1d-10.
+</p></dd>
+<dt> <code>limite</code></dt>
+<dd><p>Tamanho do array interno de trabalho.  (<var>limite</var> - <var>limlst</var>)/2 é o
+número máximo de subintervalos a serem usados.  Default é 200.
+</p></dd>
+<dt> <code>maxp1</code></dt>
+<dd><p>Número máximo dos momentos de Chebyshev.  Deve ser maior que 0.  O padrão
+é 100.
+</p></dd>
+<dt> <code>limlst</code></dt>
+<dd><p>Limite superior sobre o número de ciclos.  Deve ser maior que ou igual a
+3.  O padrão é 10.
+</p></dd>
+</dl>
+
+<p><var>epsabs</var> e <var>limite</var> são o erro relativo
+desejado e o número máximo de subintervalos, respectivamente.
+<var>epsrel</var> o padrão é 1e-8 e <var>limite</var> é 200.
+</p>
+<p><code>quad_qawo</code> retorna uma lista de quatro elementos:
+</p>
+<ul class="toc">
+<li>
+uma aproximação para o integral,
+</li><li>
+o erro absoluto estimado da aproximação, 
+</li><li>
+o número de avaliações do integrando,
+</li><li>
+um código de erro.
+</li></ul>
+
+<p>O código de erro (quarto elemento do valor de retorno) pode ter os valores:
+</p>
+<dl compact="compact">
+<dt> <code>0</code></dt>
+<dd><p>nenhum problema foi encontrado; 
+</p></dd>
+<dt> <code>1</code></dt>
+<dd><p>foram utilizados muitos subintervalos;
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p>foi detectato um erro de arredondamento excessivo;
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p>o integrando comporta-se muito mal;
+</p></dd>
+<dt> <code>6</code></dt>
+<dd><p>a entrada não foi válida.
+</p>
+</dd>
+</dl>
+
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) quad_qawo (x^(-1/2)*exp(-2^(-2)*x), x, 1d-8, 20*2^2, 1, cos);
+(%o1)     [1.376043389877692, 4.72710759424899E-11, 765, 0]
+(%i2) rectform (integrate (x^(-1/2)*exp(-2^(-alpha)*x) * cos(x), x, 0, inf));
+                   alpha/2 - 1/2            2 alpha
+        sqrt(%pi) 2              sqrt(sqrt(2        + 1) + 1)
+(%o2)   -----------------------------------------------------
+                               2 alpha
+                         sqrt(2        + 1)
+(%i3) ev (%, alpha=2, numer);
+(%o3)                     1.376043390090716
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>quad_qaws</b><i> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>alpha</var>, <var>beta</var>, <var>wfun</var>, <var>epsabs</var>, <var>limite</var>)</i>
+<a name="IDX644"></a>
+</dt>
+<dt><u>Função:</u> <b>quad_qaws</b><i> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>alpha</var>, <var>beta</var>, <var>wfun</var>, <var>epsabs</var>, <var>limite</var>)</i>
+<a name="IDX645"></a>
+</dt>
+<dd><p>Integração de <em>w(x) f(x)</em> sobre um intervalo finito,
+onde <em>w(x)</em> é uma certa função algébrica ou logarítmica.
+Uma estratégia de subdivisão globalmente adaptativa é aplicada,
+com integração modificada de Clenshaw-Curtis sobre os subintervalos que possuírem os pontos finais
+dos intervalos de integração.
+</p> 
+<p><code>quad_qaws</code> calcula o integral usando a rotina
+Quadpack QAWS:
+</p> 
+<p><em>integrate (f(x)*w(x), x, a, b)</em>
+</p>
+<p>A função peso <em>w</em> é seleccionada por <var>wfun</var>:
+</p>
+<dl compact="compact">
+<dt> <code>1</code></dt>
+<dd><p><em>w(x) = (x - a)^alpha (b - x)^beta</em>
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p><em>w(x) = (x - a)^alpha (b - x)^beta log(x - a)</em>
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p><em>w(x) = (x - a)^alpha (b - x)^beta log(b - x)</em>
+</p></dd>
+<dt> <code>4</code></dt>
+<dd><p><em>w(x) = (x - a)^alpha (b - x)^beta log(x - a) log(b - x)</em>
+</p></dd>
+</dl>
+
+<p>O integrando pode ser especificado como o nome de uma função Maxima ou uma função Lisp ou um operador,
+uma expressão lambda do Maxima, ou uma expressão geral do Maxima.
+</p>
+<p>O argumentos opcionais são:
+</p>
+<dl compact="compact">
+<dt> <code>epsabs</code></dt>
+<dd><p>Erro absoluto desejado de aproximação.  O padrão é 1d-10.
+</p></dd>
+<dt> <code>limite</code></dt>
+<dd><p>Tamanho do array interno de trabalho.  (<var>limite</var> - <var>limlst</var>)/2 é o
+número máximo de subintervalos para usar.  O padrão é 200.
+</p></dd>
+</dl>
+
+<p><var>epsabs</var> e <var>limit</var> são o erro relativo
+desejado e o número máximo de subintervalos, respectivamente.
+<var>epsrel</var> o padrão é 1e-8 e <var>limite</var> é 200.
+</p>
+<p><code>quad_qaws</code> retorna uma lista de quatro elementos:
+</p>
+<ul class="toc">
+<li>
+uma aproximação para o integral,
+</li><li>
+o erro absoluto estimado da aproximação, 
+</li><li>
+o número de avaliações do integrando,
+</li><li>
+um código de erro.
+</li></ul>
+
+<p>O código de erro (quarto elemento do valor de retorno) pode ter os valores:
+</p>
+<dl compact="compact">
+<dt> <code>0</code></dt>
+<dd><p>nenhum problema foi encontrado; 
+</p></dd>
+<dt> <code>1</code></dt>
+<dd><p>foram utilizados muitos subintervalos;
+</p></dd>
+<dt> <code>2</code></dt>
+<dd><p>foi detectato um erro de arredondamento excessivo;
+</p></dd>
+<dt> <code>3</code></dt>
+<dd><p>o integrando comporta-se muito mal;
+</p></dd>
+<dt> <code>6</code></dt>
+<dd><p>a entrada não foi válida.
+</p>
+</dd>
+</dl>
+
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) quad_qaws (1/(x+1+2^(-4)), x, -1, 1, -0.5, -0.5, 1);
+(%o1)     [8.750097361672832, 1.24321522715422E-10, 170, 0]
+(%i2) integrate ((1-x*x)^(-1/2)/(x+1+2^(-alpha)), x, -1, 1);
+       alpha
+Is  4 2      - 1  positive, negative, or zero?
+
+pos;
+                          alpha         alpha
+                   2 %pi 2      sqrt(2 2      + 1)
+(%o2)              -------------------------------
+                               alpha
+                            4 2      + 2
+(%i3) ev (%, alpha=4, numer);
+(%o3)                     8.750097361672829
+</pre>
+</dd></dl>
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC62" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>Janeiro, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

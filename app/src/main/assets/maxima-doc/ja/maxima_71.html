@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Maxima 5.36.1 Manual: 71. opsubst</title>
+
+<meta name="description" content="Maxima 5.36.1 Manual: 71. opsubst">
+<meta name="keywords" content="Maxima 5.36.1 Manual: 71. opsubst">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="figures/favicon.ico"/>
+
+<script type="text/javascript"><!--
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-510249-14']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+--></script>
+</head>
+
+<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="opsubst"></a>
+<a name="SEC336"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_70.html#SEC335" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC337" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC328" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC338" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 71. opsubst </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC337">71.1 Functions and Variables for opsubst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<p><a name="Item_003a-Functions-and-Variables-for-opsubst"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-opsubst"></a>
+<a name="SEC337"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC336" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC338" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC338" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 71.1 Functions and Variables for opsubst </h2>
+
+
+<dl>
+<dt><u>関数:</u> <b>opsubst</b><i> (<var>f</var>,<var>g</var>,<var>e</var>)</i>
+<a name="IDX2296"></a>
+</dt>
+<dt><u>関数:</u> <b>opsubst</b><i> (<var>g</var>=<var>f</var>,<var>e</var>)</i>
+<a name="IDX2297"></a>
+</dt>
+<dt><u>関数:</u> <b>opsubst</b><i> ([<var>g1</var>=<var>f1</var>,<var>g2</var>=<var>f2</var>,..., <var>gn</var>=<var>fn</var>],<var>e</var>)</i>
+<a name="IDX2298"></a>
+</dt>
+<dd><p>関数 <code>opsubst</code>は、
+<code>opsubst</code>は式の中の演算子への代入だけをすることを除いて、
+関数 <code>subst</code>に似ています。
+一般に、 <var>f</var>が式 <var>e</var>の中の演算子の時、
+式 <var>e</var>の中で <var>g</var>を <var>f</var>に代入します。
+</p>
+<p>演算子を決定するために、 <code>opsubst</code>は <code>inflag</code>を trueに設定します。
+これは、
+<code>opsubst</code>が式の中の表示演算子ではなく内部演算子への代入をすることを意味します。
+</p>
+<p>例:
+</p><pre class="example">(%i1) load (opsubst)$
+
+(%i2) opsubst(f,g,g(g(x)));
+(%o2)                     f(f(x))
+(%i3) opsubst(f,g,g(g));
+(%o3)                       f(g)
+(%i4) opsubst(f,g[x],g[x](z));
+(%o4)                       f(z)
+(%i5) opsubst(g[x],f, f(z));
+(%o5)                      g (z)
+                            x
+(%i6) opsubst(tan, sin, sin(sin));
+(%o6)                     tan(sin)
+(%i7) opsubst([f=g,g=h],f(x));
+(%o7)                       h(x)
+</pre>
+<p>内部的に Maximaは単項否定や割り算、引き算演算子を使いません;
+例えば:
+</p><pre class="example">(%i8) opsubst(&quot;+&quot;,&quot;-&quot;,a-b);
+(%o8)                     a - b
+(%i9) opsubst(&quot;f&quot;,&quot;-&quot;,-a);
+(%o9)                      - a
+(%i10) opsubst(&quot;^^&quot;,&quot;/&quot;,a/b);
+                             a
+(%o10)                       -
+                             b
+</pre>
+<p>-a*bの内部表現は *(-1,a,b)です;
+例えば、
+</p><pre class="example">(%i11) opsubst(&quot;[&quot;,&quot;*&quot;, -a*b);
+(%o11)                  [- 1, a, b]
+</pre>
+<p>どちらかの演算子が Maximaシンボルでない時、他のある関数は一般にエラーを知らせます:
+</p><pre class="example">(%i12) opsubst(a+b,f, f(x));
+
+Improper name or value in functional position:
+b + a
+ -- an error.  Quitting.  To debug this try debugmode(true);
+</pre>
+<p>しかしながら、添字付き演算子は許されます:
+</p><pre class="example">(%i13) opsubst(g[5],f, f(x));
+(%o13)                     g (x)
+                            5
+</pre>
+<p>この関数を使うためには最初に <code>load(&quot;opsubst&quot;)</code>と書いてください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_100.html#Category_003a-Package-opsubst">Package opsubst</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-orthopoly"></a>
+</p><hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC336" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC338" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

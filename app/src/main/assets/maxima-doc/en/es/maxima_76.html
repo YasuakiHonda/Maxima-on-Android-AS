@@ -1,0 +1,1355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on abril, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Maxima 5.36.0: 76. stringproc</title>
+
+<meta name="description" content="Manual de Maxima 5.36.0: 76. stringproc">
+<meta name="keywords" content="Manual de Maxima 5.36.0: 76. stringproc">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="stringproc"></a>
+<a name="SEC364"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_75.html#SEC363" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC365" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC362" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 76. stringproc </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC365">76.1 Introducción al procesamiento de cadenas</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC366">76.2 Funciones y variables para entrada y salida</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC367">76.3 Funciones y variables para caracteres</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC368">76.4 Funciones y variables para cadenas</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Introducci_00f3n-al-procesamiento-de-cadenas"></a>
+<a name="SEC365"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC364" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC366" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 76.1 Introducción al procesamiento de cadenas </h2>
+
+<p>El paquete <code>stringproc</code> amplía las capacidades de 
+Maxima para manipular cadenas de caracteres, al tiempo que añade algunas
+funciones útiles para la lectura y escritura de ficheros.
+</p>
+<p>Para dudas y fallos, por favor contáctese con <code>volkervannek at gmail dot com</code>.
+</p>
+<p>En Maxima, una cadena de caracteres se construye fácilmente 
+escribiéndola entre comillas dobles, como en <code>&quot;texto&quot;</code>.
+La función <code>stringp</code> comprueba si el argumento es una cadena.
+</p>
+<pre class="example">(%i1) m: &quot;text&quot;;
+(%o1)                         text
+(%i2) stringp(m);
+(%o2)                         true
+</pre>
+<p>Los caracteres se representan como cadenas de longitud unidad.
+No se tratan como caracteres Lisp. Se pueden chequear con la
+función <code>charp</code> (o con <code>lcharp</code> para los caracteres Lisp).
+La conversión de caracteres Lisp a caracteres Maxima se realiza con
+la función <code>cunlisp</code>.
+</p>
+<pre class="example">(%i1) c: &quot;e&quot;;
+(%o1)                           e
+(%i2) [charp(c),lcharp(c)];
+(%o2)                     [true, false]
+(%i3) supcase(c);
+(%o3)                           E
+(%i4) charp(%);
+(%o4)                         true
+</pre>
+<p>Todos los caracteres devueltos por las funciones de <code>stringproc</code> son caracteres
+de Maxima. Puesto que los caracteres introducidos son cadenas de longitud igual a
+la unidad, se pueden utilizar las funciones de cadenas también para los 
+caracteres, como se ha hecho con <code>supcase</code> en el anterior ejemplo.
+</p>
+<p>Es importante tener en cuenta que el primer carácter en una cadena de Maxima
+ocupa la posición 1. Esto se ha diseñado así para mantener
+la compatibilidad con las listas de Maxima. Véanse las definiciones de 
+<code>charat</code> y <code>charlist</code> para ver ejemplos.
+</p>
+<p>Las funciones de cadena se utilizan frecuentemente cuando se trabaja con
+ficheros. El siguiente ejemplo muestra algunas de estas funciones en acción.
+</p>
+<p>Ejemplo: 
+</p>
+<p>La función <code>openw</code> envía un flujo de salida hacia
+un fichero, entonces <code>printf</code> permitirá formatera la escritura en
+este fichero. Véase <code>printf</code> para más detalles.
+</p>
+<pre class="example">(%i1) s: openw(&quot;E:/file.txt&quot;);
+(%o1)                    #&lt;output stream E:/file.txt&gt;
+(%i2) for n:0 thru 10 do printf( s, &quot;~d &quot;, fib(n) );
+(%o2)                                done
+(%i3) printf( s, &quot;~%~d ~f ~a ~a ~f ~e ~a~%&quot;, 
+              42,1.234,sqrt(2),%pi,1.0e-2,1.0e-2,1.0b-2 );
+(%o3)                                false
+(%i4) close(s);
+(%o4)                                true
+</pre>
+<p>Una vez cerrado el flujo, se podrá abrir nuevamente. La función <code>readline</code>
+devuelve el renglón entero como una única cadena. El paquete <code>stringproc</code>
+dispone de muchas funciones para manipular cadenas. La separación de palabras se
+puede hacer con <code>split</code> o <code>tokens</code>.
+</p>
+<pre class="example">(%i5) s: openr(&quot;E:/file.txt&quot;);
+(%o5)                     #&lt;input stream E:/file.txt&gt;
+(%i6) readline(s);
+(%o6)                     0 1 1 2 3 5 8 13 21 34 55 
+(%i7) line: readline(s);
+(%o7)               42 1.234 sqrt(2) %pi 0.01 1.0E-2 1.0b-2
+(%i8) list: tokens(line);
+(%o8)           [42, 1.234, sqrt(2), %pi, 0.01, 1.0E-2, 1.0b-2]
+(%i9) map( parsetoken, list );
+(%o9)           [42, 1.234, false, false, 0.01, 0.01, false]
+</pre>
+<p>La función <code>parsetoken</code> sólo analiza sintácticamente números
+enteros y decimales. El análisis de símbolos y números
+decimales grandes (<i>big floats</i>) necesita <code>parse_string</code>, que se
+cargar automáticamente desde <code>eval_string.lisp</code>.
+</p>
+<pre class="example">(%i5) s: openr(&quot;E:/file.txt&quot;);
+(%o5)                     #&lt;input stream E:/file.txt&gt;
+(%i6) readline(s);
+(%o6)                     0 1 1 2 3 5 8 13 21 34 55 
+(%i7) line: readline(s);
+(%o7)               42 1.234 sqrt(2) %pi 0.01 1.0E-2 1.0b-2
+(%i8) list: tokens(line);
+(%o8)           [42, 1.234, sqrt(2), %pi, 0.01, 1.0E-2, 1.0b-2]
+(%i9) map( parse_string, list );
+(%o9)            [42, 1.234, sqrt(2), %pi, 0.01, 0.01, 1.0b-2]
+(%i10) float(%);
+(%o10) [42.0, 1.234, 1.414213562373095, 3.141592653589793, 0.01,
+                                                     0.01, 0.01]
+(%i11) readline(s);
+(%o11)                               false
+(%i12) close(s)$
+</pre>
+<p>La función <code>readline</code> devuelve <code>false</code> cuando se alcanza el
+final del fichero.
+</p>
+
+<hr size="6">
+<a name="Funciones-y-variables-para-entrada-y-salida"></a>
+<a name="SEC366"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC365" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC367" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 76.2 Funciones y variables para entrada y salida </h2>
+
+<p>Ejemplo: 
+</p>
+<pre class="example">(%i1) s: openw(&quot;E:/file.txt&quot;);
+(%o1)                     #&lt;output stream E:/file.txt&gt;
+(%i2) control: 
+&quot;~2tAn atom: ~20t~a~%~2tand a list: ~20t~{~r ~}~%~2t\
+           and an integer: ~20t~d~%&quot;$
+(%i3) printf( s,control, 'true,[1,2,3],42 )$
+(%o3)                                false
+(%i4) close(s);
+(%o4)                                true
+(%i5) s: openr(&quot;E:/file.txt&quot;);
+(%o5)                     #&lt;input stream E:/file.txt&gt;
+(%i6) while stringp( tmp:readline(s) ) do print(tmp)$
+  An atom:          true 
+  and a list:       one two three  
+  and an integer:   42 
+(%i7) close(s)$
+</pre>
+<dl>
+<dt><u>Función:</u> <b>close</b><i> (<var>stream</var>) </i>
+<a name="IDX2711"></a>
+</dt>
+<dd><p>Cierra el flujo de datos <var>stream</var> y devuelve <code>true</code> si <var>stream</var> había
+sido abierto. 
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>flength</b><i> (<var>stream</var>)</i>
+<a name="IDX2712"></a>
+</dt>
+<dd><p>Devuelve el número de elementos en <var>stream</var>,
+el cual debe ser un flujo de datos desde o hacia un fichero.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>fposition</b><i> (<var>stream</var>)</i>
+<a name="IDX2713"></a>
+</dt>
+<dt><u>Función:</u> <b>fposition</b><i> (<var>stream</var>, <var>pos</var>)</i>
+<a name="IDX2714"></a>
+</dt>
+<dd><p>Devuelve la posición actual en el flujo de datos <var>stream</var> si no se utiliza <var>pos</var>.
+Si se utiliza <var>pos</var>, <code>fposition</code> fija la posición en <var>stream</var>.
+<var>stream</var> debe ser un flujo de datos desde o hacia un fichero y <var>pos</var> 
+debe ser un entero positivo que hace corresponder al primer elemento de
+<var>stream</var> la posición 1.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>freshline</b><i> () </i>
+<a name="IDX2715"></a>
+</dt>
+<dt><u>Función:</u> <b>freshline</b><i> (<var>stream</var>) </i>
+<a name="IDX2716"></a>
+</dt>
+<dd><p>Escribe una nueva línea (en el flujo de datos <var>stream</var>)
+si la posición actual no corresponde al inicio de la línea.
+</p>
+<p>Véase también <code>newline</code>.
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>get_output_stream_string</b><i> (<var>stream</var>)</i>
+<a name="IDX2717"></a>
+</dt>
+<dd><p>Devuelve una cadena con todos los caracteres presentes en <var>stream</var>,
+que debe ser un flujo de datos de salida abiero.
+Los caracteres devueltos son eliminados de <var>stream</var>.
+</p>
+<p>Para un ejemplo, véase <code>make_string_output_stream</code> .
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>make_string_input_stream</b><i> (<var>string</var>)</i>
+<a name="IDX2718"></a>
+</dt>
+<dt><u>Función:</u> <b>make_string_input_stream</b><i> (<var>string</var>, <var>start</var>)</i>
+<a name="IDX2719"></a>
+</dt>
+<dt><u>Función:</u> <b>make_string_input_stream</b><i> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2720"></a>
+</dt>
+<dd><p>Devuelve un flujo de entrada que contiene partes de <var>string</var> junto con
+el carácter de final de fichero. Sin argumentos opcionales, el flujo contiene
+la cadena entera y se posiciona frente al primer carácter.
+Los argumentos <var>start</var> y <var>end</var> definen la subcadena contenida en el
+flujo. El primer carácter está disponible en la posición 1.
+</p>
+<p>Ejemplo:
+</p>
+<pre class="example">(%i1) istream : make_string_input_stream(&quot;text&quot;, 1, 4);
+(%o1)              #&lt;string-input stream from &quot;text&quot;&gt;
+(%i2) (while (c : readchar(istream)) # false do sprint(c), newline())$
+t e x 
+(%i3) close(istream)$
+</pre></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>make_string_output_stream</b><i> ()</i>
+<a name="IDX2721"></a>
+</dt>
+<dd><p>Devuelve un flujo de salida que acepta caracteres. Los caracteres de
+este flujo podrán obtenerse con <code>get_output_stream_string</code>.
+</p>
+<p>Ejemplo:
+</p>
+<pre class="example">(%i1) ostream : make_string_output_stream();
+(%o1)               #&lt;string-output stream 09622ea0&gt;
+(%i2) printf(ostream, &quot;foo&quot;)$
+
+(%i3) printf(ostream, &quot;bar&quot;)$
+
+(%i4) string : get_output_stream_string(ostream);
+(%o4)                            foobar
+(%i5) printf(ostream, &quot;baz&quot;)$
+
+(%i6) string : get_output_stream_string(ostream);
+(%o6)                              baz
+(%i7) close(ostream)$
+</pre></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>newline</b><i> () </i>
+<a name="IDX2722"></a>
+</dt>
+<dt><u>Función:</u> <b>newline</b><i> (<var>stream</var>) </i>
+<a name="IDX2723"></a>
+</dt>
+<dd><p>Escribe una nueva línea (en el flujo de datos  <var>stream</var>).
+</p>
+<p>Véase <code>sprint</code> para un ejemplo de uso de <code>newline()</code>.
+</p>
+<p>Nótese que hay algunos casos en los que <code>newline</code> no trabaja
+según lo esperado.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>opena</b><i> (<var>file</var>) </i>
+<a name="IDX2724"></a>
+</dt>
+<dd><p>Devuelve un flujo de datos al fichero <var>file</var>.
+Si se abre un fichero ya existente, <code>opena</code> añade elementos al final
+del fichero.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>openr</b><i> (<var>file</var>) </i>
+<a name="IDX2725"></a>
+</dt>
+<dd><p>Devuelve un flujo de datos de entrada al fichero <var>file</var>.
+Si <var>file</var> no existe, será creado.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>openw</b><i> (<var>file</var>) </i>
+<a name="IDX2726"></a>
+</dt>
+<dd><p>Devuelve un flujo de datos de salida al fichero <var>file</var>.
+Si <var>file</var> no existe, será creado.
+Si se abre un fichero ya existente, <code>openw</code> lo modifica 
+borrando el contenido anterior.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>printf</b><i> (<var>dest</var>, <var>string</var>)</i>
+<a name="IDX2727"></a>
+</dt>
+<dt><u>Función:</u> <b>printf</b><i> (<var>dest</var>, <var>string</var>, <var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX2728"></a>
+</dt>
+<dd><p>Genera una cadena de caracteres a partir de la cadena de control <var>string</var>,
+teniendo en cuenta que las tildes introducen directivas. El carácter que
+va después de la tilde, posiblemente precedido por parámetros y modificadores,
+especifica el tipo de formato que se desea. La mayor parte de las directivas usan
+uno o más elementos de los argumentos <var>expr_1</var>, ..., <var>expr_n</var>
+para crear la salida.
+</p>
+<p>Si <var>dest</var> es un flujo o vale <code>true</code>, entonces <code>printf</code> devuelve <code>false</code>.
+En otro caso, <code>printf</code> devuelve una cadena conteniendo la salida.
+</p>
+<p><code>printf</code> da acceso a la función <code>format</code> de Common Lisp.
+El siguiente ejemplo muestra la relación entre estas dos funciones.
+</p>
+<pre class="example">(%i1) printf(true, &quot;R~dD~d~%&quot;, 2, 2);
+R2D2
+(%o1)                                false
+(%i2) :lisp (format t &quot;R~dD~d~%&quot; 2 2)
+R2D2
+NIL
+</pre>
+<p>La siguiente descripción es un simple resumen de las posibilidades de <code>printf</code>.
+La función <code>format</code> de Common Lisp se encuentra descrita en detalle en muchas
+referencias, como el manual libre &quot;Common Lisp the Language&quot; de Guy L. Steele; en
+particular, el capítulo 22.3.3.
+</p>
+<pre class="example">   ~%       nueva línea
+   ~&amp;       línea de refresco
+   ~t       tabulación
+   ~$       moneda
+   ~d       entero en base decimal
+   ~b       entero en base binaria
+   ~o       entero en base octal
+   ~x       entero en base hexadecimal
+   ~br      entero en base b
+   ~r       deletrea un entero
+   ~p       plural
+   ~f       decimal en coma flotante
+   ~e       notación científica
+   ~g       ~f o ~e, dependiendo de la magnitud
+   ~h       número decimal grande (<i>bigfloat</i>)
+   ~a       utiliza la función <code>string</code> de Maxima
+   ~s       como ~a, pero las cadenas se devuelven entre &quot;comillas dobles&quot;
+   ~~       ~
+   ~&lt;       justificación, ~&gt; termina
+   ~(       conversor mayúscula/minúscula, ~) termina 
+   ~[       selección, ~] termina 
+   ~{       iteración, ~} termina
+</pre>
+<p>La directiva <code>~h</code> para números decimales grandes no pertenece al estándar
+de Lisp, por lo que se ilustra más abajo.
+</p>
+<p>La directiva <code>~*</code> no está soportada.
+</p>
+<p>Ejemplos:
+</p>
+<p>Si <var>dest</var> es un flujo o vale <code>true</code>, entonces <code>printf</code> devuelve <code>false</code>.
+En otro caso, <code>printf</code> devuelve una cadena conteniendo la salida.
+</p>
+<pre class="example">(%i1) printf( false, &quot;~a ~a ~4f ~a ~@r&quot;, 
+              &quot;String&quot;,sym,bound,sqrt(12),144), bound = 1.234;
+(%o1)                 String sym 1.23 2*sqrt(3) CXLIV
+(%i2) printf( false,&quot;~{~a ~}&quot;,[&quot;one&quot;,2,&quot;THREE&quot;] );
+(%o2)                          one 2 THREE 
+(%i3) printf(true,&quot;~{~{~9,1f ~}~%~}&quot;,mat ),
+          mat = args(matrix([1.1,2,3.33],[4,5,6],[7,8.88,9]))$
+      1.1       2.0       3.3 
+      4.0       5.0       6.0 
+      7.0       8.9       9.0 
+(%i4) control: &quot;~:(~r~) bird~p ~[is~;are~] singing.&quot;$
+(%i5) printf( false,control, n,n,if n=1 then 1 else 2 ), n=2;
+(%o5)                    Two birds are singing.
+</pre>
+<p>La directiva <code>~h</code> se ha introducido para formatear decimales grandes. 
+</p>
+<pre class="example">~w,d,e,x,o,p@H
+ w : width
+ d : decimal digits behind floating point
+ e : minimal exponent digits
+ x : preferred exponent
+ o : overflow character
+ p : padding character
+ @ : display sign for positive numbers
+</pre>
+<pre class="example">(%i1) fpprec : 1000$
+(%i2) printf(true, &quot;|~h|~%&quot;, 2.b0^-64)$
+|0.0000000000000000000542101086242752217003726400434970855712890625|
+(%i3) fpprec : 26$
+(%i4) printf(true, &quot;|~h|~%&quot;, sqrt(2))$
+|1.4142135623730950488016887|
+(%i5) fpprec : 24$
+(%i6) printf(true, &quot;|~h|~%&quot;, sqrt(2))$
+|1.41421356237309504880169|
+(%i7) printf(true, &quot;|~28h|~%&quot;, sqrt(2))$
+|   1.41421356237309504880169|
+(%i8) printf(true, &quot;|~28,,,,,'*h|~%&quot;, sqrt(2))$
+|***1.41421356237309504880169|
+(%i9) printf(true, &quot;|~,18h|~%&quot;, sqrt(2))$
+|1.414213562373095049|
+(%i10) printf(true, &quot;|~,,,-3h|~%&quot;, sqrt(2))$
+|1414.21356237309504880169b-3|
+(%i11) printf(true, &quot;|~,,2,-3h|~%&quot;, sqrt(2))$
+|1414.21356237309504880169b-03|
+(%i12) printf(true, &quot;|~20h|~%&quot;, sqrt(2))$
+|1.41421356237309504880169|
+(%i13) printf(true, &quot;|~20,,,,'+h|~%&quot;, sqrt(2))$
+|++++++++++++++++++++|
+</pre></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>readchar</b><i> (<var>stream</var>)</i>
+<a name="IDX2729"></a>
+</dt>
+<dd><p>Elimina y devuelve el primer carácter de <var>stream</var>. 
+Si se ha alcanzado el final del fichero, <code>readchar</code> devuelve <code>false</code>.
+</p>
+<p>Para un ejemplo, véase <code>make_string_input_stream</code>.
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>readline</b><i> (<var>stream</var>) </i>
+<a name="IDX2730"></a>
+</dt>
+<dd><p>Devuelve una cadena con los caracteres desde la posición actual en el flujo
+de datos <var>stream</var> hasta el final de la línea, o <code>false</code>
+si se ha alcanzado el final del fichero.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sprint</b><i> (<var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX2731"></a>
+</dt>
+<dd><p>Evalúa y muestra sus argumentos uno tras otro en un renglón comenzando por 
+su extremo izquierdo. 
+</p>
+<p>La función <code>newline()</code>, que se carga automáticamente desde <code>stringproc.lisp</code>,
+puede ser de utilidad si se quiere intercalar un salto de línea.
+</p>
+<pre class="example">(%i1) for n:0 thru 19 do sprint( fib(n) )$
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
+(%i2) for n:0 thru 22 do ( 
+         sprint(fib(n)), if mod(n,10)=9 then newline() )$
+0 1 1 2 3 5 8 13 21 34 
+55 89 144 233 377 610 987 1597 2584 4181 
+6765 10946 17711 
+</pre>
+</dd></dl>
+
+<hr size="6">
+<a name="Funciones-y-variables-para-caracteres"></a>
+<a name="SEC367"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC366" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 76.3 Funciones y variables para caracteres </h2>
+
+<dl>
+<dt><u>Función:</u> <b>alphacharp</b><i> (<var>char</var>)</i>
+<a name="IDX2732"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>char</var> es una carácter alfabético.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>alphanumericp</b><i> (<var>char</var>) </i>
+<a name="IDX2733"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>char</var> es una carácter alfabético o
+un dígito.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>ascii</b><i> (<var>int</var>)</i>
+<a name="IDX2734"></a>
+</dt>
+<dd><p>Devuelve el carácter correspondiente al número ASCII <var>int</var>,
+debiendo ser <em>-1 &lt; int &lt; 256</em>.
+</p>
+<pre class="example">(%i1) for n from 0 thru 255 do ( 
+  tmp: ascii(n),
+  if alphacharp(tmp) then sprint(tmp), if n=96 then newline() )$
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cequal</b><i> (<var>char_1</var>, <var>char_2</var>)          </i>
+<a name="IDX2735"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>char_1</var> y <var>char_2</var> son el mismo carácter. 
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cequalignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2736"></a>
+</dt>
+<dd><p>Como <code>cequal</code>, pero ignora si las letras están en mayúsculas o
+minúsculas.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cgreaterp</b><i> (<var>char_1</var>, <var>char_2</var>)    </i>
+<a name="IDX2737"></a>
+</dt>
+<dd><p>Devuelve  <code>true</code> si el número ASCII de <var>char_1</var> es mayor que el 
+de <var>char_2</var>. 
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cgreaterpignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2738"></a>
+</dt>
+<dd><p>Como <code>cgreaterp</code>, pero ignora si las letras están en mayúsculas o
+minúsculas.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>charp</b><i> (<var>obj</var>)</i>
+<a name="IDX2739"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>obj</var> es un carácter de Maxima.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cint</b><i> (<var>char</var>) </i>
+<a name="IDX2740"></a>
+</dt>
+<dd><p>Devuelve el número ASCII de <var>char</var>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>clessp</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2741"></a>
+</dt>
+<dd><p>Devuelve  <code>true</code> si el número ASCII de <var>char_1</var> es menor que el 
+de <var>char_2</var>.  
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>clesspignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2742"></a>
+</dt>
+<dd><p>Como <code>clessp</code>, pero ignora si las letras están en mayúsculas o
+minúsculas.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>constituent</b><i> (<var>char</var>)</i>
+<a name="IDX2743"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>char</var> es un carácter gráfico y no el
+carácter espacio. Un carácter gráfico es el que se puede ver y con un
+espacio añadido; <code>constituent</code> está definido por Paul Graham,
+ANSI Common Lisp, 1996, page 67.
+</p>
+<pre class="example">(%i1) for n from 0 thru 255 do ( 
+tmp: ascii(n), if constituent(tmp) then sprint(tmp) )$
+! &quot; #  %  ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @ A B
+C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c
+d e f g h i j k l m n o p q r s t u v w x y z { | } ~
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cunlisp</b><i> (<var>lisp_char</var>) </i>
+<a name="IDX2744"></a>
+</dt>
+<dd><p>Convierte un carácter Lisp en uno de Maxima. El uso de esta función por
+parte del usuario no será necesario.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>digitcharp</b><i> (<var>char</var>)    </i>
+<a name="IDX2745"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>char</var> es un dígito. 
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>lcharp</b><i> (<var>obj</var>) </i>
+<a name="IDX2746"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>obj</var> es un carácter de Lisp.
+El uso de esta función por parte del usuario no será necesario.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>lowercasep</b><i> (<var>char</var>)  </i>
+<a name="IDX2747"></a>
+</dt>
+<dd><p>Devuelve  <code>true</code> si <var>char</var> es un carácter en minúscula.
+</p></dd></dl>
+
+<dl>
+<dt><u>Variable:</u> <b>newline</b>
+<a name="IDX2748"></a>
+</dt>
+<dd><p>El carácter de nueva línea. 
+</p></dd></dl>
+
+<dl>
+<dt><u>Variable:</u> <b>space</b>
+<a name="IDX2749"></a>
+</dt>
+<dd><p>El carácter de espacio.
+</p></dd></dl>
+
+<dl>
+<dt><u>Variable:</u> <b>tab</b>
+<a name="IDX2750"></a>
+</dt>
+<dd><p>El carácter de tabulación.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>uppercasep</b><i> (<var>char</var>)  </i>
+<a name="IDX2751"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>char</var> es un carácter en mayúscula.
+</p></dd></dl>
+
+<hr size="6">
+<a name="Funciones-y-variables-para-cadenas"></a>
+<a name="SEC368"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC367" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC364" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 76.4 Funciones y variables para cadenas </h2>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>base64</b><i> (<var>string</var>)</i>
+<a name="IDX2752"></a>
+</dt>
+<dd><p>Devuelve la representación en base 64 de <var>string</var> en formato de
+cadena de caracteres.
+</p>
+<p>Ejemplo:
+</p>
+<pre class="example">(%i1) base64 : base64(&quot;foo bar baz&quot;);
+(%o1)                       Zm9vIGJhciBiYXo=
+(%i2) string : base64_decode(base64);
+(%o2)                          foo bar baz
+</pre></dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>base64_decode</b><i> (<var>base64-string</var>)</i>
+<a name="IDX2753"></a>
+</dt>
+<dd><p>Decodifica la cadena de caracteres <var>base64-string</var>, codificada
+en base 64, y devuelve la cadena original.
+</p>
+<p>Para un ejemplo, véase <code>base64</code>.
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>charat</b><i> (<var>string</var>, <var>n</var>)</i>
+<a name="IDX2754"></a>
+</dt>
+<dd><p>Devuelve el <var>n</var>-ésimo carácter de <var>string</var>.
+Al primer carácter de <var>string</var> le corresponde <var>n</var> = 1.
+</p>
+<pre class="example">(%i1) charat(&quot;Lisp&quot;,1);
+(%o1)                           L
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>charlist</b><i> (<var>string</var>) </i>
+<a name="IDX2755"></a>
+</dt>
+<dd><p>Devuelve una lista con todos los caracteres de <var>string</var>. 
+</p>
+<pre class="example">(%i1) charlist(&quot;Lisp&quot;);
+(%o1)                     [L, i, s, p]
+(%i2) %[1];
+(%o2)                           L
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>eval_string</b><i> (<var>str</var>)</i>
+<a name="IDX2756"></a>
+</dt>
+<dd><p>Analiza sintácticamente la cadena <var>str</var> como una expresión de Maxima
+y la evalúa. La cadena <var>str</var> puede terminar o no con cualquiera de los 
+símbolos de final de sentencia (dólar <code>$</code> o punto y coma <code>;</code>).
+Sólo se analiza la primera expresión si hay más de una.
+</p>
+<p>Se emitirá un mensaje de error si <var>str</var> no es una cadena.
+</p>
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) eval_string (&quot;foo: 42; bar: foo^2 + baz&quot;);
+(%o1)                       42
+(%i2) eval_string (&quot;(foo: 42, bar: foo^2 + baz)&quot;);
+(%o2)                   baz + 1764
+</pre>
+<p>Véase también <code>parse_string</code>.
+</p></dd></dl>
+
+
+
+
+
+<dl>
+<dt><u>Función:</u> <b>md5sum</b><i> (<var>string</var>)</i>
+<a name="IDX2757"></a>
+</dt>
+<dd><p>Devuelve, en formato de cadena de caracteres, el resultado de la suma de verificación
+md5 del argumento <var>string</var>. Para obtener el valor devuelto por la función como
+número entero, fijar la base numérica de entrada a 16 y a~nadir como prefijo
+el cero.
+</p>
+<p>Ejemplo:
+</p>
+<pre class="example">(%i1) string : md5sum(&quot;foo bar baz&quot;);
+(%o1)                  ab07acbb1e496801937adfa772424bf7
+(%i2) ibase : obase : 16.$
+
+(%i3) integer : parse_string(sconcat(0, string));
+(%o3)                 0ab07acbb1e496801937adfa772424bf7
+</pre></dd></dl>
+
+
+
+
+
+
+<dl>
+<dt><u>Función:</u> <b>parse_string</b><i> (<var>str</var>)</i>
+<a name="IDX2758"></a>
+</dt>
+<dd><p>Analiza sintácticamente la cadena <var>str</var> como una expresión de Maxima,
+pero no la evalúa. La cadena <var>str</var> puede terminar o no con cualquiera de los 
+símbolos de final de sentencia (dólar <code>$</code> o punto y coma <code>;</code>).
+Sólo se analiza la primera expresión si hay más de una.
+</p>
+<p>Se emitirá un mensaje de error si <var>str</var> no es una cadena.
+</p>
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) parse_string (&quot;foo: 42; bar: foo^2 + baz&quot;);
+(%o1)                    foo : 42
+(%i2) parse_string (&quot;(foo: 42, bar: foo^2 + baz)&quot;);
+                                   2
+(%o2)          (foo : 42, bar : foo  + baz)
+</pre>
+<p>Véase también <code>eval_string</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>scopy</b><i> (<var>string</var>) </i>
+<a name="IDX2759"></a>
+</dt>
+<dd><p>Devuelve una copia nueva de la cadena <var>string</var>. 
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sdowncase</b><i> (<var>string</var>) </i>
+<a name="IDX2760"></a>
+</dt>
+<dt><u>Función:</u> <b>sdowncase</b><i> (<var>string</var>, <var>start</var>) </i>
+<a name="IDX2761"></a>
+</dt>
+<dt><u>Función:</u> <b>sdowncase</b><i> (<var>string</var>, <var>start</var>, <var>end</var>) </i>
+<a name="IDX2762"></a>
+</dt>
+<dd><p>Convierte caracteres en minúscula a mayúscula. Véase también <code>supcase</code>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sequal</b><i> (<var>string_1</var>, <var>string_2</var>) </i>
+<a name="IDX2763"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>string_1</var> y <var>string_2</var> son dos cadenas de caracteres iguales. 
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sequalignore</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
+<a name="IDX2764"></a>
+</dt>
+<dd><p>Igual que <code>sequal</code> pero no diferencia entre minúsculas y mayúsculas.. 
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sexplode</b><i> (<var>string</var>)</i>
+<a name="IDX2765"></a>
+</dt>
+<dd><p>El nombre <code>sexplode</code> es un seudónimo de la función <code>charlist</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>simplode</b><i> (<var>list</var>)  </i>
+<a name="IDX2766"></a>
+</dt>
+<dt><u>Función:</u> <b>simplode</b><i> (<var>list</var>, <var>delim</var>)  </i>
+<a name="IDX2767"></a>
+</dt>
+<dd><p>La función <code>simplode</code> admite como entrada una lista de expresiones para
+luego convertirla en una cadena de caracteres. Si no se utiliza la opción <var>delim</var>
+para indicar el delimitador, entonces <code>simplode</code> no 
+hace uso de ninguno. El valor de <var>delim</var> puede ser cualquier cadena.
+</p>
+<pre class="example">(%i1) simplode([&quot;xx[&quot;,3,&quot;]:&quot;,expand((x+y)^3)]);
+(%o1)             xx[3]:y^3+3*x*y^2+3*x^2*y+x^3
+(%i2) simplode( sexplode(&quot;stars&quot;),&quot; * &quot; );
+(%o2)                   s * t * a * r * s
+(%i3) simplode( [&quot;One&quot;,&quot;more&quot;,&quot;coffee.&quot;],&quot; &quot; );
+(%o3)                   One more coffee.
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sinsert</b><i> (<var>seq</var>, <var>string</var>, <var>pos</var>) </i>
+<a name="IDX2768"></a>
+</dt>
+<dd><p>Devuelve la concatenación de las cadenas <code>substring (<var>string</var>, 1, <var>pos</var> - 1)</code>,
+<var>seq</var> y <code>substring (<var>string</var>, <var>pos</var>)</code>.
+Nótese que al primer carácter de <var>string</var> le corresponde la posición 1.
+</p>
+<pre class="example">(%i1) s: &quot;A submarine.&quot;$
+(%i2) concat( substring(s,1,3),&quot;yellow &quot;,substring(s,3) );
+(%o2)                  A yellow submarine.
+(%i3) sinsert(&quot;hollow &quot;,s,3);
+(%o3)                  A hollow submarine.
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sinvertcase</b><i> (<var>string</var>)  </i>
+<a name="IDX2769"></a>
+</dt>
+<dt><u>Función:</u> <b>sinvertcase</b><i> (<var>string</var>, <var>start</var>)  </i>
+<a name="IDX2770"></a>
+</dt>
+<dt><u>Función:</u> <b>sinvertcase</b><i> (<var>string</var>, <var>start</var>, <var>end</var>)  </i>
+<a name="IDX2771"></a>
+</dt>
+<dd><p>Devuelve la misma cadena <var>string</var> pero con todos sus caracteres desde la
+posición <var>start</var> hasta <var>end</var> invertidos, esto es, las
+mayúsculas se convierten en minúsculas y éstas en mayúsculas.
+Si no se incluye el argumento <var>end</var>, se invierten todos los caracteres 
+desde <var>start</var> hasta el final de la cadena.
+</p>
+
+<pre class="example">(%i1) sinvertcase(&quot;sInvertCase&quot;);
+(%o1)                      SiNVERTcASE
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>slength</b><i> (<var>string</var>) </i>
+<a name="IDX2772"></a>
+</dt>
+<dd><p>Devuelve el número de caracteres de <var>string</var>. 
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>smake</b><i> (<var>num</var>, <var>char</var>) </i>
+<a name="IDX2773"></a>
+</dt>
+<dd><p>Construye una cadena de longitud <var>num</var> con todos sus
+caracteres iguales a <var>char</var>. 
+</p>
+<pre class="example">(%i1) smake(3,&quot;w&quot;);
+(%o1)                          www
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>smismatch</b><i> (<var>string_1</var>, <var>string_2</var>) </i>
+<a name="IDX2774"></a>
+</dt>
+<dt><u>Función:</u> <b>smismatch</b><i> (<var>string_1</var>, <var>string_2</var>, <var>test</var>) </i>
+<a name="IDX2775"></a>
+</dt>
+<dd><p>Devuelve la posición del primer carácter de <var>string_1</var> distinto del
+correpondiente a <var>string_2</var>. La respuesta será <code>false</code> si no existe
+tal carácter. Por defecto, la función de comparación es <code>sequal</code>.
+Si se quiere ignorar la diferencia entre mayúsculas y minúsculas, hágase uso de 
+<code>sequalignore</code> para el argumento <var>test</var>.
+</p>
+<pre class="example">(%i1) smismatch(&quot;seven&quot;,&quot;seventh&quot;);
+(%o1)                           6
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>split</b><i> (<var>string</var>)  </i>
+<a name="IDX2776"></a>
+</dt>
+<dt><u>Función:</u> <b>split</b><i> (<var>string</var>, <var>delim</var>)  </i>
+<a name="IDX2777"></a>
+</dt>
+<dt><u>Función:</u> <b>split</b><i> (<var>string</var>, <var>delim</var>, <var>multiple</var>) </i>
+<a name="IDX2778"></a>
+</dt>
+<dd><p>Devuelve la lista de todos los lexemas (<i>tokens</i>) de <var>string</var>.
+La función <code>split</code> utiliza <var>delim</var> como delimitador, y en caso
+de no ser utilizado este argumento, será utilizado el espacio en blanco
+como delimitador por defecto. El argumento <var>multiple</var> es una variable
+booleana con valor <code>true</code> por defecto. Los delimitadores múltiples 
+se leen como uno solo, lo que resulta de utilidad si las tabulaciones son 
+almacenadas como secuencias de espacios en blanco. Si a <var>multiple</var> se 
+le asigna el valor <code>false</code>, se consirararán todos los delimitadores.
+</p>
+<pre class="example">(%i1) split(&quot;1.2   2.3   3.4   4.5&quot;);
+(%o1)                 [1.2, 2.3, 3.4, 4.5]
+(%i2) split(&quot;first;;third;fourth&quot;,&quot;;&quot;,false);
+(%o2)               [first, , third, fourth]
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sposition</b><i> (<var>char</var>, <var>string</var>) </i>
+<a name="IDX2779"></a>
+</dt>
+<dd><p>Devuelve la posición del primer carácter de <var>string</var> que
+coincide con <var>char</var>. Al primer carácter de <var>string</var>
+le corresponde la posición 1.
+Para cuando se quiera ignorar la diferencia entre mayúsculas y 
+minúsculas, véase <var>ssearch</var>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>)  </i>
+<a name="IDX2780"></a>
+</dt>
+<dt><u>Función:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>)  </i>
+<a name="IDX2781"></a>
+</dt>
+<dt><u>Función:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>)  </i>
+<a name="IDX2782"></a>
+</dt>
+<dt><u>Función:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2783"></a>
+</dt>
+<dd><p>Devuelve la cadena <var>string</var> pero sin las subcadenas que coinciden con <var>seq</var>.
+La función de comparación por defecto es <code>sequal</code>.
+Si se quiere ignorar la diferencia entre mayúsculas y minúsculas, hágase uso de 
+<code>sequalignore</code> para el argumento <var>test</var>.
+Utilícense <var>start</var> y <var>end</var> para acotar la búsqueda.
+Al primer carácter de <var>string</var> le corresponde la posición 1.
+</p>
+<pre class="example">(%i1) sremove(&quot;n't&quot;,&quot;I don't like coffee.&quot;);
+(%o1)                   I do like coffee.
+(%i2) sremove (&quot;DO &quot;,%,'sequalignore);
+(%o2)                    I like coffee.
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>)  </i>
+<a name="IDX2784"></a>
+</dt>
+<dt><u>Función:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>)  </i>
+<a name="IDX2785"></a>
+</dt>
+<dt><u>Función:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>)  </i>
+<a name="IDX2786"></a>
+</dt>
+<dt><u>Función:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)  </i>
+<a name="IDX2787"></a>
+</dt>
+<dd><p>Actúa de forma similar a la función <code>sremove</code>, pero sólo elimina
+la primera aparición de la subcadena <code>seq</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sreverse</b><i> (<var>string</var>) </i>
+<a name="IDX2788"></a>
+</dt>
+<dd><p>Devuelve una cadena con todos los caracteres de <var>string</var> en orden inverso.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>)  </i>
+<a name="IDX2789"></a>
+</dt>
+<dt><u>Función:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>)  </i>
+<a name="IDX2790"></a>
+</dt>
+<dt><u>Función:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>)  </i>
+<a name="IDX2791"></a>
+</dt>
+<dt><u>Función:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2792"></a>
+</dt>
+<dd><p>Devuelve la posición de la primera subcadena de <var>string</var> que coincide con
+la cadena <var>seq</var>.
+La función de comparación por defecto es <code>sequal</code>.
+Si se quiere ignorar la diferencia entre mayúsculas y minúsculas, hágase uso de 
+<code>sequalignore</code> para el argumento <var>test</var>.
+Utilícense <var>start</var> y <var>end</var> para acotar la búsqueda.
+Al primer carácter de <var>string</var> le corresponde la posición 1.
+</p>
+<pre class="example">(%i1) ssearch(&quot;~s&quot;,&quot;~{~S ~}~%&quot;,'sequalignore);
+(%o1)                                  4
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>ssort</b><i> (<var>string</var>) </i>
+<a name="IDX2793"></a>
+</dt>
+<dt><u>Función:</u> <b>ssort</b><i> (<var>string</var>, <var>test</var>) </i>
+<a name="IDX2794"></a>
+</dt>
+<dd><p>Devuelve una cadena con todos los caracteres de <var>string</var> en un orden
+tal que no haya dos caracteres sucesivos <var>c</var> y <var>d</var> que verifiquen
+que <code>test (<var>c</var>, <var>d</var>)</code> sea igual <code>false</code> y 
+<code>test (<var>d</var>, <var>c</var>)</code> igual a <code>true</code>.
+La función de comparación <var>test</var> por defecto es  <var>clessp</var>, siendo
+el conjunto de posibles valores para este argumento 
+<code>{clessp, clesspignore, cgreaterp, cgreaterpignore, cequal, cequalignore}</code>.
+</p>
+<pre class="example">(%i1) ssort(&quot;I don't like Mondays.&quot;);
+(%o1)                    '.IMaddeiklnnoosty
+(%i2) ssort(&quot;I don't like Mondays.&quot;,'cgreaterpignore);
+(%o2)                 ytsoonnMlkIiedda.'   
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>) </i>
+<a name="IDX2795"></a>
+</dt>
+<dt><u>Función:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) </i>
+<a name="IDX2796"></a>
+</dt>
+<dt><u>Función:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) </i>
+<a name="IDX2797"></a>
+</dt>
+<dt><u>Función:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>) </i>
+<a name="IDX2798"></a>
+</dt>
+<dd><p>Devuelve una cadena similar a <var>string</var> pero en la que aquellas subcadenas 
+coincidentes con <var>old</var> han sido sustituidas por <var>new</var>. Las subcadenas
+<var>old</var> y <var>new</var> no necesitan ser de la misma longitud. 
+La función de comparación por defecto es <code>sequal</code>.
+Si se quiere ignorar la diferencia entre mayúsculas y minúsculas durante
+la búsqueda de <var>old</var>, hágase uso de 
+<code>sequalignore</code> para el argumento <var>test</var>.
+Utilícense <var>start</var> y <var>end</var> para acotar la búsqueda.
+Al primer carácter de <var>string</var> le corresponde la posición 1.
+</p>
+<pre class="example">(%i1) ssubst(&quot;like&quot;,&quot;hate&quot;,&quot;I hate Thai food. I hate green tea.&quot;);
+(%o1)          I like Thai food. I like green tea.
+(%i2) ssubst(&quot;Indian&quot;,&quot;thai&quot;,%,'sequalignore,8,12);
+(%o2)         I like Indian food. I like green tea.
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>) </i>
+<a name="IDX2799"></a>
+</dt>
+<dt><u>Función:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) </i>
+<a name="IDX2800"></a>
+</dt>
+<dt><u>Función:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) </i>
+<a name="IDX2801"></a>
+</dt>
+<dt><u>Función:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>) </i>
+<a name="IDX2802"></a>
+</dt>
+<dd><p>Actúa de forma similar a la función <code>subst</code>, pero sólo hace
+la sustitución en la primera coincidencia con <var>old</var>. 
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>strim</b><i> (<var>seq</var>,<var>string</var>) </i>
+<a name="IDX2803"></a>
+</dt>
+<dd><p>Devuelve la cadena <var>string</var> pero recortando los caracteres
+de <var>seq</var> que tuviese en sus extremos.
+</p>
+<pre class="example">(%i1) &quot;/* comment */&quot;$
+(%i2) strim(&quot; /*&quot;,%);
+(%o2)                        comment
+(%i3) slength(%);
+(%o3)                           7
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>striml</b><i> (<var>seq</var>, <var>string</var>) </i>
+<a name="IDX2804"></a>
+</dt>
+<dd><p>Actúa de forma similar a <code>strim</code>, pero sólo recorta
+en el extremo final de <var>string</var>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>strimr</b><i> (<var>seq</var>, <var>string</var>) </i>
+<a name="IDX2805"></a>
+</dt>
+<dd><p>Actúa de forma similar a <code>strim</code>, pero sólo recorta
+en el extremo inicial de <var>string</var>.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>stringp</b><i> (<var>obj</var>) </i>
+<a name="IDX2806"></a>
+</dt>
+<dd><p>Devuelve <code>true</code> si <var>obj</var> es una cadena.
+Véase un ejemplo en la introducción.
+</p></dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>substring</b><i> (<var>string</var>, <var>start</var>)</i>
+<a name="IDX2807"></a>
+</dt>
+<dt><u>Función:</u> <b>substring</b><i> (<var>string</var>, <var>start</var>, <var>end</var>) </i>
+<a name="IDX2808"></a>
+</dt>
+<dd><p>Devuelve la subcadena de <var>string</var> que comienza en la posición
+<var>start</var> y termina en la posición <var>end</var>.
+El carácter en la posición <var>end</var> no se incluye.
+En caso de no suministrarse el argumento <var>end</var>, la subcadena
+se extenderá hasta el final. 
+Al primer carácter de <var>string</var> le corresponde la posición 1.
+</p>
+<pre class="example">(%i1) substring(&quot;substring&quot;,4);
+(%o1)                        string
+(%i2) substring(%,4,6);
+(%o2)                          in
+</pre>
+
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>supcase</b><i> (<var>string</var>) </i>
+<a name="IDX2809"></a>
+</dt>
+<dt><u>Función:</u> <b>supcase</b><i> (<var>string</var>, <var>start</var>) </i>
+<a name="IDX2810"></a>
+</dt>
+<dt><u>Función:</u> <b>supcase</b><i> (<var>string</var>, <var>start</var>, <var>end</var>) </i>
+<a name="IDX2811"></a>
+</dt>
+<dd><p>Devuelve la cadena <var>string</var> con todos sus caracteres entre las posiciones
+<var>start</var> y <var>end</var> en minúscula transformados a mayúscula.
+En caso de no suministrarse el argumento <var>end</var>, los cambios
+se extenderán hasta el final.
+</p>
+<pre class="example">(%i1) supcase(&quot;english&quot;,1,2);
+(%o1)                        English
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>tokens</b><i> (<var>string</var>) </i>
+<a name="IDX2812"></a>
+</dt>
+<dt><u>Función:</u> <b>tokens</b><i> (<var>string</var>, <var>test</var>) </i>
+<a name="IDX2813"></a>
+</dt>
+<dd><p>Devuelve la lista de todos los lexemas (<i>tokens</i>) de <var>string</var>.
+Los lexemas son subcadenas cuyos caracteres satisfacen la  condición <var>test</var>.
+Si no se suministra el argumento <var>test</var>, se utilizará la condición
+<var>constituent</var>, siendo el conjunto de las otras alternativas
+<code>{constituent, alphacharp, digitcharp, lowercasep, uppercasep, charp, characterp, alphanumericp}</code>.
+</p>
+<pre class="example">(%i1) tokens(&quot;24 October 2005&quot;);
+(%o1)                  [24, October, 2005]
+(%i2) tokens(&quot;05-10-24&quot;,'digitcharp);
+(%o2)                     [05, 10, 24]
+(%i3) map(parse_string,%);
+(%o3)                      [5, 10, 24]
+</pre>
+</dd></dl>
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC364" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC369" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>abril, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

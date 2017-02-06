@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Janeiro, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Maxima 5.35.71.g68475e4: 14. Logaritmos</title>
+
+<meta name="description" content="Manual do Maxima 5.35.71.g68475e4: 14. Logaritmos">
+<meta name="keywords" content="Manual do Maxima 5.35.71.g68475e4: 14. Logaritmos">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Logaritmos"></a>
+<a name="SEC46"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_13.html#SEC45" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC47" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_13.html#SEC44" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_15.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 14. Logaritmos </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC47">14.1 Definições para Logaritmos</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Defini_00e7_00f5es-para-Logaritmos"></a>
+<a name="SEC47"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC46" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_15.html#SEC48" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC46" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_15.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 14.1 Definições para Logaritmos </h2>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>%e_to_numlog</b>
+<a name="IDX463"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Quando <code>true</code>, sendo <code>r</code> algum número racional, e <code>x</code>
+alguma expressão, <code>%e^(r*log(x))</code> será simplificado em
+<code>x^r</code> .  Note-se que o comando <code>radcan</code> também faz essa
+transformação, assim como algumas transformações mais
+complicadas.  O comando <code>logcontract</code> <em>contrai</em> expressões
+contendo <code>log</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>li</b><i> [<var>s</var>] (<var>z</var>)</i>
+<a name="IDX464"></a>
+</dt>
+<dd><p>Representa a função polilogaritmo de ordem <var>s</var>
+e argumento <var>z</var>, definida por meio da série infinita
+</p>
+<pre class="example">                                 inf
+                                 ====   k
+                                 \     z
+                        Li (z) =  &gt;    --
+                          s      /      s
+                                 ====  k
+                                 k = 1
+</pre>
+<p><code>li [1]</code> é <code>- log (1 - z)</code>.  <code>li [2]</code> e <code>li [3]</code>
+são as funções dilogaritmo e
+trilogaritmo, respectivamente.
+</p>
+<p>Quando a ordem for 1, o polilogaritmo simplifica para
+<code>- log (1 - z)</code>, o qual por sua vez simplifica para um valor
+numérico se <var>z</var> for um número em ponto flutuante real ou
+complexo ou o sinalizador de avaliação <code>numer</code> estiver
+presente.
+</p>
+<p>Quando a ordem for 2 ou 3, o polilogaritmo simplifica
+para um valor numérico se <var>z</var> for um número real em ponto
+flutuante ou o sinalizador de avaliação <code>numer</code> estiver
+presente.
+</p>
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) assume (x &gt; 0);
+(%o1)                        [x &gt; 0]
+(%i2) integrate ((log (1 - t)) / t, t, 0, x);
+(%o2)                       - li (x)
+                                2
+(%i3) li [2] (7);
+(%o3)                        li (7)
+                               2
+(%i4) li [2] (7), numer;
+(%o4)        1.24827317833392 - 6.113257021832577 %i
+(%i5) li [3] (7);
+(%o5)                        li (7)
+                               3
+(%i6) li [2] (7), numer;
+(%o6)        1.24827317833392 - 6.113257021832577 %i
+(%i7) L : makelist (i / 4.0, i, 0, 8);
+(%o7)   [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+(%i8) map (lambda ([x], li [2] (x)), L);
+(%o8) [0, .2676526384986274, .5822405249432515, 
+.9784693966661848, 1.64493407, 2.190177004178597
+ - .7010261407036192 %i, 2.374395264042415
+ - 1.273806203464065 %i, 2.448686757245154
+ - 1.758084846201883 %i, 2.467401098097648
+ - 2.177586087815347 %i]
+(%i9) map (lambda ([x], li [3] (x)), L);
+(%o9) [0, .2584613953442624, 0.537213192678042, 
+.8444258046482203, 1.2020569, 1.642866878950322
+ - .07821473130035025 %i, 2.060877505514697
+ - .2582419849982037 %i, 2.433418896388322
+ - .4919260182322965 %i, 2.762071904015935
+ - .7546938285978846 %i]
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>log</b><i> (<var>x</var>)</i>
+<a name="IDX465"></a>
+</dt>
+<dd><p>Representa o logaritmo natural (base <em>e</em>) de
+<var>x</var>.
+</p>
+<p>Maxima não possui uma função interna para
+logaritmo de base 10 ou de outras bases. <code>log10(x)
+:= log(x) / log(10)</code> é uma definição útil.
+</p>
+<p>A simplificação e avaliação de logaritmos
+são governadas por vários sinalizadores globais:
+</p>
+<p><code>logexpand</code> - faz com que <code>log(a^b)</code> se transfome em
+<code>b*log(a)</code>. Se <code>logexpand</code> tiver o valor <code>all</code>,
+<code>log(a*b)</code> irá também simplificar para <code>log(a)+log(b)</code>.
+Se <code>logexpand</code> for igual a <code>super</code>, então
+<code>log(a/b)</code> irá também simplificar para <code>log(a)-log(b)</code>
+para números racionais <code>a/b</code>, <code>a#1</code> (<code>log(1/b)</code>,
+para <code>b</code> inteiro, sempre simplifica).  Se <code>logexpand</code> for
+igaul a <code>false</code>, todas essas simplificações irão
+ser desabilitadas.
+</p>
+<p><code>logsimp</code> - se tiver valor <code>false</code>, não será feita nenhuma
+simplificação de <code>%e</code> para um expoente contendo
+<code>log</code>'s.
+</p>
+<p><code>lognumer</code> - se tiver valor <code>true</code>, os argumentos negativos
+em ponto flutuante para <code>log</code> irá sempre ser convertidos para
+seu valor absoluto antes que <code>log</code> seja calculado. Se
+<code>numer</code> for também <code>true</code>, então argumentos negativos
+inteiros para <code>log</code> irão também ser convertidos para os seus
+valores absolutos.
+</p>
+<p><code>lognegint</code> - se tiver valor <code>true</code>, implementa a regra
+<code>log(-n)</code> -&gt; <code>log(n)+%i*%pi</code> para <code>n</code> um inteiro
+positivo.
+</p>
+<p><code>%e_to_numlog</code> - quando for igual a <code>true</code>,
+<code>%e^(r*log(x))</code>, sendo <code>r</code> algum número racional, e
+<code>x</code> alguma expressão, será simplificado para
+<code>x^r</code>. Note-se que o comando <code>radcan</code> também faz essa
+transformação, e outras transformações mais complicadas
+desse género.
+</p>
+<p>O comando <code>logcontract</code> &quot;contrai&quot; expressões
+contendo <code>log</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>logabs</b>
+<a name="IDX466"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>No cálculo de primitivas em que sejam gerados
+logaritmos, por exemplo, <code>integrate(1/x,x)</code>, a
+resposta será dada em termos de <code>log(abs(...))</code> se
+<code>logabs</code> for <code>true</code>, mas em termos de <code>log(...)</code> se
+<code>logabs</code> for <code>false</code>. Para integrais definidos, usa-se
+<code>logabs:true</code>, porque nesse caso muitas vezes é necessário
+calcular a primitiva nos extremos.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>logarc</b>
+<a name="IDX467"></a>
+</dt>
+<dt><u>Função:</u> <b>logarc</b><i> (<var>expr</var>)</i>
+<a name="IDX468"></a>
+</dt>
+<dd><p>Quando a variável global <code>logarc</code> for igual a <code>true</code>, as
+funções trigononométricas inversas, circulares e
+hiperbólicas, serão substituídas por suas
+funções logarítmicas equivalentes. O valor
+padrão de <code>logarc</code> é <code>false</code>.
+</p>
+<p>A função <code>logarc(<var>expr</var>)</code> realiza essa
+substituição para uma expressão <var>expr</var> sem modificar o
+valor da variável global <code>logarc</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>logconcoeffp</b>
+<a name="IDX469"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Controla quais coeficientes são contraídos quando se
+usa <code>logcontract</code>. Poderá ser igual ao nome de uma função
+de um argumento. Por exemplo, se quiser gerar raízes
+quadradas, pode fazer <code>logconcoeffp:'logconfun$
+logconfun(m):=featurep(m,integer) or ratnump(m)$</code>. E assim,
+<code>logcontract(1/2*log(x));</code> produzirá <code>log(sqrt(x))</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>logcontract</b><i> (<var>expr</var>)</i>
+<a name="IDX470"></a>
+</dt>
+<dd><p>Examina recursivamente a expressão <var>expr</var>, transformando
+subexpressões da forma <code>a1*log(b1) + a2*log(b2) + c</code> em
+<code>log(ratsimp(b1^a1 * b2^a2)) + c</code>
+</p>
+<pre class="example">(%i1) 2*(a*log(x) + 2*a*log(y))$
+(%i2) logcontract(%);
+                                 2  4
+(%o2)                     a log(x  y )
+
+</pre>
+<p>Se fizer <code>declare(n,integer);</code> então
+<code>logcontract(2*a*n*log(x));</code> produzirá
+<code>a*log(x^(2*n))</code>. Os coeficientes que <em>contraem</em> dessa
+maneira são os que, tal como 2 e <code>n</code> neste exemplo, satisfazem
+<code>featurep(coeficiente,integer)</code>. O utilizador pode controlar
+quais coeficientes são contraídos, dando à variável
+<code>logconcoeffp</code> o nome de uma função de um argumento. Por
+exemplo, se quiser gerar raízes quadradas, pode fazer
+<code>logconcoeffp:'logconfun$ logconfun(m):=featurep(m,integer) or
+ratnump(m)$</code>. E assim, <code>logcontract(1/2*log(x));</code> produzirá
+<code>log(sqrt(x))</code>.
+</p>
+
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>logexpand</b>
+<a name="IDX471"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Faz com que <code>log(a^b)</code> se transfome em <code>b*log(a)</code>. Se
+<code>logexpand</code> tiver o valor <code>all</code>, <code>log(a*b)</code> irá
+também simplificar para <code>log(a)+log(b)</code>.  Se <code>logexpand</code>
+for igual a <code>super</code>, então <code>log(a/b)</code> irá também
+simplificar para <code>log(a)-log(b)</code> para números racionais
+<code>a/b</code>, <code>a#1</code> (<code>log(1/b)</code>, para <code>b</code> inteiro, sempre
+simplifica).  Se <code>logexpand</code> for igaul a <code>false</code>, todas
+essas simplificações irão ser desabilitadas.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>lognegint</b>
+<a name="IDX472"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Se for igual a <code>true</code>, implementa a regra <code>log(-n)</code> -&gt;
+<code>log(n)+%i*%pi</code> para <code>n</code> um inteiro positivo.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>lognumer</b>
+<a name="IDX473"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Se tiver valor <code>true</code>, os argumentos negativos em ponto flutuante
+para <code>log</code> irá sempre ser convertidos para seu valor absoluto
+antes que <code>log</code> seja calculado. Se <code>numer</code> for também
+<code>true</code>, então argumentos negativos inteiros para <code>log</code>
+irão também ser convertidos para os seus valores absolutos.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>logsimp</b>
+<a name="IDX474"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Se tiver valor <code>false</code>, não será feita nenhuma
+simplificação de <code>%e</code> para um expoente contendo
+<code>log</code>'s.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>plog</b><i> (<var>x</var>)</i>
+<a name="IDX475"></a>
+</dt>
+<dd><p>Representa o ramo principal dos logaritmos naturais no
+plano complexo, com <code>-%pi</code> &lt; <code>carg(<var>x</var>)</code> &lt;= <code>+%pi</code>.
+</p>
+</dd></dl>
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_15.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>Janeiro, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

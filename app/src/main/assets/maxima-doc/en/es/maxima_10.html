@@ -1,0 +1,2029 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on abril, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Maxima 5.36.0: 10. Funciones matemáticas</title>
+
+<meta name="description" content="Manual de Maxima 5.36.0: 10. Funciones matemáticas">
+<meta name="keywords" content="Manual de Maxima 5.36.0: 10. Funciones matemáticas">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Funciones-matem_00e1ticas"></a>
+<a name="SEC59"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_9.html#SEC58" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC60" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_9.html#SEC56" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 10. Funciones matemáticas </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC60">10.1 Funciones para los números</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC61">10.2 Funciones para los números complejos</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC62">10.3 Funciones combinatorias</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC63">10.4 Funciones radicales, exponenciales y logarítmicas</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC64">10.5 Funciones trigonométricas</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC67">10.6 Números aleatorios</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+
+
+
+<hr size="6">
+<a name="Funciones-para-los-n_00fameros"></a>
+<a name="SEC60"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC59" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC61" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 10.1 Funciones para los números </h2>
+
+
+<dl>
+<dt><u>Función:</u> <b>abs</b><i> (<var>z</var>)</i>
+<a name="IDX326"></a>
+</dt>
+<dd><p>La función <code>abs</code> representa el valor absoluto y se puede aplicar tanto 
+a argumentos numéricos como simbólicos. Si el argumento <var>z</var> es un
+número real o complejo, <code>abs</code> devuelve el valor absoluto de <var>z</var>.
+Si es posible, las expresiones simbólicas que utilizan la función del
+valor absoluto también se simplifican.
+</p>
+<p>Maxima puede derivar, integrar y calcular límites de expresiones
+que contengan a <code>abs</code>. El paquete <code>abs_integrate</code> extiende las
+capacidades de Maxima para calcular integrales que contengan llamadas a
+<code>abs</code>. Véase <code>(%i12)</code> en el ejemplo de más abajo.
+</p>
+<p>Cuando se aplica a una lista o matriz, <code>abs</code> se distribuye automáticamente
+sobre sus elementos. De forma similar, también se distribuye sobre los dos
+miembros de una igualdad. Para cambiar este comportamiento por defecto, 
+véase la variable <code>distribute_over</code>.
+</p>
+<p>Ejemplos:
+</p>
+<p>Cálculo del valor absoluto de números reales y complejos, incluyendo
+constantes numéricas e infinitos. El primer ejemplo muestra cómo 
+<code>abs</code> se distribuye sobre los elementos de una lista.
+</p>
+<pre class="example">(%i1) abs([-4, 0, 1, 1+%i]);
+(%o1)                  [4, 0, 1, sqrt(2)]
+
+(%i2) abs((1+%i)*(1-%i));
+(%o2)                           2
+(%i3) abs(%e+%i);
+                                2
+(%o3)                    sqrt(%e  + 1)
+(%i4) abs([inf, infinity, minf]);
+(%o4)                   [inf, inf, inf]
+</pre>
+<p>Simplificación de expresiones que contienen <code>abs</code>:
+</p>
+<pre class="example">(%i5) abs(x^2);
+                                2
+(%o5)                          x
+(%i6) abs(x^3);
+                             2
+(%o6)                       x  abs(x)
+
+(%i7) abs(abs(x));
+(%o7)                       abs(x)
+(%i8) abs(conjugate(x));
+(%o8)                       abs(x)
+</pre>
+<p>Integrando y derivando con la función <code>abs</code>. Nótese que se pueden
+calcular más integrales que involucren la función <code>abs</code> si se
+carga el paquete <code>abs_integrate</code>. El último ejemplo muestra la
+transformada de Laplace de <code>abs</code>. Véase <code>laplace</code>.
+</p>
+<pre class="example">(%i9) diff(x*abs(x),x),expand;
+(%o9)                       2 abs(x)
+
+(%i10) integrate(abs(x),x);
+                             x abs(x)
+(%o10)                       --------
+                                2
+
+(%i11) integrate(x*abs(x),x);
+                           /
+                           [
+(%o11)                     I x abs(x) dx
+                           ]
+                           /
+
+(%i12) load(abs_integrate)$
+(%i13) integrate(x*abs(x),x);
+                      2           3
+                     x  abs(x)   x  signum(x)
+(%o13)               --------- - ------------
+                         2            6
+
+(%i14) integrate(abs(x),x,-2,%pi);
+                               2
+                            %pi
+(%o14)                      ---- + 2
+                             2
+
+(%i15) laplace(abs(x),x,s);
+                               1
+(%o15)                         --
+                                2
+                               s
+</pre></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>ceiling</b><i> (<var>x</var>)</i>
+<a name="IDX327"></a>
+</dt>
+<dd><p>Si <var>x</var> es un número real, devuelve el menor entero mayor o igual que <var>x</var>.  
+</p>
+<p>Si <var>x</var> es una expresión constante (por ejemplo, <code>10 * %pi</code>), 
+<code>ceiling</code> evalúa <var>x</var> haciendo uso de números grandes en coma flotante (big floats), aplicando a continuación
+ <code>ceiling</code> al número decimal obtenido. Puesto que <code>ceiling</code> hace evaluaciones en coma flotante, es posible, pero improbable, que esta función devuelva un valor erróneo para entradas constantes. Para evitar estos errores, la evaluación en punto flotante se lleva a cabo utilizando tres valores para <code>fpprec</code>.
+</p>
+<p>Para argumentos no constantes, <code>ceiling</code> intenta devolver un valor simplificado. Aquí se presentan algunos ejemplos sobre las simplificaciones que <code>ceiling</code> es capaz de hacer:
+</p>
+<pre class="example">(%i1) ceiling (ceiling (x));
+(%o1)                      ceiling(x)
+(%i2) ceiling (floor (x));
+(%o2)                       floor(x)
+(%i3) declare (n, integer)$
+(%i4) [ceiling (n), ceiling (abs (n)), ceiling (max (n, 6))];
+(%o4)                [n, abs(n), max(n, 6)]
+(%i5) assume (x &gt; 0, x &lt; 1)$
+(%i6) ceiling (x);
+(%o6)                           1
+(%i7) tex (ceiling (a));
+$$\left \lceil a \right \rceil$$
+(%o7)                                false
+</pre>
+<p>La función <code>ceiling</code> no se extiende automáticamente a los elementos de listas y matrices.
+Por último, para todos los argumentos que tengan una forma compleja, <code>ceiling</code> devuelve una forma nominal.
+</p>
+<p>Si el rango de una función es subconjunto de los números enteros, entonces puede ser declarada como <code>integervalued</code>. Tanto <code>ceiling</code> como <code>floor</code> son funciones que hacen uso de esta información; por ejemplo:
+</p>
+<pre class="example">(%i1) declare (f, integervalued)$
+(%i2) floor (f(x));
+(%o2)                         f(x)
+(%i3) ceiling (f(x) - 1);
+(%o3)                       f(x) - 1
+</pre>
+<p>Ejemplo de uso:
+</p>
+<pre class="example">(%i1) unitfrac(r) := block([uf : [], q],
+    if not(ratnump(r)) then
+       error(&quot;unitfrac: argument must be a rational number&quot;),
+    while r # 0 do (
+        uf : cons(q : 1/ceiling(1/r), uf),
+        r : r - q),
+    reverse(uf))$
+(%i2) unitfrac (9/10);
+                            1  1  1
+(%o2)                      [-, -, --]
+                            2  3  15
+(%i3) apply (&quot;+&quot;, %);
+                               9
+(%o3)                          --
+                               10
+(%i4) unitfrac (-9/10);
+                                  1
+(%o4)                       [- 1, --]
+                                  10
+(%i5) apply (&quot;+&quot;, %);
+                                9
+(%o5)                         - --
+                                10
+(%i6) unitfrac (36/37);
+                        1  1  1  1    1
+(%o6)                  [-, -, -, --, ----]
+                        2  3  8  69  6808
+(%i7) apply (&quot;+&quot;, %);
+                               36
+(%o7)                          --
+                               37
+</pre></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>entier</b><i> (<var>x</var>)</i>
+<a name="IDX328"></a>
+</dt>
+<dd><p>Devuelve el mayor entero menor o igual a <var>x</var>, siendo <var>x</var> numérico. La función  <code>fix</code> (como en
+<code>fixnum</code>) es un sinónimo, de modo que <code>fix(<var>x</var>)</code> hace justamente lo mismo.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>floor</b><i> (<var>x</var>)</i>
+<a name="IDX329"></a>
+</dt>
+<dd><p>Si <var>x</var> es un número real, devuelve el mayor entero menor o igual que <var>x</var>.
+</p>
+<p>Si <var>x</var> es una expresión constante (por ejemplo, <code>10 * %pi</code>), 
+<code>floor</code> evalúa <var>x</var> haciendo uso de números grandes en coma flotante (big floats), aplicando a continuación
+ <code>floor</code> al número decimal obtenido. Puesto que <code>floor</code> hace evaluaciones en coma flotante, es posible, pero improbable, que esta función devuelva un valor erróneo para entradas constantes. Para evitar estos errores, la evaluación en punto flotante se lleva a cabo utilizando tres valores para <code>fpprec</code>.
+</p>
+<p>Para argumentos no constantes, <code>floor</code> intenta devolver un valor simplificado. Aquí se presentan algunos ejemplos sobre las simplificaciones que <code>floor</code> es capaz de hacer:
+</p>
+<pre class="example">(%i1) floor (ceiling (x));
+(%o1)                      ceiling(x)
+(%i2) floor (floor (x));
+(%o2)                       floor(x)
+(%i3) declare (n, integer)$
+(%i4) [floor (n), floor (abs (n)), floor (min (n, 6))];
+(%o4)                [n, abs(n), min(n, 6)]
+(%i5) assume (x &gt; 0, x &lt; 1)$
+(%i6) floor (x);
+(%o6)                           0
+(%i7) tex (floor (a));
+$$\left \lfloor a \right \rfloor$$
+(%o7)                         false
+</pre>
+<p>La función <code>floor</code> no se extiende automáticamente a los elementos de listas y matrices.
+Por último, para todos los argumentos que tengan una forma compleja, <code>floor</code> devuelve una forma nominal.
+</p>
+<p>Si el rango de una función es subconjunto de los números enteros, entonces puede ser declarada como <code>integervalued</code>. Tanto <code>ceiling</code> como <code>floor</code> son funciones que hacen uso de esta información; por ejemplo:
+</p>
+<pre class="example">(%i1) declare (f, integervalued)$
+(%i2) floor (f(x));
+(%o2)                         f(x)
+(%i3) ceiling (f(x) - 1);
+(%o3)                       f(x) - 1
+</pre>
+</dd></dl>
+
+
+<dl>
+<dt><u>Función:</u> <b>fix</b><i> (<var>x</var>)</i>
+<a name="IDX330"></a>
+</dt>
+<dd><p>Es un sinónimo de  <code>entier (<var>x</var>)</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>lmax</b><i> (<var>L</var>)</i>
+<a name="IDX331"></a>
+</dt>
+<dd><p>Si <var>L</var> es una lista o conjunto, devuelve <code>apply ('max, args (<var>L</var>))</code>.  Si <var>L</var> no es una lista o conjunto, envía un mensaje de error.
+</p></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>lmin</b><i> (<var>L</var>)</i>
+<a name="IDX332"></a>
+</dt>
+<dd><p>Si <var>L</var> es una lista o conjunto, devuelve <code>apply ('min, args (<var>L</var>))</code>.  Si <var>L</var> no es una lista o conjunto, envía un mensaje de error.
+</p></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>max</b><i> (<var>x_1</var>, ..., <var>x_n</var>)</i>
+<a name="IDX333"></a>
+</dt>
+<dd><p>Devuelve un valor simplificado de la mayor de las expresiones desde <var>x_1</var> hasta <var>x_n</var>.
+Si <code>get (trylevel, maxmin)</code> es 2 o más, <code>max</code> aplica la simplificación 
+<code>max (e, -e) --&gt; |e|</code>.  Si <code>get (trylevel, maxmin)</code> es 3 o más, <var>max</var> intenta
+eliminar las expresiones que estén entre otros dos de los argumentos dados; por ejemplo,
+<code>max (x, 2*x, 3*x) --&gt; max (x, 3*x)</code>. Para asignar el valor 2 a <code>trylevel</code> se puede hacer
+<code>put (trylevel, 2, maxmin)</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>min</b><i> (<var>x_1</var>, ..., <var>x_n</var>)</i>
+<a name="IDX334"></a>
+</dt>
+<dd><p>Devuelve un valor simplificado de la menor de las expresiones desde <var>x_1</var> hasta <var>x_n</var>.
+Si <code>get (trylevel, maxmin)</code> es 2 o más, <code>min</code> aplica la simplificación 
+<code>min (e, -e) --&gt; |e|</code>.  Si <code>get (trylevel, maxmin)</code> es 3 o más, <var>min</var> intenta
+eliminar las expresiones que estén entre otros dos de los argumentos dados; por ejemplo,
+<code>min (x, 2*x, 3*x) --&gt; min (x, 3*x)</code>. Para asignar el valor 2 a <code>trylevel</code> se puede hacer
+<code>put (trylevel, 2, maxmin)</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>round</b><i> (<var>x</var>)</i>
+<a name="IDX335"></a>
+</dt>
+<dd><p>Si <var>x</var> es un número real, la función devuelve el entero más 
+próximo a <var>x</var>. Los múltiplos de 1/2 se redondean al entero par más próximo.
+La evaluación de <var>x</var> es similar a <code>floor</code> y <code>ceiling</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>signum</b><i> (<var>x</var>)</i>
+<a name="IDX336"></a>
+</dt>
+<dd><p>Tanto sea <var>x</var> real o complejo, la función <code>signum</code> devuelve 0 si <var>x</var>
+es cero. Para un valor no nulo de <var>x</var>, la función devuelve <code>x/abs(x)</code>.
+</p>
+<p>Para valores no numéricos de <var>x</var>, Maxima intenta determinar el
+signo del argumento. Cuando es negativo, cero o positivo, <code>signum</code>
+devuelve -1, 0 o 1, respectivamente. En caso de no poder determinarse,
+<code>signum</code> devuelve una forma simplificada equivalente. Estas 
+simplificaciones incluyen la transformación de <code>signum(-x)</code>
+en <code>-signum(x)</code> y la de <code>signum(x*y)</code> en
+<code>signum(x) * signum(y)</code>.
+</p>
+<p>La función <code>signum</code> es distributiva respecto de listas,
+matrices o ecuaciones. Véase <code>distribute_over</code>.
+</p>
+</dd></dl>
+
+
+
+
+
+
+
+
+<hr size="6">
+<a name="Funciones-para-los-n_00fameros-complejos"></a>
+<a name="SEC61"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC60" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC62" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 10.2 Funciones para los números complejos </h2>
+
+
+<dl>
+<dt><u>Función:</u> <b>cabs</b><i> (<var>expr</var>)</i>
+<a name="IDX337"></a>
+</dt>
+<dd><p>Calcula el valor absoluto de una expresión que representa a un número
+complejo. Al contrario que <code>abs</code>, la función <code>cabs</code> siempre
+descompone su argumento en sus partes real e imaginaria. Si <code>x</code> e
+<code>y</code> representan variables o expresiones reales, la función <code>cabs</code>
+calcula el valor absoluto de <code>x + %i*y</code> como
+</p><pre class="example">                           2    2
+                     sqrt(y  + x )
+</pre>
+<p>La función <code>cabs</code> puede utilizar propiedades como la simetría
+de funciones complejas para calcular el valor absoluto de una expresión.
+</p>
+<p><code>cabs</code> no es una función apropiada para cálculos simbólicos; en tales
+casos, que incluyen la integración, diferenciación y límites que
+contienen valores absolutos, es mejor utilizar <code>abs</code>.
+</p>
+<p>El resultado devuelto por <code>cabs</code> puede incluir la función de valor absoluto,
+<code>abs</code>, y el arco tangente, <code>atan2</code>.
+</p>
+<p>Cuando se aplica a una lista o matriz, <code>cabs</code> automáticamente se distribuye
+sobre sus elementos. También se distribuye sobre los dos miembros de una 
+igualdad.
+</p>
+<p>Para otras formas de operar con números complejos, véanse las funciones
+<code>rectform</code>, <code>realpart</code>, <code>imagpart</code>, <code>carg</code>, <code>conjugate</code>
+y <code>polarform</code>.
+</p>
+<p>Ejemplos:
+</p>
+<p>Ejemplos con <code>sqrt</code> and <code>sin</code>:
+</p>
+<pre class="example">(%i1) cabs(sqrt(1+%i*x));
+                             2     1/4
+(%o1)                      (x  + 1)
+(%i2) cabs(sin(x+%i*y));
+                    2        2         2        2
+(%o2)       sqrt(cos (x) sinh (y) + sin (x) cosh (y))
+</pre>
+<p>La simetría especular de la función de error <code>erf</code> se utiliza
+para calcular el valor absoluto del argumento complejo:
+</p>
+<pre class="example">(%i3) cabs(erf(x+%i*y));
+                                          2
+           (erf(%i y + x) - erf(%i y - x))
+(%o3) sqrt(--------------------------------
+                          4
+                                                               2
+                                (erf(%i y + x) + erf(%i y - x))
+                              - --------------------------------)
+                                               4
+</pre>
+<p>Dado que Maxima reconoce algunas identidades complejas de las funciones de
+Bessel, le permite calcular su valor absoluto cuando tiene argumentos 
+complejos. Un ejemplo para <code>bessel_j</code>:
+</p>
+<pre class="example">(%i4) cabs(bessel_j(1,%i));
+(%o4)                 abs(bessel_j(1, %i))
+</pre></dd></dl>
+
+
+
+
+<dl>
+<dt><u>Función:</u> <b>carg</b><i> (<var>z</var>)</i>
+<a name="IDX338"></a>
+</dt>
+<dd><p>Devuelve el argumento complejo de <var>z</var>.
+El argumento complejo es un ángulo <code>theta</code> en <code>(-%pi, %pi]</code>
+tal que <code>r exp (theta %i) = <var>z</var></code> donde <code>r</code> es la magnitud de <var>z</var>.
+</p>
+<p>La función <code>carg</code> es computacional, no simplificativa.
+</p>
+<p>Véanse también <code>abs</code> (módulo complejo), <code>polarform</code>, <code>rectform</code>,
+<code>realpart</code> y <code>imagpart</code>.
+</p>
+<p>Ejemplos:
+</p>
+
+<pre class="example">(%i1) carg (1);
+(%o1)                           0
+(%i2) carg (1 + %i);
+                               %pi
+(%o2)                          ---
+                                4
+(%i3) carg (exp (%i));
+(%o3)                           1
+(%i4) carg (exp (%pi * %i));
+(%o4)                          %pi
+(%i5) carg (exp (3/2 * %pi * %i));
+                                %pi
+(%o5)                         - ---
+                                 2
+(%i6) carg (17 * exp (2 * %i));
+(%o6)                           2
+</pre>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>conjugate</b><i> (<var>x</var>)</i>
+<a name="IDX339"></a>
+</dt>
+<dd><p>Devuelve el conjugado complejo de <var>x</var>.
+</p>
+<pre class="example">(%i1) declare ([aa, bb], real, cc, complex, ii, imaginary);
+
+(%o1)                         done
+(%i2) conjugate (aa + bb*%i);
+
+(%o2)                      aa - %i bb
+(%i3) conjugate (cc);
+
+(%o3)                     conjugate(cc)
+(%i4) conjugate (ii);
+
+(%o4)                         - ii
+(%i5) conjugate (xx + yy);
+
+(%o5)             conjugate(yy) + conjugate(xx)
+</pre>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>imagpart</b><i> (<var>expr</var>)</i>
+<a name="IDX340"></a>
+</dt>
+<dd><p>Devuelve la parte imaginaria de la expresión <var>expr</var>.
+</p>
+<p>La función <code>imagpart</code> es computacional,
+no simplificativa.
+</p>
+<p>Véanse también <code>abs</code>, <code>carg</code>, <code>polarform</code>, <code>rectform</code> y <code>realpart</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>polarform</b><i> (<var>expr</var>)</i>
+<a name="IDX341"></a>
+</dt>
+<dd><p>Devuelve una expresión de la forma <code>r %e^(%i theta)</code> equivalente a <var>expr</var>,
+con <code>r</code> y <code>theta</code> son reales.
+</p>
+</dd></dl>
+
+
+
+
+<dl>
+<dt><u>Función:</u> <b>realpart</b><i> (<var>expr</var>)</i>
+<a name="IDX342"></a>
+</dt>
+<dd><p>Devuelve la parte real de <var>expr</var>. La funciones <code>realpart</code> y <code>imagpart</code> operan también con expresiones que contengan funciones trigonométricas e hiperbólicas, raíces cuadradas, logaritmos y exponentes.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>rectform</b><i> (<var>expr</var>)</i>
+<a name="IDX343"></a>
+</dt>
+<dd><p>Devuelve una expresión de la forma <code>a + b %i</code> equivalente a <var>expr</var>, con <var>a</var> y <var>b</var> reales.
+</p>
+</dd></dl>
+
+
+
+
+
+
+
+<hr size="6">
+<a name="Funciones-combinatorias"></a>
+<a name="SEC62"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC61" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC63" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 10.3 Funciones combinatorias </h2>
+
+
+
+<dl>
+<dt><u>Operador:</u> <b>!!</b>
+<a name="IDX344"></a>
+</dt>
+<dd><p>El operador doble factorial.
+</p>
+<p>Para un número entero, de punto flotante o racional <code>n</code>,
+<code>n!!</code> se evaluará como el producto de <code>n (n-2) (n-4) (n-6) ... (n - 2 (k-1))</code>
+donde <code>k</code> es igual a <code>entier(n/2)</code>, que es, el mayor entero
+menor o igual a <code>n/2</code>. 
+Note que esta definición no coincide con otras definciones publicadas para argumentos, los cuales no son enteros. 
+</p>
+
+<p>Para un entero par (o impar) <code>n</code>, <code>n!</code> se evalua el producto de
+todos los enteros pares (o impares) consecutivos desde 2 (o 1) por <code>n</code> inclusive.  
+</p>
+<p>Para un argumento <code>n</code> el cual no es un número entero, punto flotante o racional, <code>n!!</code> produce una forma de nombre <code>genfact (n, n/2, 2)</code>. 
+</p>
+
+</dd></dl>
+
+
+
+
+<dl>
+<dt><u>Función:</u> <b>binomial</b><i> (<var>x</var>, <var>y</var>)</i>
+<a name="IDX345"></a>
+</dt>
+<dd><p>Es el coeficiente binomial <code><var>x</var>!/(<var>y</var>! (<var>x</var> - <var>y</var>)!)</code>.
+Si <var>x</var> y <var>y</var> son enteros, entonces se calcula el valor numérico 
+del coeficiente binomial. Si <var>y</var> o <var>x - y</var> son enteros, 
+el coeficiente binomial se expresa como un polinomio.
+</p>
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) binomial (11, 7);
+(%o1)                          330
+(%i2) 11! / 7! / (11 - 7)!;
+(%o2)                          330
+(%i3) binomial (x, 7);
+        (x - 6) (x - 5) (x - 4) (x - 3) (x - 2) (x - 1) x
+(%o3)   -------------------------------------------------
+                              5040
+(%i4) binomial (x + 7, x);
+      (x + 1) (x + 2) (x + 3) (x + 4) (x + 5) (x + 6) (x + 7)
+(%o4) -------------------------------------------------------
+                               5040
+(%i5) binomial (11, y);
+(%o5)                    binomial(11, y)
+</pre></dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>factcomb</b><i> (<var>expr</var>)</i>
+<a name="IDX346"></a>
+</dt>
+<dd><p>Trata de combinar los coeficientes de los factoriales de <var>expr</var> con los mismos factoriales, convirtiendo, por ejemplo, <code>(n + 1)*n!</code> en <code>(n + 1)!</code>.
+</p>
+<p>Si la variable <code>sumsplitfact</code> vale <code>false</code> hará que <code>minfactorial</code> se aplique después de <code>factcomb</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>factorial</b><i> (<var>x</var>)</i>
+<a name="IDX347"></a>
+</dt>
+<dt><u>Operador:</u> <b>!</b>
+<a name="IDX348"></a>
+</dt>
+<dd><p>Representa la función factorial. Maxima considera <code>factorial (<var>x</var>)</code>
+y <code><var>x</var>!</code> como sinónimos.
+</p>
+<p>Para cualquier número complejo <code>x</code>, excepto para
+enteros negativos, <code>x!</code> se define como <code>gamma(x+1)</code>. 
+</p>
+<p>Para un entero <code>x</code>, <code>x!</code> se reduce al producto de los enteros
+desde 1 hasta <code>x</code> inclusive. <code>0!</code> se reduce a 1.
+Para un número real o complejo en formato de coma flotante <code>x</code>, 
+<code>x!</code> se reduce al valor de <code>gamma(x+1)</code>. Cuando
+<code>x</code> es igual a <code>n/2</code>, siendo <code>n</code> un entero impar, entonces
+<code>x!</code> se reduce a un factor racional multiplicado por <code>sqrt(%pi)</code>
+(pues <code>gamma(1/2)</code>) es igual a <code>sqrt(%pi)</code>).
+</p>
+<p>Las variables opcionales <code>factlim</code> y <code>gammalim</code> controlan la
+evaluación numérica de factoriales de argumentos enteros y racionales.
+</p>
+<p>Las funciones <code>minfactorial</code> y <code>factcomb</code> simplifican expresiones
+que contiene factoriales.
+</p>
+<p>Véanse también <code>factlim</code>, <code>gammalim</code>, <code>minfactorial</code> y 
+<code>factcomb</code>.
+</p>
+<p>Las funciones <code>gamma</code>, <code>bffac</code> y <code>cbffac</code> son variaciones de
+la función matemática gamma. Las funciones <code>bffac</code> y <code>cbffac</code> 
+son llamadas internamente desde <code>gamma</code> para evaluar la función gamma 
+de números reales y complejos decimales con precisión de reales grandes
+(bigfloats).
+</p>
+<p>Las funciones <code>makegamma</code> substituye a <code>gamma</code> para factoriales 
+y funciones relacionadas. 
+</p>
+<p>Maxima reconoce la derivada de la función factorial y los límites
+para ciertos valores específicos, tales como los enteros negativos.
+</p>
+<p>La variable opcional <code>factorial_expand</code> controla la simplificación de
+expresiones como <code>(n+x)!</code>, para <code>n</code> entero.
+</p>
+<p>Véase también <code>binomial</code>.
+</p>
+<p>Ejemplos:
+</p>
+<p>El factorial de un entero se reduce a un número exacto, a menos que
+el argumento sea mayor que <code>factlim</code>. Los factoriales de números
+reales o complejos se evalúan como decimales de coma flotante.
+</p>
+<pre class="example">(%i1) factlim:10;
+(%o1)                                 10
+(%i2) [0!, (7/2)!, 8!, 20!];
+                            105 sqrt(%pi)
+(%o2)                   [1, -------------, 40320, 20!]
+                                 16
+(%i3) [4.77!, (1.0+%i)!];
+(%o3)    [81.44668037931197, 
+          .3430658398165454 %i + .6529654964201665]
+(%i4) [2.86b0!, (1.0b0+%i)!];
+(%o4) [5.046635586910012b0, 
+       3.430658398165454b-1 %i + 6.529654964201667b-1]
+</pre>
+<p>El factorial de una constante conocida o de una expresión general
+no se calcula. Pero puede ser posible reducir el factorial después de
+evaluado el argumento.
+</p>
+<pre class="example">(%i1) [(%i + 1)!, %pi!, %e!, (cos(1) + sin(1))!];
+(%o1)      [(%i + 1)!, %pi!, %e!, (sin(1) + cos(1))!]
+(%i2) ev (%, numer, %enumer);
+(%o2) [.3430658398165454 %i + .6529654964201665, 
+       7.188082728976031, 
+       4.260820476357003, 1.227580202486819]
+</pre>
+<p>Los factoriales son simplificados o reducidos, no evaluados.
+Así <code>x!</code> puede ser reemplazado en una expresión 
+nominal. 
+</p>
+<pre class="example">(%i1) '([0!, (7/2)!, 4.77!, 8!, 20!]);
+          105 sqrt(%pi)
+(%o1) [1, -------------, 81.44668037931199, 40320, 
+               16
+                             2432902008176640000]
+</pre>
+<p>Maxima reconoce la derivada de la función factorial.
+</p>
+<pre class="example">(%i1) diff(x!,x);
+(%o1)                           x! psi (x + 1)
+                                      0
+</pre>
+<p>La variable opcional <code>factorial_expand</code> controla la simplificación de
+expresiones con la función factorial.
+</p>
+<pre class="example">(%i1) (n+1)!/n!,factorial_expand:true;
+(%o1)                                n + 1
+</pre></dd></dl>
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>factlim</b>
+<a name="IDX349"></a>
+</dt>
+<dd><p>Valor por defecto: -1
+</p>
+<p>La variable <code>factlim</code> especifica el mayor factorial que será expandido automáticamente.  Si su valor es -1, entonces se expandirán todos los enteros.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>factorial_expand</b>
+<a name="IDX350"></a>
+</dt>
+<dd><p>Valor por defecto: false
+</p>
+<p>La variable <code>factorial_expand</code> controla la simplificación
+de expresiones tales como <code>(n+1)!</code>, siendo <code>n</code> un entero. 
+</p>
+<p>Véase <code>!</code> para un ejemplo.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>genfact</b><i> (<var>x</var>, <var>y</var>, <var>z</var>)</i>
+<a name="IDX351"></a>
+</dt>
+<dd><p>Devuelve el factorial generalizado, definido como
+<code>x (x-z) (x - 2 z) ... (x - (y - 1) z)</code>.  Así, para el entero <var>x</var>,
+<code>genfact (x, x, 1) = x!</code> y <code>genfact (x, x/2, 2) = x!!</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>minfactorial</b><i> (<var>expr</var>)</i>
+<a name="IDX352"></a>
+</dt>
+<dd><p>Busca en <var>expr</var> la presencia de dos factoriales que solo se
+diferencien en una unidad; en tal caso, <code>minfactorial</code>
+devuelve una expresión simplificada.
+</p>
+<pre class="example">(%i1) n!/(n+2)!;
+                               n!
+(%o1)                       --------
+                            (n + 2)!
+(%i2) minfactorial (%);
+                                1
+(%o2)                    ---------------
+                         (n + 1) (n + 2)
+</pre>
+</dd></dl>
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>sumsplitfact</b>
+<a name="IDX353"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>Si <code>sumsplitfact</code> vale <code>false</code>,
+<code>minfactorial</code> se aplica después de  <code>factcomb</code>.
+</p>
+</dd></dl>
+
+
+
+
+
+
+
+
+
+<hr size="6">
+<a name="Funciones-radicales-exponenciales-y-logar_00edtmicas"></a>
+<a name="SEC63"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC62" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC64" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 10.4 Funciones radicales, exponenciales y logarítmicas </h2>
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>%e_to_numlog</b>
+<a name="IDX354"></a>
+</dt>
+<dd><p>Valor por defecto: <code>false</code>
+</p>
+<p>Si <code>%e_to_numlog</code> vale <code>true</code>, <code>r</code> es un número racional y <code>x</code> una expresión, <code>%e^(r*log(x))</code> se reduce a <code>x^r</code> .  Téngase en cuenta que la instrucción <code>radcan</code> también hace este tipo de transformaciones, así como otras más complicadas. La instrucción <code>logcontract</code> &quot;contrae&quot; expresiones que contienen algún <code>log</code>.
+</p></dd></dl>
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>%emode</b>
+<a name="IDX355"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>Si <code>%emode</code> vale <code>true</code>,
+<code>%e^(%pi %i x)</code> se simplifica como sigue.
+</p>
+<p><code>%e^(%pi %i x)</code> se simplifica a <code>cos (%pi x) + %i sin (%pi x)</code> si <code>x</code> es
+un número decimal de coma flotante, un entero o un múltiplo de 1/2, 1/3, 1/4 o 1/6, y luego se sigue simplificando.
+</p>
+<p>Para otros valores numéricos de <code>x</code>,
+<code>%e^(%pi %i x)</code> se simplifica a <code>%e^(%pi %i y)</code> donde <code>y</code> es <code>x - 2 k</code>
+para algún entero <code>k</code> tal que <code>abs(y) &lt; 1</code>.  
+</p>
+<p>Si <code>%emode</code> vale <code>false</code>, no se realizan simplificaciones especiales a <code>%e^(%pi %i x)</code>.
+</p>
+</dd></dl>
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>%enumer</b>
+<a name="IDX356"></a>
+</dt>
+<dd><p>Valor por defecto: <code>false</code>
+</p>
+<p>Si la variable <code>%enumer</code> vale <code>true</code> hace que <code>%e</code> se reemplace por
+2.718...  siempre que <code>numer</code> valga <code>true</code>. 
+</p>
+<p>Si <code>%enumer</code> vale <code>false</code>, esta sustitución se realiza sólo si el exponente en <code>%e^x</code> tiene un valor numérico.
+</p>
+<p>Véanse también <code>ev</code> y <code>numer</code>.
+</p>
+</dd></dl>
+
+
+
+
+<dl>
+<dt><u>Función:</u> <b>exp</b><i> (<var>x</var>)</i>
+<a name="IDX357"></a>
+</dt>
+<dd><p>Representa la función exponencial.  
+La expresión  <code>exp (<var>x</var>)</code> en la entrada se simplifica en <code>%e^<var>x</var></code>;
+<code>exp</code> no aparece en expresiones simplificadas.
+</p>
+<p>Si la variable <code>demoivre</code> vale <code>true</code> hace que <code>%e^(a + b %i)</code> se simplifique a
+<code>%e^(a (cos(b) + %i sin(b)))</code> si <code>b</code> no contiene a <code>%i</code>. Véase <code>demoivre</code>.
+</p>
+<p>Si la variable <code>%emode</code> vale <code>true</code>, 
+hace que  <code>%e^(%pi %i x)</code> se simplifique. Véase <code>%emode</code>.
+</p>
+<p>Si la variable <code>%enumer</code> vale <code>true</code> hace que <code>%e</code> se reemplace por
+2.718...  siempre que <code>numer</code> valga <code>true</code>. Véase <code>%enumer</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>li</b><i> [<var>s</var>] (<var>z</var>)</i>
+<a name="IDX358"></a>
+</dt>
+<dd><p>Representa la función polilogarítmica de orden <var>s</var> y argumento <var>z</var>,
+definida por la serie infinita
+</p>
+<pre class="example">                                 inf
+                                 ====   k
+                                 \     z
+                        Li (z) =  &gt;    --
+                          s      /      s
+                                 ====  k
+                                 k = 1
+</pre>
+<p><code>li [1]</code> es <code>- log (1 - z)</code>.
+<code>li [2]</code> y <code>li [3]</code> son las funciones di- y trilogaritmo, respectivamente.
+</p>
+<p>Cuando el orden es 1, el polilogaritmo se simplifica a <code>- log (1 - z)</code>,
+el cual a su vez se reduce a un valor numérico si <var>z</var> es un número
+real o complejo en coma flotante o si está presente el término <code>numer</code>.
+</p>
+<p>Cuando el orden es 2 ó 3,
+el polilogaritmo se reduce a un valor numérico si <var>z</var> es
+un número real en coma flotante o si está presente el término <code>numer</code>.
+</p>
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) assume (x &gt; 0);
+(%o1)                        [x &gt; 0]
+(%i2) integrate ((log (1 - t)) / t, t, 0, x);
+(%o2)                       - li (x)
+                                2
+(%i3) li [2] (7);
+(%o3)                        li (7)
+                               2
+(%i4) li [2] (7), numer;
+(%o4)        1.24827317833392 - 6.113257021832577 %i
+(%i5) li [3] (7);
+(%o5)                        li (7)
+                               3
+(%i6) li [2] (7), numer;
+(%o6)        1.24827317833392 - 6.113257021832577 %i
+(%i7) L : makelist (i / 4.0, i, 0, 8);
+(%o7)   [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+(%i8) map (lambda ([x], li [2] (x)), L);
+(%o8) [0, .2676526384986274, .5822405249432515, 
+.9784693966661848, 1.64493407, 2.190177004178597
+ - .7010261407036192 %i, 2.374395264042415
+ - 1.273806203464065 %i, 2.448686757245154
+ - 1.758084846201883 %i, 2.467401098097648
+ - 2.177586087815347 %i]
+(%i9) map (lambda ([x], li [3] (x)), L);
+(%o9) [0, .2584613953442624, 0.537213192678042, 
+.8444258046482203, 1.2020569, 1.642866878950322
+ - .07821473130035025 %i, 2.060877505514697
+ - .2582419849982037 %i, 2.433418896388322
+ - .4919260182322965 %i, 2.762071904015935
+ - .7546938285978846 %i]
+</pre>
+</dd></dl>
+
+
+
+
+<dl>
+<dt><u>Función:</u> <b>log</b><i> (<var>x</var>)</i>
+<a name="IDX359"></a>
+</dt>
+<dd><p>Representa el logaritmo natural (en base <em>e</em>) de <var>x</var>.
+</p>
+<p>Maxima no tiene definida una función para el logaritmo de base 10 u
+otras bases. El usuario puede hacer uso de la definición 
+<code>log10(x) := log(x) / log(10)</code>.
+</p>
+<p>La simplificación y evaluación de logaritmos se controla con
+ciertas variables globales:
+</p>
+<dl compact="compact">
+<dt> <code><code>logexpand</code></code></dt>
+<dd><p>hace que <code>log(a^b)</code> se convierta en <code>b*log(a)</code>.
+Si toma el valor <code>all</code>, <code>log(a*b)</code> también se reducirá a  <code>log(a)+log(b)</code>.
+Si toma el valor <code>super</code>, entonces <code>log(a/b)</code> también se reducirá a
+<code>log(a)-log(b)</code>, siendo <code>a/b</code> racional con <code>a#1</code>, 
+(la expresión <code>log(1/b)</code>, para <code>b</code> entero, se simplifica siempre). 
+Si toma el valor  <code>false</code>, se desactivarán todas estas simplificaciones.
+</p>
+</dd>
+<dt> <code><code>logsimp</code></code></dt>
+<dd><p>si vale <code>false</code>, entonces no se transforma <code>%e</code> a potencias que contengan logaritmos.
+</p>
+</dd>
+<dt> <code><code>lognegint</code></code></dt>
+<dd><p>si vale <code>true</code> se aplica la regla <code>log(-n)</code> -&gt; <code>log(n)+%i*%pi</code>,
+siendo <code>n</code> un entero positivo.
+</p>
+</dd>
+<dt> <code><code>%e_to_numlog</code></code></dt>
+<dd><p>si vale <code>true</code>, <code>r</code> es un número racional y <code>x</code> una expresión,
+<code>%e^(r*log(x))</code> se reduce a <code>x^r</code>. Téngase en cuenta que la 
+instrucción <code>radcan</code> también hace este tipo de transformaciones, 
+así como otras más complicadas. La instrucción <code>logcontract</code>
+&quot;contrae&quot; expresiones que contengan algún <code>log</code>.
+</p></dd>
+</dl>
+
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>logabs</b>
+<a name="IDX360"></a>
+</dt>
+<dd><p>Valor por defecto: <code>false</code>
+</p>
+<p>Cuando se calculan integrales indefinidas en las que se generan logaritmos, como en <code>integrate(1/x,x)</code>, el resultado se devuelve de la forma  <code>log(abs(...))</code> si <code>logabs</code> vale <code>true</code>, o de la forma <code>log(...)</code> si
+<code>logabs</code> vale <code>false</code>. En la integración definida se hace la asignación <code>logabs:true</code>, ya que aquí es normalmente necesario evaluar la integral indefinida en los extremos del intervalo de integración.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variable opcional:</u> <b>logarc</b>
+<a name="IDX361"></a>
+</dt>
+<dt><u>Función:</u> <b>logarc</b><i> (<var>expr</var>)</i>
+<a name="IDX362"></a>
+</dt>
+<dd><p>Si la variable global <code>logarc</code> toma el valor <code>true</code>,
+las funciones circulares e hiperbólicas inversas se 
+reemplazan por funciones logarítmicas equivalentes.
+El valor por defecto de <code>logarc</code> es <code>false</code>.
+</p>
+<p>La función <code>logarc(<var>expr</var>)</code> realiza la anterior transformación
+en la expresión <var>expr</var> sin necesidad de alterar el valor de la
+variable global <code>logarc</code>.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>logconcoeffp</b>
+<a name="IDX363"></a>
+</dt>
+<dd><p>Valor por defecto: <code>false</code>
+</p>
+<p>Controla qué coeficientes se contraen cuando se utiliza <code>logcontract</code>. Se le puede asignar el nombre de una función de predicado de un argumento; por ejemplo, si se quiere introducir raíces cuadradas, se puede hacer <code>logconcoeffp:'logconfun$ logconfun(m):=featurep(m,integer) or ratnump(m)$</code> .  Entonces 
+<code>logcontract(1/2*log(x));</code> devolverá <code>log(sqrt(x))</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>logcontract</b><i> (<var>expr</var>)</i>
+<a name="IDX364"></a>
+</dt>
+<dd><p>Analiza la expresión <var>expr</var> recursivamente, transformando subexpresiones de la forma <code>a1*log(b1) + a2*log(b2) + c</code> en <code>log(ratsimp(b1^a1 * b2^a2)) + c</code>
+</p>
+<pre class="example">(%i1) 2*(a*log(x) + 2*a*log(y))$
+(%i2) logcontract(%);
+                                 2  4
+(%o2)                     a log(x  y )
+
+</pre>
+<p>Si se hace <code>declare(n,integer);</code> entonces <code>logcontract(2*a*n*log(x));</code> da
+<code>a*log(x^(2*n))</code>.  Los coeficientes que se contraen de esta manera son aquellos que como el 2 y el <code>n</code> satisfacen 
+<code>featurep(coeff,integer)</code>. El usuario puede controlar qué coeficientes se contraen asignándole a la variable global <code>logconcoeffp</code> el nombre de una función de predicado de un argumento; por ejemplo, si se quiere introducir raíces cuadradas, se puede hacer <code>logconcoeffp:'logconfun$ logconfun(m):=featurep(m,integer) or ratnump(m)$</code> .  Entonces <code>logcontract(1/2*log(x));</code> devolverá <code>log(sqrt(x))</code>.
+</p>
+</dd></dl>
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>logexpand</b>
+<a name="IDX365"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>Si <code>logexpand</code> vale <code>true</code> hace que <code>log(a^b)</code> se convierta
+en <code>b*log(a)</code>. Si toma el valor <code>all</code>, <code>log(a*b)</code> también se
+reducirá a  <code>log(a)+log(b)</code>. Si toma el valor <code>super</code>, entonces 
+<code>log(a/b)</code> también se reducirá a <code>log(a)-log(b)</code>, siendo 
+<code>a/b</code> racional con <code>a#1</code>,  (la expresión <code>log(1/b)</code>, para
+<code>b</code> entero, se simplifica siempre). Si toma el valor  <code>false</code>,
+se desactivarán todas estas simplificaciones.
+</p></dd></dl>
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>lognegint</b>
+<a name="IDX366"></a>
+</dt>
+<dd><p>Valor por defecto: <code>false</code>
+</p>
+<p>Si <code>lognegint</code> vale <code>true</code> se aplica la regla <code>log(-n)</code> -&gt; <code>log(n)+%i*%pi</code> siendo <code>n</code> un entero positivo.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>logsimp</b>
+<a name="IDX367"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>Si <code>logsimp</code> vale <code>false</code>, entonces no se transforma <code>%e</code> a potencias que contengan logaritmos.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>plog</b><i> (<var>x</var>)</i>
+<a name="IDX368"></a>
+</dt>
+<dd><p>Representa la rama principal del logaritmo natural complejo con <code>-%pi</code> &lt; <code>carg(<var>x</var>)</code> &lt;= <code>+%pi</code> .
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>sqrt</b><i> (<var>x</var>)</i>
+<a name="IDX369"></a>
+</dt>
+<dd><p>Raíz cuadrada de <var>x</var>. Se representa internamente por <code><var>x</var>^(1/2)</code>.  Véase también <code>rootscontract</code>.
+</p>
+<p>Si la variable <code>radexpand</code> vale <code>true</code> hará que las raíces <code>n</code>-ésimas de los factores de un producto que sean potencias de <code>n</code> sean extraídas del radical; por ejemplo, <code>sqrt(16*x^2)</code> se convertirá en <code>4*x</code> sólo si <code>radexpand</code> vale <code>true</code>.
+</p>
+</dd></dl>
+
+
+
+
+
+
+
+
+
+<hr size="6">
+<a name="Funciones-trigonom_00e9tricas"></a>
+<a name="SEC64"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC63" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC65" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 10.5 Funciones trigonométricas </h2>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC65">10.5.1 Introducción a la trigonometría</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC66">10.5.2 Funciones y variables para trigonometría</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> 
+</td></tr>
+</table>
+
+
+<hr size="6">
+<a name="Introducci_00f3n-a-la-trigonometr_00eda"></a>
+<a name="SEC65"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC64" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC66" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC64" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 10.5.1 Introducción a la trigonometría </h3>
+
+
+<p>Maxima reconoce muchas funciones trigonométricas. No están programadas todas las identidades trigonométricas, pero el usuario puede añadir muchas de ellas haciendo uso de las técnicas basadas en patrones.  Las funciones trigonométricas definidas en Maxima son:  <code>acos</code>,
+<code>acosh</code>, <code>acot</code>, <code>acoth</code>, <code>acsc</code>,
+<code>acsch</code>, <code>asec</code>, <code>asech</code>, <code>asin</code>, 
+<code>asinh</code>, <code>atan</code>, <code>atanh</code>, <code>cos</code>, 
+<code>cosh</code>, <code>cot</code>, <code>coth</code>, <code>csc</code>, <code>csch</code>, 
+<code>sec</code>, <code>sech</code>, <code>sin</code>, <code>sinh</code>, <code>tan</code> y 
+<code>tanh</code>. Hay también un determinado número de instrucciones especiales para manipular funciones trigonométricas;  véanse a este respecto <code>trigexpand</code>,
+<code>trigreduce</code> y la variable <code>trigsign</code>.  Dos paquetes adicionales amplían las reglas de simplificación de Maxima, <code>ntrig</code> y <code>atrig1</code>.  Ejecútese <code>describe(<var>command</var>)</code> para más detalles.
+</p>
+
+
+
+
+
+
+
+<hr size="6">
+<a name="Funciones-y-variables-para-trigonometr_00eda"></a>
+<a name="SEC66"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC65" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC67" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC64" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 10.5.2 Funciones y variables para trigonometría </h3>
+
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>%piargs</b>
+<a name="IDX370"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>Cuando <code>%piargs</code> vale <code>true</code>, las funciones trigonométricas
+se simplifican a constantes algebraicas cuando el argumento es múltiplo
+entero de 
+<em>%pi</em>, <em>%pi/2</em>, <em>%pi/3</em>, <em>%pi/4</em> o <em>%pi/6</em>.
+</p>
+<p>Maxima conoce algunas identidades aplicables cuando <em>%pi</em>, etc.,
+se multiplican por una variable entera (esto es, un símbolo
+declarado como entero).
+</p>
+<p>Ejemplo:
+</p>
+<pre class="example">(%i1) %piargs : false$
+(%i2) [sin (%pi), sin (%pi/2), sin (%pi/3)];
+                                %pi       %pi
+(%o2)            [sin(%pi), sin(---), sin(---)]
+                                 2         3
+(%i3) [sin (%pi/4), sin (%pi/5), sin (%pi/6)];
+                      %pi       %pi       %pi
+(%o3)            [sin(---), sin(---), sin(---)]
+                       4         5         6
+(%i4) %piargs : true$
+(%i5) [sin (%pi), sin (%pi/2), sin (%pi/3)];
+                                sqrt(3)
+(%o5)                    [0, 1, -------]
+                                   2
+(%i6) [sin (%pi/4), sin (%pi/5), sin (%pi/6)];
+                         1         %pi   1
+(%o6)                [-------, sin(---), -]
+                      sqrt(2)       5    2
+(%i7) [cos (%pi/3), cos (10*%pi/3), tan (10*%pi/3),
+       cos (sqrt(2)*%pi/3)];
+                1    1               sqrt(2) %pi
+(%o7)          [-, - -, sqrt(3), cos(-----------)]
+                2    2                    3
+</pre>
+
+<p>Se aplican ciertas identidades cuando <em>%pi</em> o <em>%pi/2</em> se multiplican por una variable entera.
+</p>
+<pre class="example">(%i1) declare (n, integer, m, even)$
+(%i2) [sin (%pi * n), cos (%pi * m), sin (%pi/2 * m),
+       cos (%pi/2 * m)];
+                                      m/2
+(%o2)                  [0, 1, 0, (- 1)   ]
+</pre>
+</dd></dl>
+
+
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>%iargs</b>
+<a name="IDX371"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>Cuando <code>%iargs</code> vale <code>true</code>, las funciones trigonométricas
+se simplifican a funciones hiperbólicas
+si el argumento es aparentemente un múltiplo de la unidad imaginaria <em>%i</em>.
+</p>
+<p>La simplificación se lleva a cabo incluso cuando el argumento es manifiestamente real;
+Maxima sólo se fija en si el argumento es un múltiplo literal de <em>%i</em>.
+</p>
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) %iargs : false$
+(%i2) [sin (%i * x), cos (%i * x), tan (%i * x)];
+(%o2)           [sin(%i x), cos(%i x), tan(%i x)]
+(%i3) %iargs : true$
+(%i4) [sin (%i * x), cos (%i * x), tan (%i * x)];
+(%o4)           [%i sinh(x), cosh(x), %i tanh(x)]
+</pre>
+<p>La simplificación se aplica incluso en el caso de que
+el argumento se reduzca a un número real.
+</p>
+<pre class="example">(%i1) declare (x, imaginary)$
+(%i2) [featurep (x, imaginary), featurep (x, real)];
+(%o2)                     [true, false]
+(%i3) sin (%i * x);
+(%o3)                      %i sinh(x)
+</pre>
+</dd></dl>
+
+
+
+
+
+<dl>
+<dt><u>Function:</u> <b>acos</b><i> (<var>x</var>)</i>
+<a name="IDX372"></a>
+</dt>
+<dd><p>Arco coseno.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>acosh</b><i> (<var>x</var>)</i>
+<a name="IDX373"></a>
+</dt>
+<dd><p>Arco coseno hiperbólico.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>acot</b><i> (<var>x</var>)</i>
+<a name="IDX374"></a>
+</dt>
+<dd><p>Arco cotangente.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>acoth</b><i> (<var>x</var>)</i>
+<a name="IDX375"></a>
+</dt>
+<dd><p>Arco cotangente hiperbólica.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>acsc</b><i> (<var>x</var>)</i>
+<a name="IDX376"></a>
+</dt>
+<dd><p>Arco cosecante.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>acsch</b><i> (<var>x</var>)</i>
+<a name="IDX377"></a>
+</dt>
+<dd><p>Arco cosecante hiperbólica.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>asec</b><i> (<var>x</var>)</i>
+<a name="IDX378"></a>
+</dt>
+<dd><p>Arco secante.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>asech</b><i> (<var>x</var>)</i>
+<a name="IDX379"></a>
+</dt>
+<dd><p>Arco secante hiperbólica.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>asin</b><i> (<var>x</var>)</i>
+<a name="IDX380"></a>
+</dt>
+<dd><p>Arco seno.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>asinh</b><i> (<var>x</var>)</i>
+<a name="IDX381"></a>
+</dt>
+<dd><p>Arco seno hiperbólico.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>atan</b><i> (<var>x</var>)</i>
+<a name="IDX382"></a>
+</dt>
+<dd><p>Arco tangente.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>atan2</b><i> (<var>y</var>, <var>x</var>)</i>
+<a name="IDX383"></a>
+</dt>
+<dd><p>Calcula el valor de <code>atan(<var>y</var>/<var>x</var>)</code> en el intervalo de <code>-%pi</code> a <code>%pi</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>atanh</b><i> (<var>x</var>)</i>
+<a name="IDX384"></a>
+</dt>
+<dd><p>Arco tangente hiperbólica.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Paquete:</u> <b>atrig1</b>
+<a name="IDX385"></a>
+</dt>
+<dd><p>El paquete <code>atrig1</code> contiene ciertas reglas de simplificación adicionales para las funciones trigonométricas inversas. Junto con las reglas que ya conoce Maxima, los siguientes ángulos están completamente implementados:
+<code>0</code>, <code>%pi/6</code>, <code>%pi/4</code>, <code>%pi/3</code> y <code>%pi/2</code>.  
+Los ángulos correspondientes en los otros tres cuadrantes también están disponibles.  
+Para hacer uso de estas reglas, ejecútese <code>load(atrig1);</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cos</b><i> (<var>x</var>)</i>
+<a name="IDX386"></a>
+</dt>
+<dd><p>Coseno.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cosh</b><i> (<var>x</var>)</i>
+<a name="IDX387"></a>
+</dt>
+<dd><p>Coseno hiperbólico.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>cot</b><i> (<var>x</var>)</i>
+<a name="IDX388"></a>
+</dt>
+<dd><p>Cotangente.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>coth</b><i> (<var>x</var>)</i>
+<a name="IDX389"></a>
+</dt>
+<dd><p>Cotangente hiperbólica.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>csc</b><i> (<var>x</var>)</i>
+<a name="IDX390"></a>
+</dt>
+<dd><p>Cosecante.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>csch</b><i> (<var>x</var>)</i>
+<a name="IDX391"></a>
+</dt>
+<dd><p>Cosecante hiperbólica.
+</p>
+</dd></dl>
+
+
+<dl>
+<dt><u>Variable opcional:</u> <b>halfangles</b>
+<a name="IDX392"></a>
+</dt>
+<dd><p>Valor por defecto: <code>false</code>
+</p>
+<p>Si <code>halfangles</code> vale <code>true</code>, las funciones
+trigonométricas con argumentos del tipo <code><var>expr</var>/2</code>
+se simplifican a funciones con argumentos <var>expr</var>.
+</p>
+<p>Para un argumento real <var>x</var> en el intervalo <code>0 &lt; x &lt; 2*%pi</code>
+el seno del semiángulo se simplifica como
+</p>
+<pre class="example">                    sqrt(1 - cos(x))
+                    ----------------
+                        sqrt(2)
+</pre>
+<p>Se necesita un factor relativamente complicado para que esta fórmula
+sea también válida para cualquier argumento complejo <var>z</var>:
+</p>
+<pre class="example">           realpart(z)
+     floor(-----------)
+              2 %pi
+(- 1)                   (1 - unit_step(- imagpart(z))
+
+                      realpart(z)            realpart(z)
+                floor(-----------) - ceiling(-----------)
+                         2 %pi                  2 %pi
+          ((- 1)                                          + 1))
+</pre>
+<p>Maxima reconoce este factor y otros similares para las funciones <code>sin</code>, 
+<code>cos</code>, <code>sinh</code> y <code>cosh</code>. Para valores especiales del argumento
+<em>z</em>, estos factores se simplifican de forma apropiada.
+</p>
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) halfangles:false;
+(%o1)                                false
+(%i2) sin(x/2);
+                                        x
+(%o2)                               sin(-)
+                                        2
+(%i3) halfangles:true;
+(%o3)                                true
+(%i4) sin(x/2);
+                                                    x
+                                            floor(-----)
+                                                  2 %pi
+                      sqrt(1 - cos(x)) (- 1)
+(%o4)                 ----------------------------------
+                                   sqrt(2)
+(%i5) assume(x&gt;0, x&lt;2*%pi)$
+(%i6) sin(x/2);
+                               sqrt(1 - cos(x))
+(%o6)                          ----------------
+                                   sqrt(2)
+</pre>
+</dd></dl>
+
+
+<dl>
+<dt><u>Paquete:</u> <b>ntrig</b>
+<a name="IDX393"></a>
+</dt>
+<dd><p>El paquete <code>ntrig</code> contiene un conjunto de reglas de simplificación que se pueden usar para simplificar funciones trigonométricas cuyos argumentos son de la forma
+<code><var>f</var>(<var>n</var> %pi/10)</code> donde <var>f</var> es cualquiera de las funciones 
+<code>sin</code>, <code>cos</code>, <code>tan</code>, <code>csc</code>, <code>sec</code> o <code>cot</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sec</b><i> (<var>x</var>)</i>
+<a name="IDX394"></a>
+</dt>
+<dd><p>Secante.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sech</b><i> (<var>x</var>)</i>
+<a name="IDX395"></a>
+</dt>
+<dd><p>Secante hiperbólica.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sin</b><i> (<var>x</var>)</i>
+<a name="IDX396"></a>
+</dt>
+<dd><p>Seno.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>sinh</b><i> (<var>x</var>)</i>
+<a name="IDX397"></a>
+</dt>
+<dd><p>Seno hiperbólico.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>tan</b><i> (<var>x</var>)</i>
+<a name="IDX398"></a>
+</dt>
+<dd><p>Tangente.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>tanh</b><i> (<var>x</var>)</i>
+<a name="IDX399"></a>
+</dt>
+<dd><p>Tangente hiperbólica.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>trigexpand</b><i> (<var>expr</var>)</i>
+<a name="IDX400"></a>
+</dt>
+<dd><p>Expande funciones trigonométricas e hiperbólicas de sumas de ángulos y de múltiplos de ángulos presentes en <var>expr</var>.  Para mejorar los resultados, <var>expr</var> debería expandirse. Para facilitar el control por parte del usuario de las simplificaciones, esta función tan solo expande un nivel de cada vez, expandiendo sumas de ángulos o de múltiplos de ángulos. A fin de obtener una expansión completa en senos y coseno, se le dará a la variable <code>trigexpand</code> el valor <code>true</code>.
+</p>
+<p>La función <code>trigexpand</code> está controlada por las siguientes variables:
+</p>
+<dl compact="compact">
+<dt> <code>trigexpand</code></dt>
+<dd><p>Si vale <code>true</code>, provoca la expansión de todas las expresiones que contengan senos y cosenos.
+</p></dd>
+<dt> <code>trigexpandplus</code></dt>
+<dd><p>Controla la regla de la suma para <code>trigexpand</code>, la expansión de una suma como <code>sin(x + y)</code> se llevará a cabo sólo si <code>trigexpandplus</code> vale <code>true</code>.
+</p></dd>
+<dt> <code>trigexpandtimes</code></dt>
+<dd><p>Controla la regla del producto para <code>trigexpand</code>, la expansión de un producto como <code>sin(2 x)</code> se llevará a cabo sólo si <code>trigexpandtimes</code> vale <code>true</code>.
+</p></dd>
+</dl>
+
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) x+sin(3*x)/sin(x),trigexpand=true,expand;
+                         2           2
+(%o1)               - sin (x) + 3 cos (x) + x
+(%i2) trigexpand(sin(10*x+y));
+(%o2)          cos(10 x) sin(y) + sin(10 x) cos(y)
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Variable optativa:</u> <b>trigexpandplus</b>
+<a name="IDX401"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>La variable <code>trigexpandplus</code> controla la regla de la suma para <code>trigexpand</code>.  Así, si la instrucción <code>trigexpand</code> se utiliza o si la variable <code>trigexpand</code> vale <code>true</code>, se realizará la expansión de sumas como <code>sin(x+y)</code> sólo si <code>trigexpandplus</code> vale <code>true</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variable optativa:</u> <b>trigexpandtimes</b>
+<a name="IDX402"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>La variable <code>trigexpandtimes</code> controla la regla del producto para <code>trigexpand</code>.  Así, si la instrucción <code>trigexpand</code> se utiliza o si la variable <code>trigexpand</code> vale <code>true</code>, se realizará la expansión de productos como <code>sin(2*x)</code> sólo si <code>trigexpandtimes</code> vale <code>true</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variable optativa:</u> <b>triginverses</b>
+<a name="IDX403"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>La variable <code>triginverses</code> controla la simplificación de la composición de funciones trigonométricas e hiperbólicas con sus funciones inversas.
+</p>
+<p>Si vale <code>all</code>, tanto <code>atan(tan(<var>x</var>))</code>  como <code>tan(atan(<var>x</var>))</code> se reducen a <var>x</var>.  
+</p>
+<p>Si vale <code>true</code>, se desactiva la simplificación de <code><var>arcfun</var>(<var>fun</var>(<var>x</var>))</code>.
+</p>
+<p>Si vale <code>false</code>, se desactivan las simplificaciones de 
+<code><var>arcfun</var>(<var>fun</var>(<var>x</var>))</code> y 
+<code><var>fun</var>(<var>arcfun</var>(<var>x</var>))</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>trigreduce</b><i> (<var>expr</var>, <var>x</var>)</i>
+<a name="IDX404"></a>
+</dt>
+<dt><u>Función:</u> <b>trigreduce</b><i> (<var>expr</var>)</i>
+<a name="IDX405"></a>
+</dt>
+<dd><p>Combina productos y potencias de senos y cosenos trigonométricos e hiperbólicos de <var>x</var>, transformándolos en otros que son múltiplos de <var>x</var>.  También intenta eliminar estas funciones cuando aparecen en los denominadores.  Si no se introduce el argumento <var>x</var>, entonces se utilizan todas las variables de <var>expr</var>.
+</p>
+<p>Véase también <code>poissimp</code>.
+</p>
+<pre class="example">(%i1) trigreduce(-sin(x)^2+3*cos(x)^2+x);
+               cos(2 x)      cos(2 x)   1        1
+(%o1)          -------- + 3 (-------- + -) + x - -
+                  2             2       2        2
+</pre>
+
+<p>Las rutinas de simplificación trigonométrica utilizan información declarada en algunos casos sencillos. Las declaraciones sobre variables se utilizan como se indica a continuación:
+</p>
+<pre class="example">(%i1) declare(j, integer, e, even, o, odd)$
+(%i2) sin(x + (e + 1/2)*%pi);
+(%o2)                        cos(x)
+(%i3) sin(x + (o + 1/2)*%pi);
+(%o3)                       - cos(x)
+
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Variable optativa:</u> <b>trigsign</b>
+<a name="IDX406"></a>
+</dt>
+<dd><p>Valor por defecto: <code>true</code>
+</p>
+<p>Si <code>trigsign</code> vale <code>true</code>, se permite la simplificación de argumentos negativos en funciones trigonométricas, como en <code>sin(-x)</code>, que se transformará en <code>-sin(x)</code> sólo si <code>trigsign</code> vale <code>true</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>trigsimp</b><i> (<var>expr</var>)</i>
+<a name="IDX407"></a>
+</dt>
+<dd><p>Utiliza las identidades <em>sin(x)^2 + cos(x)^2 = 1</em> y
+<em>cosh(x)^2 - sinh(x)^2 = 1</em> para simplificar expresiones que contienen <code>tan</code>, <code>sec</code>,
+etc., en expresiones con <code>sin</code>, <code>cos</code>, <code>sinh</code>, <code>cosh</code>.
+</p>
+<p>Las funciones <code>trigreduce</code>, <code>ratsimp</code> y <code>radcan</code> puden seguir siendo útiles para continuar el proceso de simplificación.
+</p>
+<p>La instrucción <code>demo (&quot;trgsmp.dem&quot;)</code> muestra algunos ejemplos de <code>trigsimp</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Función:</u> <b>trigrat</b><i> (<var>expr</var>)</i>
+<a name="IDX408"></a>
+</dt>
+<dd><p>Devuelve una forma canónica simplificada cuasi-lineal de una expresión trigonométrica;
+<var>expr</var> es una fracción racional que contiene <code>sin</code>, <code>cos</code> o <code>tan</code>, 
+cuyos argumentos son formas lineales respecto de ciertas variables (o kernels) y <code>%pi/<var>n</var></code>
+(<var>n</var> entero) con coeficientes enteros. El resultado es una fracción simplificada con 
+el numerador y denominador lineales respecto de <code>sin</code> y <code>cos</code>. Así,
+ <code>trigrat</code> devuelve una expresión lineal siempre que sea posible.
+</p>
+<pre class="example">(%i1) trigrat(sin(3*a)/sin(a+%pi/3));
+(%o1)            sqrt(3) sin(2 a) + cos(2 a) - 1
+</pre>
+<p>El siguiente ejemplo se ha tomado de
+Davenport, Siret y Tournier, <i>Calcul Formel</i>, Masson (o en inglés,
+Addison-Wesley), sección 1.5.5, teorema de Morley.
+</p>
+<pre class="example">(%i1) c : %pi/3 - a - b$
+(%i2) bc : sin(a)*sin(3*c)/sin(a+b);
+                                          %pi
+                  sin(a) sin(3 (- b - a + ---))
+                                           3
+(%o2)             -----------------------------
+                           sin(b + a)
+(%i3) ba : bc, c=a, a=c;
+                                         %pi
+                    sin(3 a) sin(b + a - ---)
+                                          3
+(%o3)               -------------------------
+                                  %pi
+                          sin(a - ---)
+                                   3
+(%i4) ac2 : ba^2 + bc^2 - 2*bc*ba*cos(b);
+         2         2         %pi
+      sin (3 a) sin (b + a - ---)
+                              3
+(%o4) ---------------------------
+                2     %pi
+             sin (a - ---)
+                       3
+                                       %pi
+ - (2 sin(a) sin(3 a) sin(3 (- b - a + ---)) cos(b)
+                                        3
+             %pi            %pi
+ sin(b + a - ---))/(sin(a - ---) sin(b + a))
+              3              3
+      2       2              %pi
+   sin (a) sin (3 (- b - a + ---))
+                              3
+ + -------------------------------
+                2
+             sin (b + a)
+(%i5) trigrat (ac2);
+(%o5) - (sqrt(3) sin(4 b + 4 a) - cos(4 b + 4 a)
+ - 2 sqrt(3) sin(4 b + 2 a) + 2 cos(4 b + 2 a)
+ - 2 sqrt(3) sin(2 b + 4 a) + 2 cos(2 b + 4 a)
+ + 4 sqrt(3) sin(2 b + 2 a) - 8 cos(2 b + 2 a) - 4 cos(2 b - 2 a)
+ + sqrt(3) sin(4 b) - cos(4 b) - 2 sqrt(3) sin(2 b) + 10 cos(2 b)
+ + sqrt(3) sin(4 a) - cos(4 a) - 2 sqrt(3) sin(2 a) + 10 cos(2 a)
+ - 9)/4
+</pre>
+</dd></dl>
+
+
+
+
+
+
+
+
+<hr size="6">
+<a name="N_00fameros-aleatorios"></a>
+<a name="SEC67"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC66" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC59" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 10.6 Números aleatorios </h2>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>make_random_state</b><i> (<var>n</var>)</i>
+<a name="IDX409"></a>
+</dt>
+<dt><u>Función:</u> <b>make_random_state</b><i> (<var>s</var>)</i>
+<a name="IDX410"></a>
+</dt>
+<dt><u>Función:</u> <b>make_random_state</b><i> (true)</i>
+<a name="IDX411"></a>
+</dt>
+<dt><u>Función:</u> <b>make_random_state</b><i> (false)</i>
+<a name="IDX412"></a>
+</dt>
+<dd><p>Un objeto de estado aleatorio representa el estado del generador de números aleatorios. El estado consiste en 627 cadenas binarias de 32 bits.
+</p>
+<p>La llamada <code>make_random_state (<var>n</var>)</code> devuelve un nuevo objeto de estado aleatorio creado a partir de una semilla entera igual a <var>n</var> módulo 2^32. El argumento <var>n</var> puede ser negativo.
+</p>
+<p>La llamada <code>make_random_state (<var>s</var>)</code> devuelve una copia del estado aleatorio <var>s</var>.
+</p>
+<p>La llamada <code>make_random_state (true)</code> devuelve un nuevo objeto de estado aleatorio, cuya semilla se genera a partir de la hora actual del reloj del sistema como semilla.
+</p>
+<p>La llamada <code>make_random_state (false)</code> devuelve una copia del estado actual del generador de números aleatorios.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>set_random_state</b><i> (<var>s</var>)</i>
+<a name="IDX413"></a>
+</dt>
+<dd><p>Establece <var>s</var> como estado del generador de números aleatorios.
+</p>
+<p>La función <code>set_random_state</code> devuelve <code>done</code> en todo caso.
+</p>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Función:</u> <b>random</b><i> (<var>x</var>)</i>
+<a name="IDX414"></a>
+</dt>
+<dd><p>Devuelve un número seudoaleatorio. Si <var>x</var> es un entero, <code>random (<var>x</var>)</code> devuelve un
+entero entre 0 y <code><var>x</var> - 1</code>, ambos inclusive. Si <var>x</var> es un decimal en punto flotante,
+<code>random (<var>x</var>)</code> devuelve un decimal no negativo en punto flotante menor que <var>x</var>.
+La función <code>random</code> emite un mensaje de error si <var>x</var> no es ni entero ni de punto flotante,
+o si <var>x</var> no es positivo.
+</p>
+<p>Las funciones <code>make_random_state</code> y <code>set_random_state</code>
+permiten controlar el estado del generador de números aleatorios.
+</p>
+<p>El generador de números aleatorios de Maxima implementa el algoritmo de Mersenne twister MT 19937.
+</p>
+<p>Ejemplos:
+</p>
+<pre class="example">(%i1) s1: make_random_state (654321)$
+(%i2) set_random_state (s1);
+(%o2)                         done
+(%i3) random (1000);
+(%o3)                          768
+(%i4) random (9573684);
+(%o4)                        7657880
+(%i5) random (2^75);
+(%o5)                11804491615036831636390
+(%i6) s2: make_random_state (false)$
+(%i7) random (1.0);
+(%o7)                   .2310127244107132
+(%i8) random (10.0);
+(%o8)                   4.394553645870825
+(%i9) random (100.0);
+(%o9)                   32.28666704056853
+(%i10) set_random_state (s2);
+(%o10)                        done
+(%i11) random (1.0);
+(%o11)                  .2310127244107132
+(%i12) random (10.0);
+(%o12)                  4.394553645870825
+(%i13) random (100.0);
+(%o13)                  32.28666704056853
+</pre>
+</dd></dl>
+
+
+
+
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC59" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_11.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>abril, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

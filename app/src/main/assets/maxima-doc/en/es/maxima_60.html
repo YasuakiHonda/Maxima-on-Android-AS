@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on abril, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Maxima 5.36.0: 60. lbfgs</title>
+
+<meta name="description" content="Manual de Maxima 5.36.0: 60. lbfgs">
+<meta name="keywords" content="Manual de Maxima 5.36.0: 60. lbfgs">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="lbfgs"></a>
+<a name="SEC304"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_59.html#SEC303" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC305" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_59.html#SEC301" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 60. lbfgs </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC305">60.1 Introducción a lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC306">60.2 Funciones y variables para lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Introducci_00f3n-a-lbfgs"></a>
+<a name="SEC305"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC304" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC306" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC304" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC304" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 60.1 Introducción a lbfgs </h2>
+
+<p>La función <code>lbfgs</code> implementa el llamado algoritmo L-BFGS [1]
+para resolver problemas de minimización sin restricciones mediante una
+técnica <i>cuasi-Newton con memoria limitada</i> (BFGS). El término
+memoria limitada procede del hecho de que se almacena una aproximación
+de rango bajo de la inversa de la matriz hessiana, en lugar de la matriz
+completa. El programa fue originalmente escrito en Fortran [2] por
+Jorge Nocedal, incorporando algunas funciones escritas originalmente
+por Jorge J. Mor&eacute; y David J. Thuente, traducidas posteriormente a Lisp
+automáticamente con el programa <code>f2cl</code>. El paquete <code>lbfgs</code>
+contiene el código traducido, junto con una función interfaz que para
+controlar ciertos detalles.
+</p>
+
+<p>Referencias:
+</p>
+<p>[1] D. Liu and J. Nocedal. &quot;On the limited memory BFGS method for large
+scale optimization&quot;. <i>Mathematical Programming B</i> 45:503-528 (1989)
+</p>
+<p>[2] <a href="http://netlib.org/opt/lbfgs_um.shar">http://netlib.org/opt/lbfgs_um.shar</a>
+</p>
+<hr size="6">
+<a name="Funciones-y-variables-para-lbfgs"></a>
+<a name="SEC306"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC305" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC307" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC304" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC304" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 60.2 Funciones y variables para lbfgs </h2>
+
+<dl>
+<dt><u>Función:</u> <b>lbfgs</b><i> (<var>FOM</var>, <var>X</var>, <var>X0</var>, <var>epsilon</var>, <var>iprint</var>)</i>
+<a name="IDX2502"></a>
+</dt>
+<dt><u>Function:</u> <b>lbfgs</b><i> ([<var>FOM</var>, <var>grad</var>] <var>X</var>, <var>X0</var>, <var>epsilon</var>, <var>iprint</var>)</i>
+<a name="IDX2503"></a>
+</dt>
+<dd><p>Encuentra una solución aproximada para el problema de minimización
+sin restricciones de la función objetivo <var>FOM</var> para la lista de 
+variables <var>X</var>, partiendo de los estimadores iniciales <var>X0</var>,
+de tal manera que <em>norm(grad(FOM)) &lt; epsilon*max(1, norm(X))</em>.
+</p>
+<p>Si el argumento <var>grad</var> está presente, debe ser el gradiente de <var>FOM</var> respecto
+de las variables <var>X</var>. <var>grad</var> puede ser una lista o una función 
+que devuelva una lista con igual número de elementos que <var>X</var>. 
+Si el argumento no está presente, el gradiente se calcula automáticamente mediante derivación
+simbólica. Si <var>FOM</var> es una función, el gradiente <var>grad</var> debe ser suministrado
+por el usuario.
+</p>
+<p>El algoritmo utilizado es una técnica <i>cuasi-Newton con memoria limitada</i>
+(BFGS) [1]. El término <i>memoria limitada</i> procede del hecho de que se almacena
+una aproximación de rango bajo de la inversa de la matriz hessiana, en lugar
+de la matriz completa.
+Cada iteración del algoritmo es una búsqueda a lo largo de una recta,
+cuya dirección se calcula a partir de la matriz inversa aproximada del
+hessiano. La función objetivo decrece siempre tras cada búsqueda
+exitosa a lo largo de la recta; además, casi siempre decrece también
+el módulo del gradiente de la función.
+</p>
+<p>El argumento <var>iprint</var> controla los mensajes de progreso que envía
+la función <code>lbfgs</code>.
+</p>
+
+<dl compact="compact">
+<dt> <code>iprint[1]</code></dt>
+<dd><p><code><var>iprint</var>[1]</code> controla la frecuencia con la que se emiten los mensajes.
+</p><dl compact="compact">
+<dt> <code>iprint[1] &lt; 0</code></dt>
+<dd><p>No se envían mensajes.
+</p></dd>
+<dt> <code>iprint[1] = 0</code></dt>
+<dd><p>Mensajes únicamente en la primera y última iteraciones.
+</p></dd>
+<dt> <code>iprint[1] &gt; 0</code></dt>
+<dd><p>Imprime un mensaje cada <code><var>iprint</var>[1]</code> iteraciones.
+</p></dd>
+</dl>
+</dd>
+<dt> <code>iprint[2]</code></dt>
+<dd><p><code><var>iprint</var>[2]</code> controla la cantidad de información contenida en los mensajes.
+</p><dl compact="compact">
+<dt> <code>iprint[2] = 0</code></dt>
+<dd><p>Imprime contador de iteraciones, número de evaluaciones de <var>FOM</var>, valor de <var>FOM</var>,
+módulo del gradiente de <var>FOM</var> y amplitud del paso.
+</p></dd>
+<dt> <code>iprint[2] = 1</code></dt>
+<dd><p>Igual que <code><var>iprint</var>[2] = 0</code>, incluyendo <var>X0</var> y el gradiente de <var>FOM</var> evaluado en <var>X0</var>.
+</p></dd>
+<dt> <code>iprint[2] = 2</code></dt>
+<dd><p>Igual que <code><var>iprint</var>[2] = 1</code>, incluyendo los valores de <var>X</var> en cada iteración.
+</p></dd>
+<dt> <code>iprint[2] = 3</code></dt>
+<dd><p>Igual que <code><var>iprint</var>[2] = 2</code>, incluyendo el gradiente de <var>FOM</var> en cada iteración.
+</p></dd>
+</dl>
+</dd>
+</dl>
+
+<p>Las columnas devueltas por <code>lbfgs</code> son las siguientes:
+</p>
+<dl compact="compact">
+<dt> <code>I</code></dt>
+<dd><p>Número de iteraciones. Se incremente tras cada búsqueda a lo
+largo de una recta.
+</p></dd>
+<dt> <code>NFN</code></dt>
+<dd><p>Número de evaluaciones de la función objetivo.
+</p></dd>
+<dt> <code>FUNC</code></dt>
+<dd><p>Valor de la función objetivo al final de cada iteración.
+</p></dd>
+<dt> <code>GNORM</code></dt>
+<dd><p>Módulo del gradiente de la función objetivo al final de
+cada iteración.
+</p></dd>
+<dt> <code>STEPLENGTH</code></dt>
+<dd><p>Un parámetro interno del algoritmo de búsqueda.
+</p></dd>
+</dl>
+
+<p>Para más información sobre el algoritmo se puede acudir a los
+comentarios en el código original en Fortran [2].
+</p>
+<p>Véanse también <code>lbfgs_nfeval_max</code> y <code>lbfgs_ncorrections</code>.
+</p>
+<p>Referencias:
+</p>
+<p>[1] D. Liu and J. Nocedal. &quot;On the limited memory BFGS method for large
+scale optimization&quot;. <i>Mathematical Programming B</i> 45:503-528 (1989)
+</p>
+<p>[2] <a href="http://netlib.org/opt/lbfgs_um.shar">http://netlib.org/opt/lbfgs_um.shar</a>
+</p>
+<p>Ejemplos:
+</p>
+<p>La misma función objetivo utilizada por FGCOMPUTE en el programa 
+sdrive.f del paquete LBFGS de Netlib. Nótese que las variables en
+cuestión están subindicadas. La función objetivo tiene un
+mínimo exacto igual a cero en <em>u[k] = 1</em>, para
+<em>k = 1, ..., 8</em>.
+</p>
+<pre class="example">(%i1) load (lbfgs)$
+(%i2) t1[j] := 1 - u[j];
+(%o2)                     t1  := 1 - u
+                            j         j
+(%i3) t2[j] := 10*(u[j + 1] - u[j]^2);
+                                          2
+(%o3)                t2  := 10 (u      - u )
+                       j         j + 1    j
+(%i4) n : 8;
+(%o4)                           8
+(%i5) FOM : sum (t1[2*j - 1]^2 + t2[2*j - 1]^2, j, 1, n/2);
+                 2 2           2              2 2           2
+(%o5) 100 (u  - u )  + (1 - u )  + 100 (u  - u )  + (1 - u )
+            8    7           7           6    5           5
+                     2 2           2              2 2           2
+        + 100 (u  - u )  + (1 - u )  + 100 (u  - u )  + (1 - u )
+                4    3           3           2    1           1
+(%i6) lbfgs (FOM, '[u[1],u[2],u[3],u[4],u[5],u[6],u[7],u[8]],
+       [-1.2, 1, -1.2, 1, -1.2, 1, -1.2, 1], 1e-3, [1, 0]);
+*************************************************
+  N=    8   NUMBER OF CORRECTIONS=25
+       INITIAL VALUES
+ F=  9.680000000000000D+01   GNORM=  4.657353755084533D+02
+*************************************************
+</pre><pre class="example"> I NFN   FUNC                    GNORM                   STEPLENGTH
+
+ 1   3   1.651479526340304D+01   4.324359291335977D+00   7.926153934390631D-04
+ 2   4   1.650209316638371D+01   3.575788161060007D+00   1.000000000000000D+00
+ 3   5   1.645461701312851D+01   6.230869903601577D+00   1.000000000000000D+00
+ 4   6   1.636867301275588D+01   1.177589920974980D+01   1.000000000000000D+00
+ 5   7   1.612153014409201D+01   2.292797147151288D+01   1.000000000000000D+00
+ 6   8   1.569118407390628D+01   3.687447158775571D+01   1.000000000000000D+00
+ 7   9   1.510361958398942D+01   4.501931728123679D+01   1.000000000000000D+00
+ 8  10   1.391077875774293D+01   4.526061463810630D+01   1.000000000000000D+00
+ 9  11   1.165625686278198D+01   2.748348965356907D+01   1.000000000000000D+00
+10  12   9.859422687859144D+00   2.111494974231706D+01   1.000000000000000D+00
+11  13   7.815442521732282D+00   6.110762325764183D+00   1.000000000000000D+00
+12  15   7.346380905773044D+00   2.165281166715009D+01   1.285316401779678D-01
+13  16   6.330460634066464D+00   1.401220851761508D+01   1.000000000000000D+00
+14  17   5.238763939854303D+00   1.702473787619218D+01   1.000000000000000D+00
+15  18   3.754016790406625D+00   7.981845727632704D+00   1.000000000000000D+00
+16  20   3.001238402313225D+00   3.925482944745832D+00   2.333129631316462D-01
+17  22   2.794390709722064D+00   8.243329982586480D+00   2.503577283802312D-01
+18  23   2.563783562920545D+00   1.035413426522664D+01   1.000000000000000D+00
+19  24   2.019429976373283D+00   1.065187312340952D+01   1.000000000000000D+00
+20  25   1.428003167668592D+00   2.475962450735100D+00   1.000000000000000D+00
+21  27   1.197874264859232D+00   8.441707983339661D+00   4.303451060697367D-01
+22  28   9.023848942003913D-01   1.113189216665625D+01   1.000000000000000D+00
+23  29   5.508226405855795D-01   2.380830599637816D+00   1.000000000000000D+00
+24  31   3.902893258879521D-01   5.625595817143044D+00   4.834988416747262D-01
+25  32   3.207542206881058D-01   1.149444645298493D+01   1.000000000000000D+00
+26  33   1.874468266118200D-01   3.632482152347445D+00   1.000000000000000D+00
+27  34   9.575763380282112D-02   4.816497449000391D+00   1.000000000000000D+00
+28  35   4.085145106760390D-02   2.087009347116811D+00   1.000000000000000D+00
+29  36   1.931106005512628D-02   3.886818624052740D+00   1.000000000000000D+00
+30  37   6.894000636920714D-03   3.198505769992936D+00   1.000000000000000D+00
+31  38   1.443296008850287D-03   1.590265460381961D+00   1.000000000000000D+00
+32  39   1.571766574930155D-04   3.098257002223532D-01   1.000000000000000D+00
+33  40   1.288011779655132D-05   1.207784334505595D-02   1.000000000000000D+00
+34  41   1.806140190993455D-06   4.587890258846915D-02   1.000000000000000D+00
+35  42   1.769004612050548D-07   1.790537363138099D-02   1.000000000000000D+00
+36  43   3.312164244118216D-10   6.782068546986653D-04   1.000000000000000D+00
+</pre><pre class="example">
+ THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.
+ IFLAG = 0
+(%o6) [u  = 1.000005339816132, u  = 1.000009942840108, 
+        1                       2
+u  = 1.000005339816132, u  = 1.000009942840108, 
+ 3                       4
+u  = 1.000005339816132, u  = 1.000009942840108, 
+ 5                       6
+u  = 1.000005339816132, u  = 1.000009942840108]
+ 7                       8
+</pre>
+<p>Un problema de regresión. La función objetivo es el cuadrado medio
+de la diferencia entre la predicción <em>F(X[i])</em> y el valor observado
+<em>Y[i]</em>. La función <em>F</em> es monótona y acotada (llamada en ocasiones
+&quot;sigmoidal&quot;). En este ejemplo, <code>lbfgs</code> calcula valores aproximados para los
+parámetros de <em>F</em> y <code>plot2d</code> hace una representación gráfica
+comparativa de <em>F</em> junto con los datos observados.
+</p>
+
+<pre class="example">(%i1) load (lbfgs)$
+(%i2) FOM : '((1/length(X))*sum((F(X[i]) - Y[i])^2, i, 1,
+                                                length(X)));
+                               2
+               sum((F(X ) - Y ) , i, 1, length(X))
+                       i     i
+(%o2)          -----------------------------------
+                            length(X)
+(%i3) X : [1, 2, 3, 4, 5];
+(%o3)                    [1, 2, 3, 4, 5]
+(%i4) Y : [0, 0.5, 1, 1.25, 1.5];
+(%o4)                [0, 0.5, 1, 1.25, 1.5]
+(%i5) F(x) := A/(1 + exp(-B*(x - C)));
+                                   A
+(%o5)            F(x) := ----------------------
+                         1 + exp((- B) (x - C))
+(%i6) ''FOM;
+                A               2            A                2
+(%o6) ((----------------- - 1.5)  + (----------------- - 1.25)
+          - B (5 - C)                  - B (4 - C)
+        %e            + 1            %e            + 1
+            A             2            A               2
+ + (----------------- - 1)  + (----------------- - 0.5)
+      - B (3 - C)                - B (2 - C)
+    %e            + 1          %e            + 1
+             2
+            A
+ + --------------------)/5
+      - B (1 - C)     2
+   (%e            + 1)
+(%i7) estimates : lbfgs (FOM, '[A, B, C], [1, 1, 1], 1e-4, [1, 0]);
+*************************************************
+  N=    3   NUMBER OF CORRECTIONS=25
+       INITIAL VALUES
+ F=  1.348738534246918D-01   GNORM=  2.000215531936760D-01
+*************************************************
+
+</pre><pre class="example">I  NFN  FUNC                    GNORM                   STEPLENGTH
+1    3  1.177820636622582D-01   9.893138394953992D-02   8.554435968992371D-01  
+2    6  2.302653892214013D-02   1.180098521565904D-01   2.100000000000000D+01  
+3    8  1.496348495303004D-02   9.611201567691624D-02   5.257340567840710D-01  
+4    9  7.900460841091138D-03   1.325041647391314D-02   1.000000000000000D+00  
+5   10  7.314495451266914D-03   1.510670810312226D-02   1.000000000000000D+00  
+6   11  6.750147275936668D-03   1.914964958023037D-02   1.000000000000000D+00  
+7   12  5.850716021108202D-03   1.028089194579382D-02   1.000000000000000D+00  
+8   13  5.778664230657800D-03   3.676866074532179D-04   1.000000000000000D+00  
+9   14  5.777818823650780D-03   3.010740179797108D-04   1.000000000000000D+00  
+</pre><pre class="example">
+ THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.
+ IFLAG = 0
+(%o7) [A = 1.461933911464101, B = 1.601593973254801, 
+                                           C = 2.528933072164855]
+(%i8) plot2d ([F(x), [discrete, X, Y]], [x, -1, 6]), ''estimates;
+(%o8) 
+</pre>
+<p>Especificando el gradiente de la función objetivo en lugar de calcularlo
+simbólicamente.
+</p>
+<pre class="example">(%i1) load (lbfgs)$
+(%i2) F(a, b, c) := (a - 5)^2 + (b - 3)^4 + (c - 2)^6$
+(%i3) define(F_grad(a, b, c),
+             map (lambda ([x], diff (F(a, b, c), x)), [a, b, c]))$
+(%i4) estimates : lbfgs ([F, F_grad],
+                   [a, b, c], [0, 0, 0], 1e-4, [1, 0]);
+*************************************************
+  N=    3   NUMBER OF CORRECTIONS=25
+       INITIAL VALUES
+ F=  1.700000000000000D+02   GNORM=  2.205175729958953D+02
+*************************************************
+
+</pre><pre class="example">   I  NFN     FUNC                    GNORM                   STEPLENGTH
+
+   1    2     6.632967565917637D+01   6.498411132518770D+01   4.534785987412505D-03  
+   2    3     4.368890936228036D+01   3.784147651974131D+01   1.000000000000000D+00  
+   3    4     2.685298972775191D+01   1.640262125898520D+01   1.000000000000000D+00  
+   4    5     1.909064767659852D+01   9.733664001790506D+00   1.000000000000000D+00  
+   5    6     1.006493272061515D+01   6.344808151880209D+00   1.000000000000000D+00  
+   6    7     1.215263596054292D+00   2.204727876126877D+00   1.000000000000000D+00  
+   7    8     1.080252896385329D-02   1.431637116951845D-01   1.000000000000000D+00  
+   8    9     8.407195124830860D-03   1.126344579730008D-01   1.000000000000000D+00  
+   9   10     5.022091686198525D-03   7.750731829225275D-02   1.000000000000000D+00  
+  10   11     2.277152808939775D-03   5.032810859286796D-02   1.000000000000000D+00  
+  11   12     6.489384688303218D-04   1.932007150271009D-02   1.000000000000000D+00  
+  12   13     2.075791943844547D-04   6.964319310814365D-03   1.000000000000000D+00  
+  13   14     7.349472666162258D-05   4.017449067849554D-03   1.000000000000000D+00  
+  14   15     2.293617477985238D-05   1.334590390856715D-03   1.000000000000000D+00  
+  15   16     7.683645404048675D-06   6.011057038099202D-04   1.000000000000000D+00  
+</pre><pre class="example">
+ THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.
+ IFLAG = 0
+(%o4) [a = 5.000086823042934, b = 3.052395429705181, 
+                                           c = 1.927980629919583]
+</pre>
+</dd></dl>
+
+
+<dl>
+<dt><u>Variable:</u> <b>lbfgs_nfeval_max</b>
+<a name="IDX2504"></a>
+</dt>
+<dd><p>Valor por defecto: 100
+</p>
+<p>La variable <code>lbfgs_nfeval_max</code> almacena el número máximo de
+evaluaciones de la función objetivo en <code>lbfgs</code>. Cuando se
+alcanza el valor <code>lbfgs_nfeval_max</code>, <code>lbfgs</code> devuelve
+el resultado logrado en la última iteración exitosa.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variable:</u> <b>lbfgs_ncorrections</b>
+<a name="IDX2505"></a>
+</dt>
+<dd><p>Valor por defecto: 25
+</p>
+<p>La variable <code>lbfgs_ncorrections</code> almacena el número de correcciones
+aplicadas a la matriz inversa aproximada del hessiano, la cual es gestionada
+por <code>lbfgs</code>.
+</p>
+</dd></dl>
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC304" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC380" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>abril, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

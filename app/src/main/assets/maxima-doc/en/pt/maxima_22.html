@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Janeiro, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Maxima 5.35.71.g68475e4: 22. Equações Diferenciais</title>
+
+<meta name="description" content="Manual do Maxima 5.35.71.g68475e4: 22. Equações Diferenciais">
+<meta name="keywords" content="Manual do Maxima 5.35.71.g68475e4: 22. Equações Diferenciais">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Equa_00e7_00f5es-Diferenciais"></a>
+<a name="SEC70"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_21.html#SEC69" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC71" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_21.html#SEC68" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_23.html#SEC73" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 22. Equações Diferenciais </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC71">22.1 Introdução às Equações Diferenciais</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC72">22.2 Definições para Equações Diferenciais</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Introdu_00e7_00e3o-_00e0s-Equa_00e7_00f5es-Diferenciais"></a>
+<a name="SEC71"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC70" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC72" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC70" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC70" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_23.html#SEC73" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 22.1 Introdução às Equações Diferenciais </h2>
+
+<p>Esta secção descreve as funções disponíveis no
+Maxima para obter a solução analítica de alguns
+tipos específicos de equações diferencias de
+primeira e segunda ordem. Para obter a solução numérica dum
+sistema de equações diferenciais, consulte o pacote adicional
+<code>dynamics</code>. Para obter representações gráficas no
+espaço de fase, consulte o pacote adicional <code>plotdf</code>.
+</p>
+<hr size="6">
+<a name="Defini_00e7_00f5es-para-Equa_00e7_00f5es-Diferenciais"></a>
+<a name="SEC72"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC71" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_23.html#SEC73" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC70" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC70" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_23.html#SEC73" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 22.2 Definições para Equações Diferenciais </h2>
+
+
+<dl>
+<dt><u>Função:</u> <b>bc2</b><i> (<var>solução</var>, <var>xval1</var>, <var>yval1</var>, <var>xval2</var>, <var>yval2</var>)</i>
+<a name="IDX688"></a>
+</dt>
+<dd><p>Resolve um problema de valores fronteira para uma equação
+diferencial de segunda ordem.  Aqui: <var>solução</var> é
+uma solução geral para a equação,
+calculada por <code>ode2</code>; <var>xval1</var> define o valor da variável
+independente, num primeiro ponto, na forma <code><var>x</var> = <var>x1</var></code>, e
+<var>yval1</var> define o valor da variável dependente, no mesmo ponto, na
+forma <code><var>y</var> = <var>y1</var></code>. As expressões <var>xval2</var> e
+<var>yval2</var> definem os valores das mesmas variáveis, num segundo
+ponto, usando a mesma forma.
+</p>
+<p>Veja um exemplo da sua utilização na documentação de
+<code>ode2</code>.
+</p>
+</dd></dl>
+
+
+<dl>
+<dt><u>Função:</u> <b>desolve</b><i> (<var>eqn</var>, <var>x</var>)</i>
+<a name="IDX689"></a>
+</dt>
+<dt><u>Função:</u> <b>desolve</b><i> ([<var>eqn_1</var>, ..., <var>eqn_n</var>], [<var>x_1</var>, ..., <var>x_n</var>])</i>
+<a name="IDX690"></a>
+</dt>
+<dd><p>A função <code>dsolve</code> resolve sistemas de
+equações diferenciais ordinárias lineares usando transformada de
+Laplace. Aqui as expressões <var>eqn</var> são equações
+diferenciais nas variáveis dependentes <var>x_1</var>, ..., <var>x_n</var>.  A
+relação funcional de <var>x_1</var>, ..., <var>x_n</var> na variável
+independente deve ser indicada explicitamente nas variáveis e nas suas
+derivadas. Por exemplo, esta forma de definir as equações não
+seria correcta:
+</p>
+<pre class="example">eqn_1: 'diff(f,x,2) = sin(x) + 'diff(g,x);
+eqn_2: 'diff(f,x) + x^2 - f = 2*'diff(g,x,2);
+</pre>
+<p>A forma correcta seria:
+</p>
+<pre class="example">eqn_1: 'diff(f(x),x,2) = sin(x) + 'diff(g(x),x);
+eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
+</pre>
+<p>Assim, a chamada à função <code>desolve</code> seria:
+</p><pre class="example">desolve([eqn_1, eqn_2], [f(x),g(x)]);
+</pre>
+<p>Se as condições iniciais em <code>x=0</code> forem conhecidas, poderão
+ser fornecidas antes de usar <code>desolve</code>, através de
+<code>atvalue</code>.
+</p>
+<pre class="example">(%i1) <b><tt>'diff(f(x),x)='diff(g(x),x)+sin(x);</tt></b>
+                 d           d
+(%o1)            -- (f(x)) = -- (g(x)) + sin(x)
+                 dx          dx
+(%i2) <b><tt>'diff(g(x),x,2)='diff(f(x),x)-cos(x);</tt></b>
+                  2
+                 d            d
+(%o2)            --- (g(x)) = -- (f(x)) - cos(x)
+                   2          dx
+                 dx
+(%i3) <b><tt>atvalue('diff(g(x),x),x=0,a);</tt></b>
+(%o3)                           a
+(%i4) <b><tt>atvalue(f(x),x=0,1);</tt></b>
+(%o4)                           1
+(%i5) <b><tt>desolve([%o1,%o2],[f(x),g(x)]);</tt></b>
+                  x
+(%o5) [f(x) = a %e  - a + 1, g(x) = 
+
+                                                x
+                                   cos(x) + a %e  - a + g(0) - 1]
+(%i6) <b><tt>[%o1,%o2],%o5,diff;</tt></b>
+             x       x      x                x
+(%o6)   [a %e  = a %e , a %e  - cos(x) = a %e  - cos(x)]
+
+</pre>
+<p>Se <code>desolve</code> não pode obter uma solução, retorna <code>false</code>.
+</p>
+</dd></dl>
+
+
+<dl>
+<dt><u>Função:</u> <b>ic1</b><i> (<var>solução</var>, <var>xval</var>, <var>yval</var>)</i>
+<a name="IDX691"></a>
+</dt>
+<dd><p>Resolve problemas de valor inicial para equações diferenciais de
+primeira ordem.  Aqui <var>solução</var> é uma solução geral
+para a equação, na forma dada por <code>ode2</code>, <var>xval</var> dá um
+valor inicial para a variável independente, na forma <code><var>x</var> =
+<var>x0</var></code>, e <var>yval</var> dá o valor inicial para a variável
+dependente, na forma <code><var>y</var> = <var>y0</var></code>.
+</p>
+<p>Veja um exemplo da sua utilização na documentação de
+<code>ode2</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>ic2</b><i> (<var>solução</var>, <var>xval</var>, <var>yval</var>, <var>dval</var>)</i>
+<a name="IDX692"></a>
+</dt>
+<dd><p>Resolve problemas de valores iniciais para equações diferenciais
+de segunda ordem. Aqui <var>solução</var> é uma solução geral
+para a equação, na forma dada por <code>ode2</code>, <var>xval</var> dá um
+valor inicial para a variável independente, na forma <code><var>x</var> =
+<var>x0</var></code>, <var>yval</var> dá o valor inicial para a variável dependente,
+na forma <code><var>y</var> = <var>y0</var></code> e <var>dval</var> dá o valor inicial
+para a primeira derivada da variável dependente, em função da
+variável independente, na forma <code>diff(<var>y</var>,<var>x</var>) =
+<var>dy0</var></code> (<code>diff</code> não tem que ser precedido por apóstrofo).
+</p>
+<p>Veja um exemplo da sua utilização na documentação de
+<code>ode2</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>ode2</b><i> (<var>eqn</var>, <var>dvar</var>, <var>ivar</var>)</i>
+<a name="IDX693"></a>
+</dt>
+<dd><p>A função <code>ode2</code> resolve uma equação diferencial
+ordinária (EDO) de primeira ou de segunda ordem.  Precisa de três
+argumentos: uma EDO dada por <var>eqn</var>, a variável dependente
+<var>dvar</var>, e a variável independente <var>ivar</var>.  Quando conseguir,
+retorna uma solução para a variável dependente, na forma
+explícita ou implícita. <code>%c</code> é usado
+para representar a constante de integração no caso de
+equações de primeira ordem, e <code>%k1</code> e <code>%k2</code> as
+constantes para equações de segunda ordem. A dependência da
+variável dependente na variável independente não tem que ser
+escrita em forma explícita, como no caso de
+<code>desolve</code>, mas a variável independente deverá ser indicada
+sempre no terceiro argumento.
+</p>
+<p>Se por alguma razão <code>ode2</code> não conseguir encontrar a
+solução, retornará <code>false</code>, após talvez mostrar uma
+mensagem de erro. Os métodos implementados para equações
+diferenciais de primeira ordem, na ordem em que serão testados, são:
+linear, separável, exacta - talvez requerendo um factor de
+integração, homogénea, equação de Bernoulli, homogénea
+generalizada. Os tipos de equações de segunda ordem que podem ser
+resolvidas são: coeficientes constantes, exactas, linear homogéneas
+com coeficientes não-constantes que possam ser transformados para
+constates, equação de Euler ou equi-dimensional, equações que
+possam ser resolvidas pelo método de variação dos parâmetros,
+e equações que não dependam ou da variável independente ou da
+variável dependente de modo que possam ser reduzidas a duas
+equações lineares de primeira ordem a serem resolvidas
+sequêncialmente.
+</p>
+<p>Durante o processo de resolução da EDO, serão dados valores a
+várias variáveis locais, com fins puramente informativos:
+<code>método</code> denota o método de solução usado (por exemplo,
+<code>linear</code>), <code>intfactor</code> denota qualquer factor integrante
+utilizado, <code>odeindex</code> denota o índice para o método
+de Bernoulli ou para o método homogéneo generalizado, e <code>yp</code>
+denota a solução particular no método de variação dos
+parâmetros.
+</p>
+<p>Para resolver problemas de valores iniciais (PVI) estão
+dispon&iacute;veis as funções <code>ic1</code> e <code>ic2</code>e, para
+equações de primeira e segunda ordem, e para resolver problemas de
+valores fronteira (PVF) de segunda ordem pode usar-se a função
+<code>bc2</code>.
+</p>
+<p>Exemplo:
+</p>
+<pre class="example">(%i1) <b><tt>x^2*'diff(y,x) + 3*y*x = sin(x)/x;</tt></b>
+                      2 dy           sin(x)
+(%o1)                x  -- + 3 x y = ------
+                        dx             x
+(%i2) <b><tt>ode2(%,y,x);</tt></b>
+                             %c - cos(x)
+(%o2)                    y = -----------
+                                  3
+                                 x
+(%i3) <b><tt>ic1(%o2,x=%pi,y=0);</tt></b>
+                              cos(x) + 1
+(%o3)                   y = - ----------
+                                   3
+                                  x
+(%i4) <b><tt>'diff(y,x,2) + y*'diff(y,x)^3 = 0;</tt></b>
+                         2
+                        d y      dy 3
+(%o4)                   --- + y (--)  = 0
+                          2      dx
+                        dx
+(%i5) <b><tt>ode2(%,y,x);</tt></b>
+                      3
+                     y  + 6 %k1 y
+(%o5)                ------------ = x + %k2
+                          6
+(%i6) <b><tt>ratsimp(ic2(%o5,x=0,y=0,'diff(y,x)=2));</tt></b>
+                             3
+                          2 y  - 3 y
+(%o6)                   - ---------- = x
+                              6
+(%i7) <b><tt>bc2(%o5,x=0,y=1,x=1,y=3);</tt></b>
+                         3
+                        y  - 10 y       3
+(%o7)                   --------- = x - -
+                            6           2
+
+</pre>
+</dd></dl>
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC70" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_23.html#SEC73" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>Janeiro, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,1957 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Janeiro, 9 2015 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Maxima 5.35.71.g68475e4: 39. Definição de Função</title>
+
+<meta name="description" content="Manual do Maxima 5.35.71.g68475e4: 39. Definição de Função">
+<meta name="keywords" content="Manual do Maxima 5.35.71.g68475e4: 39. Definição de Função">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+body {color: black; background: white;  margin-left: 8%; margin-right: 13%;
+      font-family: "FreeSans", sans-serif}
+h1 {font-size: 150%; font-family: "FreeSans", sans-serif}
+h2 {font-size: 125%; font-family: "FreeSans", sans-serif}
+h3 {font-size: 100%; font-family: "FreeSans", sans-serif}
+a[href] {color: rgb(0,0,255); text-decoration: none;}
+a[href]:hover {background: rgb(220,220,220);}
+div.textbox {border: solid; border-width: thin; padding-top: 1em;
+    padding-bottom: 1em; padding-left: 2em; padding-right: 2em}
+div.titlebox {border: none; padding-top: 1em; padding-bottom: 1em;
+    padding-left: 2em; padding-right: 2em; background: rgb(200,255,255);
+    font-family: sans-serif}
+div.synopsisbox {
+    border: none; padding-top: 1em; padding-bottom: 1em; padding-left: 2em;
+    padding-right: 2em; background: rgb(255,220,255);}
+pre.example {border: 1px solid rgb(180,180,180); padding-top: 1em;
+    padding-bottom: 1em; padding-left: 1em; padding-right: 1em;
+    background-color: rgb(238,238,255)}
+div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
+div.image {margin: 0; padding: 1em; text-align: center}
+div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
+    padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
+
+-->
+</style>
+
+<link rel="icon" href="../figures/favicon.ico"/>
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="Defini_00e7_00e3o-de-Fun_00e7_00e3o"></a>
+<a name="SEC155"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="maxima_38.html#SEC154" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC156" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_38.html#SEC148" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 39. Definição de Função </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC156">39.1 Introdução a Definição de Função</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC157">39.2 Função</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC160">39.3 Macros</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC161">39.4 Definições para Definição de Função</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Introdu_00e7_00e3o-a-Defini_00e7_00e3o-de-Fun_00e7_00e3o"></a>
+<a name="SEC156"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC155" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC157" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 39.1 Introdução a Definição de Função </h2>
+
+<hr size="6">
+<a name="Fun_00e7_00e3o"></a>
+<a name="SEC157"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC156" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC158" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 39.2 Função </h2>
+<hr size="6">
+<a name="SEC158"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC157" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC159" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC157" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 39.2.1 Ordinary functions </h3>
+
+<p>Para definir uma função no Maxima usa-se o operador :=.
+Por exemplo,
+</p>
+<pre class="example">f(x) := sin(x)
+</pre>
+
+<p>define uma função <code>f</code>.
+Funções an&ocirc;nimas podem também serem criadas usando <code>lambda</code>.
+Por exemplo
+</p>
+<pre class="example">lambda ([i, j], ...)
+</pre>
+
+<p>pode ser usada em lugar de <code>f</code>
+onde
+</p>
+<pre class="example">f(i,j) := block ([], ...);
+map (lambda ([i], i+1), l)
+</pre>
+
+<p>retornará uma lista com 1 adicionado a cada termo.
+</p>
+<p>Pode também definir uma função com um número
+variável de argumentos, usando um argumento final que seja uma lista,
+na qual serão inseridos todos os argumentos adicionais:
+</p>
+<pre class="example">(%i1) f ([u]) := u;
+(%o1)                      f([u]) := u
+(%i2) f (1, 2, 3, 4);
+(%o2)                     [1, 2, 3, 4]
+(%i3) f (a, b, [u]) := [a, b, u];
+(%o3)               f(a, b, [u]) := [a, b, u]
+(%i4) f (1, 2, 3, 4, 5, 6);
+(%o4)                 [1, 2, [3, 4, 5, 6]]
+</pre>
+<p>O lado direito na definição de uma
+função é uma expressão. Assim, quando quiser que a
+definição seja uma sequência de expressões, poderá
+usar a forma
+</p><pre class="example">f(x) := (expr1, expr2, ...., exprn);
+</pre>
+<p>e o valor de <var>exprn</var> é que é retornado pela função.
+</p>
+<p>Se quiser introduzir um ponto de <code>retorno</code> em alguma expressão dentro da
+função, deverá usar <code>block</code> e <code>return</code>.
+</p>
+<pre class="example">block ([], expr1, ..., if (a &gt; 10) then return(a), ..., exprn)
+</pre>
+<p>é em si mesma uma expressão, e então poderá ocupar o lugar do
+lado direito de uma definição de função.  Aqui pode acontecer
+que o retorno aconteça mais facilmente que no exemplo anterior a essa última expressão.
+</p>
+<p>O primeiro <code>[]</code> no bloco, pode conter uma lista de variáveis e
+atribuições de variáveis, tais como <code>[a: 3, b, c:
+[]]</code>, que farão com que as três variáveis <code>a</code>,<code>b</code>,e
+<code>c</code> não se refiram a seus valores globais, mas ao contrário
+tenham esses valores especiais enquanto o código estiver executando a
+parte dentro do bloco <code>block</code>, ou dentro da funções
+chamadas de dentro do bloco <code>block</code>.  Isso é chamado
+associação <i>dynamic</i>, uma vez que as variáveis
+permanecem do início do bloco pelo tempo que ele
+existir. Quando regressar do bloco <code>block</code>, ou o descartar, os
+valores antigos (quaisquer que sejam) das variáveis serão
+restaurados.  É certamente uma boa idéia para proteger as suas
+variáveis nesse caminho.  Note que as atribuições em
+variáveis do bloco, são realizadas em paralelo.  Isso
+significa, que se tivesse usado <code>c: a</code> acima, o valor de <code>c</code>
+seria o valor que <code>a</code> tinha antes do bloco, antes de ter obtido o
+seu novo valor atribuído no bloco.  Dessa forma fazendo alguma
+coisa como
+</p>
+<pre class="example">block ([a: a], expr1, ...  a: a+3, ..., exprn)
+</pre>
+<p>protegerá o valor externo de <code>a</code> de ser alterado, mas impedirá
+aceder ao valor antigo. Assim, o lado direito de
+atribuições, é avaliado no contexto inserido, antes
+que qualquer avaliação ocorra.  Usando apenas
+<code>block ([x], ...</code> faremos com que o <code>x</code> tenho como valor a si
+próprio; esse é o mesmo valor que teria no início de
+uma sessão do <b>Maxima</b>.
+</p>
+<p>Os actuais argumentos para uma função são tratados exactamente da mesma que
+as variáveis em um bloco.  Dessa forma em
+</p>
+<pre class="example">f(x) := (expr1, ..., exprn);
+</pre>
+<p>e
+</p>
+<pre class="example">f(1);
+</pre>
+<p>teremos um contexto similar para avaliação de expressões
+como se tivéssemos concluído
+</p>
+<pre class="example">block ([x: 1], expr1, ..., exprn)
+</pre>
+<p>Dentro de funções, quando o lado direito de uma definição,
+pode ser calculado em tempo de execução, isso é úti para usar <code>define</code> e
+possivelmente <code>buildq</code>.  
+</p>
+<hr size="6">
+<a name="SEC159"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC158" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC160" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC157" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 39.2.2 Função de Array </h3>
+
+<p>Uma função de Array armazena o valor da função na primeira vez que ela for chamada com um argumento dado,
+e retorna o valor armazenado, sem recalcular esse valor, quando o mesmo argumento for fornecido.
+De modo que uma função é muitas vezes chamada uma <i>função de memorização</i>.
+</p>
+<p>Nomes de funções de Array são anexados ao final da lista global <code>arrays</code>
+(não na lista global <code>functions</code>).
+O comando <code>arrayinfo</code> retorna a lista de argumentos para os quais exite valores armazenados,
+e <code>listarray</code> retorna os valores armazenados. 
+Os comandos <code>dispfun</code> e <code>fundef</code> retornam a definição da função de array.
+</p>
+<p>O comando <code>arraymake</code> contrói uma chamada de função de array,
+análogamente a <code>funmake</code> para funções comuns.
+O comando <code>arrayapply</code> aplica uma função de array a seus argmentos,
+análogamente a <code>apply</code> para funções comuns.
+Não existe nada exactamente análogo a <code>map</code> para funções de array,
+embora <code>map(lambda([<var>x</var>], <var>a</var>[<var>x</var>]), <var>L</var>)</code> ou
+<code>makelist(<var>a</var>[<var>x</var>], <var>x</var>, <var>L</var>)</code>, onde <var>L</var> é uma lista,
+não estejam tão longe disso.
+</p>
+<p>O comando <code>remarray</code> remove uma definição de função de array (incluindo qualquer valor armazenado pela função removida),
+análogo a <code>remfunction</code> para funções comuns.
+</p>
+<p>o comando <code>kill(<var>a</var>[<var>x</var>])</code> remove o valor da função de array <var>a</var>
+armazenado para o argumento <var>x</var>;
+a próxima vez que <var>a</var> foor chamada com o argumento <var>x</var>,
+o valor da função é recomputado.
+Todavia, não exite caminho para remover todos os valores armazenados de uma vez,
+excepto para <code>kill(<var>a</var>)</code> ou <code>remarray(<var>a</var>)</code>,
+o qual remove também remove a definição da função de array.
+</p>
+<hr size="6">
+<a name="Macros"></a>
+<a name="SEC160"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC159" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC161" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 39.3 Macros </h2>
+
+<dl>
+<dt><u>Função:</u> <b>buildq</b><i> (<var>L</var>, <var>expr</var>)</i>
+<a name="IDX1289"></a>
+</dt>
+<dd><p>Substitue variáveis nomeadas pela lista <var>L</var> dentro da expressão <var>expr</var>,
+paralelamente,
+sem avaliar <var>expr</var>.
+A expressão resultante é simplificada,
+mas não avaliada,
+após <code>buildq</code> realizar a substituição.
+</p>
+<p>Os elementos de <var>L</var> são símbolos ou expressões de atribuição <code><var>símbolo</var>: <var>valor</var></code>,
+avaliadas paralelamente.
+Isto é, a associação de uma variável sobre o lado direito de uma atribuição
+é a associação daquela variável no contexto do qual <code>buildq</code> for chamada,
+não a associação daquela variável na lista <var>L</var> de variáveis.
+Se alguma variável em <var>L</var> não dada como uma atribuição explícita,
+sua associação em <code>buildq</code> é a mesma que no contexto no qual <code>buildq</code> for chamada.
+</p>
+<p>Então as variáveis nomeadas em <var>L</var> são substituidas em <var>expr</var> paralelamente.
+Isto é, a substituição para cada variável é determinada antes que qualquer substituição seja feita,
+então a substituição para uma variável não tem efeito sobre qualquer outra.
+</p>
+<p>Se qualquer variável <var>x</var> aparecer como <code>splice (<var>x</var>)</code> em <var>expr</var>,
+então <var>x</var> deve estar associada para uma lista,
+e a lista recebe uma aplicação da função <code>splice</code> (é interpolada) na <var>expr</var> em lugar de substituída.
+</p>
+<p>Quaisquer variáveis em <var>expr</var> não aparecendo em <var>L</var> são levados no resultado tal como foram escritos,
+mesmo se elas tiverem associações no contexto do qual <code>buildq</code> tiver sido chamada.
+</p>
+<p>Exemplos
+</p>
+<p><code>a</code> é explicitamente associada a <code>x</code>,
+enquanto <code>b</code> tem a mesma associação (nomeadamente 29) como no contexto chamado,
+e <code>c</code> é levada do começo ao fim da forma como foi escrita.
+A expressão resultante não é avaliada até a avaliação explícita ( com duplo apóstrofo - não com aspas - <code>''%</code>.
+</p>
+<pre class="example">(%i1) (a: 17, b: 29, c: 1729)$
+(%i2) buildq ([a: x, b], a + b + c);
+(%o2)                      x + c + 29
+(%i3) ''%;
+(%o3)                       x + 1758
+</pre>
+<p><code>e</code> está associado a uma lista, a qual aparece também como tal nos argumentos de <code>foo</code>,
+e interpolada nos argumentos de <code>bar</code>.
+</p>
+<pre class="example">(%i1) buildq ([e: [a, b, c]], foo (x, e, y));
+(%o1)                 foo(x, [a, b, c], y)
+(%i2) buildq ([e: [a, b, c]], bar (x, splice (e), y));
+(%o2)                  bar(x, a, b, c, y)
+</pre>
+<p>O resultado é simplificado após substituição.
+Se a simplificação for aplicada antes da substituição, esses dois resultados podem ser iguais.
+</p><pre class="example">(%i1) buildq ([e: [a, b, c]], splice (e) + splice (e));
+(%o1)                    2 c + 2 b + 2 a
+(%i2) buildq ([e: [a, b, c]], 2 * splice (e));
+(%o2)                        2 a b c
+</pre>
+<p>As variáveis em <var>L</var> são associadas em paralelo; se associadas sequêncialmente,
+o primeiro resultado pode ser <code>foo (b, b)</code>.
+Substituições são realizadas em paralelo;
+compare o segundo resultado com o resultado de <code>subst</code>,
+que realiza substituições sequêncialmente.
+</p>
+<pre class="example">(%i1) buildq ([a: b, b: a], foo (a, b));
+(%o1)                       foo(b, a)
+(%i2) buildq ([u: v, v: w, w: x, x: y, y: z, z: u], bar (u, v, w, x, y, z));
+(%o2)                 bar(v, w, x, y, z, u)
+(%i3) subst ([u=v, v=w, w=x, x=y, y=z, z=u], bar (u, v, w, x, y, z));
+(%o3)                 bar(u, u, u, u, u, u)
+</pre>
+<p>Constrói uma lista de euqções com algumas variáveis ou expressões sobre o lado esquerdo
+e seus valores sobre o lado direito.
+<code>macroexpand</code> mostra a expressão retornada por <code>show_values</code>.
+</p>
+<pre class="example">(%i1) show_values ([L]) ::= buildq ([L], map (&quot;=&quot;, 'L, L));
+(%o1)   show_values([L]) ::= buildq([L], map(&quot;=&quot;, 'L, L))
+(%i2) (a: 17, b: 29, c: 1729)$
+(%i3) show_values (a, b, c - a - b);
+(%o3)              [a = 17, b = 29, c = 1729]
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>macroexpand</b><i> (<var>expr</var>)</i>
+<a name="IDX1290"></a>
+</dt>
+<dd><p>Retorna a expansão da macro de <var>expr</var> sem avaliar a expressão,
+quando <code>expr</code> for uma chamada de função de macro.
+De outra forma, <code>macroexpand</code> retorna <var>expr</var>.
+</p>
+<p>Se a expansão de <var>expr</var> retorna outra chamada de função de macro,
+aquela chamada de função de macro é também expandida.
+</p>
+<p><code>macroexpand</code> coloca apóstrofo em seus argumentos, isto é, não os avalia.
+Todavia, se a expansão de uma chamada de função de macro tiver algum efeito,
+esse efeito colateral é executado.
+</p>
+<p>Veja também <code>::=</code>, <code>macros</code>, e <code>macroexpand1</code>.
+</p>
+<p>Exemplos
+</p>
+<pre class="example">(%i1) g (x) ::= x / 99;
+                                    x
+(%o1)                      g(x) ::= --
+                                    99
+(%i2) h (x) ::= buildq ([x], g (x - a));
+(%o2)            h(x) ::= buildq([x], g(x - a))
+(%i3) a: 1234;
+(%o3)                         1234
+(%i4) macroexpand (h (y));
+                              y - a
+(%o4)                         -----
+                               99
+(%i5) h (y);
+                            y - 1234
+(%o5)                       --------
+                               99
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>macroexpand1</b><i> (<var>expr</var>)</i>
+<a name="IDX1291"></a>
+</dt>
+<dd><p>Retorna a expansão de macro de <var>expr</var> sem avaliar a expressão,
+quando <code>expr</code> for uma chamada de função de macro.
+De outra forma, <code>macroexpand1</code> retorna <var>expr</var>.
+</p>
+<p><code>macroexpand1</code> não avalia seus argumentos.
+Todavia, se a expansão de uma chamada de função de macro tiver algum efeito,
+esse efeito colateral é executado.
+</p>
+<p>Se a expansão de <var>expr</var> retornar outra chamada de função de macro,
+aquela chamada de função de macro não é expandida.
+</p>
+<p>Veja também <code>::=</code>, <code>macros</code>, e <code>macroexpand</code>.
+</p>
+<p>Examples
+</p>
+<pre class="example">(%i1) g (x) ::= x / 99;
+                                    x
+(%o1)                      g(x) ::= --
+                                    99
+(%i2) h (x) ::= buildq ([x], g (x - a));
+(%o2)            h(x) ::= buildq([x], g(x - a))
+(%i3) a: 1234;
+(%o3)                         1234
+(%i4) macroexpand1 (h (y));
+(%o4)                       g(y - a)
+(%i5) h (y);
+                            y - 1234
+(%o5)                       --------
+                               99
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Global variable:</u> <b>macros</b>
+<a name="IDX1292"></a>
+</dt>
+<dd><p>Default value: <code>[]</code>
+</p>
+<p><code>macros</code> é a lista de funções de macro definidas pelo utilizador.
+O operador de definição de função de macro <code>::=</code> coloca uma nova função de macro nessa lista,
+e <code>kill</code>, <code>remove</code>, e <code>remfunction</code> removem funções de macro da lista.
+</p>
+<p>Veja também <code>infolists</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>splice</b><i> (<var>a</var>)</i>
+<a name="IDX1293"></a>
+</dt>
+<dd><p>Une como se fosse um elo de ligação (interpola) a lista nomeada através do átomo <var>a</var> em uma expressão,
+mas somente se <code>splice</code> aparecer dentro de <code>buildq</code>;
+de outra forma, <code>splice</code> é tratada como uma função indefinida.
+Se aparecer dentro de <code>buildq</code> com <var>a</var> sozinho (sem <code>splice</code>),
+<var>a</var> é substituido (não interpolado) como uma lista no resultado.
+O argumento de <code>splice</code> pode somente ser um átomo;
+não pode ser uma lista lateral ou uma expressão que retorna uma lista.
+</p>
+<p>Tipicamente <code>splice</code> fornece os argumentos para uma função ou operador.
+Para uma função <code>f</code>, a expressão <code>f (splice (<var>a</var>))</code> dentro de <code>buildq</code>
+expande para <code>f (<var>a</var>[1], <var>a</var>[2], <var>a</var>[3], ...)</code>.
+Para um operador <code>o</code>, a expressão <code>&quot;o&quot; (splice (<var>a</var>)</code> dentro de <code>buildq</code>
+expande para <code>&quot;o&quot; (<var>a</var>[1], <var>a</var>[2], <var>a</var>[3], ...)</code>,
+onde <code>o</code> pode ser qualquer tipo de operador (tipicamente um que toma múltiplos argumentos).
+Note que o operador deve ser contido dentro de aspas duplas <code>&quot;</code>.
+</p>
+<p>Exemplos
+</p>
+<pre class="example">(%i1) buildq ([x: [1, %pi, z - y]], foo (splice (x)) / length (x));
+                       foo(1, %pi, z - y)
+(%o1)                -----------------------
+                     length([1, %pi, z - y])
+(%i2) buildq ([x: [1, %pi]], &quot;/&quot; (splice (x)));
+                                1
+(%o2)                          ---
+                               %pi
+(%i3) matchfix (&quot;&lt;&gt;&quot;, &quot;&lt;&gt;&quot;);
+(%o3)                          &lt;&gt;
+(%i4) buildq ([x: [1, %pi, z - y]], &quot;&lt;&gt;&quot; (splice (x)));
+(%o4)                   &lt;&gt;1, %pi, z - y&lt;&gt;
+</pre>
+</dd></dl>
+
+<hr size="6">
+<a name="Defini_00e7_00f5es-para-Defini_00e7_00e3o-de-Fun_00e7_00e3o"></a>
+<a name="SEC161"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC160" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC155" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 39.4 Definições para Definição de Função </h2>
+
+<dl>
+<dt><u>Função:</u> <b>apply</b><i> (<var>F</var>, [<var>x_1</var>, ..., <var>x_n</var>])</i>
+<a name="IDX1294"></a>
+</dt>
+<dd><p>Constrói e avalia uma expressãp <code><var>F</var>(<var>arg_1</var>, ..., <var>arg_n</var>)</code>.
+</p>
+<p><code>apply</code> não tenta distinguir funções de array de funções comuns;
+quando <var>F</var> for o nome de uma função de array,
+<code>apply</code> avalia <code><var>F</var>(...)</code>
+(isto é, uma chamada de função com parêntesis em lugar de colchêtes).
+<code>arrayapply</code> avalia uma chamada de função com colchêtes nesse caso.
+</p>
+<p>Exemplos:
+</p>
+<p><code>apply</code> avalia seus argumentos.
+Nesse exemplo, <code>min</code> é aplicado a <code>L</code>.
+</p>
+<pre class="example">(%i1) L : [1, 5, -10.2, 4, 3];
+(%o1)                 [1, 5, - 10.2, 4, 3]
+(%i2) apply (min, L);
+(%o2)                        - 10.2
+</pre>
+<p><code>apply</code> avalia argumentos, mesmo se a função <var>F</var> disser que os argumentos não devem ser avaliados.
+</p>
+<pre class="example">(%i1) F (x) := x / 1729;
+                                   x
+(%o1)                     F(x) := ----
+                                  1729
+(%i2) fname : F;
+(%o2)                           F
+(%i3) dispfun (F);
+                                   x
+(%t3)                     F(x) := ----
+                                  1729
+
+(%o3)                         [%t3]
+(%i4) dispfun (fname);
+fname is not the name of a user function.
+ -- an error.  Quitting.  To debug this try debugmode(true);
+(%i5) apply (dispfun, [fname]);
+                                   x
+(%t5)                     F(x) := ----
+                                  1729
+
+(%o5)                         [%t5]
+</pre>
+<p><code>apply</code> avalia o nome de função <var>F</var>.
+Apóstrofo <code>'</code> evita avaliação.
+<code>demoivre</code> é o nome de uma variável global e também de uma função.
+</p>
+<pre class="example">(%i1) demoivre;
+(%o1)                         false
+(%i2) demoivre (exp (%i * x));
+(%o2)                  %i sin(x) + cos(x)
+(%i3) apply (demoivre, [exp (%i * x)]);
+demoivre evaluates to false
+Improper name or value in functional position.
+ -- an error.  Quitting.  To debug this try debugmode(true);
+(%i4) apply ('demoivre, [exp (%i * x)]);
+(%o4)                  %i sin(x) + cos(x)
+</pre>
+</dd></dl>
+
+
+<dl>
+<dt><u>Função:</u> <b>block</b><i> ([<var>v_1</var>, ..., <var>v_m</var>], <var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX1295"></a>
+</dt>
+<dt><u>Função:</u> <b>block</b><i> (<var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX1296"></a>
+</dt>
+<dd><p><code>block</code> avalia <var>expr_1</var>, ..., <var>expr_n</var> em sequência
+e retorna o valor da última expressão avaliada.
+A sequência pode ser modificada pelas funções <code>go</code>, <code>throw</code>, e <code>return</code>.
+A última expressão é <var>expr_n</var> a menos que <code>return</code> ou uma expressão contendo <code>throw</code>
+seja avaliada.
+Algumas variáveis <var>v_1</var>, ..., <var>v_m</var> podem ser declaradas locais para o bloco;
+essas são distinguidas das variáveis globais dos mesmos nomes.
+Se variáveis não forem declaradas locais então a lista pode ser omitida.
+Dentro do bloco,
+qualquer variável que não <var>v_1</var>, ..., <var>v_m</var> é uma variável global.
+</p>
+<p><code>block</code> salva os valores correntes das variáveis <var>v_1</var>, ..., <var>v_m</var> (quaisquer valores)
+na hora da entrada para o bloco,
+então libera as variáveis dessa forma eles avaliam para si mesmos.
+As variáveis locais podem ser associadas a valores arbitrários dentro do bloco mas quando o
+bloco é encerrado o valores salvos são restaurados,
+e os valores atribuídos dentro do bloco são perdidos.
+</p>
+<p><code>block</code> pode aparecer dentro de outro <code>block</code>.
+Variáveis locais são estabelecidas cada vez que um novo <code>block</code> é avaliado.
+Variáveis locais parecem ser globais para quaisquer blocos fechados.
+Se uma variável é não local em um bloco,
+seu valor é o valor mais recentemente atribuído por um bloco fechado, quaisquer que sejam,
+de outra forma, seu valor é o valor da variável no ambiente global.
+Essa política pode coincidir com o entendimento usual de &quot;escopo dinâmico&quot;.
+</p>
+<p>Se isso for desejado para salvar e restaurar outras propriedades locais
+ao lado de <code>value</code>, por exemplo <code>array</code> (excepto para arrays completos),
+<code>function</code>, <code>dependencies</code>, <code>atvalue</code>, <code>matchdeclare</code>, <code>atomgrad</code>, <code>constant</code>, e
+<code>nonscalar</code> então a função <code>local</code> pode ser usada dentro do bloco
+com argumentos sendo o nome das variáveis.
+</p>
+<p>O valor do bloco é o valor da última declaração ou o
+valor do argumento para a função <code>return</code> que pode ser usada para sair
+explicitamente do bloco.  A função <code>go</code> pode ser usada para transferir o
+controle para a declaração do bloco que é identificada com o argumento
+para <code>go</code>.  Para identificar uma declaração, coloca-se antes dela um argumento at&ocirc;mico como
+outra declaração no bloco.  Por exemplo:
+<code>block ([x], x:1, loop, x: x+1, ..., go(loop), ...)</code>.  O argumento para <code>go</code> deve
+ser o nome de um identificador que aparece dentro do bloco.  Não se deve usar <code>go</code> para
+transferir para um identificador em um outro bloco a não ser esse que contém o <code>go</code>.
+</p>
+<p>Blocos tipicamente aparecem do lado direito de uma definição de função
+mas podem ser usados em outros lugares também.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>break</b><i> (<var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX1297"></a>
+</dt>
+<dd><p>Avalia e imprime <var>expr_1</var>, ..., <var>expr_n</var> e então
+causa uma parada do Maxima nesse ponto e o utilizador pode examinar e alterar
+seu ambiente.  Nessa situação digite <code>exit;</code> para que o cálculo seja retomado.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>catch</b><i> (<var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX1298"></a>
+</dt>
+<dd><p>Avalia <var>expr_1</var>, ..., <var>expr_n</var> uma por uma; se qualquer avaliação
+levar a uma avaliação de uma expressão da
+forma <code>throw (arg)</code>, então o valor de <code>catch</code> é o valor de
+<code>throw (arg)</code>, e expressões adicionais não são avaliadas.
+Esse &quot;retorno não local&quot; atravessa assim qualquer profundidade de
+aninhar para o mais próximo contendo <code>catch</code>.
+Se não existe nenhum <code>catch</code> contendo um <code>throw</code>, uma mensagem de erro é impressa.
+</p>
+<p>Se a avaliação de argumentos não leva para a avaliação de qualquer <code>throw</code>
+então o valor de <code>catch</code> é o valor de <var>expr_n</var>.
+</p>
+<pre class="example">(%i1) lambda ([x], if x &lt; 0 then throw(x) else f(x))$
+(%i2) g(l) := catch (map (''%, l))$
+(%i3) g ([1, 2, 3, 7]);
+(%o3)               [f(1), f(2), f(3), f(7)]
+(%i4) g ([1, 2, -3, 7]);
+(%o4)                          - 3
+</pre>
+<p>A função <code>g</code> retorna uma lista de <code>f</code> de cada elemento de <code>l</code> se <code>l</code>
+consiste somente de números não negativos; de outra forma, <code>g</code> &quot;captura&quot; o
+primeiro elemento negativo de <code>l</code> e &quot;arremessa-o&quot;.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>compfile</b><i> (<var>nomeficheiro</var>, <var>f_1</var>, ..., <var>f_n</var>)</i>
+<a name="IDX1299"></a>
+</dt>
+<dt><u>Função:</u> <b>compfile</b><i> (<var>nomeficheiro</var>, funções)</i>
+<a name="IDX1300"></a>
+</dt>
+<dt><u>Função:</u> <b>compfile</b><i> (<var>nomeficheiro</var>, all)</i>
+<a name="IDX1301"></a>
+</dt>
+<dd><p>Traduz fuções Maxima para Lisp 
+e escreve o código traduzido no ficheiro <var>nomeficheiro</var>.
+</p>
+<p><code>compfile(<var>nomeficheiro</var>, <var>f_1</var>, ..., <var>f_n</var>)</code> traduz as
+funções especificadas.
+<code>compfile(<var>nomeficheiro</var>, functions)</code> e <code>compfile(<var>nomeficheiro</var>, all)</code>
+traduz todas as funções definidas pelo utilizador.
+</p>
+<p>As traduções Lisp não são avaliadas, nem é o ficheiro de saída processado pelo compilador Lisp.
+<code>translate</code> cria e avalia traduções Lisp.
+<code>compile_file</code> traduz Maxima para Lisp, e então executa o compilador Lisp.  
+</p>
+<p>Veja também <code>translate</code>, <code>translate_file</code>, e <code>compile_file</code>.
+</p>
+</dd></dl>
+
+
+<dl>
+<dt><u>Função:</u> <b>compile</b><i> (<var>f_1</var>, ..., <var>f_n</var>)</i>
+<a name="IDX1302"></a>
+</dt>
+<dt><u>Função:</u> <b>compile</b><i> (funções)</i>
+<a name="IDX1303"></a>
+</dt>
+<dt><u>Função:</u> <b>compile</b><i> (all)</i>
+<a name="IDX1304"></a>
+</dt>
+<dd><p>Traduz funções Maxima <var>f_1</var>, ..., <var>f_n</var> para Lisp, avalia a tradução Lisp,
+e chama a função Lisp <code>COMPILE</code> sobre cada função traduzida.
+<code>compile</code> retorna uma lista de nomes de funções compiladas.
+</p>
+<p><code>compile (all)</code> ou <code>compile (funções)</code> compila todas as funções definidas pelo utilizador.
+</p>
+<p><code>compile</code> não avalia seus argumentos; 
+o operador apóstrofo-apóstrofo <code>''</code> faz com que ocorra avaliação sobrepondo-se ao apóstrofo.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>define</b><i> (<var>f</var>(<var>x_1</var>, ..., <var>x_n</var>), <var>expr</var>)</i>
+<a name="IDX1305"></a>
+</dt>
+<dt><u>Função:</u> <b>define</b><i> (<var>f</var>[<var>x_1</var>, ..., <var>x_n</var>], <var>expr</var>)</i>
+<a name="IDX1306"></a>
+</dt>
+<dt><u>Função:</u> <b>define</b><i> (funmake (<var>f</var>, [<var>x_1</var>, ..., <var>x_n</var>]), <var>expr</var>)</i>
+<a name="IDX1307"></a>
+</dt>
+<dt><u>Função:</u> <b>define</b><i> (arraymake (<var>f</var>, [<var>x_1</var>, ..., <var>x_n</var>]), <var>expr</var>)</i>
+<a name="IDX1308"></a>
+</dt>
+<dt><u>Função:</u> <b>define</b><i> (ev (<var>expr_1</var>), <var>expr_2</var>)</i>
+<a name="IDX1309"></a>
+</dt>
+<dd><p>Define uma função chamada <var>f</var> com argumentos <var>x_1</var>, ..., <var>x_n</var> e corpo da função <var>expr</var>.
+<code>define</code> sempre avalia seu segundo argumento (a menos que explícitamente receba um apostrofo de forma a evitar a avaliação).
+A função então definida pode ser uma função comum do Maxima (com argumentos contidos entre parêtesis)
+ou uma função de array (com argumentos contidos entre colchêtes).
+</p>
+<p>Quando o último ou único argumento da função <var>x_n</var> for uma lista de um elemento,
+a função definida por <code>define</code> aceita um número variável de argumentos.
+Os argumentos actuais são atribuídos um a um a argumentos formais <var>x_1</var>, ..., <var>x_(n - 1)</var>,
+e quaisquer argumentos adicionais actuais, se estiverem presentes, são atribuídos a <var>x_n</var> como uma lista.
+</p>
+<p>Quando o primeiro argumento de <code>define</code> for uma expressão da forma
+<code><var>f</var>(<var>x_1</var>, ..., <var>x_n</var>)</code> or <code><var>f</var>[<var>x_1</var>, ..., <var>x_n</var>]</code>,
+os argumentos são avaliados mas <var>f</var> não é avaliada,
+mesmo se já existe anteriormente uma função ou variável com aquele nome.
+Quando o primeiro argumento for uma expressão com operador <code>funmake</code>, <code>arraymake</code>, ou <code>ev</code>,
+o primeiro argumento será avaliado;
+isso permite para o nome da função seja calculado, também como o corpo.
+</p>
+<p>Todas as definições de função aparecem no mesmo nível de escopo e visibilidade;
+definindo uma função <code>f</code> dentro de outra função <code>g</code>
+não limita o escopo de <code>f</code> a <code>g</code>.
+</p>
+<p>Se algum argumento formal <var>x_k</var> for um símbolo com apóstrofo (após ter sido feita uma avaliação),
+a função definida por <code>define</code> não avalia o correspondente actual argumento.
+de outra forma todos os argumentos actuais são avaliados.
+</p>
+<p>Veja também <code>:=</code> and <code>::=</code>.
+</p>
+<p>Exemplos:
+</p>
+<p><code>define</code> sempre avalia seu segundo argumento (a menos que explícitamente receba um apostrofo de forma a evitar a avaliação).
+</p>
+<pre class="example">(%i1) expr : cos(y) - sin(x);
+(%o1)                    cos(y) - sin(x)
+(%i2) define (F1 (x, y), expr);
+(%o2)              F1(x, y) := cos(y) - sin(x)
+(%i3) F1 (a, b);
+(%o3)                    cos(b) - sin(a)
+(%i4) F2 (x, y) := expr;
+(%o4)                   F2(x, y) := expr
+(%i5) F2 (a, b);
+(%o5)                    cos(y) - sin(x)
+</pre>
+<p>A função definida por <code>define</code> pode ser uma função comum do Maxima ou uma função de array.
+</p>
+<pre class="example">(%i1) define (G1 (x, y), x.y - y.x);
+(%o1)               G1(x, y) := x . y - y . x
+(%i2) define (G2 [x, y], x.y - y.x);
+(%o2)                G2     := x . y - y . x
+                       x, y
+</pre>
+<p>Quando o último ou único argumento da função <var>x_n</var> for uma lista de um único elemento,
+a função definida por <code>define</code> aceita um número variável de argumentos.
+</p>
+<pre class="example">(%i1) define (H ([L]), '(apply (&quot;+&quot;, L)));
+(%o1)                H([L]) := apply(&quot;+&quot;, L)
+(%i2) H (a, b, c);
+(%o2)                       c + b + a
+</pre>
+<p>When the first argument is an expression with operator <code>funmake</code>, <code>arraymake</code>, or <code>ev</code>,
+the first argument is evaluated.
+</p>
+<pre class="example">(%i1) [F : I, u : x];
+(%o1)                        [I, x]
+(%i2) funmake (F, [u]);
+(%o2)                         I(x)
+(%i3) define (funmake (F, [u]), cos(u) + 1);
+(%o3)                  I(x) := cos(x) + 1
+(%i4) define (arraymake (F, [u]), cos(u) + 1);
+(%o4)                   I  := cos(x) + 1
+                         x
+(%i5) define (foo (x, y), bar (y, x));
+(%o5)                foo(x, y) := bar(y, x)
+(%i6) define (ev (foo (x, y)), sin(x) - cos(y));
+(%o6)             bar(y, x) := sin(x) - cos(y)
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>define_variable</b><i> (<var>name</var>, <var>default_value</var>, <var>mode</var>)</i>
+<a name="IDX1310"></a>
+</dt>
+<dd><p>Introduz uma variável global dentro do ambiente Maxima.
+<code>define_variable</code> é útil em pacotes escritos pelo utilizador, que são muitas vezes traduzidos ou compilados.
+</p>
+<p><code>define_variable</code> realiza os seguintes passos:
+</p>
+<ol>
+<li>
+<code>mode_declare (<var>name</var>, <var>mode</var>)</code> declara o modo de <var>name</var> para o tradutor.
+Veja <code>mode_declare</code> para uma lista dos modos possíveis.
+
+</li><li>
+Se a variável é não associada, <var>default_value</var> é atribuído para <var>name</var>.
+
+</li><li>
+<code>declare (<var>name</var>, special)</code> declara essa variável especial.
+
+</li><li>
+Associa <var>name</var> com uma função de teste
+para garantir que a <var>name</var> seja somente atribuído valores do modo declarado.
+</li></ol>
+
+
+
+<p>A propriedade <code>value_check</code> pode ser atribuída a qualquer variável que tenha sido definida
+via <code>define_variable</code> com um outro modo que não <code>any</code>.
+A propriedade <code>value_check</code> é uma expressão lambda ou o nome de uma função de uma variável,
+que é chamada quando uma tentativa é feita para atribuir um valor a uma variável.
+O argumento da  função <code>value_check</code> é o valor que será atribuído.
+</p>
+<p><code>define_variable</code> avalia <code>default_value</code>, e não avalia <code>name</code> e <code>mode</code>.
+<code>define_variable</code> retorna o valor corrente de <code>name</code>,
+que é <code>default_value</code> se <code>name</code> não tiver sido associada antes,
+e de outra forma isso é o valor prévio de <code>name</code>.
+</p>
+<p>Exemplos:
+</p>
+<p><code>foo</code> é uma variável Booleana, com o valor inicial <code>true</code>.
+</p>
+<pre class="example">(%i1) define_variable (foo, true, boolean);
+(%o1)                         true
+(%i2) foo;
+(%o2)                         true
+(%i3) foo: false;
+(%o3)                         false
+(%i4) foo: %pi;
+Error: foo was declared mode boolean, has value: %pi
+ -- an error.  Quitting.  To debug this try debugmode(true);
+(%i5) foo;
+(%o5)                         false
+</pre>
+<p><code>bar</code> é uma variável inteira, que deve ser um número primo.
+</p>
+<pre class="example">(%i1) define_variable (bar, 2, integer);
+(%o1)                           2
+(%i2) qput (bar, prime_test, value_check);
+(%o2)                      prime_test
+(%i3) prime_test (y) := if not primep(y) then error (y, &quot;is not prime.&quot;);
+(%o3) prime_test(y) := if not primep(y)
+
+                                   then error(y, &quot;is not prime.&quot;)
+(%i4) bar: 1439;
+(%o4)                         1439
+(%i5) bar: 1440;
+1440 é not prime.
+#0: prime_test(y=1440)
+ -- an error.  Quitting.  To debug this try debugmode(true);
+(%i6) bar;
+(%o6)                         1439
+</pre>
+<p><code>baz_quux</code> é uma variável que não pode receber a atribuição de um valor.
+O modo <code>any_check</code> é como <code>any</code>, 
+mas <code>any_check</code> habilita o mecanismo <code>value_check</code>, e <code>any</code> não habilita.
+</p>
+<pre class="example">(%i1) define_variable (baz_quux, 'baz_quux, any_check);
+(%o1)                       baz_quux
+(%i2) F: lambda ([y], if y # 'baz_quux then error (&quot;Cannot assign to `baz_quux'.&quot;));
+(%o2) lambda([y], if y # 'baz_quux
+
+                        then error(Cannot assign to `baz_quux'.))
+(%i3) qput (baz_quux, ''F, value_check);
+(%o3) lambda([y], if y # 'baz_quux
+
+                        then error(Cannot assign to `baz_quux'.))
+(%i4) baz_quux: 'baz_quux;
+(%o4)                       baz_quux
+(%i5) baz_quux: sqrt(2);
+Cannot assign to `baz_quux'.
+#0: lambda([y],if y # 'baz_quux then error(&quot;Cannot assign to `baz_quux'.&quot;))(y=sqrt(2))
+ -- an error.  Quitting.  To debug this try debugmode(true);
+(%i6) baz_quux;
+(%o6)                       baz_quux
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>dispfun</b><i> (<var>f_1</var>, ..., <var>f_n</var>)</i>
+<a name="IDX1311"></a>
+</dt>
+<dt><u>Função:</u> <b>dispfun</b><i> (all)</i>
+<a name="IDX1312"></a>
+</dt>
+<dd><p>Mostra a definição de funções definidas pelo utilizador <var>f_1</var>, ..., <var>f_n</var>.
+Cada argumento pode ser o nome de uma macro (definida com <code>::=</code>),
+uma função comum (definida com <code>:=</code> ou <code>define</code>),
+uma função array (definida com <code>:=</code> ou com <code>define</code>,
+mas contendo argumentos entre colchêtes <code>[ ]</code>),
+uma função subscrita, (definida com <code>:=</code> ou <code>define</code>,
+mas contendo alguns argumentos entre colchêtes e outros entre parêntesis <code>( )</code>)
+uma da família de funções subscritas seleccionadas por um valor subscrito particular,
+ou uma função subscrita definida com uma constante subscrita.
+</p>
+<p><code>dispfun (all)</code> mostra todas as funções definidas pelo utilizador como
+dadas pelas <code>functions</code>, <code>arrays</code>, e listas de <code>macros</code>,
+omitindo funções subscritas definidas com constantes subscritas.
+</p>
+<p><code>dispfun</code> cria um Rótulo de expressão intermédia
+(<code>%t1</code>, <code>%t2</code>, etc.)
+para cada função mostrada, e atribui a definição de função para o rótulo.
+Em contraste, <code>fundef</code> retorna a definição de função.
+</p>
+<p><code>dispfun</code> não avalia seus argumentos; 
+O operador apóstrofo-apóstrofo <code>''</code> faz com que ocorra avaliação.
+</p>
+<p><code>dispfun</code> retorna a lista de rótulos de expressões intermédias correspondendo às funções mostradas.
+</p>
+<p>Exemplos:
+</p>
+
+<pre class="example">(%i1) m(x, y) ::= x^(-y);
+                                     - y
+(%o1)                   m(x, y) ::= x
+(%i2) f(x, y) :=  x^(-y);
+                                     - y
+(%o2)                    f(x, y) := x
+(%i3) g[x, y] :=  x^(-y);
+                                    - y
+(%o3)                     g     := x
+                           x, y
+(%i4) h[x](y) :=  x^(-y);
+                                    - y
+(%o4)                     h (y) := x
+                           x
+(%i5) i[8](y) :=  8^(-y);
+                                    - y
+(%o5)                     i (y) := 8
+                           8
+(%i6) dispfun (m, f, g, h, h[5], h[10], i[8]);
+                                     - y
+(%t6)                   m(x, y) ::= x
+
+                                     - y
+(%t7)                    f(x, y) := x
+
+                                    - y
+(%t8)                     g     := x
+                           x, y
+
+                                    - y
+(%t9)                     h (y) := x
+                           x
+
+                                    1
+(%t10)                     h (y) := --
+                            5        y
+                                    5
+
+                                     1
+(%t11)                    h  (y) := ---
+                           10         y
+                                    10
+
+                                    - y
+(%t12)                    i (y) := 8
+                           8
+
+(%o12)       [%t6, %t7, %t8, %t9, %t10, %t11, %t12]
+(%i12) ''%;
+                     - y              - y            - y
+(%o12) [m(x, y) ::= x   , f(x, y) := x   , g     := x   , 
+                                            x, y
+                  - y           1              1             - y
+        h (y) := x   , h (y) := --, h  (y) := ---, i (y) := 8   ]
+         x              5        y   10         y   8
+                                5             10
+
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de sistema:</u> <b>functions</b>
+<a name="IDX1313"></a>
+</dt>
+<dd><p>Valor por omissão: <code>[]</code>
+</p>
+<p><code>functions</code> é uma lista de todas as funções comuns do Maxima
+na sessão corrente.
+Uma função comum é uma função construída através de
+<code>define</code> ou de <code>:=</code> e chamada com parêntesis <code>()</code>.
+Uma função pode ser definida pela linha de comando do Maxima de forma interativa com o utilizador
+ou em um ficheiro Maxima chamado por <code>load</code> ou <code>batch</code>.
+</p>
+<p>Funções de array (chamadas com colchêtes, e.g., <code>F[x]</code>)
+e funções com subscritos (chamadas com colchêtes e parêntesis, e.g., <code>F[x](y)</code>)
+são lsitados através da variável global <code>arrays</code>, e não por meio de <code>functions</code>.
+</p>
+<p>Funções Lisp não são mantidas em nenhuma lista.
+</p>
+<p>Exemplos:
+</p>
+<pre class="example">(%i1) F_1 (x) := x - 100;
+(%o1)                   F_1(x) := x - 100
+(%i2) F_2 (x, y) := x / y;
+                                      x
+(%o2)                    F_2(x, y) := -
+                                      y
+(%i3) define (F_3 (x), sqrt (x));
+(%o3)                   F_3(x) := sqrt(x)
+(%i4) G_1 [x] := x - 100;
+(%o4)                    G_1  := x - 100
+                            x
+(%i5) G_2 [x, y] := x / y;
+                                     x
+(%o5)                     G_2     := -
+                             x, y    y
+(%i6) define (G_3 [x], sqrt (x));
+(%o6)                    G_3  := sqrt(x)
+                            x
+(%i7) H_1 [x] (y) := x^y;
+                                      y
+(%o7)                     H_1 (y) := x
+                             x
+(%i8) functions;
+(%o8)              [F_1(x), F_2(x, y), F_3(x)]
+(%i9) arrays;
+(%o9)                 [G_1, G_2, G_3, H_1]
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>fundef</b><i> (<var>f</var>)</i>
+<a name="IDX1314"></a>
+</dt>
+<dd><p>Retorna a definição da função <var>f</var>.
+</p>
+<p>O argumento pode ser o nome de uma macro (definida com <code>::=</code>),
+uma função comum (definida com <code>:=</code> ou <code>define</code>),
+uma função array (definida com <code>:=</code> ou <code>define</code>,
+mas contendo argumentos entre colchêtes <code>[ ]</code>),
+Uma função subscrita, (definida com <code>:=</code> ou <code>define</code>,
+mas contendo alguns argumentos entre colchêtes e parêntesis <code>( )</code>)
+uma da família de funções subscritas seleccionada por um valor particular subscrito,
+ou uma função subscrita definida com uma constante subscrita.
+</p>
+<p><code>fundef</code> não avalia seu argumento;
+o operador apóstrofo-apóstrofo <code>''</code> faz com que ocorra avaliação.
+</p>
+<p><code>fundef (<var>f</var>)</code> retorna a definição de <var>f</var>.
+Em contraste, <code>dispfun (<var>f</var>)</code> cria um rótulo de expressão intermédia
+e atribui a definição para o rótulo.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>funmake</b><i> (<var>F</var>, [<var>arg_1</var>, ..., <var>arg_n</var>])</i>
+<a name="IDX1315"></a>
+</dt>
+<dd><p>Retorna uma expressão <code><var>F</var>(<var>arg_1</var>, ..., <var>arg_n</var>)</code>.
+O valor de retorno é simplificado, mas não avaliado,
+então a função <var>F</var> não é chamada, mesmo se essa função <var>F</var> existir.
+</p>
+<p><code>funmake</code> não tenta distinguir funções de array de funções comuns;
+quando <var>F</var> for o nome de uma função de array,
+<code>funmake</code> retorna <code><var>F</var>(...)</code>
+(isto é, uma chamada de função com parêntesis em lugar de colchêtes).
+<code>arraymake</code> retorna uma chamada de função com colchêtes nesse caso.
+</p>
+<p><code>funmake</code> avalia seus argumentos.
+</p>
+<p>Exemplos:
+</p>
+<p><code>funmake</code> aplicada a uma função comum do Maxima.
+</p>
+<pre class="example">(%i1) F (x, y) := y^2 - x^2;
+                                   2    2
+(%o1)                  F(x, y) := y  - x
+(%i2) funmake (F, [a + 1, b + 1]);
+(%o2)                    F(a + 1, b + 1)
+(%i3) ''%;
+                              2          2
+(%o3)                  (b + 1)  - (a + 1)
+</pre>
+<p><code>funmake</code> aplicada a uma macro.
+</p>
+<pre class="example">(%i1) G (x) ::= (x - 1)/2;
+                                  x - 1
+(%o1)                    G(x) ::= -----
+                                    2
+(%i2) funmake (G, [u]);
+(%o2)                         G(u)
+(%i3) ''%;
+                              u - 1
+(%o3)                         -----
+                                2
+</pre>
+<p><code>funmake</code> aplicada a uma função subscrita.
+</p>
+<pre class="example">(%i1) H [a] (x) := (x - 1)^a;
+                                        a
+(%o1)                   H (x) := (x - 1)
+                         a
+(%i2) funmake (H [n], [%e]);
+                                       n
+(%o2)               lambda([x], (x - 1) )(%e)
+(%i3) ''%;
+                                    n
+(%o3)                       (%e - 1)
+(%i4) funmake ('(H [n]), [%e]);
+(%o4)                        H (%e)
+                              n
+(%i5) ''%;
+                                    n
+(%o5)                       (%e - 1)
+</pre>
+<p><code>funmake</code> aplicada a um símbolo que não é uma função definida de qualquer tipo.
+</p>
+<pre class="example">(%i1) funmake (A, [u]);
+(%o1)                         A(u)
+(%i2) ''%;
+(%o2)                         A(u)
+</pre>
+<p> <code>funmake</code> avalia seus argumentos, mas não o valor de retorno.
+</p>
+<pre class="example">(%i1) det(a,b,c) := b^2 -4*a*c;
+                                    2
+(%o1)              det(a, b, c) := b  - 4 a c
+(%i2) (x : 8, y : 10, z : 12);
+(%o2)                          12
+(%i3) f : det;
+(%o3)                          det
+(%i4) funmake (f, [x, y, z]);
+(%o4)                    det(8, 10, 12)
+(%i5) ''%;
+(%o5)                         - 284
+</pre><p>Maxima simplifica o valor de retorno de <code>funmake</code>.
+</p>
+<pre class="example">(%i1) funmake (sin, [%pi / 2]);
+(%o1)                           1
+</pre>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>lambda</b><i> ([<var>x_1</var>, ..., <var>x_m</var>], <var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX1316"></a>
+</dt>
+<dt><u>Função:</u> <b>lambda</b><i> ([[<var>L</var>]], <var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX1317"></a>
+</dt>
+<dt><u>Função:</u> <b>lambda</b><i> ([<var>x_1</var>, ..., <var>x_m</var>, [<var>L</var>]], <var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX1318"></a>
+</dt>
+<dd><p>Define e retorna uma expressão lambda (que é, uma função an&ocirc;nima)
+A função pode ter argumentos que sejam necessários <var>x_1</var>, ..., <var>x_m</var>
+e/ou argumentos opcionais <var>L</var>, os quais aparecem dentro do corpo da função como uma lista.
+O valor de retorno da função é <var>expr_n</var>.
+Uma expressão lambda pode ser atribuída para uma variável e avaliada como uma função comum.
+Uma expressão lambda pode aparecer em alguns contextos nos quais um nome de função é esperado.
+</p>
+<p>Quando a função é avaliada,
+variáveis locais não associadas <var>x_1</var>, ..., <var>x_m</var> são criadas.
+<code>lambda</code> pode aparecer dentro de <code>block</code> ou outra função <code>lambda</code>;
+variáveis locais são estabelecidas cada vez que outro <code>block</code> ou função <code>lambda</code> é avaliada.
+Variáveis locais parecem ser globais para qualquer coisa contendo <code>block</code> ou <code>lambda</code>.
+Se uma variável é não local,
+seu valor é o valor mais recentemente atribuído em alguma coisa contendo <code>block</code> ou <code>lambda</code>, qualquer que seja,
+de outra forma, seu valor é o valor da variável no ambiente global.
+Essa política pode coincidir com o entendimento usual de &quot;escopo dinâmico&quot;.
+</p>
+<p>Após variáveis locais serem estabelecidas,
+<var>expr_1</var> até <var>expr_n</var> são avaliadas novamente.
+a variável especial <code>%%</code>, representando o valor da expressão precedente,
+é reconhecida.
+<code>throw</code> e <code>catch</code> pode também aparecer na lista de expressões.
+</p>
+<p><code>return</code> não pode aparecer em uma expressão lambda a menos que contendo <code>block</code>,
+nesse caso <code>return</code> define o valor de retorno do  bloco e não da
+expressão lambda,
+a menos que o bloco seja <var>expr_n</var>.
+Da mesma forma, <code>go</code> não pode aparecer em uma expressão lambda a menos que contendo <code>block</code>.
+</p>
+<p><code>lambda</code> não avalia seus argumentos; 
+o operador apóstrofo-apóstrofo <code>''</code> faz com que ocorra avaliação.
+</p>
+<p>Exemplos:
+</p>
+<ul>
+<li>
+A expressão lambda pode ser atribuída para uma variável e avaliada como uma função comum.
+</li></ul>
+<pre class="example">(%i1) f: lambda ([x], x^2);
+                                      2
+(%o1)                    lambda([x], x )
+(%i2) f(a);
+                                2
+(%o2)                          a
+</pre><ul>
+<li>
+Uma expressão lambda pode aparecer em contextos nos quais uma avaliação de função é esperada como resposta.
+</li></ul>
+<pre class="example">(%i3) lambda ([x], x^2) (a);
+                                2
+(%o3)                          a
+(%i4) apply (lambda ([x], x^2), [a]);
+                                2
+(%o4)                          a
+(%i5) map (lambda ([x], x^2), [a, b, c, d, e]);
+                        2   2   2   2   2
+(%o5)                 [a , b , c , d , e ]
+</pre><ul>
+<li>
+Variáveis argumento são variáveis locais.
+Outras variáveis aparecem para serem variáveis globais.
+Variáveis globais são avaliadas ao mesmo tempo em que a expressão lambda é avaliada,
+a menos que alguma avaliação especial seja forçada por alguns meios, tais como <code>''</code>.
+</li></ul>
+<pre class="example">(%i6) a: %pi$
+(%i7) b: %e$
+(%i8) g: lambda ([a], a*b);
+(%o8)                   lambda([a], a b)
+(%i9) b: %gamma$
+(%i10) g(1/2);
+                             %gamma
+(%o10)                       ------
+                               2
+(%i11) g2: lambda ([a], a*''b);
+(%o11)                lambda([a], a %gamma)
+(%i12) b: %e$
+(%i13) g2(1/2);
+                             %gamma
+(%o13)                       ------
+                               2
+</pre><ul>
+<li>
+Expressões lambda podem ser aninhadas.
+Variáveis locais dentro de outra expressão lambda parece ser global para a expressão interna
+a menos que mascarada por variáveis locais de mesmos nomes.
+</li></ul>
+<pre class="example">(%i14) h: lambda ([a, b], h2: lambda ([a], a*b), h2(1/2));
+                                                   1
+(%o14)    lambda([a, b], h2 : lambda([a], a b), h2(-))
+                                                   2
+(%i15) h(%pi, %gamma);
+                             %gamma
+(%o15)                       ------
+                               2
+</pre><ul>
+<li>
+Uma vez que <code>lambda</code> não avalia seus argumentos, a expressão lambda <code>i</code> abaixo
+não define uma função &quot;multiplicação por <code>a</code>&quot;.
+Tanto uma função pode ser definida via <code>buildq</code>, como na expressão lambda <code>i2</code> abaixo.
+</li></ul>
+<pre class="example">(%i16) i: lambda ([a], lambda ([x], a*x));
+(%o16)            lambda([a], lambda([x], a x))
+(%i17) i(1/2);
+(%o17)                  lambda([x], a x)
+(%i18) i2: lambda([a], buildq([a: a], lambda([x], a*x)));
+(%o18)    lambda([a], buildq([a : a], lambda([x], a x)))
+(%i19) i2(1/2);
+                                     x
+(%o19)                   lambda([x], -)
+                                     2
+(%i20) i2(1/2)(%pi);
+                               %pi
+(%o20)                         ---
+                                2
+</pre><ul>
+<li>
+Uma expressão lambda pode receber um número variável de argumentos,
+os quais são indicados por meio de <code>[<var>L</var>]</code> como o argumento único ou argumento final.
+Os argumentos aparecem dentro do corpo da função como uma lista.
+</li></ul>
+<pre class="example">(%i1) f : lambda ([aa, bb, [cc]], aa * cc + bb);
+(%o1)          lambda([aa, bb, [cc]], aa cc + bb)
+(%i2) f (foo, %i, 17, 29, 256);
+(%o2)       [17 foo + %i, 29 foo + %i, 256 foo + %i]
+(%i3) g : lambda ([[aa]], apply (&quot;+&quot;, aa));
+(%o3)             lambda([[aa]], apply(+, aa))
+(%i4) g (17, 29, x, y, z, %e);
+(%o4)                  z + y + x + %e + 46
+</pre></dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>local</b><i> (<var>v_1</var>, ..., <var>v_n</var>)</i>
+<a name="IDX1319"></a>
+</dt>
+<dd><p>Declara as variáveis <var>v_1</var>, ..., <var>v_n</var> para serem locais com
+relação a todas as propriedades na declaração na qual essa função
+é usada.
+</p>
+<p><code>local</code> não avalia seus argumentos.
+<code>local</code> retorna <code>done</code>.
+</p>
+<p><code>local</code> pode somente ser usada em <code>block</code>, no corpo de definições
+de função ou expressões <code>lambda</code>, ou na função <code>ev</code>, e somente uma
+ocorrêcia é permitida em cada.
+</p>
+<p><code>local</code> é independente de <code>context</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>macroexpansion</b>
+<a name="IDX1320"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p><code>macroexpansion</code> controla recursos avançados que
+afectam a eficiência de macros.  Escolhas possíveis:
+</p>
+<ul>
+<li>
+<code>false</code> - Macros expandem normalmente cada vez que são chamadas.
+</li><li>
+<code>expand</code> - A primeira vez de uma chamada particular é avaliada, a
+expansão é lembrada internamente, dessa forma não tem como ser
+recalculada em chamadas subsequênte rapidamente.  A
+macro chama ainda chamadas <code>grind</code> e <code>display</code> normalmente.  Todavia, memória extra é
+requerida para lembrar todas as expansões.
+</li><li>
+<code>displace</code> - A primeira vez de uma chamada particular é avaliada, a
+expansão é substituída pela chamada.  Isso requer levemente menos
+armazenagem que quando <code>macroexpansion</code> é escolhida para <code>expand</code> e é razoávelmente rápido,
+mas tem a desvantagem de a macro original ser lentamente
+lembrada e daí a expansão será vista se <code>display</code> ou <code>grind</code> for
+chamada.  Veja a documentação para <code>translate</code> e <code>macros</code> para maiores detalhes.
+</li></ul>
+
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>mode_checkp</b>
+<a name="IDX1321"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Quando <code>mode_checkp</code> é <code>true</code>, <code>mode_declare</code> verifica os modos
+de associação de variáveis.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>mode_check_errorp</b>
+<a name="IDX1322"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Quando <code>mode_check_errorp</code> é <code>true</code>, <code>mode_declare</code> chama
+a função &quot;error&quot;.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>mode_check_warnp</b>
+<a name="IDX1323"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Quando <code>mode_check_warnp</code> é <code>true</code>, modo &quot;errors&quot; são
+descritos.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>mode_declare</b><i> (<var>y_1</var>, <var>mode_1</var>, ..., <var>y_n</var>, <var>mode_n</var>)</i>
+<a name="IDX1324"></a>
+</dt>
+<dd><p><code>mode_declare</code> é usado para declarar os modos de variáveis e
+funções para subsequênte tradução ou compilação das funções.
+<code>mode_declare</code> é tipicamente colocada no início de uma definição de
+função, no início de um script Maxima, ou executado através da linha de comando de forma interativa.
+</p>
+<p>Os argumentos de <code>mode_declare</code> são pares consistindo de  uma variável e o modo que é
+um de <code>boolean</code>, <code>fixnum</code>, <code>number</code>, <code>rational</code>, ou <code>float</code>.
+Cada variável pode também
+ser uma lista de variáveis todas as quais são declaradas para ter o mesmo modo.
+</p>
+<p>Se uma variável é um array, e se todo elemento do array que é
+referenciado tiver um valor então <code>array (yi, complete, dim1, dim2, ...)</code>
+em lugar de 
+</p><pre class="example">array(yi, dim1, dim2, ...)
+</pre><p>deverá ser usado primeiro
+declarando as associações do array.
+Se todos os elementos do array
+estão no modo <code>fixnum</code> (<code>float</code>), use <code>fixnum</code> (<code>float</code>) em lugar de <code>complete</code>.
+Também se todo elemento do array está no mesmo modo, digamos <code>m</code>, então
+</p>
+<pre class="example">mode_declare (completearray (yi), m))
+</pre>
+<p>deverá ser usado para uma tradução
+eficiente.
+</p>
+<p>Código numéricos usando arrays podem rodar mais rápidamente
+se for decladado o tamanho esperado do array, como em:
+</p>
+<pre class="example">mode_declare (completearray (a [10, 10]), float)
+</pre>
+<p>para um array numérico em ponto flutuante que é 10 x 10.
+</p>
+<p>Pode-se declarar o modo do resultado de uma função
+usando <code>function (f_1, f_2, ...)</code> como um argumento;
+aqui <code>f_1</code>, <code>f_2</code>, ...  são nomes
+de funções.  Por exemplo a expressão,
+</p>
+<pre class="example">mode_declare ([function (f_1, f_2, ...)], fixnum)
+</pre>
+<p>declara que os valores retornados por <code>f_1</code>, <code>f_2</code>, ...  são inteiros palavra simples.
+</p>
+<p><code>modedeclare</code> é um sin&ocirc;nimo para <code>mode_declare</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>mode_identity</b><i> (<var>arg_1</var>, <var>arg_2</var>)</i>
+<a name="IDX1325"></a>
+</dt>
+<dd><p>Uma forma especial usada com <code>mode_declare</code> e <code>macros</code> para
+declarar, e.g., uma lista de listas de números em ponto flutuante ou
+outros objectos de dados.  O primeiro argumento para
+<code>mode_identity</code> é um valor primitivo nome de modo como dado para
+<code>mode_declare</code> (i.e., um de <code>float</code>, <code>fixnum</code>,
+<code>number</code>, <code>list</code>, ou <code>any</code>), e o segundo argumento é
+uma expressão que é avaliada e retornada com o valor de
+<code>mode_identity</code>. No entanto, se o valor de retorno não é
+permitido pelo modo declarado no primeiro argumento, um erro ou alerta
+é sinalizado.  Um ponto importante é que o modo da expressão como
+determinado pelo Maxima para o tradutor Lisp, será aquele dado como o
+primeiro argumento, independente de qualquer coisa que vá no segundo
+argumento.  E.g., <code>x: 3.3; mode_identity (fixnum, x);</code> retorna um
+erro.  <code>mode_identity (flonum, x)</code> returns 3.3 .  Isto tem
+númerosas utilidades, por exemplo, se souber que <code>first (l)</code>
+retornou um número então poderá escrever <code>mode_identity
+(number, first (l))</code>. No entanto, um caminho mais eficiente para fazer a
+mesma coisa é definir uma nova primitiva,
+</p>
+<pre class="example">firstnumb (x) ::= buildq ([x], mode_identity (number, first(x)));
+</pre>
+<p>e usar <code>firstnumb</code> sempre que obtiver o primeiro de uma lista de
+números.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>transcompile</b>
+<a name="IDX1326"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Quando <code>transcompile</code> é <code>true</code>, <code>translate</code> e <code>translate_file</code> geram
+declarações para fazer o código traduzido mais adequado para compilação.
+</p>
+<p><code>compfile</code> escolhe <code>transcompile: true</code> para a duração.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>translate</b><i> (<var>f_1</var>, ..., <var>f_n</var>)</i>
+<a name="IDX1327"></a>
+</dt>
+<dt><u>Função:</u> <b>translate</b><i> (funções)</i>
+<a name="IDX1328"></a>
+</dt>
+<dt><u>Função:</u> <b>translate</b><i> (all)</i>
+<a name="IDX1329"></a>
+</dt>
+<dd><p>Traduz funções definidas pelo utilizador
+<var>f_1</var>, ..., <var>f_n</var> da linguagem de Maxima para Lisp
+e avalia a tradução Lisp.
+Tipicamente as funções traduzidas executam mais rápido que as originais.
+</p>
+<p><code>translate (all)</code> ou <code>translate (funções)</code> traduz todas as funções definidas pelo utilizador.
+</p>
+<p>Funções a serem traduzidas incluir~ao uma chamada para <code>mode_declare</code> no
+início quando possível com o objectivo de produzir um código mais eficiente.  Por
+exemplo:
+</p>
+<pre class="example">f (x_1, x_2, ...) := block ([v_1, v_2, ...],
+    mode_declare (v_1, mode_1, v_2, mode_2, ...), ...)
+</pre>
+
+
+<p>quando <var>x_1</var>, <var>x_2</var>, ...  são parâmetros para a função e
+<var>v_1</var>, <var>v_2</var>, ...  são variáveis locais.
+</p>
+<p>Os nomes de funções traduzidas
+são removidos da lista <code>functions</code> se <code>savedef</code> é <code>false</code> (veja abaixo)
+e são adicionados nas listas <code>props</code>.
+</p>
+<p>Funções não poderão ser traduzidas
+a menos que elas sejam totalmente depuradas.
+</p>
+<p>Expressões são assumidas simplificadas; se não forem, um código correcto será gerado mas não será um código
+óptimo.  Dessa forma, o utilizador não poderá escolher o comutador <code>simp</code> para <code>false</code>
+o qual inibe simplificação de expressões a serem traduzidas.
+</p>
+<p>O comutador <code>translate</code>, se <code>true</code>, causa tradução
+automatica de uma função de utilizador para Lisp.
+</p>
+<p>Note que funções
+traduzidas podem não executar identicamente para o caminho que elas faziam antes da
+tradução como certas incompatabilidades podem existir entre o Lisp
+e versões do Maxima.  Principalmente, a função  <code>rat</code> com mais de
+um argumento e a função <code>ratvars</code> não poderá ser usada se quaisquer
+variáveis são declaradas com <code>mode_declare</code> como sendo expressões rotacionais canónicas(CRE).
+Também a escolha <code>prederror: false</code>
+não traduzirá.
+</p>
+<p><code>savedef</code> - se <code>true</code> fará com que a versão Maxima de uma função
+ utilizador permaneça quando a função é traduzida com <code>translate</code>.  Isso permite a
+que definição seja mostrada por <code>dispfun</code> e autoriza a função a ser
+editada.
+</p>
+<p><code>transrun</code> - se <code>false</code> fará com que a versão interpretada de todas as
+funções sejam executadas (desde que estejam ainda disponíveis) em lugar da
+versão traduzida.
+</p>
+<p>O resultado retornado por <code>translate</code> é uma lista de nomes de
+funções traduzidas.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>translate_file</b><i> (<var>maxima_nomeficheiro</var>)</i>
+<a name="IDX1330"></a>
+</dt>
+<dt><u>Função:</u> <b>translate_file</b><i> (<var>maxima_nomeficheiro</var>, <var>lisp_nomeficheiro</var>)</i>
+<a name="IDX1331"></a>
+</dt>
+<dd><p>Traduz um ficheiro com código Maxima para um ficheiro com código Lisp.
+<code>translate_file</code> retorna uma lista de três nomes de ficheiro:
+O nome do ficheiro Maxima, o nome do ficheiro Lisp, e o nome do ficheiro
+contendo informações adicionais sobre a tradução.
+<code>translate_file</code> avalia seus argumentos.
+</p>
+<p><code>translate_file (&quot;foo.mac&quot;); load(&quot;foo.LISP&quot;)</code> é o mesmo que
+<code>batch (&quot;foo.mac&quot;)</code> excepto por certas restrições,
+o uso de <code>''</code> e <code>%</code>, por exemplo.
+</p>
+<p><code>translate_file (<var>maxima_nomeficheiro</var>)</code> traduz um ficheiro Maxima <var>maxima_nomeficheiro</var>
+para um similarmente chamado ficheiro Lisp.
+Por exemplo, <code>foo.mac</code> é traduzido em <code>foo.LISP</code>.
+O nome de ficheiro Maxima pod incluir nome ou nomes de directório(s),
+nesse caso o ficheiro de saída Lisp é escrito
+para o mesmo directório que a entrada Maxima.
+</p>
+<p><code>translate_file (<var>maxima_nomeficheiro</var>, <var>lisp_nomeficheiro</var>)</code> traduz
+um ficheiro Maxima <var>maxima_nomeficheiro</var> em um ficheiro Lisp <var>lisp_nomeficheiro</var>.
+<code>translate_file</code> ignora a extensão do nome do ficheiro, se qualquer, de <code>lisp_nomeficheiro</code>;
+a extensão do ficheiro de saída Lisp é sempre <code>LISP</code>.
+O nome de ficheiro Lisp pode incluir um nome ou nomes de directórios),
+nesse caso o ficheiro de saída Lisp é escrito para o directório especificado.
+</p>
+<p><code>translate_file</code> também escreve um ficheiro de mensagens de alerta
+do tradutor em vários graus de severidade.
+A extensão do nome de ficheiro desse ficheiro é <code>UNLISP</code>.
+Esse ficheiro pode conter informação valiosa, apesar de possivelmente obscura,
+para rastrear erros no código traduzido.
+O ficheiro <code>UNLISP</code> é sempre escrito
+para o mesmo directório que a entrada Maxima.
+</p>
+<p><code>translate_file</code> emite código Lisp o qual faz com que
+algumas definições tenham efeito tão logo
+o código Lisp é compilado.
+Veja <code>compile_file</code> para mais sobre esse tópico.
+</p>
+<p>Veja também <code>tr_array_as_ref</code>,
+<code>tr_bound_function_applyp</code>,
+<code>tr_exponent</code>,
+<code>tr_file_tty_messagesp</code>, 
+<code>tr_float_can_branch_complex</code>,
+<code>tr_function_call_default</code>, 
+<code>tr_numer</code>,
+<code>tr_optimize_max_loop</code>, 
+<code>tr_semicompile</code>,
+<code>tr_state_vars</code>, 
+<code>tr_warnings_get</code>,
+<code>tr_warn_bad_function_calls</code>,
+<code>tr_warn_fexpr</code>, 
+<code>tr_warn_meval</code>,
+<code>tr_warn_mode</code>,
+<code>tr_warn_undeclared</code>,
+e <code>tr_warn_undefined_variable</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>transrun</b>
+<a name="IDX1332"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Quando <code>transrun</code> é <code>false</code> fará com que a versão
+interpretada de todas as funções sejam executadas (desde que estejam ainda disponíveis)
+em lugar de versão traduzidas.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_array_as_ref</b>
+<a name="IDX1333"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Se <code>translate_fast_arrays</code> for <code>false</code>, referências a arrays no
+Código Lisp emitidas por <code>translate_file</code> são afectadas por <code>tr_array_as_ref</code>.
+Quando <code>tr_array_as_ref</code> é <code>true</code>,
+nomes de arrays são avaliados,
+de outra forma nomes de arrays aparecem como símbolos literais no código traduzido.
+</p>
+<p><code>tr_array_as_ref</code> não terão efeito se <code>translate_fast_arrays</code> for <code>true</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_bound_function_applyp</b>
+<a name="IDX1334"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Quando <code>tr_bound_function_applyp</code> for <code>true</code>, Maxima emite um alerta se uma associação
+de variável (tal como um argumento de função) é achada sendo usada como uma função.
+<code>tr_bound_function_applyp</code> não afecta o código gerado em tais casos.
+</p>
+<p>Por exemplo, uma expressão tal como <code>g (f, x) := f (x+1)</code> irá disparar
+a mensagem de alerta.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_file_tty_messagesp</b>
+<a name="IDX1335"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Quando <code>tr_file_tty_messagesp</code> é <code>true</code>,
+messagens geradas por <code>translate_file</code> durante a tradução de um ficheiro são mostradas
+sobre o console e inseridas dentro do ficheiro UNLISP.  
+Quando <code>false</code>, messagens sobre traduções de
+ficheiros são somente inseridas dentro do ficheiro UNLISP.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_float_can_branch_complex</b>
+<a name="IDX1336"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>Diz ao tradutor Maxima-para-Lisp assumir que as funções 
+<code>acos</code>, <code>asin</code>, <code>asec</code>, e <code>acsc</code> podem retornar resultados complexos.
+</p>
+<p>O efeito ostensivo de <code>tr_float_can_branch_complex</code> é mostrado adiante.
+Todavia, parece que esse sinalizador não tem efeito sobre a saída do tradutor.
+</p>
+<p>Quando isso for <code>true</code> então <code>acos(x)</code> será do modo <code>any</code>
+sempre que <code>x</code> for do modo <code>float</code> (como escolhido por <code>mode_declare</code>).
+Quando <code>false</code> então <code>acos(x)</code> será do modo
+<code>float</code> se e somente se <code>x</code> for do modo <code>float</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_function_call_default</b>
+<a name="IDX1337"></a>
+</dt>
+<dd><p>Valor por omissão: <code>general</code>
+</p>
+<p><code>false</code> significa abandonando e
+chamando <code>meval</code>, <code>expr</code> significa que Lisp assume função de argumento fixado.  <code>general</code>, o
+código padrão dado como sendo bom para <code>mexprs</code> e <code>mlexprs</code> mas não <code>macros</code>.
+<code>general</code> garante que associações de variável são correctas em códigos compilados.  No
+modo <code>general</code>, quando traduzindo F(X), se F for uma variável associada, então isso
+assumirá que <code>apply (f, [x])</code> é significativo, e traduz como tal, com
+o alerta apropriado.  Não é necessário desabilitar isso.  Com as
+escolhas padrão, sem mensagens de alerta implica compatibilidade total do
+código traduzido e compilado com o interpretador Maxima.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_numer</b>
+<a name="IDX1338"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Quando <code>tr_numer</code> for <code>true</code> propriedades <code>numer</code> são usadas para
+átomos que possuem essa propriedade, e.g. <code>%pi</code>.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_optimize_max_loop</b>
+<a name="IDX1339"></a>
+</dt>
+<dd><p>Valor por omissão: 100
+</p>
+<p><code>tr_optimize_max_loop</code> é número máximo de vezes do
+passo de macro-expansão e optimização que o tradutor irá executar
+considerando uma forma.  Isso é para capturar erros de expansão de macro, e
+propriedades de optimização não terminadas.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_semicompile</b>
+<a name="IDX1340"></a>
+</dt>
+<dd><p>Valor por omissão: <code>false</code>
+</p>
+<p>Quando <code>tr_semicompile</code> for <code>true</code>, as formas de saída de <code>translate_file</code>
+e <code>compfile</code> serão macroexpandidas mas não compiladas em código
+de máquina pelo compilador Lisp.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de sistema:</u> <b>tr_state_vars</b>
+<a name="IDX1341"></a>
+</dt>
+<dd><p>Valor por omissão:
+</p><pre class="example">[transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,
+tr_warn_fexpr, tr_warn_mode, tr_warn_undefined_variable,
+tr_function_call_default, tr_array_as_ref,tr_numer]
+</pre>
+<p>A lista de comutadores que afectam a forma de saída da
+tradução.
+Essa informação é útil para sistemas populares quando
+tentam depurar o tradutor.  Comparando o produto traduzido
+para o qual pode ter sido produzido por um dado estado, isso é possível para
+rastrear erros.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>tr_warnings_get</b><i> ()</i>
+<a name="IDX1342"></a>
+</dt>
+<dd><p>Imprime uma lista de alertas que podem ter sido dadas pelo
+tradutor durante a tradução corrente.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_warn_bad_function_calls</b>
+<a name="IDX1343"></a>
+</dt>
+<dd><p>Valor por omissão: <code>true</code>
+</p>
+<p>- Emite um alerta quando
+chamadas de função estão sendo feitas por um caminho que pode não ser correcto devido
+a declarações impróprias que foram feitas em tempo de tradução.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_warn_fexpr</b>
+<a name="IDX1344"></a>
+</dt>
+<dd><p>Valor por omissão: <code>compfile</code>
+</p>
+<p>- Emite um alerta se quaisquer FEXPRs forem
+encontradas.  FEXPRs não poderão normalmente ser saída em código traduzido,
+todas as formas de programa especial legítimo são traduzidas.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável:</u> <b>tr_warn_meval</b>
+<a name="IDX1345"></a>
+</dt>
+<dd><p>Valor por omissão: <code>compfile</code>
+</p>
+<p>- Emite um alerta se a função
+<code>meval</code> recebe chamadas.  Se <code>meval</code> é chamada isso indica problemas na
+tradução.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável:</u> <b>tr_warn_mode</b>
+<a name="IDX1346"></a>
+</dt>
+<dd><p>Valor por omissão: <code>all</code>
+</p>
+<p>- Emite um alerta quando a variáveis forem
+atribuídos valores inapropriados para seu modo.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_warn_undeclared</b>
+<a name="IDX1347"></a>
+</dt>
+<dd><p>Valor por omissão: <code>compile</code>
+</p>
+<p>- Determina quando enviar
+alertas sobre variáveis não declaradas para o TTY.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Variável de opção:</u> <b>tr_warn_undefined_variable</b>
+<a name="IDX1348"></a>
+</dt>
+<dd><p>Valor por omissão: <code>all</code>
+</p>
+<p>- Emite um alerta quando
+variáveis globais indefinidas forem vistas.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>compile_file</b><i> (<var>nomeficheiro</var>)</i>
+<a name="IDX1349"></a>
+</dt>
+<dt><u>Função:</u> <b>compile_file</b><i> (<var>nomeficheiro</var>, <var>nomeficheiro_compilado</var>)</i>
+<a name="IDX1350"></a>
+</dt>
+<dt><u>Função:</u> <b>compile_file</b><i> (<var>nomeficheiro</var>, <var>nomeficheiro_compilado</var>, <var>lisp_nomeficheiro</var>)</i>
+<a name="IDX1351"></a>
+</dt>
+<dd><p>Traduz o ficheiro Maxima <var>nomeficheiro</var> para Lisp,
+executa o compilador Lisp,
+e, se a tradução e a compilação obtiverem sucesso, chama o código compilado dentro do Maxima.
+</p>
+<p><code>compile_file</code> retorna uma lista dos nomes de quatro ficheiros:
+o ficheiro original do Maxima, o nome da tradução Lisp, uma ficheiro de notas sobre a tradução, e o nome do ficheiro que contém o código compilado.
+Se a compilação falhar,
+o quarto item é <code>false</code>.
+</p>
+<p>Algumas declarações e definições passam a ter efeito tão logo
+o código Lisp seja compilado (sem que seja necessário chamar o código compilado).
+Isso inclui funções definidas com o operador <code>:=</code>,
+macros definidas com o operador <code>::=</code>, <code>alias</code>, <code>declare</code>,
+<code>define_variable</code>,  <code>mode_declare</code>,
+e 
+<code>infix</code>, <code>matchfix</code>,
+<code>nofix</code>, <code>postfix</code>, <code>prefix</code>,
+e <code>compfile</code>.
+</p>
+<p>Atribuições e chamadas de função não serão avaliadas até que o código compilado seja carregado.
+Em particular, dentro do ficheiro Maxima,
+atribuições para sinalizadores traduzidos (<code>tr_numer</code>, etc.) não têm efeito sobre a tradução.
+</p>
+
+<p><var>nomeficheiro</var> pode não conter declarações <code>:lisp</code>.
+</p>
+<p><code>compile_file</code> avalia seus argumentos.
+</p>
+</dd></dl>
+
+<dl>
+<dt><u>Função:</u> <b>declare_translated</b><i> (<var>f_1</var>, <var>f_2</var>, ...)</i>
+<a name="IDX1352"></a>
+</dt>
+<dd><p>Quando traduzindo um ficheiro do código Maxima
+para Lisp, é importante para o programa tradutor saber quais funções
+no ficheiro são para serem chamadas como funções traduzidas ou compiladas,
+e quais outras são apenas funções Maxima ou indefinidas.  Colocando essa
+declaração no topo do ficheiro, faremos conhecido que embora um símbolo
+diga que não temos ainda um valor de função Lisp, teremos uma em
+tempo de chamada.  <code>(MFUNCTION-CALL fn arg1 arg2 ...)</code> é gerado quando
+o tradutor n~ao sabe que <code>fn</code> está sendo compilada para ser uma função Lisp.
+</p>
+</dd></dl>
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC155" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC162" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC272" title="Index">&Iacute;ndice</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Robert Dodier</em> on <em>Janeiro, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

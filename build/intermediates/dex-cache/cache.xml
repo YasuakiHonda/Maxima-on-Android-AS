@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/yasube/Programming/AndroidStudioProjects/Maxima-on-Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1797f0f8ee41f2275e6904b0c7d868f8fca9c333">
+        <dex dex="/Users/yasube/Programming/AndroidStudioProjects/Maxima-on-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0066e3a4393235bf363f03afeb90134a16338dd9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/yasube/Programming/AndroidStudioProjects/Maxima-on-Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="40fab0abe540894a0a32c51f28105af32e1e6be9">
+        <dex dex="/Users/yasube/Programming/AndroidStudioProjects/Maxima-on-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4342c76ba3ef0975537237aaaf60557ab6b0ecce/classes.dex" />
+    </item>
+
+</items>
