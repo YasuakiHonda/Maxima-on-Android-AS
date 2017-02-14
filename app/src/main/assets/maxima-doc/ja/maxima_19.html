@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 19. Integration</title>
+<title>Maxima 5.39.0 Manual: 19. Integration</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 19. Integration">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 19. Integration">
+<meta name="description" content="Maxima 5.39.0 Manual: 19. Integration">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 19. Integration">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Integration"></a>
 <a name="SEC97"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC98" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_18.html#SEC95" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 19. Integration </h1>
@@ -117,15 +132,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC99" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC97" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC97" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 19.1 Introduction to Integration </h2>
@@ -152,15 +167,15 @@ QUADPACKから適応積分器一式があります。
 <td valign="middle" align="left">[<a href="#SEC100" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC97" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC97" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 19.2 Functions and Variables for Integration </h2>
@@ -170,13 +185,15 @@ QUADPACKから適応積分器一式があります。
 <a name="Item_003a-changevar"></a>
 </p><dl>
 <dt><u>関数:</u> <b>changevar</b><i> (<var>expr</var>, <var>f(x,y)</var>, <var>y</var>, <var>x</var>)</i>
-<a name="IDX745"></a>
+<a name="IDX752"></a>
 </dt>
 <dd><p><var>x</var>に関する積分を含む <var>expr</var>の中に現れるすべての積分に関して、
 <code><var>f(x,y)</var> = 0</code>で与えられる変数変換を生成します。
 新しい変数は <var>y</var>です。
 </p>
-<pre class="example">(%i1) assume(a &gt; 0)$
+<p>変数の変更は<code><var>f(x)</var> = <var>g(y)</var></code>とも書けます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) assume(a &gt; 0)$
 (%i2) 'integrate (%e**sqrt(a*y), y, 0, 4);
                       4
                      /
@@ -195,7 +212,7 @@ QUADPACKから適応積分器一式があります。
                       - 2 sqrt(a)
 (%o3)            - ----------------------------
                                 a
-</pre>
+</pre></td></tr></table>
 <p>上の <code>'integrate</code>の例のような名詞形を含む式は
 <code>nouns</code>フラグを使って <code>ev</code>で評価できます。
 例えば、上の　<code>changevar</code>が返す式は
@@ -208,7 +225,7 @@ QUADPACKから適応積分器一式があります。
 でなければならず、高階関数ではないことをはっきり理解しなければいけません。
 例えば、
 </p>
-<pre class="example">(%i4) sum (a[i]*x^(i-2), i, 0, inf);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) sum (a[i]*x^(i-2), i, 0, inf);
                          inf
                          ====
                          \         i - 2
@@ -224,10 +241,10 @@ QUADPACKから適応積分器一式があります。
                         /        n + 2
                         ====
                         n = - 2
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -235,18 +252,18 @@ QUADPACKから適応積分器一式があります。
 <p><a name="Item_003a-dblint"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dblint</b><i> (<var>f</var>, <var>r</var>, <var>s</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX746"></a>
+<a name="IDX753"></a>
 </dt>
 <dd><p>二重積分ルーチン。トップレベル Maximaで書かれ、翻訳され機械語にコンパイルされました。
 このパッケージをアクセスするには <code>load (dblint)</code>を使ってください。
 以下を計算するため xとy方向に関してシンプソンの規則方法を使います。
 </p>
-<pre class="example">/b /s(x)
+<table><tr><td>&nbsp;</td><td><pre class="example">/b /s(x)
 |  |
 |  |    f(x,y) dy dx
 |  |
 /a /r(x)
-</pre>
+</pre></td></tr></table>
 <p>関数 <var>f</var>は翻訳かコンパイルされた2変数関数でなければいけなく、
 <var>r</var>と <var>s</var>はそれぞれ、翻訳かコンパイルされた1変数関数でなければいけません。
 一方で <var>a</var>と <var>b</var>は浮動小数点数でなければいけません。
@@ -281,7 +298,7 @@ Y積分は <code><var>r</var>(x)</code>と <code><var>s</var>(x)</code>がどこ
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -289,7 +306,7 @@ Y積分は <code><var>r</var>(x)</code>と <code><var>s</var>(x)</code>がどこ
 <a name="Item_003a-defint"></a>
 </p><dl>
 <dt><u>関数:</u> <b>defint</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX747"></a>
+<a name="IDX754"></a>
 </dt>
 <dd><p>定積分を計算しようとします。
 <code>integrate</code>は、
@@ -305,7 +322,7 @@ Y積分は <code><var>r</var>(x)</code>と <code><var>s</var>(x)</code>がどこ
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -313,7 +330,7 @@ Y積分は <code><var>r</var>(x)</code>と <code><var>s</var>(x)</code>がどこ
 <a name="Item_003a-erfflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>erfflag</b>
-<a name="IDX748"></a>
+<a name="IDX755"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -324,7 +341,7 @@ Y積分は <code><var>r</var>(x)</code>と <code><var>s</var>(x)</code>がどこ
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -333,7 +350,7 @@ Y積分は <code><var>r</var>(x)</code>と <code><var>s</var>(x)</code>がどこ
 <a name="Item_003a-ilt"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ilt</b><i> (<var>expr</var>, <var>s</var>, <var>t</var>)</i>
-<a name="IDX749"></a>
+<a name="IDX756"></a>
 </dt>
 <dd><p><var>expr</var>の <var>s</var>とパラメータ <var>t</var>に関する逆ラプラス変換を計算します。
 <var>expr</var>は分子が線形２次因子だけを持つ多項式の比でなければいけません。
@@ -341,7 +358,7 @@ Y積分は <code><var>r</var>(x)</code>と <code><var>s</var>(x)</code>がどこ
 関数 <code>laplace</code>や <code>ilt</code>を使うことによって
 ユーザーは微分方程式または畳み込み積分方程式やそれらの組を解くことができます。
 </p>
-<pre class="example">(%i1) 'integrate (sinh(a*x)*f(t-x), x, 0, t) + b*f(t) = t**2;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) 'integrate (sinh(a*x)*f(t-x), x, 0, t) + b*f(t) = t**2;
               t
              /
              [                                    2
@@ -375,10 +392,10 @@ pos;
                                              + ------------------
                                                 3  2      2
                                                a  b  - 2 a  b + a
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Laplace-transform">Laplace transform</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Laplace-transform">Laplace transform</a>
 </div>
 </p></dd></dl>
 
@@ -386,7 +403,7 @@ pos;
 <a name="Item_003a-intanalysis"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>intanalysis</b>
-<a name="IDX750"></a>
+<a name="IDX757"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -395,14 +412,14 @@ pos;
 もしintanalysisが <code>false</code>なら、
 このチェックは実行されず積分は極がないことを仮定して実行されます。
 </p>
-<p><code>ldefint</code>も参照してください。
+<p><code><a href="#ldefint">ldefint</a></code>も参照してください。
 </p>
 <p>例:
 </p>
-<p><code>intanalysis</code>が <code>false</code>に設定されている時
+<p><code><a href="#intanalysis">intanalysis</a></code>が <code>false</code>に設定されている時
 Maximaは以下の積分を解くことができます:
 </p>
-<pre class="example">(%i1) integrate(1/(sqrt(x)+1),x,0,1);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) integrate(1/(sqrt(x)+1),x,0,1);
                                 1
                                /
                                [       1
@@ -423,10 +440,10 @@ The number 1 isn't in the domain of atanh
                                       %pi
 (%o5)                                 ---
                                        2
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -434,7 +451,7 @@ The number 1 isn't in the domain of atanh
 <a name="Item_003a-integrate"></a>
 </p><dl>
 <dt><u>関数:</u> <b>integrate</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>integrate</tt> (<var>expr</var>, <var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>integrate</tt> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX751"></a>
+<a name="IDX758"></a>
 </dt>
 <dd><p><var>x</var>に関する <var>expr</var>の積分をシンボリックに計算しようとします。
 <code>integrate (<var>expr</var>, <var>x</var>)</code>は不定積分で、
@@ -469,7 +486,7 @@ The number 1 isn't in the domain of atanh
 もし適用可能な特殊な場合が見つからないなら
 不定積分を計算し下限上限でそれを評価しようとするでしょう。
 これは下限上限に無限大の極限を取ることを含みます。
-<code>ldefint</code>も参照してください。
+<code><a href="#ldefint">ldefint</a></code>も参照してください。
 </p>
 <p>不定積分の特殊な場合は三角関数、指数対数関数、有理関数を含みます。
 <code>integrate</code>は初等積分の短いテーブルもまた利用しています。
@@ -479,17 +496,17 @@ The number 1 isn't in the domain of atanh
 <code>integrate</code>は <code>g(x)</code>の導関数が非積分関数を割るような部分式
 <code>g(x)</code>を見つけようとします。
 この探索は <code>gradef</code>関数が定義した導関数を利用します。
-<code>changevar</code>や <code>antid</code>も参照ください。
+<code><a href="#changevar">changevar</a></code>や <code><a href="maxima_18.html#antid">antid</a></code>も参照ください。
 </p>
 <p>もしこれまでの発見法のどれも不定積分を見つけられないなら
 リッシュのアルゴリズムを実行します。
-フラグ <code>risch</code>が
+フラグ <code><a href="#risch">risch</a></code>が
 <code>ev</code>のコールやコマンドライン上で <code>evflag</code>として設定されるかもしれません。
 例えば <code>ev (integrate (<var>expr</var>, <var>x</var>), risch)</code>や
 <code>integrate (<var>expr</var>, <var>x</var>), risch</code>というようにです。
 もし <code>risch</code>が <code>true</code>なら
-<code>integrate</code>は発見法を最初に試さずに <code>risch</code>関数をコールします。
-<code>risch</code>も参照ください。
+<code>integrate</code>は発見法を最初に試さずに <code><a href="#risch">risch</a></code>関数をコールします。
+<code><a href="#risch">risch</a></code>も参照ください。
 </p>
 <p><code>integrate</code>は <code>f(x)</code>記法で明示的に表現された関数関係に対してだけ機能します。
 <code>integrate</code>は <code>depends</code>関数が規定した陰の依存性を考慮しません。
@@ -511,7 +528,7 @@ The number 1 isn't in the domain of atanh
 <li>
 初等不定積分、定積分
 
-<pre class="example">(%i1) integrate (sin(x)^3, x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) integrate (sin(x)^3, x);
                            3
                         cos (x)
 (%o1)                   ------- - cos(x)
@@ -528,11 +545,11 @@ The number 1 isn't in the domain of atanh
                             sqrt(%pi)
 (%o4)                       ---------
                                 2
-</pre>
+</pre></td></tr></table>
 </li><li>
 <code>assume</code>と対話的問い合わせの利用
 
-<pre class="example">(%i1) assume (a &gt; 1)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) assume (a &gt; 1)$
 (%i2) integrate (x**a/(x+1)**(5/2), x, 0, inf);
     2 a + 2
 Is  -------  an integer?
@@ -545,13 +562,13 @@ neg;
                                    3
 (%o2)                  beta(a + 1, - - a)
                                    2
-</pre>
+</pre></td></tr></table>
 </li><li>
 変数変換。この例では２回変数変換があります。
 <code>gradef</code>が規定した導関数を使ったものと未知関数
 <code>r(x)</code>の微分 <code>diff(r(x))</code>を使ったもの。
 
-<pre class="example">(%i3) gradef (q(x), sin(x**2));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) gradef (q(x), sin(x**2));
 (%o3)                         q(x)
 (%i4) diff (log (q (r (x))), x);
                       d               2
@@ -561,15 +578,15 @@ neg;
                             q(r(x))
 (%i5) integrate (%, x);
 (%o5)                     log(q(r(x)))
-</pre>
+</pre></td></tr></table>
 </li><li>
 <code>'integrate</code>名詞形を含む戻り値。
 この例では Maximaは有理関数の分母の因子1つを抽出できますが、
 残りを因数分解できず、いずれにせよ積分を見つけられません。
 <code>grind</code>は結果の中に名詞形 <code>'integrate</code>を出力します。
-積分や有理関数について更に知るには <code>integrate_use_rootsof</code>も参照ください。
+積分や有理関数について更に知るには <code><a href="#integrate_005fuse_005frootsof">integrate_use_rootsof</a></code>も参照ください。
 
-<pre class="example">(%i1) expand ((x-4) * (x^3+2*x+1));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expand ((x-4) * (x^3+2*x+1));
                     4      3      2
 (%o1)              x  - 4 x  + 2 x  - 7 x - 4
 (%i2) integrate (1/%, x);
@@ -582,7 +599,7 @@ neg;
                      73               73
 (%i3) grind (%);
 log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
-</pre>
+</pre></td></tr></table>
 </li><li>
 積分を使った関数の定義。
 関数の本体は関数を定義する時には評価されません。
@@ -590,7 +607,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 クォートクォート演算子<code>''</code>があると積分が評価され、その結果が
 <code>f_2</code>の本体になります。
 
-<pre class="example">(%i1) f_1 (a) := integrate (x^3, x, 1, a);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) f_1 (a) := integrate (x^3, x, 1, a);
                                      3
 (%o1)           f_1(a) := integrate(x , x, 1, a)
 (%i2) ev (f_1 (7), nouns);
@@ -603,11 +620,11 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
                                   4    4
 (%i4) f_2 (7);
 (%o4)                          600
-</pre></li></ul>
+</pre></td></tr></table></li></ul>
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -615,7 +632,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 <a name="Item_003a-integration_005fconstant"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>integration_constant</b>
-<a name="IDX752"></a>
+<a name="IDX759"></a>
 </dt>
 <dd><p>デフォルト値: <code>%c</code>
 </p>
@@ -627,7 +644,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) integrate (x^2 = 1, x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) integrate (x^2 = 1, x);
                            3
                           x
 (%o1)                     -- = x + %c1
@@ -639,10 +656,10 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
                            x
 (%o3)                      -- = x + k2
                            3
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -650,7 +667,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 <a name="Item_003a-integration_005fconstant_005fcounter"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>integration_constant_counter</b>
-<a name="IDX753"></a>
+<a name="IDX760"></a>
 </dt>
 <dd><p>デフォルト値: 0
 </p>
@@ -662,7 +679,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) integrate (x^2 = 1, x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) integrate (x^2 = 1, x);
                            3
                           x
 (%o1)                     -- = x + %c1
@@ -684,10 +701,10 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
                           x
 (%o5)                     -- = x + %c1
                           3
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p>
 </dd></dl>
@@ -696,7 +713,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 <a name="Item_003a-integrate_005fuse_005frootsof"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>integrate_use_rootsof</b>
-<a name="IDX754"></a>
+<a name="IDX761"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -707,7 +724,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 <code>integrate_use_rootsof</code>を <code>false</code>に設定すると、
 <code>integrate</code>は有理関数の未解決積分を名詞形で返します:
 </p>
-<pre class="example">(%i1) integrate_use_rootsof: false$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) integrate_use_rootsof: false$
 (%i2) integrate (1/(1+x+x^5), x);
         /  2
         [ x  - 4 x + 5
@@ -716,19 +733,19 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
         / x  - x  + 1       log(x  + x + 1)          sqrt(3)
 (%o2)   ----------------- - --------------- + ---------------
                 7                 14             7 sqrt(3)
-</pre>
+</pre></td></tr></table>
 <p>さあ、フラグを <code>true</code>に設定し、
 積分の未解決部分を有理関数の分子の根上の和として表現しましょう:
 </p>
-<pre class="example">(%i3) integrate_use_rootsof: true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) integrate_use_rootsof: true$
 (%i4) integrate (1/(1+x+x^5), x);
       ====        2
       \       (%r4  - 4 %r4 + 5) log(x - %r4)
        &gt;      -------------------------------
       /                    2
       ====            3 %r4  - 2 %r4
-                      3    2
-      %r4 in rootsof(x  - x  + 1)
+                        3      2
+      %r4 in rootsof(%r4  - %r4  + 1, %r4)
 (%o4) ----------------------------------------------------------
                7
 
@@ -737,7 +754,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
                              log(x  + x + 1)          sqrt(3)
                            - --------------- + ---------------
                                    14             7 sqrt(3)
-</pre>
+</pre></td></tr></table>
 <p>代わりにユーザーは別々に分子の根を計算できます。
 例えば、もし分子が3次多項式なら
 <code>1/((x - a)*(x - b)*(x - c))</code>とか
@@ -747,7 +764,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p>
 </dd></dl>
@@ -757,7 +774,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 <a name="Item_003a-ldefint"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ldefint</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX755"></a>
+<a name="IDX762"></a>
 </dt>
 <dd><p><var>expr</var>の <var>x</var>に関する不定積分を上限 <var>b</var>と下限 <var>a</var>で評価するために、
 <code>limit</code>を使って <var>expr</var>の定積分を計算しようとします。
@@ -775,7 +792,7 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -784,12 +801,12 @@ log(x-4)/73-('integrate((x^2+4*x+18)/(x^3+2*x+1),x))/73$
 <a name="Item_003a-potential"></a>
 </p><dl>
 <dt><u>関数:</u> <b>potential</b><i> (<var>givengradient</var>)</i>
-<a name="IDX756"></a>
+<a name="IDX763"></a>
 </dt>
 <dd><p>計算にはグローバル変数<code>potentialzeroloc[0]</code>を利用します。
 それは <code>nonlist</code>か形式
-</p><pre class="example">[indeterminatej=expressionj, indeterminatek=expressionk, ...]
-</pre><p>でなければいけません。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">[indeterminatej=expressionj, indeterminatek=expressionk, ...]
+</pre></td></tr></table><p>でなければいけません。
 ここで前者 (<code>nonlist</code>)は後者(リスト形式)の中の右辺すべてに関して
 nonlist式とすることと同値です。
 示された右辺は積分の下限として使われます。
@@ -802,14 +819,14 @@ nonlist式とすることと同値です。
 <a name="Item_003a-residue"></a>
 </p><dl>
 <dt><u>関数:</u> <b>residue</b><i> (<var>expr</var>, <var>z</var>, <var>z_0</var>)</i>
-<a name="IDX757"></a>
+<a name="IDX764"></a>
 </dt>
 <dd><p>変数 <var>z</var>が値 <var>z_0</var>を仮定する時、
 式 <var>expr</var>の複素平面での留数を計算します。
 留数は <var>expr</var>のローラン級数における
 <code>(<var>z</var> - <var>z_0</var>)^(-1)</code>の係数です。
 </p>
-<pre class="example">(%i1) residue (s/(s**2+a**2), s, a*%i);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) residue (s/(s**2+a**2), s, a*%i);
                                 1
 (%o1)                           -
                                 2
@@ -818,11 +835,11 @@ nonlist式とすることと同値です。
                                 a
 (%o2)                         - --
                                 6
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Complex-variables">Complex variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Complex-variables">Complex variables</a>
 </div>
 </p></dd></dl>
 
@@ -830,7 +847,7 @@ nonlist式とすることと同値です。
 <a name="Item_003a-risch"></a>
 </p><dl>
 <dt><u>関数:</u> <b>risch</b><i> (<var>expr</var>, <var>x</var>)</i>
-<a name="IDX758"></a>
+<a name="IDX765"></a>
 </dt>
 <dd><p>リッシュアルゴリズムの超越な場合を使って <var>expr</var>を <var>x</var>に関して積分します。
 （リッシュアルゴリズムの代数的な場合は実装されていません。）
@@ -842,7 +859,7 @@ nonlist式とすることと同値です。
 もしそもそも被積分関数になにもないなら、
 <code>risch</code>が答えの中に <code>erf</code>関数を導入することを抑制します。
 </p>
-<pre class="example">(%i1) risch (x^2*erf(x), x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) risch (x^2*erf(x), x);
                                                         2
              3                      2                - x
         %pi x  erf(x) + (sqrt(%pi) x  + sqrt(%pi)) %e
@@ -851,10 +868,10 @@ nonlist式とすることと同値です。
 (%i2) diff(%, x), ratsimp;
                              2
 (%o2)                       x  erf(x)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -863,13 +880,13 @@ nonlist式とすることと同値です。
 <a name="Item_003a-tldefint"></a>
 </p><dl>
 <dt><u>関数:</u> <b>tldefint</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX759"></a>
+<a name="IDX766"></a>
 </dt>
 <dd><p><code>tlimswitch</code>が <code>true</code>に設定されている <code>ldefint</code>と同値です。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -883,15 +900,15 @@ nonlist式とすることと同値です。
 <td valign="middle" align="left">[<a href="#SEC101" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC97" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC97" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 19.3 Introduction to QUADPACK </h2>
@@ -932,15 +949,15 @@ Maximaの QUADPACKの Lisp翻訳はいくつかの自動でない関数も含み
 <td valign="middle" align="left">[<a href="#SEC102" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC100" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC100" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 19.3.1 Overview </h3>
@@ -1025,10 +1042,10 @@ Clenshaw-Curtis積分を使います。
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p>
 <p><a name="Item_003a-Functions-and-Variables-for-QUADPACK"></a>
@@ -1040,15 +1057,15 @@ Clenshaw-Curtis積分を使います。
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC97" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC97" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 19.4 Functions and Variables for QUADPACK </h2>
@@ -1058,7 +1075,7 @@ Clenshaw-Curtis積分を使います。
 <a name="Item_003a-quad_005fqag"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qag</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qag</tt> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>key</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qag</tt> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>key</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>])</i>
-<a name="IDX760"></a>
+<a name="IDX767"></a>
 </dt>
 <dd><p>一般関数の有限の区間上の積分。
 <code>quad_qag</code>は Aind(Piessens, 1973)の戦略を使った
@@ -1135,17 +1152,17 @@ Maximaの式として指定することができます。
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qag (x^(1/2)*log(1/x), x, 0, 1, 3, 'epsrel=5d-8);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qag (x^(1/2)*log(1/x), x, 0, 1, 3, 'epsrel=5d-8);
 (%o1)    [.4444444444492108, 3.1700968502883E-9, 961, 0]
 (%i2) integrate (x^(1/2)*log(1/x), x, 0, 1);
                                 4
 (%o2)                           -
                                 9
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1154,7 +1171,7 @@ Maximaの式として指定することができます。
 <a name="Item_003a-quad_005fqags"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qags</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qags</tt> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qags</tt> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>])</i>
-<a name="IDX761"></a>
+<a name="IDX768"></a>
 </dt>
 <dd><p>一般関数の有限の区間上の積分。
 <code>quad_qags</code>はイプシロンアルゴリズム (Wynn, 1956)による外挿
@@ -1228,16 +1245,16 @@ Maximaの式として指定することができます。
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qags (x^(1/2)*log(1/x), x, 0, 1, 'epsrel=1d-10);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qags (x^(1/2)*log(1/x), x, 0, 1, 'epsrel=1d-10);
 (%o1)   [.4444444444444448, 1.11022302462516E-15, 315, 0]
-</pre>
+</pre></td></tr></table>
 <p>この積分に関しては <code>quad_qags</code>は
 <code>quad_qag</code>よりも精確で効率的であることに注意してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1246,7 +1263,7 @@ Maximaの式として指定することができます。
 <a name="Item_003a-quad_005fqagi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qagi</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qagi</tt> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qagi</tt> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>])</i>
-<a name="IDX762"></a>
+<a name="IDX769"></a>
 </dt>
 <dd><p>一般関数の無限のもしくは半無限の区間上の積分。
 区間を有限の区間上に写像し、 <code>quad_qags</code>の中で使うのと同じ戦略を適用します。
@@ -1325,17 +1342,17 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qagi (x^2*exp(-4*x), x, 0, inf, 'epsrel=1d-8);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qagi (x^2*exp(-4*x), x, 0, inf, 'epsrel=1d-8);
 (%o1)        [0.03125, 2.95916102995002E-11, 105, 0]
 (%i2) integrate (x^2*exp(-4*x), x, 0, inf);
                                1
 (%o2)                          --
                                32
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1344,7 +1361,7 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 <a name="Item_003a-quad_005fqawc"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qawc</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qawc</tt> (<var>f(x)</var>, <var>x</var>, <var>c</var>, <var>a</var>, <var>b</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qawc</tt> (<var>f</var>, <var>x</var>, <var>c</var>, <var>a</var>, <var>b</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>])</i>
-<a name="IDX763"></a>
+<a name="IDX770"></a>
 </dt>
 <dd><p><em>f(x)/(x - c)</em>のコーシーの主値を有限の区間
 <em>(a, b)</em>上で指定された <em>c</em>を用いて計算します。
@@ -1420,7 +1437,7 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qawc (2^(-5)*((x-1)^2+4^(-5))^(-1), x, 2, 0, 5,
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qawc (2^(-5)*((x-1)^2+4^(-5))^(-1), x, 2, 0, 5,
                  'epsrel=1d-7);
 (%o1)    [- 3.130120337415925, 1.306830140249558E-8, 495, 0]
 (%i2) integrate (2^(-alpha)*(((x-1)^2 + 4^(-alpha))*(x-2))^(-1),
@@ -1444,11 +1461,11 @@ Principal Value
            2 4      + 2                 2 4      + 2
 (%i3) ev (%, alpha=5, numer);
 (%o3)                    - 3.130120337415917
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1457,7 +1474,7 @@ Principal Value
 <a name="Item_003a-quad_005fqawf"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qawf</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qawf</tt> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>omega</var>, <var>trig</var>, [<var>epsabs</var>, <var>limit</var>, <var>maxp1</var>, <var>limlst</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qawf</tt> (<var>f</var>, <var>x</var>, <var>a</var>, <var>omega</var>, <var>trig</var>, [<var>epsabs</var>, <var>limit</var>, <var>maxp1</var>, <var>limlst</var>])</i>
-<a name="IDX764"></a>
+<a name="IDX771"></a>
 </dt>
 <dd><p>フーリエコサイン変換またはフーリエサイン変換を、
 Quadpack QAWF関数を使って、半無限区間上で計算します。
@@ -1550,7 +1567,7 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qawf (exp(-x^2), x, 0, 1, 'cos, 'epsabs=1d-9);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qawf (exp(-x^2), x, 0, 1, 'cos, 'epsabs=1d-9);
 (%o1)   [.6901942235215714, 2.84846300257552E-11, 215, 0]
 (%i2) integrate (exp(-x^2)*cos(x), x, 0, inf);
                           - 1/4
@@ -1559,11 +1576,11 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
                                 2
 (%i3) ev (%, numer);
 (%o3)                   .6901942235215714
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1572,7 +1589,7 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 <a name="Item_003a-quad_005fqawo"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qawo</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qawo</tt> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>omega</var>, <var>trig</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>, <var>maxp1</var>, <var>limlst</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qawo</tt> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>omega</var>, <var>trig</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>, <var>maxp1</var>, <var>limlst</var>])</i>
-<a name="IDX765"></a>
+<a name="IDX772"></a>
 </dt>
 <dd><p><em>cos(omega x) f(x)</em>
 や
@@ -1669,7 +1686,7 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qawo (x^(-1/2)*exp(-2^(-2)*x), x, 1d-8, 20*2^2, 1, cos);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qawo (x^(-1/2)*exp(-2^(-2)*x), x, 1d-8, 20*2^2, 1, cos);
 (%o1)     [1.376043389877692, 4.72710759424899E-11, 765, 0]
 (%i2) rectform (integrate (x^(-1/2)*exp(-2^(-alpha)*x) * cos(x),
       x, 0, inf));
@@ -1680,11 +1697,11 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
                          sqrt(2        + 1)
 (%i3) ev (%, alpha=2, numer);
 (%o3)                     1.376043390090716
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1693,7 +1710,7 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 <a name="Item_003a-quad_005fqaws"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qaws</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qaws</tt> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>alpha</var>, <var>beta</var>, <var>wfun</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qaws</tt> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>alpha</var>, <var>beta</var>, <var>wfun</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>])</i>
-<a name="IDX766"></a>
+<a name="IDX773"></a>
 </dt>
 <dd><p><em>w(x) f(x)</em>の有限の区間上の積分。
 ここで <em>w(x)</em>はある代数的または対数関数です。
@@ -1782,7 +1799,7 @@ Maximaのラムダ式か Maximaの一般式として指定することができ�
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qaws (1/(x+1+2^(-4)), x, -1, 1, -0.5, -0.5, 1,
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qaws (1/(x+1+2^(-4)), x, -1, 1, -0.5, -0.5, 1,
                  'epsabs=1d-9);
 (%o1)     [8.750097361672832, 1.24321522715422E-10, 170, 0]
 (%i2) integrate ((1-x*x)^(-1/2)/(x+1+2^(-alpha)), x, -1, 1);
@@ -1797,11 +1814,11 @@ pos;
                             4 2      + 2
 (%i3) ev (%, alpha=4, numer);
 (%o3)                     8.750097361672829
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1810,7 +1827,7 @@ pos;
 <a name="Item_003a-quad_005fqagp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_qagp</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qagp</tt> (<var>f(x)</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>points</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>quad_qagp</tt> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>, <var>points</var>, [<var>epsrel</var>, <var>epsabs</var>, <var>limit</var>])</i>
-<a name="IDX767"></a>
+<a name="IDX774"></a>
 </dt>
 <dd><p>有限区間上の一般的な関数の積分。
 <code>quad_qagp</code>は、
@@ -1894,19 +1911,19 @@ Maximaか Lispの関数か演算子の名前か、Maximaのラムダ式、一般
 
 <p>例:
 </p>
-<pre class="example">(%i1) quad_qagp(x^3*log(abs((x^2-1)*(x^2-2))),x,0,3,[1,sqrt(2)]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) quad_qagp(x^3*log(abs((x^2-1)*(x^2-2))),x,0,3,[1,sqrt(2)]);
 (%o1)   [52.74074838347143, 2.6247632689546663e-7, 1029, 0]
 (%i2) quad_qags(x^3*log(abs((x^2-1)*(x^2-2))), x, 0, 3);
 (%o2)   [52.74074847951494, 4.088443219529836e-7, 1869, 0]
-</pre>
+</pre></td></tr></table>
 <p>被積分関数は <code>1</code>と <code>sqrt(2)</code>で特異性を持つので
 これらの点を <code>quad_qagp</code>に提供します。
 <code>quad_qagp</code>は <code><a href="#quad_005fqags">quad_qags</a></code>より精確で効率的であることも特筆します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
 
@@ -1914,7 +1931,7 @@ Maximaか Lispの関数か演算子の名前か、Maximaのラムダ式、一般
 <a name="Item_003a-quad_005fcontrol"></a>
 </p><dl>
 <dt><u>関数:</u> <b>quad_control</b><i> (<var>parameter</var>, [<var>value</var>])</i>
-<a name="IDX768"></a>
+<a name="IDX775"></a>
 </dt>
 <dd><p>quadpackのエラーハンドリングを制御します。
 パラメータは以下のシンボルのどれかでなければいけません:
@@ -1937,11 +1954,10 @@ Maximaか Lispの関数か演算子の名前か、Maximaのラムダ式、一般
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-quadpack">Package quadpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-quadpack">Package quadpack</a>
 </div>
 </p></dd></dl>
-
 
 <p><a name="Item_003a-Equations"></a>
 </p><hr size="6">
@@ -1953,14 +1969,14 @@ Maximaか Lispの関数か演算子の名前か、Maximaのラムダ式、一般
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -71,32 +71,34 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_72.html#SEC378" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 73. stringproc </h1>
 
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC381">73.1 Introduction to string processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC381">73.1 Einf&uuml;hrung in die Verarbeitung von Zeichenketten</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC382">73.2 Functions and Variables for input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC382">73.2 Ein- und Ausgabe</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC383">73.3 Functions and Variables for characters</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC383">73.3 Schriftzeichen</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC384">73.4 Functions and Variables for strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC384">73.4 Verarbeitung von Zeichenketten</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC385">73.5 Oktette und Werkzeuge f&uuml;r die Kryptographie</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <hr size="6">
-<a name="Introduction-to-string-processing"></a>
+<a name="Einf_00fchrung-in-die-Verarbeitung-von-Zeichenketten"></a>
 <a name="SEC381"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC380" title="Previous section in reading order"> &lt; </a>]</td>
@@ -104,100 +106,109 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 73.1 Introduction to string processing </h2>
+<h2 class="section"> 73.1 Einf&uuml;hrung in die Verarbeitung von Zeichenketten </h2>
 
-<p><code>stringproc.lisp</code> enlarges Maximas capabilities of working with strings 
-and adds some useful functions for file in/output.
+<p>Das Paket <code>stringproc</code> enth&auml;lt Funktionen f&uuml;r die Verarbeitung von 
+Zeichen und Zeichenketten, was Formatierung, Zeichenkodierung und 
+die Behandlung von Datenstr&ouml;men mit einschlie&szlig;t. 
+Abgerundet wird dieses Paket durch Werkzeuge f&uuml;r die Kryptographie, wie z.B. 
+Base64 und Hashfunktionen.
 </p>
-<p>For questions and bugs please mail to volkervannek at gmail dot com .
+<p>Das Paket kann explizit durch <code>load(stringproc)</code> geladen werden oder 
+automatisch durch die Verwendung einer der enthaltenden Funktionen. 
 </p>
-<p>In Maxima a string is easily constructed by typing &quot;text&quot;.
-<code><a href="#stringp">stringp</a></code> tests for strings.
+<p>Fragen und Fehlerberichte senden Sie bitte direkt an den Autor, 
+dessen e-Mail-Adresse durch den folgenden Befehl ausgegeben wird. 
 </p>
-<pre class="example">(%i1) m: &quot;text&quot;;
-(%o1)                         text
-(%i2) stringp(m);
+<p><code>printf(true, &quot;~{~a~}@gmail.com&quot;, split(sdowncase(&quot;Volker van Nek&quot;)))$</code>
+</p>
+
+<p>Eine Zeichenkette wird durch die Eingabe von z.B. <code>&quot;Text&quot;</code> erzeugt. 
+Ist die Optionsvariable <code>stringdisp</code> auf <code>false</code> gesetzt, was 
+standardm&auml;&szlig;ig der Fall ist, werden die (doppelten) Anf&uuml;hrungszeichen 
+nicht mit ausgegeben. <a href="#stringp">stringp</a> ist ein Test, ob ein Objekt eine 
+Zeichenkette ist.
+</p>
+<pre class="example">(%i1) str: &quot;Text&quot;;
+(%o1)                         Text
+(%i2) stringp(str);
 (%o2)                         true
 </pre>
-<p>Characters are represented as strings of length 1.
-These are not Lisp characters.
-Tests can be done with <code><a href="#charp">charp</a></code> (respectively <code><a href="#lcharp">lcharp</a></code>
-and conversion from Lisp to Maxima characters with <code><a href="#cunlisp">cunlisp</a></code>).
+<p>Schriftzeichen werden in Maxima durch Zeichenketten der L&auml;nge 1 dargestellt. 
+<a href="#charp">charp</a> ist hier der entsprechende Test.
 </p>
-<pre class="example">(%i1) c: &quot;e&quot;;
+<pre class="example">(%i1) char: &quot;e&quot;;
 (%o1)                           e
-(%i2) [charp(c),lcharp(c)];
-(%o2)                     [true, false]
-(%i3) supcase(c);
-(%o3)                           E
-(%i4) charp(%);
-(%o4)                         true
+(%i2) charp(char);
+(%o2)                         true
 </pre>
-<p>All functions in <code>stringproc.lisp</code> that return characters, return 
-Maxima characters.  Due to the fact, that the introduced characters are strings 
-of length 1, you can use a lot of string functions also for characters.
-As seen, <code><a href="#supcase">supcase</a></code> is one example.
+<p>Positionsindizes in Zeichenketten sind in Maxima genau so wie in Listen 
+1-indiziert, wodurch die folgende &Uuml;bereinstimmung entsteht.
 </p>
-<p>It is important to know, that the first character in a Maxima string is at 
-position 1.  This is designed due to the fact that the first element in a 
-Maxima list is at position 1 too.  See definitions of <code><a href="#charat">charat</a></code> and
-<code><a href="#charlist">charlist</a></code> for examples.
-</p>
-<p>In applications string functions are often used when working with files.
-You will find some useful stream and print functions in <code>stringproc.lisp</code>.
-The following example shows some of the here introduced functions at work.
-</p>
-<p>Example: 
-</p>
-<p><code><a href="#openw">openw</a></code> returns an output stream to a file, <code>printf</code> then allows
-formatted writing to this file.  See <code><a href="#printf">printf</a></code> for details.
-</p>
-<pre class="example">(%i1) s: openw(&quot;E:/file.txt&quot;);
-(%o1)                    #&lt;output stream E:/file.txt&gt;
-(%i2) for n:0 thru 10 do printf( s, &quot;~d &quot;, fib(n) );
-(%o2)                                done
-(%i3) printf( s, &quot;~%~d ~f ~a ~a ~f ~e ~a~%&quot;, 
-              42,1.234,sqrt(2),%pi,1.0e-2,1.0e-2,1.0b-2 );
-(%o3)                                false
-(%i4) close(s);
-(%o4)                                true
+<pre class="example">(%i1) is(charat(&quot;Lisp&quot;,1) = charlist(&quot;Lisp&quot;)[1]);
+(%o1)                         true
 </pre>
-<p>After closing the stream you can open it again, this time with input direction.
-<code><a href="#readline">readline</a></code> returns the entire line as one string.  The <code>stringproc</code>
-package now offers a lot of functions for manipulating strings.  Tokenizing can 
-be done by <code><a href="#split">split</a></code> or <code><a href="#tokens">tokens</a></code>.
+<p>Eine Zeichenkette kann Ausdr&uuml;cke enthalten, die Maxima versteht. 
+Diese k&ouml;nnen mit <a href="#parse_005fstring">parse_string</a> heraus gel&ouml;st werden.
 </p>
-<pre class="example">(%i5) s: openr(&quot;E:/file.txt&quot;);
-(%o5)                     #&lt;input stream E:/file.txt&gt;
-(%i6) readline(s);
-(%o6)                     0 1 1 2 3 5 8 13 21 34 55 
-(%i7) line: readline(s);
-(%o7)               42 1.234 sqrt(2) %pi 0.01 1.0E-2 1.0b-2
-(%i8) list: tokens(line);
-(%o8)           [42, 1.234, sqrt(2), %pi, 0.01, 1.0E-2, 1.0b-2]
-(%i9) map( parse_string, list );
-(%o9)            [42, 1.234, sqrt(2), %pi, 0.01, 0.01, 1.0b-2]
-(%i10) float(%);
-(%o10) [42.0, 1.234, 1.414213562373095, 3.141592653589793, 0.01,
-                                                     0.01, 0.01]
-(%i11) readline(s);
-(%o11)                               false
-(%i12) close(s)$
+<pre class="example">(%i1) map(parse_string, [&quot;42&quot; ,&quot;sqrt(2)&quot;, &quot;%pi&quot;]);
+(%o1)                   [42, sqrt(2), %pi]
+(%i2) map('float, %);
+(%o2)        [42.0, 1.414213562373095, 3.141592653589793]
 </pre>
-<p><code>readline</code> returns <code>false</code> when the end of file occurs.
+<p>Zeichenketten k&ouml;nnen als Schriftzeichen und bin&auml;r als Oktette verarbeitet werden. 
+<a href="#string_005fto_005foctets">string_to_octets</a> bzw. <a href="#octets_005fto_005fstring">octets_to_string</a> dienen hierbei zur Umrechnung. 
+Die verwendbaren Kodierungen sind dabei von der Plattform, der Anwendung und vom 
+unter Maxima liegenden Lisp abh&auml;ngig. 
+(Folgend Maxima in GNU/Linux, kompiliert mit SBCL.)
 </p>
+<pre class="example">(%i1) obase: 16.$
+(%i2) string_to_octets(&quot;$&pound;&euro;&quot;, &quot;cp1252&quot;);
+(%o2)                     [24, 0A3, 80]
+(%i3) string_to_octets(&quot;$&pound;&euro;&quot;, &quot;utf-8&quot;);
+(%o3)               [24, 0C2, 0A3, 0E2, 82, 0AC]
+</pre>
+<p>Dem entsprechend k&ouml;nnen Zeichenketten an Datenstr&ouml;me f&uuml;r Schriftzeichen und 
+als Oktette an bin&auml;re Str&ouml;me weiter gegeben werden. Das folgende Beispiel 
+zeigt das Schreiben und Lesen von Schriftzeichen in bzw. aus einer Datei.
+</p>
+<p><a href="#openw">openw</a> gibt dabei einen Ausgabestrom in eine Datei zur&uuml;ck, 
+mit <a href="#printf">printf</a> wird formatiert in diesen Strom geschrieben und 
+mit z.B. <a href="#close">close</a> werden die im Strom enthaltenden Zeichen in die Datei 
+geschrieben. 
+</p>
+<pre class="example">(%i1) s: openw(&quot;file.txt&quot;);
+(%o1)                #&lt;output stream file.txt&gt;
+(%i2) printf(s, &quot;~%~d ~f ~a ~a ~f ~e ~a~%&quot;, 
+42, 1.234, sqrt(2), %pi, 1.0e-2, 1.0e-2, 1.0b-2)$
+(%i3) close(s)$
+</pre>
+<p><a href="#openr">openr</a> gibt folgend einen Eingabestrom aus der obigen Datei zur&uuml;ck und 
+<a href="#readline">readline</a> die gelesene Zeile als Zeichenkette.
+Mit z.B. <a href="#split">split</a> oder <a href="#tokens">tokens</a> kann die Zeichenkette anschlie&szlig;end 
+in seine Bestandteile zerlegt werden. 
+<a href="#parse_005fstring">parse_string</a> verwandelt diese dann in auswertbare Ausdr&uuml;cke.
+</p>
+<pre class="example">(%i4) s: openr(&quot;file.txt&quot;);
+(%o4)                 #&lt;input stream file.txt&gt;
+(%i5) readline(s);
+(%o5)          42 1.234 sqrt(2) %pi 0.01 1.0E-2 1.0b-2
+(%i6) map(parse_string, split(%));
+(%o6)       [42, 1.234, sqrt(2), %pi, 0.01, 0.01, 1.0b-2]
+(%i7) close(s)$
+</pre>
 <hr size="6">
-<a name="Functions-and-Variables-for-input-and-output"></a>
+<a name="Ein_002d-und-Ausgabe"></a>
 <a name="SEC382"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC381" title="Previous section in reading order"> &lt; </a>]</td>
@@ -205,89 +216,117 @@ be done by <code><a href="#split">split</a></code> or <code><a href="#tokens">to
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 73.2 Functions and Variables for input and output </h2>
+<h2 class="section"> 73.2 Ein- und Ausgabe </h2>
 
-<p>Example: 
+<p>Beispiel: Formatiertes Schreiben in eine Datei mit anschlie&szlig;endem Lesen.
 </p>
-<pre class="example">(%i1) s: openw(&quot;E:/file.txt&quot;);
-(%o1)                     #&lt;output stream E:/file.txt&gt;
+<pre class="example">(%i1) s: openw(&quot;file.txt&quot;);
+(%o1)                      #&lt;output stream file.txt&gt;
 (%i2) control: 
 &quot;~2tAn atom: ~20t~a~%~2tand a list: ~20t~{~r ~}~%~2t\
 and an integer: ~20t~d~%&quot;$
-(%i3) printf( s,control, 'true,[1,2,3],42 )$
+(%i3) printf(s, control, 'true,[1,2,3],42)$
 (%o3)                                false
 (%i4) close(s);
 (%o4)                                true
-(%i5) s: openr(&quot;E:/file.txt&quot;);
-(%o5)                     #&lt;input stream E:/file.txt&gt;
-(%i6) while stringp( tmp:readline(s) ) do print(tmp)$
+(%i5) s: openr(&quot;file.txt&quot;);
+(%o5)                      #&lt;input stream file.txt&gt;
+(%i6) while stringp(tmp:readline(s)) do print(tmp)$
   An atom:          true 
   and a list:       one two three  
   and an integer:   42 
 (%i7) close(s)$
 </pre>
+<p>Beispiel: Lesen aus einer bin&auml;ren Datei. Siehe <a href="#readbyte">readbyte</a>.
+</p>
 <p><a name="close"></a>
 </p><dl>
-<dt><u>Function:</u> <b>close</b><i> (<var>stream</var>) </i>
-<a name="IDX2639"></a>
+<dt><u>Funktion:</u> <b>close</b><i> (<var>stream</var>) </i>
+<a name="IDX2646"></a>
 </dt>
-<dd><p>Closes <var>stream</var> and returns <code>true</code> if <var>stream</var> had been open.
-</p></dd></dl>
+<dd><p>Schlie&szlig;t den Datenstrom <var>stream</var> und gibt <code>true</code> zur&uuml;ck, 
+wenn <var>stream</var> noch ge&ouml;ffnet war.
+</p>
+</dd></dl>
 
 <p><a name="flength"></a>
 </p><dl>
-<dt><u>Function:</u> <b>flength</b><i> (<var>stream</var>)</i>
-<a name="IDX2640"></a>
+<dt><u>Funktion:</u> <b>flength</b><i> (<var>stream</var>)</i>
+<a name="IDX2647"></a>
 </dt>
-<dd><p>Returns the number of elements in <var>stream</var> 
-where <var>stream</var> has to be a stream from or to a file.
+<dd><p><var>stream</var> muss ein ge&ouml;ffneter Datenstrom in eine oder aus einer Datei sein. 
+<code>flength</code> gibt dann die Anzahl der Bytes zur&uuml;ck, die sich momentan in 
+dieser Datei befinden.
+</p>
+<p>Beispiel: Siehe <a href="#writebyte">writebyte</a> .
 </p></dd></dl>
+
+<p><a name="flush_005foutput"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>flush_output</b><i> (<var>stream</var>) </i>
+<a name="IDX2648"></a>
+</dt>
+<dd><p>Leert den Inhalt des Dateiausgabestroms <var>stream</var> in die Datei.
+</p>
+<p>Beispiel: Siehe <a href="#writebyte">writebyte</a> .
+</p>
+</dd></dl>
 
 <p><a name="fposition"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fposition</b><i> (<var>stream</var>)</i>
-<a name="IDX2641"></a>
+<a name="IDX2649"></a>
 </dt>
 <dt><u>Function:</u> <b>fposition</b><i> (<var>stream</var>, <var>pos</var>)</i>
-<a name="IDX2642"></a>
+<a name="IDX2650"></a>
 </dt>
-<dd><p>Returns the current position in <var>stream</var>, if <var>pos</var> is not used. 
-If <var>pos</var> is used, <code>fposition</code> sets the position in <var>stream</var>.
-<var>stream</var> has to be a stream from or to a file and 
-<var>pos</var> has to be a positive number where the first element in <var>stream</var> 
-is in position 1.
-</p></dd></dl>
+<dd><p>Ohne das optionale Argument <var>pos</var> gibt <code>fposition</code> die aktuelle Position 
+in dem Datenstrom <var>stream</var> zur&uuml;ck. 
+Wird <var>pos</var> verwendet, legt <code>fposition</code> diesen Wert als aktuelle Position 
+in <var>stream</var> fest. <var>pos</var> muss eine positive Zahl sein. 
+</p>
+<p>Die Positionen in Datenstr&ouml;men sind wie in Zeichenketten und Listen 1-indiziert, 
+d.h. das erste Element in <var>stream</var> hat die Position 1.
+</p>
+</dd></dl>
 
 <p><a name="freshline"></a>
 </p><dl>
 <dt><u>Function:</u> <b>freshline</b><i> () </i>
-<a name="IDX2643"></a>
+<a name="IDX2651"></a>
 </dt>
 <dt><u>Function:</u> <b>freshline</b><i> (<var>stream</var>)</i>
-<a name="IDX2644"></a>
+<a name="IDX2652"></a>
 </dt>
-<dd><p>Writes a new line (to <var>stream</var>), if the position is not at the beginning of 
-a line.  See also <code><a href="#newline">newline</a></code>.
-</p></dd></dl>
+<dd><p>Schreibt einen Zeilenumbruch in den Standardausgabestrom, falls die aktuelle 
+Ausgabeposition nicht gerade der Anfang einer Zeile ist und gibt <code>true</code> 
+zur&uuml;ck. Bei der Verwendung des optionalen Arguments <var>stream</var> wird der 
+Umbruch in diesen Datenstrom geschrieben. 
+</p>
+<p>Es gibt Situationen, in denen <code>freshline()</code> nicht wie erwartet funktioniert.
+</p>
+<p>Siehe auch <a href="#newline">newline</a>.
+</p>
+</dd></dl>
 
 <p><a name="get_005foutput_005fstream_005fstring"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>get_output_stream_string</b><i> (<var>stream</var>)</i>
-<a name="IDX2645"></a>
+<a name="IDX2653"></a>
 </dt>
-<dd><p>Gibt Buchstaben, aktuell in dem ge&ouml;ffneten Datenstrom <var>stream</var> 
+<dd><p>Gibt Schriftzeichen, die aktuell in dem ge&ouml;ffneten Datenstrom <var>stream</var> 
 enthalten sind, in einer Zeichenkette zur&uuml;ck. Die zur&uuml;ck gegebenen 
-Buchstaben werden dabei aus dem Datenstrom entfernt. <var>stream</var> muss durch 
+Zeichen werden dabei aus dem Datenstrom entfernt. <var>stream</var> muss durch 
 <code>make_string_output_stream</code> erzeugt worden sein.
 </p>
 <p>Beispiel: Siehe <a href="#make_005fstring_005foutput_005fstream">make_string_output_stream</a> .
@@ -296,20 +335,20 @@ Buchstaben werden dabei aus dem Datenstrom entfernt. <var>stream</var> muss durc
 <p><a name="make_005fstring_005finput_005fstream"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>make_string_input_stream</b><i> (<var>string</var>)</i>
-<a name="IDX2646"></a>
+<a name="IDX2654"></a>
 </dt>
 <dt><u>Funktion:</u> <b>make_string_input_stream</b><i> (<var>string</var>, <var>start</var>)</i>
-<a name="IDX2647"></a>
+<a name="IDX2655"></a>
 </dt>
 <dt><u>Funktion:</u> <b>make_string_input_stream</b><i> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2648"></a>
+<a name="IDX2656"></a>
 </dt>
 <dd><p>Gibt einen Datenstrom zur&uuml;ck, der Teile der Zeichenkette <var>string</var> 
 und ein Dateiende enth&auml;lt. 
 Ohne optionale Argumente enth&auml;lt der Strom die gesamte Zeichenkette 
-und ist vor dem ersten Buchstaben positioniert. Mit den optionalen Argumenten 
+und ist vor dem ersten Zeichen positioniert. Mit den optionalen Argumenten 
 <var>start</var> und <var>end</var> l&auml;sst sich der Abschnitt der Zeichenkette festlegen, 
-den der Datenstrom enth&auml;lt. Der erste Buchstabe befindet sich dabei an der 
+den der Datenstrom enth&auml;lt. Das erste Zeichen befindet sich dabei an der 
 Position 1.
 </p> 
 <pre class="example">(%i1) istream : make_string_input_stream(&quot;text&quot;, 1, 4);
@@ -322,10 +361,10 @@ t e x
 <p><a name="make_005fstring_005foutput_005fstream"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>make_string_output_stream</b><i> ()</i>
-<a name="IDX2649"></a>
+<a name="IDX2657"></a>
 </dt>
-<dd><p>Gibt einen Datenstrom zur&uuml;ck, der Buchstaben aufnehmen kann. Die aktuell  
-im Strom enthaltenden Buchstaben k&ouml;nnen mit <a href="#get_005foutput_005fstream_005fstring">get_output_stream_string</a> 
+<dd><p>Gibt einen Datenstrom zur&uuml;ck, der Schriftzeichen aufnehmen kann. Die aktuell  
+im Strom enthaltenden Zeichen k&ouml;nnen mit <a href="#get_005foutput_005fstream_005fstring">get_output_stream_string</a> 
 entnommen werden.
 </p> 
 <pre class="example">(%i1) ostream : make_string_output_stream();
@@ -345,52 +384,67 @@ entnommen werden.
 
 <p><a name="newline"></a>
 </p><dl>
-<dt><u>Function:</u> <b>newline</b><i> () </i>
-<a name="IDX2650"></a>
+<dt><u>Funktion:</u> <b>newline</b><i> () </i>
+<a name="IDX2658"></a>
 </dt>
-<dt><u>Function:</u> <b>newline</b><i> (<var>stream</var>)</i>
-<a name="IDX2651"></a>
+<dt><u>Funktion:</u> <b>newline</b><i> (<var>stream</var>)</i>
+<a name="IDX2659"></a>
 </dt>
-<dd><p>Writes a new line (to <var>stream</var>).  See <code><a href="#sprint">sprint</a></code> for an example of using
-<code>newline()</code>.  Note that there are some cases, where <code>newline()</code> does 
-not work as expected.
-</p></dd></dl>
+<dd><p>Schreibt einen Zeilenumbruch in den Standardausgabestrom und gibt <code>false</code> 
+zur&uuml;ck. Bei der Verwendung des optionalen Arguments <var>stream</var> wird der 
+Umbruch in diesen Datenstrom geschrieben. 
+Es gibt Situationen, in denen <code>newline()</code> nicht wie erwartet funktioniert.
+</p>
+<p>Beispiel: Siehe <a href="#sprint">sprint</a>.
+</p>
+</dd></dl>
 
 <p><a name="opena"></a>
 </p><dl>
-<dt><u>Function:</u> <b>opena</b><i> (<var>file</var>)</i>
-<a name="IDX2652"></a>
+<dt><u>Funktion:</u> <b>opena</b><i> (<var>file</var>)</i>
+<a name="IDX2660"></a>
 </dt>
-<dd><p>Returns an output stream to <var>file</var>.
-If an existing file is opened, <code>opena</code> appends elements at the end of file.
+<dd><p>Gibt einen Dateiausgabestrom f&uuml;r Schriftzeichen zur&uuml;ck. 
+Sollte die Textdatei <var>file</var> nicht existieren, wird sie erzeugt. 
+Wird eine bereits vorhandene Datei ge&ouml;ffnet, werden alle Ausgaben in die 
+Datei am Ende hinzugef&uuml;gt.
+</p>
+<p><a href="maxima_63.html#SEC341">opena_binary</a> 
+ist die entsprechende Funktion f&uuml;r die Ausgabe in eine Bin&auml;rdatei.
 </p></dd></dl>
 
 <p><a name="openr"></a>
 </p><dl>
-<dt><u>Function:</u> <b>openr</b><i> (<var>file</var>)</i>
-<a name="IDX2653"></a>
+<dt><u>Funktion:</u> <b>openr</b><i> (<var>file</var>)</i>
+<a name="IDX2661"></a>
 </dt>
-<dd><p>Returns an input stream to <var>file</var>.  If <var>file</var> does not exist, it will 
-be created.
+<dd><p>Gibt einen Dateieingabestrom f&uuml;r Schriftzeichen aus einer Textdatei zur&uuml;ck. 
+Voraussetzung ist, dass die Datei <var>file</var> bereits existiert. 
+</p>
+<p><a href="maxima_63.html#SEC341">openr_binary</a> 
+ist die entsprechende Funktion f&uuml;r die Eingabe aus einer Bin&auml;rdatei.
 </p></dd></dl>
 
 <p><a name="openw"></a>
 </p><dl>
-<dt><u>Function:</u> <b>openw</b><i> (<var>file</var>)</i>
-<a name="IDX2654"></a>
+<dt><u>Funktion:</u> <b>openw</b><i> (<var>file</var>)</i>
+<a name="IDX2662"></a>
 </dt>
-<dd><p>Returns an output stream to <var>file</var>.
-If <var>file</var> does not exist, it will be created.
-If an existing file is opened, <code>openw</code> destructively modifies <var>file</var>.
+<dd><p>Gibt einen Dateiausgabestrom f&uuml;r Schriftzeichen zur&uuml;ck. 
+Sollte die Textdatei <var>file</var> nicht existieren, wird sie erzeugt. 
+Wird eine bereits vorhandene Datei ge&ouml;ffnet, wird sie destruktiv ver&auml;ndert. 
+</p>
+<p><a href="maxima_63.html#SEC341">openw_binary</a> 
+ist die entsprechende Funktion f&uuml;r die Ausgabe in eine Bin&auml;rdatei.
 </p></dd></dl>
 
 <p><a name="printf"></a>
 </p><dl>
 <dt><u>Function:</u> <b>printf</b><i> (<var>dest</var>, <var>string</var>)</i>
-<a name="IDX2655"></a>
+<a name="IDX2663"></a>
 </dt>
 <dt><u>Function:</u> <b>printf</b><i> (<var>dest</var>, <var>string</var>, <var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX2656"></a>
+<a name="IDX2664"></a>
 </dt>
 <dd><p>Erzeugt eine formatierte Ausgabe. Der Zielparameter <var>dest</var> gibt an, wo die 
 Ausgabe erfolgen soll. M&ouml;glich sind hier ein Ausgabestrom oder die globalen 
@@ -398,10 +452,10 @@ Variablen <code>true</code> und <code>false</code>. <code>true</code> bewirkt ei
 Der R&uuml;ckgabewert von <code>printf</code> ist in diesem Fall <code>false</code>. 
 <code>false</code> als Zielparameter bewirkt die Ausgabe im R&uuml;ckgabewert. 
 </p>
-<p>Die Buchstaben des Kontrollparameters <var>string</var> werden der Reihe nach ausgegeben, 
+<p>Die Zeichen des Kontrollparameters <var>string</var> werden der Reihe nach ausgegeben, 
 wobei jedoch eine Tilde eine Direktive einleitet. Die Direktiven verwenden 
 dann im Allgemeinen die nachstehenden Parameter <var>expr_1</var>, &hellip;, <var>expr_n</var>, 
-um die Ausgabe zu erzeugen. Der Buchstabe nach der Tilde gibt dabei an, 
+um die Ausgabe zu erzeugen. Das Zeichen nach der Tilde gibt dabei an, 
 welche Art der Formatierung gew&uuml;nscht ist. 
 </p>
 <p><code>printf</code> stellt die Common Lisp Funktion <code>format</code> in Maxima zur Verf&uuml;gung. 
@@ -504,12 +558,39 @@ eingef&uuml;hrt.
 </pre>
 </dd></dl>
 
+<p><a name="readbyte"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>readbyte</b><i> (<var>stream</var>) </i>
+<a name="IDX2665"></a>
+</dt>
+<dd><p>Entfernt das erste Byte aus dem bin&auml;ren Eingabestrom <var>stream</var> und gibt es 
+zur&uuml;ck. 
+Ist das Ende der Datei (EOF) erreicht, wird <code>false</code> zur&uuml;ck gegeben.
+</p>
+<p>Beispiel: Die ersten 16 Byte aus einer mit AES in OpenSSL verschl&uuml;sselten 
+Datei werden gelesen und ausgewertet. 
+</p>
+<pre class="example">(%i1) ibase: obase: 16.$
+
+(%i2) in: openr_binary(&quot;msg.bin&quot;);
+(%o2)                       #&lt;input stream msg.bin&gt;
+(%i3) (L:[],  thru 16. do push(readbyte(in), L),  L:reverse(L));
+(%o3) [53, 61, 6C, 74, 65, 64, 5F, 5F, 88, 56, 0DE, 8A, 74, 0FD, 0AD, 0F0]
+(%i4) close(in);
+(%o4)                                true
+(%i5) map(ascii, rest(L,-8));
+(%o5)                      [S, a, l, t, e, d, _, _]
+(%i6) salt: octets_to_number(rest(L,8));
+(%o6)                          8856de8a74fdadf0
+</pre>
+</dd></dl>
+
 <p><a name="readchar"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>readchar</b><i> (<var>stream</var>)</i>
-<a name="IDX2657"></a>
+<a name="IDX2666"></a>
 </dt>
-<dd><p>Entfernt und gibt den ersten Buchstaben in <var>stream</var> zur&uuml;ck. 
+<dd><p>Entfernt und gibt das erste Schriftzeichen in <var>stream</var> zur&uuml;ck. 
 Falls das Ende des Streams erreicht sein sollte, gibt <code>readchar</code> 
 <code>false</code> zur&uuml;ck.
 </p>
@@ -519,37 +600,80 @@ Falls das Ende des Streams erreicht sein sollte, gibt <code>readchar</code>
 <p><a name="readline"></a>
 </p><dl>
 <dt><u>Function:</u> <b>readline</b><i> (<var>stream</var>)</i>
-<a name="IDX2658"></a>
+<a name="IDX2667"></a>
 </dt>
-<dd><p>Returns a string containing the characters from the current position in 
-<var>stream</var> up to the end of the line or <code>false</code> if the end of the file 
-is encountered.
-</p></dd></dl>
+<dd><p>Gibt die Zeichenkette zur&uuml;ck, die s&auml;mtliche Zeichen von der 
+aktuellen Position in <var>stream</var> bis zum Ende der Zeile enth&auml;lt 
+oder <code>false</code>, falls das Ende der Datei erreicht wurde.
+</p>
+</dd></dl>
 
 <p><a name="sprint"></a>
 </p><dl>
-<dt><u>Function:</u> <b>sprint</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX2659"></a>
+<dt><u>Funktion:</u> <b>sprint</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
+<a name="IDX2668"></a>
 </dt>
-<dd><p>Evaluates and displays its arguments one after the other `on a line' starting 
-at the leftmost position.  The numbers are printed with the '-' right next to 
-the number, and it disregards line length.  <code>newline()</code>, which will be 
-autoloaded from <code>stringproc.lisp</code> might be useful, if you whish to place 
-intermediate line breaking.
+<dd><p>Wertet ihre Argumente der Reihe nach von links nach rechts aus und gibt sie dann 
+auf einer Linie aus. Zeilenbegrenzungen werden dabei au&szlig;er Acht gelassen. 
+An die ausgegebenen Ausdr&uuml;cke wird jeweils rechts ein Leerzeichen angef&uuml;gt. 
 </p>
-<p>Examples:
+<p>Beispiel: Sequentielle Ausgabe mit <code>sprint</code>. 
+Zeilenumbr&uuml;che werden hier mit <code>newline()</code> erzeugt.
 </p>
-<pre class="example">(%i1) for n:0 thru 19 do sprint( fib(n) )$
+<pre class="example">(%i1) for n:0 thru 19 do sprint(fib(n))$
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
 (%i2) for n:0 thru 22 do ( 
-         sprint(fib(n)), if mod(n,10)=9 then newline() )$
+         sprint(fib(n)), 
+         if mod(n,10) = 9 then newline() )$
 0 1 1 2 3 5 8 13 21 34 
 55 89 144 233 377 610 987 1597 2584 4181 
 6765 10946 17711 
-</pre></dd></dl>
+</pre>
+</dd></dl>
+
+<p><a name="writebyte"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>writebyte</b><i> (<var>byte</var>, <var>stream</var>) </i>
+<a name="IDX2669"></a>
+</dt>
+<dd><p>Schreibt das Byte <var>byte</var> in den bin&auml;ren Ausgabestrom <var>stream</var>. 
+<code>writebyte</code> gibt <code>byte</code> zur&uuml;ck.
+</p>
+<p>Beispiel: Es werden Bytes in eine Bin&auml;rdatei geschrieben. 
+In diesem Beispiel entsprechen s&auml;mtliche Bytes druckbaren Zeichen, 
+die mit Hilfe von <code>printfile</code> ausgegeben werden k&ouml;nnen. 
+Die Bytes verbleiben so lange im Datenstrom, bis die Funktionen <code>flush_output</code> 
+oder <code>close</code> aufgerufen werden.
+</p>
+<pre class="example">(%i1) ibase: obase: 16.$
+
+(%i2) bytes: string_to_octets(&quot;GNU/Linux&quot;);
+(%o2)                [47, 4E, 55, 2F, 4C, 69, 6E, 75, 78]
+(%i3) out: openw_binary(&quot;test.bin&quot;);
+(%o3)                      #&lt;output stream test.bin&gt;
+(%i4) for i thru 3 do writebyte(bytes[i], out);
+(%o4)                                done
+(%i5) printfile(&quot;test.bin&quot;)$
+
+(%i6) flength(out);
+(%o6)                                  0
+(%i7) flush_output(out);
+(%o7)                                true
+(%i8) flength(out);
+(%o8)                                  3
+(%i9) printfile(&quot;test.bin&quot;)$
+GNU
+(%i0A) for b in rest(bytes,3) do writebyte(b, out);
+(%o0A)                               done
+(%i0B) close(out);
+(%o0B)                               true
+(%i0C) printfile(&quot;test.bin&quot;)$
+GNU/Linux
+</pre>
+</dd></dl>
 
 <hr size="6">
-<a name="Functions-and-Variables-for-characters"></a>
+<a name="Schriftzeichen"></a>
 <a name="SEC383"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC382" title="Previous section in reading order"> &lt; </a>]</td>
@@ -557,290 +681,518 @@ intermediate line breaking.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 73.3 Functions and Variables for characters </h2>
+<h2 class="section"> 73.3 Schriftzeichen </h2>
+
+<p>In Maxima sind Schriftzeichen Zeichenketten der L&auml;nge 1.
+</p>
+<p><a name="adjust_005fexternal_005fformat"></a>
+</p><dl>
+<dt><u>Function:</u> <b>adjust_external_format</b><i> () </i>
+<a name="IDX2670"></a>
+</dt>
+<dd><p>Gibt Informationen zum aktuellen externen Format des Lisp Lesers aus 
+und in dem Fall, dass die Kodierung des externen Formats nicht mit der 
+Kodierung der Anwendung, in der Maxima l&auml;uft, &uuml;bereinstimmt, 
+versucht <code>adjust_external_format</code>, die Kodierung anzupassen 
+oder gibt entsprechende Hilfen oder Anleitungen aus. 
+<code>adjust_external_format</code> gibt <code>true</code> zur&uuml;ck, wenn das externe 
+Format ge&auml;ndert wurde und <code>false</code>, wenn nicht.
+</p>
+<p>Funktionen wie <a href="#cint">cint</a>, <a href="#unicode">unicode</a>, <a href="#octets_005fto_005fstring">octets_to_string</a> 
+und <a href="#string_005fto_005foctets">string_to_octets</a> ben&ouml;tigen UTF-8 als das externe Format 
+des Lisp Lesers, um &uuml;ber dem vollst&auml;ndigen Bereich der Unicode-Zeichen 
+korrekt arbeiten zu k&ouml;nnen.
+</p>
+<p>Beispiele (Maxima in Windows, M&auml;rz 2016): 
+Die Verwendung von <code>adjust_external_format</code> in dem Fall, dass das 
+externe Format nicht mit der Kodierung der Anwendung, in der Maxima l&auml;uft, 
+&uuml;bereinstimmt.
+</p>
+<p>1. Maxima in der Kommandozeile
+</p>
+<p>F&uuml;r die Sitzung in einem Terminal wird empfohlen, ein mit SBCL kompiliertes 
+Maxima zu verwenden. Unicode wird hier standardm&auml;&szlig;ig unterst&uuml;tzt 
+und ein Aufruf von <code>adjust_external_format</code> ist nicht notwendig. 
+</p>
+<p>Falls Maxima mit CLISP oder GCL kompiliert wurde, wird empfohlen, 
+die Kodierung des Terminals von CP850 in CP1252 abzu&auml;ndern. 
+<code>adjust_external_format</code> gibt eine entsprechende Hilfe aus.
+</p>
+<p>CCL liest UTF-8, obwohl der Input vom Terminal standardm&auml;&szlig;ig in CP850 
+kodiert ist. CP1252 wird jedoch von CCL nicht unterst&uuml;tzt. 
+<code>adjust_external_format</code> gibt deshalb eine Anleitung aus, 
+wie die Kodierung des Terminals und die des externen Formats beide 
+auf ISO-8859-1 abge&auml;ndert werden k&ouml;nnen.
+</p>
+<p>2. wxMaxima
+</p>
+<p>In wxMaxima liest SBCL standardm&auml;&szlig;ig CP1252.
+Der Input von der Anwendung (wxMaxima) ist jedoch UTF-8-kodiert. 
+Hier ist eine Anpassung erforderlich. 
+</p>
+<p>Ein Aufruf von <code>adjust_external_format</code> und ein Neustart von Maxima 
+&auml;ndern das standardm&auml;&szlig;ige externe Format auf UTF-8.
+</p>
+<pre class="example">(%i1)adjust_external_format();
+The line
+(setf sb-impl::*default-external-format* :utf-8)
+has been appended to the init file
+C:/Users/Username/.sbclrc
+Please restart Maxima to set the external format to UTF-8.
+(%i1) false
+</pre>
+<p>Maxima wird neu gestartet.
+</p>
+<pre class="example">(%i1) adjust_external_format();
+The external format is currently UTF-8
+and has not been changed.
+(%i1) false
+</pre>
+</dd></dl>
 
 <p><a name="alphacharp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>alphacharp</b><i> (<var>char</var>)</i>
-<a name="IDX2660"></a>
+<a name="IDX2671"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>char</var> is an alphabetic character.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, falls <var>char</var> ein Buchstabe eines Alphabets ist. 
+</p>
+<p>Um ein Nicht-US-ASCII-Zeichen als Buchstaben eines Alphabets erkennen zu k&ouml;nnen, 
+muss das unter Maxima liegende Lisp Unicode voll unterst&uuml;tzen. 
+So wird z.B. ein Umlaut mit SBCL in GNU/Linux als Buchstabe erkannt, 
+mit GCL jedoch nicht. 
+(In Windows muss ein mit SBCL kompiliertes Maxima auf UTF-8 umgestellt worden sein. 
+Siehe hierzu <a href="#adjust_005fexternal_005fformat">adjust_external_format</a>.)
+</p>
+<p>Beispiele:
+</p>
+<p>Das unter Maxima liegende Lisp (SBCL, GNU/Linux) kann das eingegebene Zeichen 
+in ein Lisp-Schriftzeichen umwandeln und untersuchen.
+</p>
+<pre class="example">(%i1) alphacharp(&quot;&uuml;&quot;);
+(%o1)                          true
+</pre>
+<p>Mit GCL ist dies nicht m&ouml;glich. Es kommt zu einem Fehlerabbruch.
+</p>
+<pre class="example">(%i1) alphacharp(&quot;u&quot;);
+(%o1)                          true
+(%i2) alphacharp(&quot;&uuml;&quot;);
+
+package stringproc: &uuml; cannot be converted into a Lisp character.
+ -- an error.
+</pre>
+</dd></dl>
 
 <p><a name="alphanumericp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>alphanumericp</b><i> (<var>char</var>)</i>
-<a name="IDX2661"></a>
+<a name="IDX2672"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>char</var> is an alphabetic character or a digit.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, falls <var>char</var> ein Buchstabe eines Alphabets 
+oder ein Zahlzeichen ist 
+(als Zahlzeichen werden hier nur entprechende US-ASCII-Zeichen betrachtet).
+</p>
+<p>Hinweis: Siehe Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
 
 <p><a name="ascii"></a>
 </p><dl>
-<dt><u>Function:</u> <b>ascii</b><i> (<var>int</var>)</i>
-<a name="IDX2662"></a>
+<dt><u>Funktion:</u> <b>ascii</b><i> (<var>int</var>)</i>
+<a name="IDX2673"></a>
 </dt>
-<dd><p>Returns the character corresponding to the ASCII number <var>int</var>.
-( -1 &lt; int &lt; 256 )
+<dd><p>Gibt das US-ASCII-Zeichen zur&uuml;ck, das der Ganzzahl <var>int</var> entspricht. 
+<var>int</var> muss dabei kleiner als <code>128</code> sein.
 </p>
-<p>Examples:
+<p>Siehe <a href="#unicode">unicode</a> f&uuml;r die Umwandlung von Codepunkten gr&ouml;&szlig;er <code>127</code>.
 </p>
-<pre class="example">(%i1) for n from 0 thru 255 do ( 
-   tmp: ascii(n), if alphacharp(tmp) then sprint(tmp),
-      if n=96 then newline() )$
+<p>Beispiele:
+</p>
+<pre class="example">(%i1) for n from 0 thru 127 do ( 
+        ch: ascii(n), 
+        if alphacharp(ch) then sprint(ch),
+        if n = 96 then newline() )$
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
 a b c d e f g h i j k l m n o p q r s t u v w x y z
-</pre></dd></dl>
+</pre>
+</dd></dl>
 
 <p><a name="cequal"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cequal</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2663"></a>
+<a name="IDX2674"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>char_1</var> and <var>char_2</var> are the same.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, falls <var>char_1</var> und <var>char_2</var> ein 
+und das selbe Schriftzeichen sind.
+</p>
+</dd></dl>
 
 <p><a name="cequalignore"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cequalignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2664"></a>
+<a name="IDX2675"></a>
 </dt>
-<dd><p>Like <code><a href="#cequal">cequal</a></code> but ignores case.
-</p></dd></dl>
+<dd><p>Arbeitet wie <a href="#cequal">cequal</a>, ignoriert jedoch die Gro&szlig;- und Kleinschreibung,  
+was f&uuml;r Nicht-US-ASCII-Zeichen nur m&ouml;glich ist, wenn das unter Maxima liegende 
+Lisp einen Buchstaben auch als Buchstaben eines Alphabets erkennen kann.
+Siehe hierzu die Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
 
 <p><a name="cgreaterp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cgreaterp</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2665"></a>
+<a name="IDX2676"></a>
 </dt>
-<dd><p>Returns <code>true</code> if the ASCII number of <var>char_1</var> is greater than the 
-number of <var>char_2</var>.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn der Codepunkt des Zeichens <var>char_1</var> 
+gr&ouml;&szlig;er ist als der des Zeichens <var>char_2</var>.
+</p>
+</dd></dl>
 
 <p><a name="cgreaterpignore"></a>
 </p><dl>
-<dt><u>Function:</u> <b>cgreaterpignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2666"></a>
+<dt><u>Funktion:</u> <b>cgreaterpignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2677"></a>
 </dt>
-<dd><p>Like <code><a href="#cgreaterp">cgreaterp</a></code> but ignores case.
-</p></dd></dl>
+<dd><p>Arbeitet wie <a href="#cgreaterp">cgreaterp</a>, ignoriert jedoch die Gro&szlig;- und Kleinschreibung,  
+was f&uuml;r Nicht-US-ASCII-Zeichen nur m&ouml;glich ist, wenn das unter Maxima liegende 
+Lisp einen Buchstaben auch als Buchstaben eines Alphabets erkennen kann.
+Siehe hierzu die Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
 
 <p><a name="charp"></a>
 </p><dl>
-<dt><u>Function:</u> <b>charp</b><i> (<var>obj</var>)</i>
-<a name="IDX2667"></a>
+<dt><u>Funktion:</u> <b>charp</b><i> (<var>obj</var>)</i>
+<a name="IDX2678"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>obj</var> is a Maxima character.
-See introduction for example.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn <var>obj</var> ein Schriftzeichen ist.
+</p>
+<p>Beispiel: Siehe Einf&uuml;hrung.
+</p>
+</dd></dl>
 
 <p><a name="cint"></a>
 </p><dl>
-<dt><u>Function:</u> <b>cint</b><i> (<var>char</var>)</i>
-<a name="IDX2668"></a>
+<dt><u>Funktion:</u> <b>cint</b><i> (<var>char</var>)</i>
+<a name="IDX2679"></a>
 </dt>
-<dd><p>Returns the ASCII number of <var>char</var>.
-</p></dd></dl>
+<dd><p>Gibt den Unicode Codepunkt des Arguments <var>char</var> zur&uuml;ck, das ein 
+Schriftzeichen sein muss, d.h. eine Zeichenkette der L&auml;nge <code>1</code>.
+</p>
+<p>Beispiele: Der hexadedimale Codepunkt von Schriftzeichen 
+(Maxima kompiliert mit SBCL in GNU/Linux). 
+</p>
+<pre class="example">(%i1) obase: 16.$
+(%i2) map(cint, [&quot;$&quot;,&quot;&pound;&quot;,&quot;&euro;&quot;]);
+(%o2)                           [24, 0A3, 20AC]
+</pre>
+<p>Warnung: In Windows ist es nicht m&ouml;glich, Schriftzeichen, 
+die Codepunkten gr&ouml;&szlig;er 16 Bit entsprechen, in wxMaxima einzugeben, 
+wenn Maxima mit SBCL kompiliert wurde und das aktuelle externe Format nicht UTF-8 ist. 
+Siehe <a href="#adjust_005fexternal_005fformat">adjust_external_format</a> f&uuml;r weitere Informationen.
+</p>
+
+<p>CMUCL verarbeitet solche Zeichen nicht als ein einziges Zeichen und <code>cint</code> 
+gibt dann <code>false</code> zur&uuml;ck. 
+Als Ausweg kann hier die Umwandlung von Schriftzeichen in Codepunkte &uuml;ber 
+UTF-8-Oktette dienen: <br>
+<code>utf8_to_unicode(string_to_octets(character));</code>
+</p>
+
+<p>Siehe <a href="#utf8_005fto_005funicode">utf8_to_unicode</a>, <a href="#string_005fto_005foctets">string_to_octets</a>.
+</p>
+</dd></dl>
 
 <p><a name="clessp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>clessp</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2669"></a>
+<a name="IDX2680"></a>
 </dt>
-<dd><p>Returns <code>true</code> if the ASCII number of <var>char_1</var> is less than the number 
-of <var>char_2</var>.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn der Codepunkt des Zeichens <var>char_1</var> 
+kleiner ist als der des Zeichens <var>char_2</var>.
+</p>
+</dd></dl>
 
 <p><a name="clesspignore"></a>
 </p><dl>
-<dt><u>Function:</u> <b>clesspignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2670"></a>
+<dt><u>Funktion:</u> <b>clesspignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2681"></a>
 </dt>
-<dd><p>Like <code><a href="#clessp">clessp</a></code> but ignores case.
-</p></dd></dl>
+<dd><p>Arbeitet wie <a href="#clessp">clessp</a>, ignoriert jedoch die Gro&szlig;- und Kleinschreibung,  
+was f&uuml;r Nicht-US-ASCII-Zeichen nur m&ouml;glich ist, wenn das unter Maxima liegende 
+Lisp einen Buchstaben auch als Buchstaben eines Alphabets erkennen kann.
+Siehe hierzu die Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
 
 <p><a name="constituent"></a>
 </p><dl>
-<dt><u>Function:</u> <b>constituent</b><i> (<var>char</var>)</i>
-<a name="IDX2671"></a>
+<dt><u>Funktion:</u> <b>constituent</b><i> (<var>char</var>)</i>
+<a name="IDX2682"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>char</var> is a graphic character and not the space 
-character.  A graphic character is a character one can see, plus the space 
-character.  (<code>constituent</code> is defined by Paul Graham, ANSI Common Lisp, 
-1996, page 67.)
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn <var>char</var> ein graphisches Schriftzeichen, 
+aber kein Leerzeichen ist. 
+Ein graphisches Schriftzeichen ist ein Leerzeichen oder ein Zeichen, das man sehen kann. 
+(<code>constituent</code> wurde definiert von Paul Graham.
+Siehe Paul Graham, ANSI Common Lisp, 1996, Seite 67.)
 </p>
-<p>Example:
+<p>Beispiel:
 </p>
 <pre class="example">(%i1) for n from 0 thru 255 do ( 
 tmp: ascii(n), if constituent(tmp) then sprint(tmp) )$
 ! &quot; #  %  ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @ A B
 C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c
 d e f g h i j k l m n o p q r s t u v w x y z { | } ~
-</pre></dd></dl>
+</pre>
+<p>Hinweis: Siehe Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
 
-<p><a name="cunlisp"></a>
-</p><dl>
-<dt><u>Function:</u> <b>cunlisp</b><i> (<var>lisp_char</var>)</i>
-<a name="IDX2672"></a>
-</dt>
-<dd><p>Converts a Lisp character into a Maxima character.
-(You won't need it.)
-</p></dd></dl>
 
 <p><a name="digitcharp"></a>
 </p><dl>
-<dt><u>Function:</u> <b>digitcharp</b><i> (<var>char</var>)</i>
-<a name="IDX2673"></a>
+<dt><u>Funktion:</u> <b>digitcharp</b><i> (<var>char</var>)</i>
+<a name="IDX2683"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>char</var> is a digit.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn <var>char</var> ein Zahlzeichen ist, 
+wobei als Zahlzeichen hier nur entsprechende US-ASCII-Zeichen betrachtet werden.
+</p>
+</dd></dl>
 
-<p><a name="lcharp"></a>
-</p><dl>
-<dt><u>Function:</u> <b>lcharp</b><i> (<var>obj</var>)</i>
-<a name="IDX2674"></a>
-</dt>
-<dd><p>Returns <code>true</code> if <var>obj</var> is a Lisp character.
-(You won't need it.)
-</p></dd></dl>
 
 <p><a name="lowercasep"></a>
 </p><dl>
-<dt><u>Function:</u> <b>lowercasep</b><i> (<var>char</var>)</i>
-<a name="IDX2675"></a>
+<dt><u>Funktion:</u> <b>lowercasep</b><i> (<var>char</var>)</i>
+<a name="IDX2684"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>char</var> is a lowercase character.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn <var>char</var> ein Kleinbuchstabe ist.
+</p>
+<p>Hinweis: Siehe Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
 
 <p><a name="newline_005fvariable"></a>
 </p><dl>
 <dt><u>Variable:</u> <b>newline</b>
-<a name="IDX2676"></a>
+<a name="IDX2685"></a>
 </dt>
-<dd><p>The newline character.
-</p></dd></dl>
+<dd><p>Das Steuerzeichen f&uuml;r den Zeilenvorschub (ASCII-Zeichen 10).
+</p>
+</dd></dl>
 
 <p><a name="space"></a>
 </p><dl>
 <dt><u>Variable:</u> <b>space</b>
-<a name="IDX2677"></a>
+<a name="IDX2686"></a>
 </dt>
-<dd><p>The space character.
-</p></dd></dl>
+<dd><p>Das Leerzeichen.
+</p>
+</dd></dl>
 
 <p><a name="tab"></a>
 </p><dl>
 <dt><u>Variable:</u> <b>tab</b>
-<a name="IDX2678"></a>
+<a name="IDX2687"></a>
 </dt>
-<dd><p>The tab character.
-</p></dd></dl>
+<dd><p>Das Tabulatorzeichen.
+</p>
+</dd></dl>
+
+<p><a name="unicode"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>unicode</b><i> (<var>arg</var>) </i>
+<a name="IDX2688"></a>
+</dt>
+<dd><p>Gibt das durch <var>arg</var> definierte Schriftzeichen zur&uuml;ck. 
+<var>arg</var> kann ein Unicode Codepunkt oder auch eine Zeichenkette mit einem Namen sein, 
+falls das unter Maxima liegende Lisp Unicode vollst&auml;ndig unterst&uuml;tzt.
+</p>
+<p>Beispiel: Durch hexadezimale Codepunkte definierte Schriftzeichen
+(Maxima kompiliert mit SBCL in GNU/Linux). 
+</p>
+<pre class="example">(%i1) ibase: 16.$
+(%i2) map(unicode, [24, 0A3, 20AC]);
+(%o2)                            [$, &pound;, &euro;]
+</pre>
+<p>Warnung: In wxMaxima in Windows ist es nicht m&ouml;glich, 
+Codepunkte gr&ouml;&szlig;er 16 Bit in Schriftzeichen umzuwandeln,
+wenn Maxima mit SBCL kompiliert wurde 
+und das aktuelle externe Format nicht UTF-8 ist. 
+Siehe <a href="#adjust_005fexternal_005fformat">adjust_external_format</a> f&uuml;r weitere Informationen.
+</p>
+
+<p>CMUCL verarbeitet keine Codepunkte gr&ouml;&szlig;er 16 Bit.
+<code>unicode</code> gibt dann <code>false</code> zur&uuml;ck. 
+Als Ausweg kann hier die Umwandlung der Codepunkte in Schriftzeichen &uuml;ber 
+UTF-8-Oktette dienen: 
+</p>
+<p><code>octets_to_string(unicode_to_utf8(code_point));</code>
+</p>
+
+<p>Siehe <a href="#octets_005fto_005fstring">octets_to_string</a>, <a href="#unicode_005fto_005futf8">unicode_to_utf8</a>.
+</p>
+<p>Falls das unter Maxima liegende Lisp Unicode vollst&auml;ndig unterst&uuml;tzt, 
+kann ein Schriftzeichen durch seinen Namen angegeben werden.
+</p>
+<p>Das folgende Beispiel ist mit ECL, CLISP und SBCL m&ouml;glich, wobei mit SBCL in 
+wxMaxima in Windows das externe Format auf UTF-8 gesetzt werden muss.
+<code>unicode(name)</code> wird auch von CMUCL unterst&uuml;tzt, jedoch wieder beschr&auml;nkt 
+auf 16-Bit-Zeichen.
+</p>
+<p>Die Zeichenkette als Argument f&uuml;r <code>unicode</code> muss prinzipiell die sein, 
+die <code>printf</code> mit der Spezifikation &quot;~@c&quot; zur&uuml;ck gibt,  
+jedoch, wie unten gezeigt, ohne den Pr&auml;fix &quot;#\&quot;. 
+Unterstriche k&ouml;nnen durch Leerzeichen und Gro&szlig;- durch Kleinbuchstaben 
+ersetzt werden.
+</p>
+<p>Beispiel (fortgesetzt): Ein Schriftzeichen ist durch seinen Namen gegeben 
+(Maxima kompiliert mit SBCL in GNU/Linux). 
+</p>
+<pre class="example">(%i3) printf(false, &quot;~@c&quot;, unicode(0DF));
+(%o3)                    #\LATIN_SMALL_LETTER_SHARP_S
+(%i4) unicode(&quot;LATIN_SMALL_LETTER_SHARP_S&quot;);
+(%o4)                                  &szlig;
+(%i5) unicode(&quot;Latin small letter sharp S&quot;);
+(%o5)                                  &szlig;
+</pre>
+</dd></dl>
+
+<p><a name="unicode_005fto_005futf8"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>unicode_to_utf8</b><i> (<var>code_point</var>) </i>
+<a name="IDX2689"></a>
+</dt>
+<dd><p>Gibt eine Liste mit UTF-8-Code zur&uuml;ck, der dem Unicode <var>code_point</var> entspricht. 
+</p>
+<p>Beispiel: Umwandlung von Unicode Codepunkten in UTF-8 und umgekehrt. 
+</p>
+<pre class="example">(%i1) ibase: obase: 16.$
+(%i2) map(cint, [&quot;$&quot;,&quot;&pound;&quot;,&quot;&euro;&quot;]);
+(%o2)                           [24, 0A3, 20AC]
+(%i3) map(unicode_to_utf8, %);
+(%o3)                 [[24], [0C2, 0A3], [0E2, 82, 0AC]]
+(%i4) map(utf8_to_unicode, %);
+(%o4)                           [24, 0A3, 20AC]
+</pre>
+</dd></dl>
 
 <p><a name="uppercasep"></a>
 </p><dl>
-<dt><u>Function:</u> <b>uppercasep</b><i> (<var>char</var>)</i>
-<a name="IDX2679"></a>
+<dt><u>Funktion:</u> <b>uppercasep</b><i> (<var>char</var>)</i>
+<a name="IDX2690"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>char</var> is an uppercase character.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn <var>char</var> ein Gro&szlig;buchstabe ist.
+</p>
+<p>Hinweis: Siehe Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
+
+<p><a name="us_005fascii_005fonly"></a>
+</p><dl>
+<dt><u>Variable:</u> <b>us_ascii_only</b>
+<a name="IDX2691"></a>
+</dt>
+<dd><p>Diese Optionsvariable beeinflusst Maxima, wenn die Zeichenkodierung der 
+Anwendung, in der Maxima l&auml;uft, UTF-8 ist, das externe Format des Lisp Readers 
+jedoch nicht.
+</p>
+<p>In GNU/Linux trifft dies zu, wenn Maxima mit GCL kompiliert wurde und 
+in Windows in wxMaxima in GCL- und SBCL-Versionen. 
+Es wird empfohlen, in der SBCL-Version das externe Format in UTF-8 abzu&auml;ndern. 
+Eine Festlegung von <code>us_ascii_only</code> wird damit unn&ouml;tig. 
+Siehe <a href="#adjust_005fexternal_005fformat">adjust_external_format</a> f&uuml;r Details. 
+</p>
+<p><code>us_ascii_only</code> ist standardm&auml;&szlig;ig <code>false</code>. 
+Maxima analysiert dann (d.h. in der oben beschriebenen Situation) selbst die UTF-8-Kodierung.
+</p>
+<p>Wurde <code>us_ascii_only</code> auf <code>true</code> gesetzt, wird angenommen, dass alle 
+Zeichenketten, die als Argumente f&uuml;r Funktionen des Pakets <code>stringproc</code> 
+verwendet werden, nur ausschlie&szlig;lich US-ASCII-Zeichen enthalten. 
+Durch diese Vereinbarung wird die UTF-8-Analyse des Inputs &uuml;berfl&uuml;ssig 
+und Zeichenketten k&ouml;nnen effizienter verarbeitet werden.
+</p>
+</dd></dl>
+
+<p><a name="utf8_005fto_005funicode"></a>
+</p><dl>
+<dt><u>Function:</u> <b>utf8_to_unicode</b><i> (<var>list</var>) </i>
+<a name="IDX2692"></a>
+</dt>
+<dd><p>Gibt den Unicode Codepunkt zur&uuml;ck, der der Liste <var>list</var> entspricht, 
+die die UTF-8-Kodierung eines einzelnen Schriftzeichens enthalten muss.
+</p>
+<p>Beispiel: Siehe <a href="#unicode_005fto_005futf8">unicode_to_utf8</a>.
+</p>
+</dd></dl>
 
 <hr size="6">
-<a name="Functions-and-Variables-for-strings"></a>
+<a name="Verarbeitung-von-Zeichenketten"></a>
 <a name="SEC384"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC383" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC385" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC385" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 73.4 Functions and Variables for strings </h2>
+<h2 class="section"> 73.4 Verarbeitung von Zeichenketten </h2>
 
-<p><a name="base64"></a>
-</p><dl>
-<dt><u>Funktion:</u> <b>base64</b><i> (<var>string</var>)</i>
-<a name="IDX2680"></a>
-</dt>
-<dd><p>Gibt einen String zur&uuml;ck, der die Base64-Darstellung von <var>string</var> zeigt. 
+<p>Positionsindizes in Strings sind in Maxima genau so wie Listen 1-indiziert. 
+Siehe hierzu das Beispiel in <a href="#charat">charat</a>.
 </p>
-<p>Sind in <var>string</var> Umlaute oder Eszett enthalten, ist das Ergebnis von der 
-verwendeten Plattform abh&auml;ngig. Es wird aber durch eine Anwendung von 
-<a href="#base64_005fdecode">base64_decode</a> in jedem Fall wieder in den urspr&uuml;nglichen String 
-zur&uuml;ck verwandelt.
-</p>
-<p>Beispiel:
-</p>
-<pre class="example">(%i1) base64 : base64(&quot;foo bar baz&quot;);
-(%o1)                       Zm9vIGJhciBiYXo=
-(%i2) string : base64_decode(base64);
-(%o2)                          foo bar baz
-(%i3) base64_decode(base64(&quot;&auml;&ouml;&uuml;&quot;));
-(%o3)                            &auml;&ouml;&uuml;
-</pre></dd></dl>
-
-<p><a name="base64_005fdecode"></a>
-</p><dl>
-<dt><u>Funktion:</u> <b>base64_decode</b><i> (<var>base64-string</var>)</i>
-<a name="IDX2681"></a>
-</dt>
-<dd><p>Dekodiert den Base64-kodierten String <var>base64-string</var> wieder zur&uuml;ck in 
-den urspr&uuml;nglichen String.
-</p>
-<p>Beispiel: Siehe <a href="#base64">base64</a>.
-</p></dd></dl>
-
 <p><a name="charat"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>charat</b><i> (<var>string</var>, <var>n</var>)</i>
-<a name="IDX2682"></a>
+<a name="IDX2693"></a>
 </dt>
-<dd><p>Gibt den <var>n</var>-ten Buchstaben in <var>string</var> zur&uuml;ck.
-Den ersten Buchstaben in <var>string</var> erh&auml;lt man mit <var>n</var> = 1. 
+<dd><p>Gibt das <var>n</var>-te Schriftzeichen in <var>string</var> zur&uuml;ck.
+Das erste Zeichen in <var>string</var> erh&auml;lt man mit <var>n</var> = 1. 
 </p>
 <p>Beispiel:
 </p>
-<pre class="example">(%i1) charat(&quot;Lisp&quot;, 1);
+<pre class="example">(%i1) charat(&quot;Lisp&quot;,1);
 (%o1)                           L
+(%i2) charlist(&quot;Lisp&quot;)[1];
+(%o2)                           L
 </pre></dd></dl>
 
 <p><a name="charlist"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>charlist</b><i> (<var>string</var>)</i>
-<a name="IDX2683"></a>
+<a name="IDX2694"></a>
 </dt>
-<dd><p>Gibt eine Liste mit allen Buchstaben in <var>string</var> zur&uuml;ck.
+<dd><p>Gibt eine Liste mit allen Schriftzeichen in <var>string</var> zur&uuml;ck.
 </p>
 <p>Beispiel:
 </p>
 <pre class="example">(%i1) charlist(&quot;Lisp&quot;);
 (%o1)                     [L, i, s, p]
-(%i2) %[1];
-(%o2)                           L
 </pre></dd></dl>
 
 <p><a name="eval_005fstring"></a>
 </p><dl>
 <dt><u>Function:</u> <b>eval_string</b><i> (<var>str</var>)</i>
-<a name="IDX2684"></a>
+<a name="IDX2695"></a>
 </dt>
 <dd><p>Parse the string <var>str</var> as a Maxima expression and evaluate it.  The string
 <var>str</var> may or may not have a terminator (dollar sign <code>$</code> or semicolon 
@@ -849,7 +1201,7 @@ than one.
 </p>
 <p>Complain if <var>str</var> is not a string.
 </p>
-<p>See also <code><a href="#parse_005fstring">parse_string</a></code>.
+<p>See also <a href="#parse_005fstring">parse_string</a>.
 </p>
 <p>Examples:
 </p>
@@ -859,29 +1211,10 @@ than one.
 (%o2)                   baz + 1764
 </pre></dd></dl>
 
-<p><a name="md5sum"></a>
-</p><dl>
-<dt><u>Funktion:</u> <b>md5sum</b><i> (<var>string</var>)</i>
-<a name="IDX2685"></a>
-</dt>
-<dd><p>Gibt die md5-Pr&uuml;fsumme von <var>string</var> als String mit 32 hexadezimalen Zeichen zur&uuml;ck. 
-Um den R&uuml;ckgabewert in eine nat&uuml;rliche Zahl zu parsen, 
-setzen Sie bitte die Eingabebasis auf 16 und f&uuml;gen eine Null vor den String.
-</p>
-<p>Beispiel:
-</p>
-<pre class="example">(%i1) string : md5sum(&quot;foo bar baz&quot;);
-(%o1)               ab07acbb1e496801937adfa772424bf7
-(%i2) ibase : obase : 16.$
-
-(%i3) integer : parse_string(sconcat(0, string));
-(%o3)              0ab07acbb1e496801937adfa772424bf7
-</pre></dd></dl>
-
 <p><a name="parse_005fstring"></a>
 </p><dl>
 <dt><u>Function:</u> <b>parse_string</b><i> (<var>str</var>)</i>
-<a name="IDX2686"></a>
+<a name="IDX2696"></a>
 </dt>
 <dd><p>Parse the string <var>str</var> as a Maxima expression (do not evaluate it).  The 
 string <var>str</var> may or may not have a terminator (dollar sign <code>$</code> or 
@@ -890,7 +1223,7 @@ than one.
 </p>
 <p>Complain if <var>str</var> is not a string.
 </p>
-<p>See also <code><a href="#eval_005fstring">eval_string</a></code>.
+<p>See also <a href="#eval_005fstring">eval_string</a>.
 </p>
 <p>Examples:
 </p>
@@ -903,78 +1236,66 @@ than one.
 
 <p><a name="scopy"></a>
 </p><dl>
-<dt><u>Function:</u> <b>scopy</b><i> (<var>string</var>)</i>
-<a name="IDX2687"></a>
+<dt><u>Funktion:</u> <b>scopy</b><i> (<var>string</var>)</i>
+<a name="IDX2697"></a>
 </dt>
-<dd><p>Returns a copy of <var>string</var> as a new string.
-</p></dd></dl>
+<dd><p>Gibt eine Kopie der Zeichenkette <var>string</var> als neue Zeichenkette zur&uuml;ck.
+</p>
+</dd></dl>
 
 <p><a name="sdowncase"></a>
 </p><dl>
-<dt><u>Function:</u> <b>sdowncase</b><i> (<var>string</var>) </i>
-<a name="IDX2688"></a>
+<dt><u>Funktion:</u> <b>sdowncase</b><i> (<var>string</var>) </i>
+<a name="IDX2698"></a>
 </dt>
-<dt><u>Function:</u> <b>sdowncase</b><i> (<var>string</var>, <var>start</var>) </i>
-<a name="IDX2689"></a>
+<dt><u>Funktion:</u> <b>sdowncase</b><i> (<var>string</var>, <var>start</var>) </i>
+<a name="IDX2699"></a>
 </dt>
-<dt><u>Function:</u> <b>sdowncase</b><i> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2690"></a>
+<dt><u>Funktion:</u> <b>sdowncase</b><i> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2700"></a>
 </dt>
-<dd><p>Like <code><a href="#supcase">supcase</a></code>, but uppercase characters are converted to lowercase.
-</p></dd></dl>
+<dd><p>Arbeitet wie <a href="#supcase">supcase</a>, jedoch werden Gro&szlig;- in Kleinbuchstaben umgewandelt.
+</p>
+</dd></dl>
 
 <p><a name="sequal"></a>
 </p><dl>
-<dt><u>Function:</u> <b>sequal</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
-<a name="IDX2691"></a>
+<dt><u>Funktion:</u> <b>sequal</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
+<a name="IDX2701"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>string_1</var> and <var>string_2</var> are the same length 
-and contain the same characters.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn <var>string_1</var> und <var>string_2</var> die selbe 
+Zeichensequenz enthalten.
+</p>
+</dd></dl>
 
 <p><a name="sequalignore"></a>
 </p><dl>
-<dt><u>Function:</u> <b>sequalignore</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
-<a name="IDX2692"></a>
+<dt><u>Funktion:</u> <b>sequalignore</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
+<a name="IDX2702"></a>
 </dt>
-<dd><p>Like <code><a href="#sequal">sequal</a></code> but ignores case.
-</p></dd></dl>
+<dd><p>Arbeitet wie <a href="#sequal">sequal</a>, ignoriert jedoch die Gro&szlig;- und Kleinschreibung,  
+was f&uuml;r Nicht-US-ASCII-Zeichen nur m&ouml;glich ist, wenn das unter Maxima liegende 
+Lisp einen Buchstaben auch als Buchstaben eines Alphabets erkennen kann.
+Siehe hierzu die Bemerkungen zu <a href="#alphacharp">alphacharp</a>. 
+</p>
+</dd></dl>
 
 <p><a name="sexplode"></a>
 </p><dl>
-<dt><u>Function:</u> <b>sexplode</b><i> (<var>string</var>)</i>
-<a name="IDX2693"></a>
+<dt><u>Funktion:</u> <b>sexplode</b><i> (<var>string</var>)</i>
+<a name="IDX2703"></a>
 </dt>
-<dd><p><code>sexplode</code> is an alias for function <code><a href="#charlist">charlist</a></code>.
-</p></dd></dl>
-
-<p><a name="sha1sum"></a>
-</p><dl>
-<dt><u>Funktion:</u> <b>sha1sum</b><i> (<var>string</var>)</i>
-<a name="IDX2694"></a>
-</dt>
-<dd><p>Gibt den SHA1-Fingerprint von <var>string</var> als String mit 48 hexadezimalen Zeichen zur&uuml;ck. 
-Um den R&uuml;ckgabewert in eine nat&uuml;rliche Zahl zu parsen, 
-setzen Sie bitte die Eingabebasis auf 16 und f&uuml;gen eine Null vor den String.
+<dd><p><code>sexplode</code> ist ein Alias f&uuml;r die Funktion <a href="#charlist">charlist</a>.
 </p>
-<p>Beispiel:
-</p>
-<pre class="example">(%i1) string : sha1sum(&quot;foo bar baz&quot;);
-(%o1)              c7567e8b39e2428e38bf9c9226ac68de4c67dc39
-(%i2) ibase : obase : 16.$
-
-(%i3) integer : parse_string(sconcat(0, string));
-(%o3)              0c7567e8b39e2428e38bf9c9226ac68de4c67dc39
-</pre></dd></dl>
-
+</dd></dl>
 
 <p><a name="simplode"></a>
 </p><dl>
 <dt><u>Function:</u> <b>simplode</b><i> (<var>list</var>)  </i>
-<a name="IDX2695"></a>
+<a name="IDX2704"></a>
 </dt>
 <dt><u>Function:</u> <b>simplode</b><i> (<var>list</var>, <var>delim</var>)</i>
-<a name="IDX2696"></a>
+<a name="IDX2705"></a>
 </dt>
 <dd><p><code>simplode</code> takes a list of expressions and concatenates them into a string.
 If no delimiter <var>delim</var> is specified, <code>simplode</code> uses no delimiter.
@@ -993,7 +1314,7 @@ If no delimiter <var>delim</var> is specified, <code>simplode</code> uses no del
 <p><a name="sinsert"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sinsert</b><i> (<var>seq</var>, <var>string</var>, <var>pos</var>)</i>
-<a name="IDX2697"></a>
+<a name="IDX2706"></a>
 </dt>
 <dd><p>Returns a string that is a concatenation of <code>substring (<var>string</var>, 
 1, <var>pos</var> - 1)</code>, the string <var>seq</var> and <code>substring (<var>string</var>, 
@@ -1011,13 +1332,13 @@ If no delimiter <var>delim</var> is specified, <code>simplode</code> uses no del
 <p><a name="sinvertcase"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sinvertcase</b><i> (<var>string</var>)  </i>
-<a name="IDX2698"></a>
+<a name="IDX2707"></a>
 </dt>
 <dt><u>Function:</u> <b>sinvertcase</b><i> (<var>string</var>, <var>start</var>)  </i>
-<a name="IDX2699"></a>
+<a name="IDX2708"></a>
 </dt>
 <dt><u>Function:</u> <b>sinvertcase</b><i> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2700"></a>
+<a name="IDX2709"></a>
 </dt>
 <dd><p>Returns <var>string</var> except that each character from position <var>start</var> to 
 <var>end</var> is inverted.  If <var>end</var> is not given, all characters from 
@@ -1031,20 +1352,20 @@ If no delimiter <var>delim</var> is specified, <code>simplode</code> uses no del
 
 <p><a name="slength"></a>
 </p><dl>
-<dt><u>Function:</u> <b>slength</b><i> (<var>string</var>)</i>
-<a name="IDX2701"></a>
+<dt><u>Funktion:</u> <b>slength</b><i> (<var>string</var>)</i>
+<a name="IDX2710"></a>
 </dt>
-<dd><p>Returns the number of characters in <var>string</var>.
+<dd><p>Gibt die Anzahl der Zeichen in der Zeichenkette <var>string</var> zur&uuml;ck.
 </p></dd></dl>
 
 <p><a name="smake"></a>
 </p><dl>
-<dt><u>Function:</u> <b>smake</b><i> (<var>num</var>, <var>char</var>)</i>
-<a name="IDX2702"></a>
+<dt><u>Funktion:</u> <b>smake</b><i> (<var>num</var>, <var>char</var>)</i>
+<a name="IDX2711"></a>
 </dt>
-<dd><p>Returns a new string with a number of <var>num</var> characters <var>char</var>.
+<dd><p>Gibt eine neue Zeichenkette mit <var>num</var> Zeichen <var>char</var> zur&uuml;ck.
 </p>
-<p>Example:
+<p>Beispiel:
 </p>
 <pre class="example">(%i1) smake(3,&quot;w&quot;);
 (%o1)                          www
@@ -1053,15 +1374,15 @@ If no delimiter <var>delim</var> is specified, <code>simplode</code> uses no del
 <p><a name="smismatch"></a>
 </p><dl>
 <dt><u>Function:</u> <b>smismatch</b><i> (<var>string_1</var>, <var>string_2</var>) </i>
-<a name="IDX2703"></a>
+<a name="IDX2712"></a>
 </dt>
 <dt><u>Function:</u> <b>smismatch</b><i> (<var>string_1</var>, <var>string_2</var>, <var>test</var>)</i>
-<a name="IDX2704"></a>
+<a name="IDX2713"></a>
 </dt>
 <dd><p>Returns the position of the first character of <var>string_1</var> at which 
 <var>string_1</var> and <var>string_2</var> differ or <code>false</code>.  Default test function
-for matching is <code><a href="#sequal">sequal</a></code>.  If <code>smismatch</code> should ignore case, use 
-<code><a href="#sequalignore">sequalignore</a></code> as test.
+for matching is <a href="#sequal">sequal</a>.  If <code>smismatch</code> should ignore case, use 
+<a href="#sequalignore">sequalignore</a> as test.
 </p>
 <p>Example:
 </p>
@@ -1072,13 +1393,13 @@ for matching is <code><a href="#sequal">sequal</a></code>.  If <code>smismatch</
 <p><a name="split"></a>
 </p><dl>
 <dt><u>Function:</u> <b>split</b><i> (<var>string</var>)  </i>
-<a name="IDX2705"></a>
+<a name="IDX2714"></a>
 </dt>
 <dt><u>Function:</u> <b>split</b><i> (<var>string</var>, <var>delim</var>)  </i>
-<a name="IDX2706"></a>
+<a name="IDX2715"></a>
 </dt>
 <dt><u>Function:</u> <b>split</b><i> (<var>string</var>, <var>delim</var>, <var>multiple</var>)</i>
-<a name="IDX2707"></a>
+<a name="IDX2716"></a>
 </dt>
 <dd><p>Returns the list of all tokens in <var>string</var>.
 Each token is an unparsed string.
@@ -1100,31 +1421,31 @@ If <var>multiple</var> is set to <code>false</code>, each delimiter is noted.
 <p><a name="sposition"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sposition</b><i> (<var>char</var>, <var>string</var>)</i>
-<a name="IDX2708"></a>
+<a name="IDX2717"></a>
 </dt>
 <dd><p>Returns the position of the first character in <var>string</var> which matches 
 <var>char</var>.  The first character in <var>string</var> is in position 1.
-For matching characters ignoring case see <code><a href="#ssearch">ssearch</a></code>.
+For matching characters ignoring case see <a href="#ssearch">ssearch</a>.
 </p></dd></dl>
 
 <p><a name="sremove"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>)  </i>
-<a name="IDX2709"></a>
+<a name="IDX2718"></a>
 </dt>
 <dt><u>Function:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>)  </i>
-<a name="IDX2710"></a>
+<a name="IDX2719"></a>
 </dt>
 <dt><u>Function:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>)  </i>
-<a name="IDX2711"></a>
+<a name="IDX2720"></a>
 </dt>
 <dt><u>Function:</u> <b>sremove</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2712"></a>
+<a name="IDX2721"></a>
 </dt>
 <dd><p>Returns a string like <var>string</var> but without all substrings matching 
-<var>seq</var>.  Default test function for matching is <code><a href="#sequal">sequal</a></code>.  If 
-<code>sremove</code> should ignore case while searching for <var>seq</var>, use 
-<code><a href="#sequalignore">sequalignore</a></code> as test.  Use <var>start</var> and <var>end</var> to limit searching.
+<var>seq</var>.  Default test function for matching is <a href="#sequal">sequal</a>.  
+If <code>sremove</code> should ignore case while searching for <var>seq</var>, 
+use <a href="#sequalignore">sequalignore</a> as test.  Use <var>start</var> and <var>end</var> to limit searching.
 Note that the first character in <var>string</var> is in position 1.
 </p>
 <p>Examples:
@@ -1138,16 +1459,16 @@ Note that the first character in <var>string</var> is in position 1.
 <p><a name="sremovefirst"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>)  </i>
-<a name="IDX2713"></a>
+<a name="IDX2722"></a>
 </dt>
 <dt><u>Function:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>)  </i>
-<a name="IDX2714"></a>
+<a name="IDX2723"></a>
 </dt>
 <dt><u>Function:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>)  </i>
-<a name="IDX2715"></a>
+<a name="IDX2724"></a>
 </dt>
 <dt><u>Function:</u> <b>sremovefirst</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2716"></a>
+<a name="IDX2725"></a>
 </dt>
 <dd><p>Like <code>sremove</code> except that only the first substring that matches <code>seq</code>
 is removed.
@@ -1155,55 +1476,53 @@ is removed.
 
 <p><a name="sreverse"></a>
 </p><dl>
-<dt><u>Function:</u> <b>sreverse</b><i> (<var>string</var>) </i>
-<a name="IDX2717"></a>
+<dt><u>Funktion:</u> <b>sreverse</b><i> (<var>string</var>) </i>
+<a name="IDX2726"></a>
 </dt>
-<dd><p>Returns a string with all the characters of <var>string</var> in reverse order.
-</p></dd></dl>
+<dd><p>Gibt eine Zeichenkette mit allen Zeichen von <var>string</var> in umgekehrter 
+Reihenfolge zur&uuml;ck.
+</p>
+</dd></dl>
 
 <p><a name="ssearch"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>)  </i>
-<a name="IDX2718"></a>
+<a name="IDX2727"></a>
 </dt>
 <dt><u>Function:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>)  </i>
-<a name="IDX2719"></a>
+<a name="IDX2728"></a>
 </dt>
 <dt><u>Function:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>)  </i>
-<a name="IDX2720"></a>
+<a name="IDX2729"></a>
 </dt>
 <dt><u>Function:</u> <b>ssearch</b><i> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2721"></a>
+<a name="IDX2730"></a>
 </dt>
 <dd><p>Returns the position of the first substring of <var>string</var> that matches the 
-string <var>seq</var>.  Default test function for matching is <code><a href="#sequal">sequal</a></code>.  If
-<code>ssearch</code> should ignore case, use <code><a href="#sequalignore">sequalignore</a></code> as test.  Use
-<var>start</var> and <var>end</var> to limit searching.  Note that the first character in 
+string <var>seq</var>.  Default test function for matching is <a href="#sequal">sequal</a>. 
+If <code>ssearch</code> should ignore case, use <a href="#sequalignore">sequalignore</a> as test.  
+Use <var>start</var> and <var>end</var> to limit searching.  Note that the first character in 
 <var>string</var> is in position 1.
-</p>
-<p>Example:
 </p>
 <pre class="example">(%i1) ssearch(&quot;~s&quot;,&quot;~{~S ~}~%&quot;,'sequalignore);
 (%o1)                                  4
-</pre></dd></dl>
+</pre>
+</dd></dl>
 
 <p><a name="ssort"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ssort</b><i> (<var>string</var>) </i>
-<a name="IDX2722"></a>
+<a name="IDX2731"></a>
 </dt>
 <dt><u>Function:</u> <b>ssort</b><i> (<var>string</var>, <var>test</var>) </i>
-<a name="IDX2723"></a>
+<a name="IDX2732"></a>
 </dt>
 <dd><p>Returns a string that contains all characters from <var>string</var> in an order such
 there are no two successive characters <var>c</var> and <var>d</var> such that
 <code>test (<var>c</var>, <var>d</var>)</code> is <code>false</code> and <code>test (<var>d</var>, 
 <var>c</var>)</code> is <code>true</code>.  Default test function for sorting is
-<code><a href="#clessp">clessp</a></code>.  The set of test functions is <code>{<code><a href="#clessp">clessp</a></code>,
-<code><a href="#clesspignore">clesspignore</a></code>, <code><a href="#cgreaterp">cgreaterp</a></code>, <code><a href="#cgreaterpignore">cgreaterpignore</a></code>,
-<code><a href="#cequal">cequal</a></code>, <code><a href="#cequalignore">cequalignore</a></code>}</code>.
-</p>
-<p>Example:
+<a href="#clessp">clessp</a>.  The set of test functions is 
+<code>{<a href="#clessp">clessp</a>, <a href="#clesspignore">clesspignore</a>, <a href="#cgreaterp">cgreaterp</a>, <a href="#cgreaterpignore">cgreaterpignore</a>, <a href="#cequal">cequal</a>, <a href="#cequalignore">cequalignore</a>}</code>.
 </p>
 <pre class="example">(%i1) ssort(&quot;I don't like Mondays.&quot;);
 (%o1)                    '.IMaddeiklnnoosty
@@ -1214,25 +1533,23 @@ there are no two successive characters <var>c</var> and <var>d</var> such that
 <p><a name="ssubst"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>) </i>
-<a name="IDX2724"></a>
+<a name="IDX2733"></a>
 </dt>
 <dt><u>Function:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) </i>
-<a name="IDX2725"></a>
+<a name="IDX2734"></a>
 </dt>
 <dt><u>Function:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) </i>
-<a name="IDX2726"></a>
+<a name="IDX2735"></a>
 </dt>
 <dt><u>Function:</u> <b>ssubst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>) </i>
-<a name="IDX2727"></a>
+<a name="IDX2736"></a>
 </dt>
 <dd><p>Returns a string like <var>string</var> except that all substrings matching <var>old</var>
 are replaced by <var>new</var>.  <var>old</var> and <var>new</var> need not to be of the same 
-length.  Default test function for matching is <code><a href="#sequal">sequal</a></code>.  If
+length.  Default test function for matching is <a href="#sequal">sequal</a>.  If
 <code>ssubst</code> should ignore case while searching for old, use 
-<code><a href="#sequalignore">sequalignore</a></code> as test.  Use <var>start</var> and <var>end</var> to limit searching.
+<a href="#sequalignore">sequalignore</a> as test.  Use <var>start</var> and <var>end</var> to limit searching.
 Note that the first character in <var>string</var> is in position 1.
-</p>
-<p>Examples:
 </p>
 <pre class="example">(%i1) ssubst(&quot;like&quot;,&quot;hate&quot;,&quot;I hate Thai food. I hate green tea.&quot;);
 (%o1)          I like Thai food. I like green tea.
@@ -1243,30 +1560,28 @@ Note that the first character in <var>string</var> is in position 1.
 <p><a name="ssubstfirst"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>) </i>
-<a name="IDX2728"></a>
+<a name="IDX2737"></a>
 </dt>
 <dt><u>Function:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) </i>
-<a name="IDX2729"></a>
+<a name="IDX2738"></a>
 </dt>
 <dt><u>Function:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) </i>
-<a name="IDX2730"></a>
+<a name="IDX2739"></a>
 </dt>
 <dt><u>Function:</u> <b>ssubstfirst</b><i> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>) </i>
-<a name="IDX2731"></a>
+<a name="IDX2740"></a>
 </dt>
-<dd><p>Like <code><a href="maxima_6.html#subst">subst</a></code> except that only the first substring that matches <var>old</var>
+<dd><p>Like <a href="maxima_6.html#subst">subst</a> except that only the first substring that matches <var>old</var>
 is replaced.
 </p></dd></dl>
 
 <p><a name="strim"></a>
 </p><dl>
 <dt><u>Function:</u> <b>strim</b><i> (<var>seq</var>,<var>string</var>) </i>
-<a name="IDX2732"></a>
+<a name="IDX2741"></a>
 </dt>
 <dd><p>Returns a string like <var>string</var>, but with all characters that appear in 
 <var>seq</var> removed from both ends.
-</p>
-<p>Examples:
 </p>
 <pre class="example">(%i1) &quot;/* comment */&quot;$
 (%i2) strim(&quot; /*&quot;,%);
@@ -1278,78 +1593,78 @@ is replaced.
 <p><a name="striml"></a>
 </p><dl>
 <dt><u>Function:</u> <b>striml</b><i> (<var>seq</var>, <var>string</var>) </i>
-<a name="IDX2733"></a>
+<a name="IDX2742"></a>
 </dt>
-<dd><p>Like <code><a href="#strim">strim</a></code> except that only the left end of <var>string</var> is trimmed.
+<dd><p>Like <a href="#strim">strim</a> except that only the left end of <var>string</var> is trimmed.
 </p></dd></dl>
 
 <p><a name="strimr"></a>
 </p><dl>
 <dt><u>Function:</u> <b>strimr</b><i> (<var>seq</var>, <var>string</var>) </i>
-<a name="IDX2734"></a>
+<a name="IDX2743"></a>
 </dt>
-<dd><p>Like <code><a href="#strim">strim</a></code> except that only the right end of string is trimmed.
+<dd><p>Like <a href="#strim">strim</a> except that only the right end of string is trimmed.
 </p></dd></dl>
 
 <p><a name="stringp"></a>
 </p><dl>
-<dt><u>Function:</u> <b>stringp</b><i> (<var>obj</var>)</i>
-<a name="IDX2735"></a>
+<dt><u>Funktion:</u> <b>stringp</b><i> (<var>obj</var>)</i>
+<a name="IDX2744"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>obj</var> is a string.
-See introduction for example.
-</p></dd></dl>
+<dd><p>Gibt <code>true</code> zur&uuml;ck, wenn <var>obj</var> eine Zeichenkette ist.
+</p>
+<p>Beispiel: Siehe Einf&uuml;hrung.
+</p>
+</dd></dl>
 
 <p><a name="substring"></a>
 </p><dl>
 <dt><u>Function:</u> <b>substring</b><i> (<var>string</var>, <var>start</var>)</i>
-<a name="IDX2736"></a>
+<a name="IDX2745"></a>
 </dt>
 <dt><u>Function:</u> <b>substring</b><i> (<var>string</var>, <var>start</var>, <var>end</var>) </i>
-<a name="IDX2737"></a>
+<a name="IDX2746"></a>
 </dt>
 <dd><p>Returns the substring of <var>string</var> beginning at position <var>start</var> and 
 ending at position <var>end</var>.  The character at position <var>end</var> is not 
 included.  If <var>end</var> is not given, the substring contains the rest of the 
 string.  Note that the first character in <var>string</var> is in position 1.
 </p>
-<p>Examples:
-</p>
 <pre class="example">(%i1) substring(&quot;substring&quot;,4);
 (%o1)                        string
 (%i2) substring(%,4,6);
 (%o2)                          in
-</pre></dd></dl>
+</pre>
+</dd></dl>
 
 <p><a name="supcase"></a>
 </p><dl>
 <dt><u>Function:</u> <b>supcase</b><i> (<var>string</var>) </i>
-<a name="IDX2738"></a>
+<a name="IDX2747"></a>
 </dt>
 <dt><u>Function:</u> <b>supcase</b><i> (<var>string</var>, <var>start</var>) </i>
-<a name="IDX2739"></a>
+<a name="IDX2748"></a>
 </dt>
 <dt><u>Function:</u> <b>supcase</b><i> (<var>string</var>, <var>start</var>, <var>end</var>) </i>
-<a name="IDX2740"></a>
+<a name="IDX2749"></a>
 </dt>
 <dd><p>Returns <var>string</var> except that lowercase characters from position <var>start</var> 
 to <var>end</var> are replaced by the corresponding uppercase ones.  If <var>end</var> is 
 not given, all lowercase characters from <var>start</var> to the end of <var>string</var> 
 are replaced.
 </p>
-<p>Example:
-</p>
 <pre class="example">(%i1) supcase(&quot;english&quot;,1,2);
 (%o1)                        English
-</pre></dd></dl>
+</pre>
+</dd></dl>
 
 <p><a name="tokens"></a>
 </p><dl>
 <dt><u>Function:</u> <b>tokens</b><i> (<var>string</var>) </i>
-<a name="IDX2741"></a>
+<a name="IDX2750"></a>
 </dt>
 <dt><u>Function:</u> <b>tokens</b><i> (<var>string</var>, <var>test</var>) </i>
-<a name="IDX2742"></a>
+<a name="IDX2751"></a>
 </dt>
 <dd><p>Returns a list of tokens, which have been extracted from <var>string</var>.
 The tokens are substrings whose characters satisfy a certain test function.
@@ -1357,22 +1672,403 @@ If <var>test</var> is not given, <var>constituent</var> is used as the default t
 <code>{constituent, alphacharp, digitcharp, lowercasep, uppercasep, charp, characterp, alphanumericp}</code> is the set of test functions. 
 (The Lisp-version of <code>tokens</code> is written by Paul Graham. ANSI Common Lisp, 1996, page 67.)
 </p>
-<p>Examples:
-</p>
 <pre class="example">(%i1) tokens(&quot;24 October 2005&quot;);
 (%o1)                  [24, October, 2005]
 (%i2) tokens(&quot;05-10-24&quot;,'digitcharp);
 (%o2)                     [05, 10, 24]
 (%i3) map(parse_string,%);
 (%o3)                      [5, 10, 24]
-</pre></dd></dl>
+</pre>
+</dd></dl>
+
+<hr size="6">
+<a name="Oktette-und-Werkzeuge-f_00fcr-die-Kryptographie"></a>
+<a name="SEC385"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC384" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 73.5 Oktette und Werkzeuge f&uuml;r die Kryptographie </h2>
+
+<p><a name="base64"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>base64</b><i> (<var>arg</var>)</i>
+<a name="IDX2752"></a>
+</dt>
+<dd><p>Gibt eine Base64-Darstellung von <var>arg</var> zur&uuml;ck. 
+Das Argument <var>arg</var> kann eine Zeichenkette, eine nicht-negative Ganzzahl 
+oder eine Liste von Oktetten sein.
+</p>
+<p>Beispiel:
+</p>
+<pre class="example">(%i1) base64: base64(&quot;foo bar baz&quot;);
+(%o1)                          Zm9vIGJhciBiYXo=
+(%i2) string: base64_decode(base64);
+(%o2)                            foo bar baz
+(%i3) obase: 16.$
+(%i4) integer: base64_decode(base64, 'number);
+(%o4)                       666f6f206261722062617a
+(%i5) octets: base64_decode(base64, 'list);
+(%o5)            [66, 6F, 6F, 20, 62, 61, 72, 20, 62, 61, 7A]
+(%i6) ibase: 16.$
+(%i7) base64(octets);
+(%o7)                          Zm9vIGJhciBiYXo=
+</pre>
+<p>Sind in <var>arg</var> Umlaute oder Eszett enthalten (bzw. Oktette gr&ouml;&szlig;er 
+als 127), ist das Ergebnis von der verwendeten Plattform abh&auml;ngig. 
+Es wird aber durch eine Anwendung von <a href="#base64_005fdecode">base64_decode</a> in jedem Fall 
+wieder in die urspr&uuml;ngliche Zeichenkette zur&uuml;ck verwandelt.
+</p>
+</dd></dl>
+
+<p><a name="base64_005fdecode"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>base64_decode</b><i> (<var>base64-string</var>)</i>
+<a name="IDX2753"></a>
+</dt>
+<dt><u>Funktion:</u> <b>base64_decode</b><i> (<var>base64-string</var>, <var>return-type</var>) </i>
+<a name="IDX2754"></a>
+</dt>
+<dd><p>Dekodiert die Base64-kodierte Zeichenkette <var>base64-string</var> standardm&auml;&szlig;ig 
+wieder zur&uuml;ck in die urspr&uuml;ngliche Zeichenkette.
+</p>
+<p>Das optionale Argument <var>return-type</var> erlaubt es <code>base64_decode</code>, 
+alternativ hierzu auch die entsprechende Ganzzahl oder Liste von Oktetten 
+zur&uuml;ck zu geben.
+<var>return-type</var> kann <code>string</code>, <code>number</code> oder <code>list</code> sein.
+</p>
+<p>Beispiel: Siehe <a href="#base64">base64</a>.
+</p></dd></dl>
+
+<p><a name="crc24sum"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>crc24sum</b><i> (<var>octets</var>)</i>
+<a name="IDX2755"></a>
+</dt>
+<dt><u>Funktion:</u> <b>crc24sum</b><i> (<var>octets</var>, <var>return-type</var>) </i>
+<a name="IDX2756"></a>
+</dt>
+<dd><p>Gibt standardm&auml;&szlig;ig die <code>CRC24</code>-Pr&uuml;fsumme einer Oktett-Liste als 
+Zeichenkette zur&uuml;ck.
+</p>
+<p>Das optionale Argument <var>return-type</var> erlaubt es <code>crc24sum</code>, 
+alternativ hierzu auch die entsprechende Ganzzahl oder Liste von Oktetten 
+zur&uuml;ck zu geben.
+<var>return-type</var> kann <code>string</code>, <code>number</code> oder <code>list</code> sein.
+</p>
+<p>Beispiel:
+</p><pre class="example">-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iQEcBAEBAgAGBQJVdCTzAAoJEG/1Mgf2DWAqCSYH/AhVFwhu1D89C3/QFcgVvZTM
+wnOYzBUURJAL/cT+IngkLEpp3hEbREcugWp+Tm6aw3R4CdJ7G3FLxExBH/5KnDHi
+rBQu+I7+3ySK2hpryQ6Wx5J9uZSa4YmfsNteR8up0zGkaulJeWkS4pjiRM+auWVe
+vajlKZCIK52P080DG7Q2dpshh4fgTeNwqCuCiBhQ73t8g1IaLdhDN6EzJVjGIzam
+/spqT/sTo6sw8yDOJjvU+Qvn6/mSMjC/YxjhRMaQt9EMrR1AZ4ukBF5uG1S7mXOH
+WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
+=WmeC
+-----END PGP SIGNATURE-----
+</pre>
+<pre class="example">(%i1) ibase : obase : 16.$
+(%i2) sig64 : sconcat(
+ &quot;iQEcBAEBAgAGBQJVdCTzAAoJEG/1Mgf2DWAqCSYH/AhVFwhu1D89C3/QFcgVvZTM&quot;,
+ &quot;wnOYzBUURJAL/cT+IngkLEpp3hEbREcugWp+Tm6aw3R4CdJ7G3FLxExBH/5KnDHi&quot;,
+ &quot;rBQu+I7+3ySK2hpryQ6Wx5J9uZSa4YmfsNteR8up0zGkaulJeWkS4pjiRM+auWVe&quot;,
+ &quot;vajlKZCIK52P080DG7Q2dpshh4fgTeNwqCuCiBhQ73t8g1IaLdhDN6EzJVjGIzam&quot;,
+ &quot;/spqT/sTo6sw8yDOJjvU+Qvn6/mSMjC/YxjhRMaQt9EMrR1AZ4ukBF5uG1S7mXOH&quot;,
+ &quot;WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=&quot; )$
+(%i3) octets: base64_decode(sig64, 'list)$
+(%i4) crc24: crc24sum(octets, 'list);
+(%o4)                          [5A, 67, 82]
+(%i5) base64(crc24);
+(%o5)                              WmeC
+</pre>
+</dd></dl>
+
+<p><a name="md5sum"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>md5sum</b><i> (<var>arg</var>)</i>
+<a name="IDX2757"></a>
+</dt>
+<dt><u>Funktion:</u> <b>md5sum</b><i> (<var>arg</var>, <var>return-type</var>) </i>
+<a name="IDX2758"></a>
+</dt>
+<dd><p>Gibt die <code>md5</code>-Pr&uuml;fsumme einer Zeichenkette, einer nicht-negativen Ganzzahl 
+oder einer Liste von Oktetten zur&uuml;ck. Der standardm&auml;&szlig;ige R&uuml;ckgabewert 
+ist eine Zeichenkette mit 32 hexadezimalen Zeichen.
+</p>
+<p>Das optionale Argument <var>return-type</var> erlaubt es <code>md5sum</code>, 
+alternativ hierzu auch die entsprechende Ganzzahl oder Liste von Oktetten 
+zur&uuml;ck zu geben.
+<var>return-type</var> kann <code>string</code>, <code>number</code> oder <code>list</code> sein.
+</p>
+
+<p>Beispiel:
+</p>
+<pre class="example">(%i1) ibase: obase: 16.$
+(%i2) msg: &quot;foo bar baz&quot;$
+(%i3) string: md5sum(msg);
+(%o3)                  ab07acbb1e496801937adfa772424bf7
+(%i4) integer: md5sum(msg, 'number);
+(%o4)                 0ab07acbb1e496801937adfa772424bf7
+(%i5) octets: md5sum(msg, 'list);
+(%o5)        [0AB,7,0AC,0BB,1E,49,68,1,93,7A,0DF,0A7,72,42,4B,0F7]
+(%i6) sdowncase( printf(false, &quot;~{~2,'0x~^:~}&quot;, octets) );
+(%o6)           ab:07:ac:bb:1e:49:68:01:93:7a:df:a7:72:42:4b:f7
+</pre>
+<p>Sind in <var>arg</var> Umlaute oder andere Nicht-US-ASCII-Zeichen enthalten (bzw. Oktette 
+gr&ouml;&szlig;er als 127), ist das Ergebnis von der verwendeten Plattform abh&auml;ngig. 
+</p>
+</dd></dl>
+
+<p><a name="mgf1_005fsha1"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>mgf1_sha1</b><i> (<var>seed</var>, <var>len</var>)</i>
+<a name="IDX2759"></a>
+</dt>
+<dt><u>Funktion:</u> <b>mgf1_sha1</b><i> (<var>seed</var>, <var>len</var>, <var>return-type</var>) </i>
+<a name="IDX2760"></a>
+</dt>
+<dd><p>Gibt eine Pseudozufallszahl variabler L&auml;nge zur&uuml;ck. 
+Standardm&auml;&szlig;ig ist dies eine Zahl mit einer L&auml;nge von <var>len</var> Oktetten.
+</p>
+<p>Das optionale Argument <var>return-type</var> erlaubt es <code>mgf1_sha1</code>, 
+alternativ hierzu die Liste mit den <var>len</var> entsprechenden Oktetten 
+zur&uuml;ck zu geben.
+<var>return-type</var> kann <code>number</code> oder <code>list</code> sein.
+</p>
+<p>Die Berechnung des R&uuml;ckgabewerts wird in der <code>RFC 3447</code> 
+im Anhang <code>B.2.1 MGF1</code> beschrieben. 
+Verwendet wird dabei <code>SHA1</code> als Hashfunktion, d.h. die Zuf&auml;lligkeit der 
+berechneten Zahl beruht auf der Zuf&auml;lligkeit von <code>SHA1</code>-Hashwerten.
+</p>
+<p>Beispiel:
+</p>
+<pre class="example">(%i1) ibase: obase: 16.$
+(%i2) number: mgf1_sha1(4711., 8);
+(%o2)                        0e0252e5a2a42fea1
+(%i3) octets: mgf1_sha1(4711., 8, 'list);
+(%o3)                  [0E0,25,2E,5A,2A,42,0FE,0A1]
+</pre>
+</dd></dl>
+
+<p><a name="number_005fto_005foctets"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>number_to_octets</b><i> (<var>number</var>)</i>
+<a name="IDX2761"></a>
+</dt>
+<dd><p>Gibt eine Oktett-Darstellung der nicht-negativen Ganzzahl <var>number</var> in Form 
+einer Liste zur&uuml;ck. 
+</p>
+<p>Beispiel:
+</p>
+<pre class="example">(%i1) ibase : obase : 16.$
+(%i2) octets: [0ca,0fe,0ba,0be]$
+(%i3) number: octets_to_number(octets);
+(%o3)                            0cafebabe
+(%i4) number_to_octets(number);
+(%o4)                      [0CA, 0FE, 0BA, 0BE]
+</pre>
+</dd></dl>
+
+<p><a name="octets_005fto_005fnumber"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>octets_to_number</b><i> (<var>octets</var>)</i>
+<a name="IDX2762"></a>
+</dt>
+<dd><p>F&uuml;gt die in der Liste <var>octets</var> enthaltenden Oktette zu einer Zahl zusammen 
+und gibt diese zur&uuml;ck. 
+</p>
+<p>Beispiel: Siehe <a href="#number_005fto_005foctets">number_to_octets</a>.
+</p>
+</dd></dl>
+
+<p><a name="octets_005fto_005foid"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>octets_to_oid</b><i> (<var>octets</var>)</i>
+<a name="IDX2763"></a>
+</dt>
+<dd><p>Berechnet eine Objektkennung (OID) aus einer Liste von Oktetten.
+</p>
+<p>Beispiel: RSA encryption OID
+</p>
+<pre class="example">(%i1) ibase : obase : 16.$
+(%i2) oid: octets_to_oid([2A,86,48,86,0F7,0D,1,1,1]);
+(%o2)                      1.2.840.113549.1.1.1
+(%i3) oid_to_octets(oid);
+(%o3)               [2A, 86, 48, 86, 0F7, 0D, 1, 1, 1]
+</pre>
+</dd></dl>
+
+<p><a name="octets_005fto_005fstring"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>octets_to_string</b><i> (<var>octets</var>)</i>
+<a name="IDX2764"></a>
+</dt>
+<dt><u>Funktion:</u> <b>octets_to_string</b><i> (<var>octets</var>, <var>encoding</var>) </i>
+<a name="IDX2765"></a>
+</dt>
+<dd><p>Dekodiert den aktuellen Systemstandards entsprechend die Liste <var>octets</var> 
+in eine Zeichenkette. 
+Bei der Dekodierung von Oktetten, die nicht ausschlie&szlig;lich US-ASCII-Zeichen 
+entsprechen, ist das Ergebnis abh&auml;ngig von der Plattform, der Anwendung und vom 
+unter Maxima liegenden Lisp. 
+</p>
+<p>Beispiel: Die Verwendung des Systemstandards 
+(Maxima kompiliert mit GCL, das keine Format-Definition verwendet und die 
+vom GNU/Linux Terminal kodierten UTF-8-Oktette unge&auml;ndert an Maxima weitergibt).
+</p>
+<pre class="example">(%i1) octets: string_to_octets(&quot;abc&quot;);
+(%o1)                            [61, 62, 63]
+(%i2) octets_to_string(octets);
+(%o2)                                 abc
+(%i3) ibase: obase: 16.$
+(%i4) unicode(20AC);
+(%o4)                                  &euro;
+(%i5) octets: string_to_octets(%);
+(%o5)                           [0E2, 82, 0AC]
+(%i6) octets_to_string(octets);
+(%o6)                                  &euro;
+(%i7) utf8_to_unicode(octets);
+(%o7)                                20AC
+</pre>
+<p>In dem Fall, dass UTF-8 das externe Format des Lisp Readers ist, kann das 
+optionale Argument <var>encoding</var> genutzt werden, um f&uuml;r die Oktett-String-Umwandlung 
+eine gewünschte Kodierung auszuw&auml;hlen. 
+Siehe <a href="#adjust_005fexternal_005fformat">adjust_external_format</a>, falls es notwendig sein sollte, hierf&uuml;r das 
+externe Format zu &auml;ndern.
+</p>
+<p>Die Namen einiger unterst&uuml;tzter Kodierungen 
+(weitere siehe das entsprechende Lisp Manual): <br>
+CCL, CLISP, SBCL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, cp1252, cp850</code> <br>
+CMUCL: <code>utf-8, utf-16-be, utf-32-be, iso8859-1, cp1252</code> <br>
+ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code> 
+</p>
+<p>Beispiel (fortgesetzt): Die Verwendung des optionalen Arguments 
+(Maxima kompiliert mit SBCL, GNU/Linux Terminal).
+</p>
+<pre class="example">(%i8) string_to_octets(&quot;&euro;&quot;, &quot;ucs-2be&quot;);
+(%o8)                              [20, 0AC]
+</pre>
+</dd></dl>
+
+<p><a name="oid_005fto_005foctets"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>oid_to_octets</b><i> (<var>oid-string</var>)</i>
+<a name="IDX2766"></a>
+</dt>
+<dd><p>Verwandelt eine Objektkennung (OID) in eine Liste von Oktetten.
+</p>
+<p>Beispiel: Siehe <a href="#octets_005fto_005foid">octets_to_oid</a>.
+</p>
+</dd></dl>
+
+<p><a name="sha1sum"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>sha1sum</b><i> (<var>arg</var>)</i>
+<a name="IDX2767"></a>
+</dt>
+<dt><u>Funktion:</u> <b>sha1sum</b><i> (<var>arg</var>, <var>return-type</var>) </i>
+<a name="IDX2768"></a>
+</dt>
+<dd><p>Gibt den <code>SHA1</code>-Fingerabdruck einer Zeichenkette, einer nicht-negativen Ganzzahl 
+oder einer Liste von Oktetten zur&uuml;ck. Der standardm&auml;&szlig;ige R&uuml;ckgabewert 
+ist eine Zeichenkette mit 40 hexadezimalen Zeichen.
+</p>
+<p>Das optionale Argument <var>return-type</var> erlaubt es <code>sha1sum</code>, 
+alternativ hierzu auch die entsprechende Ganzzahl oder Liste von Oktetten 
+zur&uuml;ck zu geben.
+<var>return-type</var> kann <code>string</code>, <code>number</code> oder <code>list</code> sein.
+</p>
+<p>Beispiel:
+</p>
+<pre class="example">(%i1) ibase: obase: 16.$
+(%i2) msg: &quot;foo bar baz&quot;$
+(%i3) string: sha1sum(msg);
+(%o3)              c7567e8b39e2428e38bf9c9226ac68de4c67dc39
+(%i4) integer: sha1sum(msg, 'number);
+(%o4)             0c7567e8b39e2428e38bf9c9226ac68de4c67dc39
+(%i5) octets: sha1sum(msg, 'list);
+(%o5)  [0C7,56,7E,8B,39,0E2,42,8E,38,0BF,9C,92,26,0AC,68,0DE,4C,67,0DC,39]
+(%i6) sdowncase( printf(false, &quot;~{~2,'0x~^:~}&quot;, octets) );
+(%o6)     c7:56:7e:8b:39:e2:42:8e:38:bf:9c:92:26:ac:68:de:4c:67:dc:39
+</pre>
+<p>Sind in <var>arg</var> Umlaute oder andere Nicht-US-ASCII-Zeichen enthalten (bzw. Oktette 
+gr&ouml;&szlig;er als 127), ist der <code>SHA1</code>-Fingerabdruck von der verwendeten 
+Plattform abh&auml;ngig. 
+</p>
+</dd></dl>
+
+<p><a name="sha256sum"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>sha256sum</b><i> (<var>arg</var>)</i>
+<a name="IDX2769"></a>
+</dt>
+<dt><u>Funktion:</u> <b>sha256sum</b><i> (<var>arg</var>, <var>return-type</var>) </i>
+<a name="IDX2770"></a>
+</dt>
+<dd><p>Gibt den <code>SHA256</code>-Fingerabdruck einer Zeichenkette, einer nicht-negativen 
+Ganzzahl oder einer Liste von Oktetten zur&uuml;ck. Der standardm&auml;&szlig;ige 
+R&uuml;ckgabewert ist eine Zeichenkette mit 64 hexadezimalen Zeichen.
+</p>
+<p>Das optionale Argument <var>return-type</var> erlaubt es <code>sha256sum</code>, 
+alternativ hierzu auch die entsprechende Ganzzahl oder Liste von Oktetten 
+zur&uuml;ck zu geben (siehe <a href="#sha1sum">sha1sum</a>).
+</p>
+<p>Beispiel:
+</p>
+<pre class="example">(%i1) string: sha256sum(&quot;foo bar baz&quot;);
+(%o1)  dbd318c1c462aee872f41109a4dfd3048871a03dedd0fe0e757ced57dad6f2d7
+</pre>
+<p>Sind in <var>arg</var> Umlaute oder andere Nicht-US-ASCII-Zeichen enthalten (bzw. Oktette 
+gr&ouml;&szlig;er als 127), ist der <code>SHA256</code>-Fingerabdruck von der verwendeten 
+Plattform abh&auml;ngig. 
+</p>
+</dd></dl>
+
+<p><a name="string_005fto_005foctets"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>string_to_octets</b><i> (<var>string</var>)</i>
+<a name="IDX2771"></a>
+</dt>
+<dt><u>Funktion:</u> <b>string_to_octets</b><i> (<var>string</var>, <var>encoding</var>) </i>
+<a name="IDX2772"></a>
+</dt>
+<dd><p>Kodiert den aktuellen Systemstandards entsprechend die Zeichenkette <var>string</var> 
+in eine Liste von Oktetten.
+Bei der Kodierung von Zeichenketten, die nicht ausschlie&szlig;lich US-ASCII-Zeichen 
+enthalten, ist das Ergebnis abh&auml;ngig von der Plattform, der Anwendung und vom 
+unter Maxima liegenden Lisp. 
+</p>
+<p>In dem Fall, dass UTF-8 das externe Format des Lisp Readers ist, kann das 
+optionale Argument <var>encoding</var> genutzt werden, um f&uuml;r die String-Oktett-Umwandlung 
+eine gewünschte Kodierung auszuw&auml;hlen. 
+Siehe <a href="#adjust_005fexternal_005fformat">adjust_external_format</a>, falls es notwendig sein sollte, hierf&uuml;r das 
+externe Format zu &auml;ndern.
+</p>
+<p>Siehe <a href="#octets_005fto_005fstring">octets_to_string</a> f&uuml;r Beispiele und zus&auml;tzliche Informationen.
+</p>
+</dd></dl>
+
 
 
 
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1380,12 +2076,12 @@ If <var>test</var> is not given, <var>constituent</var> is used as the default t
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

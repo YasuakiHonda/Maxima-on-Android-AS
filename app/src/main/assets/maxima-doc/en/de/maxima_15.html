@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 15. Summen, Produkte und Reihen </h1>
@@ -113,7 +113,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.1 Summen und Produkte </h2>
@@ -256,14 +256,14 @@ ausgewertet werden, wird eine Substantivform zur&uuml;ckgegeben.  Siehe auch
 <pre class="example">(%i1) lsum (x^i, i, [1, 2, 7]);
                             7    2
 (%o1)                      x  + x  + x
-(%i2) lsum (i^2, i, rootsof (x^3 - 1));
+(%i2) lsum (i^2, i, rootsof (x^3 - 1, x));
                      ====
                      \      2
 (%o2)                 &gt;    i
                      /
                      ====
                                    3
-                     i in rootsof(x  - 1)
+                     i in rootsof(x  - 1, x)
 </pre></dd></dl>
 
 <p><a name="niceindices"></a>
@@ -509,7 +509,7 @@ werden k&ouml;nnen.
 </p>
 <p>Siehe auch <code><a href="#sumcontract">sumcontract</a></code>,  <code><a href="#sumexpand">sumexpand</a></code>,
 <code><a href="#intosum">intosum</a></code>, <code><a href="#bashindices">bashindices</a></code>, <code><a href="#niceindices">niceindices</a></code>,
-<code><a href="#cauchysum">cauchysum</a></code> und <code><a href="maxima_77.html#SEC400">zeilberger</a></code>.
+<code><a href="#cauchysum">cauchysum</a></code> und <code><a href="maxima_77.html#SEC401">zeilberger</a></code>.
 </p>
 <p>Beispiele:
 </p>
@@ -691,7 +691,7 @@ auch <code><a href="#cauchysum">cauchysum</a></code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.2 Einf&uuml;hrung in Reihen </h2>
@@ -719,7 +719,7 @@ f&uuml;r eine Reihenentwicklung.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.3 Funktionen und Variablen f&uuml;r Reihen </h2>
@@ -1377,7 +1377,7 @@ ausgegeben.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.4 Poisson Reihen </h2>
@@ -1555,7 +1555,7 @@ it will convert <var>a</var> into a Poisson encoding first, if necessary.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.5 Kettenbr&uuml;che </h2>
@@ -1707,12 +1707,12 @@ period.  Thus the default is to give one period.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

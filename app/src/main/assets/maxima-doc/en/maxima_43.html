@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 43. bode</title>
+<title>Maxima 5.39.0 Manual: 43. bitwise</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 43. bode">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 43. bode">
+<meta name="description" content="Maxima 5.39.0 Manual: 43. bitwise">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 43. bitwise">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,188 +54,375 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-<a name="bode"></a>
-<a name="SEC220"></a>
+<a name="bitwise_002dpkg"></a>
+<a name="SEC219"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_42.html#SEC219" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC221" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC220" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_42.html#SEC217" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 43. bode </h1>
+<h1 class="chapter"> 43. bitwise </h1>
 
+<p>The package <code>bitwise</code> provides functions that allow to manipulate
+bits of integer constants. As always maxima attempts to simplify the result
+of the operation if the actual value of a constant isn't known considering
+attributes that might be known for the variables, see the <code><a href="maxima_11.html#declare">declare</a></code>
+mechanism.
+</p>
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC221">43.1 Functions and Variables for bode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC220">43.1 Functions and Variables for bitwise</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-bode"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-bitwise"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-bode"></a>
-<a name="SEC221"></a>
+<a name="Functions-and-Variables-for-bitwise"></a>
+<a name="SEC220"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC220" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC219" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC220" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC220" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC219" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC219" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 43.1 Functions and Variables for bode </h2>
+<h2 class="section"> 43.1 Functions and Variables for bitwise </h2>
 
-
-<p><a name="Item_003a-bode_005fgain"></a>
+<p><a name="bit_005fnot"></a>
+<a name="Item_003a-bit_005fnot"></a>
 </p><dl>
-<dt><u>Function:</u> <b>bode_gain</b><i> (<var>H</var>, <var>range</var>, ...<var>plot_opts</var>...)</i>
-<a name="IDX1420"></a>
+<dt><u>Function:</u> <b>bit_not</b><i> (<var>int</var>)</i>
+<a name="IDX1444"></a>
 </dt>
-<dd><p>Function to draw Bode gain plots.
+<dd><p>Inverts all bits of a signed integer. The result of this action reads
+<code>-int - 1</code>.
 </p>
-<p>Examples (1 through 7 from 
-</p><pre class="example"><a href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a>,
-</pre><p>8 from Ron Crummett):
-</p><pre class="example">(%i1) load(&quot;bode&quot;)$
-
-(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$
-
-(%i3) bode_gain (H1 (s), [w, 1/1000, 1000])$
-
-(%i4) H2 (s) := 1 / (1 + s/omega0)$
-
-(%i5) bode_gain (H2 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i6) H3 (s) := 1 / (1 + s/omega0)^2$
-
-(%i7) bode_gain (H3 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i8) H4 (s) := 1 + s/omega0$
-
-(%i9) bode_gain (H4 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i10) H5 (s) := 1/s$
-
-(%i11) bode_gain (H5 (s), [w, 1/1000, 1000])$
-
-(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$
-
-(%i13) bode_gain (H6 (s), [w, 1/1000, 1000]), 
-                  omega0 = 10, zeta = 1/10$
-
-(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$
-
-(%i15) bode_gain (H7 (s), [w, 1/1000, 1000]),
-                  omega0 = 10, zeta = 1/10$
-
-(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$
-
-(%i17) bode_gain (H8 (s), [w, 1/1000, 1000])$
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_not(i);
+(%o2)                      bit_not(i)
+(%i3) bit_not(bit_not(i));
+(%o3)                           i
+(%i4) bit_not(3);
+(%o4)                          - 4
+(%i5) bit_not(100);
+(%o5)                         - 101
+(%i6) bit_not(-101);
+(%o6)                          100
 </pre>
-<p>To use this function write first <code>load(&quot;bode&quot;)</code>. See also <code>bode_phase</code>
-</p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Plotting">Plotting</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-bode">Package bode</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
 </div>
-</p>
-</dd></dl>
+</p></dd></dl>
 
-
-<p><a name="Item_003a-bode_005fphase"></a>
+<p><a name="bit_005fand"></a>
+<a name="Item_003a-bit_005fand"></a>
 </p><dl>
-<dt><u>Function:</u> <b>bode_phase</b><i> (<var>H</var>, <var>range</var>, ...<var>plot_opts</var>...)</i>
-<a name="IDX1421"></a>
+<dt><u>Function:</u> <b>bit_and</b><i> (<var>int1</var>, ...)</i>
+<a name="IDX1445"></a>
 </dt>
-<dd><p>Function to draw Bode phase plots.
+<dd><p>This function calculates a bitwise <code>and</code> of two or more signed integers.
 </p>
-<p>Examples (1 through 7 from 
-</p><pre class="example"><a href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a>,
-</pre><p>8 from Ron Crummett):
-</p><pre class="example">(%i1) load(&quot;bode&quot;)$
-
-(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$
-
-(%i3) bode_phase (H1 (s), [w, 1/1000, 1000])$
-
-(%i4) H2 (s) := 1 / (1 + s/omega0)$
-
-(%i5) bode_phase (H2 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i6) H3 (s) := 1 / (1 + s/omega0)^2$
-
-(%i7) bode_phase (H3 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i8) H4 (s) := 1 + s/omega0$
-
-(%i9) bode_phase (H4 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i10) H5 (s) := 1/s$
-
-(%i11) bode_phase (H5 (s), [w, 1/1000, 1000])$
-
-(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$
-
-(%i13) bode_phase (H6 (s), [w, 1/1000, 1000]), 
-                   omega0 = 10, zeta = 1/10$
-
-(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$
-
-(%i15) bode_phase (H7 (s), [w, 1/1000, 1000]), 
-                   omega0 = 10, zeta = 1/10$
-
-(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$
-
-(%i17) bode_phase (H8 (s), [w, 1/1000, 1000])$
-
-(%i18) block ([bode_phase_unwrap : false],
-              bode_phase (H8 (s), [w, 1/1000, 1000]));
-
-(%i19) block ([bode_phase_unwrap : true], 
-              bode_phase (H8 (s), [w, 1/1000, 1000]));
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_and(i,i);
+(%o2)                           i
+(%i3) bit_and(i,i,i);
+(%o3)                           i
+(%i4) bit_and(1,3);
+(%o4)                           1
+(%i5) bit_and(-7,7);
+(%o5)                           1
 </pre>
-<p>To use this function write first <code>load(&quot;bode&quot;)</code>. See also <code>bode_gain</code>
-</p>
+<p>If it is known if one of the parameters to <code>bit_and</code> is even this information
+is taken into consideration by the function.
+</p><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_and(1,e);
+(%o3)                           0
+(%i4) bit_and(1,o);
+(%o4)                           1
+</pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Plotting">Plotting</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-bode">Package bode</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
 </div>
+</p></dd></dl>
+
+<p><a name="bit_005for"></a>
+<a name="Item_003a-bit_005for"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bit_or</b><i> (<var>int1</var>, ...)</i>
+<a name="IDX1446"></a>
+</dt>
+<dd><p>This function calculates a bitwise <code>or</code> of two or more signed integers.
 </p>
-</dd></dl>
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_or(i,i);
+(%o2)                           i
+(%i3) bit_or(i,i,i);
+(%o3)                           i
+(%i4) bit_or(1,3);
+(%o4)                           3
+(%i5) bit_or(-7,7);
+(%o5)                          - 1
+</pre>
+<p>If it is known if one of the parameters to <code>bit_or</code> is even this information
+is taken into consideration by the function.
+</p><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_or(1,e);
+(%o3)                         e + 1
+(%i4) bit_or(1,o);
+(%o4)                           o
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bit_005fxor"></a>
+<a name="Item_003a-bit_005fxor"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bit_xor</b><i> (<var>int1</var>, ...)</i>
+<a name="IDX1447"></a>
+</dt>
+<dd><p>This function calculates a bitwise <code>or</code> of two or more signed integers.
+</p>
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_xor(i,i);
+(%o2)                           0
+(%i3) bit_xor(i,i,i);
+(%o3)                           i
+(%i4) bit_xor(1,3);
+(%o4)                           2
+(%i5) bit_xor(-7,7);
+(%o5)                          - 2
+</pre>
+<p>If it is known if one of the parameters to <code>bit_xor</code> is even this information
+is taken into consideration by the function.
+</p><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_xor(1,e);
+(%o3)                         e + 1
+(%i4) bit_xor(1,o);
+(%o4)                         o - 1
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
 
 
-<p><a name="Item_003a-clebsch_005fgordan"></a>
+<p><a name="bit_005flsh"></a>
+<a name="Item_003a-bit_005flsh"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bit_lsh</b><i> (<var>int</var>, <var>nBits</var>)</i>
+<a name="IDX1448"></a>
+</dt>
+<dd><p>This function shifts all bits of the signed integer <code>int</code> to the left by
+<code>nBits</code> bits. The width of the integer is extended by <code>nBits</code> for
+this process. The result of <code>bit_lsh</code> therefore is <code>int * 2</code>.
+</p>
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_lsh(0,1);
+(%o2)                           0
+(%i3) bit_lsh(1,0);
+(%o3)                           1
+(%i4) bit_lsh(1,1);
+(%o4)                           2
+(%i5) bit_lsh(1,i);
+(%o5)                     bit_lsh(1, i)
+(%i6) bit_lsh(-3,1);
+(%o6)                          - 6
+(%i7) bit_lsh(-2,1);
+(%o7)                          - 4
+</pre><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+
+<p><a name="bit_005frsh"></a>
+<a name="Item_003a-bit_005frsh"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bit_rsh</b><i> (<var>int</var>, <var>nBits</var>)</i>
+<a name="IDX1449"></a>
+</dt>
+<dd><p>This function shifts all bits of the signed integer <code>int</code> to the right by
+<code>nBits</code> bits. The width of the integer is reduced by <code>nBits</code> for
+this process.
+</p>
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_rsh(0,1);
+(%o2)                           0
+(%i3) bit_rsh(2,0);
+(%o3)                           2
+(%i4) bit_rsh(2,1);
+(%o4)                           1
+(%i5) bit_rsh(2,2);
+(%o5)                           0
+(%i6) bit_rsh(-3,1);
+(%o6)                          - 2
+(%i7) bit_rsh(-2,1);
+(%o7)                          - 1
+(%i8) bit_rsh(-2,2);
+(%o8)                          - 1
+</pre><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bit_005flength"></a>
+<a name="Item_003a-bit_005flength"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bit_length</b><i> (<var>int</var>)</i>
+<a name="IDX1450"></a>
+</dt>
+<dd><p>determines how many bits a variable needs to be long in order to store the
+number <code>int</code>. This function only operates on positive numbers.
+</p>
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_length(0);
+(%o2)                           0
+(%i3) bit_length(1);
+(%o3)                           1
+(%i4) bit_length(7);
+(%o4)                           3
+(%i5) bit_length(8);
+(%o5)                           4
+</pre><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bit_005fonep"></a>
+<a name="Item_003a-bit_005fonep"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bit_onep</b><i> (<var>int</var>, <var>nBit</var>)</i>
+<a name="IDX1451"></a>
+</dt>
+<dd><p>determines if bits <code>nBit</code> is set in the signed integer <code>int</code>.
+</p>
+<pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_onep(85,0);
+(%o2)                         true
+(%i3) bit_onep(85,1);
+(%o3)                         false
+(%i4) bit_onep(85,2);
+(%o4)                         true
+(%i5) bit_onep(85,3);
+(%o5)                         false
+(%i6) bit_onep(85,100);
+(%o6)                         false
+(%i7) bit_onep(i,100);
+(%o7)                   bit_onep(i, 100)
+</pre>
+<p>For signed numbers the sign bit is interpreted to be more than <code>nBit</code> to the
+left of the leftmost bit of <code>int</code> that reads <code>1</code>.
+</p><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_onep(-2,0);
+(%o2)                         false
+(%i3) bit_onep(-2,1);
+(%o3)                         true
+(%i4) bit_onep(-2,2);
+(%o4)                         true
+(%i5) bit_onep(-2,3);
+(%o5)                         true
+(%i6) bit_onep(-2,4);
+(%o6)                         true
+</pre>
+
+<p>If it is known if the number to be tested is even this information
+is taken into consideration by the function.
+</p><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_onep(e,0);
+(%o3)                         false
+(%i4) bit_onep(o,0);
+(%o4)                         true
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_105.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_105.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-bode_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC220" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC219" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -243,12 +430,12 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

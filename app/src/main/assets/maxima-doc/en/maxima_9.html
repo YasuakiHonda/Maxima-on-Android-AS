@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 9. Simplification</title>
+<title>Maxima 5.39.0 Manual: 9. Simplification</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 9. Simplification">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 9. Simplification">
+<meta name="description" content="Maxima 5.39.0 Manual: 9. Simplification">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 9. Simplification">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 9. Simplification </h1>
@@ -105,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 9.1 Functions and Variables for Simplification </h2>
@@ -114,7 +116,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-additive"></a>
 </p><dl>
 <dt><u>Property:</u> <b>additive</b>
-<a name="IDX248"></a>
+<a name="IDX256"></a>
 </dt>
 <dd><p>If <code>declare(f,additive)</code> has been executed, then:
 </p>
@@ -139,8 +141,8 @@ applied to expressions of the form <code>sum(x[i],i,lower-limit,upper-limit)</co
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Operators">Operators</a> &middot;
-<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Operators">Operators</a> &middot;
+<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -148,7 +150,7 @@ applied to expressions of the form <code>sum(x[i],i,lower-limit,upper-limit)</co
 <a name="Item_003a-antisymmetric"></a>
 </p><dl>
 <dt><u>Property:</u> <b>antisymmetric</b>
-<a name="IDX249"></a>
+<a name="IDX257"></a>
 </dt>
 <dd><p>If <code>declare(h,antisymmetric)</code> is done, this tells the simplifier that
 <code>h</code> is antisymmetric.  E.g.  <code>h(x,z,y)</code> will simplify to 
@@ -177,15 +179,15 @@ of two arguments necessary to convert it to that form.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Operators">Operators</a> &middot;
-<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Operators">Operators</a> &middot;
+<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-combine"></a>
 </p><dl>
 <dt><u>Function:</u> <b>combine</b><i> (<var>expr</var>)</i>
-<a name="IDX250"></a>
+<a name="IDX258"></a>
 </dt>
 <dd><p>Simplifies the sum <var>expr</var> by combining terms with the same
 denominator into a single term.
@@ -193,17 +195,17 @@ denominator into a single term.
 <p>Example:
 </p>
 <pre class="example">(%i1) 1*f/2*b + 2*c/3*a + 3*f/4*b +c/5*b*a;
-                             5 b f   a b c   2 a c
-(%o1)                        ----- + ----- + -----
-                               4       5       3
+                      5 b f   a b c   2 a c
+(%o1)                 ----- + ----- + -----
+                        4       5       3
 (%i2) combine (%);
-                         75 b f + 4 (3 a b c + 10 a c)
-(%o2)                    -----------------------------
-                                      60
+                  75 b f + 4 (3 a b c + 10 a c)
+(%o2)             -----------------------------
+                               60
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -211,7 +213,7 @@ denominator into a single term.
 <a name="Item_003a-commutative"></a>
 </p><dl>
 <dt><u>Property:</u> <b>commutative</b>
-<a name="IDX251"></a>
+<a name="IDX259"></a>
 </dt>
 <dd><p>If <code>declare(h, commutative)</code> is done, this tells the simplifier that
 <code>h</code> is a commutative function.  E.g.  <code>h(x, z, y)</code> will simplify to
@@ -220,22 +222,22 @@ denominator into a single term.
 <p>Exemplo:
 </p>
 <pre class="example">(%i1) S (b, a);
-(%o1)                               S(b, a)
+(%o1)                        S(b, a)
 (%i2) S (a, b) + S (b, a);
-(%o2)                          S(b, a) + S(a, b)
+(%o2)                   S(b, a) + S(a, b)
 (%i3) declare (S, commutative);
-(%o3)                                done
+(%o3)                         done
 (%i4) S (b, a);
-(%o4)                               S(a, b)
+(%o4)                        S(a, b)
 (%i5) S (a, b) + S (b, a);
-(%o5)                              2 S(a, b)
+(%o5)                       2 S(a, b)
 (%i6) S (a, c, e, d, b);
-(%o6)                          S(a, b, c, d, e)
+(%o6)                   S(a, b, c, d, e)
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Operators">Operators</a> &middot;
-<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Operators">Operators</a> &middot;
+<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -244,10 +246,10 @@ denominator into a single term.
 <a name="Item_003a-demoivre"></a>
 </p><dl>
 <dt><u>Function:</u> <b>demoivre</b><i> (<var>expr</var>)</i>
-<a name="IDX252"></a>
+<a name="IDX260"></a>
 </dt>
 <dt><u>Option variable:</u> <b>demoivre</b>
-<a name="IDX253"></a>
+<a name="IDX261"></a>
 </dt>
 <dd><p>The function <code>demoivre (expr)</code> converts one expression
 without setting the global variable <code>demoivre</code>.
@@ -265,9 +267,9 @@ time.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Complex-variables">Complex variables</a> &middot;
-<a href="maxima_99.html#Category_003a-Trigonometric-functions">Trigonometric functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Hyperbolic-functions">Hyperbolic functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Complex-variables">Complex variables</a> &middot;
+<a href="maxima_105.html#Category_003a-Trigonometric-functions">Trigonometric functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Hyperbolic-functions">Hyperbolic functions</a>
 </div>
 </p></dd></dl>
 
@@ -276,7 +278,7 @@ time.
 <a name="Item_003a-distrib"></a>
 </p><dl>
 <dt><u>Function:</u> <b>distrib</b><i> (<var>expr</var>)</i>
-<a name="IDX254"></a>
+<a name="IDX262"></a>
 </dt>
 <dd><p>Distributes sums over products.  It differs from <code>expand</code> in that it works
 at only the top level of an expression, i.e., it doesn't recurse and it is
@@ -300,7 +302,7 @@ all sums at that level.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -308,7 +310,7 @@ all sums at that level.
 <a name="Item_003a-distribute_005fover"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>distribute_over</b>
-<a name="IDX255"></a>
+<a name="IDX263"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -325,53 +327,53 @@ to the value <code>false</code>.
 <p>The <code>sin</code> function maps over a list:
 </p>
 <pre class="example">(%i1) sin([x,1,1.0]);
-(%o1)                 [sin(x), sin(1), .8414709848078965]
+(%o1)         [sin(x), sin(1), 0.8414709848078965]
 </pre>
 <p><code>mod</code> is a function with two arguments which maps over lists.  Mapping over 
 nested lists is possible too:
 </p>
-<pre class="example">(%i2) mod([x,11,2*a],10);
-(%o2)                    [mod(x, 10), 1, 2 mod(a, 5)]
-(%i3) mod([[x,y,z],11,2*a],10);
-(%o3)       [[mod(x, 10), mod(y, 10), mod(z, 10)], 1, 2 mod(a, 5)]
+<pre class="example">(%i1) mod([x,11,2*a],10);
+(%o1)             [mod(x, 10), 1, 2 mod(a, 5)]
+(%i2) mod([[x,y,z],11,2*a],10);
+(%o2) [[mod(x, 10), mod(y, 10), mod(z, 10)], 1, 2 mod(a, 5)]
 </pre>
 <p>Mapping of the <code>floor</code> function over a matrix and an equation:
 </p>
-<pre class="example">(%i4) floor(matrix([a,b],[c,d]));
-                            [ floor(a)  floor(b) ]
-(%o4)                       [                    ]
-                            [ floor(c)  floor(d) ]
-(%i5) floor(a=b);
-(%o5)                         floor(a) = floor(b)
+<pre class="example">(%i1) floor(matrix([a,b],[c,d]));
+                     [ floor(a)  floor(b) ]
+(%o1)                [                    ]
+                     [ floor(c)  floor(d) ]
+(%i2) floor(a=b);
+(%o2)                  floor(a) = floor(b)
 </pre>
 <p>Functions with more than one argument map over any of the arguments or all
 arguments:
 </p>
-<pre class="example">(%i6) expintegral_e([1,2],[x,y]);
-(%o6) [[expintegral_e(1, x), expintegral_e(1, y)], 
-       [expintegral_e(2, x), expintegral_e(2, y)]]
+<pre class="example">(%i1) expintegral_e([1,2],[x,y]);
+(%o1) [[expintegral_e(1, x), expintegral_e(1, y)], 
+                      [expintegral_e(2, x), expintegral_e(2, y)]]
 </pre>
 <p>Check if a function has the property distribute_over:
 </p>
-<pre class="example">(%i7) properties(abs);
-(%o7) [integral, distributes over bags, noun, rule, gradef]
+<pre class="example">(%i1) properties(abs);
+(%o1) [integral, rule, distributes over bags, noun, gradef, 
+                                                 system function]
 </pre>
 <p>The mapping of functions is switched off, when setting <code>distribute_over</code> 
 to the value <code>false</code>.
 </p>
 <pre class="example">(%i1) distribute_over;
-(%o1)                                true
+(%o1)                         true
 (%i2) sin([x,1,1.0]);
-(%o2)                [sin(x), sin(1), 0.8414709848078965]
+(%o2)         [sin(x), sin(1), 0.8414709848078965]
 (%i3) distribute_over : not distribute_over;
-(%o3)                                false
+(%o3)                         false
 (%i4) sin([x,1,1.0]);
-(%o4)                          sin([x, 1, 1.0])
-(%i5)
+(%o4)                   sin([x, 1, 1.0])
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -379,7 +381,7 @@ to the value <code>false</code>.
 <a name="Item_003a-domain"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>domain</b>
-<a name="IDX256"></a>
+<a name="IDX264"></a>
 </dt>
 <dd><p>Default value: <code>real</code>
 </p>
@@ -389,7 +391,7 @@ to the value <code>false</code>.
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -398,10 +400,10 @@ to the value <code>false</code>.
 <a name="Item_003a-evenfun"></a>
 </p><dl>
 <dt><u>Property:</u> <b>evenfun</b>
-<a name="IDX257"></a>
+<a name="IDX265"></a>
 </dt>
 <dt><u>Property:</u> <b>oddfun</b>
-<a name="IDX258"></a>
+<a name="IDX266"></a>
 </dt>
 <dd><p><code>declare(f, evenfun)</code> or <code>declare(f, oddfun)</code> tells Maxima to recognize
 the function <code>f</code> as an even or odd function.
@@ -426,7 +428,7 @@ the function <code>f</code> as an even or odd function.
 <a name="Item_003a-expand"></a>
 </p><dl>
 <dt><u>Function:</u> <b>expand</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>expand</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>expand</tt> (<var>expr</var>, <var>p</var>, <var>n</var>)</i>
-<a name="IDX259"></a>
+<a name="IDX267"></a>
 </dt>
 <dd><p>Expand expression <var>expr</var>.
 Products of sums and exponentiated sums are
@@ -458,7 +460,7 @@ less than <code>n</code>.
 </p>
 <p><code>expand(expr, 0, 0)</code> causes a resimplification of <code>expr</code>.  <code>expr</code>
 is not reevaluated.  In distinction from <code>ev(expr, noeval)</code> a special
-representation (e. g. a CRE form) is removed.  See also <code>ev</code>.
+representation (e. g. a CRE form) is removed.  See also <code><a href="maxima_8.html#ev">ev</a></code>.
 </p>
 <p>The <code>expand</code> flag used with <code>ev</code> causes expansion.
 </p>
@@ -504,20 +506,20 @@ A demo is available by doing <code>demo(&quot;facexp&quot;)</code>.
 </pre>
 <p>Resimplify an expression without expansion:
 </p>
-<pre class="example">(%i7) expr:(1+x)^2*sin(x);
-                                       2
-(%o7)                           (x + 1)  sin(x)
-(%i8) exponentialize:true;
-(%o8)                                true
-(%i9) expand(expr,0,0);
-                                   2    %i x     - %i x
-                         %i (x + 1)  (%e     - %e      )
-(%o9)                  - -------------------------------
-                                        2
+<pre class="example">(%i1) expr:(1+x)^2*sin(x);
+                                2
+(%o1)                    (x + 1)  sin(x)
+(%i2) exponentialize:true;
+(%o2)                         true
+(%i3) expand(expr,0,0);
+                            2    %i x     - %i x
+                  %i (x + 1)  (%e     - %e      )
+(%o3)           - -------------------------------
+                                 2
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -526,7 +528,7 @@ A demo is available by doing <code>demo(&quot;facexp&quot;)</code>.
 <a name="Item_003a-expandwrt"></a>
 </p><dl>
 <dt><u>Function:</u> <b>expandwrt</b><i> (<var>expr</var>, <var>x_1</var>, &hellip;, <var>x_n</var>)</i>
-<a name="IDX260"></a>
+<a name="IDX268"></a>
 </dt>
 <dd><p>Expands expression <code>expr</code> with respect to the 
 variables <var>x_1</var>, &hellip;, <var>x_n</var>.
@@ -543,7 +545,7 @@ means of the switch <code>expandwrt_denom</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -551,7 +553,7 @@ means of the switch <code>expandwrt_denom</code>.
 <a name="Item_003a-expandwrt_005fdenom"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>expandwrt_denom</b>
-<a name="IDX261"></a>
+<a name="IDX269"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -563,7 +565,7 @@ then only the numerator will be expanded in that way.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -572,7 +574,7 @@ then only the numerator will be expanded in that way.
 <a name="Item_003a-expandwrt_005ffactored"></a>
 </p><dl>
 <dt><u>Function:</u> <b>expandwrt_factored</b><i> (<var>expr</var>, <var>x_1</var>, &hellip;, <var>x_n</var>)</i>
-<a name="IDX262"></a>
+<a name="IDX270"></a>
 </dt>
 <dd><p>is similar to <code>expandwrt</code>, but treats expressions that are products
 somewhat differently.  <code>expandwrt_factored</code> expands only on those factors
@@ -582,7 +584,7 @@ of <code>expr</code> that contain the variables <var>x_1</var>, &hellip;, <var>x
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -590,7 +592,7 @@ of <code>expr</code> that contain the variables <var>x_1</var>, &hellip;, <var>x
 <a name="Item_003a-expon"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>expon</b>
-<a name="IDX263"></a>
+<a name="IDX271"></a>
 </dt>
 <dd><p>Default value: 0
 </p>
@@ -601,7 +603,7 @@ expanded.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -609,10 +611,10 @@ expanded.
 <a name="Item_003a-exponentialize"></a>
 </p><dl>
 <dt><u>Function:</u> <b>exponentialize</b><i> (<var>expr</var>)</i>
-<a name="IDX264"></a>
+<a name="IDX272"></a>
 </dt>
 <dt><u>Option variable:</u> <b>exponentialize</b>
-<a name="IDX265"></a>
+<a name="IDX273"></a>
 </dt>
 <dd><p>The function <code>exponentialize (expr)</code> converts 
 circular and hyperbolic functions in <var>expr</var> to exponentials,
@@ -628,9 +630,9 @@ both be true at the same time.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Complex-variables">Complex variables</a> &middot;
-<a href="maxima_99.html#Category_003a-Trigonometric-functions">Trigonometric functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Hyperbolic-functions">Hyperbolic functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Complex-variables">Complex variables</a> &middot;
+<a href="maxima_105.html#Category_003a-Trigonometric-functions">Trigonometric functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Hyperbolic-functions">Hyperbolic functions</a>
 </div>
 </p></dd></dl>
 
@@ -639,7 +641,7 @@ both be true at the same time.
 <a name="Item_003a-expop"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>expop</b>
-<a name="IDX266"></a>
+<a name="IDX274"></a>
 </dt>
 <dd><p>Default value: 0
 </p>
@@ -652,7 +654,7 @@ less than n.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -661,7 +663,7 @@ less than n.
 <a name="Item_003a-lassociative"></a>
 </p><dl>
 <dt><u>Property:</u> <b>lassociative</b>
-<a name="IDX267"></a>
+<a name="IDX275"></a>
 </dt>
 <dd><p><code>declare (g, lassociative)</code> tells the Maxima simplifier that <code>g</code> is
 left-associative.  E.g., <code>g (g (a, b), g (c, d))</code> will simplify to
@@ -669,9 +671,9 @@ left-associative.  E.g., <code>g (g (a, b), g (c, d))</code> will simplify to
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a> &middot;
-<a href="maxima_99.html#Category_003a-Simplification">Simplification</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a> &middot;
+<a href="maxima_105.html#Category_003a-Simplification">Simplification</a>
 </div>
 </p></dd></dl>
 
@@ -680,7 +682,7 @@ left-associative.  E.g., <code>g (g (a, b), g (c, d))</code> will simplify to
 <a name="Item_003a-linear"></a>
 </p><dl>
 <dt><u>Property:</u> <b>linear</b>
-<a name="IDX268"></a>
+<a name="IDX276"></a>
 </dt>
 <dd><p>One of Maxima's operator properties.  For univariate <code>f</code> so
 declared, &quot;expansion&quot; <code>f(x + y)</code> yields <code>f(x) + f(y)</code>,
@@ -693,16 +695,16 @@ for <code>a</code> and <code>b</code> free of <code>x</code>.
 <p>Example:
 </p>
 <pre class="example">(%i1) declare (f, linear);
-(%o1)                                done
+(%o1)                         done
 (%i2) f(x+y);
-(%o2)                             f(y) + f(x)
+(%o2)                      f(y) + f(x)
 (%i3) declare (a, constant);
-(%o3)                                done
+(%o3)                         done
 (%i4) f(a*x);
-(%o4)                               a f(x)
+(%o4)                        a f(x)
 </pre>
 <p><code>linear</code> is equivalent to <code>additive</code> and <code>outative</code>.
-See also <code>opproperties</code>.
+See also <code><a href="#opproperties">opproperties</a></code>.
 </p>
 <p>Example:
 </p>
@@ -727,9 +729,9 @@ See also <code>opproperties</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a> &middot;
-<a href="maxima_99.html#Category_003a-Simplification">Simplification</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a> &middot;
+<a href="maxima_105.html#Category_003a-Simplification">Simplification</a>
 </div>
 </p></dd></dl>
 
@@ -738,16 +740,16 @@ See also <code>opproperties</code>.
 <a name="Item_003a-maxnegex"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>maxnegex</b>
-<a name="IDX269"></a>
+<a name="IDX277"></a>
 </dt>
 <dd><p>Default value: 1000
 </p>
 <p><code>maxnegex</code> is the largest negative exponent which will
-be expanded by the <code>expand</code> command (see also <code>maxposex</code>).
+be expanded by the <code>expand</code> command, see also <code><a href="#maxposex">maxposex</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -756,16 +758,16 @@ be expanded by the <code>expand</code> command (see also <code>maxposex</code>).
 <a name="Item_003a-maxposex"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>maxposex</b>
-<a name="IDX270"></a>
+<a name="IDX278"></a>
 </dt>
 <dd><p>Default value: 1000
 </p>
 <p><code>maxposex</code> is the largest exponent which will be
-expanded with the <code>expand</code> command (see also <code>maxnegex</code>).
+expanded with the <code>expand</code> command, see also <code><a href="#maxnegex">maxnegex</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -774,7 +776,7 @@ expanded with the <code>expand</code> command (see also <code>maxnegex</code>).
 <a name="Item_003a-multiplicative"></a>
 </p><dl>
 <dt><u>Property:</u> <b>multiplicative</b>
-<a name="IDX271"></a>
+<a name="IDX279"></a>
 </dt>
 <dd><p><code>declare(f, multiplicative)</code> tells the Maxima simplifier that <code>f</code>
 is multiplicative.
@@ -805,27 +807,27 @@ defined as multiplicativity in the first argument to <code>f</code>, e.g.,
 <p><code>declare(nounify(product), multiplicative)</code> tells Maxima to simplify symbolic products.
 </p>
 <pre class="example">(%i1) product (a[i] * b[i], i, 1, n);
-                                    n
-                                  /===\
-                                   ! !
-(%o1)                              ! !  a  b
-                                   ! !   i  i
-                                  i = 1
+                             n
+                           /===\
+                            ! !
+(%o1)                       ! !  a  b
+                            ! !   i  i
+                           i = 1
 (%i2) declare (nounify (product), multiplicative);
-(%o2)                                done
+(%o2)                         done
 (%i3) product (a[i] * b[i], i, 1, n);
-                                 n         n
-                               /===\     /===\
-                                ! !       ! !
-(%o3)                         ( ! !  a )  ! !  b
-                                ! !   i   ! !   i
-                               i = 1     i = 1
+                          n         n
+                        /===\     /===\
+                         ! !       ! !
+(%o3)                  ( ! !  a )  ! !  b
+                         ! !   i   ! !   i
+                        i = 1     i = 1
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Simplification">Simplification</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Simplification">Simplification</a>
 </div>
 </p></dd></dl>
 
@@ -834,7 +836,7 @@ defined as multiplicativity in the first argument to <code>f</code>, e.g.,
 <a name="Item_003a-multthru"></a>
 </p><dl>
 <dt><u>Function:</u> <b>multthru</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>multthru</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>multthru</tt> (<var>expr_1</var>, <var>expr_2</var>)</i>
-<a name="IDX272"></a>
+<a name="IDX280"></a>
 </dt>
 <dd><p>Multiplies a factor (which should be a sum) of <var>expr</var> by the other factors
 of <var>expr</var>.  That is, <var>expr</var> is <code><var>f_1</var> <var>f_2</var> ... <var>f_n</var></code>
@@ -880,7 +882,7 @@ noncommutative) over sums.  Since quotients are represented as products
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -888,7 +890,7 @@ noncommutative) over sums.  Since quotients are represented as products
 </p>
 <dl>
 <dt><u>Property:</u> <b>nary</b>
-<a name="IDX273"></a>
+<a name="IDX281"></a>
 </dt>
 <dd><p><code>declare(f, nary)</code> tells Maxima to recognize the function <code>f</code> as an
 n-ary function.
@@ -914,7 +916,7 @@ expressions, for example, to simplify <code>foo(x, foo(y, z))</code> to
 <a name="Item_003a-negdistrib"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>negdistrib</b>
-<a name="IDX274"></a>
+<a name="IDX282"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -928,17 +930,17 @@ than local use in your Maxima.
 <p>Example:
 </p>
 <pre class="example">(%i1) negdistrib;
-(%o1)                                true
+(%o1)                         true
 (%i2) -(x+y);
-(%o2)                               - y - x
+(%o2)                       (- y) - x
 (%i3) negdistrib : not negdistrib ;
-(%o3)                                false
+(%o3)                         false
 (%i4) -(x+y);
-(%o4)                              - (y + x)
+(%o4)                       - (y + x)
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -946,7 +948,7 @@ than local use in your Maxima.
 <a name="Item_003a-opproperties"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>opproperties</b>
-<a name="IDX275"></a>
+<a name="IDX283"></a>
 </dt>
 <dd><p><code>opproperties</code> is the list of the special operator properties recognized
 by the Maxima simplifier:
@@ -954,13 +956,14 @@ by the Maxima simplifier:
 <p>Example:
 </p>
 <pre class="example">(%i1) opproperties;
-(%o1) [linear, additive, multiplicative, outative, evenfun, oddfun,.
-       commutative, symmetric, antisymmetric, nary, lassociative, rassociative]
+(%o1) [linear, additive, multiplicative, outative, evenfun, 
+oddfun, commutative, symmetric, antisymmetric, nary, 
+lassociative, rassociative]
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -969,7 +972,7 @@ by the Maxima simplifier:
 <a name="Item_003a-outative"></a>
 </p><dl>
 <dt><u>Property:</u> <b>outative</b>
-<a name="IDX276"></a>
+<a name="IDX284"></a>
 </dt>
 <dd><p><code>declare(f, outative)</code> tells the Maxima simplifier that constant factors
 in the argument of <code>f</code> can be pulled out.
@@ -1004,8 +1007,8 @@ simplify to <code>a * f(g(x), x)</code> for <code>a</code> free of <code>x</code
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -1013,7 +1016,7 @@ simplify to <code>a * f(g(x), x)</code> for <code>a</code> free of <code>x</code
 <a name="Item_003a-radcan"></a>
 </p><dl>
 <dt><u>Function:</u> <b>radcan</b><i> (<var>expr</var>)</i>
-<a name="IDX277"></a>
+<a name="IDX285"></a>
 </dt>
 <dd><p>Simplifies <var>expr</var>, which can contain logs, exponentials, and radicals, by 
 converting it into a form which is canonical over a large class of expressions 
@@ -1033,19 +1036,17 @@ simplifications based on factoring and partial-fraction expansions of exponents.
 <p>Examples:
 </p>
 <pre class="example">(%i1) radcan((log(x+x^2)-log(x))^a/log(1+x)^(a/2));
-                                           a/2
-(%o1)                            log(x + 1)
-
+                                    a/2
+(%o1)                     log(x + 1)
 (%i2) radcan((log(1+2*a^x+a^(2*x))/log(1+a^x)));
-(%o2)                                  2
-
+(%o2)                           2
 (%i3) radcan((%e^x-1)/(1+%e^(x/2)));
-                                     x/2
-(%o3)                              %e    - 1
+                              x/2
+(%o3)                       %e    - 1
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-functions">Simplification functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-functions">Simplification functions</a>
 </div>
 </p></dd></dl>
 
@@ -1054,7 +1055,7 @@ simplifications based on factoring and partial-fraction expansions of exponents.
 <a name="Item_003a-radexpand"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>radexpand</b>
-<a name="IDX278"></a>
+<a name="IDX286"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1081,7 +1082,7 @@ If <code>radexpand</code> is <code>false</code>, or <code>radexpand</code> is <c
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1090,7 +1091,7 @@ If <code>radexpand</code> is <code>false</code>, or <code>radexpand</code> is <c
 <a name="Item_003a-rassociative"></a>
 </p><dl>
 <dt><u>Property:</u> <b>rassociative</b>
-<a name="IDX279"></a>
+<a name="IDX287"></a>
 </dt>
 <dd><p><code>declare (g, rassociative)</code> tells the Maxima
 simplifier that <code>g</code> is right-associative.  E.g.,
@@ -1098,8 +1099,8 @@ simplifier that <code>g</code> is right-associative.  E.g.,
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -1108,7 +1109,7 @@ simplifier that <code>g</code> is right-associative.  E.g.,
 <a name="Item_003a-scsimp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>scsimp</b><i> (<var>expr</var>, <var>rule_1</var>, &hellip;, <var>rule_n</var>)</i>
-<a name="IDX280"></a>
+<a name="IDX288"></a>
 </dt>
 <dd><p>Sequential Comparative Simplification (method due to Stoute).
 <code>scsimp</code> attempts to simplify <var>expr</var>
@@ -1120,7 +1121,7 @@ simplifications are tried, it returns the original answer.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-functions">Simplification functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-functions">Simplification functions</a>
 </div>
 </p></dd></dl>
 
@@ -1128,17 +1129,21 @@ simplifications are tried, it returns the original answer.
 <a name="Item_003a-simp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>simp</b>
-<a name="IDX281"></a>
+<a name="IDX289"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
-<p><code>simp</code> enables simplification.  This is the standard.  <code>simp</code> is also
-an <code>evflag</code>, which is recognized by the function <code>ev</code>.  See <code>ev</code>.
+<p><code>simp</code> enables simplification.  This is the default.  <code>simp</code> is also
+an <code>evflag</code>, which is recognized by the function <code>ev</code>.  See <code><a href="maxima_8.html#ev">ev</a></code>.
 </p>
 <p>When <code>simp</code> is used as an <code>evflag</code> with a value <code>false</code>, the 
 simplification is suppressed only during the evaluation phase of an expression.
-The flag can not suppress the simplification which follows the evaluation 
+The flag does not suppress the simplification which follows the evaluation 
 phase.
+</p>
+<p>Many Maxima functions and operations require simplification to be enabled to work normally.
+When simplification is disabled, many results will be incomplete,
+and in addition there may be incorrect results or program errors.
 </p>
 <p>Examples:
 </p>
@@ -1147,27 +1152,27 @@ not simplified to its numerical value.  The <code>simp</code>-flag switches the
 simplification on.
 </p>
 <pre class="example">(%i1) simp:false;
-(%o1)                                false
+(%o1)                         false
 (%i2) sin(1.0);
-(%o2)                              sin(1.0)
+(%o2)                       sin(1.0)
 (%i3) sin(1.0),simp;
-(%o3)                          .8414709848078965
+(%o3)                  0.8414709848078965
 </pre>
 <p>The simplification is switched on again.  The <code>simp</code>-flag cannot suppress
 the simplification completely.  The output shows a simplified expression, but
 the variable <code>x</code> has an unsimplified expression as a value, because the
 assignment has occurred during the evaluation phase of the expression.
 </p>
-<pre class="example">(%i4) simp:true;
-(%o4)                                true
-(%i5) x:sin(1.0),simp:false;
-(%o5)                          .8414709848078965
-(%i6) :lisp $X
+<pre class="example">(%i1) simp:true;
+(%o1)                         true
+(%i2) x:sin(1.0),simp:false;
+(%o2)                  0.8414709848078965
+(%i3) :lisp $x
 ((%SIN) 1.0)
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Evaluation-flags">Evaluation flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Evaluation-flags">Evaluation flags</a>
 </div>
 </p></dd></dl>
 
@@ -1176,7 +1181,7 @@ assignment has occurred during the evaluation phase of the expression.
 <a name="Item_003a-symmetric"></a>
 </p><dl>
 <dt><u>Property:</u> <b>symmetric</b>
-<a name="IDX282"></a>
+<a name="IDX290"></a>
 </dt>
 <dd><p><code>declare (h, symmetric)</code> tells the Maxima
 simplifier that <code>h</code> is a symmetric function.  E.g., <code>h (x, z, y)</code> 
@@ -1186,8 +1191,8 @@ simplifies to <code>h (x, y, z)</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -1195,7 +1200,7 @@ simplifies to <code>h (x, y, z)</code>.
 <a name="Item_003a-xthru"></a>
 </p><dl>
 <dt><u>Function:</u> <b>xthru</b><i> (<var>expr</var>)</i>
-<a name="IDX283"></a>
+<a name="IDX291"></a>
 </dt>
 <dd><p>Combines all terms of <var>expr</var> (which should be a sum) over a common
 denominator without expanding products and exponentiated sums as <code>ratsimp</code>
@@ -1224,7 +1229,7 @@ denominator to be canceled thus simplifying the expression to be
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1241,12 +1246,12 @@ denominator to be canceled thus simplifying the expression to be
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

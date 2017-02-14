@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 27. Programmierung </h1>
@@ -109,7 +109,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 27.1 Lisp und Maxima </h2>
@@ -309,7 +309,7 @@ und <code>gcd</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 27.2 Einf&uuml;hrung in die Programmierung </h2>
@@ -371,7 +371,7 @@ zur&uuml;ck.  Mit <code>break</code> wird der Maxima-Debugger gestartet.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 27.3 Funktionen und Variablen der Programmierung </h2>
@@ -379,10 +379,10 @@ zur&uuml;ck.  Mit <code>break</code> wird der Maxima-Debugger gestartet.
 <p><a name="backtrace"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>backtrace</b><i> ()</i>
-<a name="IDX1446"></a>
+<a name="IDX1453"></a>
 </dt>
 <dt><u>Funktion:</u> <b>backtrace</b><i> (<var>n</var>)</i>
-<a name="IDX1447"></a>
+<a name="IDX1454"></a>
 </dt>
 <dd><p>Gibt den Aufruf-Stack der Funktion zur&uuml;ck, die ausgef&uuml;hrt wird.
 </p>
@@ -430,10 +430,10 @@ aufgerufen werden.
 <p><a name="block"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>block</b><i> ([<var>v_1</var>, &hellip;, <var>v_m</var>], <var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1448"></a>
+<a name="IDX1455"></a>
 </dt>
 <dt><u>Funktion:</u> <b>block</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1449"></a>
+<a name="IDX1456"></a>
 </dt>
 <dd><p>Mit der Anweisung <code>block</code> werden Ausdr&uuml;cke in einer lokalen Umgebung
 zusammengefasst.  <code>block</code> wertet die Argument <var>expr_1</var>, <var>expr_2</var>,
@@ -496,7 +496,7 @@ ist das Ergebnis der Funktion <code>newton</code>.
 <p><a name="break"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>break</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1450"></a>
+<a name="IDX1457"></a>
 </dt>
 <dd><p>Wertet die Ausdr&uuml;cke <var>expr_1</var>, &hellip;, <var>expr_n</var> aus, zeigt die 
 Ergebnisse an und f&uuml;hrt dann eine Unterbrechung aus.  Mit dem Kommando 
@@ -520,7 +520,7 @@ _exit;
 <p><a name="catch"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>catch</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1451"></a>
+<a name="IDX1458"></a>
 </dt>
 <dd>
 <p>Wertet die Ausdr&uuml;cke <var>expr_1</var>, &hellip;, <var>expr_n</var> nacheinander aus.
@@ -552,7 +552,7 @@ Beispiel mit <code>throw(-3)</code>.
 <p><a name="do"></a>
 </p><dl>
 <dt><u>Spezieller Operator:</u> <b>do</b>
-<a name="IDX1452"></a>
+<a name="IDX1459"></a>
 </dt>
 <dd>
 <p>Die <code>do</code>-Anweisung erlaubt die Definition von Iterationen.  Aufgrund der
@@ -743,10 +743,10 @@ mit der Funktion <code>return</code> verlassen wird.
 <p><a name="eval_005fwhen"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>eval_when</b><i> (<var>keyword</var>, <var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1453"></a>
+<a name="IDX1460"></a>
 </dt>
 <dt><u>Funktion:</u> <b>eval_when</b><i> ([<var>keyword_1</var>, <var>keyword_2</var>, &hellip;], <var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1454"></a>
+<a name="IDX1461"></a>
 </dt>
 <dd><p>Ein Ausdruck mit der Funktion <code>eval_when</code> wird an oberster Stelle in einer
 Datei definiert und erlaubt die bedingte Auswertung von Ausdr&uuml;cken beim Laden,
@@ -887,7 +887,7 @@ nil
 <p><a name="errcatch"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>errcatch</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1455"></a>
+<a name="IDX1462"></a>
 </dt>
 <dd>
 <p>Wertet die Ausdr&uuml;cke <var>expr_1</var>, &hellip;, <var>expr_n</var> nacheinander aus und
@@ -916,10 +916,10 @@ Division by 0
 <p><a name="error"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>error</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1456"></a>
+<a name="IDX1463"></a>
 </dt>
 <dt><u>Systemvariable:</u> <b>error</b>
-<a name="IDX1457"></a>
+<a name="IDX1464"></a>
 </dt>
 <dd>
 <p>Wertet die Ausdr&uuml;cke <var>expr_1</var>, &hellip;, <var>expr_n</var> aus, gibt diese auf 
@@ -957,7 +957,7 @@ Division durch 0 ist nicht gestattet.
 <p><a name="error_005fsize"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>error_size</b>
-<a name="IDX1458"></a>
+<a name="IDX1465"></a>
 </dt>
 <dd><p>Standardwert: 10
 </p>
@@ -1009,7 +1009,7 @@ Example expression is --------------
 <p><a name="error_005fsyms"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>error_syms</b>
-<a name="IDX1459"></a>
+<a name="IDX1466"></a>
 </dt>
 <dd><p>Standardwert: <code>[errexp1, errexp2, errexp3]</code>
 </p>
@@ -1029,7 +1029,7 @@ werden nacheinander der Liste <code>error_syms</code> entnommen.
 <p><a name="errormsg"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>errormsg</b><i> ()</i>
-<a name="IDX1460"></a>
+<a name="IDX1467"></a>
 </dt>
 <dd>
 <p>Gibt die letzte Fehlermeldung erneut aus.  Die Fehlermeldung ist in der
@@ -1040,7 +1040,7 @@ formatiert diese und gibt sie aus.
 <p><a name="variable_005ferrormsg"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>errormsg</b>
-<a name="IDX1461"></a>
+<a name="IDX1468"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -1087,7 +1087,7 @@ value of errormsg is false
 <p><a name="for"></a>
 </p><dl>
 <dt><u>Spezieller Operator:</u> <b>for</b>
-<a name="IDX1462"></a>
+<a name="IDX1469"></a>
 </dt>
 <dd>
 <p>Anweisung f&uuml;r Interationen.  Siehe die <code><a href="#do">do</a></code>-Anweisung f&uuml;r eine 
@@ -1097,7 +1097,7 @@ Beschreibung der Iterationsm&ouml;glichkeiten von Maxima.
 <p><a name="go"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>go</b><i> (<var>tag</var>)</i>
-<a name="IDX1463"></a>
+<a name="IDX1470"></a>
 </dt>
 <dd>
 <p>Erlaubt einen Sprung innerhalb eines Blocks zu einer Marke mit dem Namen 
@@ -1116,7 +1116,7 @@ springen.
 <p><a name="if"></a>
 </p><dl>
 <dt><u>Spezieller Operator:</u> <b>if</b>
-<a name="IDX1464"></a>
+<a name="IDX1471"></a>
 </dt>
 <dd>
 <p>Ist die bedingte Anweisung.  Verschiedene Formen einer bedingten Anweisung sind
@@ -1182,7 +1182,7 @@ not                    not         logical prefix
 <p><a name="local"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>local</b><i> (<var>v_1</var>, &hellip;, <var>v_n</var>)</i>
-<a name="IDX1465"></a>
+<a name="IDX1472"></a>
 </dt>
 <dd>
 <p>Speichert alle Eigenschaften der Symbole <var>v_1</var>, &hellip;, <var>v_n</var>, entfernt
@@ -1223,7 +1223,7 @@ darf <code>local</code> jeweils nur einmal auftreten.
 <p><a name="return"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>return</b><i> (<var>value</var>)</i>
-<a name="IDX1466"></a>
+<a name="IDX1473"></a>
 </dt>
 <dd>
 <p>Die <code>return</code>-Anweisung wird in einem Block verwendet, um den Block mit dem
@@ -1233,7 +1233,7 @@ Ergebnis <var>value</var> zu verlassen.  Siehe <code><a href="#block">block</a><
 <p><a name="throw"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>throw</b><i> (<var>expr</var>)</i>
-<a name="IDX1467"></a>
+<a name="IDX1474"></a>
 </dt>
 <dd>
 <p>Wertet den Ausdruck <var>expr</var> aus und generiert eine Ausnahme mit dem Ergebnis
@@ -1244,10 +1244,10 @@ der Auswertung, die von der letzten <code>catch</code>-Anweisung behandelt wird.
 <a name="unless"></a>
 </p><dl>
 <dt><u>Spezieller Operator:</u> <b>while</b>
-<a name="IDX1468"></a>
+<a name="IDX1475"></a>
 </dt>
 <dt><u>Spezieller Operator:</u> <b>unless</b>
-<a name="IDX1469"></a>
+<a name="IDX1476"></a>
 </dt>
 <dd>
 <p>Siehe den Operator <code><a href="#do">do</a></code>.
@@ -1266,12 +1266,12 @@ der Auswertung, die von der letzten <code>catch</code>-Anweisung behandelt wird.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

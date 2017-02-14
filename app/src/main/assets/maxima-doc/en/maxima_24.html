@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 24. Affine</title>
+<title>Maxima 5.39.0 Manual: 24. Affine</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 24. Affine">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 24. Affine">
+<meta name="description" content="Maxima 5.39.0 Manual: 24. Affine">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 24. Affine">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 24. Affine </h1>
@@ -107,7 +109,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 24.1 Introduction to Affine </h2>
@@ -116,10 +118,10 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_99.html#Category_003a-Groebner-bases">Groebner bases</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_105.html#Category_003a-Groebner-bases">Groebner bases</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p>
 
@@ -140,15 +142,16 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 24.2 Functions and Variables for Affine </h2>
 
-<p><a name="Item_003a-fast_005flinsolve"></a>
+<p><a name="fast_005flinsolve"></a>
+<a name="Item_003a-fast_005flinsolve"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fast_linsolve</b><i> ([<var>expr_1</var>, ..., <var>expr_m</var>], [<var>x_1</var>, ..., <var>x_n</var>])</i>
-<a name="IDX901"></a>
+<a name="IDX919"></a>
 </dt>
 <dd><p>Solves the simultaneous linear equations <var>expr_1</var>, ..., <var>expr_m</var>
 for the variables <var>x_1</var>, ..., <var>x_n</var>.
@@ -166,14 +169,15 @@ are sparse.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-grobner_005fbasis"></a>
+<p><a name="grobner_005fbasis"></a>
+<a name="Item_003a-grobner_005fbasis"></a>
 </p><dl>
 <dt><u>Function:</u> <b>grobner_basis</b><i> ([<var>expr_1</var>, ..., <var>expr_m</var>])</i>
-<a name="IDX902"></a>
+<a name="IDX920"></a>
 </dt>
 <dd><p>Returns a Groebner basis for the equations <var>expr_1</var>, ..., <var>expr_m</var>.
 The function <code>polysimp</code> can then
@@ -192,14 +196,15 @@ if and only if <var>f</var> is a polynomial combination of the elements of
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-set_005fup_005fdot_005fsimplifications"></a>
+<p><a name="set_005fup_005fdot_005fsimplifications"></a>
+<a name="Item_003a-set_005fup_005fdot_005fsimplifications"></a>
 </p><dl>
 <dt><u>Function:</u> <b>set_up_dot_simplifications</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>set_up_dot_simplifications</tt> (<var>eqns</var>, <var>check_through_degree</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>set_up_dot_simplifications</tt> (<var>eqns</var>)</i>
-<a name="IDX903"></a>
+<a name="IDX921"></a>
 </dt>
 <dd><p>The <var>eqns</var> are polynomial equations in non commutative variables.
 The value of <code>current_variables</code> is the
@@ -220,14 +225,15 @@ the weights of individual variables.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-declare_005fweights"></a>
+<p><a name="declare_005fweights"></a>
+<a name="Item_003a-declare_005fweights"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_weights</b><i> (<var>x_1</var>, <var>w_1</var>, ..., <var>x_n</var>, <var>w_n</var>)</i>
-<a name="IDX904"></a>
+<a name="IDX922"></a>
 </dt>
 <dd><p>Assigns weights <var>w_1</var>, ..., <var>w_n</var> to <var>x_1</var>, ..., <var>x_n</var>, respectively.
 These are the weights used in computing <code>nc_degree</code>.
@@ -236,14 +242,15 @@ These are the weights used in computing <code>nc_degree</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-nc_005fdegree"></a>
+<p><a name="nc_005fdegree"></a>
+<a name="Item_003a-nc_005fdegree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>nc_degree</b><i> (<var>p</var>)</i>
-<a name="IDX905"></a>
+<a name="IDX923"></a>
 </dt>
 <dd><p>Returns the degree of a noncommutative polynomial <var>p</var>.  See <code>declare_weights</code>.
 </p>
@@ -251,14 +258,15 @@ These are the weights used in computing <code>nc_degree</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-dotsimp"></a>
+<p><a name="dotsimp"></a>
+<a name="Item_003a-dotsimp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>dotsimp</b><i> (<var>f</var>)</i>
-<a name="IDX906"></a>
+<a name="IDX924"></a>
 </dt>
 <dd><p>Returns 0 if and only if <var>f</var> is in the ideal generated by the equations, i.e.,
 if and only if <var>f</var> is a polynomial combination of the elements of the equations.
@@ -267,14 +275,15 @@ if and only if <var>f</var> is a polynomial combination of the elements of the e
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-fast_005fcentral_005felements"></a>
+<p><a name="fast_005fcentral_005felements"></a>
+<a name="Item_003a-fast_005fcentral_005felements"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fast_central_elements</b><i> ([<var>x_1</var>, ..., <var>x_n</var>], <var>n</var>)</i>
-<a name="IDX907"></a>
+<a name="IDX925"></a>
 </dt>
 <dd><p>If <code>set_up_dot_simplifications</code> has been previously done, finds the central polynomials
 in the variables <var>x_1</var>, ..., <var>x_n</var> in the given degree, <var>n</var>.
@@ -288,14 +297,15 @@ fast_central_elements ([x, y], 2);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-check_005foverlaps"></a>
+<p><a name="check_005foverlaps"></a>
+<a name="Item_003a-check_005foverlaps"></a>
 </p><dl>
 <dt><u>Function:</u> <b>check_overlaps</b><i> (<var>n</var>, <var>add_to_simps</var>)</i>
-<a name="IDX908"></a>
+<a name="IDX926"></a>
 </dt>
 <dd><p>Checks the overlaps thru degree <var>n</var>,
 making sure that you have sufficient simplification rules in each
@@ -310,14 +320,15 @@ about resetting things.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-mono"></a>
+<p><a name="mono"></a>
+<a name="Item_003a-mono"></a>
 </p><dl>
 <dt><u>Function:</u> <b>mono</b><i> ([<var>x_1</var>, ..., <var>x_n</var>], <var>n</var>)</i>
-<a name="IDX909"></a>
+<a name="IDX927"></a>
 </dt>
 <dd><p>Returns the list of independent
 monomials relative to the current dot simplifications of degree <var>n</var>
@@ -327,14 +338,15 @@ in the variables <var>x_1</var>, ..., <var>x_n</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-monomial_005fdimensions"></a>
+<p><a name="monomial_005fdimensions"></a>
+<a name="Item_003a-monomial_005fdimensions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>monomial_dimensions</b><i> (<var>n</var>)</i>
-<a name="IDX910"></a>
+<a name="IDX928"></a>
 </dt>
 <dd><p>Compute the Hilbert series through degree <var>n</var> for the current algebra.
 </p>
@@ -342,14 +354,15 @@ in the variables <var>x_1</var>, ..., <var>x_n</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-extract_005flinear_005fequations"></a>
+<p><a name="extract_005flinear_005fequations"></a>
+<a name="Item_003a-extract_005flinear_005fequations"></a>
 </p><dl>
 <dt><u>Function:</u> <b>extract_linear_equations</b><i> ([<var>p_1</var>, ..., <var>p_n</var>], [<var>m_1</var>, ..., <var>m_n</var>])</i>
-<a name="IDX911"></a>
+<a name="IDX929"></a>
 </dt>
 <dd><p>Makes a list of the coefficients of the noncommutative polynomials <var>p_1</var>, ..., <var>p_n</var>
 of the noncommutative monomials <var>m_1</var>, ..., <var>m_n</var>.
@@ -360,14 +373,15 @@ monomials.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-list_005fnc_005fmonomials"></a>
+<p><a name="list_005fnc_005fmonomials"></a>
+<a name="Item_003a-list_005fnc_005fmonomials"></a>
 </p><dl>
 <dt><u>Function:</u> <b>list_nc_monomials</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>list_nc_monomials</tt> ([<var>p_1</var>, ..., <var>p_n</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>list_nc_monomials</tt> (<var>p</var>)</i>
-<a name="IDX912"></a>
+<a name="IDX930"></a>
 </dt>
 <dd><p>Returns a list of the non commutative monomials occurring in a polynomial <var>p</var>
 or a list of polynomials <var>p_1</var>, ..., <var>p_n</var>.
@@ -376,16 +390,17 @@ or a list of polynomials <var>p_1</var>, ..., <var>p_n</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
 
 
-<p><a name="Item_003a-all_005fdotsimp_005fdenoms"></a>
+<p><a name="all_005fdotsimp_005fdenoms"></a>
+<a name="Item_003a-all_005fdotsimp_005fdenoms"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>all_dotsimp_denoms</b>
-<a name="IDX913"></a>
+<a name="IDX931"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -398,7 +413,7 @@ before calling <code>dotsimp</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p>
 </dd></dl>
@@ -418,12 +433,12 @@ before calling <code>dotsimp</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

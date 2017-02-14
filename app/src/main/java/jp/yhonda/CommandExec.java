@@ -17,7 +17,10 @@
  */
 package jp.yhonda;
 
+import android.util.Log;
+
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.util.List;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -53,6 +56,7 @@ public class CommandExec {
 			// obtain process standard output stream
 			os = process.getOutputStream();
 			os.write(mcmd.getBytes("UTF-8"));
+			os.flush();
 		}
 		while (true) {
 			int c = is.read();
@@ -85,5 +89,27 @@ public class CommandExec {
 
 	public void clearStringBuilder() {
 		this.sb.delete(0, this.sb.length());
+	}
+
+	public String getPID() {
+		long pid = -1;
+		try {
+			Field f = process.getClass().getDeclaredField("pid");
+			f.setAccessible(true);
+			pid = f.getLong(process);
+			f.setAccessible(false);
+		} catch (Exception e) {
+			pid = -1;
+		}
+		if (pid != -1) return (String.valueOf(pid));
+		try {
+			Field f = process.getClass().getDeclaredField("id");
+			f.setAccessible(true);
+			pid = f.getLong(process);
+			f.setAccessible(false);
+		} catch (Exception e) {
+			pid = -1;
+		}
+		return (String.valueOf(pid));
 	}
 }

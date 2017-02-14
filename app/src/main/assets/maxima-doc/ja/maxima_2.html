@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 2. Bug Detection and Reporting</title>
+<title>Maxima 5.39.0 Manual: 2. Bug Detection and Reporting</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 2. Bug Detection and Reporting">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 2. Bug Detection and Reporting">
+<meta name="description" content="Maxima 5.39.0 Manual: 2. Bug Detection and Reporting">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 2. Bug Detection and Reporting">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Bug-Detection-and-Reporting"></a>
 <a name="SEC2"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC3" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_1.html#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_3.html#SEC4" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 2. Bug Detection and Reporting </h1>
@@ -111,15 +126,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="maxima_3.html#SEC4" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC2" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC2" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC2" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_3.html#SEC4" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 2.1 Functions and Variables for Bug Detection and Reporting </h2>
@@ -159,6 +174,14 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 それぞれ個々のテストにかかった時間を示します。
 デフォルトは<code>false</code>で、時間情報を示しません。
 </p></dd>
+<dt> <code>share_tests</code></dt>
+<dd><p><code>share</code>ディレクトリに関する追加のテストをロードします。
+もし <code>true</code>なら、テストスイートの一部としてこれらの追加のテストが走ります。
+もし <code>false</code>なら、 <code>share</code>ディレクトリからのテストは走りません。
+もし <code>only</code>なら、 <code>share</code>ディレクトリからのテストだけが走ります。
+もちろん、テストの実際の集合は、 <code>tests</code>オプションで制御することができます。
+デフォルトは <code>false</code>です。
+</p></dd>
 </dl>
 
 <p>例えば、 <code>run_testsuite(display_known_bugs = true, tests=[rtest5])</code>は、
@@ -178,7 +201,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -196,15 +219,30 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <p>例えば、以下はデフォルトのテスト一式の一部です:
 </p>
-<pre class="example"> [&quot;rtest13s&quot;, [&quot;rtest14&quot;, 57, 63]]
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example"> [&quot;rtest13s&quot;, [&quot;rtest14&quot;, 57, 63]]
+</pre></td></tr></table>
 <p>これは、ファイル&quot;rtest13s&quot;, &quot;rtest14&quot;から成るテストスイートを指定しますが、
 &quot;rtest14&quot; は失敗することが既知の２つのテスト57と63を含みます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-share_005ftestsuite_005ffiles"></a>
+</p><dl>
+<dt><u>オプション変数:</u> <b>share_testsuite_files</b>
+<a name="IDX3"></a>
+</dt>
+<dd><p><code>share_testsuite_files</code>は、<code><a href="#run_005ftestsuite">run_testsuite</a></code>がテストスイートの一部として走らせる
+<code>share</code>ディレクトリからのテストの集合です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -212,7 +250,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-bug_005freport"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bug_report</b><i> ()</i>
-<a name="IDX3"></a>
+<a name="IDX4"></a>
 </dt>
 <dd><p>MaximaとLispのバージョン番号を表示し、Maximaプロジェクトのバグレポートウェブサイトへのリンクを与えます。
 バージョン情報は<code><a href="#build_005finfo">build_info</a></code>がレポートするものと同じです。
@@ -224,7 +262,7 @@ MaximaとLispのバージョン情報をバグレポートにコピーしても�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -232,7 +270,7 @@ MaximaとLispのバージョン情報をバグレポートにコピーしても�
 <a name="Item_003a-build_005finfo"></a>
 </p><dl>
 <dt><u>関数:</u> <b>build_info</b><i> ()</i>
-<a name="IDX4"></a>
+<a name="IDX5"></a>
 </dt>
 <dd><p>(<code>defstruct</code>で定義された) Maxima構造体として
 Maximaビルドのパラメータのまとめを表示します。
@@ -245,39 +283,52 @@ Maximaビルドのパラメータのまとめを表示します。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) build_info ();
-(%o1) 
-Maxima version: &quot;5.26.0_16_gb72c64c_dirty&quot;
-Maxima build date: &quot;2012-01-29 12:29:04&quot;
-Host type: &quot;i686-pc-linux-gnu&quot;
-Lisp implementation type: &quot;CMU Common Lisp&quot;
-Lisp implementation version: &quot;CVS release-19a 19a-release-20040728 + minimal debian patches&quot;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) build_info ();
+(%o1)
+Maxima version: &quot;5.36.1&quot;
+Maxima build date: &quot;2015-06-02 11:26:48&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;GNU Common Lisp (GCL)&quot;
+Lisp implementation version: &quot;GCL 2.6.12&quot;
 (%i2) x : build_info ()$
 (%i3) x@version;
-(%o3)               5.26.0_16_gb72c64c_dirty
+(%o3)                               5.36.1
 (%i4) x@timestamp;
-(%o4)                  2012-01-29 12:29:04
+(%o4)                         2015-06-02 11:26:48
 (%i5) x@host;
-(%o5)                   i686-pc-linux-gnu
+(%o5)                      x86_64-unknown-linux-gnu
 (%i6) x@lisp_name;
-(%o6)                    CMU Common Lisp
+(%o6)                        GNU Common Lisp (GCL)
 (%i7) x@lisp_version;
-(%o7) 
-    CVS release-19a 19a-release-20040728 + minimal debian patches
+(%o7)                             GCL 2.6.12
 (%i8) x;
-(%o8) 
-Maxima version: &quot;5.26.0_16_gb72c64c_dirty&quot;
-Maxima build date: &quot;2012-01-29 12:29:04&quot;
-Host type: &quot;i686-pc-linux-gnu&quot;
-Lisp implementation type: &quot;CMU Common Lisp&quot;
-Lisp implementation version: &quot;CVS release-19a 19a-release-20040728 + minimal debian patches&quot;
-</pre>
+(%o8)
+Maxima version: &quot;5.36.1&quot;
+Maxima build date: &quot;2015-06-02 11:26:48&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;GNU Common Lisp (GCL)&quot;
+Lisp implementation version: &quot;GCL 2.6.12&quot;
+</pre></td></tr></table>
+<p>The Maxima version string can (here 5.36.1) can look very different:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) build_info();
+(%o1)
+Maxima version: &quot;branch_5_37_base_331_g8322940_dirty&quot;
+Maxima build date: &quot;2016-01-01 15:37:35&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;CLISP&quot;
+Lisp implementation version: &quot;2.49 (2010-07-07) (built 3605577779) (memory 3660647857)&quot;
+</pre></td></tr></table>
+<p>その場合、Maximaはリリースされたソースコードからビルドされておらず、
+ソースコードのGITチェックアウトから直接ビルドされていました。
+この例では、チェックアウトは最新のGITタグ(普通Maxima(メジャー)リリース(この例の場合5.37))から
+331コミットあり、最後のコミットの短縮されたコミットハッシュは&quot;8322940&quot;でした。
+</p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
-
 
 <p><a name="Item_003a-Help"></a>
 </p><hr size="6">
@@ -289,14 +340,14 @@ Lisp implementation version: &quot;CVS release-19a 19a-release-20040728 + minima
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

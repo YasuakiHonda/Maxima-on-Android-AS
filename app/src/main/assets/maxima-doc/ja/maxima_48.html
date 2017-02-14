@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 48. diag</title>
+<title>Maxima 5.39.0 Manual: 48. contrib_ode</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 48. diag">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 48. diag">
+<meta name="description" content="Maxima 5.39.0 Manual: 48. contrib_ode">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 48. contrib_ode">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,440 +72,778 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="diag"></a>
-<a name="SEC239"></a>
+<a name="contrib_005fode_002dpkg"></a>
+<a name="SEC231"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_47.html#SEC238" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC240" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_47.html#SEC230" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_47.html#SEC234" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC241" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_47.html#SEC227" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 48. diag </h1>
+<h1 class="chapter"> 48. contrib_ode </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC240">48.1 Functions and Variables for diag</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC232">48.1 Introduction to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC233">48.2 Functions and Variables for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC234">48.3 Possible improvements to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC235">48.4 Test cases for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC236">48.5 References for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-diag"></a>
+<p><a name="Item_003a-Introduction-to-contrib_005fode"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-diag"></a>
-<a name="SEC240"></a>
+<a name="Introduction-to-contrib_005fode"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC239" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC241" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC231" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC233" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC239" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC239" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC241" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 48.1 Functions and Variables for diag </h2>
 
+<a name="SEC232"></a>
+<h2 class="section"> 48.1 Introduction to contrib_ode </h2>
 
-
-<dl>
-<dt><u>関数:</u> <b>diag</b><i> (<var>lm</var>)</i>
-<a name="IDX1495"></a>
-</dt>
-<dd><p><var>lm</var>の要素のブロックサムである行列を構成します。
-<var>lm</var>の要素は行列だと仮定します; もし要素がスカラーなら、1x1の行列として扱います。
+<p>Maximaの常微分方程式 (ODE)ソルバ <code>ode2</code>は一階と二階の初等線形 ODEを解きます。
+関数 <code>contrib_ode</code>は線形と非線形一階 ODEと線形斉次二階 ODEに関する追加の方法で
+<code>ode2</code>を拡張します。
+コードはまだ開発中で、コールの順序は将来のリリースで変わるかもしれません。
+一旦コードが安定化したら、投稿ディレクトリから移して Maximaに統合されるかもしれません。
 </p>
-<p><var>lm</var>の要素それぞれが正方なら、結果の行列は正方になります。
+<p>このパッケージは、使用前にコマンド
+<code>load('contrib_ode)</code>でロードしなければいけません。
 </p>
-<p>例:
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-
-(%i2) a1:matrix([1,2,3],[0,4,5],[0,0,6])$
-
-(%i3) a2:matrix([1,1],[1,0])$
-
-(%i4) diag([a1,x,a2]);
-                   [ 1  2  3  0  0  0 ]
-                   [                  ]
-                   [ 0  4  5  0  0  0 ]
-                   [                  ]
-                   [ 0  0  6  0  0  0 ]
-(%o4)              [                  ]
-                   [ 0  0  0  x  0  0 ]
-                   [                  ]
-                   [ 0  0  0  0  1  1 ]
-                   [                  ]
-                   [ 0  0  0  0  1  0 ]
-(%i5) diag ([matrix([1,2]), 3]);
-                        [ 1  2  0 ]
-(%o5)                   [         ]
-                        [ 0  0  3 ]
-</pre>
-<p>この関数を使うためには最初に <code>load(&quot;diag&quot;)</code>と書いてください。
+<p><code>contrib_ode</code>のコール取り決めは <code>ode2</code>と同一です。
+３つの引数を取ります:
+ODE (右辺が 0なら左辺だけでもいいです)、
+従属変数、独立変数。
+成功した時、解のリストを返します。
 </p>
-<div class=categorybox>
+<p>解の形式は <code>ode2</code>と異なります。
+非線形方程式は複数解を持つので、
+<code>contrib_ode</code>は解のリストを返します。
+解それぞれは複数の形式を持ちます:
+</p><ul>
+<li>
+従属変数の陽解、
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Matrices">Matrices</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-diag">Package diag</a>
-</div>
+</li><li>
+従属変数の陰解、
+
+</li><li>
+変数 <code>%t</code>を使ったパラメトリック解、または、
+
+</li><li>
+変数 <code>%u</code>に関する別のODEへの変換
+
+</li></ul>
+
+<p><code>%c</code>は一階方程式の積分定数を表すのに使われます。
+<code>%k1</code>と <code>%k2</code>は二階方程式の定数を表すのに使われます。
+もし <code>contrib_ode</code>がいかなる理由でも解を得られないなら、
+たぶんエラーメッセージを印字した後 <code>false</code>を返します。
 </p>
-</dd></dl>
-
-
-<p><a name="Item_003a-JF"></a>
-</p><dl>
-<dt><u>関数:</u> <b>JF</b><i> (<var>lambda</var>,<var>n</var>)</i>
-<a name="IDX1496"></a>
-</dt>
-<dd><p>固有値 <var>lambda</var>を持つ次数 <var>n</var>の Jordan細胞を返します。
+<p>一階非線形 ODEは複数解を持ち得るので、解のリストを返す必要があります。
+例えば:
 </p>
-<p>例:
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) eqn:x*'diff(y,x)^2-(1+x*y)*'diff(y,x)+y=0;
+                    dy 2             dy
+(%o2)            x (--)  - (1 + x y) -- + y = 0
+                    dx               dx
+(%i3) contrib_ode(eqn,y,x);
+                    dy 2             dy
+(%t3)            x (--)  - (1 + x y) -- + y = 0
+                    dx               dx
 
-(%i2) JF(2,5);
-                    [ 2  1  0  0  0 ]
-                    [               ]
-                    [ 0  2  1  0  0 ]
-                    [               ]
-(%o2)               [ 0  0  2  1  0 ]
-                    [               ]
-                    [ 0  0  0  2  1 ]
-                    [               ]
-                    [ 0  0  0  0  2 ]
-(%i3) JF(3,2);
-                         [ 3  1 ]
-(%o3)                    [      ]
-                         [ 0  3 ]
-</pre>
-<p>この関数を使うためには最初に <code>load(&quot;diag&quot;)</code>と書いてください。
+              first order equation not linear in y'
+
+                                             x
+(%o3)             [y = log(x) + %c, y = %c %e ]
+(%i4) method;
+(%o4)                        factor
+</pre></td></tr></table>
+<p>以下の例の二番目の解のように、
+非線形ODEは積分定数を持たない特異解を持ち得ます:
 </p>
-<div class=categorybox>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) eqn:'diff(y,x)^2+x*'diff(y,x)-y=0;
+                       dy 2     dy
+(%o2)                 (--)  + x -- - y = 0
+                       dx       dx
+(%i3) contrib_ode(eqn,y,x);
+                       dy 2     dy
+(%t3)                 (--)  + x -- - y = 0
+                       dx       dx
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-diag">Package diag</a>
-</div>
+              first order equation not linear in y'
+
+                                           2
+                                 2        x
+(%o3)              [y = %c x + %c , y = - --]
+                                          4
+(%i4) method;
+(%o4)                       clairault
+</pre></td></tr></table>
+
+<p>以下の ODEはダミー変数 <code>%t</code>を使った２つのパラメトリック解を持ちます。
+この場合、パラメトリック解を操作して陽解を与えることができます。
 </p>
-</dd></dl>
-
-
-<p><a name="Item_003a-jordan"></a>
-</p><dl>
-<dt><u>関数:</u> <b>jordan</b><i> (<var>mat</var>)</i>
-<a name="IDX1497"></a>
-</dt>
-<dd><p>行列 <var>mat</var>の特別な形式でリストにエンコードされた Jordan形を返します。
-対応する行列を得るには、
-<code>jordan</code>の出力を引数として使って関数 <code>dispJordan</code>をコールしてください。
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) eqn:'diff(y,x)=(x+y)^2;
+                          dy          2
+(%o2)                     -- = (x + y)
+                          dx
+(%i3) contrib_ode(eqn,y,x);
+(%o3) [[x = %c - atan(sqrt(%t)), y = (- x) - sqrt(%t)],
+                     [x = atan(sqrt(%t)) + %c, y = sqrt(%t) - x]]
+(%i4) method;
+(%o4)                       lagrange
+</pre></td></tr></table>
+<p>以下の例 (Kamke 1.112)は陰解を例示します。
 </p>
-<p>戻り値のリストの要素はそれ自身リストです。
-それぞれの一番目の要素は <var>mat</var>の固有値です。
-残りの要素はこの固有値に関するJordanブロックの長さ(正の整数)です。
-これらの整数は降順で並びます。
-固有値は繰り返されません。
-</p>
-<p>関数 <code>dispJordan</code>, <code>minimalPoly</code>, <code>ModeMatrix</code>は、
-<code>jordan</code>を呼び出した出力を引数として期待します。
-もしこの引数を、 <code>jordan</code>を呼び出さず手で構成するなら、
-それぞれの固有値が一度だけ現れること、ブロックサイズが降順で並ぶことを保証しなくてはいけません。
-そうでなければ、関数は正しくない答えを返すかもしれません。
-</p>
-<p>例:
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-(%i2) A: matrix([2,0,0,0,0,0,0,0],
-                [1,2,0,0,0,0,0,0],
-                [-4,1,2,0,0,0,0,0],
-                [2,0,0,2,0,0,0,0],
-                [-7,2,0,0,2,0,0,0],
-                [9,0,-2,0,1,2,0,0],
-                [-34,7,1,-2,-1,1,2,0],
-                [145,-17,-16,3,9,-2,0,3])$
-(%i3) jordan (A);
-(%o3)                [[2, 3, 3, 1], [3, 1]]
-(%i4) dispJordan (%);
-                   [ 2  1  0  0  0  0  0  0 ]
-                   [                        ]
-                   [ 0  2  1  0  0  0  0  0 ]
-                   [                        ]
-                   [ 0  0  2  0  0  0  0  0 ]
-                   [                        ]
-                   [ 0  0  0  2  1  0  0  0 ]
-(%o4)              [                        ]
-                   [ 0  0  0  0  2  1  0  0 ]
-                   [                        ]
-                   [ 0  0  0  0  0  2  0  0 ]
-                   [                        ]
-                   [ 0  0  0  0  0  0  2  0 ]
-                   [                        ]
-                   [ 0  0  0  0  0  0  0  3 ]
-</pre>
-<p>この関数を使うためには最初に <code>load(&quot;diag&quot;)</code>と書いてください。
-<code>dispJordan</code>と <code>minimalPoly</code>も参照してください。
-</p>
-<div class=categorybox>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) assume(x&gt;0,y&gt;0);
+(%o2)                    [x &gt; 0, y &gt; 0]
+(%i3) eqn:x*'diff(y,x)-x*sqrt(y^2+x^2)-y;
+                     dy           2    2
+(%o3)              x -- - x sqrt(y  + x ) - y
+                     dx
+(%i4) contrib_ode(eqn,y,x);
+                                  y
+(%o4)                  [x - asinh(-) = %c]
+                                  x
+(%i5) method;
+(%o5)                          lie
+</pre></td></tr></table>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-diag">Package diag</a>
-</div>
+<p>以下の Riccati方程式は
+変数 <code>%u</code>に関する線形二階 ODEに変換されます。
+Maximaは新しい ODEを解くことができません。
+なので未評価で返します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) eqn:x^2*'diff(y,x)=a+b*x^n+c*x^2*y^2;
+                    2 dy      2  2      n
+(%o2)              x  -- = c x  y  + b x  + a
+                      dx
+(%i3) contrib_ode(eqn,y,x);
+               d%u
+               ---                            2
+               dx        2  a       n - 2    d %u
+(%o3)  [[y = - ----, %u c  (-- + b x     ) + ---- c = 0]]
+               %u c          2                 2
+                            x                dx
+(%i4) method;
+(%o4)                        riccati
+</pre></td></tr></table>
+
+<p>一階 ODEに対して <code>contrib_ode</code>は <code>ode2</code>をコールします。
+その後、以下の方法を試します:
+因数分解、Clairault, Lagrange, Riccati, Abel, Lie対称性を使った方法。
+もし Abel方法が失敗したら、
+Lie方法は Abel方程式には試みられませんが、
+もし Riccati方法が未解決二階 ODEを返したら、 Lie方法が試みられます。
 </p>
-</dd></dl>
-
-
-<p><a name="Item_003a-dispJordan"></a>
-</p><dl>
-<dt><u>関数:</u> <b>dispJordan</b><i> (<var>l</var>)</i>
-<a name="IDX1498"></a>
-</dt>
-<dd><p><var>l</var>で与えられた固有値と重複度のリストに対応した行列をJordan標準形で返します。
-このリストはは関数 <code>jordan</code>が与える形式でなければいけません。
-この形式の詳細は <code>jordan</code>を参照してください。
+<p>二階 ODEに対して <code>contrib_ode</code>は <code>ode2</code>をコールし、その後
+<code>odelin</code>をコールします。
 </p>
-<p>例:
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-
-(%i2) b1:matrix([0,0,1,1,1],
-                [0,0,0,1,1],
-                [0,0,0,0,1],
-                [0,0,0,0,0],
-                [0,0,0,0,0])$
-
-(%i3) jordan(b1);
-(%o3)                  [[0, 3, 2]]
-(%i4) dispJordan(%);
-                    [ 0  1  0  0  0 ]
-                    [               ]
-                    [ 0  0  1  0  0 ]
-                    [               ]
-(%o4)               [ 0  0  0  0  0 ]
-                    [               ]
-                    [ 0  0  0  0  1 ]
-                    [               ]
-                    [ 0  0  0  0  0 ]
-</pre>
-<p>この関数を使うためには最初に <code>load(&quot;diag&quot;)</code>と書いてください。
-<code>jordan</code>と <code>minimalPoly</code>も参照してください。
+<p>もしコマンド
+<code>put('contrib_ode,true,'verbose)</code>を実行したら
+長いデバッグトレースとメッセージが表示されます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-diag">Package diag</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
 </div>
 </p>
-</dd></dl>
 
-
-<p><a name="Item_003a-minimalPoly"></a>
-</p><dl>
-<dt><u>関数:</u> <b>minimalPoly</b><i> (<var>l</var>)</i>
-<a name="IDX1499"></a>
-</dt>
-<dd><p>Maximaリスト<var>l</var>で与えられたコードに関連付けられた最小多項式を返します。
-<var>l</var>は関数 <code>jordan</code>が与える出力です。
-</p>
-<p>例:
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-
-(%i2) a:matrix([2,1,2,0],
-               [-2,2,1,2],
-               [-2,-1,-1,1],
-               [3,1,2,-1])$
-
-(%i3) jordan(a);
-(%o3)               [[- 1, 1], [1, 3]]
-(%i4) minimalPoly(%);
-                            3
-(%o4)                (x - 1)  (x + 1)
-</pre>
-<p>この関数を使うためには最初に <code>load(&quot;diag&quot;)</code>と書いてください。
-<code>jordan</code>と <code>dispJordan</code>も参照してください。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-diag">Package diag</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-ModeMatrix"></a>
-</p><dl>
-<dt><u>関数:</u> <b>ModeMatrix</b><i> (<var>A</var>, [<var>jordan_info</var>])</i>
-<a name="IDX1500"></a>
-</dt>
-<dd><p><em>(M^^-1).A.M</em>が <var>A</var>の Jordan形になるような可逆行列 <var>M</var>を返します。
-</p>
-<p>これを計算するために、Maximaは <var>A</var>の Jordan形を見つけなければいけません。
-それは非常に重い計算になる可能性があります。
-もし既に <code>jordan</code>を以前に呼び出して計算したなら、二番目の引数 <var>jordan_info</var>にそれを渡してください。
-要求される形式の詳細は <code>jordan</code>を参照してください。
-</p>
-<p>例:
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-(%i2) A: matrix([2,1,2,0], [-2,2,1,2], [-2,-1,-1,1], [3,1,2,-1])$
-(%i3) M: ModeMatrix (A);
-                      [  1    - 1   1   1 ]
-                      [                   ]
-                      [   1               ]
-                      [ - -   - 1   0   0 ]
-                      [   9               ]
-                      [                   ]
-(%o3)                 [   13              ]
-                      [ - --   1   - 1  0 ]
-                      [   9               ]
-                      [                   ]
-                      [  17               ]
-                      [  --   - 1   1   1 ]
-                      [  9                ]
-(%i4) is ((M^^-1) . A . M = dispJordan (jordan (A)));
-(%o4)                         true
-</pre>
-<p>この例で、<code>A</code>の Jordan形が２回計算されていることに注意してください。
-これを避けるには、 <code>jordan(A)</code>の出力を変数に保存して、それを <code>jordan</code>と <code>dispJordan</code>に渡します。
-</p>
-<p>この関数を使うためには最初に <code>load(&quot;diag&quot;)</code>と書いてください。
-<code>jordan</code>と <code>dispJordan</code>も参照してください。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-diag">Package diag</a>
-</div>
-</p>
-</dd></dl>
-
-
-<p><a name="Item_003a-mat_005ffunction"></a>
-</p><dl>
-<dt><u>関数:</u> <b>mat_function</b><i> (<var>f</var>,<var>A</var>)</i>
-<a name="IDX1501"></a>
-</dt>
-<dd><p><em>f(A)</em>を返します。
-ここで <var>f</var>は解析関数で <var>A</var>は行列です。
-この計算は <var>f</var>のTaylor展開に基づきます。
-数値評価には効率的ではありませんが、小さな行列に関して記号的な答えを出すことができます。
-</p>
-
-<p>例 1:
-</p>
-<p>行列の指数関数。
-出力が非常に大きいので、答えの一番目の行だけを求めます。
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-(%i2) A: matrix ([0,1,0], [0,0,1], [-1,-3,-3])$
-(%i3) ratsimp (mat_function (exp, t*A)[1]);
-           2              - t                   2   - t
-         (t  + 2 t + 2) %e       2        - t  t  %e
-(%o3)   [--------------------, (t  + t) %e   , --------]
-                  2                               2
-</pre>
-<p>例 2:
-</p>
-<p>指数関数に関するTaylor級数との比較。
-また、 <code>exp(%i*A)</code>をsine, cosineと比較。
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-(%i2) A: matrix ([0,1,1,1],
-                 [0,0,0,1],
-                 [0,0,0,1],
-                 [0,0,0,0])$
-(%i3) ratsimp (mat_function (exp, t*A));
-                       [           2     ]
-                       [ 1  t  t  t  + t ]
-                       [                 ]
-(%o3)                  [ 0  1  0    t    ]
-                       [                 ]
-                       [ 0  0  1    t    ]
-                       [                 ]
-                       [ 0  0  0    1    ]
-(%i4) minimalPoly (jordan (A));
-                                3
-(%o4)                          x
-(%i5) ratsimp (ident(4) + t*A + 1/2*(t^2)*A^^2);
-                       [           2     ]
-                       [ 1  t  t  t  + t ]
-                       [                 ]
-(%o5)                  [ 0  1  0    t    ]
-                       [                 ]
-                       [ 0  0  1    t    ]
-                       [                 ]
-                       [ 0  0  0    1    ]
-(%i6) ratsimp (mat_function (exp, %i*t*A));
-                  [                        2 ]
-                  [ 1  %i t  %i t  %i t - t  ]
-                  [                          ]
-(%o6)             [ 0   1     0      %i t    ]
-                  [                          ]
-                  [ 0   0     1      %i t    ]
-                  [                          ]
-                  [ 0   0     0        1     ]
-(%i7) ratsimp (mat_function (cos, t*A) + %i*mat_function (sin, t*A));
-                  [                        2 ]
-                  [ 1  %i t  %i t  %i t - t  ]
-                  [                          ]
-(%o7)             [ 0   1     0      %i t    ]
-                  [                          ]
-                  [ 0   0     1      %i t    ]
-                  [                          ]
-                  [ 0   0     0        1     ]
-</pre>
-<p>例 3:
-</p>
-<p>べき演算。
-</p><pre class="example">(%i1) load(&quot;diag&quot;)$
-(%i2) A: matrix([1,2,0], [0,1,0], [1,0,1])$
-(%i3) integer_pow(x) := block ([k], declare (k, integer), x^k)$
-(%i4) mat_function (integer_pow, A);
-                       [ 1     2 k     0 ]
-                       [                 ]
-(%o4)                  [ 0      1      0 ]
-                       [                 ]
-                       [ k  (k - 1) k  1 ]
-(%i5) A^^20;
-                         [ 1   40   0 ]
-                         [            ]
-(%o5)                    [ 0    1   0 ]
-                         [            ]
-                         [ 20  380  1 ]
-</pre>
-<p>この関数を使うためには最初に <code>load(&quot;diag&quot;)</code>と書いてください。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-diag">Package diag</a>
-</div>
-</p>
-</dd></dl>
-
-
-
-
-<hr size="6">
+<p><a name="Item_003a-Functions-and-Variables-for-contrib_005fode"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-contrib_005fode"></a>
+<a name="SEC233"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC239" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC241" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC232" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC234" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 48.2 Functions and Variables for contrib_ode </h2>
+
+<p><a name="Item_003a-contrib_005fode"></a>
+</p><dl>
+<dt><u>関数:</u> <b>contrib_ode</b><i> (<var>eqn</var>, <var>y</var>, <var>x</var>)</i>
+<a name="IDX1463"></a>
+</dt>
+<dd><p>独立変数 <var>x</var>と従属変数 <var>y</var>に関する ODE <var>eqn</var>の解のリストを返します。
+</p>
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-odelin"></a>
+</p><dl>
+<dt><u>関数:</u> <b>odelin</b><i> (<var>eqn</var>, <var>y</var>, <var>x</var>)</i>
+<a name="IDX1464"></a>
+</dt>
+<dd><p><code>odelin</code>は独立変数 <var>x</var>と従属変数 <var>y</var>に関する一階および二階線形斉次
+ODEを解きます。
+ODEの基本的な解一式を返します。
+</p>
+<p>二階 ODEに対して <code>odelin</code>は、与えられた特殊関数を使って解を探索する
+Bronsteinと Lafailleによる方法を使います。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) odelin(x*(x+1)*'diff(y,x,2)+(x+5)*'diff(y,x,1)+(-4)*y,y,x);
+       gauss_a(- 6, - 2, - 3, - x)  gauss_b(- 6, - 2, - 3, - x)
+(%o2) {---------------------------, ---------------------------}
+                    4                            4
+                   x                            x
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-ode_005fcheck"></a>
+</p><dl>
+<dt><u>関数:</u> <b>ode_check</b><i> (<var>eqn</var>, <var>soln</var>)</i>
+<a name="IDX1465"></a>
+</dt>
+<dd><p>可能な解 <var>soln</var>を代入した後、 ODE <var>eqn</var>の値を返します。
+もし <var>soln</var>が <var>eqn</var>の解なら値はゼロと同値です。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) eqn:'diff(y,x,2)+(a*x+b)*y;
+                         2
+                        d y
+(%o2)                   --- + (b + a x) y
+                          2
+                        dx
+(%i3) ans:[y = bessel_y(1/3,2*(a*x+b)^(3/2)/(3*a))*%k2*sqrt(a*x+b)
+         +bessel_j(1/3,2*(a*x+b)^(3/2)/(3*a))*%k1*sqrt(a*x+b)];
+                                  3/2
+                    1  2 (b + a x)
+(%o3) [y = bessel_y(-, --------------) %k2 sqrt(a x + b)
+                    3       3 a
+                                          3/2
+                            1  2 (b + a x)
+                 + bessel_j(-, --------------) %k1 sqrt(a x + b)]
+                            3       3 a
+(%i4) ode_check(eqn,ans[1]);
+(%o4)                           0
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-method"></a>
+</p><dl>
+<dt><u>システム変数:</u> <b>method</b>
+<a name="IDX1466"></a>
+</dt>
+<dd><p>変数 <code>method</code>は成功した解法に設定されます。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-_0025c"></a>
+</p><dl>
+<dt><u>変数:</u> <b>%c</b>
+<a name="IDX1467"></a>
+</dt>
+<dd><p><code>%c</code>は一階 ODEの積分定数です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-_0025k1"></a>
+</p><dl>
+<dt><u>変数:</u> <b>%k1</b>
+<a name="IDX1468"></a>
+</dt>
+<dd><p><code>%k1</code>は二階 ODEの最初の積分定数です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-_0025k2"></a>
+</p><dl>
+<dt><u>変数:</u> <b>%k2</b>
+<a name="IDX1469"></a>
+</dt>
+<dd><p><code>%k2</code>は二階 ODEの二番目の積分定数です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="gauss_005fa"></a>
+<a name="Item_003a-gauss_005fa"></a>
+</p><dl>
+<dt><u>関数:</u> <b>gauss_a</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
+<a name="IDX1470"></a>
+</dt>
+<dd><p><code>gauss_a(a,b,c,x)</code>と <code>gauss_b(a,b,c,x)</code>は 2F1幾何関数です。
+それらは超幾何微分方程式
+<code>x(1-x) diff(y,x,2) + [c-(a+b+1)x] diff(y,x) - aby = 0</code>
+の任意の２つの独立解を表します (A&amp;S 15.5.1)。
+</p>
+<p>これらの関数は
+<code>odelin</code>と <code>contrib_ode</code>が返す ODEの解の中でだけ使われます。
+これらの関数の定義と使用は Maimaの将来のリリースで変わるかもしれません。
+</p>
+<p><code><a href="#gauss_005fb">gauss_b</a></code>, <code><a href="#dgauss_005fa">dgauss_a</a></code>, <code><a href="#gauss_005fb">gauss_b</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="gauss_005fb"></a>
+<a name="Item_003a-gauss_005fb"></a>
+</p><dl>
+<dt><u>関数:</u> <b>gauss_b</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
+<a name="IDX1471"></a>
+</dt>
+<dd><p><code><a href="#gauss_005fa">gauss_a</a></code>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="dgauss_005fa"></a>
+<a name="Item_003a-dgauss_005fa"></a>
+</p><dl>
+<dt><u>関数:</u> <b>dgauss_a</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
+<a name="IDX1472"></a>
+</dt>
+<dd><p><code>gauss_a(<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-dgauss_005fb"></a>
+</p><dl>
+<dt><u>関数:</u> <b>dgauss_b</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
+<a name="IDX1473"></a>
+</dt>
+<dd><p><code>gauss_b(<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="kummer_005fm"></a>
+<a name="Item_003a-kummer_005fm"></a>
+</p><dl>
+<dt><u>関数:</u> <b>kummer_m</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
+<a name="IDX1474"></a>
+</dt>
+<dd><p>Abramowitz and Stegun,
+<i>Handbook of Mathematical Functions</i>, Section 13.1.2の中で定義される
+Kummerの M関数
+</p>
+<p>この関数は
+<code>odelin</code>と <code>contrib_ode</code>が返す ODEの解の中でだけ使われます。
+この関数の定義と使用は Maimaの将来のリリースで変わるかもしれません。
+</p>
+<p><code><a href="#kummer_005fu">kummer_u</a></code>, <code><a href="#dkummer_005fm">dkummer_m</a></code>, <code><a href="#dkummer_005fu">dkummer_u</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="kummer_005fu"></a>
+<a name="Item_003a-kummer_005fu"></a>
+</p><dl>
+<dt><u>関数:</u> <b>kummer_u</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
+<a name="IDX1475"></a>
+</dt>
+<dd><p>Abramowitz and Stegun,
+<i>Handbook of Mathematical Functions</i>, Section 13.1.3の中で定義される
+Kummerの U関数
+</p>
+<p><code><a href="#kummer_005fm">kummer_m</a></code>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="dkummer_005fm"></a>
+<a name="Item_003a-dkummer_005fm"></a>
+</p><dl>
+<dt><u>関数:</u> <b>dkummer_m</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
+<a name="IDX1476"></a>
+</dt>
+<dd><p><code>kummer_m(<var>a</var>, <var>b</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="dkummer_005fu"></a>
+<a name="Item_003a-dkummer_005fu"></a>
+</p><dl>
+<dt><u>関数:</u> <b>dkummer_u</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
+<a name="IDX1477"></a>
+</dt>
+<dd><p><code>kummer_u(<var>a</var>, <var>b</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-bessel_005fsimplify"></a>
+</p><dl>
+<dt><u>関数:</u> <b>bessel_simplify</b><i> (<var>expr</var>)</i>
+<a name="IDX1478"></a>
+</dt>
+<dd><p>Bessel関数 bessel_j, bessel_y, bessel_i, bessel_k, hankel_1, hankel_2, strauve_h, strauve_lを含む式を整理します。
+最高次数 nの関数を次数 n-1と n-2の関数で置き換えるのに
+(Abramowitz and Stegun, <i>Handbook of Mathematical Functions</i>, 9.1.27節に与えられる)
+漸化式を使います。
+</p>
+<p>すべての次数の差が2より小さくなるまでこのプレセスを繰り返します。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load('contrib_ode)$
+(%i2) bessel_simplify(4*bessel_j(n,x^2)*(x^2-n^2/x^2)
+  +x*((bessel_j(n-2,x^2)-bessel_j(n,x^2))*x
+  -(bessel_j(n,x^2)-bessel_j(n+2,x^2))*x)
+  -2*bessel_j(n+1,x^2)+2*bessel_j(n-1,x^2));
+(%o2)                           0
+(%i3) bessel_simplify(-2*bessel_j(1,z)*z^3-10*bessel_j(2,z)*z^2
+ +15*%pi*bessel_j(1,z)*struve_h(3,z)*z-15*%pi*struve_h(1,z)*bessel_j(3,z)*z
+ -15*%pi*bessel_j(0,z)*struve_h(2,z)*z+15*%pi*struve_h(0,z)*bessel_j(2,z)*z
+ -30*%pi*bessel_j(1,z)*struve_h(2,z)+30*%pi*struve_h(1,z)*bessel_j(2,z));
+(%o3)                           0
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+
+<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a>
+
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-expintegral_005fe_005fsimplify"></a>
+</p><dl>
+<dt><u>関数:</u> <b>expintegral_e_simplify</b><i> (<var>expr</var>)</i>
+<a name="IDX1479"></a>
+</dt>
+<dd><p>漸化式 (A&amp;S 5.1.14)を使って指数積分 expintegral_eを含む式を整理します。
+</p>
+<p>   expintegral_e(n+1,z)
+        = (1/n) * (exp(-z)-z*expintegral_e(n,z))      n = 1,2,3 ....
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-contrib_005fode">Package contrib_ode</a>
+
+<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a>
+
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-Possible-improvements-to-contrib_005fode"></a>
+</p><hr size="6">
+<a name="Possible-improvements-to-contrib_005fode"></a>
+<a name="SEC234"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC233" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC235" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 48.3 Possible improvements to contrib_ode </h2>
+
+
+<p>これらのルーチンは開発進行中です。まだ以下をする必要があります:
+</p>
+<ul>
+<li>
+FACTOR方法 <code>ode1_factor</code>を多重根で機能するように拡張すること。
+
+</li><li>
+FACTOR方法 <code>ode1_factor</code>をより高次因子を解こうとするように拡張すること。
+現在、線形因子を解こうとするだけです。
+
+</li><li>
+LAGRANGEルーチン <code>ode1_lagrange</code>を複素根より実根を優先するように直すこと。
+
+</li><li>
+Riccati方程式のための他の方法を追加すること。
+
+</li><li>
+第二種Abel方程式の検出を改善すること。
+今のパターンマッチングは弱いです。
+
+</li><li>
+Lie対称群ルーチン <code>ode1_lie</code>に関する仕事。
+2,3の相当な問題があります:
+いくつかの部分が未実装です;
+いくつかのテストケースが無限ループのようです;
+他のテストケースではクラッシュします;
+さらに他では非常に複雑な「解」を返します。
+本当にリリースの準備ができていたか疑っています。
+
+</li><li>
+もっとテストケースを追加すること。
+
+</li></ul>
+
+<p><a name="Item_003a-Test-cases-for-contrib_005fode"></a>
+</p><hr size="6">
+<a name="Test-cases-for-contrib_005fode"></a>
+<a name="SEC235"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC234" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC236" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 48.4 Test cases for contrib_ode </h2>
+
+
+<p>ルーチンは
+文献 Murphy, Kamke, Zwillinger他からのおおよそ千のテストケース上でテストされています。
+これらはテストサブディレクトリに含まれています。
+</p>
+<ul>
+<li>
+The Clairaultルーチン <code>ode1_clairault</code>は特異解を含み、
+Murphyと Kamkeの中の Clairault方程式の知られている解すべてを見つけます。
+
+</li><li>
+他のルーチンは、多重解が存在する時にしばしば単一界を返します。
+
+</li><li>
+<code>ode1_lie</code>の「解」のいくつかは過度に複雑でチェックが不可能です。
+
+</li><li>
+いくつかのクラッシュがあります。
+
+</li></ul>
+
+<p><a name="Item_003a-References-for-contrib_005fode"></a>
+</p><hr size="6">
+<a name="References-for-contrib_005fode"></a>
+<a name="SEC236"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC235" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 48.5 References for contrib_ode </h2>
+
+
+<ol>
+<li>
+E. Kamke, Differentialgleichungen Losungsmethoden und Losungen, Vol 1,
+    Geest &amp; Portig, Leipzig, 1961
+
+</li><li>
+G. M. Murphy, Ordinary Differential Equations and Their Solutions,
+    Van Nostrand, New York, 1960
+
+</li><li>
+D. Zwillinger, Handbook of Differential Equations, 3rd edition,
+    Academic Press, 1998
+
+</li><li>
+F. Schwarz, Symmetry Analysis of Abel's Equation, Studies in
+    Applied Mathematics, 100:269-294 (1998)
+
+</li><li>
+F. Schwarz, Algorithmic Solution of Abel's Equation,
+    Computing 61, 39-49 (1998)
+
+</li><li>
+E. S. Cheb-Terrab, A. D. Roche, Symmetries and First Order
+    ODE Patterns, Computer Physics Communications 113 (1998), p 239.
+    (<a href="http://lie.uwaterloo.ca/papers/ode_vii.pdf">http://lie.uwaterloo.ca/papers/ode_vii.pdf</a>)
+
+</li><li>
+E. S. Cheb-Terrab, T. Kolokolnikov,  First Order ODEs,
+    Symmetries and Linear Transformations, European Journal of
+    Applied Mathematics, Vol. 14, No. 2, pp. 231-246 (2003).
+    (<a href="http://arxiv.org/abs/math-ph/0007023">http://arxiv.org/abs/math-ph/0007023</a>,<br>
+    <a href="http://lie.uwaterloo.ca/papers/ode_iv.pdf">http://lie.uwaterloo.ca/papers/ode_iv.pdf</a>)
+
+
+</li><li>
+G. W. Bluman, S. C. Anco, Symmetry and Integration Methods for
+    Differential Equations, Springer, (2002)
+
+</li><li>
+M. Bronstein, S. Lafaille,
+Solutions of linear ordinary differential equations in terms
+of special functions,
+Proceedings of ISSAC 2002, Lille, ACM Press, 23-28.
+(<a href="http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac2002.pdf">http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac2002.pdf</a>)
+
+
+</li></ol>
+
+<p><a name="Item_003a-descriptive_002dpkg"></a>
+</p><hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 73. romberg</title>
+<title>Maxima 5.39.0 Manual: 73. numericalio</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 73. romberg">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 73. romberg">
+<meta name="description" content="Maxima 5.39.0 Manual: 73. numericalio">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 73. numericalio">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,265 +54,602 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-<a name="romberg"></a>
-<a name="SEC347"></a>
+<a name="numericalio_002dpkg"></a>
+<a name="SEC334"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_72.html#SEC346" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC348" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_72.html#SEC333" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_72.html#SEC338" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC331" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC349" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 73. romberg </h1>
+<h1 class="chapter"> 73. numericalio </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC348">73.1 Functions and Variables for romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC335">73.1 Introduction to numericalio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC340">73.2 Functions and Variables for plain-text input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC341">73.3 Functions and Variables for binary input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-romberg"></a>
+<p><a name="Item_003a-Introduction-to-numericalio"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-romberg"></a>
-<a name="SEC348"></a>
+<a name="Introduction-to-numericalio"></a>
+<a name="SEC335"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC347" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC349" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC334" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC347" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC347" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC349" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 73.1 Functions and Variables for romberg </h2>
+<h2 class="section"> 73.1 Introduction to numericalio </h2>
 
+<p><code>numericalio</code> is a collection of functions to read and write files and streams.
+Functions for plain-text input and output
+can read and write numbers (integer, float, or bigfloat), symbols, and strings.
+Functions for binary input and output
+can read and write only floating-point numbers.
+</p>
+<p>If there already exists a list, matrix, or array object to store input data,
+<code>numericalio</code> input functions can write data into that object.
+Otherwise, <code>numericalio</code> can guess, to some degree, the structure of an object
+to store the data, and return that object.
+</p>
+<div class=categorybox>
 
-<dl>
-<dt><u>Function:</u> <b>romberg</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>romberg</tt> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>romberg</tt> (<var>F</var>, <var>a</var>, <var>b</var>)</i>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a>
+</div>
+</p>
+<hr size="6">
+<a name="SEC336"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC335" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC337" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 73.1.1 Plain-text input and output </h3>
+
+<p>In plain-text input and output,
+it is assumed that each item to read or write is an atom:
+an integer, float, bigfloat, string, or symbol,
+and not a rational or complex number or any other kind of nonatomic expression.
+The <code>numericalio</code> functions may attempt to do something sensible faced with nonatomic expressions,
+but the results are not specified here and subject to change.
+</p>
+<p>Atoms in both input and output files have the same format as
+in Maxima batch files or the interactive console.
+In particular, strings are enclosed in double quotes,
+backslash <code>\</code> prevents any special interpretation of the next character,
+and the question mark <code>?</code> is recognized at the beginning of a symbol
+to mean a Lisp symbol (as opposed to a Maxima symbol).
+No continuation character (to join broken lines) is recognized.
+</p>
+<hr size="6">
+<a name="SEC337"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC336" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC338" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 73.1.2 Separator flag values for input </h3>
+
+<p>The functions for plain-text input and output take an optional argument,
+<var>separator_flag</var>, that tells what character separates data.
+</p>
+<p>For plain-text input, these values of <var>separator_flag</var> are recognized:
+<code>comma</code> for comma separated values,
+<code>pipe</code> for values separated by the vertical bar character <code>|</code>,
+<code>semicolon</code> for values separated by semicolon <code>;</code>, 
+and <code>space</code> for values separated by space or tab characters.
+If the file name ends in <code>.csv</code> and <var>separator_flag</var> is not specified,
+<code>comma</code> is assumed.
+If the file name ends in something other than <code>.csv</code> and <code>separator_flag</code> is not specified,
+<code>space</code> is assumed.
+</p>
+<p>In plain-text input, multiple successive space and tab characters count as a single separator.
+However, multiple comma, pipe, or semicolon characters are significant.
+Successive comma, pipe, or semicolon characters (with or without intervening spaces or tabs)
+are considered to have <code>false</code> between the separators.
+For example, <code>1234,,Foo</code> is treated the same as <code>1234,false,Foo</code>.
+</p>
+<hr size="6">
+<a name="SEC338"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC337" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC339" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 73.1.3 Separator flag values for output </h3>
+
+<p>For plain-text output, <code>tab</code>, for values separated by the tab character,
+is recognized as a value of <var>separator_flag</var>,
+as well as <code>comma</code>, <code>pipe</code>, <code>semicolon</code>, and <code>space</code>.
+</p>
+<p>In plain-text output, <code>false</code> atoms are written as such;
+a list <code>[1234, false, Foo]</code> is written <code>1234,false,Foo</code>,
+and there is no attempt to collapse the output to <code>1234,,Foo</code>.
+</p>
+<hr size="6">
+<a name="SEC339"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC338" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC340" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 73.1.4 Binary floating-point input and output </h3>
+
+<p><code>numericalio</code> functions can read and write 8-byte IEEE 754 floating-point numbers.
+These numbers can be stored either least significant byte first or most significant byte first,
+according to the global flag set by <code>assume_external_byte_order</code>.
+If not specified, <code>numericalio</code> assumes the external byte order is most-significant byte first.
+</p>
+<p>Other kinds of numbers are coerced to 8-byte floats;
+<code>numericalio</code> cannot read or write binary non-numeric data.
+</p>
+<p>Some Lisp implementations do not recognize IEEE 754 special values
+(positive and negative infinity, not-a-number values, denormalized values).
+The effect of reading such values with <code>numericalio</code> is undefined.
+</p>
+<p><code>numericalio</code> includes functions to open a stream for reading or writing a stream of bytes.
+</p>
+
+<p><a name="Item_003a-Functions-and-Variables-for-plain_002dtext-input-and-output"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-plain_002dtext-input-and-output"></a>
+<a name="SEC340"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC339" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC341" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 73.2 Functions and Variables for plain-text input and output </h2>
+
+<p><a name="Item_003a-read_005fmatrix"></a>
+</p><dl>
+<dt><u>Function:</u> <b>read_matrix</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>, <var>M</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>, <var>separator_flag</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>, <var>M</var>, <var>separator_flag</var>)</i>
+<a name="IDX2314"></a>
+</dt>
+<dd><p><code>read_matrix(<var>S</var>)</code> reads the source <var>S</var> and returns its entire content as a matrix.
+The size of the matrix is inferred from the input data;
+each line of the file becomes one row of the matrix.
+If some lines have different lengths, <code>read_matrix</code> complains.
+</p>
+<p><code>read_matrix(<var>S</var>, <var>M</var>)</code> read the source <var>S</var> into the matrix <var>M</var>,
+until <var>M</var> is full or the source is exhausted.
+Input data are read into the matrix in row-major order;
+the input need not have the same number of rows and columns as <var>M</var>.
+</p>
+<p>The source <var>S</var> may be a file name or a stream which for example allows skipping
+the very first line of a file (that may be useful, if you read CSV data, where the
+first line often contains the description of the columns):
+</p><pre class="example">s : openr(&quot;data.txt&quot;);
+readline(s);  /* skip the first line */
+M : read_matrix(s, comma);  /* read the following (comma-separated) lines into matrix M */
+close(s);
+</pre>
+<p>The recognized values of <var>separator_flag</var> are
+<code>comma</code>, <code>pipe</code>, <code>semicolon</code>, and <code>space</code>.
+If <var>separator_flag</var> is not specified, the file is assumed space-delimited.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-read_005farray"></a>
+</p><dl>
+<dt><u>Function:</u> <b>read_array</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_array</tt> (<var>S</var>, <var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_array</tt> (<var>S</var>, <var>A</var>, <var>separator_flag</var>)</i>
+<a name="IDX2315"></a>
+</dt>
+<dd><p>Reads the source <var>S</var> into the array <var>A</var>,
+until <var>A</var> is full or the source is exhausted.
+Input data are read into the array in row-major order;
+the input need not conform to the dimensions of <var>A</var>.
+</p>
+<p>The source <var>S</var> may be a file name or a stream.
+</p>
+<p>The recognized values of <var>separator_flag</var> are
+<code>comma</code>, <code>pipe</code>, <code>semicolon</code>, and <code>space</code>.
+If <var>separator_flag</var> is not specified, the file is assumed space-delimited.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-read_005fhashed_005farray"></a>
+</p><dl>
+<dt><u>Function:</u> <b>read_hashed_array</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_hashed_array</tt> (<var>S</var>, <var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_hashed_array</tt> (<var>S</var>, <var>A</var>, <var>separator_flag</var>)</i>
+<a name="IDX2316"></a>
+</dt>
+<dd><p>Reads the source <var>S</var> and returns its entire content as a hashed array.
+The source <var>S</var> may be a file name or a stream.
+</p>
+<p><code>read_hashed_array</code> treats the first item on each line as a hash key,
+and associates the remainder of the line (as a list) with the key.
+For example,
+the line <code>567 12 17 32 55</code> is equivalent to <code>A[567]: [12, 17, 32, 55]$</code>.
+Lines need not have the same numbers of elements.
+</p>
+<p>The recognized values of <var>separator_flag</var> are
+<code>comma</code>, <code>pipe</code>, <code>semicolon</code>, and <code>space</code>.
+If <var>separator_flag</var> is not specified, the file is assumed space-delimited.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-read_005fnested_005flist"></a>
+</p><dl>
+<dt><u>Function:</u> <b>read_nested_list</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_nested_list</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_nested_list</tt> (<var>S</var>, <var>separator_flag</var>)</i>
 <a name="IDX2317"></a>
 </dt>
-<dd><p>Computes a numerical integration by Romberg's method.
+<dd><p>Reads the source <var>S</var> and returns its entire content as a nested list.
+The source <var>S</var> may be a file name or a stream.
 </p>
-<p><code>romberg(<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code>
-returns an estimate of the integral <code>integrate(<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code>.
-<var>expr</var> must be an expression which evaluates to a floating point value
-when <var>x</var> is bound to a floating point value.
+<p><code>read_nested_list</code> returns a list which has a sublist for each
+line of input. Lines need not have the same numbers of elements.
+Empty lines are <i>not</i> ignored: an empty line yields an empty sublist.
 </p>
-<p><code>romberg(<var>F</var>, <var>a</var>, <var>b</var>)</code>
-returns an estimate of the integral <code>integrate(<var>F</var>(x), x, <var>a</var>, <var>b</var>)</code>
-where <code>x</code> represents the unnamed, sole argument of <var>F</var>;
-the actual argument is not named <code>x</code>.
-<var>F</var> must be a Maxima or Lisp function which returns a floating point value
-when the argument is a floating point value.
-<var>F</var> may name a translated or compiled Maxima function.
+<p>The recognized values of <var>separator_flag</var> are
+<code>comma</code>, <code>pipe</code>, <code>semicolon</code>, and <code>space</code>.
+If <var>separator_flag</var> is not specified, the file is assumed space-delimited.
 </p>
-<p>The accuracy of <code>romberg</code> is governed by the global variables
-<code>rombergabs</code> and <code>rombergtol</code>.
-<code>romberg</code> terminates successfully when
-the absolute difference between successive approximations is less than <code>rombergabs</code>,
-or the relative difference in successive approximations is less than <code>rombergtol</code>.
-Thus when <code>rombergabs</code> is 0.0 (the default)
-only the relative error test has any effect on <code>romberg</code>.
-</p>
-<p><code>romberg</code> halves the stepsize at most <code>rombergit</code> times before it gives up;
-the maximum number of function evaluations is therefore <code>2^rombergit</code>.
-If the error criterion established by <code>rombergabs</code> and <code>rombergtol</code>
-is not satisfied, <code>romberg</code> prints an error message.
-<code>romberg</code> always makes at least <code>rombergmin</code> iterations;
-this is a heuristic intended to prevent spurious termination when the integrand is oscillatory.
-</p>
-<p><code>romberg</code> repeatedly evaluates the integrand after binding the variable
-of integration to a specific value (and not before).
-This evaluation policy makes it possible to nest calls to <code>romberg</code>,
-to compute multidimensional integrals.
-However, the error calculations do not take the errors of nested integrations
-into account, so errors may be underestimated.
-Also, methods devised especially for multidimensional problems may yield
-the same accuracy with fewer function evaluations.
-</p>
-<p><code>load(romberg)</code> loads this function.
-</p>
-<p>See also <code>QUADPACK</code>, a collection of numerical integration functions.
-</p>
-<p>Examples:
-</p>
-<p>A 1-dimensional integration.
-</p>
-<pre class="example">(%i1) load (romberg);
-(%o1)    /usr/share/maxima/5.11.0/share/numeric/romberg.lisp
-(%i2) f(x) := 1/((x - 1)^2 + 1/100) + 1/((x - 2)^2 + 1/1000)
-              + 1/((x - 3)^2 + 1/200);
-                    1                 1                1
-(%o2) f(x) := -------------- + --------------- + --------------
-                     2    1           2    1            2    1
-              (x - 1)  + ---   (x - 2)  + ----   (x - 3)  + ---
-                         100              1000              200
-(%i3) rombergtol : 1e-6;
-(%o3)                 9.9999999999999995E-7
-(%i4) rombergit : 15;
-(%o4)                          15
-(%i5) estimate : romberg (f(x), x, -5, 5);
-(%o5)                   173.6730736617464
-(%i6) exact : integrate (f(x), x, -5, 5);
-(%o6) 10 sqrt(10) atan(70 sqrt(10))
- + 10 sqrt(10) atan(30 sqrt(10)) + 10 sqrt(2) atan(80 sqrt(2))
- + 10 sqrt(2) atan(20 sqrt(2)) + 10 atan(60) + 10 atan(40)
-(%i7) abs (estimate - exact) / exact, numer;
-(%o7)                7.5527060865060088E-11
-</pre>
-<p>A 2-dimensional integration, implemented by nested calls to <code>romberg</code>.
-</p>
-<pre class="example">(%i1) load (romberg);
-(%o1)    /usr/share/maxima/5.11.0/share/numeric/romberg.lisp
-(%i2) g(x, y) := x*y / (x + y);
-                                    x y
-(%o2)                   g(x, y) := -----
-                                   x + y
-(%i3) rombergtol : 1e-6;
-(%o3)                 9.9999999999999995E-7
-(%i4) estimate : romberg (romberg (g(x, y), y, 0, x/2), x, 1, 3);
-(%o4)                   0.81930239628356
-(%i5) assume (x &gt; 0);
-(%o5)                        [x &gt; 0]
-(%i6) integrate (integrate (g(x, y), y, 0, x/2), x, 1, 3);
-                                          3
-                                    2 log(-) - 1
-                    9                     2        9
-(%o6)       - 9 log(-) + 9 log(3) + ------------ + -
-                    2                    6         2
-(%i7) exact : radcan (%);
-                    26 log(3) - 26 log(2) - 13
-(%o7)             - --------------------------
-                                3
-(%i8) abs (estimate - exact) / exact, numer;
-(%o8)                1.3711979871851024E-10
-</pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-romberg">Package romberg</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-rombergabs"></a>
+<p><a name="Item_003a-read_005flist"></a>
 </p><dl>
-<dt><u>Option variable:</u> <b>rombergabs</b>
+<dt><u>Function:</u> <b>read_list</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>, <var>L</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>, <var>separator_flag</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>, <var>L</var>, <var>separator_flag</var>)</i>
 <a name="IDX2318"></a>
 </dt>
-<dd><p>Default value: 0.0
+<dd><p><code>read_list(<var>S</var>)</code> reads the source <var>S</var> and returns its entire content as a flat list.
 </p>
-<p>The accuracy of <code>romberg</code> is governed by the global variables
-<code>rombergabs</code> and <code>rombergtol</code>.
-<code>romberg</code> terminates successfully when
-the absolute difference between successive approximations is less than <code>rombergabs</code>,
-or the relative difference in successive approximations is less than <code>rombergtol</code>.
-Thus when <code>rombergabs</code> is 0.0 (the default)
-only the relative error test has any effect on <code>romberg</code>.
+<p><code>read_list(<var>S</var>, <var>L</var>)</code> reads the source <var>S</var> into the list <var>L</var>,
+until <var>L</var> is full or the source is exhausted.
 </p>
-<p>See also <code>rombergit</code> and <code>rombergmin</code>.
+<p>The source <var>S</var> may be a file name or a stream.
+</p>
+<p>The recognized values of <var>separator_flag</var> are
+<code>comma</code>, <code>pipe</code>, <code>semicolon</code>, and <code>space</code>.
+If <var>separator_flag</var> is not specified, the file is assumed space-delimited.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-romberg">Package romberg</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-rombergit"></a>
+<p><a name="Item_003a-write_005fdata"></a>
 </p><dl>
-<dt><u>Option variable:</u> <b>rombergit</b>
+<dt><u>Function:</u> <b>write_data</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>write_data</tt> (<var>X</var>, <var>D</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>write_data</tt> (<var>X</var>, <var>D</var>, <var>separator_flag</var>)</i>
 <a name="IDX2319"></a>
 </dt>
-<dd><p>Default value: 11
+<dd><p>Writes the object <var>X</var> to the destination <var>D</var>.
 </p>
-<p><code>romberg</code> halves the stepsize at most <code>rombergit</code> times before it gives up;
-the maximum number of function evaluations is therefore <code>2^rombergit</code>.
-<code>romberg</code> always makes at least <code>rombergmin</code> iterations;
-this is a heuristic intended to prevent spurious termination when the integrand is oscillatory.
+<p><code>write_data</code> writes a matrix in row-major order,
+with one line per row.
 </p>
-<p>See also <code>rombergabs</code> and <code>rombergtol</code>.
+<p><code>write_data</code> writes an array created by <code>array</code> or <code>make_array</code>
+in row-major order, with a new line at the end of every slab.
+Higher-dimensional slabs are separated by additional new lines.
+</p>
+<p><code>write_data</code> writes a hashed array with each key followed by
+its associated list on one line.
+</p>
+<p><code>write_data</code> writes a nested list with each sublist on one line.
+</p>
+<p><code>write_data</code> writes a flat list all on one line.
+</p>
+<p>The destination <var>D</var> may be a file name or a stream.
+When the destination is a file name,
+the global variable <code>file_output_append</code> governs
+whether the output file is appended or truncated.
+When the destination is a stream,
+no special action is taken by <code>write_data</code> after all the data are written;
+in particular, the stream remains open.
+</p>
+<p>The recognized values of <var>separator_flag</var> are
+<code>comma</code>, <code>pipe</code>, <code>semicolon</code>, <code>space</code>, and <code>tab</code>.
+If <var>separator_flag</var> is not specified, the file is assumed space-delimited.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-romberg">Package romberg</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-rombergmin"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-binary-input-and-output"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-binary-input-and-output"></a>
+<a name="SEC341"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC340" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC334" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 73.3 Functions and Variables for binary input and output </h2>
+
+<p><a name="Item_003a-assume_005fexternal_005fbyte_005forder"></a>
 </p><dl>
-<dt><u>Option variable:</u> <b>rombergmin</b>
+<dt><u>Function:</u> <b>assume_external_byte_order</b><i> (<var>byte_order_flag</var>)</i>
 <a name="IDX2320"></a>
 </dt>
-<dd><p>Default value: 0
+<dd><p>Tells <code>numericalio</code> the byte order for reading and writing binary data.
+Two values of <var>byte_order_flag</var> are recognized:
+<code>lsb</code> which indicates least-significant byte first, also called little-endian byte order;
+and <code>msb</code> which indicates most-significant byte first, also called big-endian byte order.
 </p>
-<p><code>romberg</code> always makes at least <code>rombergmin</code> iterations;
-this is a heuristic intended to prevent spurious termination when the integrand is oscillatory.
-</p>
-<p>See also <code>rombergit</code>, <code>rombergabs</code>, and <code>rombergtol</code>.
+<p>If not specified, <code>numericalio</code> assumes the external byte order is most-significant byte first.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-romberg">Package romberg</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a>
 </div>
-</p>
-</dd></dl>
+</p></dd></dl>
 
-<p><a name="Item_003a-rombergtol"></a>
+<p><a name="Item_003a-openr_005fbinary"></a>
 </p><dl>
-<dt><u>Option variable:</u> <b>rombergtol</b>
+<dt><u>Function:</u> <b>openr_binary</b><i> (<var>file_name</var>)</i>
 <a name="IDX2321"></a>
 </dt>
-<dd><p>Default value: 1e-4
-</p>
-<p>The accuracy of <code>romberg</code> is governed by the global variables
-<code>rombergabs</code> and <code>rombergtol</code>.
-<code>romberg</code> terminates successfully when
-the absolute difference between successive approximations is less than <code>rombergabs</code>,
-or the relative difference in successive approximations is less than <code>rombergtol</code>.
-Thus when <code>rombergabs</code> is 0.0 (the default)
-only the relative error test has any effect on <code>romberg</code>.
-</p>
-<p>See also <code>rombergit</code> and <code>rombergmin</code>.
+<dd><p>Returns an input stream of 8-bit unsigned bytes to read the file named by <var>file_name</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-romberg">Package romberg</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
+</p></dd></dl>
+
+<p><a name="Item_003a-openw_005fbinary"></a>
+</p><dl>
+<dt><u>Function:</u> <b>openw_binary</b><i> (<var>file_name</var>)</i>
+<a name="IDX2322"></a>
+</dt>
+<dd><p>Returns an output stream of 8-bit unsigned bytes to write the file named by <var>file_name</var>.
 </p>
-</dd></dl>
+<div class=categorybox>
 
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
+</div>
+</p></dd></dl>
 
-<p><a name="Item_003a-simplex"></a>
+<p><a name="Item_003a-opena_005fbinary"></a>
+</p><dl>
+<dt><u>Function:</u> <b>opena_binary</b><i> (<var>file_name</var>)</i>
+<a name="IDX2323"></a>
+</dt>
+<dd><p>Returns an output stream of 8-bit unsigned bytes to append the file named by <var>file_name</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-read_005fbinary_005fmatrix"></a>
+</p><dl>
+<dt><u>Function:</u> <b>read_binary_matrix</b><i> (<var>S</var>, <var>M</var>)</i>
+<a name="IDX2324"></a>
+</dt>
+<dd><p>Reads binary 8-byte floating point numbers from the source <var>S</var> into the matrix <var>M</var>
+until <var>M</var> is full, or the source is exhausted.
+Elements of <var>M</var> are read in row-major order.
+</p>
+<p>The source <var>S</var> may be a file name or a stream.
+</p>
+<p>The byte order in elements of the source is specified by <code>assume_external_byte_order</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-read_005fbinary_005farray"></a>
+</p><dl>
+<dt><u>Function:</u> <b>read_binary_array</b><i> (<var>S</var>, <var>A</var>)</i>
+<a name="IDX2325"></a>
+</dt>
+<dd><p>Reads binary 8-byte floating point numbers from the source <var>S</var> into the array <var>A</var>
+until <var>A</var> is full, or the source is exhausted.
+<var>A</var> must be an array created by <code>array</code> or <code>make_array</code>.
+Elements of <var>A</var> are read in row-major order.
+</p>
+<p>The source <var>S</var> may be a file name or a stream.
+</p>
+<p>The byte order in elements of the source is specified by <code>assume_external_byte_order</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-read_005fbinary_005flist"></a>
+</p><dl>
+<dt><u>Function:</u> <b>read_binary_list</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_binary_list</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_binary_list</tt> (<var>S</var>, <var>L</var>)</i>
+<a name="IDX2326"></a>
+</dt>
+<dd><p><code>read_binary_list(<var>S</var>)</code> reads the entire content of the source <var>S</var>
+as a sequence of binary 8-byte floating point numbers, and returns it as a list.
+The source <var>S</var> may be a file name or a stream.
+</p>
+<p><code>read_binary_list(<var>S</var>, <var>L</var>)</code> reads 8-byte binary floating point numbers
+from the source <var>S</var> until the list <var>L</var> is full, or the source is exhausted.
+</p>
+<p>The byte order in elements of the source is specified by <code>assume_external_byte_order</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-write_005fbinary_005fdata"></a>
+</p><dl>
+<dt><u>Function:</u> <b>write_binary_data</b><i> (<var>X</var>, <var>D</var>)</i>
+<a name="IDX2327"></a>
+</dt>
+<dd><p>Writes the object <var>X</var>, comprising binary 8-byte IEEE 754 floating-point numbers,
+to the destination <var>D</var>.
+Other kinds of numbers are coerced to 8-byte floats.
+<code>write_binary_data</code> cannot write non-numeric data.
+</p>
+<p>The object <var>X</var> may be a list, a nested list, a matrix,
+or an array created by <code>array</code> or <code>make_array</code>;
+<var>X</var> cannot be an undeclared array or any other type of object.
+<code>write_binary_data</code> writes nested lists, matrices, and arrays in row-major order.
+</p>
+<p>The destination <var>D</var> may be a file name or a stream.
+When the destination is a file name,
+the global variable <code>file_output_append</code> governs
+whether the output file is appended or truncated.
+When the destination is a stream,
+no special action is taken by <code>write_binary_data</code> after all the data are written;
+in particular, the stream remains open.
+</p>
+<p>The byte order in elements of the destination
+is specified by <code>assume_external_byte_order</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-numericalio">Package numericalio</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-operatingsystem_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC347" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC349" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -320,12 +657,12 @@ only the relative error test has any effect on <code>romberg</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 11. Maximas Database</title>
+<title>Maxima 5.39.0 Manual: 11. Maximas Database</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 11. Maximas Database">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 11. Maximas Database">
+<meta name="description" content="Maxima 5.39.0 Manual: 11. Maximas Database">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 11. Maximas Database">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 11. Maximas Database </h1>
@@ -111,7 +113,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 11.1 Introduction to Maximas Database </h2>
@@ -133,7 +135,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 11.2 Functions and Variables for Properties </h2>
@@ -142,7 +144,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-alphabetic"></a>
 </p><dl>
 <dt><u>Property:</u> <b>alphabetic</b>
-<a name="IDX370"></a>
+<a name="IDX378"></a>
 </dt>
 <dd><p><code>alphabetic</code> is a property type recognized by <code><a href="#declare">declare</a></code>.
 The expression <code>declare(<var>s</var>, alphabetic)</code> tells Maxima to recognize
@@ -163,7 +165,7 @@ as alphabetic all of the characters in <var>s</var>, which must be a string.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -171,7 +173,7 @@ as alphabetic all of the characters in <var>s</var>, which must be a string.
 <a name="Item_003a-bindtest"></a>
 </p><dl>
 <dt><u>Property:</u> <b>bindtest</b>
-<a name="IDX371"></a>
+<a name="IDX379"></a>
 </dt>
 <dd><p>The command <code>declare(<var>x</var>, bindtest)</code> tells Maxima to trigger an error
 when the symbol <var>x</var> is evaluated unbound.
@@ -194,7 +196,7 @@ aa unbound variable
 <a name="Item_003a-constant"></a>
 </p><dl>
 <dt><u>Property:</u> <b>constant</b>
-<a name="IDX372"></a>
+<a name="IDX380"></a>
 </dt>
 <dd><p><code>declare(<var>a</var>, constant)</code> declares <var>a</var> to be a constant.  The
 declaration of a symbol to be constant does not prevent the assignment of a
@@ -215,8 +217,8 @@ nonconstant value to the symbol.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -224,7 +226,7 @@ nonconstant value to the symbol.
 <a name="Item_003a-constantp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>constantp</b><i> (<var>expr</var>)</i>
-<a name="IDX373"></a>
+<a name="IDX381"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a constant expression, otherwise returns
 <code>false</code>.
@@ -259,8 +261,8 @@ or functions whose arguments are constant.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -269,7 +271,7 @@ or functions whose arguments are constant.
 <a name="Item_003a-declare"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare</b><i> (<var>a_1</var>, <var>p_1</var>, <var>a_2</var>, <var>p_2</var>, &hellip;)</i>
-<a name="IDX374"></a>
+<a name="IDX382"></a>
 </dt>
 <dd><p>Assigns the atom or list of atoms <var>a_i</var> the property or list of properties
 <var>p_i</var>.  When <var>a_i</var> and/or <var>p_i</var> are lists, each of the atoms gets
@@ -435,7 +437,7 @@ for each separate description of a property.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -444,10 +446,10 @@ for each separate description of a property.
 <a name="Item_003a-decreasing"></a>
 </p><dl>
 <dt><u>Property:</u> <b>decreasing</b>
-<a name="IDX375"></a>
+<a name="IDX383"></a>
 </dt>
 <dt><u>Property:</u> <b>increasing</b>
-<a name="IDX376"></a>
+<a name="IDX384"></a>
 </dt>
 <dd><p>The commands <code>declare(<var>f</var>, decreasing)</code> or
 <code>declare(<var>f</var>, increasing)</code> tell Maxima to recognize the function
@@ -468,7 +470,7 @@ for each separate description of a property.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -477,10 +479,10 @@ for each separate description of a property.
 <a name="Item_003a-even"></a>
 </p><dl>
 <dt><u>Property:</u> <b>even</b>
-<a name="IDX377"></a>
+<a name="IDX385"></a>
 </dt>
 <dt><u>Property:</u> <b>odd</b>
-<a name="IDX378"></a>
+<a name="IDX386"></a>
 </dt>
 <dd><p><code>declare(<var>a</var>, even)</code> or <code>declare(<var>a</var>, odd)</code> tells Maxima to
 recognize the symbol <var>a</var> as an even or odd integer variable.  The
@@ -502,7 +504,7 @@ properties <code>even</code> and <code>odd</code> are not recognized by the func
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -511,7 +513,7 @@ properties <code>even</code> and <code>odd</code> are not recognized by the func
 <a name="Item_003a-feature"></a>
 </p><dl>
 <dt><u>Property:</u> <b>feature</b>
-<a name="IDX379"></a>
+<a name="IDX387"></a>
 </dt>
 <dd><p>Maxima understands two distinct types of features, system features and features
 which apply to mathematical expressions.  See also <code><a href="maxima_32.html#status">status</a></code> for information
@@ -526,7 +528,7 @@ information about mathematical features.
 <a name="Item_003a-featurep"></a>
 </p><dl>
 <dt><u>Function:</u> <b>featurep</b><i> (<var>a</var>, <var>f</var>)</i>
-<a name="IDX380"></a>
+<a name="IDX388"></a>
 </dt>
 <dd><p>Attempts to determine whether the object <var>a</var> has the feature <var>f</var> on the
 basis of the facts in the current database.  If so, it returns <code>true</code>,
@@ -545,8 +547,8 @@ nor the negation of <var>f</var> can be established.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -554,7 +556,7 @@ nor the negation of <var>f</var> can be established.
 <a name="Item_003a-features"></a>
 </p><dl>
 <dt><u>Declaration:</u> <b>features</b>
-<a name="IDX381"></a>
+<a name="IDX389"></a>
 </dt>
 <dd><p>Maxima recognizes certain mathematical properties of functions and variables.
 These are called &quot;features&quot;.
@@ -598,7 +600,7 @@ non-mathematical, system-dependent features.  See <code><a href="maxima_32.html#
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -606,7 +608,7 @@ non-mathematical, system-dependent features.  See <code><a href="maxima_32.html#
 <a name="Item_003a-get"></a>
 </p><dl>
 <dt><u>Function:</u> <b>get</b><i> (<var>a</var>, <var>i</var>)</i>
-<a name="IDX382"></a>
+<a name="IDX390"></a>
 </dt>
 <dd><p>Retrieves the user property indicated by <var>i</var> associated with
 atom <var>a</var> or returns <code>false</code> if <var>a</var> doesn't have property <var>i</var>.
@@ -635,7 +637,7 @@ x is not numeric.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -644,10 +646,10 @@ x is not numeric.
 <a name="Item_003a-integer"></a>
 </p><dl>
 <dt><u>Property:</u> <b>integer</b>
-<a name="IDX383"></a>
+<a name="IDX391"></a>
 </dt>
 <dt><u>Property:</u> <b>noninteger</b>
-<a name="IDX384"></a>
+<a name="IDX392"></a>
 </dt>
 <dd><p><code>declare(<var>a</var>, integer)</code> or <code>declare(<var>a</var>, noninteger)</code> tells
 Maxima to recognize <var>a</var> as an integer or noninteger variable.
@@ -665,7 +667,7 @@ Maxima to recognize <var>a</var> as an integer or noninteger variable.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -673,7 +675,7 @@ Maxima to recognize <var>a</var> as an integer or noninteger variable.
 <a name="Item_003a-integervalued"></a>
 </p><dl>
 <dt><u>Property:</u> <b>integervalued</b>
-<a name="IDX385"></a>
+<a name="IDX393"></a>
 </dt>
 <dd><p><code>declare(<var>f</var>, integervalued)</code> tells Maxima to recognize <var>f</var> as an
 integer-valued function.
@@ -693,7 +695,7 @@ integer-valued function.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -701,7 +703,7 @@ integer-valued function.
 <a name="Item_003a-nonarray"></a>
 </p><dl>
 <dt><u>Property:</u> <b>nonarray</b>
-<a name="IDX386"></a>
+<a name="IDX394"></a>
 </dt>
 <dd><p>The command <code>declare(a, nonarray)</code> tells Maxima to consider <var>a</var> not
 an array.  This declaration prevents multiple evaluation, if <var>a</var> is a
@@ -724,7 +726,7 @@ subscripted variable.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -733,7 +735,7 @@ subscripted variable.
 <a name="Item_003a-nonscalar"></a>
 </p><dl>
 <dt><u>Property:</u> <b>nonscalar</b>
-<a name="IDX387"></a>
+<a name="IDX395"></a>
 </dt>
 <dd><p>Makes atoms behave as does a list or matrix with respect to the dot operator.
 </p>
@@ -741,9 +743,9 @@ subscripted variable.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Vectors">Vectors</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Vectors">Vectors</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -751,7 +753,7 @@ subscripted variable.
 <a name="Item_003a-nonscalarp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>nonscalarp</b><i> (<var>expr</var>)</i>
-<a name="IDX388"></a>
+<a name="IDX396"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a non-scalar, i.e., it contains
 atoms declared as non-scalars, lists, or matrices.
@@ -760,9 +762,9 @@ atoms declared as non-scalars, lists, or matrices.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Vectors">Vectors</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Vectors">Vectors</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -771,7 +773,7 @@ atoms declared as non-scalars, lists, or matrices.
 <a name="Item_003a-posfun"></a>
 </p><dl>
 <dt><u>Property:</u> <b>posfun</b>
-<a name="IDX389"></a>
+<a name="IDX397"></a>
 </dt>
 <dd><p><code>declare (f, posfun)</code> declares <code>f</code> to be a positive function.
 <code>is (f(x) &gt; 0)</code> yields <code>true</code>.
@@ -780,8 +782,8 @@ atoms declared as non-scalars, lists, or matrices.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -790,7 +792,7 @@ atoms declared as non-scalars, lists, or matrices.
 <a name="Item_003a-printprops"></a>
 </p><dl>
 <dt><u>Function:</u> <b>printprops</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>printprops</tt> (<var>a</var>, <var>i</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>printprops</tt> ([<var>a_1</var>, &hellip;, <var>a_n</var>], <var>i</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>printprops</tt> (all, <var>i</var>)</i>
-<a name="IDX390"></a>
+<a name="IDX398"></a>
 </dt>
 <dd><p>Displays the property with the indicator <var>i</var> associated with the atom
 <var>a</var>.  <var>a</var> may also be a list of atoms or the atom <code>all</code> in which
@@ -801,8 +803,8 @@ cannot otherwise be displayed, i.e.  for <code><a href="maxima_18.html#atvalue">
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Display-functions">Display functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Display-functions">Display functions</a>
 </div>
 </p></dd></dl>
 
@@ -811,14 +813,14 @@ cannot otherwise be displayed, i.e.  for <code><a href="maxima_18.html#atvalue">
 <a name="Item_003a-properties"></a>
 </p><dl>
 <dt><u>Function:</u> <b>properties</b><i> (<var>a</var>)</i>
-<a name="IDX391"></a>
+<a name="IDX399"></a>
 </dt>
 <dd><p>Returns a list of the names of all the properties associated with the atom
 <var>a</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -827,7 +829,7 @@ cannot otherwise be displayed, i.e.  for <code><a href="maxima_18.html#atvalue">
 <a name="Item_003a-props"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>props</b>
-<a name="IDX392"></a>
+<a name="IDX400"></a>
 </dt>
 <dd><p>Default value: <code>[]</code>
 </p>
@@ -838,8 +840,8 @@ mentioned in <code><a href="maxima_4.html#infolists">infolists</a></code>, such 
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -848,7 +850,7 @@ mentioned in <code><a href="maxima_4.html#infolists">infolists</a></code>, such 
 <a name="Item_003a-propvars"></a>
 </p><dl>
 <dt><u>Function:</u> <b>propvars</b><i> (<var>prop</var>)</i>
-<a name="IDX393"></a>
+<a name="IDX401"></a>
 </dt>
 <dd><p>Returns a list of those atoms on the <code><a href="#props">props</a></code> list which
 have the property indicated by <var>prop</var>.  Thus <code>propvars (atvalue)</code>
@@ -856,7 +858,7 @@ returns a list of atoms which have atvalues.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -865,7 +867,7 @@ returns a list of atoms which have atvalues.
 <a name="Item_003a-put"></a>
 </p><dl>
 <dt><u>Function:</u> <b>put</b><i> (<var>atom</var>, <var>value</var>, <var>indicator</var>)</i>
-<a name="IDX394"></a>
+<a name="IDX402"></a>
 </dt>
 <dd><p>Assigns <var>value</var> to the property (specified by <var>indicator</var>) of
 <var>atom</var>.  <var>indicator</var> may be the name of any property, not just a
@@ -895,7 +897,7 @@ system-defined property.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -903,7 +905,7 @@ system-defined property.
 <a name="Item_003a-qput"></a>
 </p><dl>
 <dt><u>Function:</u> <b>qput</b><i> (<var>atom</var>, <var>value</var>, <var>indicator</var>)</i>
-<a name="IDX395"></a>
+<a name="IDX403"></a>
 </dt>
 <dd><p>Assigns <var>value</var> to the property (specified by <var>indicator</var>) of
 <var>atom</var>.  This is the same as <code><a href="#put">put</a></code>, except that the arguments are
@@ -931,7 +933,7 @@ quoted.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -940,10 +942,10 @@ quoted.
 <a name="Item_003a-rational"></a>
 </p><dl>
 <dt><u>Property:</u> <b>rational</b>
-<a name="IDX396"></a>
+<a name="IDX404"></a>
 </dt>
 <dt><u>Property:</u> <b>irrational</b>
-<a name="IDX397"></a>
+<a name="IDX405"></a>
 </dt>
 <dd><p><code>declare(<var>a</var>, rational)</code> or <code>declare(<var>a</var>, irrational)</code> tells
 Maxima to recognize <var>a</var> as a rational or irrational real variable.
@@ -952,7 +954,7 @@ Maxima to recognize <var>a</var> as a rational or irrational real variable.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -962,13 +964,13 @@ Maxima to recognize <var>a</var> as a rational or irrational real variable.
 <a name="Item_003a-real"></a>
 </p><dl>
 <dt><u>Property:</u> <b>real</b>
-<a name="IDX398"></a>
+<a name="IDX406"></a>
 </dt>
 <dt><u>Property:</u> <b>imaginary</b>
-<a name="IDX399"></a>
+<a name="IDX407"></a>
 </dt>
 <dt><u>Property:</u> <b>complex</b>
-<a name="IDX400"></a>
+<a name="IDX408"></a>
 </dt>
 <dd><p><code>declare(<var>a</var>, real)</code>, <code>declare(<var>a</var>, imaginary)</code>, or
 <code>declare(<var>a</var>, complex)</code> tells Maxima to recognize <var>a</var> as a real,
@@ -978,7 +980,7 @@ pure imaginary, or complex variable.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -987,7 +989,7 @@ pure imaginary, or complex variable.
 <a name="Item_003a-rem"></a>
 </p><dl>
 <dt><u>Function:</u> <b>rem</b><i> (<var>atom</var>, <var>indicator</var>)</i>
-<a name="IDX401"></a>
+<a name="IDX409"></a>
 </dt>
 <dd><p>Removes the property indicated by <var>indicator</var> from <var>atom</var>.
 <code>rem</code> reverses the effect of <code><a href="#put">put</a></code>.
@@ -997,7 +999,7 @@ when <code>rem</code> was called, or <code>false</code> if it had no such proper
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1006,7 +1008,7 @@ when <code>rem</code> was called, or <code>false</code> if it had no such proper
 <a name="Item_003a-remove"></a>
 </p><dl>
 <dt><u>Function:</u> <b>remove</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remove</tt> (<var>a_1</var>, <var>p_1</var>, &hellip;, <var>a_n</var>, <var>p_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remove</tt> ([<var>a_1</var>, &hellip;, <var>a_m</var>], [<var>p_1</var>, &hellip;, <var>p_n</var>], &hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remove</tt> (&quot;<var>a</var>&quot;, operator) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remove</tt> (<var>a</var>, transfun) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remove</tt> (all, <var>p</var>)</i>
-<a name="IDX402"></a>
+<a name="IDX410"></a>
 </dt>
 <dd><p>Removes properties associated with atoms.
 </p>
@@ -1046,7 +1048,7 @@ property.  This behavior is unlike the more specific remove functions
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1054,7 +1056,7 @@ property.  This behavior is unlike the more specific remove functions
 <a name="Item_003a-scalar"></a>
 </p><dl>
 <dt><u>Property:</u> <b>scalar</b>
-<a name="IDX403"></a>
+<a name="IDX411"></a>
 </dt>
 <dd><p><code>declare(<var>a</var>, scalar)</code> tells Maxima to consider <var>a</var> a scalar
 variable.
@@ -1063,7 +1065,7 @@ variable.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1072,7 +1074,7 @@ variable.
 <a name="Item_003a-scalarp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>scalarp</b><i> (<var>expr</var>)</i>
-<a name="IDX404"></a>
+<a name="IDX412"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a number, constant, or variable declared
 <code><a href="#scalar">scalar</a></code> with <code><a href="#declare">declare</a></code>, or composed entirely of numbers,
@@ -1082,9 +1084,9 @@ constants, and such variables, but not containing matrices or lists.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Vectors">Vectors</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Vectors">Vectors</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1105,7 +1107,7 @@ constants, and such variables, but not containing matrices or lists.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 11.3 Functions and Variables for Facts </h2>
@@ -1114,7 +1116,7 @@ constants, and such variables, but not containing matrices or lists.
 <a name="Item_003a-activate"></a>
 </p><dl>
 <dt><u>Function:</u> <b>activate</b><i> (<var>context_1</var>, &hellip;, <var>context_n</var>)</i>
-<a name="IDX405"></a>
+<a name="IDX413"></a>
 </dt>
 <dd><p>Activates the contexts <var>context_1</var>, &hellip;, <var>context_n</var>.
 The facts in these contexts are then available to
@@ -1126,7 +1128,7 @@ of contexts which are active by way of the <code>activate</code> function.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1134,7 +1136,7 @@ of contexts which are active by way of the <code>activate</code> function.
 <a name="Item_003a-activecontexts"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>activecontexts</b>
-<a name="IDX406"></a>
+<a name="IDX414"></a>
 </dt>
 <dd><p>Default value: <code>[]</code>
 </p>
@@ -1144,7 +1146,7 @@ they are subcontexts of the current context.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1153,7 +1155,7 @@ they are subcontexts of the current context.
 <a name="Item_003a-askinteger"></a>
 </p><dl>
 <dt><u>Function:</u> <b>askinteger</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>askinteger</tt> (<var>expr</var>, integer) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>askinteger</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>askinteger</tt> (<var>expr</var>, even) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>askinteger</tt> (<var>expr</var>, odd)</i>
-<a name="IDX407"></a>
+<a name="IDX415"></a>
 </dt>
 <dd><p><code>askinteger (<var>expr</var>, integer)</code> attempts to determine from the
 <code>assume</code> database whether <var>expr</var> is an integer.
@@ -1168,7 +1170,7 @@ respectively.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1177,7 +1179,7 @@ respectively.
 <a name="Item_003a-asksign"></a>
 </p><dl>
 <dt><u>Function:</u> <b>asksign</b><i> (<var>expr</var>)</i>
-<a name="IDX408"></a>
+<a name="IDX416"></a>
 </dt>
 <dd><p>First attempts to determine whether the specified
 expression is positive, negative, or zero.  If it cannot, it asks the
@@ -1188,7 +1190,7 @@ computation.  The return value of <code>asksign</code> is one of <code>pos</code
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1196,7 +1198,7 @@ computation.  The return value of <code>asksign</code> is one of <code>pos</code
 <a name="Item_003a-assume"></a>
 </p><dl>
 <dt><u>Function:</u> <b>assume</b><i> (<var>pred_1</var>, &hellip;, <var>pred_n</var>)</i>
-<a name="IDX409"></a>
+<a name="IDX417"></a>
 </dt>
 <dd><p>Adds predicates <var>pred_1</var>, &hellip;, <var>pred_n</var> to the current context.
 If a predicate is inconsistent or redundant with the predicates in the current
@@ -1255,7 +1257,7 @@ contains a complex number <code>assume</code> returns <code>inconsistent</code> 
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1263,7 +1265,7 @@ contains a complex number <code>assume</code> returns <code>inconsistent</code> 
 <a name="Item_003a-assumescalar"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>assumescalar</b>
-<a name="IDX410"></a>
+<a name="IDX418"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1289,7 +1291,7 @@ scalars for all the operators listed above.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1297,7 +1299,7 @@ scalars for all the operators listed above.
 <a name="Item_003a-assume_005fpos"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>assume_pos</b>
-<a name="IDX411"></a>
+<a name="IDX419"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1327,7 +1329,7 @@ a function which returns <code>true</code> for all arguments.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1335,7 +1337,7 @@ a function which returns <code>true</code> for all arguments.
 <a name="Item_003a-assume_005fpos_005fpred"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>assume_pos_pred</b>
-<a name="IDX412"></a>
+<a name="IDX420"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1407,7 +1409,7 @@ p;
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1415,7 +1417,7 @@ p;
 <a name="Item_003a-context"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>context</b>
-<a name="IDX413"></a>
+<a name="IDX421"></a>
 </dt>
 <dd><p>Default value: <code>initial</code>
 </p>
@@ -1432,7 +1434,7 @@ The specified context is activated automatically.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1441,7 +1443,7 @@ The specified context is activated automatically.
 <a name="Item_003a-contexts"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>contexts</b>
-<a name="IDX414"></a>
+<a name="IDX422"></a>
 </dt>
 <dd><p>Default value: <code>[initial, global]</code>
 </p>
@@ -1474,7 +1476,7 @@ context called <code>initial</code>, which has <code>global</code> as a subconte
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1482,13 +1484,13 @@ context called <code>initial</code>, which has <code>global</code> as a subconte
 <a name="Item_003a-deactivate"></a>
 </p><dl>
 <dt><u>Function:</u> <b>deactivate</b><i> (<var>context_1</var>, &hellip;, <var>context_n</var>)</i>
-<a name="IDX415"></a>
+<a name="IDX423"></a>
 </dt>
 <dd><p>Deactivates the specified contexts <var>context_1</var>, &hellip;, <var>context_n</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1496,7 +1498,7 @@ context called <code>initial</code>, which has <code>global</code> as a subconte
 <a name="Item_003a-facts"></a>
 </p><dl>
 <dt><u>Function:</u> <b>facts</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>facts</tt> (<var>item</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>facts</tt> ()</i>
-<a name="IDX416"></a>
+<a name="IDX424"></a>
 </dt>
 <dd><p>If <var>item</var> is the name of a context, <code>facts (<var>item</var>)</code> returns a
 list of the facts in the specified context.
@@ -1509,7 +1511,7 @@ are active, but in a different context, are not listed.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1517,7 +1519,7 @@ are active, but in a different context, are not listed.
 <a name="Item_003a-forget"></a>
 </p><dl>
 <dt><u>Function:</u> <b>forget</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>forget</tt> (<var>pred_1</var>, &hellip;, <var>pred_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>forget</tt> (<var>L</var>)</i>
-<a name="IDX417"></a>
+<a name="IDX425"></a>
 </dt>
 <dd><p>Removes predicates established by <code><a href="#assume">assume</a></code>.
 The predicates may be expressions equivalent to (but not necessarily identical
@@ -1528,7 +1530,7 @@ forgets each item on the list.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1536,7 +1538,7 @@ forgets each item on the list.
 <a name="Item_003a-is"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is</b><i> (<var>expr</var>)</i>
-<a name="IDX418"></a>
+<a name="IDX426"></a>
 </dt>
 <dd><p>Attempts to determine whether the predicate <var>expr</var> is provable from the
 facts in the <code>assume</code> database.
@@ -1590,8 +1592,8 @@ a &gt; 0
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1599,7 +1601,7 @@ a &gt; 0
 <a name="Item_003a-killcontext"></a>
 </p><dl>
 <dt><u>Function:</u> <b>killcontext</b><i> (<var>context_1</var>, &hellip;, <var>context_n</var>)</i>
-<a name="IDX419"></a>
+<a name="IDX427"></a>
 </dt>
 <dd><p>Kills the contexts <var>context_1</var>, &hellip;, <var>context_n</var>.
 </p>
@@ -1618,7 +1620,7 @@ context, or by use of the function <code><a href="#activate">activate</a></code>
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1626,7 +1628,7 @@ context, or by use of the function <code><a href="#activate">activate</a></code>
 <a name="Item_003a-maybe"></a>
 </p><dl>
 <dt><u>Function:</u> <b>maybe</b><i> (<var>expr</var>)</i>
-<a name="IDX420"></a>
+<a name="IDX428"></a>
 </dt>
 <dd><p>Attempts to determine whether the predicate <var>expr</var> is provable from the
 facts in the <code>assume</code> database.
@@ -1652,8 +1654,8 @@ a value to <code>prederror</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1661,7 +1663,7 @@ a value to <code>prederror</code>.
 <a name="Item_003a-newcontext"></a>
 </p><dl>
 <dt><u>Function:</u> <b>newcontext</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>newcontext</tt> (<var>name</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>newcontext</tt> ()</i>
-<a name="IDX421"></a>
+<a name="IDX429"></a>
 </dt>
 <dd><p>Creates a new, empty context, called <var>name</var>, which
 has <code>global</code> as its only subcontext.  The newly-created context
@@ -1674,7 +1676,7 @@ becomes the currently active context.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1682,7 +1684,7 @@ becomes the currently active context.
 <a name="Item_003a-sign"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sign</b><i> (<var>expr</var>)</i>
-<a name="IDX422"></a>
+<a name="IDX430"></a>
 </dt>
 <dd><p>Attempts to determine the sign of <var>expr</var> on the basis of the facts in the
 current data base.  It returns one of the following answers: <code>pos</code>
@@ -1692,7 +1694,7 @@ current data base.  It returns one of the following answers: <code>pos</code>
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1700,7 +1702,7 @@ current data base.  It returns one of the following answers: <code>pos</code>
 <a name="Item_003a-supcontext"></a>
 </p><dl>
 <dt><u>Function:</u> <b>supcontext</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcontext</tt> (<var>name</var>, <var>context</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcontext</tt> (<var>name</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcontext</tt> ()</i>
-<a name="IDX423"></a>
+<a name="IDX431"></a>
 </dt>
 <dd><p>Creates a new context, called <var>name</var>, which has <var>context</var> as a
 subcontext.  <var>context</var> must exist.
@@ -1714,7 +1716,7 @@ subcontext.  <var>context</var> must exist.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1735,7 +1737,7 @@ subcontext.  <var>context</var> must exist.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 11.4 Functions and Variables for Predicates </h2>
@@ -1744,7 +1746,7 @@ subcontext.  <var>context</var> must exist.
 <a name="Item_003a-charfun"></a>
 </p><dl>
 <dt><u>Function:</u> <b>charfun</b><i> (<var>p</var>)</i>
-<a name="IDX424"></a>
+<a name="IDX432"></a>
 </dt>
 <dd><p>Return 0 when the predicate <var>p</var> evaluates to <code>false</code>; return 1 when
 the predicate evaluates to <code>true</code>.  When the predicate evaluates to
@@ -1762,7 +1764,7 @@ something other than <code>true</code> or <code>false</code> (unknown),  return 
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
 </div>
 </p></dd></dl>
 
@@ -1770,7 +1772,7 @@ something other than <code>true</code> or <code>false</code> (unknown),  return 
 <a name="Item_003a-compare"></a>
 </p><dl>
 <dt><u>Function:</u> <b>compare</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX425"></a>
+<a name="IDX433"></a>
 </dt>
 <dd><p>Return a comparison operator <var>op</var> (<code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>,
 <code>=</code>, or <code>#</code>) such that <code>is (<var>x</var> <var>op</var> <var>y</var>)</code> evaluates
@@ -1803,7 +1805,7 @@ its arguments are nonempty; thus
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -1811,7 +1813,7 @@ its arguments are nonempty; thus
 <a name="Item_003a-equal"></a>
 </p><dl>
 <dt><u>Function:</u> <b>equal</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX426"></a>
+<a name="IDX434"></a>
 </dt>
 <dd><p>Represents equivalence, that is, equal value.
 </p>
@@ -1916,7 +1918,7 @@ equal(x  + 2 x + 1, x  - 2 x - 1)
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -1924,7 +1926,7 @@ equal(x  + 2 x + 1, x  - 2 x - 1)
 <a name="Item_003a-notequal"></a>
 </p><dl>
 <dt><u>Function:</u> <b>notequal</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX427"></a>
+<a name="IDX435"></a>
 </dt>
 <dd><p>Represents the negation of <code>equal(<var>a</var>, <var>b</var>)</code>.
 </p>
@@ -1953,7 +1955,7 @@ equal(x  + 2 x + 1, x  - 2 x - 1)
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -1961,15 +1963,15 @@ equal(x  + 2 x + 1, x  - 2 x - 1)
 <a name="Item_003a-unknown"></a>
 </p><dl>
 <dt><u>Function:</u> <b>unknown</b><i> (<var>expr</var>)</i>
-<a name="IDX428"></a>
+<a name="IDX436"></a>
 </dt>
 <dd><p>Returns <code>true</code> if and only if <var>expr</var> contains an operator or function
 not recognized by the Maxima simplifier.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Simplification-functions">Simplification functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Simplification-functions">Simplification functions</a>
 </div>
 </p></dd></dl>
 
@@ -1978,7 +1980,7 @@ not recognized by the Maxima simplifier.
 <a name="Item_003a-zeroequiv"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zeroequiv</b><i> (<var>expr</var>, <var>v</var>)</i>
-<a name="IDX429"></a>
+<a name="IDX437"></a>
 </dt>
 <dd><p>Tests whether the expression <var>expr</var> in the variable <var>v</var> is equivalent
 to zero, returning <code>true</code>, <code>false</code>, or <code>dontknow</code>.
@@ -2008,7 +2010,7 @@ On the other hand <code>zeroequiv (log(a * b) - log(a) - log(b), a)</code> retur
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -2025,12 +2027,12 @@ On the other hand <code>zeroequiv (log(a * b) - log(a) - log(b), a)</code> retur
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

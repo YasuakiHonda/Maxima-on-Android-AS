@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 26. ctensor</title>
+<title>Maxima 5.39.0 Manual: 26. ctensor</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 26. ctensor">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 26. ctensor">
+<meta name="description" content="Maxima 5.39.0 Manual: 26. ctensor">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 26. ctensor">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="ctensor"></a>
 <a name="SEC138"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC139" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_25.html#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 26. ctensor </h1>
@@ -113,15 +128,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC140" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC138" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC138" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 26.1 Introduction to ctensor </h2>
@@ -147,7 +162,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 静的な球対称計量(標準座標)に関して、以下のように開始されます。
 <code>ctensor</code>の関数の多くは例のように標準計量に対して表示されます。
 </p>
-<pre class="example">(%i1) load(ctensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(ctensor);
 (%o1)      /share/tensor/ctensor.mac
 (%i2) csetup();
 Enter the dimension of the coordinate system:
@@ -230,12 +245,12 @@ y;
                                   4, 4, 1   2 a
 (%o11)                               done
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Tensors">Tensors</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Tensors">Tensors</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 <p><a name="Item_003a-Functions-and-Variables-for-ctensor"></a>
@@ -246,15 +261,15 @@ y;
 <td valign="middle" align="left">[<a href="#SEC141" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC138" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC138" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 
@@ -268,23 +283,24 @@ y;
 <td valign="middle" align="left">[<a href="#SEC142" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.1 Initialization and setup </h3>
 
-<p><a name="Item_003a-csetup"></a>
+<p><a name="csetup"></a>
+<a name="Item_003a-csetup"></a>
 </p><dl>
 <dt><u>関数:</u> <b>csetup</b><i> ()</i>
-<a name="IDX997"></a>
+<a name="IDX1012"></a>
 </dt>
 <dd><p>パッケージを初期化し、ユーザーに計量を対話的に入力可能にする
 <code>ctensor</code>(成分テンソル)パッケージの関数。
@@ -292,14 +308,14 @@ y;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-cmetric"></a>
+<p><a name="cmetric"></a>
+<a name="Item_003a-cmetric"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cmetric</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>cmetric</tt> (<var>dis</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>cmetric</tt> ()</i>
-<a name="IDX998"></a>
+<a name="IDX1013"></a>
 </dt>
 <dd><p>計量の逆元を計算し、将来の計算のためパッケージを設定する
 <code>ctensor</code>(成分テンソル)パッケージの関数。
@@ -317,19 +333,19 @@ y;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-ct_005fcoordsys"></a>
+<p><a name="ct"></a>
+<a name="Item_003a-ct_005fcoordsys"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ct_coordsys</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ct_coordsys</tt> (<var>coordinate_system</var>, <var>extra_arg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ct_coordsys</tt> (<var>coordinate_system</var>)</i>
-<a name="IDX999"></a>
+<a name="IDX1014"></a>
 </dt>
 <dd><p>あらかじめ定義された座標系と計量を設定します。
 引数 <var>coordinate_system</var>は以下のシンボルのいずれかです:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
  SYMBOL             Dim Coordinates     Description/comments
  ------------------------------------------------------------------
  cartesian2d           2  [x,y]             Cartesian 2D 座標系
@@ -346,7 +362,7 @@ y;
  paraboliccylindrical  3  [u,v,z]           円筒z放物2D
  paraboloidal          3  [u,v,phi]         Paraboloidal coords.
  conical               3  [u,v,w]           円錐座標
- toroidal              3  [u,v,phi]         環状座標
+ toroidal              3  [phi,u,v]         環状座標
  spherical             3  [r,theta,phi]     球座標系
  oblatespheroidal      3  [u,v,phi]         偏球座標系
  oblatespheroidalsqrt  3  [u,v,phi]
@@ -358,12 +374,12 @@ y;
  exteriorschwarzschild 4  [t,r,theta,phi]   Schwarzschild 計量
  interiorschwarzschild 4  [t,z,u,v]         内部 Schwarzschild 計量
  kerr_newman           4  [t,r,theta,phi]   荷電軸対称計量
-</pre>
+</pre></td></tr></table>
 <p><code>coordinate_system</code>は
 座標変数を含むリストが続く変換関数のリストでもあり得ます。
 例えば、以下のように球計量を指定できます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) ct_coordsys([r*cos(theta)*cos(phi),r*cos(theta)*sin(phi),
@@ -382,10 +398,10 @@ y;
 (%i5) dim;
 (%o5)                                  3
 
-</pre>
+</pre></td></tr></table>
 <p><code>cframe_flag</code>が <code>true</code>の時、変換関数も使うことができます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) cframe_flag:true;
@@ -412,7 +428,7 @@ y;
                            [         2    2        ]
                            [ 0  0   r  cos (theta) ]
 
-</pre>
+</pre></td></tr></table>
 <p>オプションの引数 <var>extra_arg</var>は以下のいずれかです:
 </p>
 <p><code>cylindrical</code>は <code>ct_coordsys</code>に追加の極座標を結びつけるよう命じます。
@@ -432,14 +448,14 @@ y;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-init_005fctensor"></a>
+<p><a name="init"></a>
+<a name="Item_003a-init_005fctensor"></a>
 </p><dl>
 <dt><u>関数:</u> <b>init_ctensor</b><i> ()</i>
-<a name="IDX1000"></a>
+<a name="IDX1015"></a>
 </dt>
 <dd><p><code>ctensor</code>パッケージを初期化します。
 </p>
@@ -449,7 +465,7 @@ y;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -461,15 +477,15 @@ y;
 <td valign="middle" align="left">[<a href="#SEC143" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.2 The tensors of curved space </h3>
@@ -481,7 +497,7 @@ y;
 <p>計量基底が使われる時、
 <code>ctensor</code>は以下のテンソルを計算できます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
  lg  -- ug
    \      \
     lcs -- mcs -- ric -- uric
@@ -493,12 +509,12 @@ y;
                       uriem
 
 
-</pre>
+</pre></td></tr></table>
 <p><code>ctensor</code>は動標構を使って機能することもできます。
 <code>cframe_flag</code>が <code>true</code>に設定されている時、
 以下のテンソルを計算できます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
  lfg -- ufg
      \
  fri -- fr -- lcs -- mcs -- lriem -- ric -- uric
@@ -509,11 +525,11 @@ y;
                               |
                               \uriem
 
-</pre>
-<p><a name="Item_003a-christof"></a>
+</pre></td></tr></table><p><a name="christof"></a>
+<a name="Item_003a-christof"></a>
 </p><dl>
 <dt><u>関数:</u> <b>christof</b><i> (<var>dis</var>)</i>
-<a name="IDX1001"></a>
+<a name="IDX1016"></a>
 </dt>
 <dd><p><code>ctensor</code> (成分テンソル)パッケージの関数。
 各種Christoffel記号を計算します。
@@ -530,14 +546,14 @@ y;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-ricci"></a>
+<p><a name="ricci"></a>
+<a name="Item_003a-ricci"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ricci</b><i> (<var>dis</var>)</i>
-<a name="IDX1002"></a>
+<a name="IDX1017"></a>
 </dt>
 <dd><p><code>ctensor</code> (成分テンソル)パッケージの関数。
 <code>ricci</code>は Ricciテンソルの共変(対称)成分 <code>ric[i,j]</code>を計算します。
@@ -545,14 +561,14 @@ y;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-uricci"></a>
+<p><a name="uricci"></a>
+<a name="Item_003a-uricci"></a>
 </p><dl>
 <dt><u>関数:</u> <b>uricci</b><i> (<var>dis</var>)</i>
-<a name="IDX1003"></a>
+<a name="IDX1018"></a>
 </dt>
 <dd><p>この関数は最初にRicciテンソルの共変成分 <code>ric[i,j]</code>を計算します。
 そして混合 Ricciテンソルが反変計量テンソルを使って計算されます。
@@ -565,28 +581,28 @@ y;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-scurvature"></a>
+<p><a name="scurvature"></a>
+<a name="Item_003a-scurvature"></a>
 </p><dl>
 <dt><u>関数:</u> <b>scurvature</b><i> ()</i>
-<a name="IDX1004"></a>
+<a name="IDX1019"></a>
 </dt>
 <dd><p>与えられた計量を持つ Riemannian多様体の
 (Ricciテンソルを縮約することで得られる)スカラ曲率を返します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-einstein"></a>
+<p><a name="einstein"></a>
+<a name="Item_003a-einstein"></a>
 </p><dl>
 <dt><u>関数:</u> <b>einstein</b><i> (<var>dis</var>)</i>
-<a name="IDX1005"></a>
+<a name="IDX1020"></a>
 </dt>
 <dd><p><code>ctensor</code> (成分テンソル)パッケージの関数。
 <code>einstein</code>は、
@@ -603,14 +619,14 @@ Christoffel記号と Ricciテンソルを得られた後、
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-leinstein"></a>
+<p><a name="leinstein"></a>
+<a name="Item_003a-leinstein"></a>
 </p><dl>
 <dt><u>関数:</u> <b>leinstein</b><i> (<var>dis</var>)</i>
-<a name="IDX1006"></a>
+<a name="IDX1021"></a>
 </dt>
 <dd><p>共変 Einsteinテンソル。
 <code>leinstein</code>は
@@ -623,14 +639,14 @@ Christoffel記号と Ricciテンソルを得られた後、
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-riemann"></a>
+<p><a name="riemann"></a>
+<a name="Item_003a-riemann"></a>
 </p><dl>
 <dt><u>関数:</u> <b>riemann</b><i> (<var>dis</var>)</i>
-<a name="IDX1007"></a>
+<a name="IDX1022"></a>
 </dt>
 <dd><p><code>ctensor</code> (成分テンソル)パッケージの関数。
 <code>riemann</code>は
@@ -638,10 +654,10 @@ Christoffel記号と Ricciテンソルを得られた後、
 Riemann曲率テンソルを計算します。
 以下の添字慣例が使われます:
 </p>
-<pre class="example">                l      _l       _l       _l   _m    _l   _m
+<table><tr><td>&nbsp;</td><td><pre class="example">                l      _l       _l       _l   _m    _l   _m
  R[i,j,k,l] =  R    = |      - |      + |    |   - |    |
                 ijk     ij,k     ik,j     mk   ij    mj   ik
-</pre>
+</pre></td></tr></table>
 <p>この表記法は
 <code>itensor</code>パッケージとその <code>icurvature</code>関数で使われる表記法と
 一致しています。
@@ -664,14 +680,14 @@ Christoffel記号から直接計算されます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-lriemann"></a>
+<p><a name="lriemann"></a>
+<a name="Item_003a-lriemann"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lriemann</b><i> (<var>dis</var>)</i>
-<a name="IDX1008"></a>
+<a name="IDX1023"></a>
 </dt>
 <dd><p>共変 Riemannテンソル (<code>lriem[]</code>).
 </p>
@@ -687,45 +703,45 @@ Christoffel記号から直接計算されます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-uriemann"></a>
+<p><a name="uriemann"></a>
+<a name="Item_003a-uriemann"></a>
 </p><dl>
 <dt><u>関数:</u> <b>uriemann</b><i> (<var>dis</var>)</i>
-<a name="IDX1009"></a>
+<a name="IDX1024"></a>
 </dt>
 <dd><p>配列要素 <code>uriem[i,j,k,l]</code>として Riemann曲率テンソルの反変成分を計算します。
 <var>dis</var>が <code>true</code>ならこれらを表示します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-rinvariant"></a>
+<p><a name="rinvariant"></a>
+<a name="Item_003a-rinvariant"></a>
 </p><dl>
 <dt><u>関数:</u> <b>rinvariant</b><i> ()</i>
-<a name="IDX1010"></a>
+<a name="IDX1025"></a>
 </dt>
 <dd><p>テンソル
-</p><pre class="example">lriem[i,j,k,l]*uriem[i,j,k,l].
-</pre><p>を縮約することで得られる Kretschmann不変量 (<code>kinvariant</code>)を形成します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">lriem[i,j,k,l]*uriem[i,j,k,l].
+</pre></td></tr></table><p>を縮約することで得られる Kretschmann不変量 (<code>kinvariant</code>)を形成します。
 </p>
 <p>このオブジェクトは非常に大きくなるかもしれないので、自動で整理はしません。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-weyl"></a>
+<p><a name="weyl"></a>
+<a name="Item_003a-weyl"></a>
 </p><dl>
 <dt><u>関数:</u> <b>weyl</b><i> (<var>dis</var>)</i>
-<a name="IDX1011"></a>
+<a name="IDX1026"></a>
 </dt>
 <dd><p>Weylの共形テンソルを計算します。
 引数 <var>dis</var>が <code>true</code>なら、
@@ -737,7 +753,7 @@ Christoffel記号から直接計算されます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -748,15 +764,15 @@ Christoffel記号から直接計算されます。
 <td valign="middle" align="left">[<a href="#SEC144" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.3 Taylor series expansion </h3>
@@ -769,7 +785,7 @@ trueに設定されている時、 結果を整理する際に
 </p>
 <p>以下の <code>ctensor</code>関数が <code>ctaylor</code>関数を呼び出します:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
     Function     Comments
     ---------------------------------
     christof()   For mcs only
@@ -779,11 +795,11 @@ trueに設定されている時、 結果を整理する際に
     riemann()
     weyl()
     checkdiv()
-</pre>
-<p><a name="Item_003a-ctaylor"></a>
+</pre></td></tr></table><p><a name="ctaylor"></a>
+<a name="Item_003a-ctaylor"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ctaylor</b><i> ()</i>
-<a name="IDX1012"></a>
+<a name="IDX1027"></a>
 </dt>
 <dd><p><code>ctaylor</code>関数は、
 <code>taylor</code>を使ってその後<code>ratdisrep</code>をコールすることで
@@ -796,7 +812,7 @@ trueに設定されている時、 結果を整理する際に
 <p>例として、 Minkowski計量の置換である簡単な計量を考えます。
 追加の制約なしでは、対角計量でさえはるかに複雑すぎる Einsteinテンソルの式を生成します:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) ratfac:true;
@@ -859,11 +875,11 @@ trueに設定されている時、 結果を整理する際に
 [[4, 4], 46]
 (%o12)                               done
 
-</pre>
+</pre></td></tr></table>
 <p>しかし、もしこの例を変数 <code>l</code>に対して線形という近似として
 再計算するなら、もっと簡潔な式を得ます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i14) ctayswitch:true;
 (%o14)                               true
 (%i15) ctayvar:l;
@@ -907,13 +923,13 @@ trueに設定されている時、 結果を整理する際に
 
 
 
-</pre>
+</pre></td></tr></table>
 <p>例えば、重力源から遠く、弱い場極限で取り組む時に
 この機能が役に立つかもしれません。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -925,38 +941,38 @@ trueに設定されている時、 結果を整理する際に
 <td valign="middle" align="left">[<a href="#SEC145" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.4 Frame fields </h3>
 
 <p>変数 <code>cframe_flag</code>を trueに設定している時、
 <code>ctensor</code>パッケージは動標構 (moving frame)を使って計算を実行します。
-</p>
-<p><a name="Item_003a-frame_005fbracket"></a>
+<a name="frame"></a>
+<a name="Item_003a-frame_005fbracket"></a>
 </p><dl>
 <dt><u>関数:</u> <b>frame_bracket</b><i> (<var>fr</var>, <var>fri</var>, <var>diagframe</var>)</i>
-<a name="IDX1013"></a>
+<a name="IDX1028"></a>
 </dt>
 <dd><p>標構(frame)ブラケット (<code>fb[]</code>)。
 </p>
 <p>以下の定義に従って標構ブラケットを計算します:
 </p>
-<pre class="example">   c          c         c        d     e
+<table><tr><td>&nbsp;</td><td><pre class="example">   c          c         c        d     e
 ifb   = ( ifri    - ifri    ) ifr   ifr
    ab         d,e       e,d      a     b
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -967,15 +983,15 @@ ifb   = ( ifri    - ifri    ) ifr   ifr
 <td valign="middle" align="left">[<a href="#SEC146" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.5 Algebraic classification </h3>
@@ -984,11 +1000,11 @@ ifb   = ( ifri    - ifri    ) ifr   ifr
 Petrov分類を計算する能力です。
 この機能のデモンストレーションは、
 ファイル <code>share/tensor/petrov.dem</code>を参照してください。
-</p>
-<p><a name="Item_003a-nptetrad"></a>
+<a name="nptetrad"></a>
+<a name="Item_003a-nptetrad"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nptetrad</b><i> ()</i>
-<a name="IDX1014"></a>
+<a name="IDX1029"></a>
 </dt>
 <dd><p>Newman-Penroseヌルテトラド(null tetrad) (<code>np</code>)と上付き添字対応物
 (<code>npi</code>)を計算します。
@@ -998,7 +1014,7 @@ Petrov分類を計算する能力です。
 (-,+,+,+)を持つ4次元直交標構計量が使われいるという仮定の上で構成されます。
 以下のように、ヌルテトラドの成分は逆標構行列に関係します:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 np  = (fri  + fri ) / sqrt(2)
   1       1      2
 
@@ -1011,17 +1027,17 @@ np  = (fri  + %i fri ) / sqrt(2)
 np  = (fri  - %i fri ) / sqrt(2)
   4       3         4
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-
+<p><a name="psi"></a>
+</p>
 <dl>
 <dt><u>関数:</u> <b>psi</b><i> (<var>dis</var>)</i>
-<a name="IDX1015"></a>
+<a name="IDX1030"></a>
 </dt>
 <dd><p>5つの Newman-Penrose係数 <code>psi[0]</code>...<code>psi[4]</code>を計算します。
 <code>dis</code>が <code>true</code>に設定されているなら係数を表示します。
@@ -1048,20 +1064,20 @@ Newman-Penroseヌルテトラドを構成することは標構基底を要求す
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-petrov"></a>
+<p><a name="petrov"></a>
+<a name="Item_003a-petrov"></a>
 </p><dl>
 <dt><u>関数:</u> <b>petrov</b><i> ()</i>
-<a name="IDX1016"></a>
+<a name="IDX1031"></a>
 </dt>
 <dd><p><code>psi[0]</code>...<code>psi[4]</code>で特徴付けられる計量の Petrov分類を計算します。
 </p>
 <p>例えば、以下は Kerr計量の Petrov分類を得る方法を例示します:
 </p>
-<pre class="example">(%i1) load(ctensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) (cframe_flag:true,gcd:spmod,ctrgsimp:true,ratfac:true);
 (%o2)                                true
@@ -1127,7 +1143,7 @@ Newman-Penroseヌルテトラドを構成することは標構基底を要求す
 (%i12) petrov();
 (%o12)                                 D
 
-</pre>
+</pre></td></tr></table>
 <p>Petrov分類関数は以下の文献で発表されたアルゴリズムに基づいています。
 </p>
 <p>&quot;Classifying geometries in general relativity: III Classification in practice&quot;
@@ -1138,7 +1154,7 @@ by Pollney, Skea, and d'Inverno, Class. Quant. Grav. 17 2885-2902 (2000).
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -1150,15 +1166,15 @@ by Pollney, Skea, and d'Inverno, Class. Quant. Grav. 17 2885-2902 (2000).
 <td valign="middle" align="left">[<a href="#SEC147" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.6 Torsion and nonmetricity </h3>
@@ -1169,7 +1185,7 @@ by Pollney, Skea, and d'Inverno, Class. Quant. Grav. 17 2885-2902 (2000).
 <code>tr</code>は階数 (2,1)テンソルでなければいけません。
 <code>tr</code>から、ねじれ係数 <code>kt</code>は以下の公式に従って計算されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
               m          m      m
        - g  tr   - g   tr   - tr   g
           im  kj    jm   ki     ij  km
@@ -1181,20 +1197,20 @@ kt   = -------------------------------
 kt   = g   kt
   ij         ijm
 
-</pre>
+</pre></td></tr></table>
 <p>混合添字テンソルだけを計算し、配列 <code>kt</code>に格納することに注意してください。
 </p>
 <p>非計量性係数はユーザーが供給する非計量性ベクトル <code>nm</code>から計算します。
 <code>nm</code>から非計量性係数 <code>nmc</code>は以下のように計算されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
              k    k        km
        -nm  D  - D  nm  + g   nm  g
    k      i  j    i   j         m  ij
 nmc  = ------------------------------
    ij                2
 
-</pre>
+</pre></td></tr></table>
 <p>ここで Dは Kroneckerのデルタを表します。
 </p>
 <p><code>ctorsion_flag</code>が <code>true</code>に設定されている時、
@@ -1205,31 +1221,31 @@ nmc  = ------------------------------
 </p>
 <p>もし必要なら、 <code>christof</code>は、<code>kt</code>と <code>nm</code>を計算するために
 関数 <code>contortion</code>と <code>nonmetricity</code>をコールします。
-</p>
-<p><a name="Item_003a-contortion"></a>
+<a name="contortion"></a>
+<a name="Item_003a-contortion"></a>
 </p><dl>
 <dt><u>関数:</u> <b>contortion</b><i> (<var>tr</var>)</i>
-<a name="IDX1017"></a>
+<a name="IDX1032"></a>
 </dt>
 <dd><p>ねじれテンソル <var>tr</var>から (2,1)コントーション (contortion)係数を計算します。
 </p>
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-nonmetricity"></a>
+<p><a name="nonmetricity"></a>
+<a name="Item_003a-nonmetricity"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nonmetricity</b><i> (<var>nm</var>)</i>
-<a name="IDX1018"></a>
+<a name="IDX1033"></a>
 </dt>
 <dd><p>非計量性ベクトル <var>nm</var>から (2,1)非計量性係数を計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -1242,23 +1258,23 @@ nmc  = ------------------------------
 <td valign="middle" align="left">[<a href="#SEC148" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.7 Miscellaneous features </h3>
-
-<p><a name="Item_003a-ctransform"></a>
+<p><a name="ctransform"></a>
+<a name="Item_003a-ctransform"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ctransform</b><i> (<var>M</var>)</i>
-<a name="IDX1019"></a>
+<a name="IDX1034"></a>
 </dt>
 <dd><p>任意の平方対称行列 <var>M</var>上で座標変換を実行する
 <code>ctensor</code> (成分テンソル)パッケージの関数。
@@ -1267,14 +1283,14 @@ nmc  = ------------------------------
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-findde"></a>
+<p><a name="findde"></a>
+<a name="Item_003a-findde"></a>
 </p><dl>
 <dt><u>関数:</u> <b>findde</b><i> (<var>A</var>, <var>n</var>)</i>
-<a name="IDX1020"></a>
+<a name="IDX1035"></a>
 </dt>
 <dd><p><var>n</var>次元の平方配列 <var>A</var>要素に対応しただ1つに定まる微分方程式(式)のリストを返します。
 現在、 <var>n</var>は 2か 3を指定できます
@@ -1285,7 +1301,7 @@ nmc  = ------------------------------
 <code>findde</code>は以下の独立微分方程式を与えます:
 </p>
 
-<pre class="example">(%i1) load(ctensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) derivabbrev:true;
 (%o2)                                true
@@ -1320,17 +1336,17 @@ nmc  = ------------------------------
                                    x       x      x
 (%i10) deindex;
 (%o10)                     [[1, 1], [2, 2], [4, 4]]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-cograd"></a>
+<p><a name="cograd"></a>
+<a name="Item_003a-cograd"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cograd</b><i> ()</i>
-<a name="IDX1021"></a>
+<a name="IDX1036"></a>
 </dt>
 <dd><p>スカラ関数の
 共変勾配を計算します。
@@ -1339,20 +1355,20 @@ nmc  = ------------------------------
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-contragrad"></a>
+<p><a name="contragrad"></a>
+<a name="Item_003a-contragrad"></a>
 </p><dl>
 <dt><u>関数:</u> <b>contragrad</b><i> ()</i>
-<a name="IDX1022"></a>
+<a name="IDX1037"></a>
 </dt>
 <dd><p>スカラ関数の反変勾配を計算します。
 Schwarzschild計量に関する以下の例が例示するように
 ユーザーは対応するベクトル名を選べます:
 </p>
-<pre class="example">(%i1) load(ctensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) derivabbrev:true;
 (%o2)                                true
@@ -1372,22 +1388,22 @@ Schwarzschild計量に関する以下の例が例示するように
                                 r        r
 (%o8)                      [0, -------------, 0, 0]
                                      r
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-
+<p><a name="ctensor_005fdscalar"></a>
+</p>
 <dl>
 <dt><u>関数:</u> <b>dscalar</b><i> ()</i>
-<a name="IDX1023"></a>
+<a name="IDX1038"></a>
 </dt>
 <dd><p>いったん依存性が関数に宣言されれば、スカラ関数のテンソル d'Alembert演算子を計算します。
 例えば:
 </p>
-<pre class="example">(%i1) load(ctensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) derivabbrev:true;
 (%o2)                                true
@@ -1402,17 +1418,17 @@ Schwarzschild計量に関する以下の例が例示するように
 (%o5)               --------------------------------------
                                        2
                                       r
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-checkdiv"></a>
+<p><a name="checkdiv"></a>
+<a name="Item_003a-checkdiv"></a>
 </p><dl>
 <dt><u>関数:</u> <b>checkdiv</b><i> ()</i>
-<a name="IDX1024"></a>
+<a name="IDX1039"></a>
 </dt>
 <dd><p>ベクトル場(発散)の対応する n個の成分を印字することで
 (最初の添字が共変でなければいけない)混合二階テンソルの共変発散を計算します。
@@ -1423,14 +1439,14 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-cgeodesic"></a>
+<p><a name="cgeodesic"></a>
+<a name="Item_003a-cgeodesic"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cgeodesic</b><i> (<var>dis</var>)</i>
-<a name="IDX1025"></a>
+<a name="IDX1040"></a>
 </dt>
 <dd><p><code>ctensor</code> (成分テンソル)パッケージの関数。
 <code>cgeodesic</code>は与えられた計量での運動の測地方程式を計算します。
@@ -1440,15 +1456,15 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
-
-<p><a name="Item_003a-bdvac"></a>
+<p><a name="bdvac"></a>
+<a name="Item_003a-bdvac"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bdvac</b><i> (<var>f</var>)</i>
-<a name="IDX1026"></a>
+<a name="IDX1041"></a>
 </dt>
 <dd><p>Brans- Dicke重力理論の真空場の方程式の共変成分を生成します。
 スカラ場は引数 <var>f</var>で指定されます。
@@ -1459,28 +1475,28 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-invariant1"></a>
+<p><a name="invariant1"></a>
+<a name="Item_003a-invariant1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>invariant1</b><i> ()</i>
-<a name="IDX1027"></a>
+<a name="IDX1042"></a>
 </dt>
 <dd><p>R^2の不変密度に関する混合 Euler- Lagrangeテンソル(場の方程式)を生成します。
 場の方程式は <code>inv1</code>と名付けられた配列の成分です。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-invariant2"></a>
+<p><a name="invariant2"></a>
+<a name="Item_003a-invariant2"></a>
 </p><dl>
 <dt><u>関数:</u> <b>invariant2</b><i> ()</i>
-<a name="IDX1028"></a>
+<a name="IDX1043"></a>
 </dt>
 <dd><p>*** NOT YET IMPLEMENTED ***
 </p>
@@ -1490,13 +1506,14 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-<p><a name="Item_003a-bimetric"></a>
+<p><a name="bimetric"></a>
+<a name="Item_003a-bimetric"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bimetric</b><i> ()</i>
-<a name="IDX1029"></a>
+<a name="IDX1044"></a>
 </dt>
 <dd><p>*** NOT YET IMPLEMENTED ***
 </p>
@@ -1505,7 +1522,7 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -1516,39 +1533,39 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 <td valign="middle" align="left">[<a href="#SEC149" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.8 Utility functions </h3>
-
-<p><a name="Item_003a-diagmatrixp"></a>
+<p><a name="diagmatrixp"></a>
+<a name="Item_003a-diagmatrixp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>diagmatrixp</b><i> (<var>M</var>,<var>n</var>)</i>
-<a name="IDX1030"></a>
+<a name="IDX1045"></a>
 </dt>
 <dd><p>もし <var>M</var>の最初の <var>n</var>行と <var>n</var>列が対角行列か対角 (2D) 配列を形成するなら
 <code>true</code>を返します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p>
 </dd></dl>
-
-<p><a name="Item_003a-symmetricp"></a>
+<p><a name="symmetricp"></a>
+<a name="Item_003a-symmetricp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>symmetricp</b><i> (<var>M</var>, <var>n</var>)</i>
-<a name="IDX1031"></a>
+<a name="IDX1046"></a>
 </dt>
 <dd><p>もし <var>M</var>が <var>n</var>かける <var>n</var>の対称行列か対称 (2D) 配列なら
 <code>true</code>を返し、そうでなければ <code>false</code>を返します。
@@ -1559,16 +1576,16 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p>
 </dd></dl>
-
-<p><a name="Item_003a-ntermst"></a>
+<p><a name="ntermst"></a>
+<a name="Item_003a-ntermst"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ntermst</b><i> (<var>f</var>)</i>
-<a name="IDX1032"></a>
+<a name="IDX1047"></a>
 </dt>
 <dd><p>ユーザーに
 二重に下付き添字されているテンソル(配列) <var>f</var>の「サイズ」のぱっと見を与えます。
@@ -1577,14 +1594,14 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-cdisplay"></a>
+<p><a name="cdisplay"></a>
+<a name="Item_003a-cdisplay"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cdisplay</b><i> (<var>ten</var>)</i>
-<a name="IDX1033"></a>
+<a name="IDX1048"></a>
 </dt>
 <dd><p>多次元配列で表されるように、テンソル <var>ten</var>の要素すべてを表示します。
 他のタイプの変数はもちろん、階数　0と　1のテンソルが
@@ -1594,7 +1611,7 @@ Einsteinテンソルの発散が形成され、零にならなければいけま
 例えば、
 Schwarzschild計量の Riemannテンソルは以下のように見ることができます:
 </p>
-<pre class="example">(%i1) load(ctensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) ratfac:true;
 (%o2)                                true
@@ -1800,23 +1817,23 @@ riem     = [        0         - -------------         0         0 ]
 
 (%o5)                                done
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-deleten"></a>
+<p><a name="deleten"></a>
+<a name="Item_003a-deleten"></a>
 </p><dl>
 <dt><u>関数:</u> <b>deleten</b><i> (<var>L</var>, <var>n</var>)</i>
-<a name="IDX1034"></a>
+<a name="IDX1049"></a>
 </dt>
 <dd><p><var>n</var>番目の要素を削除した <var>L</var>から成る新しいリストを返します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -1827,24 +1844,24 @@ riem     = [        0         - -------------         0         0 ]
 <td valign="middle" align="left">[<a href="#SEC150" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.9 Variables used by <code>ctensor</code> </h3>
 
-
-<p><a name="Item_003a-dim"></a>
+<p><a name="dim"></a>
+<a name="Item_003a-dim"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>dim</b>
-<a name="IDX1035"></a>
+<a name="IDX1050"></a>
 </dt>
 <dd><p>デフォルト値: 4
 </p>
@@ -1854,15 +1871,16 @@ riem     = [        0         - -------------         0         0 ]
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-diagmetric"></a>
+<p><a name="diagmetric"></a>
+<a name="Item_003a-diagmetric"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>diagmetric</b>
-<a name="IDX1036"></a>
+<a name="IDX1051"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1876,31 +1894,33 @@ riem     = [        0         - -------------         0         0 ]
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ctrgsimp"></a>
+<p><a name="ctrgsimp"></a>
+<a name="Item_003a-ctrgsimp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ctrgsimp</b>
-<a name="IDX1037"></a>
+<a name="IDX1052"></a>
 </dt>
 <dd><p>テンソルを計算する時、三角関数整理を使うようにします。
 現在、 <code>ctrgsimp</code>は動標構を含む計算だけに影響します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-cframe_005fflag"></a>
+<p><a name="cframe_005fflag"></a>
+<a name="Item_003a-cframe_005fflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>cframe_flag</b>
-<a name="IDX1038"></a>
+<a name="IDX1053"></a>
 </dt>
 <dd><p>計算をホロノミック (holonomic)計量と対比して動標構に関係して実行するようにします。
 標構は逆標構配列 <code>fri</code>と標構計量 <code>lfg</code>で定義されます。
@@ -1910,15 +1930,16 @@ Lorentz標構での計算に関して、 <code>lfg</code>は適切な符号を�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ctorsion_005fflag"></a>
+<p><a name="ctorsion_005fflag"></a>
+<a name="Item_003a-ctorsion_005fflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ctorsion_flag</b>
-<a name="IDX1039"></a>
+<a name="IDX1054"></a>
 </dt>
 <dd><p>コントーションテンソルが接続係数の計算に含まれるようにします。
 コントーションテンソル自体はユーザーが提供するテンソル <code>tr</code>から
@@ -1926,15 +1947,16 @@ Lorentz標構での計算に関して、 <code>lfg</code>は適切な符号を�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-cnonmet_005fflag"></a>
+<p><a name="cnonmet_005fflag"></a>
+<a name="Item_003a-cnonmet_005fflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>cnonmet_flag</b>
-<a name="IDX1040"></a>
+<a name="IDX1055"></a>
 </dt>
 <dd><p>非計量性係数が接続係数の計算に含まれるようにします。
 コントーションテンソルはユーザーが提供する非計量性ベクトル <code>nm</code>から
@@ -1942,15 +1964,16 @@ Lorentz標構での計算に関して、 <code>lfg</code>は適切な符号を�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ctayswitch"></a>
+<p><a name="ctayswitch"></a>
+<a name="Item_003a-ctayswitch"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ctayswitch</b>
-<a name="IDX1041"></a>
+<a name="IDX1056"></a>
 </dt>
 <dd><p>もし <code>true</code>に設定されているなら、いくつかの <code>ctensor</code>計算が
 Taylor級数展開を使って実行されるようにします。
@@ -1959,60 +1982,64 @@ Taylor級数展開を使って実行されるようにします。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ctayvar"></a>
+<p><a name="ctayvar"></a>
+<a name="Item_003a-ctayvar"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ctayvar</b>
-<a name="IDX1042"></a>
+<a name="IDX1057"></a>
 </dt>
 <dd><p><code>ctayswitch</code>が <code>true</code>に設定されている場合、
 Taylor級数展開で使われる変数。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ctaypov"></a>
+<p><a name="ctaypov"></a>
+<a name="Item_003a-ctaypov"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ctaypov</b>
-<a name="IDX1043"></a>
+<a name="IDX1058"></a>
 </dt>
 <dd><p><code>ctayswitch</code>が <code>true</code>に設定されている場合、
 Taylor級数展開で使われる最大べき数
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ctaypt"></a>
+<p><a name="ctaypt"></a>
+<a name="Item_003a-ctaypt"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ctaypt</b>
-<a name="IDX1044"></a>
+<a name="IDX1059"></a>
 </dt>
 <dd><p><code>ctayswitch</code>が <code>true</code>に設定されている場合、
 Taylor級数展開が実行される点。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-gdet"></a>
+<p><a name="gdet"></a>
+<a name="Item_003a-gdet"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>gdet</b>
-<a name="IDX1045"></a>
+<a name="IDX1060"></a>
 </dt>
 <dd><p>計量テンソル <code>lg</code>の行列式。
 <code>cframe_flag</code>が <code>false</code>に設定されている時、
@@ -2020,29 +2047,31 @@ Taylor級数展開が実行される点。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ratchristof"></a>
+<p><a name="ratchristof"></a>
+<a name="Item_003a-ratchristof"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ratchristof</b>
-<a name="IDX1046"></a>
+<a name="IDX1061"></a>
 </dt>
 <dd><p><code>christof</code>が有理整理を適用するようにします。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-rateinstein"></a>
+<p><a name="rateinstein"></a>
+<a name="Item_003a-rateinstein"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>rateinstein</b>
-<a name="IDX1047"></a>
+<a name="IDX1062"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2052,14 +2081,15 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
-<p><a name="Item_003a-ratriemann"></a>
+<p><a name="ratriemann"></a>
+<a name="Item_003a-ratriemann"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ratriemann</b>
-<a name="IDX1048"></a>
+<a name="IDX1063"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2069,15 +2099,16 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ratweyl"></a>
+<p><a name="ratweyl"></a>
+<a name="Item_003a-ratweyl"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ratweyl</b>
-<a name="IDX1049"></a>
+<a name="IDX1064"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2087,15 +2118,16 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-lfg"></a>
+<p><a name="lfg"></a>
+<a name="Item_003a-lfg"></a>
 </p><dl>
 <dt><u>変数:</u> <b>lfg</b>
-<a name="IDX1050"></a>
+<a name="IDX1065"></a>
 </dt>
 <dd><p>共変標構計量。
 デフォルトでは、符号 (+,+,+,-)を持つ4次元Lorentz標構に初期化されます。
@@ -2103,15 +2135,16 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ufg"></a>
+<p><a name="ufg"></a>
+<a name="Item_003a-ufg"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ufg</b>
-<a name="IDX1051"></a>
+<a name="IDX1066"></a>
 </dt>
 <dd><p>逆標構計量。
 <code>cframe_flag</code>が <code>true</code>に設定されているなら、
@@ -2119,15 +2152,16 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-riem"></a>
+<p><a name="riem"></a>
+<a name="Item_003a-riem"></a>
 </p><dl>
 <dt><u>変数:</u> <b>riem</b>
-<a name="IDX1052"></a>
+<a name="IDX1067"></a>
 </dt>
 <dd><p>(3,1) Riemannテンソル。
 関数 <code>riemann</code>が呼び出された時計算されます。
@@ -2138,74 +2172,79 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-lriem"></a>
+<p><a name="lriem"></a>
+<a name="Item_003a-lriem"></a>
 </p><dl>
 <dt><u>変数:</u> <b>lriem</b>
-<a name="IDX1053"></a>
+<a name="IDX1068"></a>
 </dt>
 <dd><p>共変Riemannテンソル。
 <code>lriemann</code>が計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-uriem"></a>
+<p><a name="uriem"></a>
+<a name="Item_003a-uriem"></a>
 </p><dl>
 <dt><u>変数:</u> <b>uriem</b>
-<a name="IDX1054"></a>
+<a name="IDX1069"></a>
 </dt>
 <dd><p>反変Riemannテンソル。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ric"></a>
+<p><a name="ric"></a>
+<a name="Item_003a-ric"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ric</b>
-<a name="IDX1055"></a>
+<a name="IDX1070"></a>
 </dt>
 <dd><p>混合Ricciテンソル。
 <code>ricci</code>が計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-uric"></a>
+<p><a name="uric"></a>
+<a name="Item_003a-uric"></a>
 </p><dl>
 <dt><u>変数:</u> <b>uric</b>
-<a name="IDX1056"></a>
+<a name="IDX1071"></a>
 </dt>
 <dd><p>反変Ricciテンソル。
 <code>ricci</code>が計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-lg"></a>
+<p><a name="lg"></a>
+<a name="Item_003a-lg"></a>
 </p><dl>
 <dt><u>変数:</u> <b>lg</b>
-<a name="IDX1057"></a>
+<a name="IDX1072"></a>
 </dt>
 <dd><p>計量テンソル。
 このテンソルは他の計算が実行される前に
@@ -2213,96 +2252,102 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ug"></a>
+<p><a name="ug"></a>
+<a name="Item_003a-ug"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ug</b>
-<a name="IDX1058"></a>
+<a name="IDX1073"></a>
 </dt>
 <dd><p>計量テンソルの逆元。
 <code>cmetric</code>が計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-
+<p><a name="weyl_005fvariable"></a>
+</p>
 <dl>
 <dt><u>変数:</u> <b>weyl</b>
-<a name="IDX1059"></a>
+<a name="IDX1074"></a>
 </dt>
 <dd><p>Weylテンソル。
 <code>weyl</code>が計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-fb"></a>
+<p><a name="fb"></a>
+<a name="Item_003a-fb"></a>
 </p><dl>
 <dt><u>変数:</u> <b>fb</b>
-<a name="IDX1060"></a>
+<a name="IDX1075"></a>
 </dt>
 <dd><p><code>frame_bracket</code>が計算する標構ブラケット係数。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-kinvariant"></a>
+<p><a name="kinvariant"></a>
+<a name="Item_003a-kinvariant"></a>
 </p><dl>
 <dt><u>変数:</u> <b>kinvariant</b>
-<a name="IDX1061"></a>
+<a name="IDX1076"></a>
 </dt>
 <dd><p>Kretchmann不変量。
 <code>rinvariant</code>が計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-np"></a>
+<p><a name="np"></a>
+<a name="Item_003a-np"></a>
 </p><dl>
 <dt><u>変数:</u> <b>np</b>
-<a name="IDX1062"></a>
+<a name="IDX1077"></a>
 </dt>
 <dd><p>Newman-Penroseヌルテトラド。
 <code>nptetrad</code>が計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-npi"></a>
+<p><a name="npi"></a>
+<a name="Item_003a-npi"></a>
 </p><dl>
 <dt><u>変数:</u> <b>npi</b>
-<a name="IDX1063"></a>
+<a name="IDX1078"></a>
 </dt>
 <dd><p>上付き添字 Newman-Penroseヌルテトラド。
 <code>nptetrad</code>が計算します。
 <code>ug.np</code>として定義されます。
 積 <code>np.transpose(npi)</code>は定数です:
 </p>
-<pre class="example">(%i39) trigsimp(np.transpose(npi));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i39) trigsimp(np.transpose(npi));
                               [  0   - 1  0  0 ]
                               [                ]
                               [ - 1   0   0  0 ]
@@ -2310,60 +2355,64 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
                               [  0    0   0  1 ]
                               [                ]
                               [  0    0   1  0 ]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-tr"></a>
+<p><a name="tr"></a>
+<a name="Item_003a-tr"></a>
 </p><dl>
 <dt><u>変数:</u> <b>tr</b>
-<a name="IDX1064"></a>
+<a name="IDX1079"></a>
 </dt>
 <dd><p>ユーザーが提供するねじれを表す階数3のテンソル。
 <code>contortion</code>が使います。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-kt"></a>
+<p><a name="kt"></a>
+<a name="Item_003a-kt"></a>
 </p><dl>
 <dt><u>変数:</u> <b>kt</b>
-<a name="IDX1065"></a>
+<a name="IDX1080"></a>
 </dt>
 <dd><p>コントーションテンソル。
 <code>contortion</code>が <code>tr</code>から計算します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-nm"></a>
+<p><a name="nm"></a>
+<a name="Item_003a-nm"></a>
 </p><dl>
 <dt><u>変数:</u> <b>nm</b>
-<a name="IDX1066"></a>
+<a name="IDX1081"></a>
 </dt>
 <dd><p>ユーザーが提供する非計量性ベクトル。
 <code>nonmetricity</code>が使います。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-nmc"></a>
+<p><a name="nmc"></a>
+<a name="Item_003a-nmc"></a>
 </p><dl>
 <dt><u>変数:</u> <b>nmc</b>
-<a name="IDX1067"></a>
+<a name="IDX1082"></a>
 </dt>
 <dd><p><code>nonmetricity</code>が <code>nm</code>から計算する
 非計量性係数。
@@ -2371,15 +2420,16 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-tensorkill"></a>
+<p><a name="tensorkill"></a>
+<a name="Item_003a-tensorkill"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>tensorkill</b>
-<a name="IDX1068"></a>
+<a name="IDX1083"></a>
 </dt>
 <dd><p>テンソルパッケージが初期化されたかを示す変数。
 <code>csetup</code>が設定し使います。
@@ -2387,15 +2437,16 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-ct_005fcoords"></a>
+<p><a name="ct_005fcoords"></a>
+<a name="Item_003a-ct_005fcoords"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ct_coords</b>
-<a name="IDX1069"></a>
+<a name="IDX1084"></a>
 </dt>
 <dd><p>デフォルト値: <code>[]</code>
 </p>
@@ -2404,11 +2455,11 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 関数 <code>csetup</code>がコールされる時通常定義される一方、
 割り当て <code>ct_coords: [j1, j2, ..., jn]</code>で座標を再定義できます。
 ここで、 jは新しい座標名です。
-<code>csetup</code>も参照してください。
+<code><a href="#csetup">csetup</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p>
 </dd></dl>
@@ -2420,15 +2471,15 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 <td valign="middle" align="left">[<a href="#SEC151" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.10 Reserved names </h3>
@@ -2436,7 +2487,7 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 <p><code>ctensor</code>パッケージによって以下の名前が内部的に使われます。
 なので再定義してはいけません:
 </p>
-<pre class="example">  Name         Description
+<table><tr><td>&nbsp;</td><td><pre class="example">  Name         Description
   ---------------------------------------------------------------------
   _lg()        Evaluates to lfg if frame metric used, lg otherwise
   _ug()        Evaluates to ufg if frame metric used, ug otherwise
@@ -2458,7 +2509,7 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
   tricci()     Ricci-tensor in frame base, used when cframe_flag:true
   trrc()       Ricci rotation coefficients, used by christof()
   yesp()
-</pre>
+</pre></td></tr></table>
 
 <hr size="6">
 <a name="SEC151"></a>
@@ -2467,15 +2518,15 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC140" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC140" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_27.html#SEC152" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 26.2.11 Changes </h3>
@@ -2485,7 +2536,7 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 リネームされました。
 </p>
 
-<pre class="example">  New Name     Old Name        Description
+<table><tr><td>&nbsp;</td><td><pre class="example">  New Name     Old Name        Description
   ---------------------------------------------------------------------
   ctaylor()    DLGTAYLOR()     Taylor-series expansion of an expression
   lgeod[]      EM              Geodesic equations
@@ -2509,7 +2560,7 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
   uriem[]      UR[]            Contravariant Riemann-tensor
   weyl[]       W[]             (3,1) Weyl-tensor
 
-</pre>
+</pre></td></tr></table>
 <p><a name="Item_003a-atensor"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
@@ -2520,14 +2571,14 @@ Einsteinテンソルの非零成分上で有理整理が実行されます;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

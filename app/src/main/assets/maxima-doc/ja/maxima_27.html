@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 27. atensor</title>
+<title>Maxima 5.39.0 Manual: 27. atensor</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 27. atensor">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 27. atensor">
+<meta name="description" content="Maxima 5.39.0 Manual: 27. atensor">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 27. atensor">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="atensor"></a>
 <a name="SEC152"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC153" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_28.html#SEC155" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 27. atensor </h1>
@@ -113,15 +128,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC154" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC152" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC152" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC152" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_28.html#SEC155" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 27.1 Introduction to atensor </h2>
@@ -138,13 +153,13 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 Clifford代数 Cl(0,2)として定義することで実演することができます。
 3つの四元数虚数単位は 2つの基底ベクトルとその積、すなわち以下の通りです:
 </p>
-<pre class="example">    i = v     j = v     k = v  . v
+<table><tr><td>&nbsp;</td><td><pre class="example">    i = v     j = v     k = v  . v
          1         2         1    2
-</pre>
+</pre></td></tr></table>
 <p><code>atensor</code>パッケージは四元数代数に関する組み込みの定義を持ちますが、
 この例では使わず、四元数乗算表を行列として組むよう試みます:
 </p>
-<pre class="example">(%i1) load(atensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(atensor);
 (%o1)       /share/tensor/atensor.mac
 (%i2) init_atensor(clifford,0,0,2);
 (%o2)                                done
@@ -182,7 +197,7 @@ Clifford代数 Cl(0,2)として定義することで実演することができ�
                    [                                      ]
                    [ v  . v      v        - v       - 1   ]
                    [  1    2      2          1            ]
-</pre>
+</pre></td></tr></table>
 <p><code>atensor</code>は添字付きシンボルを基底ベクトルと認識します。
 シンボルは <code>asymbol</code>の中に記憶されたものであり、
 添字は 1から <code>adim</code>まで間です。
@@ -198,10 +213,10 @@ Clifford代数 Cl(0,2)として定義することで実演することができ�
 </p>
 <p><code>atensor</code>パッケージがロードされる時、以下のフラグが設定されます:
 </p>
-<pre class="example">dotscrules:true;
+<table><tr><td>&nbsp;</td><td><pre class="example">dotscrules:true;
 dotdistrib:true;
 dotexptsimp:false;
-</pre>
+</pre></td></tr></table>
 <p>もし非結合代数で実験したいなら、
 <code>dotassoc</code>を <code>false</code>に設定することも考えるかもしれません。
 しかし、この場合、
@@ -209,9 +224,9 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Tensors">Tensors</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Tensors">Tensors</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 <p><a name="Item_003a-Functions-and-Variables-for-atensor"></a>
@@ -222,25 +237,26 @@ dotexptsimp:false;
 <td valign="middle" align="left">[<a href="maxima_28.html#SEC155" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC152" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC152" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC152" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_28.html#SEC155" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 
 <a name="SEC154"></a>
 <h2 class="section"> 27.2 Functions and Variables for atensor </h2>
 
-<p><a name="Item_003a-init_005fatensor"></a>
+<p><a name="init_005fatensor"></a>
+<a name="Item_003a-init_005fatensor"></a>
 </p><dl>
 <dt><u>関数:</u> <b>init_atensor</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>init_atensor</tt> (<var>alg_type</var>, <var>opt_dims</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>init_atensor</tt> (<var>alg_type</var>)</i>
-<a name="IDX1070"></a>
+<a name="IDX1085"></a>
 </dt>
 <dd><p>特定の代数型で
 <code>atensor</code>パッケージを初期化します。
@@ -295,15 +311,16 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-atensimp"></a>
+<p><a name="atensimp"></a>
+<a name="Item_003a-atensimp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>atensimp</b><i> (<var>expr</var>)</i>
-<a name="IDX1071"></a>
+<a name="IDX1086"></a>
 </dt>
 <dd><p><code>init_atensor</code>のコールで構成された規則に従って代数テンソル式
 <var>expr</var>を整理します。
@@ -313,17 +330,33 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-functions">Simplification functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-functions">Simplification functions</a>
 </div>
 </p>
 </dd></dl>
 
+<p><a name="alg_005ftype"></a>
+<a name="Item_003a-alg_005ftype"></a>
+</p><dl>
+<dt><u>関数:</u> <b>alg_type</b>
+<a name="IDX1087"></a>
+</dt>
+<dd><p>代数型。有効な値は <code>universal</code>, <code>grassmann</code>,
+<code>clifford</code>, <code>symmetric</code>, <code>symplectic</code>, <code>lie_envelop</code>です。
+</p>
+<div class=categorybox>
 
-<p><a name="Item_003a-adim"></a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="adim"></a>
+<a name="Item_003a-adim"></a>
 </p><dl>
 <dt><u>変数:</u> <b>adim</b>
-<a name="IDX1072"></a>
+<a name="IDX1088"></a>
 </dt>
 <dd><p>デフォルト値: 0
 </p>
@@ -334,16 +367,17 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-aform"></a>
+<p><a name="aform"></a>
+<a name="Item_003a-aform"></a>
 </p><dl>
 <dt><u>変数:</u> <b>aform</b>
-<a name="IDX1073"></a>
+<a name="IDX1089"></a>
 </dt>
 <dd><p>デフォルト値: <code>ident(3)</code>
 </p>
@@ -352,16 +386,17 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-asymbol"></a>
+<p><a name="asymbol"></a>
+<a name="Item_003a-asymbol"></a>
 </p><dl>
 <dt><u>変数:</u> <b>asymbol</b>
-<a name="IDX1074"></a>
+<a name="IDX1090"></a>
 </dt>
 <dd><p>デフォルト値: <code>v</code>
 </p>
@@ -369,8 +404,8 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p>
 </dd></dl>
@@ -378,7 +413,7 @@ dotexptsimp:false;
 <p><a name="Item_003a-sf"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sf</b><i> (<var>u</var>, <var>v</var>)</i>
-<a name="IDX1075"></a>
+<a name="IDX1091"></a>
 </dt>
 <dd><p>交換関係で使われる対称スカラ関数。
 デフォルトの実装は
@@ -387,15 +422,16 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-af"></a>
+<p><a name="af"></a>
+<a name="Item_003a-af"></a>
 </p><dl>
 <dt><u>関数:</u> <b>af</b><i> (<var>u</var>, <var>v</var>)</i>
-<a name="IDX1076"></a>
+<a name="IDX1092"></a>
 </dt>
 <dd><p>交換関係で使われる反対称スカラ関数。
 デフォルトの実装は
@@ -404,15 +440,16 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-av"></a>
+<p><a name="av"></a>
+<a name="Item_003a-av"></a>
 </p><dl>
 <dt><u>関数:</u> <b>av</b><i> (<var>u</var>, <var>v</var>)</i>
-<a name="IDX1077"></a>
+<a name="IDX1093"></a>
 </dt>
 <dd><p>交換関係で使われる反対称スカラ関数。
 デフォルトの実装は
@@ -421,7 +458,7 @@ dotexptsimp:false;
 </p>
 <p>例えば:
 </p>
-<pre class="example">(%i1) load(atensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(atensor);
 (%o1)       /share/tensor/atensor.mac
 (%i2) adim:3;
 (%o2)                                  3
@@ -436,19 +473,20 @@ dotexptsimp:false;
 (%i5) av(x[1],x[2]);
 (%o5)                                 x
                                        3
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 </dd></dl>
 
 
-<p><a name="Item_003a-abasep"></a>
+<p><a name="abasep"></a>
+<a name="Item_003a-abasep"></a>
 </p><dl>
 <dt><u>関数:</u> <b>abasep</b><i> (<var>v</var>)</i>
-<a name="IDX1078"></a>
+<a name="IDX1094"></a>
 </dt>
 <dd><p>引数が <code>atensor</code>基底ベクトルかチェックします。
 すなわち、それが添字付きシンボルかどうか、
@@ -457,8 +495,8 @@ dotexptsimp:false;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p>
 </dd></dl>
@@ -473,14 +511,14 @@ dotexptsimp:false;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

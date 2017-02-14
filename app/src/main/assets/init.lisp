@@ -20,6 +20,7 @@
 */
 |#
 
+(defun maxima::getpid () (si::getpid))
 (defun maxima-getenv (a) (if (string-equal a "MAXIMA_PREFIX") *maxima-dir*))
 (setq *maxima-default-layout-autotools* "false")
 (setq *autoconf-prefix* *maxima-dir*)

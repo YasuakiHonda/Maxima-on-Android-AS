@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 29. Number Theory</title>
+<title>Maxima 5.39.0 Manual: 29. Number Theory</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 29. Number Theory">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 29. Number Theory">
+<meta name="description" content="Maxima 5.39.0 Manual: 29. Number Theory">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 29. Number Theory">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 29. Number Theory </h1>
@@ -105,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 29.1 Functions and Variables for Number Theory </h2>
@@ -114,13 +116,13 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-bern"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bern</b><i> (<var>n</var>)</i>
-<a name="IDX1136"></a>
+<a name="IDX1155"></a>
 </dt>
 <dd><p>Returns the <var>n</var>'th Bernoulli number for integer <var>n</var>.
 Bernoulli numbers equal to zero are suppressed if <code>zerobern</code> is
 <code>false</code>.
 </p>
-<p>See also <code>burn</code>.
+<p>See also <code><a href="#burn">burn</a></code>.
 </p>
 <pre class="example">(%i1) zerobern: true$
 (%i2) map (bern, [0, 1, 2, 3, 4, 5, 6, 7, 8]);
@@ -135,7 +137,7 @@ Bernoulli numbers equal to zero are suppressed if <code>zerobern</code> is
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -143,14 +145,14 @@ Bernoulli numbers equal to zero are suppressed if <code>zerobern</code> is
 <a name="Item_003a-bernpoly"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bernpoly</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX1137"></a>
+<a name="IDX1156"></a>
 </dt>
 <dd><p>Returns the <var>n</var>'th Bernoulli polynomial in the
 variable <var>x</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -158,7 +160,7 @@ variable <var>x</var>.
 <a name="Item_003a-bfzeta"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bfzeta</b><i> (<var>s</var>, <var>n</var>)</i>
-<a name="IDX1138"></a>
+<a name="IDX1157"></a>
 </dt>
 <dd><p>Returns the Riemann zeta function for the argument <var>s</var>.
 The return value is a big float (bfloat);
@@ -166,8 +168,8 @@ The return value is a big float (bfloat);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -175,7 +177,7 @@ The return value is a big float (bfloat);
 <a name="Item_003a-bfhzeta"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bfhzeta</b><i> (<var>s</var>, <var>h</var>, <var>n</var>)</i>
-<a name="IDX1139"></a>
+<a name="IDX1158"></a>
 </dt>
 <dd><p>Returns the Hurwitz zeta function for the arguments <var>s</var> and <var>h</var>.
 The return value is a big float (bfloat);
@@ -195,8 +197,8 @@ The return value is a big float (bfloat);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -204,7 +206,7 @@ The return value is a big float (bfloat);
 <a name="Item_003a-burn"></a>
 </p><dl>
 <dt><u>Function:</u> <b>burn</b><i> (<var>n</var>)</i>
-<a name="IDX1140"></a>
+<a name="IDX1159"></a>
 </dt>
 <dd><p>Returns a rational number, which is an approximation of the <var>n</var>'th Bernoulli
 number for integer <var>n</var>.  <code>burn</code> exploits the observation that
@@ -217,16 +219,16 @@ tolerable efficiency:
                                 2 n
                              %pi
 </pre>
-<p><code>burn</code> may be more efficient than <code>bern</code> for large, isolated <var>n</var>
-as <code>bern</code> computes all the Bernoulli numbers up to index <var>n</var> before 
+<p><code>burn</code> may be more efficient than <code><a href="#bern">bern</a></code> for large, isolated <var>n</var>
+as <code><a href="#bern">bern</a></code> computes all the Bernoulli numbers up to index <var>n</var> before 
 returning.  <code>burn</code> invokes the approximation for even integers <var>n</var> &gt;
-255.  For odd integers and <var>n</var> &lt;= 255 the function <code>bern</code> is called.
+255.  For odd integers and <var>n</var> &lt;= 255 the function <code><a href="#bern">bern</a></code> is called.
 </p>
-<p><code>load (&quot;bffac&quot;)</code> loads this function.  See also <code>bern</code>.
+<p><code>load (&quot;bffac&quot;)</code> loads this function.  See also <code><a href="#bern">bern</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -234,7 +236,7 @@ returning.  <code>burn</code> invokes the approximation for even integers <var>n
 <a name="Item_003a-chinese"></a>
 </p><dl>
 <dt><u>Function:</u> <b>chinese</b><i> ([<var>r_1</var>, &hellip;, <var>r_n</var>], [<var>m_1</var>, &hellip;, <var>m_n</var>])</i>
-<a name="IDX1141"></a>
+<a name="IDX1160"></a>
 </dt>
 <dd><p>Solves the system of congruences <code>x = r_1 mod m_1</code>, &hellip;, <code>x = r_n mod m_n</code>.
 The remainders <var>r_n</var> may be arbitrary integers while the moduli <var>m_n</var> have to be 
@@ -257,7 +259,7 @@ positive and pairwise coprime integers.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -265,7 +267,7 @@ positive and pairwise coprime integers.
 <a name="Item_003a-cf"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cf</b><i> (<var>expr</var>)</i>
-<a name="IDX1142"></a>
+<a name="IDX1161"></a>
 </dt>
 <dd><p>Computes a continued fraction approximation.
 <var>expr</var> is an expression comprising continued fractions,
@@ -286,14 +288,14 @@ outside of <code>cf</code>.
 <code>[a, b, c, ...]</code>.  The list elements <code>a</code>, <code>b</code>, <code>c</code>, &hellip;
 must evaluate to integers.  <var>expr</var> may also contain <code>sqrt (n)</code> where
 <code>n</code> is an integer.  In this case <code>cf</code> will give as many terms of the
-continued fraction as the value of the variable <code>cflength</code> times the
+continued fraction as the value of the variable <code><a href="#cflength">cflength</a></code> times the
 period.
 </p>
 <p>A continued fraction can be evaluated to a number by evaluating the arithmetic
-representation returned by <code>cfdisrep</code>.  See also <code>cfexpand</code> for
+representation returned by <code><a href="#cfdisrep">cfdisrep</a></code>.  See also <code><a href="#cfexpand">cfexpand</a></code> for
 another way to evaluate a continued fraction.
 </p>
-<p>See also <code>cfdisrep</code>, <code>cfexpand</code>, and <code>cflength</code>.
+<p>See also <code><a href="#cfdisrep">cfdisrep</a></code>, <code><a href="#cfexpand">cfexpand</a></code>, and <code><a href="#cflength">cflength</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -323,7 +325,7 @@ are computed for algebraic, irrational numbers.
 </pre>
 </li><li>
 A continued fraction can be evaluated by evaluating the arithmetic
-representation returned by <code>cfdisrep</code>.
+representation returned by <code><a href="#cfdisrep">cfdisrep</a></code>.
 
 <pre class="example">(%i1) cflength: 3$
 (%i2) cfdisrep (cf (sqrt (3)))$
@@ -343,7 +345,7 @@ Maxima does not know about operations on continued fractions outside of
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Continued-fractions">Continued fractions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Continued-fractions">Continued fractions</a>
 </div>
 </p></dd></dl>
 
@@ -352,7 +354,7 @@ Maxima does not know about operations on continued fractions outside of
 <a name="Item_003a-cfdisrep"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cfdisrep</b><i> (<var>list</var>)</i>
-<a name="IDX1143"></a>
+<a name="IDX1162"></a>
 </dt>
 <dd><p>Constructs and returns an ordinary arithmetic expression
 of the form <code>a + 1/(b + 1/(c + ...))</code>
@@ -371,7 +373,7 @@ from the list representation of a continued fraction <code>[a, b, c, ...]</code>
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Continued-fractions">Continued fractions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Continued-fractions">Continued fractions</a>
 </div>
 </p></dd></dl>
 
@@ -379,7 +381,7 @@ from the list representation of a continued fraction <code>[a, b, c, ...]</code>
 <a name="Item_003a-cfexpand"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cfexpand</b><i> (<var>x</var>)</i>
-<a name="IDX1144"></a>
+<a name="IDX1163"></a>
 </dt>
 <dd><p>Returns a matrix of the numerators and denominators of the last (column 1) and
 next-to-last (column 2) convergents of the continued fraction <var>x</var>.
@@ -397,7 +399,7 @@ next-to-last (column 2) convergents of the continued fraction <var>x</var>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Continued-fractions">Continued fractions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Continued-fractions">Continued fractions</a>
 </div>
 </p></dd></dl>
 
@@ -405,7 +407,7 @@ next-to-last (column 2) convergents of the continued fraction <var>x</var>.
 <a name="Item_003a-cflength"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>cflength</b>
-<a name="IDX1145"></a>
+<a name="IDX1164"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -425,7 +427,7 @@ Thus the default is to give one period.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Continued-fractions">Continued fractions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Continued-fractions">Continued fractions</a>
 </div>
 </p></dd></dl>
 
@@ -433,7 +435,7 @@ Thus the default is to give one period.
 <a name="Item_003a-divsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>divsum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>divsum</tt> (<var>n</var>, <var>k</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>divsum</tt> (<var>n</var>)</i>
-<a name="IDX1146"></a>
+<a name="IDX1165"></a>
 </dt>
 <dd><p><code>divsum (<var>n</var>, <var>k</var>)</code> returns the sum of the divisors of <var>n</var>
 raised to the <var>k</var>'th power.
@@ -451,7 +453,7 @@ raised to the <var>k</var>'th power.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -459,7 +461,7 @@ raised to the <var>k</var>'th power.
 <a name="Item_003a-euler"></a>
 </p><dl>
 <dt><u>Function:</u> <b>euler</b><i> (<var>n</var>)</i>
-<a name="IDX1147"></a>
+<a name="IDX1166"></a>
 </dt>
 <dd><p>Returns the <var>n</var>'th Euler number for nonnegative integer <var>n</var>.
 Euler numbers equal to zero are suppressed if <code>zerobern</code> is
@@ -476,7 +478,7 @@ Euler numbers equal to zero are suppressed if <code>zerobern</code> is
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -484,7 +486,7 @@ Euler numbers equal to zero are suppressed if <code>zerobern</code> is
 <a name="Item_003a-factors_005fonly"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>factors_only</b>
-<a name="IDX1148"></a>
+<a name="IDX1167"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -497,7 +499,7 @@ computed prime factors. If <code>factors_only</code> is set to <code>true</code>
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -505,7 +507,7 @@ computed prime factors. If <code>factors_only</code> is set to <code>true</code>
 <a name="Item_003a-fib"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fib</b><i> (<var>n</var>)</i>
-<a name="IDX1149"></a>
+<a name="IDX1168"></a>
 </dt>
 <dd><p>Returns the <var>n</var>'th Fibonacci number.
 <code>fib(0)</code> is equal to 0 and <code>fib(1)</code> equal to 1, and 
@@ -520,7 +522,7 @@ the Fibonacci number preceding the last one computed.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -528,7 +530,7 @@ the Fibonacci number preceding the last one computed.
 <a name="Item_003a-fibtophi"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fibtophi</b><i> (<var>expr</var>)</i>
-<a name="IDX1150"></a>
+<a name="IDX1169"></a>
 </dt>
 <dd><p>Expresses Fibonacci numbers in <var>expr</var> in terms of the constant <code>%phi</code>,
 which is <code>(1 + sqrt(5))/2</code>, approximately 1.61803399.
@@ -556,7 +558,7 @@ which is <code>(1 + sqrt(5))/2</code>, approximately 1.61803399.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -564,7 +566,7 @@ which is <code>(1 + sqrt(5))/2</code>, approximately 1.61803399.
 <a name="Item_003a-ifactors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ifactors</b><i> (<var>n</var>)</i>
-<a name="IDX1151"></a>
+<a name="IDX1170"></a>
 </dt>
 <dd><p>For a positive integer <var>n</var> returns the factorization of <var>n</var>.  If
 <code>n=p1^e1..pk^nk</code> is the decomposition of <var>n</var> into prime
@@ -572,6 +574,10 @@ factors, ifactors returns <code>[[p1, e1], ... , [pk, ek]]</code>.
 </p>
 <p>Factorization methods used are trial divisions by primes up to 9973,
 Pollard's rho and p-1 method and elliptic curves.
+</p>
+<p>If the variable <code>ifactor_verbose</code> is set to <code>true</code>
+ifactor produces detailed output about what it is doing including
+immediate feedback as soon as a factor has been found.
 </p>
 <p>The value returned by <code>ifactors</code> is controlled by the option variable <code><a href="#factors_005fonly">factors_only</a></code>.
 The default <code>false</code> causes <code>ifactors</code> to provide information about 
@@ -588,7 +594,7 @@ prime factors.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -596,7 +602,7 @@ prime factors.
 <a name="Item_003a-igcdex"></a>
 </p><dl>
 <dt><u>Function:</u> <b>igcdex</b><i> (<var>n</var>, <var>k</var>)</i>
-<a name="IDX1152"></a>
+<a name="IDX1171"></a>
 </dt>
 <dd><p>Returns a list <code>[<var>a</var>, <var>b</var>, <var>u</var>]</code> where <var>u</var> is the greatest
 common divisor of <var>n</var> and <var>k</var>, and <var>u</var> is equal to
@@ -620,7 +626,7 @@ must be integers.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -628,7 +634,7 @@ must be integers.
 <a name="Item_003a-inrt"></a>
 </p><dl>
 <dt><u>Function:</u> <b>inrt</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX1153"></a>
+<a name="IDX1172"></a>
 </dt>
 <dd><p>Returns the integer <var>n</var>'th root of the absolute value of <var>x</var>.
 </p>
@@ -638,7 +644,7 @@ must be integers.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -646,7 +652,7 @@ must be integers.
 <a name="Item_003a-inv_005fmod"></a>
 </p><dl>
 <dt><u>Function:</u> <b>inv_mod</b><i> (<var>n</var>, <var>m</var>)</i>
-<a name="IDX1154"></a>
+<a name="IDX1173"></a>
 </dt>
 <dd><p>Computes the inverse of <var>n</var> modulo <var>m</var>.
 <code>inv_mod (n,m)</code> returns <code>false</code>, 
@@ -661,7 +667,7 @@ if <var>n</var> is a zero divisor modulo <var>m</var>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -669,14 +675,14 @@ if <var>n</var> is a zero divisor modulo <var>m</var>.
 <a name="Item_003a-isqrt"></a>
 </p><dl>
 <dt><u>Function:</u> <b>isqrt</b><i> (<var>x</var>)</i>
-<a name="IDX1155"></a>
+<a name="IDX1174"></a>
 </dt>
 <dd><p>Returns the &quot;integer square root&quot; of the absolute value of <var>x</var>, which is an
 integer.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
 </div>
 </p></dd></dl>
 
@@ -684,7 +690,7 @@ integer.
 <a name="Item_003a-jacobi"></a>
 </p><dl>
 <dt><u>Function:</u> <b>jacobi</b><i> (<var>p</var>, <var>q</var>)</i>
-<a name="IDX1156"></a>
+<a name="IDX1175"></a>
 </dt>
 <dd><p>Returns the Jacobi symbol of <var>p</var> and <var>q</var>.
 </p>
@@ -694,7 +700,7 @@ integer.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -702,7 +708,7 @@ integer.
 <a name="Item_003a-lcm"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lcm</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1157"></a>
+<a name="IDX1176"></a>
 </dt>
 <dd><p>Returns the least common multiple of its arguments.
 The arguments may be general expressions as well as integers.
@@ -711,7 +717,7 @@ The arguments may be general expressions as well as integers.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -719,7 +725,7 @@ The arguments may be general expressions as well as integers.
 <a name="Item_003a-lucas"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lucas</b><i> (<var>n</var>)</i>
-<a name="IDX1158"></a>
+<a name="IDX1177"></a>
 </dt>
 <dd><p>Returns the <var>n</var>'th Lucas number.
 <code>lucas(0)</code> is equal to 2 and <code>lucas(1)</code> equal to 1, and 
@@ -741,7 +747,7 @@ how Fibonacci numbers can be computed via <code>lucas</code> and <code>next_luca
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -749,7 +755,7 @@ how Fibonacci numbers can be computed via <code>lucas</code> and <code>next_luca
 <a name="Item_003a-mod"></a>
 </p><dl>
 <dt><u>Function:</u> <b>mod</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX1159"></a>
+<a name="IDX1178"></a>
 </dt>
 <dd><p>If <var>x</var> and <var>y</var> are real numbers and <var>y</var> is nonzero, return
 <code><var>x</var> - <var>y</var> * floor(<var>x</var> / <var>y</var>)</code>.  Further for all real
@@ -781,7 +787,7 @@ simplification rules:
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
 </div>
 </p></dd></dl>
 
@@ -789,7 +795,7 @@ simplification rules:
 <a name="Item_003a-next_005fprime"></a>
 </p><dl>
 <dt><u>Function:</u> <b>next_prime</b><i> (<var>n</var>)</i>
-<a name="IDX1160"></a>
+<a name="IDX1179"></a>
 </dt>
 <dd><p>Returns the smallest prime bigger than <var>n</var>.
 </p>
@@ -798,7 +804,7 @@ simplification rules:
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -806,7 +812,7 @@ simplification rules:
 <a name="Item_003a-partfrac"></a>
 </p><dl>
 <dt><u>Function:</u> <b>partfrac</b><i> (<var>expr</var>, <var>var</var>)</i>
-<a name="IDX1161"></a>
+<a name="IDX1180"></a>
 </dt>
 <dd><p>Expands the expression <var>expr</var> in partial fractions
 with respect to the main variable <var>var</var>.  <code>partfrac</code> does a complete
@@ -837,7 +843,7 @@ the expansion falls out.
 <a name="Item_003a-power_005fmod"></a>
 </p><dl>
 <dt><u>Function:</u> <b>power_mod</b><i> (<var>a</var>, <var>n</var>, <var>m</var>)</i>
-<a name="IDX1162"></a>
+<a name="IDX1181"></a>
 </dt>
 <dd><p>Uses a modular algorithm to compute <code>a^n mod m</code> 
 where <var>a</var> and <var>n</var> are integers and <var>m</var> is a positive integer.
@@ -854,7 +860,7 @@ If <var>n</var> is negative, <code>inv_mod</code> is used to find the modular in
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -862,7 +868,7 @@ If <var>n</var> is negative, <code>inv_mod</code> is used to find the modular in
 <a name="Item_003a-primep"></a>
 </p><dl>
 <dt><u>Function:</u> <b>primep</b><i> (<var>n</var>)</i>
-<a name="IDX1163"></a>
+<a name="IDX1182"></a>
 </dt>
 <dd><p>Primality test.  If <code>primep (<var>n</var>)</code> returns <code>false</code>, <var>n</var> is a
 composite number and if it returns <code>true</code>, <var>n</var> is a prime number
@@ -876,13 +882,13 @@ Miller-Rabin's test is used.  If <code>primep (<var>n</var>)</code> returns
 <code>primep_number_of_tests</code> Miller-Rabin's pseudo-primality tests and one 
 Lucas pseudo-primality test.  The probability that a non-prime <var>n</var> will 
 pass one Miller-Rabin test is less than 1/4.  Using the default value 25 for
-<code>primep_number_of_tests</code>, the probability of <var>n</var> beeing
+<code>primep_number_of_tests</code>, the probability of <var>n</var> being
 composite is much smaller that 10^-15.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -890,7 +896,7 @@ composite is much smaller that 10^-15.
 <a name="Item_003a-primep_005fnumber_005fof_005ftests"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>primep_number_of_tests</b>
-<a name="IDX1164"></a>
+<a name="IDX1183"></a>
 </dt>
 <dd><p>Default value: 25
 </p>
@@ -898,7 +904,24 @@ composite is much smaller that 10^-15.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+</div>
+</p></dd></dl>
+
+<p><a name="primes"></a>
+<a name="Item_003a-primes"></a>
+</p><dl>
+<dt><u>Function:</u> <b>primes</b><i> (<var>start</var>, <var>end</var>)</i>
+<a name="IDX1184"></a>
+</dt>
+<dd><p>Returns the list of all primes from <var>start</var> to <var>end</var>.
+</p>
+<pre class="example">(%i1) primes(3, 7);
+(%o1)                     [3, 5, 7]
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -906,7 +929,7 @@ composite is much smaller that 10^-15.
 <a name="Item_003a-prev_005fprime"></a>
 </p><dl>
 <dt><u>Function:</u> <b>prev_prime</b><i> (<var>n</var>)</i>
-<a name="IDX1165"></a>
+<a name="IDX1185"></a>
 </dt>
 <dd><p>Returns the greatest prime smaller than <var>n</var>.
 </p>
@@ -915,7 +938,7 @@ composite is much smaller that 10^-15.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -923,7 +946,7 @@ composite is much smaller that 10^-15.
 <a name="Item_003a-qunit"></a>
 </p><dl>
 <dt><u>Function:</u> <b>qunit</b><i> (<var>n</var>)</i>
-<a name="IDX1166"></a>
+<a name="IDX1186"></a>
 </dt>
 <dd><p>Returns the principal unit of the real quadratic number field
 <code>sqrt (<var>n</var>)</code> where <var>n</var> is an integer,
@@ -937,7 +960,7 @@ This amounts to solving Pell's equation <code>a^2 - <var>n</var> b^2 = 1</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -945,21 +968,21 @@ This amounts to solving Pell's equation <code>a^2 - <var>n</var> b^2 = 1</code>.
 <a name="Item_003a-totient"></a>
 </p><dl>
 <dt><u>Function:</u> <b>totient</b><i> (<var>n</var>)</i>
-<a name="IDX1167"></a>
+<a name="IDX1187"></a>
 </dt>
 <dd><p>Returns the number of integers less than or equal to <var>n</var> which
 are relatively prime to <var>n</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-zerobern"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>zerobern</b>
-<a name="IDX1168"></a>
+<a name="IDX1188"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -969,7 +992,7 @@ See <code>bern</code> and <code>euler</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -977,7 +1000,7 @@ See <code>bern</code> and <code>euler</code>.
 <a name="Item_003a-zeta"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zeta</b><i> (<var>n</var>)</i>
-<a name="IDX1169"></a>
+<a name="IDX1189"></a>
 </dt>
 <dd><p>Returns the Riemann zeta function.  If <var>n</var> is a negative integer, 0, or a
 positive even integer, the Riemann zeta function simplifies to an exact value.
@@ -993,7 +1016,7 @@ the value <code>false</code>.
 </p>
 <p>The Riemann zeta function distributes over lists, matrices, and equations.
 </p>
-<p>See also <code>bfzeta</code> and <code>zeta%pi</code>.
+<p>See also <code><a href="#bfzeta">bfzeta</a></code> and <code><a href="#zeta_0025pi">zeta%pi</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -1010,7 +1033,7 @@ the value <code>false</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1018,9 +1041,9 @@ the value <code>false</code>.
 <a name="Item_003a-zeta_0025pi"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>zeta%pi</b>
-<a name="IDX1170"></a>
+<a name="IDX1190"></a>
 </dt>
-<dd><p>Default value: <code>true</code>
+<dd><p>Default value: <code><a href="maxima_5.html#true">true</a></code>
 </p>
 <p>When <code>zeta%pi</code> is <code>true</code>, <code>zeta</code> returns an expression 
 proportional to <code>%pi^n</code> for even integer <code>n</code>.  Otherwise, <code>zeta</code> 
@@ -1040,7 +1063,7 @@ returns a noun form <code>zeta (n)</code> for even integer <code>n</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1048,15 +1071,115 @@ returns a noun form <code>zeta (n)</code> for even integer <code>n</code>.
 <a name="Item_003a-zn_005fadd_005ftable"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zn_add_table</b><i> (<var>n</var>) </i>
-<a name="IDX1171"></a>
+<a name="IDX1191"></a>
 </dt>
 <dd><p>Shows an addition table of all elements in (Z/<var>n</var>Z).
 </p>
-<p>See also <code><a href="#zn_005fmult_005ftable">zn_mult_table</a></code>, <code><a href="#zn_005fpower_005ftable">zn_power_table</a></code>.
+<p>See also <code><a href="#zn_005fmult_005ftable">zn_mult_table</a></code>,  <code><a href="#zn_005fpower_005ftable">zn_power_table</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+</div>
+</p></dd></dl>
+
+<p><a name="zn_005fcharacteristic_005ffactors"></a>
+<a name="Item_003a-zn_005fcharacteristic_005ffactors"></a>
+</p><dl>
+<dt><u>Function:</u> <b>zn_characteristic_factors</b><i> (<var>n</var>) </i>
+<a name="IDX1192"></a>
+</dt>
+<dd><p>Returns a list containing the characteristic factors of the totient of <var>n</var>.
+</p>
+<p>Using the characteristic factors a multiplication group modulo <var>n</var> 
+can be expressed as a group direct product of cyclic subgroups.
+</p>
+<p>In case the group itself is cyclic the list only contains the totient 
+and using <code>zn_primroot</code> a generator can be computed. 
+If the totient splits into more than one characteristic factors 
+<code>zn_factor_generators</code> finds generators of the corresponding subgroups.
+</p> 
+<p>Each of the <code>r</code> factors in the list divides the right following factors. 
+For the last factor <code>f_r</code> therefore holds <code>a^f_r = 1 (mod n)</code> 
+for all <code>a</code> coprime to <var>n</var>.  
+This factor is also known as Carmichael function or Carmichael lambda.
+</p>
+<p>If <code>n &gt; 2</code>, then <code>totient(n)/2^r</code> is the number of quadratic residues, 
+and each of these has <code>2^r</code> square roots.
+</p>
+<p>See also <code><a href="#totient">totient</a></code>,  <code><a href="#zn_005fprimroot">zn_primroot</a></code>,  <code><a href="#zn_005ffactor_005fgenerators">zn_factor_generators</a></code>.
+</p>
+<p>Examples:
+</p>
+<p>The multiplication group modulo <code>14</code> is cyclic and its <code>6</code> elements 
+can be generated by a primitive root.
+</p>
+<pre class="example">(%i1) [zn_characteristic_factors(14), phi: totient(14)];
+(%o1)                              [[6], 6]
+(%i2) [zn_factor_generators(14), g: zn_primroot(14)];
+(%o2)                              [[3], 3]
+(%i3) M14: makelist(power_mod(g,i,14), i,0,phi-1);
+(%o3)                         [1, 3, 9, 13, 11, 5]
+</pre>
+<p>The multiplication group modulo <code>15</code> is not cyclic and its <code>8</code> elements 
+can be generated by two factor generators.
+</p>
+<pre class="example">(%i1) [[f1,f2]: zn_characteristic_factors(15), totient(15)];
+(%o1)                             [[2, 4], 8]
+(%i2) [[g1,g2]: zn_factor_generators(15), zn_primroot(15)];
+(%o2)                           [[11, 7], false]
+(%i3) UG1: makelist(power_mod(g1,i,15), i,0,f1-1);
+(%o3)                               [1, 11]
+(%i4) UG2: makelist(power_mod(g2,i,15), i,0,f2-1);
+(%o4)                            [1, 7, 4, 13]
+(%i5) M15: create_list(mod(i*j,15), i,UG1, j,UG2);
+(%o5)                      [1, 7, 4, 13, 11, 2, 14, 8]
+</pre>
+<p>For the last characteristic factor <code>4</code> it holds that <code>a^4 = 1 (mod 15)</code> 
+for all <code>a</code> in <code>M15</code>. 
+</p>
+<p><code>M15</code> has two characteristic factors and therefore <code>8/2^2</code> quadratic residues, 
+and each of these has <code>2^2</code> square roots.
+</p>
+<pre class="example">(%i6) zn_power_table(15);
+                               [ 1   1  1   1 ]
+                               [              ]
+                               [ 2   4  8   1 ]
+                               [              ]
+                               [ 4   1  4   1 ]
+                               [              ]
+                               [ 7   4  13  1 ]
+(%o6)                          [              ]
+                               [ 8   4  2   1 ]
+                               [              ]
+                               [ 11  1  11  1 ]
+                               [              ]
+                               [ 13  4  7   1 ]
+                               [              ]
+                               [ 14  1  14  1 ]
+(%i7) map(lambda([i], zn_nth_root(i,2,15)), [1,4]);
+(%o7)                   [[1, 4, 11, 14], [2, 7, 8, 13]]
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+</div>
+</p></dd></dl>
+
+<p><a name="zn_005fcarmichael_005flambda"></a>
+<a name="Item_003a-zn_005fcarmichael_005flambda"></a>
+</p><dl>
+<dt><u>Function:</u> <b>zn_carmichael_lambda</b><i> (<var>n</var>) </i>
+<a name="IDX1193"></a>
+</dt>
+<dd><p>Returns <code>1</code> if <var>n</var> is <code>1</code> and otherwise 
+the greatest characteristic factor of the totient of <var>n</var>.
+</p>
+<p>For remarks and examples see <code><a href="#zn_005fcharacteristic_005ffactors">zn_characteristic_factors</a></code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1064,7 +1187,7 @@ returns a noun form <code>zeta (n)</code> for even integer <code>n</code>.
 <a name="Item_003a-zn_005fdeterminant"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zn_determinant</b><i> (<var>matrix</var>, <var>p</var>) </i>
-<a name="IDX1172"></a>
+<a name="IDX1194"></a>
 </dt>
 <dd><p>Uses the technique of LU-decomposition to compute the determinant of <var>matrix</var> 
 over (Z/<var>p</var>Z). <var>p</var> must be a prime. 
@@ -1094,7 +1217,24 @@ and reduces thereafter.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+</div>
+</p></dd></dl>
+
+<p><a name="zn_005ffactor_005fgenerators"></a>
+<a name="Item_003a-zn_005ffactor_005fgenerators"></a>
+</p><dl>
+<dt><u>Function:</u> <b>zn_factor_generators</b><i> (<var>n</var>) </i>
+<a name="IDX1195"></a>
+</dt>
+<dd><p>Returns a list containing factor generators corresponding to the 
+characteristic factors of the totient of <var>n</var>.
+</p>
+<p>For remarks and examples see <code><a href="#zn_005fcharacteristic_005ffactors">zn_characteristic_factors</a></code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1102,7 +1242,7 @@ and reduces thereafter.
 <a name="Item_003a-zn_005finvert_005fby_005flu"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zn_invert_by_lu</b><i> (<var>matrix</var>, <var>p</var>) </i>
-<a name="IDX1173"></a>
+<a name="IDX1196"></a>
 </dt>
 <dd><p>Uses the technique of LU-decomposition to compute the modular inverse of 
 <var>matrix</var> over (Z/<var>p</var>Z). <var>p</var> must be a prime and <var>matrix</var> 
@@ -1130,7 +1270,7 @@ is not invertible.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1138,7 +1278,7 @@ is not invertible.
 <a name="Item_003a-zn_005flog"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zn_log</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_log</tt> (<var>a</var>, <var>g</var>, <var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_log</tt> (<var>a</var>, <var>g</var>, <var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1174"></a>
+<a name="IDX1197"></a>
 </dt>
 <dd><p>Computes the discrete logarithm. Let (Z/<var>n</var>Z)* be a cyclic group, <var>g</var> a 
 primitive root modulo <var>n</var> and let <var>a</var> be a member of this group.  
@@ -1154,7 +1294,7 @@ using the default option <code>factors_only : false</code>.
 discrete logarithms. The run time of <code>zn_log</code> primarily depends on the 
 bitlength of the totient's greatest prime factor.
 </p>
-<p>See also <code><a href="#zn_005fprimroot">zn_primroot</a></code>, <code><a href="#zn_005forder">zn_order</a></code>, <code><a href="#ifactors">ifactors</a></code>, <code><a href="#totient">totient</a></code>.
+<p>See also <code><a href="#zn_005fprimroot">zn_primroot</a></code>,  <code><a href="#zn_005forder">zn_order</a></code>,  <code><a href="#ifactors">ifactors</a></code>,  <code><a href="#totient">totient</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -1193,41 +1333,234 @@ The run time primarily depends on the bitlength of the totient's greatest prime 
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
 <p><a name="zn_005fmult_005ftable"></a>
 <a name="Item_003a-zn_005fmult_005ftable"></a>
 </p><dl>
-<dt><u>Function:</u> <b>zn_mult_table</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_mult_table</tt> (<var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_mult_table</tt> (<var>n</var>, all)</i>
-<a name="IDX1175"></a>
+<dt><u>Function:</u> <b>zn_mult_table</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_mult_table</tt> (<var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_mult_table</tt> (<var>n</var>, <var>gcd</var>)</i>
+<a name="IDX1198"></a>
 </dt>
-<dd><p>Without the optional argument <var>all</var> <code>zn_mult_table(n)</code> 
-shows a multiplication table of all elements in (Z/<var>n</var>Z)* 
-which are all elements invertible modulo <var>n</var>.
+<dd><p>Without the optional argument <var>gcd</var> <code>zn_mult_table(n)</code> shows a 
+multiplication table of all elements in (Z/<var>n</var>Z)* which are all elements 
+coprime to <var>n</var>.
 </p>
-<p>The optional argument <var>all</var> causes the table to be printed for all 
-non-zero elements.
+<p>The optional second argument <var>gcd</var> allows to select a specific 
+subset of (Z/<var>n</var>Z). If <var>gcd</var> is an integer, a multiplication table of 
+all residues <code>x</code> with <code>gcd(x,n) = </code><var>gcd</var> are returned.
+Additionally row and column headings are added for better readability. 
+If necessary, these can be easily removed by <code>submatrix(1, table, 1)</code>. 
+</p> 
+<p>If <var>gcd</var> is set to <code>all</code>, the table is printed for all non-zero 
+elements in (Z/<var>n</var>Z).
 </p>
-<p>See also <code><a href="#zn_005fadd_005ftable">zn_add_table</a></code>, <code><a href="#zn_005fpower_005ftable">zn_power_table</a></code>.
+<p>The second example shows an alternative way to create a multiplication table 
+for subgroups.
+</p>
+<p>See also <code><a href="#zn_005fadd_005ftable">zn_add_table</a></code>,  <code><a href="#zn_005fpower_005ftable">zn_power_table</a></code>.
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) zn_mult_table(4);
-                                [ 1  3 ]
-(%o1)                           [      ]
-                                [ 3  1 ]
-(%i2) zn_mult_table(4, all);
-                               [ 1  2  3 ]
-                               [         ]
-(%o2)                          [ 2  0  2 ]
-                               [         ]
-                               [ 3  2  1 ]
+<p>The default table shows all elements in (Z/<var>n</var>Z)* and allows to demonstrate 
+and study basic properties of modular multiplication groups.
+E.g. the principal diagonal contains all quadratic residues, 
+each row and column contains every element, the tables are symmetric, etc..
+</p>
+<p>If <var>gcd</var> is set to <code>all</code>, the table is printed for all non-zero 
+elements in (Z/<var>n</var>Z).
+</p>
+<pre class="example">(%i1) zn_mult_table(8);
+                                [ 1  3  5  7 ]
+                                [            ]
+                                [ 3  1  7  5 ]
+(%o1)                           [            ]
+                                [ 5  7  1  3 ]
+                                [            ]
+                                [ 7  5  3  1 ]
+(%i2) zn_mult_table(8, all);
+                            [ 1  2  3  4  5  6  7 ]
+                            [                     ]
+                            [ 2  4  6  0  2  4  6 ]
+                            [                     ]
+                            [ 3  6  1  4  7  2  5 ]
+                            [                     ]
+(%o2)                       [ 4  0  4  0  4  0  4 ]
+                            [                     ]
+                            [ 5  2  7  4  1  6  3 ]
+                            [                     ]
+                            [ 6  4  2  0  6  4  2 ]
+                            [                     ]
+                            [ 7  6  5  4  3  2  1 ]
+</pre>
+<p>If <var>gcd</var> is an integer, row and column headings are added for better readability. 
+</p>
+<p>If the subset chosen by <var>gcd</var> is a group there is another way to create 
+a multiplication table. An isomorphic mapping from a group with <code>1</code> as 
+identity builds a table which is easy to read. The mapping is accomplished via CRT.
+</p>
+<p>In the second version of <code>T36_4</code> the identity, here <code>28</code>, is placed in 
+the top left corner, just like in table <code>T9</code>. 
+</p>
+<pre class="example">(%i1) T36_4: zn_mult_table(36,4);
+                        [ *   4   8   16  20  28  32 ]
+                        [                            ]
+                        [ 4   16  32  28  8   4   20 ]
+                        [                            ]
+                        [ 8   32  28  20  16  8   4  ]
+                        [                            ]
+(%o1)                   [ 16  28  20  4   32  16  8  ]
+                        [                            ]
+                        [ 20  8   16  32  4   20  28 ]
+                        [                            ]
+                        [ 28  4   8   16  20  28  32 ]
+                        [                            ]
+                        [ 32  20  4   8   28  32  16 ]
+(%i2) T9: zn_mult_table(36/4);
+                             [ 1  2  4  5  7  8 ]
+                             [                  ]
+                             [ 2  4  8  1  5  7 ]
+                             [                  ]
+                             [ 4  8  7  2  1  5 ]
+(%o2)                        [                  ]
+                             [ 5  1  2  7  8  4 ]
+                             [                  ]
+                             [ 7  5  1  8  4  2 ]
+                             [                  ]
+                             [ 8  7  5  4  2  1 ]
+(%i3) T36_4: matrixmap(lambda([x], chinese([0,x],[4,9])), T9);
+                          [ 28  20  4   32  16  8  ]
+                          [                        ]
+                          [ 20  4   8   28  32  16 ]
+                          [                        ]
+                          [ 4   8   16  20  28  32 ]
+(%o3)                     [                        ]
+                          [ 32  28  20  16  8   4  ]
+                          [                        ]
+                          [ 16  32  28  8   4   20 ]
+                          [                        ]
+                          [ 8   16  32  4   20  28 ]
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
+</div>
+</p></dd></dl>
+
+<p><a name="zn_005fnth_005froot"></a>
+<a name="Item_003a-zn_005fnth_005froot"></a>
+</p><dl>
+<dt><u>Function:</u> <b>zn_nth_root</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_nth_root</tt> (<var>x</var>, <var>n</var>, <var>m</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_nth_root</tt> (<var>x</var>, <var>n</var>, <var>m</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
+<a name="IDX1199"></a>
+</dt>
+<dd><p>Returns a list with all <var>n</var>-th roots of <var>x</var> from the multiplication 
+subgroup of (Z/<var>m</var>Z) which contains <var>x</var>, or <code>false</code>, if <var>x</var> 
+is no <var>n</var>-th power modulo <var>m</var> or not contained in any multiplication 
+subgroup of (Z/<var>m</var>Z).
+</p>
+<p><var>x</var> is an element of a multiplication subgroup modulo <var>m</var>, if the 
+greatest common divisor <code>g = gcd(x,m)</code> is coprime to <code>m/g</code>.
+</p>
+<p><code>zn_nth_root</code> is based on an algorithm by Adleman, Manders and Miller 
+and on theorems about modulo multiplication groups by Daniel Shanks.
+</p> 
+<p>The algorithm needs a prime factorization of the modulus <var>m</var>. 
+So in case the factorization of <var>m</var> is known, the list of factors 
+can be passed as the fourth argument. This optional argument
+must be of the same form as the list returned by <code>ifactors(m)</code> 
+using the default option <code>factors_only: false</code>.
+</p>
+
+<p>Examples:
+</p>
+<p>A power table of the multiplication group modulo <code>14</code> 
+followed by a list of lists containing all <var>n</var>-th roots of <code>1</code> 
+with <var>n</var> from <code>1</code> to <code>6</code>.
+</p>
+<pre class="example">(%i1) zn_power_table(14);
+                         [ 1   1   1   1   1   1 ]
+                         [                       ]
+                         [ 3   9   13  11  5   1 ]
+                         [                       ]
+                         [ 5   11  13  9   3   1 ]
+(%o1)                    [                       ]
+                         [ 9   11  1   9   11  1 ]
+                         [                       ]
+                         [ 11  9   1   11  9   1 ]
+                         [                       ]
+                         [ 13  1   13  1   13  1 ]
+(%i2) makelist(zn_nth_root(1,n,14), n,1,6);
+(%o2)  [[1], [1, 13], [1, 9, 11], [1, 13], [1], [1, 3, 5, 9, 11, 13]]
+</pre>
+<p>In the following example <var>x</var> is not coprime to <var>m</var>, 
+but is a member of a multiplication subgroup of (Z/<var>m</var>Z) 
+and any <var>n</var>-th root is a member of the same subgroup.
+</p>
+<p>The residue class <code>3</code> is no member of any multiplication subgroup of (Z/63Z) 
+and is therefore not returned as a third root of <code>27</code>.
+</p>
+<p>Here <code>zn_power_table</code> shows all residues <code>x</code> in (Z/63Z) 
+with <code>gcd(x,63) = 9</code>. This subgroup is isomorphic to (Z/7Z)*  
+and its identity <code>36</code> is computed via CRT.
+</p>
+<pre class="example">(%i1) m: 7*9$
+
+(%i2) zn_power_table(m,9);
+                         [ 9   18  36  9   18  36 ]
+                         [                        ]
+                         [ 18  9   36  18  9   36 ]
+                         [                        ]
+                         [ 27  36  27  36  27  36 ]
+(%o2)                    [                        ]
+                         [ 36  36  36  36  36  36 ]
+                         [                        ]
+                         [ 45  9   27  18  54  36 ]
+                         [                        ]
+                         [ 54  18  27  9   45  36 ]
+(%i3) zn_nth_root(27,3,m);
+(%o3)                           [27, 45, 54]
+(%i4) id7:1$  id63_9: chinese([id7,0],[7,9]);
+(%o5)                                36
+</pre>
+<p>In the following RSA-like example, where the modulus <code>N</code> is squarefree, 
+i.e. it splits into 
+exclusively first power factors, every <code>x</code> from <code>0</code> to <code>N-1</code> 
+is contained in a multiplication subgroup.
+</p>
+<p>The process of decryption needs the <code>e</code>-th root. 
+<code>e</code> is coprime to <code>totient(N)</code> and therefore the <code>e</code>-th root is unique. 
+In this case <code>zn_nth_root</code> effectively performs CRT-RSA. 
+(Please note that <code>flatten</code> removes braces but no solutions.)
+</p>
+<pre class="example">(%i1) [p,q,e]: [5,7,17]$  N: p*q$
+
+(%i3) xs: makelist(x,x,0,N-1)$
+
+(%i4) ys: map(lambda([x],power_mod(x,e,N)),xs)$
+
+(%i5) zs: flatten(map(lambda([y], zn_nth_root(y,e,N)), ys))$
+
+(%i6) is(zs = xs);
+(%o6)                             true
+</pre>
+<p>In the following example the factorization of the modulus is known 
+and passed as the fourth argument.
+</p>
+<pre class="example">(%i1) p: 2^107-1$  q: 2^127-1$  N: p*q$
+
+(%i4) ibase: obase: 16$
+
+(%i5) msg: 11223344556677889900aabbccddeeff$
+
+(%i6) enc: power_mod(msg, 10001, N);
+(%o6)    1a8db7892ae588bdc2be25dd5107a425001fe9c82161abc673241c8b383
+(%i7) zn_nth_root(enc, 10001, N, [[p,1],[q,1]]);
+(%o7)               [11223344556677889900aabbccddeeff]
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1235,7 +1568,7 @@ non-zero elements.
 <a name="Item_003a-zn_005forder"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zn_order</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_order</tt> (<var>x</var>, <var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_order</tt> (<var>x</var>, <var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1176"></a>
+<a name="IDX1200"></a>
 </dt>
 <dd><p>Returns the order of <var>x</var> if it is a unit of the finite group (Z/<var>n</var>Z)* 
 or returns <code>false</code>.  <var>x</var> is a unit modulo <var>n</var> if it is coprime to <var>n</var>.
@@ -1246,7 +1579,7 @@ and then to pass the list of factors to <code>zn_log</code> as the third argumen
 The list must be of the same form as the list returned by <code>ifactors(totient(n))</code> 
 using the default option <code>factors_only : false</code>.
 </p>
-<p>See also <code><a href="#zn_005fprimroot">zn_primroot</a></code>, <code><a href="#ifactors">ifactors</a></code>, <code><a href="#totient">totient</a></code>.
+<p>See also <code><a href="#zn_005fprimroot">zn_primroot</a></code>,  <code><a href="#ifactors">ifactors</a></code>,  <code><a href="#totient">totient</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -1283,49 +1616,106 @@ using the default option <code>factors_only : false</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
 <p><a name="zn_005fpower_005ftable"></a>
 <a name="Item_003a-zn_005fpower_005ftable"></a>
 </p><dl>
-<dt><u>Function:</u> <b>zn_power_table</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_power_table</tt> (<var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_power_table</tt> (<var>n</var>, all)</i>
-<a name="IDX1177"></a>
+<dt><u>Function:</u> <b>zn_power_table</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_power_table</tt> (<var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_power_table</tt> (<var>n</var>, <var>gcd</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_power_table</tt> (<var>n</var>, <var>gcd</var>, <var>max_exp</var>)</i>
+<a name="IDX1201"></a>
 </dt>
-<dd><p>Without the optional argument <var>all</var> <code>zn_power_table(n)</code> 
+<dd><p>Without any optional argument <code>zn_power_table(n)</code> 
 shows a power table of all elements in (Z/<var>n</var>Z)* 
-which are all elements invertible modulo <var>n</var>. 
+which are all residue classes coprime to <var>n</var>. 
 The exponent loops from <code>1</code> to the greatest characteristic factor of 
-<code>totient(n)</code> and the table ends with a column of ones on the right side.
+<code>totient(n)</code> (also known as Carmichael function or Carmichael lambda)
+and the table ends with a column of ones on the right side. 
 </p>
-<p>The optional argument <var>all</var> causes the table to be printed for all 
-non-zero elements. The exponent now loops from <code>1</code> to 
-<code>totient(n) + 1</code> and in case the modulus factors into different primes 
-the last column is equal to the first.
+<p>The optional second argument <var>gcd</var> allows to select powers of a specific 
+subset of (Z/<var>n</var>Z). If <var>gcd</var> is an integer, powers of all residue 
+classes <code>x</code> with <code>gcd(x,n) = </code><var>gcd</var> are returned,
+i.e. the default value for <var>gcd</var> is <code>1</code>.   
+If <var>gcd</var> is set to <code>all</code>, the table contains powers of all elements 
+in (Z/<var>n</var>Z).
 </p>
-<p>See also <code><a href="#zn_005fadd_005ftable">zn_add_table</a></code>, <code><a href="#zn_005fmult_005ftable">zn_mult_table</a></code>.
+<p>If the optional third argument <var>max_exp</var> is given, the exponent loops from 
+<code>1</code> to <var>max_exp</var>. 
+</p>
+<p>See also <code><a href="#zn_005fadd_005ftable">zn_add_table</a></code>,  <code><a href="#zn_005fmult_005ftable">zn_mult_table</a></code>.
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) zn_power_table(6);
-                                [ 1  1 ]
-(%o1)                           [      ]
-                                [ 5  1 ]
-(%i2) zn_power_table(6, all);
-                               [ 1  1  1 ]
-                               [         ]
-                               [ 2  4  2 ]
-                               [         ]
-(%o2)                          [ 3  3  3 ]
-                               [         ]
-                               [ 4  4  4 ]
-                               [         ]
-                               [ 5  1  5 ]
+<p>The default which is <var>gcd</var><code> = 1</code> allows to demonstrate and study basic 
+theorems of e.g. Fermat and Euler.
+</p>
+<p>The argument <var>gcd</var> allows to select subsets of (Z/<var>n</var>Z) and to study 
+multiplication subgroups and isomorphisms. 
+E.g. the groups <code>G10</code> and <code>G10_2</code> are under multiplication both 
+isomorphic to <code>G5</code>. <code>1</code> is the identity in <code>G5</code>. 
+So are <code>1</code> resp. <code>6</code> the identities in <code>G10</code> resp. <code>G10_2</code>. 
+There are corresponding mappings for primitive roots, n-th roots, etc..
+</p>
+<pre class="example">(%i1) zn_power_table(10);
+                              [ 1  1  1  1 ]
+                              [            ]
+                              [ 3  9  7  1 ]
+(%o1)                         [            ]
+                              [ 7  9  3  1 ]
+                              [            ]
+                              [ 9  1  9  1 ]
+(%i2) zn_power_table(10,2);
+                              [ 2  4  8  6 ]
+                              [            ]
+                              [ 4  6  4  6 ]
+(%o2)                         [            ]
+                              [ 6  6  6  6 ]
+                              [            ]
+                              [ 8  4  2  6 ]
+(%i3) zn_power_table(10,5);
+(%o3)                         [ 5  5  5  5 ]
+(%i4) zn_power_table(10,10);
+(%o4)                         [ 0  0  0  0 ]
+(%i5) G5: [1,2,3,4];
+(%o6)                          [1, 2, 3, 4]
+(%i6) G10_2: map(lambda([x], chinese([0,x],[2,5])), G5);
+(%o6)                          [6, 2, 8, 4]
+(%i7) G10: map(lambda([x], power_mod(3, zn_log(x,2,5), 10)), G5);
+(%o7)                          [1, 3, 7, 9]
+</pre>
+<p>If <var>gcd</var> is set to <code>all</code>, the table contains powers of all elements 
+in (Z/<var>n</var>Z).
+</p>
+<p>The third argument <var>max_exp</var> allows to set the highest exponent. 
+The following table shows a very small example of RSA.
+</p>
+<pre class="example">(%i1) N:2*5$ phi:totient(N)$ e:7$ d:inv_mod(e,phi)$
+
+(%i5) zn_power_table(N, all, e*d);
+       [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 ]
+       [                                                               ]
+       [ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 ]
+       [                                                               ]
+       [ 2  4  8  6  2  4  8  6  2  4  8  6  2  4  8  6  2  4  8  6  2 ]
+       [                                                               ]
+       [ 3  9  7  1  3  9  7  1  3  9  7  1  3  9  7  1  3  9  7  1  3 ]
+       [                                                               ]
+       [ 4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4 ]
+(%o5)  [                                                               ]
+       [ 5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5 ]
+       [                                                               ]
+       [ 6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6 ]
+       [                                                               ]
+       [ 7  9  3  1  7  9  3  1  7  9  3  1  7  9  3  1  7  9  3  1  7 ]
+       [                                                               ]
+       [ 8  4  2  6  8  4  2  6  8  4  2  6  8  4  2  6  8  4  2  6  8 ]
+       [                                                               ]
+       [ 9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9 ]
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1333,7 +1723,7 @@ the last column is equal to the first.
 <a name="Item_003a-zn_005fprimroot"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zn_primroot</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_primroot</tt> (<var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_primroot</tt> (<var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1178"></a>
+<a name="IDX1202"></a>
 </dt>
 <dd><p>If the multiplicative group (Z/<var>n</var>Z)* is cyclic, <code>zn_primroot</code> computes the 
 smallest primitive root modulo <var>n</var>.  (Z/<var>n</var>Z)* is cyclic if <var>n</var> is equal to 
@@ -1352,7 +1742,7 @@ and then to pass the list of factors to <code>zn_log</code> as an additional arg
 The list must be of the same form as the list returned by <code>ifactors(totient(n))</code> 
 using the default option <code>factors_only : false</code>.
 </p>
-<p>See also <code><a href="#zn_005fprimroot_005fp">zn_primroot_p</a></code>, <code><a href="#zn_005forder">zn_order</a></code>, <code><a href="#ifactors">ifactors</a></code>, <code><a href="#totient">totient</a></code>.
+<p>See also <code><a href="#zn_005fprimroot_005fp">zn_primroot_p</a></code>,  <code><a href="#zn_005forder">zn_order</a></code>,  <code><a href="#ifactors">ifactors</a></code>,  <code><a href="#totient">totient</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -1389,7 +1779,7 @@ using the default option <code>factors_only : false</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1397,7 +1787,7 @@ using the default option <code>factors_only : false</code>.
 <a name="Item_003a-zn_005fprimroot_005flimit"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>zn_primroot_limit</b>
-<a name="IDX1179"></a>
+<a name="IDX1203"></a>
 </dt>
 <dd><p>Default value: <code>1000</code> 
 </p>
@@ -1407,7 +1797,7 @@ set to <code>true</code>, a message will be printed when <code>zn_primroot_limit
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1415,7 +1805,7 @@ set to <code>true</code>, a message will be printed when <code>zn_primroot_limit
 <a name="Item_003a-zn_005fprimroot_005fp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zn_primroot_p</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_primroot_p</tt> (<var>x</var>, <var>n</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zn_primroot_p</tt> (<var>x</var>, <var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1180"></a>
+<a name="IDX1204"></a>
 </dt>
 <dd><p>Checks whether <var>x</var> is a primitive root in the multiplicative group (Z/<var>n</var>Z)*.
 </p>
@@ -1426,7 +1816,7 @@ pass the list of factors to <code>zn_log</code> as a third argument.
 The list must be of the same form as the list returned by <code>ifactors(totient(n))</code> 
 using the default option <code>factors_only : false</code>.
 </p>
-<p>See also <code><a href="#zn_005fprimroot">zn_primroot</a></code>, <code><a href="#zn_005forder">zn_order</a></code>, <code><a href="#ifactors">ifactors</a></code>, <code><a href="#totient">totient</a></code>.
+<p>See also <code><a href="#zn_005fprimroot">zn_primroot</a></code>,  <code><a href="#zn_005forder">zn_order</a></code>,  <code><a href="#ifactors">ifactors</a></code>,  <code><a href="#totient">totient</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -1455,8 +1845,8 @@ using the default option <code>factors_only : false</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1464,7 +1854,7 @@ using the default option <code>factors_only : false</code>.
 <a name="Item_003a-zn_005fprimroot_005fpretest"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>zn_primroot_pretest</b>
-<a name="IDX1181"></a>
+<a name="IDX1205"></a>
 </dt>
 <dd><p>Default value: <code>false</code> 
 </p>
@@ -1479,7 +1869,7 @@ performed.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1487,7 +1877,7 @@ performed.
 <a name="Item_003a-zn_005fprimroot_005fverbose"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>zn_primroot_verbose</b>
-<a name="IDX1182"></a>
+<a name="IDX1206"></a>
 </dt>
 <dd><p>Default value: <code>false</code> 
 </p>
@@ -1496,7 +1886,7 @@ performed.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Number-theory">Number theory</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Number-theory">Number theory</a>
 </div>
 </p></dd></dl>
 
@@ -1513,12 +1903,12 @@ performed.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

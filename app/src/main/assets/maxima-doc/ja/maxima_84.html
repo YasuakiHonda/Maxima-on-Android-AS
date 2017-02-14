@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: B. Function and Variable Index</title>
+<title>Maxima 5.39.0 Manual: 84. stringproc</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: B. Function and Variable Index">
-<meta name="keywords" content="Maxima 5.36.1 Manual: B. Function and Variable Index">
+<meta name="description" content="Maxima 5.39.0 Manual: 84. stringproc">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 84. stringproc">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,492 +72,2492 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="Function-and-Variable-Index"></a>
-<a name="SEC395"></a>
+<a name="stringproc_002dpkg"></a>
+<a name="SEC387"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_83.html#SEC394" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#INDEX0" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#INDEX0" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="appendix"> B. Function and Variable Index </h1>
+<h1 class="chapter"> 84. stringproc </h1>
 
-<table><tr><th valign="top">移動: &nbsp; </th><td><a href="#SEC395_0" class="summary-letter"><b>!</b></a>
- &nbsp; 
-<a href="#SEC395_1" class="summary-letter"><b>&quot;</b></a>
- &nbsp; 
-<a href="#SEC395_2" class="summary-letter"><b>#</b></a>
- &nbsp; 
-<a href="#SEC395_3" class="summary-letter"><b>$</b></a>
- &nbsp; 
-<a href="#SEC395_4" class="summary-letter"><b>%</b></a>
- &nbsp; 
-<a href="#SEC395_5" class="summary-letter"><b>'</b></a>
- &nbsp; 
-<a href="#SEC395_6" class="summary-letter"><b>*</b></a>
- &nbsp; 
-<a href="#SEC395_7" class="summary-letter"><b>+</b></a>
- &nbsp; 
-<a href="#SEC395_8" class="summary-letter"><b>-</b></a>
- &nbsp; 
-<a href="#SEC395_9" class="summary-letter"><b>.</b></a>
- &nbsp; 
-<a href="#SEC395_10" class="summary-letter"><b>/</b></a>
- &nbsp; 
-<a href="#SEC395_11" class="summary-letter"><b>:</b></a>
- &nbsp; 
-<a href="#SEC395_12" class="summary-letter"><b>;</b></a>
- &nbsp; 
-<a href="#SEC395_13" class="summary-letter"><b>&lt;</b></a>
- &nbsp; 
-<a href="#SEC395_14" class="summary-letter"><b>=</b></a>
- &nbsp; 
-<a href="#SEC395_15" class="summary-letter"><b>&gt;</b></a>
- &nbsp; 
-<a href="#SEC395_16" class="summary-letter"><b>?</b></a>
- &nbsp; 
-<a href="#SEC395_17" class="summary-letter"><b>@</b></a>
- &nbsp; 
-<a href="#SEC395_18" class="summary-letter"><b>[</b></a>
- &nbsp; 
-<a href="#SEC395_19" class="summary-letter"><b>\</b></a>
- &nbsp; 
-<a href="#SEC395_20" class="summary-letter"><b>]</b></a>
- &nbsp; 
-<a href="#SEC395_21" class="summary-letter"><b>^</b></a>
- &nbsp; 
-<a href="#SEC395_22" class="summary-letter"><b>_</b></a>
- &nbsp; 
-<a href="#SEC395_23" class="summary-letter"><b>`</b></a>
- &nbsp; 
-<a href="#SEC395_24" class="summary-letter"><b>|</b></a>
- &nbsp; 
-<a href="#SEC395_25" class="summary-letter"><b>~</b></a>
- &nbsp; 
-<br>
-<a href="#SEC395_26" class="summary-letter"><b>A</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_0" class="summary-letter"><b>B</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_1" class="summary-letter"><b>C</b></a>
- &nbsp; 
-<a href="maxima_86.html#INDEX1_0" class="summary-letter"><b>D</b></a>
- &nbsp; 
-<a href="maxima_87.html#INDEX2_0" class="summary-letter"><b>E</b></a>
- &nbsp; 
-<a href="maxima_88.html#INDEX3_0" class="summary-letter"><b>F</b></a>
- &nbsp; 
-<a href="maxima_89.html#INDEX4_0" class="summary-letter"><b>G</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_0" class="summary-letter"><b>H</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_1" class="summary-letter"><b>I</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_0" class="summary-letter"><b>J</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_1" class="summary-letter"><b>K</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_2" class="summary-letter"><b>L</b></a>
- &nbsp; 
-<a href="maxima_92.html#INDEX7_0" class="summary-letter"><b>M</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_0" class="summary-letter"><b>N</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_1" class="summary-letter"><b>O</b></a>
- &nbsp; 
-<a href="maxima_94.html#INDEX9_0" class="summary-letter"><b>P</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_0" class="summary-letter"><b>Q</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_1" class="summary-letter"><b>R</b></a>
- &nbsp; 
-<a href="maxima_96.html#INDEX11_0" class="summary-letter"><b>S</b></a>
- &nbsp; 
-<a href="maxima_97.html#INDEX12_0" class="summary-letter"><b>T</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_0" class="summary-letter"><b>U</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_1" class="summary-letter"><b>V</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_2" class="summary-letter"><b>W</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_0" class="summary-letter"><b>X</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_1" class="summary-letter"><b>Y</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_2" class="summary-letter"><b>Z</b></a>
- &nbsp; 
-</td></tr></table>
-<table border="0" class="index-fn">
-<tr><td></td><th align="left">見出し一覧</th><th align="left"> 項</th></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_0">!</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX307"><code>!</code></a></td><td valign="top"><a href="maxima_10.html#SEC51">10.3 Combinatorial Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX303"><code>!!</code></a></td><td valign="top"><a href="maxima_10.html#SEC51">10.3 Combinatorial Functions</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_1">&quot;</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_8.html#IDX239"><code>''</code></a></td><td valign="top"><a href="maxima_8.html#SEC45">8.1 Functions and Variables for Evaluation</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_2">#</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX226"><code>#</code></a></td><td valign="top"><a href="maxima_7.html#SEC41">7.5 Operators for Equations</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_3">$</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX17"><code>$</code></a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_4">%</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX12">%</a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX13">%%</a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_80.html#IDX2462"><code>%and</code></a></td><td valign="top"><a href="maxima_80.html#SEC380">80.1 Functions and Variables for to_poly_solve</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_46.html#IDX1437">%c</a></td><td valign="top"><a href="maxima_46.html#SEC230">46.2 Functions and Variables for contrib_ode</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX91">%e</a></td><td valign="top"><a href="maxima_5.html#SEC21">5.4 Functions and Variables for Constants</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX313">%e_to_numlog</a></td><td valign="top"><a href="maxima_10.html#SEC52">10.4 Root, Exponential and Logarithmic Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX39">%edispflag</a></td><td valign="top"><a href="maxima_4.html#SEC10">4.3 Functions and Variables for Display</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX314">%emode</a></td><td valign="top"><a href="maxima_10.html#SEC52">10.4 Root, Exponential and Logarithmic Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX315">%enumer</a></td><td valign="top"><a href="maxima_10.html#SEC52">10.4 Root, Exponential and Logarithmic Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX678"><code>%f</code></a></td><td valign="top"><a href="maxima_15.html#SEC86">15.8 Hypergeometric Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX94">%gamma</a></td><td valign="top"><a href="maxima_5.html#SEC21">5.4 Functions and Variables for Constants</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX92">%i</a></td><td valign="top"><a href="maxima_5.html#SEC21">5.4 Functions and Variables for Constants</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX330">%iargs</a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_80.html#IDX2463"><code>%if</code></a></td><td valign="top"><a href="maxima_80.html#SEC380">80.1 Functions and Variables for to_poly_solve</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_46.html#IDX1438">%k1</a></td><td valign="top"><a href="maxima_46.html#SEC230">46.2 Functions and Variables for contrib_ode</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_46.html#IDX1439">%k2</a></td><td valign="top"><a href="maxima_46.html#SEC230">46.2 Functions and Variables for contrib_ode</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX676"><code>%m</code></a></td><td valign="top"><a href="maxima_15.html#SEC86">15.8 Hypergeometric Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_80.html#IDX2464"><code>%or</code></a></td><td valign="top"><a href="maxima_80.html#SEC380">80.1 Functions and Variables for to_poly_solve</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX99">%phi</a></td><td valign="top"><a href="maxima_5.html#SEC21">5.4 Functions and Variables for Constants</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX100">%pi</a></td><td valign="top"><a href="maxima_5.html#SEC21">5.4 Functions and Variables for Constants</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX329">%piargs</a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_20.html#IDX769">%rnum_list</a></td><td valign="top"><a href="maxima_20.html#SEC104">20.1 Functions and Variables for Equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX625"><code>%s</code></a></td><td valign="top"><a href="maxima_15.html#SEC80">15.2 Bessel Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX14"><code>%th</code></a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_81.html#IDX2488">%unitexpand</a></td><td valign="top"><a href="maxima_81.html#SEC383">81.2 Functions and Variables for Units</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX677"><code>%w</code></a></td><td valign="top"><a href="maxima_15.html#SEC86">15.8 Hypergeometric Functions</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_5">'</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_8.html#IDX238"><code>'</code></a></td><td valign="top"><a href="maxima_8.html#SEC45">8.1 Functions and Variables for Evaluation</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_6">*</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX213"><code>*</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX216"><code>**</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_7">+</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX211"><code>+</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_8">-</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX212"><code>-</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_9">.</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX218"><code>.</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_10">/</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX214"><code>/</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_11">:</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX228"><code>:</code></a></td><td valign="top"><a href="maxima_7.html#SEC42">7.6 Assignment operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX229"><code>::</code></a></td><td valign="top"><a href="maxima_7.html#SEC42">7.6 Assignment operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX230"><code>::=</code></a></td><td valign="top"><a href="maxima_7.html#SEC42">7.6 Assignment operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX231"><code>:=</code></a></td><td valign="top"><a href="maxima_7.html#SEC42">7.6 Assignment operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_12">;</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX18"><code>;</code></a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_13">&lt;</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX219"><code>&lt;</code></a></td><td valign="top"><a href="maxima_7.html#SEC39">7.3 Relational operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX220"><code>&lt;=</code></a></td><td valign="top"><a href="maxima_7.html#SEC39">7.3 Relational operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_14">=</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX227"><code>=</code></a></td><td valign="top"><a href="maxima_7.html#SEC41">7.5 Operators for Equations</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_15">&gt;</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX222"><code>&gt;</code></a></td><td valign="top"><a href="maxima_7.html#SEC39">7.3 Relational operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX221"><code>&gt;=</code></a></td><td valign="top"><a href="maxima_7.html#SEC39">7.3 Relational operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_16">?</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX15"><code>?</code></a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX16"><code>??</code></a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_17">@</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX156"><code>@</code></a></td><td valign="top"><a href="maxima_5.html#SEC29">5.8.2 Functions and Variables for Structures</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_18">[</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX105">[</a></td><td valign="top"><a href="maxima_5.html#SEC24">5.5.2 Functions and Variables for Lists</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_19">\</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#SEC18">\</a></td><td valign="top"><a href="maxima_5.html#SEC18">5.2.1 Introduction to Strings</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_20">]</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX106">]</a></td><td valign="top"><a href="maxima_5.html#SEC24">5.5.2 Functions and Variables for Lists</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_21">^</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX215"><code>^</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX217"><code>^^</code></a></td><td valign="top"><a href="maxima_7.html#SEC38">7.2 Arithmetic operators</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_22">_</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX11">_</a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX10">__</a></td><td valign="top"><a href="maxima_4.html#SEC9">4.2 Functions and Variables for Command Line</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_23">`</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_53.html#IDX1936"><code>`</code></a></td><td valign="top"><a href="maxima_53.html#SEC270">53.3 Functions and Variables for ezunits</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_53.html#IDX1937"><code>`</code></a></td><td valign="top"><a href="maxima_53.html#SEC270">53.3 Functions and Variables for ezunits</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_24">|</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX991">|</a></td><td valign="top"><a href="maxima_25.html#SEC134">25.2.7 Exterior algebra</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_25">~</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX990">~</a></td><td valign="top"><a href="maxima_25.html#SEC134">25.2.7 Exterior algebra</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="SEC395_26">A</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_27.html#IDX1078"><code>abasep</code></a></td><td valign="top"><a href="maxima_27.html#SEC154">27.2 Functions and Variables for atensor</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX284"><code>abs</code></a></td><td valign="top"><a href="maxima_10.html#SEC49">10.1 Functions for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_4.html#IDX40">absboxchar</a></td><td valign="top"><a href="maxima_4.html#SEC10">4.3 Functions and Variables for Display</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1113"><code>absint</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_32.html#IDX1241"><code>absolute_real_time</code></a></td><td valign="top"><a href="maxima_32.html#SEC179">32.3 Functions and Variables for Runtime Environment</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX331"><code>acos</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX332"><code>acosh</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX333"><code>acot</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX334"><code>acoth</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX335"><code>acsc</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX336"><code>acsch</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX405"><code>activate</code></a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX406">activecontexts</a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_12.html#IDX446">adapt_depth</a></td><td valign="top"><a href="maxima_12.html#SEC66">12.4 Plotting Options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1739">adapt_depth</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2111"><code>add_edge</code></a></td><td valign="top"><a href="maxima_58.html#SEC289">58.2.3 Modifying graphs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2112"><code>add_edges</code></a></td><td valign="top"><a href="maxima_58.html#SEC289">58.2.3 Modifying graphs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2113"><code>add_vertex</code></a></td><td valign="top"><a href="maxima_58.html#SEC289">58.2.3 Modifying graphs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2114"><code>add_vertices</code></a></td><td valign="top"><a href="maxima_58.html#SEC289">58.2.3 Modifying graphs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_23.html#IDX826"><code>addcol</code></a></td><td valign="top"><a href="maxima_23.html#SEC119">23.2 Functions and Variables for Matrices and Linear Algebra</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_9.html#IDX248">additive</a></td><td valign="top"><a href="maxima_9.html#SEC47">9.1 Functions and Variables for Simplification</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_65.html#IDX2225"><code>addmatrices</code></a></td><td valign="top"><a href="maxima_65.html#SEC316">65.2 Functions and Variables for linearalgebra</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_23.html#IDX827"><code>addrow</code></a></td><td valign="top"><a href="maxima_23.html#SEC119">23.2 Functions and Variables for Matrices and Linear Algebra</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_27.html#IDX1072">adim</a></td><td valign="top"><a href="maxima_27.html#SEC154">27.2 Functions and Variables for atensor</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2040"><code>adjacency_matrix</code></a></td><td valign="top"><a href="maxima_58.html#SEC288">58.2.2 Graph properties</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_35.html#IDX1274"><code>adjoin</code></a></td><td valign="top"><a href="maxima_35.html#SEC193">35.2 Functions and Variables for Sets</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_23.html#IDX828"><code>adjoint</code></a></td><td valign="top"><a href="maxima_23.html#SEC119">23.2 Functions and Variables for Matrices and Linear Algebra</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_27.html#IDX1076"><code>af</code></a></td><td valign="top"><a href="maxima_27.html#SEC154">27.2 Functions and Variables for atensor</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_27.html#IDX1073">aform</a></td><td valign="top"><a href="maxima_27.html#SEC154">27.2 Functions and Variables for atensor</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_75.html#IDX2354"><code>agd</code></a></td><td valign="top"><a href="maxima_75.html#SEC359">75.4 Package functs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX626"><code>airy_ai</code></a></td><td valign="top"><a href="maxima_15.html#SEC81">15.3 Airy Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX628"><code>airy_bi</code></a></td><td valign="top"><a href="maxima_15.html#SEC81">15.3 Airy Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX627"><code>airy_dai</code></a></td><td valign="top"><a href="maxima_15.html#SEC81">15.3 Airy Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX629"><code>airy_dbi</code></a></td><td valign="top"><a href="maxima_15.html#SEC81">15.3 Airy Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX548">algebraic</a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_20.html#IDX770">algepsilon</a></td><td valign="top"><a href="maxima_20.html#SEC104">20.1 Functions and Variables for Equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_20.html#IDX771">algexact</a></td><td valign="top"><a href="maxima_20.html#SEC104">20.1 Functions and Variables for Equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_20.html#IDX772"><code>algsys</code></a></td><td valign="top"><a href="maxima_20.html#SEC104">20.1 Functions and Variables for Equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_6.html#IDX157"><code>alias</code></a></td><td valign="top"><a href="maxima_6.html#SEC35">6.5 Functions and Variables for Expressions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_6.html#IDX158">aliases</a></td><td valign="top"><a href="maxima_6.html#SEC35">6.5 Functions and Variables for Expressions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_24.html#IDX917">all_dotsimp_denoms</a></td><td valign="top"><a href="maxima_24.html#SEC122">24.2 Functions and Variables for Affine</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_6.html#IDX159">allbut</a></td><td valign="top"><a href="maxima_6.html#SEC35">6.5 Functions and Variables for Expressions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1740">allocation</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_20.html#IDX773"><code>allroots</code></a></td><td valign="top"><a href="maxima_20.html#SEC104">20.1 Functions and Variables for Equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX945">allsym</a></td><td valign="top"><a href="maxima_25.html#SEC129">25.2.2 Tensor symmetries</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX370">alphabetic</a></td><td valign="top"><a href="maxima_11.html#SEC59">11.2 Functions and Variables for Properties</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_79.html#IDX2407"><code>alphacharp</code></a></td><td valign="top"><a href="maxima_79.html#SEC377">79.3 Functions and Variables for characters</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_79.html#IDX2408"><code>alphanumericp</code></a></td><td valign="top"><a href="maxima_79.html#SEC377">79.3 Functions and Variables for characters</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_55.html#IDX1968"><code>amortization</code></a></td><td valign="top"><a href="maxima_55.html#SEC275">55.2 Functions and Variables for finance</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_7.html#IDX223"><code>and</code></a></td><td valign="top"><a href="maxima_7.html#SEC40">7.4 Logical operators</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_52.html#IDX1909">animation</a></td><td valign="top"><a href="maxima_52.html#SEC266">52.3.3 Scene object's options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_55.html#IDX1965"><code>annuity_fv</code></a></td><td valign="top"><a href="maxima_55.html#SEC275">55.2 Functions and Variables for finance</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_55.html#IDX1964"><code>annuity_pv</code></a></td><td valign="top"><a href="maxima_55.html#SEC275">55.2 Functions and Variables for finance</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_18.html#IDX723"><code>antid</code></a></td><td valign="top"><a href="maxima_18.html#SEC96">18.1 Functions and Variables for Differentiation</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_18.html#IDX724"><code>antidiff</code></a></td><td valign="top"><a href="maxima_18.html#SEC96">18.1 Functions and Variables for Differentiation</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_82.html#IDX2489"><code>AntiDifference</code></a></td><td valign="top"><a href="maxima_82.html#SEC389">82.2 Functions and Variables for zeilberger</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_9.html#IDX249">antisymmetric</a></td><td valign="top"><a href="maxima_9.html#SEC47">9.1 Functions and Variables for Simplification</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX107"><code>append</code></a></td><td valign="top"><a href="maxima_5.html#SEC24">5.5.2 Functions and Variables for Lists</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX510"><code>appendfile</code></a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_36.html#IDX1325"><code>apply</code></a></td><td valign="top"><a href="maxima_36.html#SEC200">36.4 Functions and Variables for Function Definition</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_34.html#IDX1253"><code>apply1</code></a></td><td valign="top"><a href="maxima_34.html#SEC186">34.2 Functions and Variables for Rules and Patterns</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_34.html#IDX1254"><code>apply2</code></a></td><td valign="top"><a href="maxima_34.html#SEC186">34.2 Functions and Variables for Rules and Patterns</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_34.html#IDX1255"><code>applyb1</code></a></td><td valign="top"><a href="maxima_34.html#SEC186">34.2 Functions and Variables for Rules and Patterns</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_3.html#IDX5"><code>apropos</code></a></td><td valign="top"><a href="maxima_3.html#SEC6">3.2 Functions and Variables for Help</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_6.html#IDX160"><code>args</code></a></td><td valign="top"><a href="maxima_6.html#SEC35">6.5 Functions and Variables for Expressions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_55.html#IDX1969"><code>arit_amortization</code></a></td><td valign="top"><a href="maxima_55.html#SEC275">55.2 Functions and Variables for finance</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_75.html#IDX2347"><code>arithmetic</code></a></td><td valign="top"><a href="maxima_75.html#SEC359">75.4 Package functs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_75.html#IDX2350"><code>arithsum</code></a></td><td valign="top"><a href="maxima_75.html#SEC359">75.4 Package functs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX139"><code>array</code></a></td><td valign="top"><a href="maxima_5.html#SEC26">5.7 Functions and Variables for Arrays</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX140"><code>arrayapply</code></a></td><td valign="top"><a href="maxima_5.html#SEC26">5.7 Functions and Variables for Arrays</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX141"><code>arrayinfo</code></a></td><td valign="top"><a href="maxima_5.html#SEC26">5.7 Functions and Variables for Arrays</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX142"><code>arraymake</code></a></td><td valign="top"><a href="maxima_5.html#SEC26">5.7 Functions and Variables for Arrays</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX143">arrays</a></td><td valign="top"><a href="maxima_5.html#SEC26">5.7 Functions and Variables for Arrays</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX144"><code>arraysetapply</code></a></td><td valign="top"><a href="maxima_5.html#SEC26">5.7 Functions and Variables for Arrays</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_79.html#IDX2409"><code>ascii</code></a></td><td valign="top"><a href="maxima_79.html#SEC377">79.3 Functions and Variables for characters</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX337"><code>asec</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX338"><code>asech</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX339"><code>asin</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX340"><code>asinh</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_33.html#IDX1244">askexp</a></td><td valign="top"><a href="maxima_33.html#SEC183">33.3 Functions and Variables for Miscellaneous Options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX407"><code>askinteger</code></a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX408"><code>asksign</code></a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX108"><code>assoc</code></a></td><td valign="top"><a href="maxima_5.html#SEC24">5.5.2 Functions and Variables for Lists</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_72.html#IDX2299"><code>assoc_legendre_p</code></a></td><td valign="top"><a href="maxima_72.html#SEC346">72.2 Functions and Variables for orthogonal polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_72.html#IDX2300"><code>assoc_legendre_q</code></a></td><td valign="top"><a href="maxima_72.html#SEC346">72.2 Functions and Variables for orthogonal polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX409"><code>assume</code></a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_70.html#IDX2288"><code>assume_external_byte_order</code></a></td><td valign="top"><a href="maxima_70.html#SEC335">70.3 Functions and Variables for binary input and output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX411">assume_pos</a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX412">assume_pos_pred</a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX410">assumescalar</a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_27.html#IDX1074">asymbol</a></td><td valign="top"><a href="maxima_27.html#SEC154">27.2 Functions and Variables for atensor</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_40.html#IDX1416"><code>asympa</code></a></td><td valign="top"><a href="maxima_40.html#SEC214">40.1 Introduction to asympa</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_18.html#IDX725"><code>at</code></a></td><td valign="top"><a href="maxima_18.html#SEC96">18.1 Functions and Variables for Differentiation</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX341"><code>atan</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX342"><code>atan2</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX343"><code>atanh</code></a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_27.html#IDX1071"><code>atensimp</code></a></td><td valign="top"><a href="maxima_27.html#SEC154">27.2 Functions and Variables for atensor</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_6.html#IDX161"><code>atom</code></a></td><td valign="top"><a href="maxima_6.html#SEC35">6.5 Functions and Variables for Expressions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_18.html#IDX726">atomgrad</a></td><td valign="top"><a href="maxima_18.html#SEC96">18.1 Functions and Variables for Differentiation</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX344">atrig1</a></td><td valign="top"><a href="maxima_10.html#SEC55">10.5.2 Functions and Variables for Trigonometric</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_18.html#IDX727"><code>atvalue</code></a></td><td valign="top"><a href="maxima_18.html#SEC96">18.1 Functions and Variables for Differentiation</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_23.html#IDX829"><code>augcoefmatrix</code></a></td><td valign="top"><a href="maxima_23.html#SEC119">23.2 Functions and Variables for Matrices and Linear Algebra</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_41.html#IDX1417"><code>augmented_lagrangian_method</code></a></td><td valign="top"><a href="maxima_41.html#SEC217">41.1 Functions and Variables for augmented_lagrangian</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_27.html#IDX1077"><code>av</code></a></td><td valign="top"><a href="maxima_27.html#SEC154">27.2 Functions and Variables for atensor</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2041"><code>average_degree</code></a></td><td valign="top"><a href="maxima_58.html#SEC288">58.2.2 Graph properties</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_12.html#IDX447">axes</a></td><td valign="top"><a href="maxima_12.html#SEC66">12.4 Plotting Options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1741">axis_3d</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1742">axis_bottom</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1743">axis_left</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1744">axis_right</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1745">axis_top</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_12.html#IDX448">azimuth</a></td><td valign="top"><a href="maxima_12.html#SEC66">12.4 Plotting Options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_52.html#IDX1896">azimuth</a></td><td valign="top"><a href="maxima_52.html#SEC264">52.3.1 Scene options</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC388">84.1 Introduction to String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC389">84.2 Input and Output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC390">84.3 Characters</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC391">84.4 String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC392">84.5 Octets and Utilities for Cryptography</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
 </table>
-<table><tr><th valign="top">移動: &nbsp; </th><td><a href="#SEC395_0" class="summary-letter"><b>!</b></a>
- &nbsp; 
-<a href="#SEC395_1" class="summary-letter"><b>&quot;</b></a>
- &nbsp; 
-<a href="#SEC395_2" class="summary-letter"><b>#</b></a>
- &nbsp; 
-<a href="#SEC395_3" class="summary-letter"><b>$</b></a>
- &nbsp; 
-<a href="#SEC395_4" class="summary-letter"><b>%</b></a>
- &nbsp; 
-<a href="#SEC395_5" class="summary-letter"><b>'</b></a>
- &nbsp; 
-<a href="#SEC395_6" class="summary-letter"><b>*</b></a>
- &nbsp; 
-<a href="#SEC395_7" class="summary-letter"><b>+</b></a>
- &nbsp; 
-<a href="#SEC395_8" class="summary-letter"><b>-</b></a>
- &nbsp; 
-<a href="#SEC395_9" class="summary-letter"><b>.</b></a>
- &nbsp; 
-<a href="#SEC395_10" class="summary-letter"><b>/</b></a>
- &nbsp; 
-<a href="#SEC395_11" class="summary-letter"><b>:</b></a>
- &nbsp; 
-<a href="#SEC395_12" class="summary-letter"><b>;</b></a>
- &nbsp; 
-<a href="#SEC395_13" class="summary-letter"><b>&lt;</b></a>
- &nbsp; 
-<a href="#SEC395_14" class="summary-letter"><b>=</b></a>
- &nbsp; 
-<a href="#SEC395_15" class="summary-letter"><b>&gt;</b></a>
- &nbsp; 
-<a href="#SEC395_16" class="summary-letter"><b>?</b></a>
- &nbsp; 
-<a href="#SEC395_17" class="summary-letter"><b>@</b></a>
- &nbsp; 
-<a href="#SEC395_18" class="summary-letter"><b>[</b></a>
- &nbsp; 
-<a href="#SEC395_19" class="summary-letter"><b>\</b></a>
- &nbsp; 
-<a href="#SEC395_20" class="summary-letter"><b>]</b></a>
- &nbsp; 
-<a href="#SEC395_21" class="summary-letter"><b>^</b></a>
- &nbsp; 
-<a href="#SEC395_22" class="summary-letter"><b>_</b></a>
- &nbsp; 
-<a href="#SEC395_23" class="summary-letter"><b>`</b></a>
- &nbsp; 
-<a href="#SEC395_24" class="summary-letter"><b>|</b></a>
- &nbsp; 
-<a href="#SEC395_25" class="summary-letter"><b>~</b></a>
- &nbsp; 
-<br>
-<a href="#SEC395_26" class="summary-letter"><b>A</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_0" class="summary-letter"><b>B</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_1" class="summary-letter"><b>C</b></a>
- &nbsp; 
-<a href="maxima_86.html#INDEX1_0" class="summary-letter"><b>D</b></a>
- &nbsp; 
-<a href="maxima_87.html#INDEX2_0" class="summary-letter"><b>E</b></a>
- &nbsp; 
-<a href="maxima_88.html#INDEX3_0" class="summary-letter"><b>F</b></a>
- &nbsp; 
-<a href="maxima_89.html#INDEX4_0" class="summary-letter"><b>G</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_0" class="summary-letter"><b>H</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_1" class="summary-letter"><b>I</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_0" class="summary-letter"><b>J</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_1" class="summary-letter"><b>K</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_2" class="summary-letter"><b>L</b></a>
- &nbsp; 
-<a href="maxima_92.html#INDEX7_0" class="summary-letter"><b>M</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_0" class="summary-letter"><b>N</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_1" class="summary-letter"><b>O</b></a>
- &nbsp; 
-<a href="maxima_94.html#INDEX9_0" class="summary-letter"><b>P</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_0" class="summary-letter"><b>Q</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_1" class="summary-letter"><b>R</b></a>
- &nbsp; 
-<a href="maxima_96.html#INDEX11_0" class="summary-letter"><b>S</b></a>
- &nbsp; 
-<a href="maxima_97.html#INDEX12_0" class="summary-letter"><b>T</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_0" class="summary-letter"><b>U</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_1" class="summary-letter"><b>V</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_2" class="summary-letter"><b>W</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_0" class="summary-letter"><b>X</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_1" class="summary-letter"><b>Y</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_2" class="summary-letter"><b>Z</b></a>
- &nbsp; 
-</td></tr></table>
-<hr size="6">
+
+<p><a name="Item_003a-Introduction-to-String-Processing"></a>
+</p><hr size="6">
+<a name="Introduction-to-String-Processing"></a>
+<a name="SEC388"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#INDEX0" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC387" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC389" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 84.1 Introduction to String Processing </h2>
+
+<p>パッケージ <code>stringproc</code>はフォーマットやエンコードやデータストリームを含む文字列と文字を処理する関数を含みます。
+例えば base64や hash関数といった暗号のためのいくつかのツールがこのパッケージを締めくくります。
+</p>
+<p>これは <code>load(stringproc)</code>を介して直接ロードもできますし、関数の1つを使うと自動的にロードされます。
+</p>
+<p>質問やバグレポートは、著者に連絡してください。
+以下のコマンドは著者の eメールアドレスを印字します。
+</p>
+<p><code>printf(true, &quot;~{~a~}@gmail.com&quot;, split(sdowncase(&quot;Volker van Nek&quot;)))$</code>
+</p>
+<p>例えば <code>&quot;Text&quot;</code>とタイプすることで文字列が構成されます。
+オプション変数 <code>stringdisp</code>がデフォルトの <code>false</code>に設定されている時、
+ダブルクオートは印字されません。
+<a href="#stringp">stringp</a>は オブジェクトが文字列かどうかのテストです。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) str: &quot;Text&quot;;
+(%o1)                         Text
+(%i2) stringp(str);
+(%o2)                         true
+</pre></td></tr></table>
+<p>文字は、長さ1の文字列で表されます。
+<a href="#charp">charp</a>は対応するテストです。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) char: &quot;e&quot;;
+(%o1)                           e
+(%i2) charp(char);
+(%o2)                         true
+</pre></td></tr></table>
+<p>Maximaでは文字列の位置インデックスはリストと同様 1から始まり、
+以下の一貫性が成り立ちます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) is(charat(&quot;Lisp&quot;,1) = charlist(&quot;Lisp&quot;)[1]);
+(%o1)                         true
+</pre></td></tr></table>
+<p>文字列は Maximaの式を含むかもしれません。
+これらは <a href="#parse_005fstring">parse_string</a>でパースできます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) map(parse_string, [&quot;42&quot; ,&quot;sqrt(2)&quot;, &quot;%pi&quot;]);
+(%o1)                   [42, sqrt(2), %pi]
+(%i2) map('float, %);
+(%o2)        [42.0, 1.414213562373095, 3.141592653589793]
+</pre></td></tr></table>
+<p>文字列は文字として処理したり、オクテットとしてバイナリ形式で処理できます。
+変換の関数は <a href="#string_005fto_005foctets">string_to_octets</a>と<a href="#octets_005fto_005fstring">octets_to_string</a>です。
+使用できるエンコードはプラットフォームやアプリケーション、裏にあるLispに依存します。
+(以下はSBCLでコンパイルされた GNU/Linux上の Maximaを見せます)
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) obase: 16.$
+(%i2) string_to_octets(&quot;$&pound;&euro;&quot;, &quot;cp1252&quot;);
+(%o2)                     [24, 0A3, 80]
+(%i3) string_to_octets(&quot;$&pound;&euro;&quot;, &quot;utf-8&quot;);
+(%o3)               [24, 0C2, 0A3, 0E2, 82, 0AC]
+</pre></td></tr></table>
+<p>文字列は文字ストリームに書かれたり、オクテットとしてバイナリストリームに書かれたりします。
+以下の例は文字のファイル入出力を例示します。
+</p>
+<p><a href="#openw">openw</a>はファイルへの出力ストリームを返します。
+<a href="#printf">printf</a>はそのファイルにフォーマットされたものを書き込みます。
+例えば、<a href="#close">close</a>で
+ストリームに含まれるすべての文字はファイルに書き込まれます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) s: openw(&quot;file.txt&quot;);
+(%o1)                #&lt;output stream file.txt&gt;
+(%i2) printf(s, &quot;~%~d ~f ~a ~a ~f ~e ~a~%&quot;,
+42, 1.234, sqrt(2), %pi, 1.0e-2, 1.0e-2, 1.0b-2)$
+(%i3) close(s)$
+</pre></td></tr></table>
+<p>そして <a href="#openr">openr</a>は以前使ったファイルから入力ストリームを返します。
+<a href="#readline">readline</a>は文字列として読み込んだ行を返します。
+文字列は、例えば <a href="#split">split</a>や <a href="#tokens">tokens</a>でトークン化され、
+最終的に <a href="#parse_005fstring">parse_string</a>でパースできます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) s: openr(&quot;file.txt&quot;);
+(%o4)                 #&lt;input stream file.txt&gt;
+(%i5) readline(s);
+(%o5)          42 1.234 sqrt(2) %pi 0.01 1.0E-2 1.0b-2
+(%i6) map(parse_string, split(%));
+(%o6)       [42, 1.234, sqrt(2), %pi, 0.01, 0.01, 1.0b-2]
+(%i7) close(s)$
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Strings">Strings</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+
+<p><a name="Item_003a-Input-and-Output"></a>
+</p><hr size="6">
+<a name="Input-and-Output"></a>
+<a name="SEC389"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC388" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC390" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 84.2 Input and Output </h2>
+
+<p>例: ファイルへのフォーマットされた印字。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) s: openw(&quot;file.txt&quot;);
+(%o1)                      #&lt;output stream file.txt&gt;
+(%i2) control:
+&quot;~2tAn atom: ~20t~a~%~2tand a list: ~20t~{~r ~}~%~2t\
+and an integer: ~20t~d~%&quot;$
+(%i3) printf( s,control, 'true,[1,2,3],42 )$
+(%o3)                                false
+(%i4) close(s);
+(%o4)                                true
+(%i5) s: openr(&quot;file.txt&quot;);
+(%o5)                      #&lt;input stream file.txt&gt;
+(%i6) while stringp( tmp:readline(s) ) do print(tmp)$
+  An atom:          true
+  and a list:       one two three
+  and an integer:   42
+(%i7) close(s)$
+</pre></td></tr></table>
+<p><a name="close"></a>
+<a name="Item_003a-close"></a>
+</p><dl>
+<dt><u>関数:</u> <b>close</b><i> (<var>stream</var>)</i>
+<a name="IDX2438"></a>
+</dt>
+<dd><p><var>stream</var>を閉じて、もし <var>stream</var>が開いていたら
+<code>true</code>を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="flength"></a>
+<a name="Item_003a-flength"></a>
+</p><dl>
+<dt><u>関数:</u> <b>flength</b><i> (<var>stream</var>)</i>
+<a name="IDX2439"></a>
+</dt>
+<dd><p><var>stream</var>はファイルからかファイルへの開いたストリームでなかればいけません。
+その時 <code>flength</code>はこのファイルの中に現在存在するバイト数を返します。
+</p>
+<p>例: <a href="#writebyte">writebyte</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="flush_005foutput"></a>
+<a name="Item_003a-flush_005foutput"></a>
+</p><dl>
+<dt><u>関数:</u> <b>flush_output</b><i> (<var>stream</var>)</i>
+<a name="IDX2440"></a>
+</dt>
+<dd><p><var>stream</var>をフラッシュします。
+ここで <var>stream</var>はファイルへの出力ストリームでなければいけません。
+</p>
+<p>例: <a href="#writebyte">writebyte</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="fposition"></a>
+<a name="Item_003a-fposition"></a>
+</p><dl>
+<dt><u>関数:</u> <b>fposition</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fposition</tt> (<var>stream</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fposition</tt> (<var>stream</var>, <var>pos</var>)</i>
+<a name="IDX2441"></a>
+</dt>
+<dd><p>もし <var>pos</var>が使われてないなら、 <var>stream</var>の中の現在位置を返します。
+もし <var>pos</var>が使われているなら、
+<code>fposition</code>は <var>stream</var>の中の位置を設定します。
+<var>pos</var>は正の数でなければいけません。
+</p>
+<p>データストリームの位置は文字列やリスト同様、1から始まります。
+すなわち、 <var>stream</var>の最初の要素は位置 1にあります。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="freshline"></a>
+<a name="Item_003a-freshline"></a>
+</p><dl>
+<dt><u>関数:</u> <b>freshline</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>freshline</tt> ()  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>freshline</tt> (<var>stream</var>)</i>
+<a name="IDX2442"></a>
+</dt>
+<dd><p>もし位置が行の最初でないなら
+標準出力ストリームに改行を書き込み、 <code>true</code>を返します。
+オプション引数 <var>stream</var>を使うと、そのストリームに改行を書き込みます。
+<code>freshline()</code>が期待通りに動かない場合がいくつかあります。
+</p>
+<p><code>newline</code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="get_005foutput_005fstream_005fstring"></a>
+<a name="Item_003a-get_005foutput_005fstream_005fstring"></a>
+</p><dl>
+<dt><u>関数:</u> <b>get_output_stream_string</b><i> (<var>stream</var>)</i>
+<a name="IDX2443"></a>
+</dt>
+<dd><p>現在 <var>stream</var>に存在するすべての文字を含む文字列を返します。
+<var>stream</var>はオープンな文字列出力ストリームでなければいけません。
+戻り値の文字は <var>stream</var>から取り除かれます。
+</p>
+<p>例: <a href="#make_005fstring_005foutput_005fstream">make_string_output_stream</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="make_005fstring_005finput_005fstream"></a>
+<a name="Item_003a-make_005fstring_005finput_005fstream"></a>
+</p><dl>
+<dt><u>関数:</u> <b>make_string_input_stream</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_string_input_stream</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_string_input_stream</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_string_input_stream</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2444"></a>
+</dt>
+<dd><p><var>string</var>の一部とファイルの終了を含む入力ストリームを返します。
+オプション引数がない場合、ストリームは全体の文字列を含み、一番目の文字の前に位置されます。
+<var>start</var>と <var>end</var>はストリームに含まれた部分文字列を定義します。
+一番目の文字は位置 1で得られます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) istream : make_string_input_stream(&quot;text&quot;, 1, 4);
+(%o1)              #&lt;string-input stream from &quot;text&quot;&gt;
+(%i2) (while (c : readchar(istream)) # false do sprint(c), newline())$
+t e x
+(%i3) close(istream)$
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="make_005fstring_005foutput_005fstream"></a>
+<a name="Item_003a-make_005fstring_005foutput_005fstream"></a>
+</p><dl>
+<dt><u>関数:</u> <b>make_string_output_stream</b><i> ()</i>
+<a name="IDX2445"></a>
+</dt>
+<dd><p>文字を受け付ける出力ストリームを返します。
+このストリームに現在存在する文字は <a href="#get_005foutput_005fstream_005fstring">get_output_stream_string</a>を使って取り出すことができます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ostream : make_string_output_stream();
+(%o1)               #&lt;string-output stream 09622ea0&gt;
+(%i2) printf(ostream, &quot;foo&quot;)$
+
+(%i3) printf(ostream, &quot;bar&quot;)$
+
+(%i4) string : get_output_stream_string(ostream);
+(%o4)                            foobar
+(%i5) printf(ostream, &quot;baz&quot;)$
+
+(%i6) string : get_output_stream_string(ostream);
+(%o6)                              baz
+(%i7) close(ostream)$
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="newline"></a>
+<a name="Item_003a-newline"></a>
+</p><dl>
+<dt><u>関数:</u> <b>newline</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>newline</tt> ()  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>newline</tt> (<var>stream</var>)</i>
+<a name="IDX2446"></a>
+</dt>
+<dd><p>標準出力ストリームに改行を書き込みます。
+オプション引数 <var>stream</var>を使うと、そのストリームに改行を書き込みます。
+<code>newline()</code>が期待通りに動かないいくつかの場合があります。
+</p>
+<p><code>newline()</code>の使用の例に関しては、
+<a href="#sprint">sprint</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="opena"></a>
+<a name="Item_003a-opena"></a>
+</p><dl>
+<dt><u>関数:</u> <b>opena</b><i> (<var>file</var>)</i>
+<a name="IDX2447"></a>
+</dt>
+<dd><p><var>file</var>への文字出力ストリームを返します。
+もし存在しているファイルを開いたら、
+<code>opena</code>は <code>file</code>の終わりに要素を追加します。
+</p>
+<p>バイナリ出力に関しては <a href="maxima_73.html#SEC341">opena_binary</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="openr"></a>
+<a name="Item_003a-openr"></a>
+</p><dl>
+<dt><u>関数:</u> <b>openr</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>openr</tt> (<var>file</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>openr</tt> (<var>file</var>, <var>encoding</var>)</i>
+<a name="IDX2448"></a>
+</dt>
+<dd><p><var>file</var>への文字入力ストリームを返します。
+<code>openr</code>は <var>file</var>が存在すること仮定します。
+もしファイルを読んでエンコーディングについてのLispエラーが出たら、
+引数 <var>encoding</var>として正しい文字列を渡すことが役に立つかもしれません。
+利用可能なエンコーディングとそれらの名前は使用しているlispに依存します。
+sbclでは適切な文字列のリストは
+<a href="http://www.sbcl.org/manual/#External-Formats">http://www.sbcl.org/manual/#External-Formats</a>
+で確認することができます。
+</p>
+<p>バイナリ出力に関しては <a href="maxima_73.html#SEC341">openr_binary</a>を参照してください。
+<code><a href="#close">close</a></code>, <code><a href="#openw">openw</a></code>も参照してください。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) istream : openr(&quot;data.txt&quot;,&quot;EUC-JP&quot;);
+(%o1)     #&lt;FD-STREAM for &quot;file /home/gunter/data.txt&quot; {10099A3AE3}&gt;
+(%i2) close(istream);
+(%o2)                                true
+</pre></td></tr></table>
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="openw"></a>
+<a name="Item_003a-openw"></a>
+</p><dl>
+<dt><u>関数:</u> <b>openw</b><i> (<var>file</var>)</i>
+<a name="IDX2449"></a>
+</dt>
+<dd><p><var>file</var>への文字出力ストリームを返します。
+もし <var>file</var>が存在しないなら、生成されます。
+もし存在しているファイルを開いたら、
+<code>openw</code>は <var>file</var>を破壊的に変更します。
+</p>
+<p>バイナリ出力に関しては <a href="maxima_73.html#SEC341">openw_binary</a>を参照してください。
+</p>
+<p><code><a href="#close">close</a></code>, <code><a href="#openr">openr</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="printf"></a>
+<a name="Item_003a-printf"></a>
+</p><dl>
+<dt><u>関数:</u> <b>printf</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>printf</tt> (<var>dest</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>printf</tt> (<var>dest</var>, <var>string</var>, <var>expr_1</var>, ..., <var>expr_n</var>)</i>
+<a name="IDX2450"></a>
+</dt>
+<dd><p>制御文字列 <var>string</var>の文字を出力し、ティルデがディレクティブを導入することを観察することで
+フォーマットされた出力を生成します。
+ティルデの後の文字は、前置パラメータと修飾子が先立つこともありますが、どの種類のフォーマットが望まれているか指定します。
+ほとんどのディレクティブは1つか複数の要素の引数 <var>expr_1</var>, ..., <var>expr_n</var>を使い、出力を生成します。
+</p>
+<p>もし <var>dest</var>がストリームか <code>true</code>なら、 <code>printf</code>は <code>false</code>を返します。
+そうでなければ、 <code>printf</code>は出力を含む文字列を返します。
+デフォルトでは、ストリーム <var>stdin</var>, <var>stdout</var>, <var>stderr</var>が定義されています。
+もしmaximaがサーバーとして走っているなら
+(これは もし maximaがグラフィカルユーザーインタフェースと通信しているなら通常のケースです)、
+<code>setup-client</code>は <var>old_stdout</var>と <var>old_stderr</var>も定義します。
+</p>
+<p><code>printf</code>は Maximaの Common Lisp 関数 <code>format</code>を提供します。
+以下の例はこれら二つの関数の一般的な関係を具体的に示します。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) printf(true, &quot;R~dD~d~%&quot;, 2, 2);
+R2D2
+(%o1)                                false
+(%i2) :lisp (format t &quot;R~dD~d~%&quot; 2 2)
+R2D2
+NIL
+</pre></td></tr></table>
+<p>以下の記述は <code>printf</code>の可能性の雑なスケッチに限定されます。
+</p>
+<p>Lisp関数 <code>format</code>は詳細は多くの参考書籍に記述されています。
+例えば、 Guy L. Steeleによる無料のオンラインマニュアル &quot;Common Lisp the Language&quot;が役立つでしょう。
+それの chapter 22.3.3を参照してください。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">   ~%       改行
+   ~&amp;       行のフレッシュ
+   ~t       タブ
+   ~$       通貨記号
+   ~d       10進整数
+   ~b       2進整数
+   ~o       8進整数
+   ~x       16進整数
+   ~br      b進整数
+   ~r       整数を一字一字
+   ~p       複数形
+   ~f       浮動小数点
+   ~e       科学的記数法
+   ~g       大きさに応じて~fまたは~e
+   ~h       多倍長浮動小数点
+   ~a       Maxima関数文字列を使う
+   ~s       ~aと同様, しかし&quot;ダブルコーテーション&quot;で囲まれた出力
+   ~~       ~
+   ~&lt;       行揃え, ~&gt; 終端
+   ~(       大文字小文字変換, ~) 終端
+   ~[       選択, ~] 終端
+   ~{       繰り返し, ~} 終端
+</pre></td></tr></table>
+<p>多倍長浮動小数点に関するディレクティブ ~hは Lisp標準ではないので、以下に具体的に示します。
+</p>
+<p>ディレクティブ ~*はサポートされていないことに注意してください。
+</p>
+<p>もし <var>dest</var>がストリームか <code>true</code>なら、 <code>printf</code>は <code>false</code>を返します。
+そうでなければ、 <code>printf</code>は出力を含む文字列を返します。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) printf( false, &quot;~a ~a ~4f ~a ~@r&quot;,
+              &quot;String&quot;,sym,bound,sqrt(12),144), bound = 1.234;
+(%o1)                 String sym 1.23 2*sqrt(3) CXLIV
+(%i2) printf( false,&quot;~{~a ~}&quot;,[&quot;one&quot;,2,&quot;THREE&quot;] );
+(%o2)                          one 2 THREE
+(%i3) printf(true,&quot;~{~{~9,1f ~}~%~}&quot;,mat ),
+          mat = args(matrix([1.1,2,3.33],[4,5,6],[7,8.88,9]))$
+      1.1       2.0       3.3
+      4.0       5.0       6.0
+      7.0       8.9       9.0
+(%i4) control: &quot;~:(~r~) bird~p ~[is~;are~] singing.&quot;$
+(%i5) printf( false,control, n,n,if n=1 then 1 else 2 ), n=2;
+(%o5)                    Two birds are singing.
+</pre></td></tr></table>
+<p>ディレクティブ ~hは多倍長浮動小数点を扱うために導入されました。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">~w,d,e,x,o,p@H
+ w : width
+ d : decimal digits behind floating point
+ e : minimal exponent digits
+ x : preferred exponent
+ o : overflow character
+ p : padding character
+ @ : display sign for positive numbers
+</pre></td></tr></table>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) fpprec : 1000$
+(%i2) printf(true, &quot;|~h|~%&quot;, 2.b0^-64)$
+|0.0000000000000000000542101086242752217003726400434970855712890625|
+(%i3) fpprec : 26$
+(%i4) printf(true, &quot;|~h|~%&quot;, sqrt(2))$
+|1.4142135623730950488016887|
+(%i5) fpprec : 24$
+(%i6) printf(true, &quot;|~h|~%&quot;, sqrt(2))$
+|1.41421356237309504880169|
+(%i7) printf(true, &quot;|~28h|~%&quot;, sqrt(2))$
+|   1.41421356237309504880169|
+(%i8) printf(true, &quot;|~28,,,,,'*h|~%&quot;, sqrt(2))$
+|***1.41421356237309504880169|
+(%i9) printf(true, &quot;|~,18h|~%&quot;, sqrt(2))$
+|1.414213562373095049|
+(%i10) printf(true, &quot;|~,,,-3h|~%&quot;, sqrt(2))$
+|1414.21356237309504880169b-3|
+(%i11) printf(true, &quot;|~,,2,-3h|~%&quot;, sqrt(2))$
+|1414.21356237309504880169b-03|
+(%i12) printf(true, &quot;|~20h|~%&quot;, sqrt(2))$
+|1.41421356237309504880169|
+(%i13) printf(true, &quot;|~20,,,,'+h|~%&quot;, sqrt(2))$
+|++++++++++++++++++++|
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="readbyte"></a>
+<a name="Item_003a-readbyte"></a>
+</p><dl>
+<dt><u>関数:</u> <b>readbyte</b><i> (<var>stream</var>)</i>
+<a name="IDX2451"></a>
+</dt>
+<dd><p><var>stream</var>の中の最初のバイトを削除し返します。
+<var>stream</var>はバイナリ入力ストリームでなければいけません。
+もしファイルの終端に来たら、<code>readbyte</code>は <code>false</code>を返します。
+</p>
+<p>例: OpenSSLのAESで暗号化されたファイルから最初の16バイトを読みます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase: obase: 16.$
+
+(%i2) in: openr_binary(&quot;msg.bin&quot;);
+(%o2)                       #&lt;input stream msg.bin&gt;
+(%i3) (L:[],  thru 16. do push(readbyte(in), L),  L:reverse(L));
+(%o3) [53, 61, 6C, 74, 65, 64, 5F, 5F, 88, 56, 0DE, 8A, 74, 0FD, 0AD, 0F0]
+(%i4) close(in);
+(%o4)                                true
+(%i5) map(ascii, rest(L,-8));
+(%o5)                      [S, a, l, t, e, d, _, _]
+(%i6) salt: octets_to_number(rest(L,8));
+(%o6)                          8856de8a74fdadf0
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="readchar"></a>
+<a name="Item_003a-readchar"></a>
+</p><dl>
+<dt><u>関数:</u> <b>readchar</b><i> (<var>stream</var>)</i>
+<a name="IDX2452"></a>
+</dt>
+<dd><p><var>stream</var>の一番目の文字を取り出し、返します。
+ファイルの終端になったら、 <code>readchar</code>は <code>false</code>を返します。
+</p>
+<p>例: <a href="#make_005fstring_005finput_005fstream">make_string_input_stream</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="readline"></a>
+<a name="Item_003a-readline"></a>
+</p><dl>
+<dt><u>関数:</u> <b>readline</b><i> (<var>stream</var>)</i>
+<a name="IDX2453"></a>
+</dt>
+<dd><p><var>stream</var>の現在位置から行の終わりまでの文字を含む文字列か、
+もしファイルの終わりが来たら <code>false</code>を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sprint"></a>
+<a name="Item_003a-sprint"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sprint</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
+<a name="IDX2454"></a>
+</dt>
+<dd><p>引数を順に評価し、一番左から始まる「一行」に表示します。
+式は数の右隣にスペース文字と共に印字され、行の長さを無視します。
+改行には <code>newline()</code>が役に立つかもしれません。
+</p>
+<p>例:  <code>sprint</code>を使って連続的に印字。
+<code>newline()</code>で改行を生成。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) for n:0 thru 19 do sprint(fib(n))$
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
+(%i2) for n:0 thru 22 do (
+         sprint(fib(n)),
+         if mod(n,10) = 9 then newline() )$
+0 1 1 2 3 5 8 13 21 34
+55 89 144 233 377 610 987 1597 2584 4181
+6765 10946 17711
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p></dd></dl>
+
+<p><a name="writebyte"></a>
+<a name="Item_003a-writebyte"></a>
+</p><dl>
+<dt><u>関数:</u> <b>writebyte</b><i> (<var>byte</var>, <var>stream</var>)</i>
+<a name="IDX2455"></a>
+</dt>
+<dd><p><var>stream</var>に <var>byte</var>を書き出します。
+<var>stream</var>はバイナリ出力ストリームでなければいけません。
+<code>writebyte</code>は <code>byte</code>を返します。
+</p>
+<p>例: バイナリファイル出力ストリームに数バイト書き出します。
+この例では、バイトすべては印字可能文字に対応していて <code>printfile</code>で印字されます。
+バイトは <code>flush_outpu</code>か <code>close</code>が呼ばれるまでストリームに残ります。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase: obase: 16.$
+
+(%i2) bytes: map(cint, charlist(&quot;GNU/Linux&quot;));
+(%o2)                [47, 4E, 55, 2F, 4C, 69, 6E, 75, 78]
+(%i3) out: openw_binary(&quot;test.bin&quot;);
+(%o3)                      #&lt;output stream test.bin&gt;
+(%i4) for i thru 3 do writebyte(bytes[i], out);
+(%o4)                                done
+(%i5) printfile(&quot;test.bin&quot;)$
+
+(%i6) flength(out);
+(%o6)                                  0
+(%i7) flush_output(out);
+(%o7)                                true
+(%i8) flength(out);
+(%o8)                                  3
+(%i9) printfile(&quot;test.bin&quot;)$
+GNU
+(%i0A) for b in rest(bytes,3) do writebyte(b, out);
+(%o0A)                               done
+(%i0B) close(out);
+(%o0B)                               true
+(%i0C) printfile(&quot;test.bin&quot;)$
+GNU/Linux
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-Characters"></a>
+</p><hr size="6">
+<a name="Characters"></a>
+<a name="SEC390"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC389" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC391" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 84.3 Characters </h2>
+
+<p>文字は長さ 1の文字列です。
+</p>
+<p><a name="adjust_005fexternal_005fformat"></a>
+<a name="Item_003a-adjust_005fexternal_005fformat"></a>
+</p><dl>
+<dt><u>関数:</u> <b>adjust_external_format</b><i> ()</i>
+<a name="IDX2456"></a>
+</dt>
+<dd><p>Lispリーダーの現在の外部フォーマットに関する情報を印字し、
+外部フォーマットのエンコーディングが
+Maximaを走らせているアプリケーションのエンコーディングと違う場合、
+<code>adjust_external_format</code>はエンコーディングの調整を試みて、
+ヘルプか指示を印字します。
+<code>adjust_external_format</code>は、
+外部フォーマットが変更された時 <code>true</code>を、
+そうでなければ <code>false</code>を返します。
+</p>
+<p><a href="#cint">cint</a>, <a href="#unicode">unicode</a>, <a href="#octets_005fto_005fstring">octets_to_string</a>, <a href="#string_005fto_005foctets">string_to_octets</a>
+のような関数は、
+Unicode文字フルレンジで適切に動くために、
+Lispリーダーの外部フォーマットとして UTF-8を必要とします。
+</p>
+<p>例(2016年3月 Windows上の Maxima):
+デフォルトの外部フォーマットがアプリケーションが提供するエンコーディングと等しくない時に
+<code>adjust_external_format</code>を使用
+</p>
+<p>1. コマンドライン Maxima
+</p>
+<p>端末セッションが好まれる場合、
+SBCLでコンパイルされた Maximaを使うことをお勧めします。
+そうすれば Unicodeがデフォルトでサポートされ、
+<code>adjust_external_format</code>を呼び出す必要がありません。
+</p>
+<p>もし MaximaがCLISPか GCLでコンパイルされたなら、
+端末エンコーディングを CP850から CP1252に変更することをお勧めします。
+<code>adjust_external_format</code>がヘルプを印字します。
+</p>
+<p>CCLは UTF-8を読み込む一方、端末入力はデフォルトで CP850です。
+CCLは CP1252をサポートしません。
+<code>adjust_external_format</code>は
+端末エンコーディングと外部フォーマット両方を iso-8859-1に変更するための指示を印字します。
+</p>
+<p>2. wxMaxima
+</p>
+<p>wxMaximaでは SBCLはデフォルトで CP1252を読み込みますが、
+アプリケーションからの入力は UTF-8エンコードです。
+調整が必要です。
+</p>
+<p>一度、<code>adjust_external_format</code>を呼び出し、
+Maximaを再起動すると、
+デフォルト外部フォーマットは UTF-0になります。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1)adjust_external_format();
+The line
+(setf sb-impl::*default-external-format* :utf-8)
+has been appended to the init file
+C:/Users/Username/.sbclrc
+Please restart Maxima to set the external format to UTF-8.
+(%i1) false
+</pre></td></tr></table>
+<p>Maximaを再起動。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) adjust_external_format();
+The external format is currently UTF-8
+and has not been changed.
+(%i1) false
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="alphacharp"></a>
+<a name="Item_003a-alphacharp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>alphacharp</b><i> (<var>char</var>)</i>
+<a name="IDX2457"></a>
+</dt>
+<dd><p>もし <var>char</var>がアルファベット文字なら <code>true</code>を返します。
+</p>
+<p>非 US-ASCII文字をアルファベット文字か確認するには、
+背後のLispが完全なUnicodeサポートを提供しなければいけません。
+例えば、ドイツ語のウムラウトは
+GNU/Linux上の SBCLではアルファベット文字として検出されますが、
+GCLではそうなりません。
+(Windows Maximaでは、SBCLでコンパイルされた時、
+UTF-8を設定しなければいけません。
+詳しくは <a href="#adjust_005fexternal_005fformat">adjust_external_format</a>を参照してください)
+</p>
+<p>例: 非 US-ASCII文字のテスト
+</p>
+<p>背後のLisp (SBCL, GNU/Linux)は
+タイプされた文字をLisp文字に変換してテストすることができます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) alphacharp(&quot;&uuml;&quot;);
+(%o1)                          true
+</pre></td></tr></table>
+<p>GCLではこれはできまsねん。
+エラーが起こります。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) alphacharp(&quot;u&quot;);
+(%o1)                          true
+(%i2) alphacharp(&quot;&uuml;&quot;);
+
+package stringproc: &uuml; cannot be converted into a Lisp character.
+ -- an error.
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="alphanumericp"></a>
+<a name="Item_003a-alphanumericp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>alphanumericp</b><i> (<var>char</var>)</i>
+<a name="IDX2458"></a>
+</dt>
+<dd><p>もし <var>char</var>がアルファベット文字か数字なら <code>true</code>を返します。
+(対応する US-ASCII文字だけが数字とみなされます)
+</p>
+<p>注意: <a href="#alphacharp">alphacharp</a>の注記を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="ascii"></a>
+<a name="Item_003a-ascii"></a>
+</p><dl>
+<dt><u>関数:</u> <b>ascii</b><i> (<var>int</var>)</i>
+<a name="IDX2459"></a>
+</dt>
+<dd><p><code>128</code>未満の整数 <var>int</var>に対応するUS-ASCII文字を返します。
+</p>
+<p><code>127</code>より大きな符号位置を変換するには <a href="#unicode">unicode</a>を参照してください。
+</p>
+
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) for n from 0 thru 127 do (
+        ch: ascii(n),
+        if alphacharp(ch) then sprint(ch),
+        if n = 96 then newline() )$
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="cequal"></a>
+<a name="Item_003a-cequal"></a>
+</p><dl>
+<dt><u>関数:</u> <b>cequal</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2460"></a>
+</dt>
+<dd><p>もし <var>char_1</var>と <var>char_2</var>が同じ文字なら <code>true</code>を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="cequalignore"></a>
+<a name="Item_003a-cequalignore"></a>
+</p><dl>
+<dt><u>関数:</u> <b>cequalignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2461"></a>
+</dt>
+<dd><p><code>cequal</code>と同様ですが、文字の大小を無視します。
+背後のLispが文字をアルファベット文字として認識できる時
+非 US-ASCII文字で可能なだけです。
+<a href="#alphacharp">alphacharp</a>の注記を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="cgreaterp"></a>
+<a name="Item_003a-cgreaterp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>cgreaterp</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2462"></a>
+</dt>
+<dd><p>もし <var>char_1</var>の符号位置が <var>char_2</var>のそれより大きいなら
+<code>true</code>を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="cgreaterpignore"></a>
+<a name="Item_003a-cgreaterpignore"></a>
+</p><dl>
+<dt><u>関数:</u> <b>cgreaterpignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2463"></a>
+</dt>
+<dd><p><code>cgreaterp</code>と同様ですが、文字の大小を無視します。
+背後のLispが文字をアルファベット文字として認識できる時
+非 US-ASCII文字で可能なだけです。
+<a href="#alphacharp">alphacharp</a>の注記を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="charp"></a>
+<a name="Item_003a-charp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>charp</b><i> (<var>obj</var>)</i>
+<a name="IDX2464"></a>
+</dt>
+<dd><p>もし <var>obj</var>が Maxima-文字なら <code>true</code>を返します。
+例えばイントロダクションを参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="cint"></a>
+<a name="Item_003a-cint"></a>
+</p><dl>
+<dt><u>関数:</u> <b>cint</b><i> (<var>char</var>)</i>
+<a name="IDX2465"></a>
+</dt>
+<dd><p>Maxima文字 <var>char</var>のUnicode符号位置を返します。
+<var>char</var>は長さ <code>1</code>でなければいけません。
+</p>
+<p>例: いくつかの文字の16進符号位置。
+(GNU/Linux上の SBCLを使った Maxima)
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) obase: 16.$
+(%i2) map(cint, [&quot;$&quot;,&quot;&pound;&quot;,&quot;&euro;&quot;]);
+(%o2)                           [24, 0A3, 20AC]
+</pre></td></tr></table>
+<p>警告: 外部フォーマットが UTF-8に設定されている時、
+Windows上の SBCLを使った wxMaximaでは
+16ビットより大きな符号位置に対応した文字を入力できません。
+<a href="#adjust_005fexternal_005fformat">adjust_external_format</a>を参照してください。
+</p>
+
+<p>CMUCLはこれらの文字を 1文字として処理しません。
+そして <code>cint</code>は <code>false</code>を返します。
+回避策として文字をUTF-8オクテットを介して符号位置に変換すればいいかもしれません:
+</p>
+<p><code>utf8_to_unicode(string_to_octets(character));</code>
+</p>
+
+<p><a href="#utf8_005fto_005funicode">utf8_to_unicode</a>, <a href="#string_005fto_005foctets">string_to_octets</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="clessp"></a>
+<a name="Item_003a-clessp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>clessp</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2466"></a>
+</dt>
+<dd><p>もし <var>char_1</var>の符号位置が <var>char_2</var>のそれより小さいなら
+<code>true</code>を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="clesspignore"></a>
+<a name="Item_003a-clesspignore"></a>
+</p><dl>
+<dt><u>関数:</u> <b>clesspignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
+<a name="IDX2467"></a>
+</dt>
+<dd><p><code>clessp</code>と同様ですが、文字の大小を無視します。
+背後のLispが文字をアルファベット文字として認識できる時
+非 US-ASCII文字で可能なだけです。
+<a href="#alphacharp">alphacharp</a>の注記を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="constituent"></a>
+<a name="Item_003a-constituent"></a>
+</p><dl>
+<dt><u>関数:</u> <b>constituent</b><i> (<var>char</var>)</i>
+<a name="IDX2468"></a>
+</dt>
+<dd><p>もし <var>char</var>が、グラフィック文字ですがスペース文字でないなら、
+<code>true</code>を返します。
+グラフィック文字は見ることができる文字とスペース文字です。
+(<code>constituent</code>は Paul Grahamによって定義されています。
+Paul Graham, ANSI Common Lisp, 1996, page 67を参照してください)
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) for n from 0 thru 255 do (
+tmp: ascii(n), if constituent(tmp) then sprint(tmp) )$
+! &quot; #  %  ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @ A B
+C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c
+d e f g h i j k l m n o p q r s t u v w x y z { | } ~
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="digitcharp"></a>
+<a name="Item_003a-digitcharp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>digitcharp</b><i> (<var>char</var>)</i>
+<a name="IDX2469"></a>
+</dt>
+<dd><p>対応する US-ASCII文字が数字とみなされるような場合だけ
+もし <var>char</var>が数字なら <code>true</code>を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="lowercasep"></a>
+<a name="Item_003a-lowercasep"></a>
+</p><dl>
+<dt><u>関数:</u> <b>lowercasep</b><i> (<var>char</var>)</i>
+<a name="IDX2470"></a>
+</dt>
+<dd><p>もし <var>char</var>が小文字なら <code>true</code>を返します。
+</p>
+<p>注意: <a href="#alphacharp">alphacharp</a>の注記を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="newline_005fvariable"></a>
+</p>
+<dl>
+<dt><u>変数:</u> <b>newline</b>
+<a name="IDX2471"></a>
+</dt>
+<dd><p>改行文字(ASCII文字 10)。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="space_005fvariable"></a>
+<a name="Item_003a-space"></a>
+</p><dl>
+<dt><u>変数:</u> <b>space</b>
+<a name="IDX2472"></a>
+</dt>
+<dd><p>スペース文字。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="tab_005fvariable"></a>
+<a name="Item_003a-tab"></a>
+</p><dl>
+<dt><u>変数:</u> <b>tab</b>
+<a name="IDX2473"></a>
+</dt>
+<dd><p>タブ文字。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="unicode"></a>
+<a name="Item_003a-unicode"></a>
+</p><dl>
+<dt><u>関数:</u> <b>unicode</b><i> (<var>arg</var>)</i>
+<a name="IDX2474"></a>
+</dt>
+<dd><p><var>arg</var>が定義する文字を返します。
+もし背後の LispがUnicodeのフルサポートを提供するなら
+<var>arg</var>は Unicode符号位置か名前文字列です。
+</p>
+<p>例: 16進符号位置で定義された文字
+(GNU/Linux上の SBCLを使った Maxima)
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase: 16.$
+(%i2) map(unicode, [24, 0A3, 20AC]);
+(%o2)                            [$, &pound;, &euro;]
+</pre></td></tr></table>
+<p>警告: 外部フォーマットが UTF-8に設定されている時、
+Windows上の SBCLを使った wxMaximaでは
+16ビットより大きな符号位置に対応した文字を入力できません。
+<a href="#adjust_005fexternal_005fformat">adjust_external_format</a>を参照してください。
+</p>
+
+<p>CMUCLはこれらの文字を 1文字として処理しません。
+そして <code>cint</code>は <code>false</code>を返します。
+回避策として文字をUTF-8オクテットを介して符号位置に変換すればいいかもしれません:
+</p>
+<p><code>octets_to_string(unicode_to_utf8(code_point));</code>
+</p>
+
+<p><a href="#octets_005fto_005fstring">octets_to_string</a>, <a href="#unicode_005fto_005futf8">unicode_to_utf8</a>を参照してください。
+</p>
+<p>背後の Lispが Unicodeのフルサポートを提供するなら
+文字は、名前で指定できるかもしれません。
+以下は、ECL, CLISP, SBCLで可能です。
+ここで Windows上のSBCLでは外部フォーマットはUTF-8に設定しなければいけません。
+CMUCLも <code>unicode(name)</code>をサポートしますが、また 16ビット文字に限定されます。
+</p>
+<p><code>unicode</code>の文字列引数は基本的に
+&quot;~@c&quot;して石を使った <code>printf</code>が返すのと同じ文字列を返します。
+しかし以下で見るように、接頭辞 &quot;#\&quot;は省略しなければいけません。
+下線はスペースに置き換えられ、大文字は小文字に置き換えられます。
+</p>
+<p>例 (続き): 名前で定義された文字
+(GNU/Linux上の SBCLを使った Maxima)
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) printf(false, &quot;~@c&quot;, unicode(0DF));
+(%o3)                    #\LATIN_SMALL_LETTER_SHARP_S
+(%i4) unicode(&quot;LATIN_SMALL_LETTER_SHARP_S&quot;);
+(%o4)                                  &szlig;
+(%i5) unicode(&quot;Latin small letter sharp s&quot;);
+(%o5)                                  &szlig;
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="unicode_005fto_005futf8"></a>
+<a name="Item_003a-unicode_005fto_005futf8"></a>
+</p><dl>
+<dt><u>関数:</u> <b>unicode_to_utf8</b><i> (<var>code_point</var>)</i>
+<a name="IDX2475"></a>
+</dt>
+<dd><p>Unicode <var>code_point</var>に対応する UTF-8コードを含むリストを返します。
+</p>
+<p>例: Unicode符号位置をUTF-8に、そしてその逆の変換。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase: obase: 16.$
+(%i2) map(cint, [&quot;$&quot;,&quot;&pound;&quot;,&quot;&euro;&quot;]);
+(%o2)                           [24, 0A3, 20AC]
+(%i3) map(unicode_to_utf8, %);
+(%o3)                 [[24], [0C2, 0A3], [0E2, 82, 0AC]]
+(%i4) map(utf8_to_unicode, %);
+(%o4)                           [24, 0A3, 20AC]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="uppercasep"></a>
+<a name="Item_003a-uppercasep"></a>
+</p><dl>
+<dt><u>関数:</u> <b>uppercasep</b><i> (<var>char</var>)</i>
+<a name="IDX2476"></a>
+</dt>
+<dd><p>もし <var>char</var>が大文字なら <code>true</code>を返します。
+</p>
+<p>注意: <a href="#alphacharp">alphacharp</a>に関する注記を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="us_005fascii_005fonly"></a>
+<a name="Item_003a-us_005fascii_005fonly"></a>
+</p><dl>
+<dt><u>変数:</u> <b>us_ascii_only</b>
+<a name="IDX2477"></a>
+</dt>
+<dd><p>このオプション変数は
+Maximaを走らせるアプリケーションが提供する文字エンコーディングが UTF-8なのに
+Lispリーダの外部フォーマットが UTF-8に等しくない時
+Maximaに影響します。
+</p>
+<p>GNU/Linux上では
+Maximaが GCLでビルドされた時にはこれは trueです。
+Windows上でGCLか SBCLでビルドされた場合もそうです。
+</p>
+<p>SBCLを使う場合、外部フォーマットを UTF-8に変更することをお薦めします。
+その場合、 <code>us_ascii_only</code>は設定不要です。
+詳細は <a href="#adjust_005fexternal_005fformat">adjust_external_format</a>を参照してください。
+</p>
+<p><code>us_ascii_only</code>はデフォルトで <code>false</code>です。
+その時、 Maxima自身が (すなわち上記の状況で) UTF-8エンコーディングをパースします。
+</p>
+<p><code>us_ascii_only</code>が <code>true</code>に設定されている時、
+文字列処理関数の引数に使われるすべての文字列は非US-ASCII文字を含まないと仮定されます。
+その約束の下、Maximaは UTF-8をパースすることを避けて、文字列をより効率よく処理できます。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="utf8_005fto_005funicode"></a>
+<a name="Item_003a-utf8_005fto_005funicode"></a>
+</p><dl>
+<dt><u>関数:</u> <b>utf8_to_unicode</b><i> (<var>list</var>)</i>
+<a name="IDX2478"></a>
+</dt>
+<dd><p>1文字のUTF-8エンコーディングを含む <var>list</var>に対応する Unicode符号位置を返します。
+</p>
+<p>例: <a href="#unicode_005fto_005futf8">unicode_to_utf8</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-String-Processing"></a>
+</p><hr size="6">
+<a name="String-Processing"></a>
+<a name="SEC391"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC390" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC392" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 84.4 String Processing </h2>
+
+<p>文字列の位置インデックスは Maximaのリストと同様に 1から始まります。
+<a href="#charat">charat</a>の例を参照してください。
+</p>
+<p><a name="charat"></a>
+<a name="Item_003a-charat"></a>
+</p><dl>
+<dt><u>関数:</u> <b>charat</b><i> (<var>string</var>, <var>n</var>)</i>
+<a name="IDX2479"></a>
+</dt>
+<dd><p><var>string</var>の <var>n</var>番目の文字を返します。
+<var>string</var>の一番目の文字は <var>n</var> = 1で返されます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) charat(&quot;Lisp&quot;,1);
+(%o1)                           L
+(%i2) charlist(&quot;Lisp&quot;)[1];
+(%o2)                           L
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="charlist"></a>
+<a name="Item_003a-charlist"></a>
+</p><dl>
+<dt><u>関数:</u> <b>charlist</b><i> (<var>string</var>)</i>
+<a name="IDX2480"></a>
+</dt>
+<dd><p><var>string</var>の文字すべてのリストを返します。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) charlist(&quot;Lisp&quot;);
+(%o1)                     [L, i, s, p]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="eval_005fstring"></a>
+<a name="Item_003a-eval_005fstring"></a>
+</p><dl>
+<dt><u>関数:</u> <b>eval_string</b><i> (<var>str</var>)</i>
+<a name="IDX2481"></a>
+</dt>
+<dd><p>文字列 <var>str</var>を Maxima式としてパースし、評価します。
+文字列 <var>str</var>は終端子(ドル記号 <code>$</code>またはセミコロン <code>;</code>)
+を持つかもしれませんし持たないかもしれません。
+</p>
+<p>もし複数あるなら、最初の式だけがパースされ、評価されます。
+</p>
+<p>もし <var>str</var>が文字列でないならエラーが出力されます。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) eval_string (&quot;foo: 42; bar: foo^2 + baz&quot;);
+(%o1)                       42
+(%i2) eval_string (&quot;(foo: 42, bar: foo^2 + baz)&quot;);
+(%o2)                   baz + 1764
+</pre></td></tr></table>
+<p><a href="#parse_005fstring">parse_string</a>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="parse_005fstring"></a>
+<a name="Item_003a-parse_005fstring"></a>
+</p><dl>
+<dt><u>関数:</u> <b>parse_string</b><i> (<var>str</var>)</i>
+<a name="IDX2482"></a>
+</dt>
+<dd><p>文字列 <var>str</var>を Maxima式としてパースします(評価しません)。
+文字列 <var>str</var>は終端子(ドル記号 <code>$</code>またはセミコロン <code>;</code>)
+を持つかもしれませんし持たないかもしれません。
+</p>
+<p>もし複数あるなら、最初の式だけがパースされ、評価されます。
+</p>
+<p>もし <var>str</var>が文字列でないならエラーが出力されます。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) parse_string (&quot;foo: 42; bar: foo^2 + baz&quot;);
+(%o1)                    foo : 42
+(%i2) parse_string (&quot;(foo: 42, bar: foo^2 + baz)&quot;);
+                                   2
+(%o2)          (foo : 42, bar : foo  + baz)
+</pre></td></tr></table>
+<p><a href="#eval_005fstring">eval_string</a>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="scopy"></a>
+<a name="Item_003a-scopy"></a>
+</p><dl>
+<dt><u>関数:</u> <b>scopy</b><i> (<var>string</var>)</i>
+<a name="IDX2483"></a>
+</dt>
+<dd><p><var>string</var>のコピーを新しい文字列として返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sdowncase"></a>
+<a name="Item_003a-sdowncase"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sdowncase</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sdowncase</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sdowncase</tt> (<var>string</var>, <var>start</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sdowncase</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2484"></a>
+</dt>
+<dd><p><a href="#supcase">supcase</a>と同様ですが、大文字を小文字に変換します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sequal"></a>
+<a name="Item_003a-sequal"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sequal</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
+<a name="IDX2485"></a>
+</dt>
+<dd><p>もし <var>string_1</var>と <var>string_2</var>が同じ文字の列を含むなら、
+<code>true</code>を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sequalignore"></a>
+<a name="Item_003a-sequalignore"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sequalignore</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
+<a name="IDX2486"></a>
+</dt>
+<dd><p><code>sequal</code>と同様ですが、文字の大小を無視します。
+背後のLispが文字をアルファベット文字として認識できる時
+非 US-ASCII文字で可能なだけです。
+<a href="#alphacharp">alphacharp</a>の注記を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sexplode"></a>
+<a name="Item_003a-sexplode"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sexplode</b><i> (<var>string</var>)</i>
+<a name="IDX2487"></a>
+</dt>
+<dd><p><code>sexplode</code>は関数<code>charlist</code>の別名です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="simplode"></a>
+<a name="Item_003a-simplode"></a>
+</p><dl>
+<dt><u>関数:</u> <b>simplode</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>simplode</tt> (<var>list</var>)   &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>simplode</tt> (<var>list</var>, <var>delim</var>)</i>
+<a name="IDX2488"></a>
+</dt>
+<dd><p><code>simplode</code>は式のリストを取り、それらを結合して文字列にします。
+もしデリミタ <var>delim</var>を指定しないなら、
+<code>simplode</code>はデリミタを使いません。
+<var>delim</var>は任意の文字列を取り得ます。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) simplode([&quot;xx[&quot;,3,&quot;]:&quot;,expand((x+y)^3)]);
+(%o1)             xx[3]:y^3+3*x*y^2+3*x^2*y+x^3
+(%i2) simplode( sexplode(&quot;stars&quot;),&quot; * &quot; );
+(%o2)                   s * t * a * r * s
+(%i3) simplode( [&quot;One&quot;,&quot;more&quot;,&quot;coffee.&quot;],&quot; &quot; );
+(%o3)                   One more coffee.
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sinsert"></a>
+<a name="Item_003a-sinsert"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sinsert</b><i> (<var>seq</var>, <var>string</var>, <var>pos</var>)</i>
+<a name="IDX2489"></a>
+</dt>
+<dd><p><code>substring (<var>string</var>, 1, <var>pos</var> - 1)</code>と
+文字列
+<var>seq</var>、<code>substring (<var>string</var>, <var>pos</var>)</code>の結合となる文字列を返します。
+<var>string</var>の一番目の文字は位置 1にあることに注意してください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) s: &quot;A submarine.&quot;$
+(%i2) concat( substring(s,1,3),&quot;yellow &quot;,substring(s,3) );
+(%o2)                  A yellow submarine.
+(%i3) sinsert(&quot;hollow &quot;,s,3);
+(%o3)                  A hollow submarine.
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sinvertcase"></a>
+<a name="Item_003a-sinvertcase"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sinvertcase</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sinvertcase</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sinvertcase</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sinvertcase</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2490"></a>
+</dt>
+<dd><p>位置 <var>start</var>から <var>end</var>までのそれぞれの文字を逆順にすることを除いて
+<var>string</var>を返します。
+もし <var>end</var>を与えないなら、
+<var>start</var>から <var>string</var>の終わりまでのすべての文字列を置き換えます。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sinvertcase(&quot;sInvertCase&quot;);
+(%o1)                      SiNVERTcASE
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="slength"></a>
+<a name="Item_003a-slength"></a>
+</p><dl>
+<dt><u>関数:</u> <b>slength</b><i> (<var>string</var>)</i>
+<a name="IDX2491"></a>
+</dt>
+<dd><p><var>string</var>の中の文字の数を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="smake"></a>
+<a name="Item_003a-smake"></a>
+</p><dl>
+<dt><u>関数:</u> <b>smake</b><i> (<var>num</var>, <var>char</var>)</i>
+<a name="IDX2492"></a>
+</dt>
+<dd><p><var>num</var>個の文字 <var>char</var>を持つ新しい文字列を返します。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) smake(3,&quot;w&quot;);
+(%o1)                          www
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="smismatch"></a>
+<a name="Item_003a-smismatch"></a>
+</p><dl>
+<dt><u>関数:</u> <b>smismatch</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>smismatch</tt> (<var>string_1</var>, <var>string_2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>smismatch</tt> (<var>string_1</var>, <var>string_2</var>, <var>test</var>)</i>
+<a name="IDX2493"></a>
+</dt>
+<dd><p><var>string_1</var>と <var>string_2</var>が異なる
+<var>string_1</var>の最初の文字の位置、または <code>false</code>を返します。
+マッチングのデフォルトのテスト関数は <code>sequal</code>です。
+もし <code>smismatch</code>が文字の大小を無視なければいけないなら、
+テストとして <code>sequalignore</code>を使ってください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) smismatch(&quot;seven&quot;,&quot;seventh&quot;);
+(%o1)                           6
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="split"></a>
+<a name="Item_003a-split"></a>
+</p><dl>
+<dt><u>関数:</u> <b>split</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>split</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>split</tt> (<var>string</var>, <var>delim</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>split</tt> (<var>string</var>, <var>delim</var>, <var>multiple</var>)</i>
+<a name="IDX2494"></a>
+</dt>
+<dd><p><var>string</var>のすべてのトークンのリストを返します。
+それぞれのトークンはパースされていない文字列です。
+<code>split</code>は <var>delim</var>をデリミタとして使います。
+もし <var>delim</var>が与えられないなら、
+スペース文字がデフォルトのデリミタです。
+<var>multiple</var>はデフォルトで <code>true</code>のブーリアン変数です。
+重複デリミタが 1つとして読まれます。
+これは、もしタブが複数スペース文字として保存されているなら、役立ちます。
+もし<var>multiple</var>が <code>false</code>に設定されるなら、
+それぞれのデリミタが有効です。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) split(&quot;1.2   2.3   3.4   4.5&quot;);
+(%o1)                 [1.2, 2.3, 3.4, 4.5]
+(%i2) split(&quot;first;;third;fourth&quot;,&quot;;&quot;,false);
+(%o2)               [first, , third, fourth]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sposition"></a>
+<a name="Item_003a-sposition"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sposition</b><i> (<var>char</var>, <var>string</var>)</i>
+<a name="IDX2495"></a>
+</dt>
+<dd><p><var>string</var>の中で <var>char</var>とマッチする最初の文字の位置を返します。
+<var>string</var>の一番目の文字は位置 1にあります。
+文字の大小を無視した文字のマッチに関しては，
+<a href="#ssearch">ssearch</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sremove"></a>
+<a name="Item_003a-sremove"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sremove</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2496"></a>
+</dt>
+<dd><p><var>string</var>同様文字列を返しますが、
+<var>seq</var>とマッチする部分文字列すべてなしに返します。
+マッチのデフォルトのテスト関数は <code>sequal</code>です。
+もし <code>sremove</code>が <var>seq</var>を検索する間文字の大小を無視しなければいけないなら、
+テストとして <code>sequalignore</code>を使ってください。
+探索を限定するには <var>start</var>と <var>end</var>を使ってください。
+<var>string</var>の一番目の文字は位置 1にあることに注意してください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sremove(&quot;n't&quot;,&quot;I don't like coffee.&quot;);
+(%o1)                   I do like coffee.
+(%i2) sremove (&quot;DO &quot;,%,'sequalignore);
+(%o2)                    I like coffee.
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sremovefirst"></a>
+<a name="Item_003a-sremovefirst"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sremovefirst</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2497"></a>
+</dt>
+<dd><p><var>seq</var>とマッチする最初の文字列だけが削除されることを除いて、
+<code>sremove</code>同様です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sreverse"></a>
+<a name="Item_003a-sreverse"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sreverse</b><i> (<var>string</var>)</i>
+<a name="IDX2498"></a>
+</dt>
+<dd><p><var>string</var>の文字すべてが逆順の文字列を返します。
+</p>
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="ssearch"></a>
+<a name="Item_003a-ssearch"></a>
+</p><dl>
+<dt><u>関数:</u> <b>ssearch</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2499"></a>
+</dt>
+<dd><p>文字列<var>seq</var>とマッチする <var>string</var>の最初の部分文字列の位置を返します。
+マッチのためのデフォルトのテスト関数は <code>sequal</code>です。
+もし <code>ssearch</code>が文字の大小を無視しなければいけないなら、
+テストとして <code>sequalignore</code>を使ってください。
+検索を限定するには <var>start</var>と <var>end</var>を使ってください。
+<var>string</var>の一番目の文字は位置 1にあることに注意してください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ssearch(&quot;~s&quot;,&quot;~{~S ~}~%&quot;,'sequalignore);
+(%o1)                                  4
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="ssort"></a>
+<a name="Item_003a-ssort"></a>
+</p><dl>
+<dt><u>関数:</u> <b>ssort</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssort</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssort</tt> (<var>string</var>, <var>test</var>)</i>
+<a name="IDX2500"></a>
+</dt>
+<dd><p><code>test (<var>c</var>, <var>d</var>)</code>が <code>false</code>、かつ、
+<code>test (<var>d</var>, <var>c</var>)</code>が <code>true</code>であるような 2つの連続する文字
+<var>c</var>と <var>d</var>がないような順で <var>string</var>の文字すべてを含む文字列を返します。
+</p>
+<p>ソートのためのデフォルトのテスト関数は <var>clessp</var>です。
+テスト関数一式は
+<code>{clessp, clesspignore, cgreaterp, cgreaterpignore, cequal, cequalignore}</code>です。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ssort(&quot;I don't like Mondays.&quot;);
+(%o1)                    '.IMaddeiklnnoosty
+(%i2) ssort(&quot;I don't like Mondays.&quot;,'cgreaterpignore);
+(%o2)                 ytsoonnMlkIiedda.'
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="ssubst"></a>
+<a name="Item_003a-ssubst"></a>
+</p><dl>
+<dt><u>関数:</u> <b>ssubst</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2501"></a>
+</dt>
+<dd><p><var>string</var>の中の <var>old</var>にマッチするすべての部分文字列を
+<var>new</var>で置き換えた文字列を返します。
+<var>old</var>と <var>new</var>は同じ長さである必要はありません。
+マッチのためのデフォルトのテスト関数は <code>sequal</code>です。
+もし <code>ssubst</code>が oldを検索する間大文字小文字を無視すべきなら、
+テストとして <code>sequalignore</code>を使ってください。
+検索を制限するには <var>start</var>と <var>end</var>を使ってください。
+<var>string</var>の一番目の文字は位置 1にあることに注意してください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ssubst(&quot;like&quot;,&quot;hate&quot;,&quot;I hate Thai food. I hate green tea.&quot;);
+(%o1)          I like Thai food. I like green tea.
+(%i2) ssubst(&quot;Indian&quot;,&quot;thai&quot;,%,'sequalignore,8,12);
+(%o2)         I like Indian food. I like green tea.
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="ssubstfirst"></a>
+<a name="Item_003a-ssubstfirst"></a>
+</p><dl>
+<dt><u>関数:</u> <b>ssubstfirst</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2502"></a>
+</dt>
+<dd><p><var>old</var>とマッチする最初の部分文字列だけを置き換えることを除いて、
+<code>subst</code>と同様です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="strim"></a>
+<a name="Item_003a-strim"></a>
+</p><dl>
+<dt><u>関数:</u> <b>strim</b><i> (<var>seq</var>,<var>string</var>)</i>
+<a name="IDX2503"></a>
+</dt>
+<dd><p><var>string</var>の両端から <var>seq</var>に現れるすべての文字を除いた文字列を返します。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) &quot;/* comment */&quot;$
+(%i2) strim(&quot; /*&quot;,%);
+(%o2)                        comment
+(%i3) slength(%);
+(%o3)                           7
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="striml"></a>
+<a name="Item_003a-striml"></a>
+</p><dl>
+<dt><u>関数:</u> <b>striml</b><i> (<var>seq</var>, <var>string</var>)</i>
+<a name="IDX2504"></a>
+</dt>
+<dd><p><var>string</var>の左端だけトリムすることを除いて
+<code>strim</code>と同様です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="strimr"></a>
+<a name="Item_003a-strimr"></a>
+</p><dl>
+<dt><u>関数:</u> <b>strimr</b><i> (<var>seq</var>, <var>string</var>)</i>
+<a name="IDX2505"></a>
+</dt>
+<dd><p><var>string</var>の右端だけトリムすることを除いて
+<code>strim</code>と同様です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="stringp"></a>
+<a name="Item_003a-stringp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>stringp</b><i> (<var>obj</var>)</i>
+<a name="IDX2506"></a>
+</dt>
+<dd><p><var>obj</var>が文字列なら <code>true</code>を返します。
+例はイントロダクションを参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="substring"></a>
+<a name="Item_003a-substring"></a>
+</p><dl>
+<dt><u>関数:</u> <b>substring</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>substring</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>substring</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2507"></a>
+</dt>
+<dd><p>位置 <var>start</var>で始まり位置 <var>end</var>で終わる
+<var>string</var>の部分文字列を返します。
+位置 <var>end</var>の文字は含まれません。
+もし <var>end</var>が与えられないなら、部分文字列は文字列の残りを含みます。
+<var>string</var>の一番目の文字は位置 1にあることに注意してください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) substring(&quot;substring&quot;,4);
+(%o1)                        string
+(%i2) substring(%,4,6);
+(%o2)                          in
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="supcase"></a>
+<a name="Item_003a-supcase"></a>
+</p><dl>
+<dt><u>関数:</u> <b>supcase</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcase</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcase</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcase</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
+<a name="IDX2508"></a>
+</dt>
+<dd><p><var>string</var>の位置 <var>start</var>から
+<var>end</var>までの小文字を対応する大文字に置き換えた文字列を返します。
+もし <var>end</var>が与えられないなら、
+<var>start</var>から <var>string</var>の終わりまでのすべての小文字が置き換えられます。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) supcase(&quot;english&quot;,1,2);
+(%o1)                        English
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="tokens"></a>
+<a name="Item_003a-tokens"></a>
+</p><dl>
+<dt><u>関数:</u> <b>tokens</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tokens</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tokens</tt> (<var>string</var>, <var>test</var>)</i>
+<a name="IDX2509"></a>
+</dt>
+<dd><p><var>string</var>から抽出されたトークンのリストを返します。
+トークンは、文字があるテスト関数を満たす部分文字列です。
+もしtestを与えないなら、
+<var>constituent</var>をデフォルトテストとして使います。
+<code>{constituent, alphacharp, digitcharp, lowercasep, uppercasep, charp, characterp, alphanumericp}</code>はテスト関数一式です。
+(<code>tokens</code>の LispバージョンはPaul Grahamによって書かれました。
+ ANSI Common Lisp, 1996, page 67.)
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) tokens(&quot;24 October 2005&quot;);
+(%o1)                  [24, October, 2005]
+(%i2) tokens(&quot;05-10-24&quot;,'digitcharp);
+(%o2)                     [05, 10, 24]
+(%i3) map(parse_string,%);
+(%o3)                      [5, 10, 24]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-Octets-and-Utilities-for-Cryptography"></a>
+</p><hr size="6">
+<a name="Octets-and-Utilities-for-Cryptography"></a>
+<a name="SEC392"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC391" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 84.5 Octets and Utilities for Cryptography </h2>
+<p><a name="base64"></a>
+<a name="Item_003a-base64"></a>
+</p><dl>
+<dt><u>関数:</u> <b>base64</b><i> (<var>arg</var>)</i>
+<a name="IDX2510"></a>
+</dt>
+<dd><p><var>arg</var>の base64表現を文字列として返します。
+引数 <var>arg</var>は文字列か非負整数かオクテットのリストです。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) base64: base64(&quot;foo bar baz&quot;);
+(%o1)                          Zm9vIGJhciBiYXo=
+(%i2) string: base64_decode(base64);
+(%o2)                            foo bar baz
+(%i3) obase: 16.$
+(%i4) integer: base64_decode(base64, 'number);
+(%o4)                       666f6f206261722062617a
+(%i5) octets: base64_decode(base64, 'list);
+(%o5)            [66, 6F, 6F, 20, 62, 61, 72, 20, 62, 61, 7A]
+(%i6) ibase: 16.$
+(%i7) base64(octets);
+(%o7)                          Zm9vIGJhciBiYXo=
+</pre></td></tr></table>
+<p>もし <var>arg</var>がウムラウト(127より大きなオクテット)含むなら、
+結果のbase64文字列はプラットフォーム依存であることに注意してください。
+しかし、デコードされた文字列はオリジナルと同じになります。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="base64_005fdecode"></a>
+<a name="Item_003a-base64_005fdecode"></a>
+</p><dl>
+<dt><u>関数:</u> <b>base64_decode</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>base64_decode</tt> (<var>base64-string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>base64_decode</tt> (<var>base64-string</var>, <var>return-type</var>)</i>
+<a name="IDX2511"></a>
+</dt>
+<dd><p>デフォルトでは <code>base64_decode</code>は
+<var>base64-string</var>を元の文字列にデコードします。
+</p>
+<p>オプション引数 <var>return-type</var>を与えると
+<code>base64_decode</code>は代わりに対応する数やオクテットのリストを返します。
+<var>return-type</var>は <code>string</code>か <code>number</code>, <code>list</code>です。
+</p>
+<p>例: <a href="#base64">base64</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+<p><a name="crc24sum"></a>
+<a name="Item_003a-crc24sum"></a>
+</p><dl>
+<dt><u>関数:</u> <b>crc24sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>crc24sum</tt> (<var>octets</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>crc24sum</tt> (<var>octets</var>, <var>return-type</var>)</i>
+<a name="IDX2512"></a>
+</dt>
+<dd><p>デフォルトでは <code>crc24sum</code>は オクテットリストの
+<code>CRC24</code>チェックサムを文字列として返します。
+</p>
+<p>オプション引数 <var>return-type</var>を与えると
+<code>crc24sum</code>は代わりに対応する数かオクテットリストを返します。
+<var>return-type</var>は <code>string</code>か <code>number</code>, <code>list</code>です。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iQEcBAEBAgAGBQJVdCTzAAoJEG/1Mgf2DWAqCSYH/AhVFwhu1D89C3/QFcgVvZTM
+wnOYzBUURJAL/cT+IngkLEpp3hEbREcugWp+Tm6aw3R4CdJ7G3FLxExBH/5KnDHi
+rBQu+I7+3ySK2hpryQ6Wx5J9uZSa4YmfsNteR8up0zGkaulJeWkS4pjiRM+auWVe
+vajlKZCIK52P080DG7Q2dpshh4fgTeNwqCuCiBhQ73t8g1IaLdhDN6EzJVjGIzam
+/spqT/sTo6sw8yDOJjvU+Qvn6/mSMjC/YxjhRMaQt9EMrR1AZ4ukBF5uG1S7mXOH
+WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
+=WmeC
+-----END PGP SIGNATURE-----
+</pre></td></tr></table>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase : obase : 16.$
+(%i2) sig64 : sconcat(
+ &quot;iQEcBAEBAgAGBQJVdCTzAAoJEG/1Mgf2DWAqCSYH/AhVFwhu1D89C3/QFcgVvZTM&quot;,
+ &quot;wnOYzBUURJAL/cT+IngkLEpp3hEbREcugWp+Tm6aw3R4CdJ7G3FLxExBH/5KnDHi&quot;,
+ &quot;rBQu+I7+3ySK2hpryQ6Wx5J9uZSa4YmfsNteR8up0zGkaulJeWkS4pjiRM+auWVe&quot;,
+ &quot;vajlKZCIK52P080DG7Q2dpshh4fgTeNwqCuCiBhQ73t8g1IaLdhDN6EzJVjGIzam&quot;,
+ &quot;/spqT/sTo6sw8yDOJjvU+Qvn6/mSMjC/YxjhRMaQt9EMrR1AZ4ukBF5uG1S7mXOH&quot;,
+ &quot;WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=&quot; )$
+(%i3) octets: base64_decode(sig64, 'list)$
+(%i4) crc24: crc24sum(octets, 'list);
+(%o4)                          [5A, 67, 82]
+(%i5) base64(crc24);
+(%o5)                              WmeC
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+<p><a name="md5sum"></a>
+<a name="Item_003a-md5sum"></a>
+</p><dl>
+<dt><u>関数:</u> <b>md5sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>md5sum</tt> (<var>arg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>md5sum</tt> (<var>arg</var>, <var>return-type</var>)</i>
+<a name="IDX2513"></a>
+</dt>
+<dd><p>文字列か非負整数かオクテットのリストの
+<code>MD5</code>チェックサムを返します。
+デフォルトの戻り値は32ヘックス文字を含む文字列です。
+</p>
+<p>オプション引数 <var>return-type</var>を与えると
+<code>md5sum</code>は代わりに対応する数かオクテットリストを返します。
+<var>return-type</var>は <code>string</code>か <code>number</code>, <code>list</code>です。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase: obase: 16.$
+(%i2) msg: &quot;foo bar baz&quot;$
+(%i3) string: md5sum(msg);
+(%o3)                  ab07acbb1e496801937adfa772424bf7
+(%i4) integer: md5sum(msg, 'number);
+(%o4)                 0ab07acbb1e496801937adfa772424bf7
+(%i5) octets: md5sum(msg, 'list);
+(%o5)        [0AB,7,0AC,0BB,1E,49,68,1,93,7A,0DF,0A7,72,42,4B,0F7]
+(%i6) sdowncase( printf(false, &quot;~{~2,'0x~^:~}&quot;, octets) );
+(%o6)           ab:07:ac:bb:1e:49:68:01:93:7a:df:a7:72:42:4b:f7
+</pre></td></tr></table>
+<p>もし <var>arg</var>がドイツ語のウムラウトや他の非ASCII文字(127より大きなオクテット)含むなら、
+<code>MD5</code>チェックサムはプラットフォーム依存であることに注意してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="mgf1_005fsha1"></a>
+<a name="Item_003a-mgf1_005fsha1"></a>
+</p><dl>
+<dt><u>関数:</u> <b>mgf1_sha1</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>mgf1_sha1</tt> (<var>seed</var>, <var>len</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>mgf1_sha1</tt> (<var>seed</var>, <var>len</var>, <var>return-type</var>)</i>
+<a name="IDX2514"></a>
+</dt>
+<dd><p>可変長の擬似乱数を返します。
+デフォルトでは戻り値は <var>len</var>オクテットの長さの数字です。
+</p>
+<p>オプション引数 <var>return-type</var>を使って
+<code>mgf1_sha1</code>は代わりに <var>len</var>オクテットの対応するリストを返すことができます。
+<var>return-type</var>は <code>number</code>か <code>list</code>です。
+</p>
+<p>戻り値の計算は <code>RFC 3447</code> appendix <code>B.2.1 MGF1</code>に記述されています。
+<code>SHA1</code>はハッシュ関数として使われます。
+すなわち、計算された数字のランダム度は <code>SHA1</code>ハッシュのランダム度に拠ります。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase: obase: 16.$
+(%i2) number: mgf1_sha1(4711., 8);
+(%o2)                        0e0252e5a2a42fea1
+(%i3) octets: mgf1_sha1(4711., 8, 'list);
+(%o3)                  [0E0,25,2E,5A,2A,42,0FE,0A1]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="number_005fto_005foctets"></a>
+<a name="Item_003a-number_005fto_005foctets"></a>
+</p><dl>
+<dt><u>関数:</u> <b>number_to_octets</b><i> (<var>number</var>)</i>
+<a name="IDX2515"></a>
+</dt>
+<dd><p><var>number</var>のオクテット表現をオクテットのリストとして返します。
+<var>number</var>は非負整数でなければいけません。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase : obase : 16.$
+(%i2) octets: [0ca,0fe,0ba,0be]$
+(%i3) number: octets_to_number(octets);
+(%o3)                            0cafebabe
+(%i4) number_to_octets(number);
+(%o4)                      [0CA, 0FE, 0BA, 0BE]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+<p><a name="octets_005fto_005fnumber"></a>
+<a name="Item_003a-octets_005fto_005fnumber"></a>
+</p><dl>
+<dt><u>関数:</u> <b>octets_to_number</b><i> (<var>octets</var>)</i>
+<a name="IDX2516"></a>
+</dt>
+<dd><p><var>octets</var>のリストの中のオクテットを連結し、数を返します。
+</p>
+<p>例: <a href="#number_005fto_005foctets">number_to_octets</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="octets_005fto_005foid"></a>
+<a name="Item_003a-octets_005fto_005foid"></a>
+</p><dl>
+<dt><u>関数:</u> <b>octets_to_oid</b><i> (<var>octets</var>)</i>
+<a name="IDX2517"></a>
+</dt>
+<dd><p><var>octets</var>のリストからオブジェクト識別子(OID)を計算します。
+</p>
+<p>例: RSA encryption OID
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase : obase : 16.$
+(%i2) oid: octets_to_oid([2A,86,48,86,0F7,0D,1,1,1]);
+(%o2)                      1.2.840.113549.1.1.1
+(%i3) oid_to_octets(oid);
+(%o3)               [2A, 86, 48, 86, 0F7, 0D, 1, 1, 1]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="octets_005fto_005fstring"></a>
+<a name="Item_003a-octets_005fto_005fstring"></a>
+</p><dl>
+<dt><u>関数:</u> <b>octets_to_string</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>octets_to_string</tt> (<var>octets</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>octets_to_string</tt> (<var>octets</var>, <var>encoding</var>)</i>
+<a name="IDX2518"></a>
+</dt>
+<dd><p>現在のシステムのデフォルトに従って <var>octets</var>のリストを文字列にデコードします。
+非US-ASCII文字に対応するオクテットをデコードする時、
+結果はプラットフォームやアプリケーション、背後のLispに依存します。
+</p>
+<p>例: システムデフォルトを使う
+(GCLでコンパイルされた Maxima。
+それはフォーマット定義を使わず、
+単にGNU/Linux端末がエンコードした UTF-8オクテットを渡します)
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) octets: string_to_octets(&quot;abc&quot;);
+(%o1)                            [61, 62, 63]
+(%i2) octets_to_string(octets);
+(%o2)                                 abc
+(%i3) ibase: obase: 16.$
+(%i4) unicode(20AC);
+(%o4)                                  &euro;
+(%i5) octets: string_to_octets(%);
+(%o5)                           [0E2, 82, 0AC]
+(%i6) octets_to_string(octets);
+(%o6)                                  &euro;
+(%i7) utf8_to_unicode(octets);
+(%o7)                                20AC
+</pre></td></tr></table>
+<p>Lispリーダの外部フォーマットが UTF-8に等しい場合、
+オプション引数 <var>encoding</var>で
+オクテットを文字列に変換するエンコーディングを設定できます。
+もし必要なら
+外部フォーマットの変更に関して<a href="#adjust_005fexternal_005fformat">adjust_external_format</a>を参照してください。
+</p>
+<p>サポートするエンコーディングのいくつかの名前
+(もっと知るには対応する Lispマニュアルを参照してください): <br>
+CCL, CLISP, SBCL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, cp1252, cp850</code> <br>
+CMUCL: <code>utf-8, utf-16-be, utf-32-be, iso8859-1, cp1252</code> <br>
+ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code>
+</p>
+<p>例 (続き): オプションのエンコーディング引数を使う
+(GNU/Linux端末, SBCLでコンパイルされた Maxima).
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i8) string_to_octets(&quot;&euro;&quot;, &quot;ucs-2be&quot;);
+(%o8)                              [20, 0AC]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="oid_005fto_005foctets"></a>
+<a name="Item_003a-oid_005fto_005foctets"></a>
+</p><dl>
+<dt><u>関数:</u> <b>oid_to_octets</b><i> (<var>oid-string</var>)</i>
+<a name="IDX2519"></a>
+</dt>
+<dd><p>オブジェクト識別子(OID)を <var>octets</var>のリストに変換します。
+</p>
+<p>例: <a href="#octets_005fto_005foid">octets_to_oid</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sha1sum"></a>
+<a name="Item_003a-sha1sum"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sha1sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha1sum</tt> (<var>arg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha1sum</tt> (<var>arg</var>, <var>return-type</var>)</i>
+<a name="IDX2520"></a>
+</dt>
+<dd><p>文字列か非負整数かオクテットのリストの <code>SHA1</code>フィンガープリントを返します。
+デフォルトの戻り値は40ヘックス文字を含む文字列です。
+</p>
+<p>オプション引数 <var>return-type</var>を与えると
+<code>sha1sum</code>は代わりに対応する数かオクテットのリストを返します。
+<var>return-type</var>は <code>string</code>か <code>number</code>, <code>list</code>です。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ibase: obase: 16.$
+(%i2) msg: &quot;foo bar baz&quot;$
+(%i3) string: sha1sum(msg);
+(%o3)              c7567e8b39e2428e38bf9c9226ac68de4c67dc39
+(%i4) integer: sha1sum(msg, 'number);
+(%o4)             0c7567e8b39e2428e38bf9c9226ac68de4c67dc39
+(%i5) octets: sha1sum(msg, 'list);
+(%o5)  [0C7,56,7E,8B,39,0E2,42,8E,38,0BF,9C,92,26,0AC,68,0DE,4C,67,0DC,39]
+(%i6) sdowncase( printf(false, &quot;~{~2,'0x~^:~}&quot;, octets) );
+(%o6)     c7:56:7e:8b:39:e2:42:8e:38:bf:9c:92:26:ac:68:de:4c:67:dc:39
+</pre></td></tr></table>
+<p>もし <var>arg</var>がドイツ語のウムラウトや他の非ASCII文字(127より大きなオクテット)含むなら、
+<code>SHA1</code>フィンガープリントはプラットフォーム依存であることに注意してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="sha256sum"></a>
+<a name="Item_003a-sha256sum"></a>
+</p><dl>
+<dt><u>関数:</u> <b>sha256sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha256sum</tt> (<var>arg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha256sum</tt> (<var>arg</var>, <var>return-type</var>)</i>
+<a name="IDX2521"></a>
+</dt>
+<dd><p>文字列か非負整数かオクテットのリストの <code>SHA256</code>フィンガープリントを返します。
+デフォルトの戻り値は64ヘックス文字を含む文字列です。
+</p>
+<p>オプション引数 <var>return-type</var>を与えると
+<code>sha256sum</code>は代わりに対応する数かオクテットのリストを返します。
+(<a href="#sha1sum">sha1sum</a>を参照してください)
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) string: sha256sum(&quot;foo bar baz&quot;);
+(%o1)  dbd318c1c462aee872f41109a4dfd3048871a03dedd0fe0e757ced57dad6f2d7
+</pre></td></tr></table>
+<p>もし <var>arg</var>がドイツ語のウムラウトや他の非ASCII文字(127より大きなオクテット)含むなら、
+<code>SHA256</code>フィンガープリントはプラットフォーム依存であることに注意してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="string_005fto_005foctets"></a>
+<a name="Item_003a-string_005fto_005foctets"></a>
+</p><dl>
+<dt><u>関数:</u> <b>string_to_octets</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>string_to_octets</tt> (<var>string</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>string_to_octets</tt> (<var>string</var>, <var>encoding</var>)</i>
+<a name="IDX2522"></a>
+</dt>
+<dd><p>現在のシステムのデフォルトに従って
+<var>string</var>をオクテットのリストにエンコードします。
+非US-ASCII文字を含む文字列をエンコードする時、
+結果はプラットフォームやアプリケーション、背後の Lispに依存します。
+</p>
+<p>Lispリーダの外部フォーマットが UTF-8に等しい場合、
+オプション引数 <var>encoding</var>で
+オクテットを文字列に変換するエンコーディングを設定できます。
+もし必要なら
+外部フォーマットの変更に関して<a href="#adjust_005fexternal_005fformat">adjust_external_format</a>を参照してください。
+</p>
+<p>例やより詳しい情報は <a href="#octets_005fto_005fstring">octets_to_string</a>を参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-stringproc">Package stringproc</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-to_005fpoly_005fsolve_002dpkg"></a>
+</p><hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

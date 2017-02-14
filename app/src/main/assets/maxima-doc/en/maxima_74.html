@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 74. simplex</title>
+<title>Maxima 5.39.0 Manual: 74. operatingsystem</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 74. simplex">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 74. simplex">
+<meta name="description" content="Maxima 5.39.0 Manual: 74. operatingsystem">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 74. operatingsystem">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,404 +54,238 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-<a name="simplex"></a>
-<a name="SEC349"></a>
+<a name="operatingsystem_002dpkg"></a>
+<a name="SEC342"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_73.html#SEC348" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_73.html#SEC341" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC343" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_73.html#SEC347" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_73.html#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 74. simplex </h1>
+<h1 class="chapter"> 74. operatingsystem </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC350">74.1 Introduction to simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC343">74.1 Introduction to operatingsystem</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC354">74.2 Functions and Variables for simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC344">74.2 Directory operations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC345">74.3 File operations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC346">74.4 Environment operations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Introduction-to-simplex"></a>
+<p><a name="Item_003a-Introduction-to-operatingsystem"></a>
 </p><hr size="6">
-<a name="Introduction-to-simplex"></a>
-<a name="SEC350"></a>
+<a name="Introduction-to-operatingsystem"></a>
+<a name="SEC343"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC349" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC351" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC342" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC344" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 74.1 Introduction to simplex </h2>
+<h2 class="section"> 74.1 Introduction to operatingsystem </h2>
 
-<p><code>simplex</code> is a package for linear optimization using the simplex algorithm.
+<p>Package <code>operatingsystem</code> contains functions for operatingsystem-tasks, like file system operations.
 </p>
-<p>Example:
-</p>
-<pre class="example">(%i1) load(&quot;simplex&quot;)$
-(%i2) minimize_lp(x+y, [3*x+2*y&gt;2, x+4*y&gt;3]);
-                  9        7       1
-(%o2)            [--, [y = --, x = -]]
-                  10       10      5
-</pre>
-<div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>  &middot;
-<a href="maxima_99.html#Category_003a-Optimization">Optimization</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a>
-</div>
-</p>
-<hr size="6">
-<a name="SEC351"></a>
-<table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC350" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC352" title="Next section in reading order"> &gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
-</tr></table>
-<h3 class="subsection"> 74.1.1 Tests for simplex </h3>
-
-<p>There are some tests in the directory <code>share/simplex/Tests</code>.
-</p>
-<hr size="6">
-<a name="SEC352"></a>
-<table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC351" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC353" title="Next section in reading order"> &gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
-</tr></table>
-<h4 class="subsubsection"> 74.1.1.1 klee_minty </h4>
-
-<p>The function <code>klee_minty</code> produces input for <code>linear_program</code>, for which
-exponential time for solving is required without scaling.
-</p>
-<p>Example:
-</p>
-<pre class="example">load(klee_minty)$
-apply(linear_program, klee_minty(6));
-</pre>
-<p>A better approach:
-</p>
-<pre class="example">epsilon_sx : 0$
-scale_sx : true$
-apply(linear_program, klee_minty(10));
-</pre>
-<hr size="6">
-<a name="SEC353"></a>
-<table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC352" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC354" title="Next section in reading order"> &gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
-</tr></table>
-<h4 class="subsubsection"> 74.1.1.2 NETLIB </h4>
-
-<p>Some smaller problems from netlib (<code>http://www.netlib.org/lp/data/</code>) test
-suite are converted to a format, readable by Maxima. Problems are <code>adlittle</code>,
-<code>afiro</code>, <code>kb2</code> and <code>sc50a</code>. Each problem has three input files in CSV format for
-matrix <var>A</var> and vectors <var>b</var> and <var>c</var>.
-</p>
-<p>Example:
-</p>
-<pre class="example">A : read_matrix(&quot;adlittle_A.csv&quot;, 'csv)$
-b : read_list(&quot;adlittle_b.csv&quot;, 'csv)$
-c : read_list(&quot;adlittle_c.csv&quot;, 'csv)$
-linear_program(A, b, c)$
-%[2]
-=&gt; 225494.963126615
-</pre>
-<p>Results:
-</p>
-<pre class="example">PROBLEM        MINIMUM                SCALING
-adlittle       225494.963126615       no
-afiro          - 464.7531428571429    no
-kb2            - 1749.900129055996    yes
-sc50a          - 64.5750770585645     no
-</pre>
-<p><a name="Item_003a-Functions-and-Variables-for-simplex"></a>
+<p><a name="Item_003a-Directory-operations"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-simplex"></a>
-<a name="SEC354"></a>
+<a name="Directory-operations"></a>
+<a name="SEC344"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC353" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC343" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC345" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 74.2 Functions and Variables for simplex </h2>
+<h2 class="section"> 74.2 Directory operations </h2>
 
-<p><a name="Item_003a-epsilon_005flp"></a>
+
+<p><a name="chdir"></a>
+<a name="Item_003a-chdir"></a>
 </p><dl>
-<dt><u>Option variable:</u> <b>epsilon_lp</b>
-<a name="IDX2322"></a>
-</dt>
-<dd><p>Default value: <code>10^-8</code>
-</p>
-<p>Epsilon used for numerical computations in <code>linear_program</code>.
-</p>
-<p>See also: <code>linear_program</code>.
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-linear_005fprogram"></a>
-</p><dl>
-<dt><u>Function:</u> <b>linear_program</b><i> (<var>A</var>, <var>b</var>, <var>c</var>)</i>
-<a name="IDX2323"></a>
-</dt>
-<dd><p><code>linear_program</code> is an implementation of the simplex algorithm.
-<code>linear_program(A, b, c)</code> computes a vector <var>x</var> for which
-<code>c.x</code> is minimum possible among vectors for which <code>A.x = b</code>
-and <code>x &gt;= 0</code>. Argument <var>A</var> is a matrix and arguments <var>b</var>
-and <var>c</var> are lists.
-</p>
-<p><code>linear_program</code> returns a list which contains the minimizing
-vector <var>x</var> and the minimum value <code>c.x</code>. If the problem is not
-bounded, it returns &quot;Problem not bounded!&quot; and if the problem is not
-feasible, it returns &quot;Problem not feasible!&quot;.
-</p>
-<p>To use this function first load the <code>simplex</code> package with
-<code>load(simplex);</code>.
-</p>
-<p>Example:
-</p>
-<pre class="example">(%i2) A: matrix([1,1,-1,0], [2,-3,0,-1], [4,-5,0,0])$
-(%i3) b: [1,1,6]$
-(%i4) c: [1,-2,0,0]$
-(%i5) linear_program(A, b, c);
-                   13     19        3
-(%o5)            [[--, 4, --, 0], - -]
-                   2      2         2
-</pre>
-<p>See also: <code>minimize_lp</code>, <code>scale_lp</code>, and <code>epsilon_lp</code>.
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-maximize_005flp"></a>
-</p><dl>
-<dt><u>Function:</u> <b>maximize_lp</b><i> (<var>obj</var>, <var>cond</var>, [<var>pos</var>])</i>
-<a name="IDX2324"></a>
-</dt>
-<dd><p>Maximizes linear objective function <var>obj</var> subject to some linear
-constraints <var>cond</var>. See <code>minimize_lp</code> for detailed
-description of arguments and return value.
-</p>
-
-<p>See also: <code>minimize_lp</code>.
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-minimize_005flp"></a>
-</p><dl>
-<dt><u>Function:</u> <b>minimize_lp</b><i> (<var>obj</var>, <var>cond</var>, [<var>pos</var>])</i>
-<a name="IDX2325"></a>
-</dt>
-<dd><p>Minimizes a linear objective function <var>obj</var> subject to some linear
-constraints <var>cond</var>. <var>cond</var> a list of linear equations or
-inequalities. In strict inequalities <code>&gt;</code> is replaced by <code>&gt;=</code>
-and <code>&lt;</code> by <code>&lt;=</code>. The optional argument <var>pos</var> is a list
-of decision variables which are assumed to be positive.
-</p>
-<p>If the minimum exists, <code>minimize_lp</code> returns a list which
-contains the minimum value of the objective function and a list of
-decision variable values for which the minimum is attained. If the
-problem is not bounded, <code>minimize_lp</code> returns &quot;Problem not
-bounded!&quot; and if the problem is not feasible, it returns &quot;Problem not
-feasible!&quot;.
-</p>
-<p>The decision variables are not assumed to be nonegative by default. If
-all decision variables are nonegative, set <code>nonegative_lp</code> to
-<code>true</code>.  If only some of decision variables are positive, list
-them in the optional argument <var>pos</var> (note that this is more
-efficient than adding constraints).
-</p>
-<p><code>minimize_lp</code> uses the simplex algorithm which is implemented in
-maxima <code>linear_program</code> function.
-</p>
-<p>To use this function first load the <code>simplex</code> package with
-<code>load(simplex);</code>.
-</p>
-<p>Examples:
-</p>
-<pre class="example">(%i1) minimize_lp(x+y, [3*x+y=0, x+2*y&gt;2]);
-                      4       6        2
-(%o1)                [-, [y = -, x = - -]]
-                      5       5        5
-(%i2) minimize_lp(x+y, [3*x+y&gt;0, x+2*y&gt;2]), nonegative_lp=true;
-(%o2)                [1, [y = 1, x = 0]]
-(%i3) minimize_lp(x+y, [3*x+y=0, x+2*y&gt;2]), nonegative_lp=true;
-(%o3)                Problem not feasible!
-(%i4) minimize_lp(x+y, [3*x+y&gt;0]);
-(%o4)                Problem not bounded!
-</pre>
-
-<p>See also: <code>maximize_lp</code>, <code>nonegative_lp</code>, <code>epsilon_lp</code>.
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-nonegative_005flp"></a>
-</p><dl>
-<dt><u>Option variable:</u> <b>nonegative_lp</b>
-<a name="IDX2326"></a>
-</dt>
-<dd><p>Default value: <code>false</code>
-</p>
-<p>If <code>nonegative_lp</code> is true all decision variables to
-<code>minimize_lp</code> and <code>maximize_lp</code> are assumed to be positive.
-</p>
-<p>See also: <code>minimize_lp</code>.
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-scale_005flp"></a>
-</p><dl>
-<dt><u>Option variable:</u> <b>scale_lp</b>
-<a name="IDX2327"></a>
-</dt>
-<dd><p>Default value: <code>false</code>
-</p>
-<p>When <code>scale_lp</code> is <code>true</code>,
-<code>linear_program</code> scales its input so that the maximum absolute value in each row or column is 1.
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-pivot_005fcount_005fsx"></a>
-</p><dl>
-<dt><u>Variable:</u> <b>pivot_count_sx</b>
+<dt><u>Function:</u> <b>chdir</b><i> (<var>dir</var>)</i>
 <a name="IDX2328"></a>
 </dt>
-<dd><p>After <code>linear_program</code> returns,
-<code>pivot_count_sx</code> is the number of pivots in last computation.
-</p>
-<div class=categorybox>
+<dd><p>Change to directory <var>dir</var>
+</p></dd></dl>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-pivot_005fmax_005fsx"></a>
+<p><a name="mkdir"></a>
+<a name="Item_003a-mkdir"></a>
 </p><dl>
-<dt><u>Variable:</u> <b>pivot_max_sx</b>
+<dt><u>Function:</u> <b>mkdir</b><i> (<var>dir</var>)</i>
 <a name="IDX2329"></a>
 </dt>
-<dd><p><code>pivot_max_sx</code> is the maximum number of pivots allowed by <code>linear_program</code>.
-</p>
-<div class=categorybox>
+<dd><p>Create directory <var>dir</var>
+</p></dd></dl>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-simplex">Package simplex</a>
-</div>
+<p><a name="rmdir"></a>
+<a name="Item_003a-rmdir"></a>
+</p><dl>
+<dt><u>Function:</u> <b>rmdir</b><i> (<var>dir</var>)</i>
+<a name="IDX2330"></a>
+</dt>
+<dd><p>remove directory <var>dir</var>
+</p></dd></dl>
+
+<p><a name="getcurrentdirectory"></a>
+<a name="Item_003a-getcurrentdirectory"></a>
+</p><dl>
+<dt><u>Function:</u> <b>getcurrentdirectory</b><i> ()</i>
+<a name="IDX2331"></a>
+</dt>
+<dd><p>returns the current working directory.
+</p>
+<p>See also <code><a href="maxima_13.html#directory">directory</a></code>.
 </p>
 </dd></dl>
 
+<p>Examples:
+</p>
+<pre class="example">(%i1) load(&quot;operatingsystem&quot;)$
+(%i2) mkdir(&quot;testdirectory&quot;)$
+(%i3) chdir(&quot;testdirectory&quot;)$
+(%i4) chdir(&quot;..&quot;)$
+(%i5) rmdir(&quot;testdirectory&quot;)$
+</pre>
+<p><a name="Item_003a-File-operations"></a>
+</p><hr size="6">
+<a name="File-operations"></a>
+<a name="SEC345"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC344" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC346" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 74.3 File operations </h2>
 
-<p><a name="Item_003a-simplification"></a>
+
+<p><a name="copy_005ffile"></a>
+<a name="Item_003a-copy_005ffile"></a>
+</p><dl>
+<dt><u>Function:</u> <b>copy_file</b><i> (<var>file1</var>, <var>file2</var>)</i>
+<a name="IDX2332"></a>
+</dt>
+<dd><p>copies file <var>file1</var> to <var>file2</var>
+</p></dd></dl>
+
+<p><a name="rename_005ffile"></a>
+<a name="Item_003a-rename_005ffile"></a>
+</p><dl>
+<dt><u>Function:</u> <b>rename_file</b><i> (<var>file1</var>, <var>file2</var>)</i>
+<a name="IDX2333"></a>
+</dt>
+<dd><p>renames file <var>file1</var> to <var>file2</var>
+</p></dd></dl>
+
+<p><a name="delete_005ffile"></a>
+<a name="Item_003a-delete_005ffile"></a>
+</p><dl>
+<dt><u>Function:</u> <b>delete_file</b><i> (<var>file1</var>)</i>
+<a name="IDX2334"></a>
+</dt>
+<dd><p>deletes file <var>file1</var>
+</p></dd></dl>
+
+
+<p><a name="Item_003a-Environment-operations"></a>
+</p><hr size="6">
+<a name="Environment-operations"></a>
+<a name="SEC346"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC345" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 74.4 Environment operations </h2>
+
+
+<p><a name="getenv"></a>
+<a name="Item_003a-getenv"></a>
+</p><dl>
+<dt><u>Function:</u> <b>getenv</b><i> (<var>env</var>)</i>
+<a name="IDX2335"></a>
+</dt>
+<dd><p>Get the value of the environmentvariable <var>env</var>
+</p>
+<p>Example:
+</p>
+<pre class="example">(%i1) load(&quot;operatingsystem&quot;)$
+(%i2) getenv(&quot;PATH&quot;);
+(%o2) /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</pre>
+</dd></dl>
+
+<p><a name="Item_003a-opsubst_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC355" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC342" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -459,12 +293,12 @@ maxima <code>linear_program</code> function.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

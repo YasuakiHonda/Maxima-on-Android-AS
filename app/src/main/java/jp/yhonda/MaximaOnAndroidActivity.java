@@ -78,7 +78,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 	CommandExec maximaProccess;
 	File internalDir;
 	File externalDir;
-	MaximaVersion mvers = new MaximaVersion(5, 36, 1);
+	MaximaVersion mvers = new MaximaVersion(5, 39, 0);
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -398,9 +398,11 @@ public class MaximaOnAndroidActivity extends Activity implements
 					@Override
 					public void run() {
 						if (Build.VERSION.SDK_INT > 16) { // > JELLY_BEAN
-							webview.loadUrl("javascript:initSVGRenderer()");
+							runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:initSVGRenderer()");}});
+							// webview.loadUrl("javascript:initSVGRenderer()");
 						} else {
-							webview.loadUrl("javascript:initHTMLRenderer()");
+							runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:initHTMLRenderer()");}});
+							// webview.loadUrl("javascript:initHTMLRenderer()");
 						}
 
 						Log.v("MoA", "fileLoaded");
@@ -425,18 +427,19 @@ public class MaximaOnAndroidActivity extends Activity implements
 		if (!inited) {
 			SharedPreferences settings = PreferenceManager
 					.getDefaultSharedPreferences(thisActivity);
-			String newsize = settings.getString("expSize", "");
+			final String newsize = settings.getString("expSize", "");
 			if (newsize != "") {
-				webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");
+				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");}});
+				// webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");
 			}
 			inited=true;
 		}
 
 		Log.v("MoA", "sem released");
-		String cmdstr = "";
+		String cmdstr = editText.getText().toString();
 		if ((keyEvent == null) || (keyEvent.getAction() == KeyEvent.ACTION_UP)) {
 			try {
-				cmdstr = editText.getText().toString();
+				// cmdstr = editText.getText().toString();
 				if (cmdstr.equals("")) {
 					return true;
 				}
@@ -495,8 +498,11 @@ public class MaximaOnAndroidActivity extends Activity implements
 				exitMOA();
 			}
 
-			webview.loadUrl("javascript:window.UpdateInput('"
-					+ escapeChars(cmdstr) + "<br>" + "')");
+			final String cmdstr2 = cmdstr;
+			runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.UpdateInput('"
+					+ escapeChars(cmdstr2) + "<br>" + "')");}});
+//			webview.loadUrl("javascript:window.UpdateInput('"
+//					+ escapeChars(cmdstr) + "<br>" + "')");
 			String resString = maximaProccess.getProcessResult();
 			maximaProccess.clearStringBuilder();
 			while (isStartQepcadString(resString)) {
@@ -524,7 +530,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 				} else {
 					list.add(internalDir + "/additions/gnuplot/bin/gnuplot");
 				}
-				list.add(internalDir + "/maxout.gnuplot");
+				list.add(internalDir + "/maxout" + maximaProccess.getPID() + ".gnuplot");
 				CommandExec gnuplotcom = new CommandExec();
 				try {
 					gnuplotcom.execCommand(list);
@@ -595,16 +601,16 @@ public class MaximaOnAndroidActivity extends Activity implements
 				/* normal text, as we are outside of $$$$$$...$$$$$$ */
 				if (resArray[i].equals(""))
 					continue;
-				String htmlStr = substitute(resArray[i], "\n", "<br>");
-				webview.loadUrl("javascript:window.UpdateText('" + htmlStr
-						+ "')");
+				final String htmlStr = substitute(resArray[i], "\n", "<br>");
+				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.UpdateText('" + htmlStr + "')");}});
+				// webview.loadUrl("javascript:window.UpdateText('" + htmlStr + "')");
 			} else {
 				/* tex commands, as we are inside of $$$$$$...$$$$$$ */
 				String texStr = substCRinMBOX(resArray[i]);
 				texStr = substitute(texStr, "\n", " \\\\\\\\ ");
-				String urlstr = "javascript:window.UpdateMath('" + texStr
-						+ "')";
-				webview.loadUrl(urlstr);
+				final String urlstr = "javascript:window.UpdateMath('" + texStr + "')";
+				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl(urlstr);}});
+				// webview.loadUrl(urlstr);
 			}
 		}
 		if (allExampleFinished == true) {
@@ -677,7 +683,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 	}
 
 	private void removeTmpFiles() {
-		File a = new File("/data/data/jp.yhonda/files/maxout.gnuplot");
+		File a = new File("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
 		if (a.exists()) {
 			a.delete();
 		}
@@ -692,7 +698,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 	}
 
 	private Boolean isGraphFile() {
-		File a = new File("/data/data/jp.yhonda/files/maxout.gnuplot");
+		File a = new File("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
 		return (a.exists());
 	}
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 67. minpack</title>
+<title>Maxima 5.39.0 Manual: 67. lindstedt</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 67. minpack">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 67. minpack">
+<meta name="description" content="Maxima 5.39.0 Manual: 67. lindstedt">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 67. lindstedt">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,222 +72,139 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="minpack"></a>
-<a name="SEC320"></a>
+<a name="lindstedt_002dpkg"></a>
+<a name="SEC318"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_66.html#SEC319" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC321" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_66.html#SEC317" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC319" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_66.html#SEC317" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_68.html#SEC323" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_66.html#SEC315" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_68.html#SEC320" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 67. minpack </h1>
+<h1 class="chapter"> 67. lindstedt </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC321">67.1 Introduction to minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC322">67.2 Functions and Variables for minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC319">67.1 Functions and Variables for lindstedt</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Introduction-to-minpack"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-lindstedt"></a>
 </p><hr size="6">
-<a name="Introduction-to-minpack"></a>
-<a name="SEC321"></a>
+<a name="Functions-and-Variables-for-lindstedt"></a>
+<a name="SEC319"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC320" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC322" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC318" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_68.html#SEC320" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC320" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC320" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_68.html#SEC323" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC318" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC318" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_68.html#SEC320" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 67.1 Introduction to minpack </h2>
+<h2 class="section"> 67.1 Functions and Variables for lindstedt </h2>
 
-<p><code>Minpack</code>は Netlibで入手可能な Fortranライブラリ MINPACKの
-(<code>f2cl</code>を介した) Common Lisp翻訳です。
+
+<p><a name="Lindstedt"></a>
+<a name="Item_003a-Lindstedt"></a>
+</p><dl>
+<dt><u>関数:</u> <b>Lindstedt</b><i> (<var>eq</var>,<var>pvar</var>,<var>torder</var>,<var>ic</var>)</i>
+<a name="IDX2259"></a>
+</dt>
+<dd><p>これは Lindstedtコードでの最初のパスです。
+摂動方程式上の初期条件が <em>i&gt;0</em>に対して <em>z[i]=0, z'[i]=0</em>で、
+入力した初期条件―
+(<var>%k1</var>と <var>%k2</var>だけでなく)任意の定数があり得ます―で問題を解くことができます。
+<var>ic</var>は初期条件のリストです。
+</p>
+<p>初期条件を与えない時、
+摂動方程式の中の定数がゼロ次方程式解と同じなので、問題が起こります。
+また Van der Pol方程式のように、摂動方程式の初期条件が <em>i&gt;0</em>に対して
+<em>z[i]=0, z'[i]=0</em>でない時、問題が起こります。
+</p>
+<p>例:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;makeOrders&quot;)$
+
+(%i2) load(&quot;lindstedt&quot;)$
+
+(%i3) Lindstedt('diff(x,t,2)+x-(e*x^3)/6,e,2,[1,0]);
+          2
+         e  (cos(5 T) - 24 cos(3 T) + 23 cos(T))
+(%o3) [[[---------------------------------------
+                          36864
+   e (cos(3 T) - cos(T))
+ - --------------------- + cos(T)],
+            192
+          2
+       7 e    e
+T = (- ---- - -- + 1) t]]
+       3072   16
+</pre></td></tr></table>
+<p>この関数を使うには、最初に <code>load(&quot;makeOrders&quot;)</code>と
+<code>load(&quot;lindstedt&quot;)</code>を書いてください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-minpack">Package minpack</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-minpack">Package minpack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-lindstedt">Package lindstedt</a>
 </div>
 </p>
-<p><a name="Item_003a-Functions-and-Variables-for-minpack"></a>
-</p><hr size="6">
-<a name="Functions-and-Variables-for-minpack"></a>
-<a name="SEC322"></a>
-<table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC321" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_68.html#SEC323" title="Next section in reading order"> &gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC320" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC320" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_68.html#SEC323" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
-</tr></table>
-<h2 class="section"> 67.2 Functions and Variables for minpack </h2>
-
-<p><a name="Item_003a-minpack_005flsquares"></a>
-</p><dl>
-<dt><u>関数:</u> <b>minpack_lsquares</b><i> (<var>flist</var>, <var>varlist</var>, <var>guess</var> [, <var>tolerance</var>, <var>jacobian</var>])</i>
-<a name="IDX2275"></a>
-</dt>
-<dd><p>リスト <var>flist</var>の関数の平方の和を最小化する点を計算します。
-変数はリスト <var>varlist</var>の中にあります。
-最適点の初期推測は <var>guess</var>で供給されなければいけません。
-</p>
-<p>オプションのキーワード引数 <var>tolerance</var>と
-<var>jacobian</var>はアルゴリズム上のある制御を提供します。
-<var>tolerance</var>は平方の和に関する望みの見積もり相対誤差です。
-<var>jacobian</var>は Jacobianを指定するのに使うことができます。
-もし <var>jacobian</var>が与えられず(デフォルトの) <code>true</code> なら、
-Jacobianを <var>flist</var>から計算します。
-もし <var>jacobian</var>が <code>false</code>なら数値近似を使います。
-</p>
-<p><code>minpack_lsquares</code>はリストを返します。
-一番目の項目は見積られた解です;
-二番目は平方の和で，三番目はアルゴリズムの成功を示します。
-可能な値は以下の通りです。
-</p>
-<dl compact="compact">
-<dt> <code>0</code></dt>
-<dd><p>不適切な入力パラメータ。
-</p></dd>
-<dt> <code>1</code></dt>
-<dd><p>アルゴリズムが平方の和の相対誤差がせいぜい <code>tolerance</code>と見積もります。
-</p></dd>
-<dt> <code>2</code></dt>
-<dd><p>アルゴリズムがxと解の相対誤差がせいぜい <code>tolerance</code>と見積もります。
-</p></dd>
-<dt> <code>3</code></dt>
-<dd><p>info = 1と info = 2の条件が両方とも成立します。
-</p></dd>
-<dt> <code>4</code></dt>
-<dd><p>fvec が機械精度の jacobianの列に直交的です。
-</p></dd>
-<dt> <code>5</code></dt>
-<dd><p>iflag = 1が 100*(n+1)に至る fcnへのコールの回数
-</p></dd>
-<dt> <code>6</code></dt>
-<dd><p>tolが小さすぎます。平方の和の更なる減少は不可能です。
-</p></dd>
-<dt> <code>7</code></dt>
-<dd><p>tolが小さすぎます。近似解 xの更なる改善は不可能です。
-</p></dd>
-</dl>
-
-<pre class="example">/* Problem 6: Powell singular function */
-(%i1) powell(x1,x2,x3,x4) := 
-         [x1+10*x2, sqrt(5)*(x3-x4), (x2-2*x3)^2, 
-              sqrt(10)*(x1-x4)^2]$
-(%i2) minpack_lsquares(powell(x1,x2,x3,x4), [x1,x2,x3,x4], 
-                       [3,-1,0,1]);
-(%o2) [[1.652117596168394e-17, - 1.652117596168393e-18, 
-        2.643388153869468e-18, 2.643388153869468e-18], 
-       6.109327859207777e-34, 4] 
-</pre>
-<pre class="example">/* Same problem but use numerical approximation to Jacobian */
-(%i3) minpack_lsquares(powell(x1,x2,x3,x4), [x1,x2,x3,x4], 
-                       [3,-1,0,1], jacobian = false);
-(%o3) [[5.060282149485331e-11, - 5.060282149491206e-12, 
-        2.179447843547218e-11, 2.179447843547218e-11], 
-       3.534491794847031e-21, 5]
-</pre>
 </dd></dl>
 
-<p><a name="Item_003a-minpack_005fsolve"></a>
-</p><dl>
-<dt><u>関数:</u> <b>minpack_solve</b><i> (<var>flist</var>, <var>varlist</var>, <var>guess</var> [, <var>tolerance</var>, <var>jacobian</var>])</i>
-<a name="IDX2276"></a>
-</dt>
-<dd><p><code>n</code>個の未知数に関する <code>n</code>個の方程式系を解きます。
-<code>n</code>個の方程式形はリスト <var>flist</var>で与えられます。
-解の初期推測は <var>guess</var>の中で提供されます。
-</p>
-<p>オプションのキーワード引数 <var>tolerance</var>と
-<var>jacobian</var>はアルゴリズム上のある制御を提供します。
-<var>tolerance</var>は平方の和に関して望まれる見積り相対誤差です。
-<var>jacobian</var>は Jacobianを指定するのに使うことができます。
-もし <var>jacobian</var>を与えないか、(デフォルトの) <code>true</code>なら、
-Jacobianを <var>flist</var>から計算します。
-もし <var>jacobian</var>が <code>false</code>なら数値近似を使います。
-</p>
-<p><code>minpack_solve</code>はリストを返します。
-一番目の項目は見積られた解です;
-二番目は平方の和で，三番目はアルゴリズムの成功を示します。
-可能な値は以下の通りです。
-</p>
-<dl compact="compact">
-<dt> <code>0</code></dt>
-<dd><p>不適切な入力パラメータ。
-</p></dd>
-<dt> <code>1</code></dt>
-<dd><p>アルゴリズムが、解の相対誤差がせいぜい <code>tolerance</code>と見積もります。
-</p></dd>
-<dt> <code>2</code></dt>
-<dd><p>iflag = 1で fcnをコールした回数が 100*(n+1)に達しました。
-</p></dd>
-<dt> <code>3</code></dt>
-<dd><p>tolが小さ過ぎます。平方和の中で換算がこれ以上不可能です。
-</p></dd>
-<dt> <code>4</code></dt>
-<dd><p>繰り返しがよい進捗を産んでいません。
-</p></dd>
-</dl>
-
-
-</dd></dl>
-
-
-<p><a name="Item_003a-makeOrders"></a>
+<p><a name="Item_003a-linearalgebra_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC320" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_68.html#SEC323" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC318" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_68.html#SEC320" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

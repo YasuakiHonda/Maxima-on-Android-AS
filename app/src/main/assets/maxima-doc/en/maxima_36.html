@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 36. Function Definition</title>
+<title>Maxima 5.39.0 Manual: 36. Function Definition</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 36. Function Definition">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 36. Function Definition">
+<meta name="description" content="Maxima 5.39.0 Manual: 36. Function Definition">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 36. Function Definition">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,64 +54,66 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="Function-Definition"></a>
-<a name="SEC194"></a>
+<a name="SEC193"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_35.html#SEC193" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC195" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_35.html#SEC192" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_35.html#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 36. Function Definition </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC195">36.1 Introduction to Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC194">36.1 Introduction to Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC196">36.2 Function</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    
+<tr><td align="left" valign="top"><a href="#SEC195">36.2 Function</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC199">36.3 Macros</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      
+<tr><td align="left" valign="top"><a href="#SEC198">36.3 Macros</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC200">36.4 Functions and Variables for Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC199">36.4 Functions and Variables for Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-Function-Definition"></a>
 </p><hr size="6">
 <a name="Introduction-to-Function-Definition"></a>
-<a name="SEC195"></a>
+<a name="SEC194"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC194" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC196" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC193" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC195" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.1 Introduction to Function Definition </h2>
@@ -119,47 +121,47 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <p><a name="Item_003a-Function"></a>
 </p><hr size="6">
 <a name="Function"></a>
-<a name="SEC196"></a>
+<a name="SEC195"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC195" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC197" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC194" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC196" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.2 Function </h2>
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a> &middot;
-<a href="maxima_99.html#Category_003a-Programming">Programming</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a> &middot;
+<a href="maxima_105.html#Category_003a-Programming">Programming</a>
 </div>
 </p>
 <hr size="6">
-<a name="SEC197"></a>
+<a name="SEC196"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC196" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC198" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC195" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC197" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC196" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC195" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 36.2.1 Ordinary functions </h3>
@@ -259,21 +261,21 @@ may be computed at runtime, it is useful to use <code>define</code> and
 possibly <code>buildq</code>.
 </p>
 <hr size="6">
-<a name="SEC198"></a>
+<a name="SEC197"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC197" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC199" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC196" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC198" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC196" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC195" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 36.2.2 Array functions </h3>
@@ -312,21 +314,21 @@ which also remove the function definition.
 <p><a name="Item_003a-Macros"></a>
 </p><hr size="6">
 <a name="Macros"></a>
-<a name="SEC199"></a>
+<a name="SEC198"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC198" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC200" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC197" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC199" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.3 Macros </h2>
@@ -335,7 +337,7 @@ which also remove the function definition.
 <a name="Item_003a-buildq"></a>
 </p><dl>
 <dt><u>Function:</u> <b>buildq</b><i> (<var>L</var>, <var>expr</var>)</i>
-<a name="IDX1317"></a>
+<a name="IDX1337"></a>
 </dt>
 <dd><p>Substitutes variables named by the list <var>L</var> into the expression <var>expr</var>,
 in parallel, without evaluating <var>expr</var>.  The resulting expression is
@@ -430,7 +432,7 @@ create another function for which some of the arguments are fixed.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a>
 </div>
 </p></dd></dl>
 
@@ -438,7 +440,7 @@ create another function for which some of the arguments are fixed.
 <a name="Item_003a-macroexpand"></a>
 </p><dl>
 <dt><u>Function:</u> <b>macroexpand</b><i> (<var>expr</var>)</i>
-<a name="IDX1318"></a>
+<a name="IDX1338"></a>
 </dt>
 <dd><p>Returns the macro expansion of <var>expr</var> without evaluating it,
 when <code>expr</code> is a macro function call.
@@ -451,7 +453,7 @@ that macro function call is also expanded.
 However, if the expansion of a macro function call has side effects,
 those side effects are executed.
 </p>
-<p>See also <code>::=</code>, <code>macros</code>, and <code>macroexpand1</code>.
+<p>See also <code><a href="maxima_7.html#g_t_003a_003a_003d">::=</a></code>, <code><a href="#macros">macros</a></code>, and <code><a href="#macroexpand1">macroexpand1</a></code>..
 </p>
 <p>Examples
 </p>
@@ -474,7 +476,7 @@ those side effects are executed.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-application">Function application</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-application">Function application</a>
 </div>
 </p></dd></dl>
 
@@ -482,7 +484,7 @@ those side effects are executed.
 <a name="Item_003a-macroexpand1"></a>
 </p><dl>
 <dt><u>Function:</u> <b>macroexpand1</b><i> (<var>expr</var>)</i>
-<a name="IDX1319"></a>
+<a name="IDX1339"></a>
 </dt>
 <dd><p>Returns the macro expansion of <var>expr</var> without evaluating it,
 when <code>expr</code> is a macro function call.
@@ -495,7 +497,7 @@ those side effects are executed.
 <p>If the expansion of <var>expr</var> yields another macro function call,
 that macro function call is not expanded.
 </p>
-<p>See also <code>::=</code>, <code>macros</code>, and <code>macroexpand</code>.
+<p>See also <code><a href="maxima_7.html#g_t_003a_003a_003d">::=</a></code>, <code><a href="#macros">macros</a></code>, and <code><a href="#macroexpand">macroexpand</a></code>.
 </p>
 <p>Examples
 </p>
@@ -516,7 +518,7 @@ that macro function call is not expanded.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-application">Function application</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-application">Function application</a>
 </div>
 </p></dd></dl>
 
@@ -524,7 +526,7 @@ that macro function call is not expanded.
 <a name="Item_003a-macros"></a>
 </p><dl>
 <dt><u>Global variable:</u> <b>macros</b>
-<a name="IDX1320"></a>
+<a name="IDX1340"></a>
 </dt>
 <dd><p>Default value: <code>[]</code>
 </p>
@@ -533,12 +535,12 @@ The macro function definition operator <code>::=</code> puts a new macro functio
 onto this list, and <code>kill</code>, <code>remove</code>, and <code>remfunction</code> remove
 macro functions from the list.
 </p>
-<p>See also <code>infolists</code>.
+<p>See also <code><a href="maxima_4.html#infolists">infolists</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -546,7 +548,7 @@ macro functions from the list.
 <a name="Item_003a-splice"></a>
 </p><dl>
 <dt><u>Function:</u> <b>splice</b><i> (<var>a</var>)</i>
-<a name="IDX1321"></a>
+<a name="IDX1341"></a>
 </dt>
 <dd><p>Splices (interpolates) the list named by the atom <var>a</var> into an expression,
 but only if <code>splice</code> appears within <code>buildq</code>;
@@ -581,7 +583,7 @@ arguments).  Note that the operator must be enclosed in double quotes <code>&quo
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a>
 </div>
 </p></dd></dl>
 
@@ -589,21 +591,21 @@ arguments).  Note that the operator must be enclosed in double quotes <code>&quo
 <p><a name="Item_003a-Functions-and-Variables-for-Function-Definition"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Function-Definition"></a>
-<a name="SEC200"></a>
+<a name="SEC199"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC199" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC198" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.4 Functions and Variables for Function Definition </h2>
@@ -612,7 +614,7 @@ arguments).  Note that the operator must be enclosed in double quotes <code>&quo
 <a name="Item_003a-apply"></a>
 </p><dl>
 <dt><u>Function:</u> <b>apply</b><i> (<var>F</var>, [<var>x_1</var>, &hellip;, <var>x_n</var>])</i>
-<a name="IDX1322"></a>
+<a name="IDX1342"></a>
 </dt>
 <dd><p>Constructs and evaluates an expression <code><var>F</var>(<var>arg_1</var>, ...,
 <var>arg_n</var>)</code>.
@@ -622,6 +624,8 @@ functions; when <var>F</var> is the name of an array function, <code>apply</code
 <code><var>F</var>(...)</code> (that is, a function call with parentheses instead of square
 brackets).  <code>arrayapply</code> evaluates a function call with square brackets in
 this case.
+</p>
+<p>See also <code><a href="#funmake">funmake</a></code> and <code><a href="maxima_6.html#args">args</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -648,12 +652,13 @@ In this example, <code>min</code> is applied to the value of <code>L</code>.
 
 (%o3)                         [%t3]
 (%i4) dispfun (fname);
-fname is not the name of a user function.
- -- an error.  Quitting.  To debug this try debugmode(true);
+fundef: no such function: fname
+ -- an error. To debug this try: debugmode(true);
 (%i5) apply (dispfun, [fname]);
                                    x
 (%t5)                     F(x) := ----
                                   1729
+
 (%o5)                         [%t5]
 </pre>
 <p><code>apply</code> evaluates the function name <var>F</var>.
@@ -665,15 +670,23 @@ Single quote <code>'</code> defeats evaluation.
 (%i2) demoivre (exp (%i * x));
 (%o2)                  %i sin(x) + cos(x)
 (%i3) apply (demoivre, [exp (%i * x)]);
-demoivre evaluates to false
-Improper name or value in functional position.
- -- an error.  Quitting.  To debug this try debugmode(true);
+apply: found false where a function was expected.
+ -- an error. To debug this try: debugmode(true);
 (%i4) apply ('demoivre, [exp (%i * x)]);
 (%o4)                  %i sin(x) + cos(x)
 </pre>
+<p>How to convert a nested list into a matrix:
+</p><pre class="example">(%i1) a:[[1,2],[3,4]];
+(%o1)                   [[1, 2], [3, 4]]
+(%i2) apply(matrix,a);
+                            [ 1  2 ]
+(%o2)                       [      ]
+                            [ 3  4 ]
+</pre>
+
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-application">Function application</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-application">Function application</a>
 </div>
 </p></dd></dl>
 
@@ -681,23 +694,29 @@ Improper name or value in functional position.
 <a name="Item_003a-block"></a>
 </p><dl>
 <dt><u>Function:</u> <b>block</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>block</tt> ([<var>v_1</var>, &hellip;, <var>v_m</var>], <var>expr_1</var>, &hellip;, <var>expr_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>block</tt> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1323"></a>
+<a name="IDX1343"></a>
 </dt>
-<dd><p><code>block</code> evaluates <var>expr_1</var>, &hellip;, <var>expr_n</var> in sequence and
-returns the value of the last expression evaluated.  The sequence can be
+<dd><p>The function <code>block</code> allows to make the variables <var>v_1</var>, &hellip;,
+<var>v_m</var> to be local for a sequence of commands. If these variables
+are already bound <code>block</code> saves the current values of the
+variables <var>v_1</var>, &hellip;, <var>v_m</var> (if any) upon entry to the
+block, then unbinds the variables so that they evaluate to themselves;
+The local variables may be bound to arbitrary values within the block
+but when the block is exited the saved values are restored, and the
+values assigned within the block are lost.
+</p>
+<p>If there is no need to define local variables then the list at the
+beginning of the <code>block</code> command may be omitted.
+In this case if neither <code><a href="maxima_37.html#return">return</a></code> nor <code><a href="maxima_37.html#go">go</a></code> are used
+<code>block</code> behaves similar to the following construct:
+</p>
+<pre class="example">( expr_1, expr_2,... , expr_n );
+</pre>
+<p><var>expr_1</var>, &hellip;, <var>expr_n</var> will be evaluated in sequence and
+the value of the last expression will be returned. The sequence can be 
 modified by the <code>go</code>, <code>throw</code>, and <code>return</code> functions.  The last
 expression is <var>expr_n</var> unless <code>return</code> or an expression containing
 <code>throw</code> is evaluated.
-Some variables <var>v_1</var>, &hellip;, <var>v_m</var> can be declared local to the block;
-these are distinguished from global variables of the same names.  If no
-variables are declared local then the list may be omitted.  Within the block,
-any variable other than <var>v_1</var>, &hellip;, <var>v_m</var> is a global variable.
-</p>
-<p><code>block</code> saves the current values of the variables <var>v_1</var>, &hellip;,
-<var>v_m</var> (if any) upon entry to the block, then unbinds the variables so that
-they evaluate to themselves.  The local variables may be bound to arbitrary
-values within the block but when the block is exited the saved values are
-restored, and the values assigned within the block are lost.
 </p>
 <p>The declaration <code>local(<var>v_1</var>, ..., <var>v_m</var>)</code> within <code>block</code>
 saves the properties associated with the symbols <var>v_1</var>, &hellip;, <var>v_m</var>,
@@ -731,10 +750,13 @@ another statement in the block.  For example:
 <p>Blocks typically appear on the right side of a function definition
 but can be used in other places as well.
 </p>
+<p>See also <code><a href="maxima_37.html#return">return</a></code> and <code><a href="maxima_37.html#go">go</a></code>.
+</p>
+
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Programming">Programming</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Programming">Programming</a>
 </div>
 </p></dd></dl>
 
@@ -743,7 +765,7 @@ but can be used in other places as well.
 <a name="Item_003a-break"></a>
 </p><dl>
 <dt><u>Function:</u> <b>break</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1324"></a>
+<a name="IDX1344"></a>
 </dt>
 <dd><p>Evaluates and prints <var>expr_1</var>, &hellip;, <var>expr_n</var> and then
 causes a Maxima break at which point the user can examine and change
@@ -751,7 +773,7 @@ his environment.  Upon typing <code>exit;</code> the computation resumes.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -760,7 +782,7 @@ his environment.  Upon typing <code>exit;</code> the computation resumes.
 <a name="Item_003a-catch"></a>
 </p><dl>
 <dt><u>Function:</u> <b>catch</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1325"></a>
+<a name="IDX1345"></a>
 </dt>
 <dd><p>Evaluates <var>expr_1</var>, &hellip;, <var>expr_n</var> one by one; if any
 leads to the evaluation of an expression of the
@@ -786,7 +808,7 @@ the first negative element of <code>l</code> and &quot;throws&quot; it up.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Programming">Programming</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Programming">Programming</a>
 </div>
 </p></dd></dl>
 
@@ -794,7 +816,7 @@ the first negative element of <code>l</code> and &quot;throws&quot; it up.
 <a name="Item_003a-compfile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>compfile</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compfile</tt> (<var>filename</var>, <var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compfile</tt> (<var>filename</var>, functions) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compfile</tt> (<var>filename</var>, all)</i>
-<a name="IDX1326"></a>
+<a name="IDX1346"></a>
 </dt>
 <dd><p>Translates Maxima functions into Lisp and writes the translated code into the
 file <var>filename</var>.
@@ -808,11 +830,11 @@ the Lisp compiler.
 <code>translate</code> creates and evaluates Lisp translations.  <code>compile_file</code>
 translates Maxima into Lisp, and then executes the Lisp compiler.
 </p>
-<p>See also <code>translate</code>, <code>translate_file</code>, and <code>compile_file</code>.
+<p>See also <code><a href="#translate">translate</a></code>, <code><a href="#translate_005ffile">translate_file</a></code>, and <code><a href="#compile_005ffile">compile_file</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -821,7 +843,7 @@ translates Maxima into Lisp, and then executes the Lisp compiler.
 <a name="Item_003a-compile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>compile</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile</tt> (functions) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile</tt> (all)</i>
-<a name="IDX1327"></a>
+<a name="IDX1347"></a>
 </dt>
 <dd><p>Translates Maxima functions <var>f_1</var>, &hellip;, <var>f_n</var> into Lisp, evaluates
 the Lisp translations, and calls the Lisp function <code>COMPILE</code> on each
@@ -834,9 +856,25 @@ functions.
 <p><code>compile</code> quotes its arguments; 
 the quote-quote operator <code>''</code> defeats quotation.
 </p>
+<p>Compiling a function to native code can mean a big increase in speed and might 
+cause the memory footprint to reduce drastically.
+Code tends to be especially effective when the flexibility it needs to provide
+is limited. If compilation doesn't provide the speed that is needed a few ways
+to limit the code's functionality are the following:
+</p><ul>
+<li> If the function accesses global variables the complexity of the function
+      can be drastically be reduced by limiting these variables to one data type,
+      for example using <code><a href="#mode_005fdeclare">mode_declare</a></code> or a statement like the following one:
+      <code>put(x_1, bigfloat, numerical_type)</code>
+</li><li> The compiler might warn about undeclared variables if text could either be
+      a named option to a command or (if they are assigned a value to) the name
+      of a variable. Prepending the option with a single quote <code>'</code>
+      tells the compiler that the text is meant as an option.
+</li></ul>
+
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -844,7 +882,7 @@ the quote-quote operator <code>''</code> defeats quotation.
 <a name="Item_003a-define"></a>
 </p><dl>
 <dt><u>Function:</u> <b>define</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (<var>f</var>(<var>x_1</var>, &hellip;, <var>x_n</var>), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (<var>f</var>[<var>x_1</var>, &hellip;, <var>x_n</var>], <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (<var>f</var>[<var>x_1</var>, &hellip;, <var>x_n</var>](<var>y_1</var>, &hellip;, <var>y_m</var>), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (funmake (<var>f</var>, [<var>x_1</var>, &hellip;, <var>x_n</var>]), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (arraymake (<var>f</var>, [<var>x_1</var>, &hellip;, <var>x_n</var>]), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (ev (<var>expr_1</var>), <var>expr_2</var>)</i>
-<a name="IDX1328"></a>
+<a name="IDX1348"></a>
 </dt>
 <dd><p>Defines a function named <var>f</var> with arguments <var>x_1</var>, &hellip;, <var>x_n</var>
 and function body <var>expr</var>.  <code>define</code> always evaluates its second
@@ -877,7 +915,7 @@ in which <code>local</code> appears.
 function defined by <code>define</code> does not evaluate the corresponding actual
 argument.  Otherwise all actual arguments are evaluated.
 </p>
-<p>See also <code>:=</code> and <code>::=</code>.
+<p>See also <code><a href="maxima_7.html#g_t_003a_003d">:=</a></code> and <code><a href="maxima_7.html#g_t_003a_003a_003d">::=</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -930,7 +968,7 @@ the function defined by <code>define</code> accepts a variable number of argumen
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a>
 </div>
 </p></dd></dl>
 
@@ -939,7 +977,7 @@ the function defined by <code>define</code> accepts a variable number of argumen
 <a name="Item_003a-define_005fvariable"></a>
 </p><dl>
 <dt><u>Function:</u> <b>define_variable</b><i> (<var>name</var>, <var>default_value</var>, <var>mode</var>)</i>
-<a name="IDX1329"></a>
+<a name="IDX1349"></a>
 </dt>
 <dd><p>Introduces a global variable into the Maxima environment.
 <code>define_variable</code> is useful in user-written packages, which are often
@@ -985,8 +1023,9 @@ and otherwise it is the previous value of <code>name</code>.
 (%i3) foo: false;
 (%o3)                         false
 (%i4) foo: %pi;
-Error: foo was declared mode boolean, has value: %pi
- -- an error.  Quitting.  To debug this try debugmode(true);
+translator: foo was declared with mode boolean
+                                          , but it has value: %pi
+ -- an error. To debug this try: debugmode(true);
 (%i5) foo;
 (%o5)                         false
 </pre>
@@ -999,14 +1038,12 @@ Error: foo was declared mode boolean, has value: %pi
 (%i3) prime_test (y) := if not primep(y) then
                            error (y, &quot;is not prime.&quot;);
 (%o3) prime_test(y) := if not primep(y)
-
                                    then error(y, &quot;is not prime.&quot;)
 (%i4) bar: 1439;
 (%o4)                         1439
 (%i5) bar: 1440;
 1440 is not prime.
-#0: prime_test(y=1440)
- -- an error.  Quitting.  To debug this try debugmode(true);
+ -- an error. To debug this try: debugmode(true);
 (%i6) bar;
 (%o6)                         1439
 </pre>
@@ -1019,25 +1056,21 @@ The mode <code>any_check</code> is like <code>any</code>, but <code>any_check</c
 (%i2) F: lambda ([y], if y # 'baz_quux then
                  error (&quot;Cannot assign to `baz_quux'.&quot;));
 (%o2) lambda([y], if y # 'baz_quux
-
                         then error(Cannot assign to `baz_quux'.))
 (%i3) qput (baz_quux, ''F, value_check);
 (%o3) lambda([y], if y # 'baz_quux
-
                         then error(Cannot assign to `baz_quux'.))
 (%i4) baz_quux: 'baz_quux;
 (%o4)                       baz_quux
 (%i5) baz_quux: sqrt(2);
 Cannot assign to `baz_quux'.
-#0: lambda([y],if y # 'baz_quux then
-                 error(&quot;Cannot assign to `baz_quux'.&quot;))(y=sqrt(2))
- -- an error.  Quitting.  To debug this try debugmode(true);
+ -- an error. To debug this try: debugmode(true);
 (%i6) baz_quux;
 (%o6)                       baz_quux
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -1045,15 +1078,15 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-dispfun"></a>
 </p><dl>
 <dt><u>Function:</u> <b>dispfun</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispfun</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispfun</tt> (all)</i>
-<a name="IDX1330"></a>
+<a name="IDX1350"></a>
 </dt>
 <dd><p>Displays the definition of the user-defined functions <var>f_1</var>, &hellip;,
 <var>f_n</var>.  Each argument may be the name of a macro (defined with <code>::=</code>),
 an ordinary function (defined with <code>:=</code> or <code>define</code>), an array
 function (defined with <code>:=</code> or <code>define</code>, but enclosing arguments in
-square brackets <code>[ ]</code>), a subscripted function, (defined with <code>:=</code> or
+square brackets <code>[ ]</code>), a subscripted function (defined with <code>:=</code> or
 <code>define</code>, but enclosing some arguments in square brackets and others in
-parentheses <code>( )</code>) one of a family of subscripted functions selected by a
+parentheses <code>( )</code>), one of a family of subscripted functions selected by a
 particular subscript value, or a subscripted function defined with a constant
 subscript.
 </p>
@@ -1093,6 +1126,7 @@ labels corresponding to the displayed functions.
 (%i6) dispfun (m, f, g, h, h[5], h[10], i[8]);
                                      - y
 (%t6)                   m(x, y) ::= x
+
                                      - y
 (%t7)                    f(x, y) := x
 
@@ -1119,9 +1153,9 @@ labels corresponding to the displayed functions.
                            8
 
 (%o12)       [%t6, %t7, %t8, %t9, %t10, %t11, %t12]
-(%i12) ''%;
+(%i13) ''%;
                      - y              - y            - y
-(%o12) [m(x, y) ::= x   , f(x, y) := x   , g     := x   , 
+(%o13) [m(x, y) ::= x   , f(x, y) := x   , g     := x   , 
                                             x, y
                   - y           1              1             - y
         h (y) := x   , h (y) := --, h  (y) := ---, i (y) := 8   ]
@@ -1130,8 +1164,8 @@ labels corresponding to the displayed functions.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a> &middot;
-<a href="maxima_99.html#Category_003a-Display-functions">Display functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a> &middot;
+<a href="maxima_105.html#Category_003a-Display-functions">Display functions</a>
 </div>
 </p></dd></dl>
 
@@ -1139,7 +1173,7 @@ labels corresponding to the displayed functions.
 <a name="Item_003a-fullmap"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fullmap</b><i> (<var>f</var>, <var>expr_1</var>, &hellip;)</i>
-<a name="IDX1331"></a>
+<a name="IDX1351"></a>
 </dt>
 <dd><p>Similar to <code>map</code>, but <code>fullmap</code> keeps mapping down all subexpressions
 until the main operators are no longer the same.
@@ -1159,8 +1193,8 @@ manipulations; thus, Maxima sometimes generates an error message concerning
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-application">Function application</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-application">Function application</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1168,7 +1202,7 @@ manipulations; thus, Maxima sometimes generates an error message concerning
 <a name="Item_003a-fullmapl"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fullmapl</b><i> (<var>f</var>, <var>list_1</var>, &hellip;)</i>
-<a name="IDX1332"></a>
+<a name="IDX1352"></a>
 </dt>
 <dd><p>Similar to <code>fullmap</code>, but <code>fullmapl</code> only maps onto lists and
 matrices.
@@ -1180,8 +1214,8 @@ matrices.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-application">Function application</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-application">Function application</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1189,7 +1223,7 @@ matrices.
 <a name="Item_003a-functions"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>functions</b>
-<a name="IDX1333"></a>
+<a name="IDX1353"></a>
 </dt>
 <dd><p>Default value: <code>[]</code>
 </p>
@@ -1237,8 +1271,8 @@ are listed by the global variable <code>arrays</code>, and not by <code>function
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -1246,18 +1280,23 @@ are listed by the global variable <code>arrays</code>, and not by <code>function
 <a name="Item_003a-fundef"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fundef</b><i> (<var>f</var>)</i>
-<a name="IDX1334"></a>
+<a name="IDX1354"></a>
 </dt>
 <dd><p>Returns the definition of the function <var>f</var>.
 </p>
-<p>The argument may be the name of a macro (defined with <code>::=</code>), an ordinary
-function (defined with <code>:=</code> or <code>define</code>), an array function (defined
-with <code>:=</code> or <code>define</code>, but enclosing arguments in square brackets
-<code>[ ]</code>), a subscripted function, (defined with <code>:=</code> or <code>define</code>,
+<p>The argument may be
+</p><ul>
+<li> the name of a macro (defined with <code>::=</code>),
+</li><li> an ordinary function (defined with <code>:=</code> or <code>define</code>),
+</li><li> an array function (defined with <code>:=</code> or <code>define</code>, but enclosing arguments in square brackets <code>[ ]</code>),
+</li><li> a subscripted function (defined with <code>:=</code> or <code>define</code>,
 but enclosing some arguments in square brackets and others in parentheses
-<code>( )</code>) one of a family of subscripted functions selected by a particular
-subscript value, or a subscripted function defined with a constant subscript.
-</p>
+<code>( )</code>),
+</li><li> one of a family of subscripted functions selected by a particular
+subscript value,
+</li><li> or a subscripted function defined with a constant subscript.
+</li></ul>
+
 <p><code>fundef</code> quotes its argument;
 the quote-quote operator <code>''</code> defeats quotation.
 </p>
@@ -1267,7 +1306,7 @@ and assigns the definition to the label.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a>
 </div>
 </p></dd></dl>
 
@@ -1275,7 +1314,7 @@ and assigns the definition to the label.
 <a name="Item_003a-funmake"></a>
 </p><dl>
 <dt><u>Function:</u> <b>funmake</b><i> (<var>F</var>, [<var>arg_1</var>, &hellip;, <var>arg_n</var>])</i>
-<a name="IDX1335"></a>
+<a name="IDX1355"></a>
 </dt>
 <dd><p>Returns an expression <code><var>F</var>(<var>arg_1</var>, ..., <var>arg_n</var>)</code>.
 The return value is simplified, but not evaluated,
@@ -1288,6 +1327,8 @@ functions; when <var>F</var> is the name of an array function,
 <code>arraymake</code> returns a function call with square brackets in this case.
 </p>
 <p><code>funmake</code> evaluates its arguments.
+</p>
+<p>See also <code><a href="#apply">apply</a></code> and <code><a href="maxima_6.html#args">args</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -1362,8 +1403,8 @@ functions; when <var>F</var> is the name of an array function,
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-application">Function application</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-application">Function application</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1371,7 +1412,7 @@ functions; when <var>F</var> is the name of an array function,
 <a name="Item_003a-lambda"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lambda</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lambda</tt> ([<var>x_1</var>, &hellip;, <var>x_m</var>], <var>expr_1</var>, &hellip;, <var>expr_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lambda</tt> ([[<var>L</var>]], <var>expr_1</var>, &hellip;, <var>expr_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lambda</tt> ([<var>x_1</var>, &hellip;, <var>x_m</var>, [<var>L</var>]], <var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1336"></a>
+<a name="IDX1356"></a>
 </dt>
 <dd><p>Defines and returns a lambda expression (that is, an anonymous function).
 The function may have required arguments <var>x_1</var>, &hellip;, <var>x_m</var> and/or
@@ -1422,15 +1463,15 @@ function.
 A lambda expression may appear in contexts in which a function evaluation is expected.
 </li></ul>
 
-<pre class="example">(%i3) lambda ([x], x^2) (a);
+<pre class="example">(%i1) lambda ([x], x^2) (a);
                                 2
-(%o3)                          a
-(%i4) apply (lambda ([x], x^2), [a]);
+(%o1)                          a
+(%i2) apply (lambda ([x], x^2), [a]);
                                 2
-(%o4)                          a
-(%i5) map (lambda ([x], x^2), [a, b, c, d, e]);
+(%o2)                          a
+(%i3) map (lambda ([x], x^2), [a, b, c, d, e]);
                         2   2   2   2   2
-(%o5)                 [a , b , c , d , e ]
+(%o3)                 [a , b , c , d , e ]
 </pre><ul>
 <li>
 Argument variables are local variables.
@@ -1439,21 +1480,21 @@ Global variables are evaluated at the time the lambda expression is evaluated,
 unless some special evaluation is forced by some means, such as <code>''</code>.
 </li></ul>
 
-<pre class="example">(%i6) a: %pi$
-(%i7) b: %e$
-(%i8) g: lambda ([a], a*b);
-(%o8)                   lambda([a], a b)
-(%i9) b: %gamma$
-(%i10) g(1/2);
+<pre class="example">(%i1) a: %pi$
+(%i2) b: %e$
+(%i3) g: lambda ([a], a*b);
+(%o3)                   lambda([a], a b)
+(%i4) b: %gamma$
+(%i5) g(1/2);
                              %gamma
-(%o10)                       ------
+(%o5)                        ------
                                2
-(%i11) g2: lambda ([a], a*''b);
-(%o11)                lambda([a], a %gamma)
-(%i12) b: %e$
-(%i13) g2(1/2);
+(%i6) g2: lambda ([a], a*''b);
+(%o6)                 lambda([a], a %gamma)
+(%i7) b: %e$
+(%i8) g2(1/2);
                              %gamma
-(%o13)                       ------
+(%o8)                        ------
                                2
 </pre><ul>
 <li>
@@ -1462,13 +1503,13 @@ expression appear to be global to the inner expression unless masked by local
 variables of the same names.
 </li></ul>
 
-<pre class="example">(%i14) h: lambda ([a, b], h2: lambda ([a], a*b), h2(1/2));
+<pre class="example">(%i1) h: lambda ([a, b], h2: lambda ([a], a*b), h2(1/2));
                                                    1
-(%o14)    lambda([a, b], h2 : lambda([a], a b), h2(-))
+(%o1)     lambda([a, b], h2 : lambda([a], a b), h2(-))
                                                    2
-(%i15) h(%pi, %gamma);
+(%i2) h(%pi, %gamma);
                              %gamma
-(%o15)                       ------
+(%o2)                        ------
                                2
 </pre><ul>
 <li>
@@ -1477,19 +1518,19 @@ not define a &quot;multiply by <code>a</code>&quot; function.  Such a function c
 via <code>buildq</code>, as in lambda expression <code>i2</code> below.
 </li></ul>
 
-<pre class="example">(%i16) i: lambda ([a], lambda ([x], a*x));
-(%o16)            lambda([a], lambda([x], a x))
-(%i17) i(1/2);
-(%o17)                  lambda([x], a x)
-(%i18) i2: lambda([a], buildq([a: a], lambda([x], a*x)));
-(%o18)    lambda([a], buildq([a : a], lambda([x], a x)))
-(%i19) i2(1/2);
-                                     x
-(%o19)                   lambda([x], -)
-                                     2
-(%i20) i2(1/2)(%pi);
+<pre class="example">(%i1) i: lambda ([a], lambda ([x], a*x));
+(%o1)             lambda([a], lambda([x], a x))
+(%i2) i(1/2);
+(%o2)                   lambda([x], a x)
+(%i3) i2: lambda([a], buildq([a: a], lambda([x], a*x)));
+(%o3)    lambda([a], buildq([a : a], lambda([x], a x)))
+(%i4) i2(1/2);
+                                    1
+(%o4)                  lambda([x], (-) x)
+                                    2
+(%i5) i2(1/2)(%pi);
                                %pi
-(%o20)                         ---
+(%o5)                          ---
                                 2
 </pre><ul>
 <li>
@@ -1509,7 +1550,7 @@ The arguments appear within the function body as a list.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a>
 </div>
 </p></dd></dl>
 
@@ -1518,7 +1559,7 @@ The arguments appear within the function body as a list.
 <a name="Item_003a-local"></a>
 </p><dl>
 <dt><u>Function:</u> <b>local</b><i> (<var>v_1</var>, &hellip;, <var>v_n</var>)</i>
-<a name="IDX1337"></a>
+<a name="IDX1357"></a>
 </dt>
 <dd><p>Saves the properties associated with the symbols <var>v_1</var>, &hellip;, <var>v_n</var>,
 removes any properties before evaluating other expressions,
@@ -1554,8 +1595,8 @@ and only one occurrence is permitted in each.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a> &middot;
-<a href="maxima_99.html#Category_003a-Programming">Programming</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a> &middot;
+<a href="maxima_105.html#Category_003a-Programming">Programming</a>
 </div>
 </p></dd></dl>
 
@@ -1563,7 +1604,7 @@ and only one occurrence is permitted in each.
 <a name="Item_003a-macroexpansion"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>macroexpansion</b>
-<a name="IDX1338"></a>
+<a name="IDX1358"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1627,7 +1668,7 @@ x + 99 is equal to x
 (%t6)                     f(x) := ----
                                   g(x)
 
-(%o6)                         done
+(%o6)                         [%t6]
 (%i7) f (a * b);
 x - 99 is equal to x 
 x + 99 is equal to x 
@@ -1660,17 +1701,17 @@ x + 99 is equal to x
 (%o5)                       --------
                             a b + 99
 (%i6) dispfun (f);
-                                  h(x)
-(%t6)                     f(x) := ----
-                                  g(x)
+                      mmacroexpanded(x - 99, h(x))
+(%t6)         f(x) := ----------------------------
+                      mmacroexpanded(x + 99, g(x))
 
-(%o6)                         done
+(%o6)                         [%t6]
 (%i7) f (a * b);
                             a b - 99
 (%o7)                       --------
                             a b + 99
 </pre>
-<p>When <code>macroexpansion</code> is <code>expand</code>,
+<p>When <code>macroexpansion</code> is <code>displace</code>,
 a macro function is called once,
 and the calling expression is modified.
 </p>
@@ -1699,7 +1740,7 @@ x + 99 is equal to x
 (%t6)                    f(x) := ------
                                  x + 99
 
-(%o6)                         done
+(%o6)                         [%t6]
 (%i7) f (a * b);
                             a b - 99
 (%o7)                       --------
@@ -1707,8 +1748,8 @@ x + 99 is equal to x
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-application">Function application</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-application">Function application</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -1716,7 +1757,7 @@ x + 99 is equal to x
 <a name="Item_003a-mode_005fcheckp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>mode_checkp</b>
-<a name="IDX1339"></a>
+<a name="IDX1359"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1725,7 +1766,7 @@ of bound variables.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1733,7 +1774,7 @@ of bound variables.
 <a name="Item_003a-mode_005fcheck_005ferrorp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>mode_check_errorp</b>
-<a name="IDX1340"></a>
+<a name="IDX1360"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1742,7 +1783,7 @@ error.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1750,7 +1791,7 @@ error.
 <a name="Item_003a-mode_005fcheck_005fwarnp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>mode_check_warnp</b>
-<a name="IDX1341"></a>
+<a name="IDX1361"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1759,7 +1800,7 @@ described.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1768,7 +1809,7 @@ described.
 <a name="Item_003a-mode_005fdeclare"></a>
 </p><dl>
 <dt><u>Function:</u> <b>mode_declare</b><i> (<var>y_1</var>, <var>mode_1</var>, &hellip;, <var>y_n</var>, <var>mode_n</var>)</i>
-<a name="IDX1342"></a>
+<a name="IDX1362"></a>
 </dt>
 <dd><p><code>mode_declare</code> is used to declare the modes of variables and functions for
 subsequent translation or compilation of functions.  <code>mode_declare</code> is
@@ -1813,7 +1854,7 @@ single-word integers.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -1822,7 +1863,7 @@ single-word integers.
 <a name="Item_003a-mode_005fidentity"></a>
 </p><dl>
 <dt><u>Function:</u> <b>mode_identity</b><i> (<var>arg_1</var>, <var>arg_2</var>)</i>
-<a name="IDX1343"></a>
+<a name="IDX1363"></a>
 </dt>
 <dd><p>A special form used with <code>mode_declare</code> and <code>macros</code> to declare, e.g.,
 a list of lists of flonums, or other compound data object.  The first argument
@@ -1848,7 +1889,7 @@ every time you take the first of a list of numbers.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -1856,7 +1897,7 @@ every time you take the first of a list of numbers.
 <a name="Item_003a-remfunction"></a>
 </p><dl>
 <dt><u>Function:</u> <b>remfunction</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remfunction</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remfunction</tt> (all)</i>
-<a name="IDX1344"></a>
+<a name="IDX1364"></a>
 </dt>
 <dd><p>Unbinds the function definitions of the symbols <var>f_1</var>, &hellip;, <var>f_n</var>.
 The arguments may be the names of ordinary functions (created by <code><a href="maxima_7.html#g_t_003a_003d">:=</a></code> or
@@ -1875,7 +1916,7 @@ which there is no function definition.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Function-definition">Function definition</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Function-definition">Function definition</a>
 </div>
 </p></dd></dl>
 
@@ -1884,7 +1925,7 @@ which there is no function definition.
 <a name="Item_003a-savedef"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>savedef</b>
-<a name="IDX1345"></a>
+<a name="IDX1365"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1897,7 +1938,7 @@ removed from the <code>functions</code> list.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1906,7 +1947,7 @@ removed from the <code>functions</code> list.
 <a name="Item_003a-transcompile"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>transcompile</b>
-<a name="IDX1346"></a>
+<a name="IDX1366"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1918,7 +1959,7 @@ suitable for compilation.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1926,7 +1967,7 @@ suitable for compilation.
 <a name="Item_003a-translate"></a>
 </p><dl>
 <dt><u>Function:</u> <b>translate</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate</tt> (functions) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate</tt> (all)</i>
-<a name="IDX1347"></a>
+<a name="IDX1367"></a>
 </dt>
 <dd><p>Translates the user-defined functions <var>f_1</var>, &hellip;, <var>f_n</var> from the
 Maxima language into Lisp and evaluates the Lisp translations.
@@ -1960,7 +2001,7 @@ translation of a user's function to Lisp.
 </p>
 <p>Note that translated
 functions may not run identically to the way they did before
-translation as certain incompatabilities may exist between the Lisp
+translation as certain incompatibilities may exist between the Lisp
 and Maxima versions.  Principally, the <code>rat</code> function with more than
 one argument and the <code>ratvars</code> function should not be used if any
 variables are <code>mode_declare</code>'d canonical rational expressions (CRE).
@@ -1981,7 +2022,7 @@ functions translated.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -1989,7 +2030,7 @@ functions translated.
 <a name="Item_003a-translate_005ffile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>translate_file</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate_file</tt> (<var>maxima_filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate_file</tt> (<var>maxima_filename</var>, <var>lisp_filename</var>)</i>
-<a name="IDX1348"></a>
+<a name="IDX1368"></a>
 </dt>
 <dd><p>Translates a file of Maxima code into a file of Lisp code.
 <code>translate_file</code> returns a list of three filenames:
@@ -2029,27 +2070,27 @@ as the Lisp code is compiled.
 See <code>compile_file</code> for more on this topic.
 </p>
 <p>See also 
-</p><p align="left"><code>tr_array_as_ref</code>,
-<code>tr_bound_function_applyp</code>,
-<code>tr_exponent</code>,
-<code>tr_file_tty_messagesp</code>, 
-<code>tr_float_can_branch_complex</code>,
-<code>tr_function_call_default</code>, 
-<code>tr_numer</code>,
-<code>tr_optimize_max_loop</code>, 
-<code>tr_semicompile</code>,
-<code>tr_state_vars</code>, 
-<code>tr_warnings_get</code>,
-<code>tr_warn_bad_function_calls</code>,
-<code>tr_warn_fexpr</code>, 
-<code>tr_warn_meval</code>,
-<code>tr_warn_mode</code>,
-<code>tr_warn_undeclared</code>,
-and <code>tr_warn_undefined_variable</code>.
+</p><p align="left"><code>tr_array_as_ref</code>
+<code><a href="#tr_005fbound_005ffunction_005fapplyp">tr_bound_function_applyp</a></code>,
+<code>tr_exponent</code>
+<code><a href="#tr_005ffile_005ftty_005fmessagesp">tr_file_tty_messagesp</a></code>,
+<code><a href="#tr_005ffloat_005fcan_005fbranch_005fcomplex">tr_float_can_branch_complex</a></code>,
+<code><a href="#tr_005ffunction_005fcall_005fdefault">tr_function_call_default</a></code>,
+<code><a href="#tr_005fnumer">tr_numer</a></code>,
+<code><a href="#tr_005foptimize_005fmax_005floop">tr_optimize_max_loop</a></code>,
+<code><a href="#tr_005fsemicompile">tr_semicompile</a></code>,
+<code><a href="#tr_005fstate_005fvars">tr_state_vars</a></code>,
+<code><a href="#tr_005fwarnings_005fget">tr_warnings_get</a></code>,
+<code>tr_warn_bad_function_calls</code>
+<code><a href="#tr_005fwarn_005ffexpr">tr_warn_fexpr</a></code>, 
+<code><a href="#tr_005fwarn_005fmeval">tr_warn_meval</a></code>,
+<code><a href="#tr_005fwarn_005fmode">tr_warn_mode</a></code>,
+<code><a href="#tr_005fwarn_005fundeclared">tr_warn_undeclared</a></code>,
+and <code><a href="#tr_005fwarn_005fundefined_005fvariable">tr_warn_undefined_variable</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -2057,7 +2098,7 @@ and <code>tr_warn_undefined_variable</code>.
 <a name="Item_003a-transrun"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>transrun</b>
-<a name="IDX1349"></a>
+<a name="IDX1369"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -2067,7 +2108,7 @@ rather than the translated version.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2076,7 +2117,7 @@ rather than the translated version.
 <a name="Item_003a-tr_005farray_005fas_005fref"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_array_as_ref</b>
-<a name="IDX1350"></a>
+<a name="IDX1370"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -2091,7 +2132,7 @@ otherwise array names appear as literal symbols in translated code.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2100,7 +2141,7 @@ otherwise array names appear as literal symbols in translated code.
 <a name="Item_003a-tr_005fbound_005ffunction_005fapplyp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_bound_function_applyp</b>
-<a name="IDX1351"></a>
+<a name="IDX1371"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -2114,15 +2155,15 @@ the warning message.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
-<p><a name="tr_005ffile_005ftty_005fmessage"></a>
+<p><a name="tr_005ffile_005ftty_005fmessagesp"></a>
 <a name="Item_003a-tr_005ffile_005ftty_005fmessagesp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_file_tty_messagesp</b>
-<a name="IDX1352"></a>
+<a name="IDX1372"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2133,7 +2174,7 @@ translation of the file are only inserted into the UNLISP file.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2142,7 +2183,7 @@ translation of the file are only inserted into the UNLISP file.
 <a name="Item_003a-tr_005ffloat_005fcan_005fbranch_005fcomplex"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_float_can_branch_complex</b>
-<a name="IDX1353"></a>
+<a name="IDX1373"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -2159,7 +2200,7 @@ When <code>false</code> then <code>acos(x)</code> is of mode
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2167,7 +2208,7 @@ When <code>false</code> then <code>acos(x)</code> is of mode
 <a name="Item_003a-tr_005ffunction_005fcall_005fdefault"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_function_call_default</b>
-<a name="IDX1354"></a>
+<a name="IDX1374"></a>
 </dt>
 <dd><p>Default value: <code>general</code>
 </p>
@@ -2183,7 +2224,7 @@ Maxima interpreter.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2191,7 +2232,7 @@ Maxima interpreter.
 <a name="Item_003a-tr_005fnumer"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_numer</b>
-<a name="IDX1355"></a>
+<a name="IDX1375"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2200,7 +2241,7 @@ atoms which have them, e.g. <code>%pi</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2208,7 +2249,7 @@ atoms which have them, e.g. <code>%pi</code>.
 <a name="Item_003a-tr_005foptimize_005fmax_005floop"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_optimize_max_loop</b>
-<a name="IDX1356"></a>
+<a name="IDX1376"></a>
 </dt>
 <dd><p>Default value: 100
 </p>
@@ -2219,7 +2260,7 @@ non-terminating optimization properties.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2227,7 +2268,7 @@ non-terminating optimization properties.
 <a name="Item_003a-tr_005fsemicompile"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_semicompile</b>
-<a name="IDX1357"></a>
+<a name="IDX1377"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2237,7 +2278,7 @@ machine code by the Lisp compiler.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2246,7 +2287,7 @@ machine code by the Lisp compiler.
 <a name="Item_003a-tr_005fstate_005fvars"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>tr_state_vars</b>
-<a name="IDX1358"></a>
+<a name="IDX1378"></a>
 </dt>
 <dd><p>Default value:
 </p><pre class="example">[transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,
@@ -2262,7 +2303,7 @@ track down bugs.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2271,21 +2312,21 @@ track down bugs.
 <a name="Item_003a-tr_005fwarnings_005fget"></a>
 </p><dl>
 <dt><u>Function:</u> <b>tr_warnings_get</b><i> ()</i>
-<a name="IDX1359"></a>
+<a name="IDX1379"></a>
 </dt>
 <dd><p>Prints a list of warnings which have been given by
 the translator during the current translation.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-tr_005fwarn_005fbad_005ffunction_005fcalls"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_warn_bad_function_calls</b>
-<a name="IDX1360"></a>
+<a name="IDX1380"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -2295,7 +2336,7 @@ improper declarations that were made at translate time.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2303,7 +2344,7 @@ improper declarations that were made at translate time.
 <a name="Item_003a-tr_005fwarn_005ffexpr"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_warn_fexpr</b>
-<a name="IDX1361"></a>
+<a name="IDX1381"></a>
 </dt>
 <dd><p>Default value: <code>compfile</code>
 </p>
@@ -2313,7 +2354,7 @@ all legitimate special program forms are translated.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2321,7 +2362,7 @@ all legitimate special program forms are translated.
 <a name="Item_003a-tr_005fwarn_005fmeval"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_warn_meval</b>
-<a name="IDX1362"></a>
+<a name="IDX1382"></a>
 </dt>
 <dd><p>Default value: <code>compfile</code>
 </p>
@@ -2330,7 +2371,7 @@ called that indicates problems in the translation.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2338,7 +2379,7 @@ called that indicates problems in the translation.
 <a name="Item_003a-tr_005fwarn_005fmode"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_warn_mode</b>
-<a name="IDX1363"></a>
+<a name="IDX1383"></a>
 </dt>
 <dd><p>Default value: <code>all</code>
 </p>
@@ -2347,7 +2388,7 @@ assigned values inappropriate for their mode.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2355,7 +2396,7 @@ assigned values inappropriate for their mode.
 <a name="Item_003a-tr_005fwarn_005fundeclared"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_warn_undeclared</b>
-<a name="IDX1364"></a>
+<a name="IDX1384"></a>
 </dt>
 <dd><p>Default value: <code>compile</code>
 </p>
@@ -2364,7 +2405,7 @@ warnings about undeclared variables to the TTY.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2372,7 +2413,7 @@ warnings about undeclared variables to the TTY.
 <a name="Item_003a-tr_005fwarn_005fundefined_005fvariable"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>tr_warn_undefined_variable</b>
-<a name="IDX1365"></a>
+<a name="IDX1385"></a>
 </dt>
 <dd><p>Default value: <code>all</code>
 </p>
@@ -2381,7 +2422,7 @@ undefined global variables are seen.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2389,7 +2430,7 @@ undefined global variables are seen.
 <a name="Item_003a-compile_005ffile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>compile_file</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile_file</tt> (<var>filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile_file</tt> (<var>filename</var>, <var>compiled_filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile_file</tt> (<var>filename</var>, <var>compiled_filename</var>, <var>lisp_filename</var>)</i>
-<a name="IDX1366"></a>
+<a name="IDX1386"></a>
 </dt>
 <dd><p>Translates the Maxima file <var>filename</var> into Lisp, executes the Lisp compiler,
 and, if the translation and compilation succeed, loads the compiled code into
@@ -2421,7 +2462,7 @@ flags (<code>tr_numer</code>, etc.) have no effect on the translation.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -2430,7 +2471,7 @@ flags (<code>tr_numer</code>, etc.) have no effect on the translation.
 <a name="Item_003a-declare_005ftranslated"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_translated</b><i> (<var>f_1</var>, <var>f_2</var>, &hellip;)</i>
-<a name="IDX1367"></a>
+<a name="IDX1387"></a>
 </dt>
 <dd><p>When translating a file of Maxima code
 to Lisp, it is important for the translator to know which functions it
@@ -2443,7 +2484,7 @@ the translator does not know <code>fn</code> is going to be a Lisp function.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -2451,8 +2492,8 @@ the translator does not know <code>fn</code> is going to be a Lisp function.
 <p><a name="Item_003a-Program-Flow"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -2460,12 +2501,12 @@ the translator does not know <code>fn</code> is going to be a Lisp function.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

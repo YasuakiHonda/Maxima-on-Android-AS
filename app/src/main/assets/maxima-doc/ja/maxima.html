@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: </title>
+<title>Maxima 5.39.0 Manual: </title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: ">
-<meta name="keywords" content="Maxima 5.36.1 Manual: ">
+<meta name="description" content="Maxima 5.39.0 Manual: ">
+<meta name="keywords" content="Maxima 5.39.0 Manual: ">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,17 +72,33 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="settitle">Maxima 5.36.1 Manual
+<h1 class="settitle">Maxima 5.39.0 Manual
 </h1>
 <p><a name="Item_003a-Top"></a>
 </p><a name="Top"></a>
@@ -135,7 +150,7 @@ DOE Macsymaを保守・開発するために、MaximaプロジェクトをSource
 <tr><td align="left" valign="top"><a href="maxima_13.html#SEC69">13. File Input and Output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       ファイル入出力
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
-数学の特定分野のサポート
+<b>数学の特定分野のサポート</b>
 </pre></th></tr><tr><td align="left" valign="top"><a href="maxima_14.html#SEC75">14. Polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 多項式の標準形と操作関数
 </td></tr>
 <tr><td align="left" valign="top"><a href="maxima_15.html#SEC78">15. Special Functions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">           特殊函数
@@ -173,7 +188,7 @@ DOE Macsymaを保守・開発するために、MaximaプロジェクトをSource
 <tr><td align="left" valign="top"><a href="maxima_31.html#SEC174">31. Groups</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      抽象代数
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
-上級用機能とプログラミング
+<b>上級用機能とプログラミング</b>
 </pre></th></tr><tr><td align="left" valign="top"><a href="maxima_32.html#SEC176">32. Runtime Environment</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         Maxima環境のカスタム化
 </td></tr>
 <tr><td align="left" valign="top"><a href="maxima_33.html#SEC180">33. Miscellaneous Options</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       Maximaでグローバルな効果を持つオプション
@@ -182,112 +197,125 @@ DOE Macsymaを保守・開発するために、MaximaプロジェクトをSource
 </td></tr>
 <tr><td align="left" valign="top"><a href="maxima_35.html#SEC187">35. Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        集合の操作
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_36.html#SEC194">36. Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         関数定義
+<tr><td align="left" valign="top"><a href="maxima_36.html#SEC193">36. Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         関数定義
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_37.html#SEC201">37. Program Flow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                Maximaプログラムの定義
+<tr><td align="left" valign="top"><a href="maxima_37.html#SEC200">37. Program Flow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                Maximaプログラムの定義
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_38.html#SEC206">38. Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   Maximaプログラムのデバッグ
-</td></tr>
-<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
-その他のパッケージ
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_39.html#SEC210">39. alt-display</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 代替の表示パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_40.html#SEC213">40. asympa</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      漸近解析パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_41.html#SEC216">41. augmented_lagrangian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        拡張Lagrangeパッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_42.html#SEC218">42. Bernstein</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   <code>Bernstein</code>多項式
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_43.html#SEC220">43. bode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        Bode線図
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_44.html#SEC222">44. clebsch_gordan</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">              Clebsch-Gordan and Wigner coefficients
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_45.html#SEC224">45. cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      不等式制約を持つ非線形最適化
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_46.html#SEC228">46. contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 ODEのための追加ルーチン
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_47.html#SEC234">47. descriptive</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 記述統計
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_48.html#SEC239">48. diag</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        Jordan行列
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_49.html#SEC241">49. distrib</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     確率分布
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_50.html#SEC245">50. draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        Maxima-Gnuplotインターフェイス
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_51.html#SEC256">51. drawdf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      Gnuplotを使った方向場
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_52.html#SEC260">52. dynamics</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    3D可視化とアニメーション、力学系
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_53.html#SEC267">53. ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     次元量
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_54.html#SEC271">54. f90</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                         MaximaからFortranへの翻訳器
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_55.html#SEC273">55. finance</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     金融パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_56.html#SEC276">56. fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    フラクタル
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_57.html#SEC282">57. ggf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                         数列の母函数
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_58.html#SEC284">58. graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      グラフ理論パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_59.html#SEC292">59. grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     Groebner基底を扱う関数
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_60.html#SEC301">60. impdiff</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     陰導函数
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_61.html#SEC303">61. interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    内挿バッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_62.html#SEC306">62. lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      線形代数のためのLAPACK関数
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_63.html#SEC309">63. lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                       L-BFGS無制約最小化パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_64.html#SEC312">64. lindstedt</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   Lindstedtパッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_65.html#SEC314">65. linearalgebra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">               線形代数のための関数
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_66.html#SEC317">66. lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    最小二乗
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_68.html#SEC323">68. makeOrders</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  多項式ユーティリティ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_67.html#SEC320">67. minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     最小化と根のためのMINPACK関数
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_69.html#SEC325">69. mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     Newton法
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_70.html#SEC328">70. numericalio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 ファイルの読み書き
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_71.html#SEC336">71. opsubst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     代入ユーティリティ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_72.html#SEC338">72. orthopoly</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   直交多項式
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_73.html#SEC347">73. romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     数値積分のRomberg法
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_74.html#SEC349">74. simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     線形計画
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC355">75. simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">              整理のルールと関数
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_76.html#SEC364">76. solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   線形漸化式
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_77.html#SEC367">77. stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                       統計的推定パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_78.html#SEC372">78. stirling</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    Stirling公式
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_79.html#SEC374">79. stringproc</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  文字列処理
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_80.html#SEC379">80. to_poly_solve</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">               <code>to_poly_solve</code>パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_81.html#SEC381">81. unit</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        単位と次元パッケージ
-</td></tr>
-<tr><td align="left" valign="top"><a href="maxima_82.html#SEC384">82. zeilberger</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  超幾何総和に関する関数
+<tr><td align="left" valign="top"><a href="maxima_38.html#SEC205">38. Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   Maximaプログラムのデバッグ
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
-索引
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_84.html#SEC395">B. Function and Variable Index</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> インデックス
+<b>その他のパッケージ</b>
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_39.html#SEC209">39. alt-display</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 代替の表示パッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_40.html#SEC212">40. asympa</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      漸近解析パッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_41.html#SEC215">41. augmented_lagrangian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        拡張Lagrangeパッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_42.html#SEC217">42. Bernstein</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   <code>Bernstein</code>多項式
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_43.html#SEC219">43. bitwise</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     整数のビットを操作
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_44.html#SEC221">44. bode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        Bode線図
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_45.html#SEC223">45. celine</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      シスタ Celineの方法
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_46.html#SEC225">46. clebsch_gordan</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">              Clebsch-Gordan and Wigner coefficients
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_47.html#SEC227">47. cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      不等式制約を持つ非線形最適化
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_48.html#SEC231">48. contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 ODEのための追加ルーチン
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_49.html#SEC237">49. descriptive</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 記述統計
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_50.html#SEC242">50. diag</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        Jordan行列
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_51.html#SEC244">51. distrib</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     確率分布
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_52.html#SEC248">52. draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        Maxima-Gnuplotインターフェイス
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_53.html#SEC259">53. drawdf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      Gnuplotを使った方向場
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_54.html#SEC263">54. dynamics</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    3D可視化とアニメーション、力学系
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_55.html#SEC270">55. engineering-format</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">          浮動小数点を a*10^b(b mod 3 = 0)として表示
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_56.html#SEC273">56. ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     次元量
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_57.html#SEC277">57. f90</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                         MaximaからFortranへの翻訳器
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_58.html#SEC279">58. finance</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     金融パッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_59.html#SEC282">59. fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    フラクタル
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_60.html#SEC288">60. ggf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                         数列の母函数
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_61.html#SEC290">61. graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      グラフ理論パッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_62.html#SEC298">62. grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     Groebner基底を扱う関数
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_63.html#SEC307">63. impdiff</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     陰導函数
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_64.html#SEC309">64. interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    内挿バッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_65.html#SEC312">65. lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      線形代数のためのLAPACK関数
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_66.html#SEC315">66. lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                       L-BFGS無制約最小化パッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_67.html#SEC318">67. lindstedt</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   Lindstedtパッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_68.html#SEC320">68. linearalgebra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">               線形代数のための関数
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_69.html#SEC323">69. lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    最小二乗
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_71.html#SEC329">71. makeOrders</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  多項式ユーティリティ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_70.html#SEC326">70. minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     最小化と根のためのMINPACK関数
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_72.html#SEC331">72. mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     Newton法
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_73.html#SEC334">73. numericalio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 ファイルの読み書き
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_74.html#SEC342">74. operatingsystem</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">             共通のオペレーティングシステムタスク (ディレクトリやファイルの作成/削除)
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_75.html#SEC347">75. opsubst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     代入ユーティリティ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_76.html#SEC349">76. orthopoly</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   直交多項式
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_77.html#SEC358">77. ratpow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      polynomsの係数を決定
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_78.html#SEC360">78. romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     数値積分のRomberg法
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_79.html#SEC362">79. simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     線形計画
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC368">80. simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">              整理のルールと関数
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_81.html#SEC377">81. solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   線形漸化式
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_82.html#SEC380">82. stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                       統計的推定パッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_83.html#SEC385">83. stirling</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                    Stirling公式
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_84.html#SEC387">84. stringproc</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  文字列処理
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_85.html#SEC393">85. to_poly_solve</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"></td></tr>
+<tr><td align="left" valign="top"><a href="maxima_86.html#SEC395">86. unit</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                        単位と次元パッケージ
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_87.html#SEC398">87. zeilberger</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  超幾何総和に関する関数
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
-訳者後書き
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_83.html#SEC392">A. Comments of Translator</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">      訳者のコメント
+<b>maximaの出力を理解する</b>
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_88.html#SEC406">88. Error and warning messages</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  エラーと警告メッセージ
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
- --- The Detailed Node Listing ---
+<b>訳者後書き</b>
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_89.html#SEC425">A. Comments of Translator</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">      訳者のコメント
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+<b>索引</b>
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_90.html#SEC428">B. Function and Variable Index</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> インデックス
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+<b> --- 詳細なノードリスト --- </b>
 
 序論
 </pre></th></tr><tr><td align="left" valign="top"><a href="maxima_1.html#SEC1">1. Introduction to Maxima</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
@@ -314,11 +342,11 @@ DOE Macsymaを保守・開発するために、MaximaプロジェクトをSource
 データ型と構造体
 </pre></th></tr><tr><td align="left" valign="top"><a href="maxima_5.html#SEC12">5.1 Numbers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_5.html#SEC17">5.2 Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_5.html#SEC16">5.2 Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_5.html#SEC20">5.3 Constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_5.html#SEC19">5.3 Constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_5.html#SEC22">5.5 Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_5.html#SEC21">5.5 Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><td align="left" valign="top"><a href="maxima_5.html#SEC25">5.6 Arrays</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
@@ -570,333 +598,356 @@ Maximaのデータベース
 集合
 </pre></th></tr><tr><td align="left" valign="top"><a href="maxima_35.html#SEC188">35.1 Introduction to Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_35.html#SEC193">35.2 Functions and Variables for Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_35.html#SEC192">35.2 Functions and Variables for Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 関数定義
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_36.html#SEC195">36.1 Introduction to Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_36.html#SEC194">36.1 Introduction to Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_36.html#SEC196">36.2 Function</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_36.html#SEC195">36.2 Function</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_36.html#SEC199">36.3 Macros</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_36.html#SEC198">36.3 Macros</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_36.html#SEC200">36.4 Functions and Variables for Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_36.html#SEC199">36.4 Functions and Variables for Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 プログラムフロー
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_37.html#SEC202">37.1 Lisp and Maxima</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_37.html#SEC201">37.1 Lisp and Maxima</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_37.html#SEC203">37.2 Garbage Collection</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_37.html#SEC202">37.2 Garbage Collection</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_37.html#SEC204">37.3 Introduction to Program Flow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_37.html#SEC203">37.3 Introduction to Program Flow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_37.html#SEC205">37.4 Functions and Variables for Program Flow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_37.html#SEC204">37.4 Functions and Variables for Program Flow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 デバッグ
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_38.html#SEC209">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_38.html#SEC208">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 alt-display
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_39.html#SEC211">39.1 Introduction to alt-display</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_39.html#SEC210">39.1 Introduction to alt-display</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_39.html#SEC212">39.2 Functions and Variables for alt-display</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_39.html#SEC211">39.2 Functions and Variables for alt-display</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 asympa
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_40.html#SEC214">40.1 Introduction to asympa</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_40.html#SEC213">40.1 Introduction to asympa</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_40.html#SEC215">40.2 Functions and variables for asympa</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_40.html#SEC214">40.2 Functions and variables for asympa</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 augmented_lagrangian
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_41.html#SEC217">41.1 Functions and Variables for augmented_lagrangian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_41.html#SEC216">41.1 Functions and Variables for augmented_lagrangian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 Bernstein
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_42.html#SEC219">42.1 Functions and Variables for Bernstein</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_42.html#SEC218">42.1 Functions and Variables for Bernstein</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+Bitwise
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_43.html#SEC220">43.1 Functions and Variables for bitwise</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 bode
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_43.html#SEC221">43.1 Functions and Variables for bode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_44.html#SEC222">44.1 Functions and Variables for bode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 clebsch_gordan
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_44.html#SEC223">44.1 Functions and Variables for clebsch_gordan</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_46.html#SEC226">46.1 Functions and Variables for clebsch_gordan</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 cobyla
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_45.html#SEC225">45.1 Introduction to cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_47.html#SEC228">47.1 Introduction to cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_45.html#SEC226">45.2 Functions and Variables for cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_47.html#SEC229">47.2 Functions and Variables for cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_45.html#SEC227">45.3 Examples for cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_47.html#SEC230">47.3 Examples for cobyla</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 contrib_ode
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_46.html#SEC229">46.1 Introduction to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_48.html#SEC232">48.1 Introduction to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_46.html#SEC230">46.2 Functions and Variables for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_48.html#SEC233">48.2 Functions and Variables for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_46.html#SEC231">46.3 Possible improvements to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_48.html#SEC234">48.3 Possible improvements to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_46.html#SEC232">46.4 Test cases for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_48.html#SEC235">48.4 Test cases for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_46.html#SEC233">46.5 References for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_48.html#SEC236">48.5 References for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 descriptive
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_47.html#SEC235">47.1 Introduction to descriptive</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_49.html#SEC238">49.1 Introduction to descriptive</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_47.html#SEC236">47.2 Functions and Variables for data manipulation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_49.html#SEC239">49.2 Functions and Variables for data manipulation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_47.html#SEC237">47.3 Functions and Variables for descriptive statistics</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_49.html#SEC240">49.3 Functions and Variables for descriptive statistics</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_47.html#SEC238">47.4 Functions and Variables for statistical graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_49.html#SEC241">49.4 Functions and Variables for statistical graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 diag
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_48.html#SEC240">48.1 Functions and Variables for diag</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_50.html#SEC243">50.1 Functions and Variables for diag</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 distrib
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_49.html#SEC242">49.1 Introduction to distrib</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_51.html#SEC245">51.1 Introduction to distrib</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_49.html#SEC243">49.2 Functions and Variables for continuous distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_51.html#SEC246">51.2 Functions and Variables for continuous distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_49.html#SEC244">49.3 Functions and Variables for discrete distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_51.html#SEC247">51.3 Functions and Variables for discrete distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 draw
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_50.html#SEC246">50.1 Introduction to draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_52.html#SEC249">52.1 Introduction to draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_50.html#SEC247">50.2 Functions and Variables for draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_52.html#SEC250">52.2 Functions and Variables for draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_50.html#SEC252">50.3 Functions and Variables for pictures</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_52.html#SEC255">52.3 Functions and Variables for pictures</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_50.html#SEC253">50.4 Functions and Variables for worldmap</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_52.html#SEC256">52.4 Functions and Variables for worldmap</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 drawdf
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_51.html#SEC257">51.1 Introduction to drawdf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_53.html#SEC260">53.1 Introduction to drawdf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_51.html#SEC258">51.2 Functions and Variables for drawdf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_53.html#SEC261">53.2 Functions and Variables for drawdf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 dynamics
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_52.html#SEC261">52.1 The dynamics package</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_54.html#SEC264">54.1 The dynamics package</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_52.html#SEC262">52.2 Graphical analysis of discrete dynamical systems</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_54.html#SEC265">54.2 Graphical analysis of discrete dynamical systems</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_52.html#SEC263">52.3 Visualization with VTK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_54.html#SEC266">54.3 Visualization with VTK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 ezunits
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_53.html#SEC268">53.1 Introduction to ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_56.html#SEC274">56.1 Introduction to ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_53.html#SEC269">53.2 Introduction to physical_constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_56.html#SEC275">56.2 Introduction to physical_constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_53.html#SEC270">53.3 Functions and Variables for ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_56.html#SEC276">56.3 Functions and Variables for ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 f90
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_54.html#SEC272">54.1 Functions and Variables for f90</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_57.html#SEC278">57.1 Functions and Variables for f90</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 finance
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_55.html#SEC274">55.1 Introduction to finance</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_58.html#SEC280">58.1 Introduction to finance</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_55.html#SEC275">55.2 Functions and Variables for finance</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_58.html#SEC281">58.2 Functions and Variables for finance</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 fractals
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_56.html#SEC277">56.1 Introduction to fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_59.html#SEC283">59.1 Introduction to fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_56.html#SEC278">56.2 Definitions for IFS fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_59.html#SEC284">59.2 Definitions for IFS fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_56.html#SEC279">56.3 Definitions for complex fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_59.html#SEC285">59.3 Definitions for complex fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_56.html#SEC280">56.4 Definitions for Koch snowflakes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_59.html#SEC286">59.4 Definitions for Koch snowflakes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_56.html#SEC281">56.5 Definitions for Peano maps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_59.html#SEC287">59.5 Definitions for Peano maps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 ggf
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_57.html#SEC283">57.1 Functions and Variables for ggf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_60.html#SEC289">60.1 Functions and Variables for ggf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 graphs
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_58.html#SEC285">58.1 Introduction to graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_61.html#SEC291">61.1 Introduction to graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_58.html#SEC286">58.2 Functions and Variables for graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_61.html#SEC292">61.2 Functions and Variables for graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 grobner
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_59.html#SEC293">59.1 Introduction to grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_62.html#SEC299">62.1 Introduction to grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_59.html#SEC296">59.2 Functions and Variables for grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_62.html#SEC302">62.2 Functions and Variables for grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 impdiff
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_60.html#SEC302">60.1 Functions and Variables for impdiff</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_63.html#SEC308">63.1 Functions and Variables for impdiff</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 interpol
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_61.html#SEC304">61.1 Introduction to interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_64.html#SEC310">64.1 Introduction to interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_61.html#SEC305">61.2 Functions and Variables for interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_64.html#SEC311">64.2 Functions and Variables for interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 lapack
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_62.html#SEC307">62.1 Introduction to lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_65.html#SEC313">65.1 Introduction to lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_62.html#SEC308">62.2 Functions and Variables for lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_65.html#SEC314">65.2 Functions and Variables for lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 lbfgs
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_63.html#SEC310">63.1 Introduction to lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_66.html#SEC316">66.1 Introduction to lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_63.html#SEC311">63.2 Functions and Variables for lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_66.html#SEC317">66.2 Functions and Variables for lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 lindstedt
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_64.html#SEC313">64.1 Functions and Variables for lindstedt</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_67.html#SEC319">67.1 Functions and Variables for lindstedt</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 linearalgebra
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_65.html#SEC315">65.1 Introduction to linearalgebra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_68.html#SEC321">68.1 Introduction to linearalgebra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_65.html#SEC316">65.2 Functions and Variables for linearalgebra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_68.html#SEC322">68.2 Functions and Variables for linearalgebra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 lsquares
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_66.html#SEC318">66.1 Introduction to lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_69.html#SEC324">69.1 Introduction to lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_66.html#SEC319">66.2 Functions and Variables for lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_69.html#SEC325">69.2 Functions and Variables for lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 makeOrders
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_68.html#SEC324">68.1 Functions and Variables for makeOrders</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_71.html#SEC330">71.1 Functions and Variables for makeOrders</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 minpack
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_67.html#SEC321">67.1 Introduction to minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_70.html#SEC327">70.1 Introduction to minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_67.html#SEC322">67.2 Functions and Variables for minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_70.html#SEC328">70.2 Functions and Variables for minpack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 mnewton
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_69.html#SEC326">69.1 Introduction to mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_72.html#SEC332">72.1 Introduction to mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_69.html#SEC327">69.2 Functions and Variables for mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_72.html#SEC333">72.2 Functions and Variables for mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 numericalio
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_70.html#SEC329">70.1 Introduction to numericalio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_73.html#SEC335">73.1 Introduction to numericalio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_70.html#SEC334">70.2 Functions and Variables for plain-text input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_73.html#SEC340">73.2 Functions and Variables for plain-text input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_70.html#SEC335">70.3 Functions and Variables for binary input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_73.html#SEC341">73.3 Functions and Variables for binary input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+operatingsystem
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_74.html#SEC343">74.1 Introduction to operatingsystem</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_74.html#SEC344">74.2 Directory operations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_74.html#SEC346">74.4 Environment operations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 opsubst
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_71.html#SEC337">71.1 Functions and Variables for opsubst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_75.html#SEC348">75.1 Functions and Variables for opsubst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 orthopoly
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_72.html#SEC339">72.1 Introduction to orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_76.html#SEC350">76.1 Introduction to orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_72.html#SEC346">72.2 Functions and Variables for orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_76.html#SEC357">76.2 Functions and Variables for orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+ratpow
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_77.html#SEC359">77.1 Functions and Variables for ratpow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 romberg
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_73.html#SEC348">73.1 Functions and Variables for romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_78.html#SEC361">78.1 Functions and Variables for romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 simplex
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_74.html#SEC350">74.1 Introduction to simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_79.html#SEC363">79.1 Introduction to simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_74.html#SEC354">74.2 Functions and Variables for simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_79.html#SEC367">79.2 Functions and Variables for simplex</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 simplification
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_75.html#SEC356">75.1 Introduction to simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_80.html#SEC369">80.1 Introduction to simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC357">75.2 Package absimp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC370">80.2 Package absimp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC358">75.3 Package facexp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC371">80.3 Package facexp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC359">75.4 Package functs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC372">80.4 Package functs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC360">75.5 Package ineq</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC373">80.5 Package ineq</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC361">75.6 Package rducon</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC374">80.6 Package rducon</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC362">75.7 Package scifac</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC375">80.7 Package scifac</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_75.html#SEC363">75.8 Package sqdnst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_80.html#SEC376">80.8 Package sqdnst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 solve_rec
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_76.html#SEC365">76.1 Introduction to solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_81.html#SEC378">81.1 Introduction to solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_76.html#SEC366">76.2 Functions and Variables for solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_81.html#SEC379">81.2 Functions and Variables for solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 stats
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_77.html#SEC368">77.1 Introduction to stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_82.html#SEC381">82.1 Introduction to stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_77.html#SEC369">77.2 Functions and Variables for inference_result</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_82.html#SEC382">82.2 Functions and Variables for inference_result</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_77.html#SEC370">77.3 Functions and Variables for stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_82.html#SEC383">82.3 Functions and Variables for stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_77.html#SEC371">77.4 Functions and Variables for special distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_82.html#SEC384">82.4 Functions and Variables for special distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 stirling
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_78.html#SEC373">78.1 Functions and Variables for stirling</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_83.html#SEC386">83.1 Functions and Variables for stirling</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 stringproc
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_79.html#SEC375">79.1 Introduction to string processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_84.html#SEC388">84.1 Introduction to String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_79.html#SEC376">79.2 Functions and Variables for input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_84.html#SEC389">84.2 Input and Output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_79.html#SEC377">79.3 Functions and Variables for characters</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_84.html#SEC390">84.3 Characters</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_79.html#SEC378">79.4 Functions and Variables for strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_84.html#SEC391">84.4 String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_84.html#SEC392">84.5 Octets and Utilities for Cryptography</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 to_poly_solve
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_80.html#SEC380">80.1 Functions and Variables for to_poly_solve</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_85.html#SEC394">85.1 Functions and Variables for to_poly_solve</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 unit
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_81.html#SEC382">81.1 Introduction to Units</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_86.html#SEC396">86.1 Introduction to Units</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_81.html#SEC383">81.2 Functions and Variables for Units</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_86.html#SEC397">86.2 Functions and Variables for Units</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
 zeilberger
-</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_82.html#SEC385">82.1 Introduction to zeilberger</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_87.html#SEC399">87.1 Introduction to zeilberger</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="maxima_82.html#SEC389">82.2 Functions and Variables for zeilberger</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="maxima_87.html#SEC403">87.2 Functions and Variables for zeilberger</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
-</pre></th></tr></table>
+Understanding maxima's output
+</pre></th></tr><tr><td align="left" valign="top"><a href="maxima_88.html#SEC407">88.1 Error messages</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="maxima_88.html#SEC422">88.2 Warning messages</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
 
 
 <p><a name="Item_003a-Introduction-to-Maxima"></a>
 </p><hr size="1">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

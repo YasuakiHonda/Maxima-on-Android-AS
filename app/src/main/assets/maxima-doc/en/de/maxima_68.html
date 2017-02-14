@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 68. simplex </h1>
@@ -107,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 68.1 Introduction to simplex </h2>
@@ -139,14 +139,14 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 68.2 Functions and Variables for simplex </h2>
 
 <dl>
 <dt><u>Option variable:</u> <b>epsilon_lp</b>
-<a name="IDX2563"></a>
+<a name="IDX2570"></a>
 </dt>
 <dd><p>Default value: <code>10^-8</code>
 </p>
@@ -158,7 +158,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 
 <dl>
 <dt><u>Function:</u> <b>linear_program</b><i> (<var>A</var>, <var>b</var>, <var>c</var>)</i>
-<a name="IDX2564"></a>
+<a name="IDX2571"></a>
 </dt>
 <dd><p><code>linear_program</code> is an implementation of the simplex algorithm.
 <code>linear_program(A, b, c)</code> computes a vector <var>x</var> for which
@@ -190,7 +190,7 @@ feasible, it returns &quot;Problem not feasible!&quot;.
 
 <dl>
 <dt><u>Function:</u> <b>maximize_lp</b><i> (<var>obj</var>, <var>cond</var>, [<var>pos</var>])</i>
-<a name="IDX2565"></a>
+<a name="IDX2572"></a>
 </dt>
 <dd><p>Maximizes linear objective function <var>obj</var> subject to some linear
 constraints <var>cond</var>. See <code>minimize_lp</code> for detailed
@@ -203,7 +203,7 @@ description of arguments and return value.
 
 <dl>
 <dt><u>Function:</u> <b>minimize_lp</b><i> (<var>obj</var>, <var>cond</var>, [<var>pos</var>])</i>
-<a name="IDX2566"></a>
+<a name="IDX2573"></a>
 </dt>
 <dd><p>Minimizes a linear objective function <var>obj</var> subject to some linear
 constraints <var>cond</var>. <var>cond</var> a list of linear equations or
@@ -250,7 +250,7 @@ maxima <code>linear_program</code> function.
 
 <dl>
 <dt><u>Option variable:</u> <b>nonegative_lp</b>
-<a name="IDX2567"></a>
+<a name="IDX2574"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -274,12 +274,12 @@ maxima <code>linear_program</code> function.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

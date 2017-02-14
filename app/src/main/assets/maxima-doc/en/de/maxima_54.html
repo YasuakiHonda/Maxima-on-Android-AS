@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 54. interpol </h1>
@@ -107,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.1 Introduction to interpol </h2>
@@ -134,17 +134,17 @@ splines methods for polynomial interpolation.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.2 Functions and Variables for interpol </h2>
 
 <dl>
 <dt><u>Function:</u> <b>lagrange</b><i> (<var>points</var>)</i>
-<a name="IDX2405"></a>
+<a name="IDX2412"></a>
 </dt>
 <dt><u>Function:</u> <b>lagrange</b><i> (<var>points</var>, <var>option</var>)</i>
-<a name="IDX2406"></a>
+<a name="IDX2413"></a>
 </dt>
 <dd><p>Computes the polynomial interpolation by the Lagrangian method. Argument <var>points</var> must be either:
 </p>
@@ -242,7 +242,7 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 
 <dl>
 <dt><u>Function:</u> <b>charfun2</b><i> (<var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX2407"></a>
+<a name="IDX2414"></a>
 </dt>
 <dd><p>Returns <code>true</code> if number <var>x</var> belongs to the interval <em>[a, b)</em>, 
 and <code>false</code> otherwise.
@@ -251,10 +251,10 @@ and <code>false</code> otherwise.
 
 <dl>
 <dt><u>Function:</u> <b>linearinterpol</b><i> (<var>points</var>)</i>
-<a name="IDX2408"></a>
+<a name="IDX2415"></a>
 </dt>
 <dt><u>Function:</u> <b>linearinterpol</b><i> (<var>points</var>, <var>option</var>)</i>
-<a name="IDX2409"></a>
+<a name="IDX2416"></a>
 </dt>
 <dd><p>Computes the polynomial interpolation by the linear method. Argument 
 <var>points</var> must be either:
@@ -323,10 +323,10 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 
 <dl>
 <dt><u>Function:</u> <b>cspline</b><i> (<var>points</var>)</i>
-<a name="IDX2410"></a>
+<a name="IDX2417"></a>
 </dt>
 <dt><u>Function:</u> <b>cspline</b><i> (<var>points</var>, <var>option1</var>, <var>option2</var>, ...)</i>
-<a name="IDX2411"></a>
+<a name="IDX2418"></a>
 </dt>
 <dd><p>Computes the polynomial interpolation by the cubic splines method. Argument 
 <var>points</var> must be either:
@@ -428,10 +428,10 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 
 <dl>
 <dt><u>Function:</u> <b>ratinterpol</b><i> (<var>points</var>, <var>numdeg</var>)</i>
-<a name="IDX2412"></a>
+<a name="IDX2419"></a>
 </dt>
 <dt><u>Function:</u> <b>ratinterpol</b><i> (<var>points</var>, <var>numdeg</var>, <var>option1</var>)</i>
-<a name="IDX2413"></a>
+<a name="IDX2420"></a>
 </dt>
 <dd><p>Generates a rational interpolator for data given by <var>points</var> and the degree of the numerator
 being equal to <var>numdeg</var>; the degree of the denominator is calculated
@@ -482,12 +482,12 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

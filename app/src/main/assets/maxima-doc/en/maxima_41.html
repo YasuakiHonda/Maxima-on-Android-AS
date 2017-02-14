@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 41. augmented_lagrangian</title>
+<title>Maxima 5.39.0 Manual: 41. augmented_lagrangian</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 41. augmented_lagrangian">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 41. augmented_lagrangian">
+<meta name="description" content="Maxima 5.39.0 Manual: 41. augmented_lagrangian">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 41. augmented_lagrangian">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,58 +54,60 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-<a name="augmented_005flagrangian"></a>
-<a name="SEC216"></a>
+<a name="augmented_005flagrangian_002dpkg"></a>
+<a name="SEC215"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_40.html#SEC215" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC217" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_40.html#SEC214" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC216" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_40.html#SEC213" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_40.html#SEC212" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_42.html#SEC217" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 41. augmented_lagrangian </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC217">41.1 Functions and Variables for augmented_lagrangian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC216">41.1 Functions and Variables for augmented_lagrangian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Functions-and-Variables-for-augmented_005flagrangian"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-augmented_005flagrangian"></a>
-<a name="SEC217"></a>
+<a name="SEC216"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC216" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC215" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_42.html#SEC217" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC216" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC216" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC215" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC215" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_42.html#SEC217" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 41.1 Functions and Variables for augmented_lagrangian </h2>
@@ -113,7 +115,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <p><a name="Item_003a-augmented_005flagrangian_005fmethod"></a>
 </p><dl>
 <dt><u>Function:</u> <b>augmented_lagrangian_method</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>augmented_lagrangian_method</tt> (<var>FOM</var>, <var>xx</var>, <var>C</var>, <var>yy</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>augmented_lagrangian_method</tt> (<var>FOM</var>, <var>xx</var>, <var>C</var>, <var>yy</var>, optional_args) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>augmented_lagrangian_method</tt> ([<var>FOM</var>, <var>grad</var>], <var>xx</var>, <var>C</var>, <var>yy</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>augmented_lagrangian_method</tt> ([<var>FOM</var>, <var>grad</var>], <var>xx</var>, <var>C</var>, <var>yy</var>, optional_args)</i>
-<a name="IDX1414"></a>
+<a name="IDX1438"></a>
 </dt>
 <dd><p>Returns an approximate minimum of the expression <var>FOM</var>
 with respect to the variables <var>xx</var>,
@@ -154,7 +156,7 @@ which is a quasi-Newton algorithm.
 </p>
 <p><code>load(augmented_lagrangian)</code> loads this function.
 </p>
-<p>See also <code>lbfgs</code>.
+<p>See also <a href="maxima_66.html#SEC315">lbfgs</a>
 </p>
 <p>References:
 </p>
@@ -207,20 +209,20 @@ which is a quasi-Newton algorithm.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_99.html#Category_003a-Optimization">Optimization</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-augmented_005flagrangian">Package augmented_lagrangian</a> 
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_105.html#Category_003a-Optimization">Optimization</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-augmented_005flagrangian">Package augmented_lagrangian</a> 
 </div>
 </p>
 </dd></dl>
 
 
-<p><a name="Item_003a-Bernstein"></a>
+<p><a name="Item_003a-Bernstein_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC216" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC215" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_42.html#SEC217" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -228,12 +230,12 @@ which is a quasi-Newton algorithm.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

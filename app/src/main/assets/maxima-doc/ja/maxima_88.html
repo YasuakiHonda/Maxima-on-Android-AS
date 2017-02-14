@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: B. Function and Variable Index: F</title>
+<title>Maxima 5.39.0 Manual: 88. Error and warning messages</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: B. Function and Variable Index: F">
-<meta name="keywords" content="Maxima 5.36.1 Manual: B. Function and Variable Index: F">
+<meta name="description" content="Maxima 5.39.0 Manual: 88. Error and warning messages">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 88. Error and warning messages">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,373 +72,692 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="INDEX3"></a>
+<a name="Error-and-warning-messages"></a>
+<a name="SEC406"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_87.html#INDEX2" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#INDEX4" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_87.html#SEC405" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_87.html#INDEX2" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#INDEX4" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_87.html#SEC398" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="appendix"> B. Function and Variable Index: F </h1>
-<table><tr><th valign="top">移動: &nbsp; </th><td><a href="maxima_84.html#SEC395_0" class="summary-letter"><b>!</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_1" class="summary-letter"><b>&quot;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_2" class="summary-letter"><b>#</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_3" class="summary-letter"><b>$</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_4" class="summary-letter"><b>%</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_5" class="summary-letter"><b>'</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_6" class="summary-letter"><b>*</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_7" class="summary-letter"><b>+</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_8" class="summary-letter"><b>-</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_9" class="summary-letter"><b>.</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_10" class="summary-letter"><b>/</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_11" class="summary-letter"><b>:</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_12" class="summary-letter"><b>;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_13" class="summary-letter"><b>&lt;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_14" class="summary-letter"><b>=</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_15" class="summary-letter"><b>&gt;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_16" class="summary-letter"><b>?</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_17" class="summary-letter"><b>@</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_18" class="summary-letter"><b>[</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_19" class="summary-letter"><b>\</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_20" class="summary-letter"><b>]</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_21" class="summary-letter"><b>^</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_22" class="summary-letter"><b>_</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_23" class="summary-letter"><b>`</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_24" class="summary-letter"><b>|</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_25" class="summary-letter"><b>~</b></a>
- &nbsp; 
-<br>
-<a href="maxima_84.html#SEC395_26" class="summary-letter"><b>A</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_0" class="summary-letter"><b>B</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_1" class="summary-letter"><b>C</b></a>
- &nbsp; 
-<a href="maxima_86.html#INDEX1_0" class="summary-letter"><b>D</b></a>
- &nbsp; 
-<a href="maxima_87.html#INDEX2_0" class="summary-letter"><b>E</b></a>
- &nbsp; 
-<a href="#INDEX3_0" class="summary-letter"><b>F</b></a>
- &nbsp; 
-<a href="maxima_89.html#INDEX4_0" class="summary-letter"><b>G</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_0" class="summary-letter"><b>H</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_1" class="summary-letter"><b>I</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_0" class="summary-letter"><b>J</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_1" class="summary-letter"><b>K</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_2" class="summary-letter"><b>L</b></a>
- &nbsp; 
-<a href="maxima_92.html#INDEX7_0" class="summary-letter"><b>M</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_0" class="summary-letter"><b>N</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_1" class="summary-letter"><b>O</b></a>
- &nbsp; 
-<a href="maxima_94.html#INDEX9_0" class="summary-letter"><b>P</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_0" class="summary-letter"><b>Q</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_1" class="summary-letter"><b>R</b></a>
- &nbsp; 
-<a href="maxima_96.html#INDEX11_0" class="summary-letter"><b>S</b></a>
- &nbsp; 
-<a href="maxima_97.html#INDEX12_0" class="summary-letter"><b>T</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_0" class="summary-letter"><b>U</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_1" class="summary-letter"><b>V</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_2" class="summary-letter"><b>W</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_0" class="summary-letter"><b>X</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_1" class="summary-letter"><b>Y</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_2" class="summary-letter"><b>Z</b></a>
- &nbsp; 
-</td></tr></table>
-<table border="0" class="index-fn">
-<tr><td></td><th align="left">見出し一覧</th><th align="left"> 項</th></tr>
-<tr><td colspan="3"> <hr></td></tr>
-<tr><th><a name="INDEX3_0">F</a></th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_54.html#IDX1959"><code>f90</code></a></td><td valign="top"><a href="maxima_54.html#SEC272">54.1 Functions and Variables for f90</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX558">facexpand</a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_75.html#IDX2335"><code>facsum</code></a></td><td valign="top"><a href="maxima_75.html#SEC358">75.3 Package facexp</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_75.html#IDX2337">facsum_combine</a></td><td valign="top"><a href="maxima_75.html#SEC358">75.3 Package facexp</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX305"><code>factcomb</code></a></td><td valign="top"><a href="maxima_10.html#SEC51">10.3 Combinatorial Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX308">factlim</a></td><td valign="top"><a href="maxima_10.html#SEC51">10.3 Combinatorial Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX559"><code>factor</code></a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_75.html#IDX2338"><code>factorfacsum</code></a></td><td valign="top"><a href="maxima_75.html#SEC358">75.3 Package facexp</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX560">factorflag</a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX306"><code>factorial</code></a></td><td valign="top"><a href="maxima_10.html#SEC51">10.3 Combinatorial Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX309">factorial_expand</a></td><td valign="top"><a href="maxima_10.html#SEC51">10.3 Combinatorial Functions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX561"><code>factorout</code></a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_29.html#IDX1151">factors_only</a></td><td valign="top"><a href="maxima_29.html#SEC163">29.1 Functions and Variables for Number Theory</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX562"><code>factorsum</code></a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX416"><code>facts</code></a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX93">false</a></td><td valign="top"><a href="maxima_5.html#SEC21">5.4 Functions and Variables for Constants</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_24.html#IDX911"><code>fast_central_elements</code></a></td><td valign="top"><a href="maxima_24.html#SEC122">24.2 Functions and Variables for Affine</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_24.html#IDX905"><code>fast_linsolve</code></a></td><td valign="top"><a href="maxima_24.html#SEC122">24.2 Functions and Variables for Affine</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX563"><code>fasttimes</code></a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_26.html#IDX1060">fb</a></td><td valign="top"><a href="maxima_26.html#SEC149">26.2.9 Variables used by <code>ctensor</code></a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX379">feature</a></td><td valign="top"><a href="maxima_11.html#SEC59">11.2 Functions and Variables for Properties</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX380"><code>featurep</code></a></td><td valign="top"><a href="maxima_11.html#SEC59">11.2 Functions and Variables for Properties</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX381">features</a></td><td valign="top"><a href="maxima_11.html#SEC59">11.2 Functions and Variables for Properties</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_56.html#IDX1977"><code>fernfale</code></a></td><td valign="top"><a href="maxima_56.html#SEC278">56.2 Definitions for IFS fractals</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_22.html#IDX813"><code>fft</code></a></td><td valign="top"><a href="maxima_22.html#SEC110">22.2 Functions and Variables for fast Fourier transform</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_29.html#IDX1152"><code>fib</code></a></td><td valign="top"><a href="maxima_29.html#SEC163">29.1 Functions and Variables for Number Theory</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_29.html#IDX1153"><code>fibtophi</code></a></td><td valign="top"><a href="maxima_29.html#SEC163">29.1 Functions and Variables for Number Theory</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX115"><code>fifth</code></a></td><td valign="top"><a href="maxima_5.html#SEC24">5.5.2 Functions and Variables for Lists</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1761">file_name</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2158">file_name</a></td><td valign="top"><a href="maxima_58.html#SEC291">58.2.5 Visualization</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX514">file_output_append</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX516"><code>file_search</code></a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX519">file_search_demo</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX518">file_search_lisp</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX517">file_search_maxima</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX521">file_search_tests</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX520">file_search_usage</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX522"><code>file_type</code></a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX523">file_type_lisp</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX524">file_type_maxima</a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX515"><code>filename_merge</code></a></td><td valign="top"><a href="maxima_13.html#SEC72">13.3 Functions and Variables for File Input and Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1762">fill_color</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1763">fill_density</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX145"><code>fillarray</code></a></td><td valign="top"><a href="maxima_5.html#SEC26">5.7 Functions and Variables for Arrays</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1764">filled_func</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_22.html#IDX815"><code>find_root</code></a></td><td valign="top"><a href="maxima_22.html#SEC111">22.3 Functions for numerical solution of equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_22.html#IDX816"><code>find_root</code></a></td><td valign="top"><a href="maxima_22.html#SEC111">22.3 Functions for numerical solution of equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_22.html#IDX820"><code>find_root_abs</code></a></td><td valign="top"><a href="maxima_22.html#SEC111">22.3 Functions for numerical solution of equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_22.html#IDX819"><code>find_root_error</code></a></td><td valign="top"><a href="maxima_22.html#SEC111">22.3 Functions for numerical solution of equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_22.html#IDX821"><code>find_root_rel</code></a></td><td valign="top"><a href="maxima_22.html#SEC111">22.3 Functions for numerical solution of equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_26.html#IDX1020"><code>findde</code></a></td><td valign="top"><a href="maxima_26.html#SEC147">26.2.7 Miscellaneous features</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX116"><code>first</code></a></td><td valign="top"><a href="maxima_5.html#SEC24">5.5.2 Functions and Variables for Lists</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX288"><code>fix</code></a></td><td valign="top"><a href="maxima_10.html#SEC49">10.1 Functions for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2160">fixed_vertices</a></td><td valign="top"><a href="maxima_58.html#SEC291">58.2.5 Visualization</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_35.html#IDX1286"><code>flatten</code></a></td><td valign="top"><a href="maxima_35.html#SEC193">35.2 Functions and Variables for Sets</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_79.html#IDX2393"><code>flength</code></a></td><td valign="top"><a href="maxima_79.html#SEC376">79.2 Functions and Variables for input and output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX926">flipflag</a></td><td valign="top"><a href="maxima_25.html#SEC128">25.2.1 Managing indexed objects</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX70"><code>float</code></a></td><td valign="top"><a href="maxima_5.html#SEC16">5.1.2 Functions and Variables for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX71">float2bf</a></td><td valign="top"><a href="maxima_5.html#SEC16">5.1.2 Functions and Variables for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX72"><code>floatnump</code></a></td><td valign="top"><a href="maxima_5.html#SEC16">5.1.2 Functions and Variables for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_10.html#IDX287"><code>floor</code></a></td><td valign="top"><a href="maxima_10.html#SEC49">10.1 Functions for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2001"><code>flower_snark</code></a></td><td valign="top"><a href="maxima_58.html#SEC287">58.2.1 Building graphs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX955"><code>flush</code></a></td><td valign="top"><a href="maxima_25.html#SEC130">25.2.3 Indicial tensor calculus</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX963"><code>flush1deriv</code></a></td><td valign="top"><a href="maxima_25.html#SEC130">25.2.3 Indicial tensor calculus</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX956"><code>flushd</code></a></td><td valign="top"><a href="maxima_25.html#SEC130">25.2.3 Indicial tensor calculus</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_25.html#IDX957"><code>flushnd</code></a></td><td valign="top"><a href="maxima_25.html#SEC130">25.2.3 Indicial tensor calculus</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_45.html#IDX1431"><code>fmin_cobyla</code></a></td><td valign="top"><a href="maxima_45.html#SEC226">45.2 Functions and Variables for cobyla</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1765">font</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_50.html#IDX1766">font_size</a></td><td valign="top"><a href="maxima_50.html#SEC250">50.2.3 Graphic options</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_37.html#IDX1381"><code>for</code></a></td><td valign="top"><a href="maxima_37.html#SEC205">37.4 Functions and Variables for Program Flow</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_11.html#IDX417"><code>forget</code></a></td><td valign="top"><a href="maxima_11.html#SEC60">11.3 Functions and Variables for Facts</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX545">fortindent</a></td><td valign="top"><a href="maxima_13.html#SEC74">13.5 Functions and Variables for Fortran Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX546"><code>fortran</code></a></td><td valign="top"><a href="maxima_13.html#SEC74">13.5 Functions and Variables for Fortran Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_13.html#IDX547">fortspaces</a></td><td valign="top"><a href="maxima_13.html#SEC74">13.5 Functions and Variables for Fortran Output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1119"><code>fourcos</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1118"><code>fourexpand</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1114"><code>fourier</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_80.html#IDX2471"><code>fourier_elim</code></a></td><td valign="top"><a href="maxima_80.html#SEC380">80.1 Functions and Variables for to_poly_solve</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1122"><code>fourint</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1123"><code>fourintcos</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1124"><code>fourintsin</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1115"><code>foursimp</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1120"><code>foursin</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX117"><code>fourth</code></a></td><td valign="top"><a href="maxima_5.html#SEC24">5.5.2 Functions and Variables for Lists</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_79.html#IDX2394"><code>fposition</code></a></td><td valign="top"><a href="maxima_79.html#SEC376">79.2 Functions and Variables for input and output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX73">fpprec</a></td><td valign="top"><a href="maxima_5.html#SEC16">5.1.2 Functions and Variables for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_5.html#IDX74">fpprintprec</a></td><td valign="top"><a href="maxima_5.html#SEC16">5.1.2 Functions and Variables for Numbers</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_26.html#IDX1013"><code>frame_bracket</code></a></td><td valign="top"><a href="maxima_26.html#SEC144">26.2.4 Frame fields</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_6.html#IDX170"><code>freeof</code></a></td><td valign="top"><a href="maxima_6.html#SEC35">6.5 Functions and Variables for Expressions</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_79.html#IDX2395"><code>freshline</code></a></td><td valign="top"><a href="maxima_79.html#SEC376">79.2 Functions and Variables for input and output</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX670"><code>fresnel_c</code></a></td><td valign="top"><a href="maxima_15.html#SEC84">15.6 Error Function</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_15.html#IDX671"><code>fresnel_s</code></a></td><td valign="top"><a href="maxima_15.html#SEC84">15.6 Error Function</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2002"><code>from_adjacency_matrix</code></a></td><td valign="top"><a href="maxima_58.html#SEC287">58.2.1 Building graphs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_58.html#IDX2003"><code>frucht_graph</code></a></td><td valign="top"><a href="maxima_58.html#SEC287">58.2.1 Building graphs</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_35.html#IDX1287"><code>full_listify</code></a></td><td valign="top"><a href="maxima_35.html#SEC193">35.2 Functions and Variables for Sets</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_36.html#IDX1334"><code>fullmap</code></a></td><td valign="top"><a href="maxima_36.html#SEC200">36.4 Functions and Variables for Function Definition</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_36.html#IDX1335"><code>fullmapl</code></a></td><td valign="top"><a href="maxima_36.html#SEC200">36.4 Functions and Variables for Function Definition</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX564"><code>fullratsimp</code></a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_14.html#IDX565"><code>fullratsubst</code></a></td><td valign="top"><a href="maxima_14.html#SEC77">14.2 Functions and Variables for Polynomials</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_35.html#IDX1288"><code>fullsetify</code></a></td><td valign="top"><a href="maxima_35.html#SEC193">35.2 Functions and Variables for Sets</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_20.html#IDX779"><code>funcsolve</code></a></td><td valign="top"><a href="maxima_20.html#SEC104">20.1 Functions and Variables for Equations</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_36.html#IDX1336">functions</a></td><td valign="top"><a href="maxima_36.html#SEC200">36.4 Functions and Variables for Function Definition</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_53.html#IDX1951"><code>fundamental_dimensions</code></a></td><td valign="top"><a href="maxima_53.html#SEC270">53.3 Functions and Variables for ezunits</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_53.html#IDX1952"><code>fundamental_units</code></a></td><td valign="top"><a href="maxima_53.html#SEC270">53.3 Functions and Variables for ezunits</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_53.html#IDX1955"><code>fundamental_units</code></a></td><td valign="top"><a href="maxima_53.html#SEC270">53.3 Functions and Variables for ezunits</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_53.html#IDX1956"><code>fundamental_units</code></a></td><td valign="top"><a href="maxima_53.html#SEC270">53.3 Functions and Variables for ezunits</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_36.html#IDX1337"><code>fundef</code></a></td><td valign="top"><a href="maxima_36.html#SEC200">36.4 Functions and Variables for Function Definition</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_36.html#IDX1338"><code>funmake</code></a></td><td valign="top"><a href="maxima_36.html#SEC200">36.4 Functions and Variables for Function Definition</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_28.html#IDX1112"><code>funp</code></a></td><td valign="top"><a href="maxima_28.html#SEC160">28.5 Functions and Variables for Fourier series</a></td></tr>
-<tr><td></td><td valign="top"><a href="maxima_55.html#IDX1961"><code>fv</code></a></td><td valign="top"><a href="maxima_55.html#SEC275">55.2 Functions and Variables for finance</a></td></tr>
-<tr><td colspan="3"> <hr></td></tr>
+<h1 class="chapter"> 88. Error and warning messages </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC407">88.1 Error messages</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC422">88.2 Warning messages</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
 </table>
-<table><tr><th valign="top">移動: &nbsp; </th><td><a href="maxima_84.html#SEC395_0" class="summary-letter"><b>!</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_1" class="summary-letter"><b>&quot;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_2" class="summary-letter"><b>#</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_3" class="summary-letter"><b>$</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_4" class="summary-letter"><b>%</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_5" class="summary-letter"><b>'</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_6" class="summary-letter"><b>*</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_7" class="summary-letter"><b>+</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_8" class="summary-letter"><b>-</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_9" class="summary-letter"><b>.</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_10" class="summary-letter"><b>/</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_11" class="summary-letter"><b>:</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_12" class="summary-letter"><b>;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_13" class="summary-letter"><b>&lt;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_14" class="summary-letter"><b>=</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_15" class="summary-letter"><b>&gt;</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_16" class="summary-letter"><b>?</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_17" class="summary-letter"><b>@</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_18" class="summary-letter"><b>[</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_19" class="summary-letter"><b>\</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_20" class="summary-letter"><b>]</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_21" class="summary-letter"><b>^</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_22" class="summary-letter"><b>_</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_23" class="summary-letter"><b>`</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_24" class="summary-letter"><b>|</b></a>
- &nbsp; 
-<a href="maxima_84.html#SEC395_25" class="summary-letter"><b>~</b></a>
- &nbsp; 
-<br>
-<a href="maxima_84.html#SEC395_26" class="summary-letter"><b>A</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_0" class="summary-letter"><b>B</b></a>
- &nbsp; 
-<a href="maxima_85.html#INDEX0_1" class="summary-letter"><b>C</b></a>
- &nbsp; 
-<a href="maxima_86.html#INDEX1_0" class="summary-letter"><b>D</b></a>
- &nbsp; 
-<a href="maxima_87.html#INDEX2_0" class="summary-letter"><b>E</b></a>
- &nbsp; 
-<a href="#INDEX3_0" class="summary-letter"><b>F</b></a>
- &nbsp; 
-<a href="maxima_89.html#INDEX4_0" class="summary-letter"><b>G</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_0" class="summary-letter"><b>H</b></a>
- &nbsp; 
-<a href="maxima_90.html#INDEX5_1" class="summary-letter"><b>I</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_0" class="summary-letter"><b>J</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_1" class="summary-letter"><b>K</b></a>
- &nbsp; 
-<a href="maxima_91.html#INDEX6_2" class="summary-letter"><b>L</b></a>
- &nbsp; 
-<a href="maxima_92.html#INDEX7_0" class="summary-letter"><b>M</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_0" class="summary-letter"><b>N</b></a>
- &nbsp; 
-<a href="maxima_93.html#INDEX8_1" class="summary-letter"><b>O</b></a>
- &nbsp; 
-<a href="maxima_94.html#INDEX9_0" class="summary-letter"><b>P</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_0" class="summary-letter"><b>Q</b></a>
- &nbsp; 
-<a href="maxima_95.html#INDEX10_1" class="summary-letter"><b>R</b></a>
- &nbsp; 
-<a href="maxima_96.html#INDEX11_0" class="summary-letter"><b>S</b></a>
- &nbsp; 
-<a href="maxima_97.html#INDEX12_0" class="summary-letter"><b>T</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_0" class="summary-letter"><b>U</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_1" class="summary-letter"><b>V</b></a>
- &nbsp; 
-<a href="maxima_98.html#INDEX13_2" class="summary-letter"><b>W</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_0" class="summary-letter"><b>X</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_1" class="summary-letter"><b>Y</b></a>
- &nbsp; 
-<a href="maxima_99.html#INDEX14_2" class="summary-letter"><b>Z</b></a>
- &nbsp; 
-</td></tr></table>
-<hr size="6">
+
+<p>この章は
+いくつかのエラーメッセージやエラーから復帰する方法についての詳細情報を提供します。
+<a name="Item_003a-Error-messages"></a>
+</p><hr size="6">
+<a name="Error-messages"></a>
+<a name="SEC407"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_87.html#INDEX2" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#INDEX4" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC406" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC408" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 88.1 Error messages </h2>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC408">88.1.1 apply: no such &quot;list&quot; element</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC409">88.1.2 argument must be a non-atomic expression</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC410">88.1.3 assignment: cannot assign to &lt;function name&gt;</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC411">88.1.4 expt: undefined: 0 to a negative exponent.</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC412">88.1.5 incorrect syntax: , is not a prefix operator</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC413">88.1.6 incorrect syntax: Illegal use of delimiter )</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC414">88.1.7 loadfile: failed to load &lt;filename&gt;</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC415">88.1.8 makelist: second argument must evaluate to a number</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC416">88.1.9 Only symbols can be bound</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC417">88.1.10 operators of arguments must all be the same</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC418">88.1.11 Out of memory</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC419">88.1.12 part: fell off the end</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC420">88.1.13 undefined variable (draw or plot)</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC421">88.1.14 VTK is not installed, which is required for Scene</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+
+<p><a name="Item_003a-No-such-list-element"></a>
+</p><hr size="6">
+<a name="No-such-list-element"></a>
+<a name="SEC408"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC407" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC409" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.1 apply: no such &quot;list&quot; element </h3>
+<p>このエラーメッセージの共通の原因は、
+要素番号が <code>&lt; 1</code>か <code>&gt; length(list)</code>のリストの要素にアクセスしようと
+鍵括弧演算子 (<code>[ ]</code>)を使うことです。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+<p><a name="Item_003a-argument-must-be-a-non_002datomic-expression"></a>
+</p><hr size="6">
+<a name="argument-must-be-a-non_002datomic-expression"></a>
+<a name="SEC409"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC408" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC410" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.2 argument must be a non-atomic expression </h3>
+<p>これは通常
+1つ以上の(訳注: 原文はmore than one)要素からなるリストや集合、他の何かが期待されたことを意味します。
+このエラーメッセージの1つの起こりうる原因は以下の型の生成です:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) l:[1,2,3];
+(%o1)                       [1, 2, 3]
+(%i2) append(l,4);
+append: argument must be a non-atomic expression; found 4
+ -- an error. To debug this try: debugmode(true);
+</pre></td></tr></table><p>リストに変数や数を追加する正しい方法は最初にそれらを要素1つのリストでラップすることです:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) l:[1,2,3];
+(%o1)                       [1, 2, 3]
+(%i2) append(l,[4]);
+(%o2)                     [1, 2, 3, 4]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-cannot-assign-to-function"></a>
+</p><hr size="6">
+<a name="cannot-assign-to-function"></a>
+<a name="SEC410"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC409" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC411" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.3 assignment: cannot assign to &lt;function name&gt; </h3>
+<p>Maximaはいくつかの割り当て演算子をサポートします。
+関数を定義しようとする時には、<code>:=</code>を使わなければいけません。
+</p>
+<p><a name="Item_003a-0-to-a-negative-exponent"></a>
+</p><hr size="6">
+<a name="g_t0-to-a-negative-exponent"></a>
+<a name="SEC411"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC410" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC412" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.4 expt: undefined: 0 to a negative exponent. </h3>
+<p>このメッセージは古典的なゼロ除算エラーを通知します。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+<p><a name="Item_003a-Comma-is-not-a-prefix-operator"></a>
+</p><hr size="6">
+<a name="Comma-is-not-a-prefix-operator"></a>
+<a name="SEC412"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC411" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC413" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.5 incorrect syntax: , is not a prefix operator </h3>
+<p>これは、コンマ (<code>,</code>)で始まるコマンドか、別のコンマが直接後に続くコンマが原因です。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+<p><a name="Item_003a-Illegal-use-of-delimiter"></a>
+</p><hr size="6">
+<a name="Illegal-use-of-delimiter"></a>
+<a name="SEC413"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC412" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC414" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.6 incorrect syntax: Illegal use of delimiter ) </h3>
+<p>このエラーの共通の理由は、括弧を開くことなしに閉じたり、コンマが直接先行する閉じ括弧です。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+<p><a name="Item_003a-loadfile-failed-to-load"></a>
+</p><hr size="6">
+<a name="loadfile-failed-to-load"></a>
+<a name="SEC414"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC413" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC415" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.7 loadfile: failed to load &lt;filename&gt; </h3>
+<p>このエラーメッセージは通常、ファイルは存在するが読み込めないことを示します。
+もしファイルが存在していて可読なら、このエラーメッセージに関して別の可能性があります:
+Maximaは高速化のためパッケージをネイティブバイナリファイルにコンパイルできます。
+もしファイルをコンパイルした後にシステム上の何かがバイナリと非互換にするような方法で
+バイナリを変更したら、ファイルはもはやロードできなくなります。
+Maximaは通常、パッケージから生成するバイナリファイルを
+以下のようにタイプした後印字される名前のフォルダ内の
+<code>binary</code>と名付けられたフォルダの中に置きます:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) maxima_userdir;
+(%o1)                 /home/gunter/.maxima
+</pre></td></tr></table><p>もしこのディレクトリがなければ、maximaはパッケージをコンパイルしなければいけない時すぐにそれを再度作ります。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-makelist-second-argument-must-evaluate-to-a-number"></a>
+</p><hr size="6">
+<a name="makelist-second-argument-must-evaluate-to-a-number"></a>
+<a name="SEC415"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC414" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC416" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.8 makelist: second argument must evaluate to a number </h3>
+<p><code>makelist</code>は2番目の引数に刻まれる変数名を期待します。
+今回、未定義の変数の名前の代わりにmaximaが他の何か、多分リストかリストの名前を見つけました。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-Only-symbols-can-be-bound"></a>
+</p><hr size="6">
+<a name="Only-symbols-can-be-bound"></a>
+<a name="SEC416"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC415" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC417" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.9 Only symbols can be bound </h3>
+<p>このエラーのもっともありえる原因は
+ループカウンタとして知られる数値の数や変数を使おうとしたことにありました。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+<p><a name="Item_003a-Operators-of-arguments-must-all-be-the-same"></a>
+</p><hr size="6">
+<a name="Operators-of-arguments-must-all-be-the-same"></a>
+<a name="SEC417"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC416" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC418" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.10 operators of arguments must all be the same </h3>
+<p>このエラーメッセージが現れる1つのありえる理由は等式をリストに追加するために
+<code><a href="maxima_5.html#append">append</a></code>を使おうとしようとしたことです:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) l:[a=1,b=2,c=3];
+(%o1)                 [a = 1, b = 2, c = 3]
+(%i2) append(l,d=5);
+append: operators of arguments must all be the same.
+ -- an error. To debug this try: debugmode(true);
+</pre></td></tr></table><p>等式をリストに追加するために最初に要素1つのリストにラップしなくてはいけません:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) l:[a=1,b=2,c=3];
+(%o1)                 [a = 1, b = 2, c = 3]
+(%i2) append(l,[d=5]);
+(%o2)             [a = 1, b = 2, c = 3, d = 5]
+</pre></td></tr></table>
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-out-of-memory"></a>
+</p><hr size="6">
+<a name="out-of-memory"></a>
+<a name="SEC418"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC417" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC419" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.11 Out of memory </h3>
+<p>普通Lispは、少なくとも1つのスタックとユーザーオブジェクトを含むヒープを含むいくつかのタイプのメモリを扱います。
+メモリの枯渇を避けるにはいくつかの手法が役に立つかもしれません:
+</p><ul>
+<li> 可能なら、通常の最善解はよりメモリ効率がよいアルゴリズムを使うことです。
+</li><li> 関数をコンパイルすると、必要なメモリの総量を劇的に減ることがあります。
+</li><li> 固定長のタイプの配列はリストよりメモリ効率がいいかもしれません。
+</li><li> もし maximaが sbcl上で走っているなら、 sbclのメモリ制限が
+現在の問題を解くには低すぎる値に設定されているかもしれません。
+この場合、コマンドラインオプション <code>--dynamic-space-size &lt;n&gt;</code>を使うと
+sbclにヒープを <code>n</code>メガバイト確保するように命令できます。
+しかし、 sbclはいくつかの異なるタイプのメモリを扱わなければならなくて、
+なので利用可能な物理メモリの半分ぐらいまでしか確保できないことに注意してください。
+また、 32-bitプロセスは 物理メモリに 2GBまでしかアクセスできないことに注意してください。
+</li></ul>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-part-fell-off-the-end"></a>
+</p><hr size="6">
+<a name="part-fell-off-the-end"></a>
+<a name="SEC419"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC418" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC420" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.12 part: fell off the end </h3>
+<p><code>part()</code>が
+<code>n</code>より少ない項目を持つ何かの中の
+<code>n</code>番目の項目をアクセスするのに使われました。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-undefined-variable-during-plotting"></a>
+</p><hr size="6">
+<a name="undefined-variable-during-plotting"></a>
+<a name="SEC420"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC419" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC421" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.13 undefined variable (draw or plot) </h3>
+<p>maximaが値を知らない変数を含んでいたので関数が描画できませんでした。
+</p>
+<p>どの変数がわからないのか見つけるためには、
+描画コマンドの名前
+(<code>draw2d</code>, <code>plot2d</code>や似たようなもの)を
+既存の関数名と衝突しない適当な名前(例えば <code>ddraw2d</code>)で一時的に置き換えて
+maximaに描画コマンドがなんのパラメータを見ているのか印字させることが時々役に立ちます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;draw&quot;)$
+(%i2) f(x):=sin(omega*t);
+(%o2) f(x) := sin(omega t)
+(%i3) draw2d(
+        explicit(
+          f(x),
+          x,1,10
+        )
+      );
+draw2d (explicit): non defined variable
+ -- an error. To debug this try: debugmode(true);
+(%i4) ddraw2d(
+        explicit(
+          f(x),
+          x,1,10
+        )
+      );
+(%o4) ddraw2d(explicit(sin(omega t), x, 1, 10))
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-VTK-is-not-installed"></a>
+</p><hr size="6">
+<a name="VTK-is-not-installed"></a>
+<a name="SEC421"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC420" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC422" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC407" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.1.14 VTK is not installed, which is required for Scene </h3>
+
+<p>これは、VTKが実際にインストールされていないかー
+maximaが見つけられないかー
+以下の maximaコマンドを入力した時の出力の名前のディレクトリへの書き込みアクセスができないか
+を意味します:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) maxima_tempdir;
+(%o1)                         /tmp
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-Warning-messages"></a>
+</p><hr size="6">
+<a name="Warning-messages"></a>
+<a name="SEC422"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC421" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC423" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 88.2 Warning messages </h2>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC423">88.2.1 Encountered undefined variable &lt;x&gt; in translation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC424">88.2.2 Rat: replaced &lt;x&gt; by &lt;y&gt; = &lt;z&gt;</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<p><a name="Item_003a-undefined-variable-during-translation"></a>
+</p><hr size="6">
+<a name="undefined-variable-during-translation"></a>
+<a name="SEC423"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC422" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC424" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC422" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.2.1 Encountered undefined variable &lt;x&gt; in translation </h3>
+<p>関数をコンパイルしましたが、変数 <code>x</code>の型がわかりませんでした。
+これはコンパイルされたコマンドが、
+maximaがこの変数に関して提供するすべての柔軟性を保持する追加のコードを含むことを意味します。
+もし <code>x</code>が変数名を意味しなくてコマンドへの名前付きオプションを意味するなら、
+名前オプションの前にシングルクォート (<code>'</code>)をつけることでこの問題を解決するでしょう。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Error-messages">Error messages</a>
+</div>
+</p>
+
+<p><a name="Item_003a-replaced-x-by-y"></a>
+</p><hr size="6">
+<a name="replaced-x-by-y"></a>
+<a name="SEC424"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC423" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC422" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 88.2.2 Rat: replaced &lt;x&gt; by &lt;y&gt; = &lt;z&gt; </h3>
+<p>浮動小数点数は、最大数が普通は十分大きなものですが、依然制限はあります。
+無害に見える例でこの制限が小さすぎることを示すよい例はとして、
+<a href="https://en.wikipedia.org/wiki/Wilkinson%27s_polynomial">Wilkinson's Polynomial</a>,
+Rump多項式、そして正確な1/10は2進数の浮動小数点で表現できないという事実があります。
+それゆえに、
+浮動小数点エラーが徐々に大きくなったり、項が互いに打ち消し合うことを妨げるあちこちの場所で、
+maximaはデフォルトでそれらを正確な分数に置き換えます。
+<code>ratprint</code>, <code>ratepsilon</code>, <code>bftorat</code>, <code>fpprintprec</code>, <code>rationalize</code>も参照してください。
+<div class=categorybox>
+
+<a href="maxima_106.html#Category_003a-Warning-messages">Warning messages</a>
+</div>
+</p>
+<p><a name="Item_003a-Comments-of-Translator"></a>
+</p><hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC406" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

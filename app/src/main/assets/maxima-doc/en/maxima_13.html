@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 13. File Input and Output</title>
+<title>Maxima 5.39.0 Manual: 13. File Input and Output</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 13. File Input and Output">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 13. File Input and Output">
+<meta name="description" content="Maxima 5.39.0 Manual: 13. File Input and Output">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 13. File Input and Output">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 13. File Input and Output </h1>
@@ -113,7 +115,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 13.1 Comments </h2>
@@ -146,7 +148,7 @@ as there are <code>*/</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Syntax">Syntax</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Syntax">Syntax</a>
 </div>
 </p>
 <p><a name="Item_003a-Files"></a>
@@ -166,7 +168,7 @@ as there are <code>*/</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 13.2 Files </h2>
@@ -207,7 +209,7 @@ directory depends on the system like Windows or Linux and on the installation.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 13.3 Functions and Variables for File Input and Output </h2>
@@ -216,7 +218,7 @@ directory depends on the system like Windows or Linux and on the installation.
 <a name="Item_003a-appendfile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>appendfile</b><i> (<var>filename</var>)</i>
-<a name="IDX507"></a>
+<a name="IDX516"></a>
 </dt>
 <dd><p>Appends a console transcript to <var>filename</var>.  <code>appendfile</code> is the same
 as <code><a href="#writefile">writefile</a></code>, except that the transcript file, if it exists, is
@@ -227,8 +229,8 @@ always appended.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-output">File output</a> &middot;
-<a href="maxima_99.html#Category_003a-Console-interaction">Console interaction</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_105.html#Category_003a-Console-interaction">Console interaction</a>
 </div>
 </p></dd></dl>
 
@@ -236,7 +238,7 @@ always appended.
 <a name="Item_003a-batch"></a>
 </p><dl>
 <dt><u>Function:</u> <b>batch</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>batch</tt> (<var>filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>batch</tt> (<var>filename</var>, <code>option</code>)</i>
-<a name="IDX508"></a>
+<a name="IDX517"></a>
 </dt>
 <dd><p><code>batch(<var>filename</var>)</code> reads Maxima expressions from <var>filename</var> and 
 evaluates them.  <code>batch</code> searches for <var>filename</var> in the list 
@@ -288,8 +290,8 @@ the tests which have failed.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Session-management">Session management</a> &middot;
-<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Session-management">Session management</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -298,7 +300,7 @@ the tests which have failed.
 <a name="Item_003a-batchload"></a>
 </p><dl>
 <dt><u>Function:</u> <b>batchload</b><i> (<var>filename</var>)</i>
-<a name="IDX509"></a>
+<a name="IDX518"></a>
 </dt>
 <dd><p>Reads Maxima expressions from <var>filename</var> and evaluates them, without
 displaying the input or output expressions and without assigning labels to
@@ -316,8 +318,8 @@ The file cannot include <code>:lisp</code> constructs.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Session-management">Session management</a> &middot;
-<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Session-management">Session management</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -325,14 +327,14 @@ The file cannot include <code>:lisp</code> constructs.
 <a name="Item_003a-closefile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>closefile</b><i> ()</i>
-<a name="IDX510"></a>
+<a name="IDX519"></a>
 </dt>
 <dd><p>Closes the transcript file opened by <code><a href="#writefile">writefile</a></code> or <code><a href="#appendfile">appendfile</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-output">File output</a> &middot;
-<a href="maxima_99.html#Category_003a-Console-interaction">Console interaction</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_105.html#Category_003a-Console-interaction">Console interaction</a>
 </div>
 </p></dd></dl>
 
@@ -340,7 +342,7 @@ The file cannot include <code>:lisp</code> constructs.
 <a name="Item_003a-file_005foutput_005fappend"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>file_output_append</b>
-<a name="IDX511"></a>
+<a name="IDX520"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -356,8 +358,8 @@ functions always truncate their output file, and <code><a href="#tex">tex</a></c
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-output">File output</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -366,7 +368,7 @@ functions always truncate their output file, and <code><a href="#tex">tex</a></c
 <a name="Item_003a-filename_005fmerge"></a>
 </p><dl>
 <dt><u>Function:</u> <b>filename_merge</b><i> (<var>path</var>, <var>filename</var>)</i>
-<a name="IDX512"></a>
+<a name="IDX521"></a>
 </dt>
 <dd><p>Constructs a modified path from <var>path</var> and <var>filename</var>.  If the final
 component of <var>path</var> is of the form <code>###.<var>something</var></code>, the component
@@ -377,8 +379,8 @@ component is simply replaced by <var>filename</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a> &middot;
-<a href="maxima_99.html#Category_003a-File-output">File output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
 </div>
 </p></dd></dl>
 
@@ -386,7 +388,7 @@ component is simply replaced by <var>filename</var>.
 <a name="Item_003a-file_005fsearch"></a>
 </p><dl>
 <dt><u>Function:</u> <b>file_search</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>file_search</tt> (<var>filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>file_search</tt> (<var>filename</var>, <var>pathlist</var>)</i>
-<a name="IDX513"></a>
+<a name="IDX522"></a>
 </dt>
 <dd><p><code>file_search</code> searches for the file <var>filename</var> and returns the path to
 the file (as a string) if it can be found; otherwise <code>file_search</code> returns
@@ -425,7 +427,7 @@ See <code><a href="#file_005fsearch_005fmaxima">file_search_maxima</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -437,19 +439,19 @@ See <code><a href="#file_005fsearch_005fmaxima">file_search_maxima</a></code>.
 <a name="Item_003a-file_005fsearch_005fmaxima"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>file_search_maxima</b>
-<a name="IDX514"></a>
+<a name="IDX523"></a>
 </dt>
 <dt><u>Option variable:</u> <b>file_search_lisp</b>
-<a name="IDX515"></a>
+<a name="IDX524"></a>
 </dt>
 <dt><u>Option variable:</u> <b>file_search_demo</b>
-<a name="IDX516"></a>
+<a name="IDX525"></a>
 </dt>
 <dt><u>Option variable:</u> <b>file_search_usage</b>
-<a name="IDX517"></a>
+<a name="IDX526"></a>
 </dt>
 <dt><u>Option variable:</u> <b>file_search_tests</b>
-<a name="IDX518"></a>
+<a name="IDX527"></a>
 </dt>
 <dd><p>These variables specify lists of directories to be searched by
 <code><a href="#load">load</a></code>, <code><a href="maxima_3.html#demo">demo</a></code>, and some other Maxima functions.  The default
@@ -484,8 +486,8 @@ the sought-after name is <code>neumann</code>,
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -493,7 +495,7 @@ the sought-after name is <code>neumann</code>,
 <a name="Item_003a-file_005ftype"></a>
 </p><dl>
 <dt><u>Function:</u> <b>file_type</b><i> (<var>filename</var>)</i>
-<a name="IDX519"></a>
+<a name="IDX528"></a>
 </dt>
 <dd><p>Returns a guess about the content of <var>filename</var>, based on the filename 
 extension.  <var>filename</var> need not refer to an actual file; no attempt is made 
@@ -518,7 +520,7 @@ returns <code>lisp</code>.  If none of the above, <code>file_type</code> returns
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -526,7 +528,7 @@ returns <code>lisp</code>.  If none of the above, <code>file_type</code> returns
 <a name="Item_003a-file_005ftype_005flisp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>file_type_lisp</b>
-<a name="IDX520"></a>
+<a name="IDX529"></a>
 </dt>
 <dd><p>Default value:  <code>[l, lsp, lisp]</code>
 </p>
@@ -540,9 +542,9 @@ as denoting a Lisp source file.
 <a name="Item_003a-file_005ftype_005fmaxima"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>file_type_maxima</b>
-<a name="IDX521"></a>
+<a name="IDX530"></a>
 </dt>
-<dd><p>Default value:  <code>[mac, mc, demo, dem, dm1, dm2, dm3, dmt]</code>
+<dd><p>Default value:  <code>[mac, mc, demo, dem, dm1, dm2, dm3, dmt, wxm]</code>
 </p>
 <p><code>file_type_maxima</code> is a list of file extensions that maxima recognizes
 as denoting a Maxima source file.
@@ -554,7 +556,7 @@ as denoting a Maxima source file.
 <a name="Item_003a-load"></a>
 </p><dl>
 <dt><u>Function:</u> <b>load</b><i> (<var>filename</var>)</i>
-<a name="IDX522"></a>
+<a name="IDX531"></a>
 </dt>
 <dd><p>Evaluates expressions in <var>filename</var>, thus bringing variables, functions, and
 other objects into Maxima.  The binding of any existing object is clobbered by
@@ -574,6 +576,10 @@ while processing <var>filename</var>, the global variables <code>_</code>, <code
 <code>%</code>, and <code>%th</code> have whatever bindings they had when <code>load</code> was
 called.
 </p>
+<p>It is also to note that structures will only be read back as structures if
+they have been defined by <code>defstruct</code> before the <code>load</code> command
+is called.
+</p>
 <p>See also <code><a href="#loadfile">loadfile</a></code>, <code><a href="#batch">batch</a></code>, <code><a href="#batchload">batchload</a></code>, and
 <code><a href="maxima_3.html#demo">demo</a></code>.  <code>loadfile</code> processes Lisp files; <code>batch</code>,
 <code>batchload</code>, and <code>demo</code> process Maxima files.
@@ -584,8 +590,8 @@ called.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Session-management">Session management</a> &middot;
-<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Session-management">Session management</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -593,7 +599,7 @@ called.
 <a name="Item_003a-load_005fpathname"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>load_pathname</b>
-<a name="IDX523"></a>
+<a name="IDX532"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -621,7 +627,7 @@ End of batchfile
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -630,7 +636,7 @@ End of batchfile
 <a name="Item_003a-loadfile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>loadfile</b><i> (<var>filename</var>)</i>
-<a name="IDX524"></a>
+<a name="IDX533"></a>
 </dt>
 <dd><p>Evaluates Lisp expressions in <var>filename</var>.  <code>loadfile</code> does not invoke
 <code><a href="#file_005fsearch">file_search</a></code>, so <code>filename</code> must include the file extension and
@@ -642,8 +648,8 @@ more convenient to use <code><a href="#load">load</a></code> instead of <code>lo
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Session-management">Session management</a> &middot;
-<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Session-management">Session management</a> &middot;
+<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -652,7 +658,7 @@ more convenient to use <code><a href="#load">load</a></code> instead of <code>lo
 <a name="Item_003a-loadprint"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>loadprint</b>
-<a name="IDX525"></a>
+<a name="IDX534"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -674,8 +680,8 @@ When <code>loadprint</code> is <code>false</code>, never print a message.
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -683,7 +689,7 @@ When <code>loadprint</code> is <code>false</code>, never print a message.
 <a name="Item_003a-directory"></a>
 </p><dl>
 <dt><u>Function:</u> <b>directory</b><i> (<var>path</var>)</i>
-<a name="IDX526"></a>
+<a name="IDX535"></a>
 </dt>
 <dd><p>Returns a list of the files and directories found in <var>path</var>
 in the file system.
@@ -698,7 +704,7 @@ which may have implementation-specific behavior.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -708,13 +714,13 @@ which may have implementation-specific behavior.
 <a name="Item_003a-pathname_005fdirectory"></a>
 </p><dl>
 <dt><u>Function:</u> <b>pathname_directory</b><i> (<var>pathname</var>)</i>
-<a name="IDX527"></a>
+<a name="IDX536"></a>
 </dt>
 <dt><u>Function:</u> <b>pathname_name</b><i> (<var>pathname</var>)</i>
-<a name="IDX528"></a>
+<a name="IDX537"></a>
 </dt>
 <dt><u>Function:</u> <b>pathname_type</b><i> (<var>pathname</var>)</i>
-<a name="IDX529"></a>
+<a name="IDX538"></a>
 </dt>
 <dd><p>These functions return the components of <var>pathname</var>.
 </p>
@@ -729,7 +735,7 @@ which may have implementation-specific behavior.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a>
 </div>
 </p></dd></dl>
 
@@ -737,7 +743,7 @@ which may have implementation-specific behavior.
 <a name="Item_003a-printfile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>printfile</b><i> (<var>path</var>)</i>
-<a name="IDX530"></a>
+<a name="IDX539"></a>
 </dt>
 <dd><p>Prints the file named by <var>path</var> to the console.  <var>path</var> may be a string
 or a symbol; if it is a symbol, it is converted to a string.
@@ -752,8 +758,8 @@ or otherwise the result of a successful filename merge.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-input">File input</a> &middot;
-<a href="maxima_99.html#Category_003a-Console-interaction">Console interaction</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-input">File input</a> &middot;
+<a href="maxima_105.html#Category_003a-Console-interaction">Console interaction</a>
 </div>
 </p></dd></dl>
 
@@ -762,7 +768,7 @@ or otherwise the result of a successful filename merge.
 <a name="Item_003a-save"></a>
 </p><dl>
 <dt><u>Function:</u> <b>save</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>save</tt> (<var>filename</var>, <var>name_1</var>, <var>name_2</var>, <var>name_3</var>, &hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>save</tt> (<var>filename</var>, values, functions, labels, &hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>save</tt> (<var>filename</var>, [<var>m</var>, <var>n</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>save</tt> (<var>filename</var>, <var>name_1</var>=<var>expr_1</var>, &hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>save</tt> (<var>filename</var>, all) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>save</tt> (<var>filename</var>, <var>name_1</var>=<var>expr_1</var>, <var>name_2</var>=<var>expr_2</var>, &hellip;)</i>
-<a name="IDX531"></a>
+<a name="IDX540"></a>
 </dt>
 <dd><p>Stores the current values of <var>name_1</var>, <var>name_2</var>, <var>name_3</var>, &hellip;,
 in <var>filename</var>.  The arguments are the names of variables, functions, or
@@ -770,7 +776,8 @@ other objects.  If a name has no value or function associated with it, it is
 ignored.  <code>save</code> returns <var>filename</var>.
 </p>
 <p><code>save</code> stores data in the form of Lisp expressions.
-The data stored by <code>save</code> may be recovered by <code>load (<var>filename</var>)</code>.
+If <var>filename</var> ends in <code>.lisp</code> the
+data stored by <code>save</code> may be recovered by <code>load (<var>filename</var>)</code>.
 See <code><a href="#load">load</a></code>.
 </p>
 <p>The global flag <code><a href="#file_005foutput_005fappend">file_output_append</a></code> governs whether <code>save</code> appends or
@@ -813,8 +820,8 @@ have been assigned new values by the user; see <code><a href="maxima_4.html#myop
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Session-management">Session management</a> &middot;
-<a href="maxima_99.html#Category_003a-File-output">File output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Session-management">Session management</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
 </div>
 </p></dd></dl>
 
@@ -822,7 +829,7 @@ have been assigned new values by the user; see <code><a href="maxima_4.html#myop
 <a name="Item_003a-stringout"></a>
 </p><dl>
 <dt><u>Function:</u> <b>stringout</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>stringout</tt> (<var>filename</var>, <var>expr_1</var>, <var>expr_2</var>, <var>expr_3</var>, &hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>stringout</tt> (<var>filename</var>, [<var>m</var>, <var>n</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>stringout</tt> (<var>filename</var>, input) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>stringout</tt> (<var>filename</var>, functions) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>stringout</tt> (<var>filename</var>, values)</i>
-<a name="IDX532"></a>
+<a name="IDX541"></a>
 </dt>
 <dd><p><code>stringout</code> writes expressions to a file in the same form the expressions
 would be typed for input.  The file can then be used as input for the
@@ -864,8 +871,8 @@ variable, a colon, and its value.  Note that the general form of
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Session-management">Session management</a> &middot;
-<a href="maxima_99.html#Category_003a-File-output">File output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Session-management">Session management</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
 </div>
 </p></dd></dl>
 
@@ -873,7 +880,7 @@ variable, a colon, and its value.  Note that the general form of
 <a name="Item_003a-with_005fstdout"></a>
 </p><dl>
 <dt><u>Function:</u> <b>with_stdout</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>with_stdout</tt> (<var>f</var>, <var>expr_1</var>, <var>expr_2</var>, <var>expr_3</var>, &hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>with_stdout</tt> (<var>s</var>, <var>expr_1</var>, <var>expr_2</var>, <var>expr_3</var>, &hellip;)</i>
-<a name="IDX533"></a>
+<a name="IDX542"></a>
 </dt>
 <dd><p>Evaluates <var>expr_1</var>, <var>expr_2</var>, <var>expr_3</var>, &hellip; and writes any
 output thus generated to a file <var>f</var> or output stream <var>s</var>.  The evaluated
@@ -902,7 +909,7 @@ is <code>true</code>, <code>with_stdout</code> appends to the output file.  Othe
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-output">File output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-output">File output</a>
 </div>
 </p></dd></dl>
 
@@ -910,7 +917,7 @@ is <code>true</code>, <code>with_stdout</code> appends to the output file.  Othe
 <a name="Item_003a-writefile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>writefile</b><i> (<var>filename</var>)</i>
-<a name="IDX534"></a>
+<a name="IDX543"></a>
 </dt>
 <dd><p>Begins writing a transcript of the Maxima session to <var>filename</var>.
 All interaction between the user and Maxima is then recorded in this file,
@@ -937,8 +944,8 @@ displayed by <code>playback</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-File-output">File output</a> &middot;
-<a href="maxima_99.html#Category_003a-Console-interaction">Console interaction</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-File-output">File output</a> &middot;
+<a href="maxima_105.html#Category_003a-Console-interaction">Console interaction</a>
 </div>
 </p></dd></dl>
 
@@ -959,16 +966,20 @@ displayed by <code>playback</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 13.4 Functions and Variables for TeX Output </h2>
 
+
+<p>Note that the built-in TeX output functionality of wxMaxima makes no use of
+the functions described here but uses its own implementation instead.
+</p>
 <p><a name="tex"></a>
 <a name="Item_003a-tex"></a>
 </p><dl>
 <dt><u>Function:</u> <b>tex</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tex</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tex</tt> (<var>expr</var>, <var>destination</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tex</tt> (<var>expr</var>, false) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tex</tt> (<var>label</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tex</tt> (<var>label</var>, <var>destination</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tex</tt> (<var>label</var>, false)</i>
-<a name="IDX535"></a>
+<a name="IDX544"></a>
 </dt>
 <dd><p>Prints a representation of an expression suitable for the TeX document
 preparation system.  The result is a fragment of a document, which can be copied
@@ -1022,8 +1033,8 @@ $$-\cos x$$
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-TeX-output">TeX output</a> &middot;
-<a href="maxima_99.html#Category_003a-File-output">File output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-TeX-output">TeX output</a> &middot;
+<a href="maxima_105.html#Category_003a-File-output">File output</a>
 </div>
 </p></dd></dl>
 
@@ -1031,7 +1042,7 @@ $$-\cos x$$
 <a name="Item_003a-tex1"></a>
 </p><dl>
 <dt><u>Function:</u> <b>tex1</b><i> (<var>e</var>)</i>
-<a name="IDX536"></a>
+<a name="IDX545"></a>
 </dt>
 <dd><p>Returns a string which represents the TeX output for the expressions <var>e</var>.
 The TeX output is not enclosed in delimiters for an equation or any other
@@ -1047,7 +1058,7 @@ environment.
 <a name="Item_003a-texput"></a>
 </p><dl>
 <dt><u>Function:</u> <b>texput</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>texput</tt> (<var>a</var>, <var>s</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>texput</tt> (<var>a</var>, <var>f</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>texput</tt> (<var>a</var>, <var>s</var>, <var>operator_type</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>texput</tt> (<var>a</var>, [<var>s_1</var>, <var>s_2</var>], matchfix) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>texput</tt> (<var>a</var>, [<var>s_1</var>, <var>s_2</var>, <var>s_3</var>], matchfix)</i>
-<a name="IDX537"></a>
+<a name="IDX546"></a>
 </dt>
 <dd><p>Assign the TeX output for the atom <var>a</var>, which can be a symbol or the name
 of an operator.
@@ -1179,7 +1190,7 @@ $$ \langle a \, | \,b \rangle $$
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-TeX-output">TeX output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-TeX-output">TeX output</a>
 </div>
 </p></dd></dl>
 
@@ -1187,10 +1198,10 @@ $$ \langle a \, | \,b \rangle $$
 <a name="Item_003a-get_005ftex_005fenvironment"></a>
 </p><dl>
 <dt><u>Function:</u> <b>get_tex_environment</b><i> (<var>op</var>)</i>
-<a name="IDX538"></a>
+<a name="IDX547"></a>
 </dt>
 <dt><u>Function:</u> <b>set_tex_environment</b><i> (<var>op</var>, <var>before</var>, <var>after</var>)</i>
-<a name="IDX539"></a>
+<a name="IDX548"></a>
 </dt>
 <dd><p>Customize the TeX environment output by <code>tex</code>.
 As maintained by these functions, the TeX environment comprises two strings:
@@ -1199,7 +1210,7 @@ one is printed before any other TeX output, and the other is printed after.
 <p>Only the TeX environment of the top-level operator in an expression
 is output; TeX environments associated with other operators are ignored.
 </p>
-<p><code>get_tex_environment</code> returns the TeX enviroment which is applied
+<p><code>get_tex_environment</code> returns the TeX environment which is applied
 to the operator <var>op</var>; returns the default if no other environment
 has been assigned.
 </p>
@@ -1229,7 +1240,7 @@ $$f(x):=1-x$$
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-TeX-output">TeX output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-TeX-output">TeX output</a>
 </div>
 </p></dd></dl>
 
@@ -1237,10 +1248,10 @@ $$f(x):=1-x$$
 <a name="Item_003a-get_005ftex_005fenvironment_005fdefault"></a>
 </p><dl>
 <dt><u>Function:</u> <b>get_tex_environment_default</b><i> ()</i>
-<a name="IDX540"></a>
+<a name="IDX549"></a>
 </dt>
 <dt><u>Function:</u> <b>set_tex_environment_default</b><i> (<var>before</var>, <var>after</var>)</i>
-<a name="IDX541"></a>
+<a name="IDX550"></a>
 </dt>
 <dd><p>Customize the TeX environment output by <code>tex</code>.
 As maintained by these functions, the TeX environment comprises two strings:
@@ -1273,7 +1284,7 @@ g\left(x\right)+f\left(x\right)
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-TeX-output">TeX output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-TeX-output">TeX output</a>
 </div>
 </p></dd></dl>
 
@@ -1294,7 +1305,7 @@ g\left(x\right)+f\left(x\right)
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 13.5 Functions and Variables for Fortran Output </h2>
@@ -1303,7 +1314,7 @@ g\left(x\right)+f\left(x\right)
 <a name="Item_003a-fortindent"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>fortindent</b>
-<a name="IDX542"></a>
+<a name="IDX551"></a>
 </dt>
 <dd><p>Default value: <code>0</code>
 </p>
@@ -1314,7 +1325,7 @@ expressions to be printed farther to the right.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -1322,7 +1333,7 @@ expressions to be printed farther to the right.
 <a name="Item_003a-fortran"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fortran</b><i> (<var>expr</var>)</i>
-<a name="IDX543"></a>
+<a name="IDX552"></a>
 </dt>
 <dd><p>Prints <var>expr</var> as a Fortran statement.
 The output line is indented with spaces.
@@ -1350,7 +1361,7 @@ each printed line with spaces to 80 columns.
 <p><code>fortran</code> evaluates its arguments; quoting an argument defeats evaluation.
 <code>fortran</code> always returns <code>done</code>.
 </p>
-<p>See also the function <code><a href="maxima_54.html#function_005ff90">f90</a></code> for printing one or more
+<p>See also the function <code><a href="maxima_57.html#function_005ff90">f90</a></code> for printing one or more
 expressions as a Fortran 90 program.
 </p>
 <p>Examples:
@@ -1380,7 +1391,7 @@ expressions as a Fortran 90 program.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -1388,7 +1399,7 @@ expressions as a Fortran 90 program.
 <a name="Item_003a-fortspaces"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>fortspaces</b>
-<a name="IDX544"></a>
+<a name="IDX553"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1397,7 +1408,7 @@ each printed line with spaces to 80 columns.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Translation-and-compilation">Translation and compilation</a>
 </div>
 </p></dd></dl>
 
@@ -1414,12 +1425,12 @@ each printed line with spaces to 80 columns.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 57. ggf</title>
+<title>Maxima 5.39.0 Manual: 57. f90</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 57. ggf">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 57. ggf">
+<meta name="description" content="Maxima 5.39.0 Manual: 57. f90">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 57. f90">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,151 +72,151 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="ggf"></a>
-<a name="SEC282"></a>
+<a name="f90_002dpkg"></a>
+<a name="SEC277"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_56.html#SEC281" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC283" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_56.html#SEC276" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC278" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_56.html#SEC276" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_58.html#SEC284" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_56.html#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_58.html#SEC279" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 57. ggf </h1>
+<h1 class="chapter"> 57. f90 </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC283">57.1 Functions and Variables for ggf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC278">57.1 Functions and Variables for f90</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-ggf"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-f90"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-ggf"></a>
-<a name="SEC283"></a>
+<a name="Functions-and-Variables-for-f90"></a>
+<a name="SEC278"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC282" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_58.html#SEC284" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC277" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_58.html#SEC279" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_58.html#SEC284" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC277" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC277" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_58.html#SEC279" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 57.1 Functions and Variables for ggf </h2>
+<h2 class="section"> 57.1 Functions and Variables for f90 </h2>
 
-<p><a name="Item_003a-GGFINFINITY"></a>
+
+<p><a name="function_005ff90"></a>
+<a name="Item_003a-f90"></a>
 </p><dl>
-<dt><u>オプション変数:</u> <b>GGFINFINITY</b>
-<a name="IDX1985"></a>
+<dt><u>関数:</u> <b>f90</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
+<a name="IDX1994"></a>
 </dt>
-<dd><p>デフォルト値: 3
+<dd><p>１つか複数の式 <var>expr_1</var>, &hellip;, <var>expr_n</var>を
+Fortran 90プログラムとして印字します。
+出力は標準出力に印字されます。
 </p>
-<p>これは関数 <code>ggf</code>のオプション変数です。
+<p><code>f90</code>は
+Fortran 90のいわゆる「自由形式」入力フォーマットで出力を印字します:
+列位置に特別な注意はありません。
+長い行は、アンパサンド <code>&amp;</code>継続文字で固定幅に分割されます。
 </p>
-<p>母関数の連分数を計算する時、
-(厳密に) <var>GGFINFINITY</var>より大きな次数を持つ部分商は捨てます。
-現在のコンバージェントは母関数の正確な値として考えられます;
-部分商すべての次数はたいてい 0か 1です;
-もしより大きな値を使うなら、十分精度の高い計算を行うために十分な項を与えるべきです。
+<p><code>load(f90)</code>はこの関数をロードします。
+関数 <code><a href="maxima_13.html#fortran">fortran</a></code>も参照してください。
 </p>
-<p><code>ggf</code>も参照してください。
+<p>例:
 </p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (f90)$
+(%i2) foo : expand ((xxx + yyy + 7)^4);
+         4            3         3        2    2             2
+(%o2) yyy  + 4 xxx yyy  + 28 yyy  + 6 xxx  yyy  + 84 xxx yyy
+          2        3             2
+ + 294 yyy  + 4 xxx  yyy + 84 xxx  yyy + 588 xxx yyy + 1372 yyy
+      4         3          2
+ + xxx  + 28 xxx  + 294 xxx  + 1372 xxx + 2401
+(%i3) f90 ('foo = foo);
+foo = yyy**4+4*xxx*yyy**3+28*yyy**3+6*xxx**2*yyy**2+84*xxx*yyy**2&amp;
++294*yyy**2+4*xxx**3*yyy+84*xxx**2*yyy+588*xxx*yyy+1372*yyy+xxx**&amp;
+4+28*xxx**3+294*xxx**2+1372*xxx+2401
+(%o3)                         false
+</pre></td></tr></table>
+<p>複数式。
+<code><a href="maxima_13.html#with_005fstdout">with_stdout</a></code>関数を介して標準出力をファイルにとらえます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (f90)$
+(%i2) foo : sin (3*x + 1) - cos (7*x - 2);
+(%o2)              sin(3 x + 1) - cos(7 x - 2)
+(%i3) with_stdout (&quot;foo.f90&quot;,
+                   f90 (x = 0.25, y = 0.625, 'foo = foo, 'stop, 'end));
+(%o3)                         false
+(%i4) printfile (&quot;foo.f90&quot;);
+x = 0.25
+y = 0.625
+foo = sin(3*x+1)-cos(7*x-2)
+stop
+end
+(%o4)                        foo.f90
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ggf">Package ggf</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Translation-and-compilation">Translation and compilation</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-f90">Package f90</a>
 </div>
-</p>
-</dd></dl>
+</p></dd></dl>
 
-
-<p><a name="Item_003a-GGFCFMAX"></a>
-</p><dl>
-<dt><u>オプション変数:</u> <b>GGFCFMAX</b>
-<a name="IDX1986"></a>
-</dt>
-<dd><p>デフォルト値: 3
-</p>
-<p>これは関数 <code>ggf</code>のオプション変数です。
-</p>
-<p>母関数の連分数を計算する時、もし
-<var>GGFCFMAX</var>個の部分商を計算した後、よい結果が見つからないなら
-(<var>GGFINFINITY</var>フラグを参照してください)、
-母関数を２つの多項式の分数でないようにみなし、関数を抜けます。
-もっと複雑な母関数のためにより大きな値を自由に入れてください。
-</p>
-<p><code>ggf</code>も参照してください。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-ggf">Package ggf</a>
-</div>
-</p>
-</dd></dl>
-
-
-<dl>
-<dt><u>関数:</u> <b>ggf</b><i> (<var>l</var>)</i>
-<a name="IDX1987"></a>
-</dt>
-<dd><p>(もし母関数が２つの多項式の分数なら)
-与えられた最初の数項に対する数列の母関数を計算します。
-<var>l</var>は数のリストです。
-</p>
-<p>解は２つの多項式の分数として返されます。
-解が見つからなかったら <code>done</code>を返します。
-</p>
-<p>この関数はグローバル変数
-<var>GGFINFINITY</var>と <var>GGFCFMAX</var>で制御されます。
-<var>GGFINFINITY</var>と <var>GGFCFMAX</var>も参照してください。
-</p>
-<p>この関数を使うには最初に <code>load(&quot;ggf&quot;)</code>と書いてください。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Generating-functions">Generating functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-ggf">Package ggf</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-graphs"></a>
+<p><a name="Item_003a-finance_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_58.html#SEC284" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC277" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_58.html#SEC279" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

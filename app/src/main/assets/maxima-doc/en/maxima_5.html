@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 5. Data Types and Structures</title>
+<title>Maxima 5.39.0 Manual: 5. Data Types and Structures</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 5. Data Types and Structures">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 5. Data Types and Structures">
+<meta name="description" content="Maxima 5.39.0 Manual: 5. Data Types and Structures">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 5. Data Types and Structures">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 5. Data Types and Structures </h1>
@@ -86,11 +88,11 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <table class="menu" border="0" cellspacing="0">
 <tr><td align="left" valign="top"><a href="#SEC12">5.1 Numbers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC17">5.2 Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC16">5.2 Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC20">5.3 Constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC19">5.3 Constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC22">5.4 Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC21">5.4 Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><td align="left" valign="top"><a href="#SEC25">5.5 Arrays</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
@@ -115,7 +117,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 5.1 Numbers </h2>
@@ -123,7 +125,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <table class="menu" border="0" cellspacing="0">
 <tr><td align="left" valign="top"><a href="#SEC13">5.1.1 Introduction to Numbers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC16">5.1.2 Functions and Variables for Numbers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC15">5.1.2 Functions and Variables for Numbers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -133,7 +135,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="SEC13"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC12" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC16" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC15" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC12" title="Up section"> Up </a>]</td>
@@ -144,7 +146,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.1.1 Introduction to Numbers </h3>
@@ -163,50 +165,16 @@ functions.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Complex-variables">Complex variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Complex-variables">Complex variables</a>
 </div>
-</p>
-
-<a name="SEC15"></a>
-<h3 class="subheading"> Floating point numbers </h3>
-
-<p>Maxima has two types of floating point number. The first is just
-called a &quot;float&quot; (but will be called a &quot;machine float&quot; for the
-rest of this section to avoid ambiguity). This is stored in the
-underlying lisp's DOUBLE-FLOAT type which will almost certainly be
-IEEE 754 double precision floating point. To type a literal floating
-point number, just type its decimal expansion (for example,
-<code>0.01</code>) or type it with an explicit exponent (such as <code>1e-2</code>
-or <code>0.1e-1</code>).
-</p>
-<p>The second type of floating point number in Maxima is called a
-&quot;bigfloat&quot;. Bigfloats are stored as a mantissa and exponent in the
-same way as machine floats but the exponent is an arbitrary precision
-integer, so they can represent arbitrarily large or small numbers. The
-user can also customise the precision of bigfloat arithmetic (which
-corresponds to choosing the range of the mantissa). See <code><a href="#fpprec">fpprec</a></code>
-for more information. To type a literal bigfloat, use the exponent
-notation as above but with the character <code>b</code> in place of
-<code>e</code>. The example of <code>0.01</code> from above could be entered as a
-bigfloat with <code>1b-2</code> or <code>0.001b0</code>.
-</p>
-<p>Calculations using machine floats can be significantly faster than
-using bigfloats since modern computer processors have dedicated
-hardware for them. This is particularly noticeable with compiled
-Maxima code. However, machine floats suffer from the problem of
-overflow, where a number can become too large for its exponent to be
-represented in the bits available. In interpreted code, the default
-behaviour is that a calculation that would cause a floating point
-overflow instead generates a bigfloat number. To configure this, see
-the <code><a href="#promote_005ffloat_005fto_005fbigfloat">promote_float_to_bigfloat</a></code> variable.
 </p>
 <p><a name="Item_003a-Functions-and-Variables-for-Numbers"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Numbers"></a>
-<a name="SEC16"></a>
+<a name="SEC15"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC13" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC17" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC16" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC12" title="Up section"> Up </a>]</td>
@@ -217,7 +185,7 @@ the <code><a href="#promote_005ffloat_005fto_005fbigfloat">promote_float_to_bigf
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.1.2 Functions and Variables for Numbers </h3>
@@ -226,7 +194,7 @@ the <code><a href="#promote_005ffloat_005fto_005fbigfloat">promote_float_to_bigf
 <a name="Item_003a-bfloat"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bfloat</b><i> (<var>expr</var>)</i>
-<a name="IDX65"></a>
+<a name="IDX66"></a>
 </dt>
 <dd><p>Converts all numbers and functions of numbers in <var>expr</var> to bigfloat numbers.
 The number of significant digits in the resulting bigfloats is specified by the
@@ -238,7 +206,7 @@ this may lead to loss of precision).
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -246,14 +214,14 @@ this may lead to loss of precision).
 <a name="Item_003a-bfloatp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bfloatp</b><i> (<var>expr</var>)</i>
-<a name="IDX66"></a>
+<a name="IDX67"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a bigfloat number, otherwise <code>false</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
-<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -261,7 +229,7 @@ this may lead to loss of precision).
 <a name="Item_003a-bftorat"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>bftorat</b>
-<a name="IDX67"></a>
+<a name="IDX68"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -291,7 +259,7 @@ with the function <code><a href="#rationalize">rationalize</a></code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -299,7 +267,7 @@ with the function <code><a href="#rationalize">rationalize</a></code>.
 <a name="Item_003a-bftrunc"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>bftrunc</b>
-<a name="IDX68"></a>
+<a name="IDX69"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -310,7 +278,7 @@ displays as <code>1.000000000000000B0</code>.  Otherwise, this is displayed as
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -318,14 +286,17 @@ displays as <code>1.000000000000000B0</code>.  Otherwise, this is displayed as
 <a name="Item_003a-evenp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>evenp</b><i> (<var>expr</var>)</i>
-<a name="IDX69"></a>
+<a name="IDX70"></a>
 </dt>
-<dd><p>Returns <code>true</code> if <var>expr</var> is an even integer.
-<code>false</code> is returned in all other cases.
+<dd><p>Returns <code>true</code> if <var>expr</var> is a literal even integer, otherwise
+<code>false</code>.
+</p>
+<p><code>evenp</code> returns <code>false</code> if <var>expr</var> is a symbol, even if <var>expr</var>
+is declared <code>even</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -333,7 +304,7 @@ displays as <code>1.000000000000000B0</code>.  Otherwise, this is displayed as
 <a name="Item_003a-float"></a>
 </p><dl>
 <dt><u>Function:</u> <b>float</b><i> (<var>expr</var>)</i>
-<a name="IDX70"></a>
+<a name="IDX71"></a>
 </dt>
 <dd><p>Converts integers, rational numbers and bigfloats in <var>expr</var> to floating
 point numbers.  It is also an <code><a href="maxima_8.html#evflag">evflag</a></code>, <code>float</code> causes
@@ -342,8 +313,8 @@ point.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
-<a href="maxima_99.html#Category_003a-Evaluation-flags">Evaluation flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
+<a href="maxima_105.html#Category_003a-Evaluation-flags">Evaluation flags</a>
 </div>
 </p></dd></dl>
 
@@ -351,7 +322,7 @@ point.
 <a name="Item_003a-float2bf"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>float2bf</b>
-<a name="IDX71"></a>
+<a name="IDX72"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p> 
@@ -361,7 +332,7 @@ this may lead to loss of precision).
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -369,15 +340,15 @@ this may lead to loss of precision).
 <a name="Item_003a-floatnump"></a>
 </p><dl>
 <dt><u>Function:</u> <b>floatnump</b><i> (<var>expr</var>)</i>
-<a name="IDX72"></a>
+<a name="IDX73"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a floating point number, otherwise
 <code>false</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
-<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -385,7 +356,7 @@ this may lead to loss of precision).
 <a name="Item_003a-fpprec"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>fpprec</b>
-<a name="IDX73"></a>
+<a name="IDX74"></a>
 </dt>
 <dd><p>Default value: 16
 </p>
@@ -397,7 +368,7 @@ numbers.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -405,7 +376,7 @@ numbers.
 <a name="Item_003a-fpprintprec"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>fpprintprec</b>
-<a name="IDX74"></a>
+<a name="IDX75"></a>
 </dt>
 <dd><p>Default value: 0
 </p>
@@ -433,8 +404,8 @@ if there are trailing zero digits.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
-<a href="maxima_99.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
+<a href="maxima_105.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -442,13 +413,13 @@ if there are trailing zero digits.
 <a name="Item_003a-integerp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>integerp</b><i> (<var>expr</var>)</i>
-<a name="IDX75"></a>
+<a name="IDX76"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a literal numeric integer, otherwise
 <code>false</code>.
 </p>
-<p><code>integerp</code> returns <code>false</code> if its argument is a symbol,
-even if the argument is declared integer.
+<p><code>integerp</code> returns <code>false</code> if <var>expr</var> is a symbol, even if <var>expr</var>
+is declared <code>integer</code>.
 </p>
 <p>Examples:
 </p>
@@ -473,7 +444,7 @@ even if the argument is declared integer.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -481,7 +452,7 @@ even if the argument is declared integer.
 <a name="Item_003a-m1pbranch"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>m1pbranch</b>
-<a name="IDX76"></a>
+<a name="IDX77"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -501,22 +472,22 @@ m1pbranch:false          m1pbranch:true
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-nonnegintegerp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>nonnegintegerp</b><i> (<var>n</var>)</i>
-<a name="IDX77"></a>
+<a name="IDX78"></a>
 </dt>
 <dd><p>Return <code>true</code> if and only if <code><var>n</var> &gt;= 0</code> and <var>n</var> is an integer.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-linearalgebra">Package linearalgebra</a> &middot;
-<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-linearalgebra">Package linearalgebra</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -524,13 +495,13 @@ m1pbranch:false          m1pbranch:true
 <a name="Item_003a-numberp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>numberp</b><i> (<var>expr</var>)</i>
-<a name="IDX78"></a>
+<a name="IDX79"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a literal integer, rational number, 
 floating point number, or bigfloat, otherwise <code>false</code>.
 </p>
-<p><code>numberp</code> returns <code>false</code> if its argument is a symbol, even if the
-argument is a symbolic number such as <code>%pi</code> or <code>%i</code>, or declared to be
+<p><code>numberp</code> returns <code>false</code> if <var>expr</var> is a symbol, even if <var>expr</var>
+is a symbolic number such as <code>%pi</code> or <code>%i</code>, or declared to be
 <code>even</code>, <code>odd</code>, <code>integer</code>, <code>rational</code>, <code>irrational</code>,
 <code>real</code>, <code>imaginary</code>, or <code>complex</code>.
 </p>
@@ -554,7 +525,7 @@ argument is a symbolic number such as <code>%pi</code> or <code>%i</code>, or de
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -563,7 +534,7 @@ argument is a symbolic number such as <code>%pi</code> or <code>%i</code>, or de
 <a name="Item_003a-numer"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>numer</b>
-<a name="IDX79"></a>
+<a name="IDX80"></a>
 </dt>
 <dd><p><code>numer</code> causes some mathematical functions (including exponentiation)
 with numerical arguments to be evaluated in floating point.  It causes
@@ -579,12 +550,12 @@ their values.  It also sets the <code><a href="#float">float</a></code> switch o
 (%o1)            [sqrt(2), sin(1), -----------]
                                    sqrt(3) + 1
 (%i2) [sqrt(2), sin(1), 1/(1+sqrt(3))],numer;
-(%o2) [1.414213562373095, .8414709848078965, .3660254037844387]
+(%o2) [1.414213562373095, 0.8414709848078965, 0.3660254037844387]
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
-<a href="maxima_99.html#Category_003a-Evaluation-flags">Evaluation flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
+<a href="maxima_105.html#Category_003a-Evaluation-flags">Evaluation flags</a>
 </div>
 </p></dd></dl>
 
@@ -592,7 +563,7 @@ their values.  It also sets the <code><a href="#float">float</a></code> switch o
 <a name="Item_003a-numer_005fpbranch"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>numer_pbranch</b>
-<a name="IDX80"></a>
+<a name="IDX81"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -606,23 +577,22 @@ not an evaluated result is returned.
 <p>Examples:
 </p>
 <pre class="example">(%i1) (-2)^0.75;
-(%o1) (-2)^0.75
-
+                                 0.75
+(%o1)                       (- 2)
 (%i2) (-2)^0.75,numer_pbranch:true;
-(%o2) 1.189207115002721*%i-1.189207115002721
-
+(%o2)       1.189207115002721 %i - 1.189207115002721
 (%i3) (-2)^(3/4);
-(%o3) (-1)^(3/4)*2^(3/4)
-
+                               3/4  3/4
+(%o3)                     (- 1)    2
 (%i4) (-2)^(3/4),numer;
-(%o4) 1.681792830507429*(-1)^0.75
-
+                                          0.75
+(%o4)              1.681792830507429 (- 1)
 (%i5) (-2)^(3/4),numer,numer_pbranch:true;
-(%o5) 1.189207115002721*%i-1.189207115002721
+(%o5)       1.189207115002721 %i - 1.189207115002721
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -631,7 +601,7 @@ not an evaluated result is returned.
 <a name="Item_003a-numerval"></a>
 </p><dl>
 <dt><u>Function:</u> <b>numerval</b><i> (<var>x_1</var>, <var>expr_1</var>, &hellip;, <var>var_n</var>, <var>expr_n</var>)</i>
-<a name="IDX81"></a>
+<a name="IDX82"></a>
 </dt>
 <dd><p>Declares the variables <code>x_1</code>, &hellip;, <var>x_n</var> to have
 numeric values equal to <code>expr_1</code>, &hellip;, <code>expr_n</code>.
@@ -644,8 +614,8 @@ not necessarily numeric.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -653,40 +623,17 @@ not necessarily numeric.
 <a name="Item_003a-oddp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>oddp</b><i> (<var>expr</var>)</i>
-<a name="IDX82"></a>
-</dt>
-<dd><p>is <code>true</code> if <var>expr</var> is an odd integer.
-<code>false</code> is returned in all other cases.
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
-</div>
-</p></dd></dl>
-
-<p><a name="promote_005ffloat_005fto_005fbigfloat"></a>
-<a name="Item_003a-promote_005ffloat_005fto_005fbigfloat"></a>
-</p><dl>
-<dt><u>Option variable:</u> <b>promote_float_to_bigfloat</b>
 <a name="IDX83"></a>
 </dt>
-<dd><p>Default value: <code>true</code>
+<dd><p>Returns <code>true</code> if <var>expr</var> is a literal odd integer, otherwise
+<code>false</code>.
 </p>
-<p>When <code>promote_float_to_bigfloat</code> is true, the result of any
-floating point calculation that would normally cause a floating point
-overflow is replaced by a bigfloat number that represents the
-result. Note that this automatic promotion only happens in interpreted
-code: compiled code is not affected.
-</p>
-<p>This automatic conversion is often convenient, but can be unhelpful in
-some cases. For example, it can actually cause a loss of precision if
-<code><a href="#fpprec">fpprec</a></code> is currently smaller than the precision in a floating
-point number. To disable this behaviour, set
-<code>promote_float_to_bigfloat</code> to false.
+<p><code>oddp</code> returns <code>false</code> if <var>expr</var> is a symbol, even if <var>expr</var>
+is declared <code>odd</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -704,8 +651,8 @@ of floating point numbers to rational numbers, when the option variable
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
-<a href="maxima_99.html#Category_003a-Rational-expressions">Rational expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a> &middot;
+<a href="maxima_105.html#Category_003a-Rational-expressions">Rational expressions</a>
 </div>
 </p></dd></dl>
 
@@ -727,9 +674,9 @@ representation.
 (%o1)                           -
                                 2
 (%i2) rationalize (0.1);
-                               1
-(%o2)                          --
-                               10
+                        3602879701896397
+(%o2)                   -----------------
+                        36028797018963968
 (%i3) fpprec : 5$
 (%i4) rationalize (0.1b0);
                              209715
@@ -741,13 +688,13 @@ representation.
 (%o6)                ----------------------
                      2361183241434822606848
 (%i7) rationalize (sin (0.1*x + 5.6));
-                              x    28
-(%o7)                     sin(-- + --)
-                              10   5
+               3602879701896397 x   3152519739159347
+(%o7)      sin(------------------ + ----------------)
+               36028797018963968    562949953421312
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -762,8 +709,8 @@ integers, otherwise <code>false</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Rational-expressions">Rational expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Rational-expressions">Rational expressions</a>
 </div>
 </p></dd></dl>
 
@@ -772,10 +719,10 @@ integers, otherwise <code>false</code>.
 <p><a name="Item_003a-Strings"></a>
 </p><hr size="6">
 <a name="Strings"></a>
-<a name="SEC17"></a>
+<a name="SEC16"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC16" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC18" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC15" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC17" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Up section"> Up </a>]</td>
@@ -786,28 +733,28 @@ integers, otherwise <code>false</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 5.2 Strings </h2>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC18">5.2.1 Introduction to Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC17">5.2.1 Introduction to Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC19">5.2.2 Functions and Variables for Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC18">5.2.2 Functions and Variables for Strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-Strings"></a>
 </p><hr size="6">
 <a name="Introduction-to-Strings"></a>
-<a name="SEC18"></a>
+<a name="SEC17"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC17" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC19" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC16" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC18" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC17" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC16" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_6.html#SEC30" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -815,10 +762,11 @@ integers, otherwise <code>false</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.2.1 Introduction to Strings </h3>
+
 
 <p>Strings (quoted character sequences) are enclosed in double quote marks <code>&quot;</code>
 for input, and displayed with or without the quote marks, depending on the
@@ -844,42 +792,39 @@ strings.
 <p>Examples:
 </p>
 <pre class="example">(%i1) s_1 : &quot;This is a string.&quot;;
-(%o1)               This is a string.
+(%o1)                   This is a string.
 (%i2) s_2 : &quot;Embedded \&quot;double quotes\&quot; and backslash \\ characters.&quot;;
 (%o2) Embedded &quot;double quotes&quot; and backslash \ characters.
 (%i3) s_3 : &quot;Embedded line termination
-in this string.&quot;;
 (%o3) Embedded line termination
 in this string.
-(%i4) s_4 : &quot;Ignore the \
-line termination \
-characters in \
-this string.&quot;;
+(%i4) in this string.&quot;;
 (%o4) Ignore the line termination characters in this string.
-(%i5) stringdisp : false;
+(%i5) s_4 : &quot;Ignore the \
 (%o5)                         false
-(%i6) s_1;
+(%i6) line termination \
 (%o6)                   This is a string.
-(%i7) stringdisp : true;
+(%i7) characters in \
 (%o7)                         true
-(%i8) s_1;
+(%i8) this string.&quot;;
 (%o8)                  &quot;This is a string.&quot;
+(%i9) stringdisp : false;
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Syntax">Syntax</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Syntax">Syntax</a>
 </div>
 </p>
 <p><a name="Item_003a-Functions-and-Variables-for-Strings"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Strings"></a>
-<a name="SEC19"></a>
+<a name="SEC18"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC18" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC20" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC17" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC19" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC17" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC16" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_6.html#SEC30" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -887,7 +832,7 @@ this string.&quot;;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.2.2 Functions and Variables for Strings </h3>
@@ -935,8 +880,8 @@ left-hand side.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Strings">Strings</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Strings">Strings</a>
 </div>
 </p></dd></dl>
 
@@ -954,8 +899,8 @@ arguments do <i>not</i> need to be atoms.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Strings">Strings</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Strings">Strings</a>
 </div>
 </p></dd></dl>
 
@@ -974,7 +919,7 @@ computation.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Strings">Strings</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Strings">Strings</a>
 </div>
 </p></dd></dl>
 
@@ -1007,7 +952,7 @@ quote marks.  Otherwise, quote marks are not displayed.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1016,10 +961,10 @@ quote marks.  Otherwise, quote marks are not displayed.
 <p><a name="Item_003a-Constants"></a>
 </p><hr size="6">
 <a name="Constants"></a>
-<a name="SEC20"></a>
+<a name="SEC19"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC19" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC21" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC18" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC20" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Up section"> Up </a>]</td>
@@ -1030,26 +975,26 @@ quote marks.  Otherwise, quote marks are not displayed.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 5.3 Constants </h2>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC21">5.3.1 Functions and Variables for Constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC20">5.3.1 Functions and Variables for Constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Functions-and-Variables-for-Constants"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Constants"></a>
-<a name="SEC21"></a>
+<a name="SEC20"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC20" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC22" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC19" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC21" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC20" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC19" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_6.html#SEC30" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1057,7 +1002,7 @@ quote marks.  Otherwise, quote marks are not displayed.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.3.1 Functions and Variables for Constants </h3>
@@ -1074,7 +1019,7 @@ value 2.718281828459045d0.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1088,7 +1033,7 @@ value 2.718281828459045d0.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1103,7 +1048,7 @@ Maxima implements <code>false</code> by the value <code>NIL</code> in Lisp.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1117,7 +1062,7 @@ Maxima implements <code>false</code> by the value <code>NIL</code> in Lisp.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1138,7 +1083,7 @@ Maxima implements <code>false</code> by the value <code>NIL</code> in Lisp.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1152,7 +1097,7 @@ Maxima implements <code>false</code> by the value <code>NIL</code> in Lisp.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1166,7 +1111,7 @@ Maxima implements <code>false</code> by the value <code>NIL</code> in Lisp.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1180,7 +1125,7 @@ Maxima implements <code>false</code> by the value <code>NIL</code> in Lisp.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1244,7 +1189,7 @@ After evaluating <code>tellrat (%phi^2 - %phi - 1)</code> and <code>algebraic: t
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1260,7 +1205,7 @@ The numeric value of <code>%pi</code> is the double-precision floating-point val
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1275,7 +1220,7 @@ Maxima implements <code>true</code> by the value <code>T</code> in Lisp.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1296,7 +1241,7 @@ Maxima implements <code>true</code> by the value <code>T</code> in Lisp.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1323,7 +1268,7 @@ infinitesimals.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1341,7 +1286,7 @@ infinitesimals.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Constants">Constants</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Constants">Constants</a>
 </div>
 </p></dd></dl>
 
@@ -1350,10 +1295,10 @@ infinitesimals.
 <p><a name="Item_003a-Lists"></a>
 </p><hr size="6">
 <a name="Lists"></a>
-<a name="SEC22"></a>
+<a name="SEC21"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC21" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC23" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC20" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC22" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Up section"> Up </a>]</td>
@@ -1364,28 +1309,30 @@ infinitesimals.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 5.4 Lists </h2>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC23">5.4.1 Introduction to Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC22">5.4.1 Introduction to Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC24">5.4.2 Functions and Variables for Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC23">5.4.2 Functions and Variables for Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC24">5.4.3 Performance considerations for Lists</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-Lists"></a>
 </p><hr size="6">
 <a name="Introduction-to-Lists"></a>
-<a name="SEC23"></a>
+<a name="SEC22"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC22" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC24" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC21" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC23" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC22" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC21" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_6.html#SEC30" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1393,13 +1340,13 @@ infinitesimals.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.4.1 Introduction to Lists </h3>
 
 <p>Lists are the basic building block for Maxima and Lisp.  All data types
-other than arrays, hash tables, numbers are represented as Lisp lists,
+other than arrays, hash tables and numbers are represented as Lisp lists,
 These Lisp lists have the form
 </p>
 <pre class="example">((MPLUS) $A 2)
@@ -1415,7 +1362,7 @@ as
 <p>for a list with 4 elements.  Internally this corresponds to a Lisp list
 of the form
 </p>
-<pre class="example">((MLIST) 1  2  7  ((MPLUS)  $X $Y ))
+<pre class="example">((MLIST) 1 2 7 ((MPLUS) $X $Y))
 </pre>
 
 <p>The flag which denotes the type field of the Maxima expression is a list
@@ -1426,13 +1373,13 @@ itself, since after it has been through the simplifier the list would become
 <p><a name="Item_003a-Functions-and-Variables-for-Lists"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Lists"></a>
-<a name="SEC24"></a>
+<a name="SEC23"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC23" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC25" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC22" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC24" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC22" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC21" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_6.html#SEC30" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1440,7 +1387,7 @@ itself, since after it has been through the simplifier the list would become
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.4.2 Functions and Variables for Lists </h3>
@@ -1459,8 +1406,12 @@ itself, since after it has been through the simplifier the list would become
 <dd><p><code>[</code> and <code>]</code> mark the beginning and end, respectively, of a list.
 </p>
 <p><code>[</code> and <code>]</code> also enclose the subscripts of
-a list, array, hash array, or array function.
+a list, array, hash array, or array function. Note that
+other than for arrays accessing the <code>n</code>th element of a list
+may need an amount of time that is roughly proportional to  <code>n</code>,
+See section <a href="#SEC24">Performance considerations for Lists</a>.
 </p>
+
 <p>Examples:
 </p>
 <pre class="example">(%i1) x: [a, b, c];
@@ -1489,8 +1440,8 @@ a list, array, hash array, or array function.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -1506,12 +1457,14 @@ by the elements of <var>list_2</var>, &hellip;  <code>append</code> also works o
 general expressions, e.g. <code>append (f(a,b), f(c,d,e));</code> yields
 <code>f(a,b,c,d,e)</code>.
 </p>
+<p>See also <code><a href="maxima_23.html#addrow">addrow</a></code>, <code><a href="maxima_23.html#addcol">addcol</a></code> and <code><a href="#join">join</a></code>.
+</p>
 <p>Do <code>example(append);</code> for an example.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1542,17 +1495,17 @@ the search stops at the first term starting with <code>z</code> and returns
 <code>2</code>. In <code>assoc(x, [[y,1]])</code>, there is no matching element,
 so <code>assoc</code> returns <code>false</code>.
 </p>
-<pre class="example">(%i1)                 assoc(y, [[x, 1], [y, 2], [z, 3]])
-(%o1)                                  2
-(%i2)                 assoc(z, [[x, 1], [z, 2], [z, 3]])
-(%o2)                                  2
-(%i3)                         assoc(x, [[y, 1]])
-(%o3)                                false
+<pre class="example">(%i1) assoc (y, [[x,1], [y,2],[z,3]]);
+(%o1)                           2
+(%i2) assoc (z, [[x,1], [z,2], [z,3]]);
+(%o2)                           2
+(%i3) assoc (x, [[y,1]]);
+(%o3)                         false
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1571,10 +1524,11 @@ analogous to the Lisp language construction operation &quot;cons&quot;.
 than a list and this might be useful. In this case, <code>cons (<var>expr_1</var>, <var>expr_2</var>)</code>
 returns an expression with same operator as <var>expr_2</var> but with argument <code>cons(expr_1, args(expr_2))</code>.
 Examples:
-</p><pre class="example">(%i1) cons(a,[b,c,d]);
-(%o1)                            [a, b, c, d]
+</p>
+<pre class="example">(%i1) cons(a,[b,c,d]);
+(%o1)                     [a, b, c, d]
 (%i2) cons(a,f(b,c,d));
-(%o2)                            f(a, b, c, d)
+(%o2)                     f(a, b, c, d)
 </pre>
 <p>In general, <code>cons</code> applied to a nonlist doesn't make sense. For instance, <code>cons(a,b^c)</code>
 results in an illegal expression, since '^' cannot take three arguments. 
@@ -1582,16 +1536,17 @@ results in an illegal expression, since '^' cannot take three arguments.
 <p>When <code>inflag</code> is true, <code>cons</code> operates on the internal structure of an expression, otherwise
 <code>cons</code> operates on the displayed form. Especially when <code>inflag</code> is true, <code>cons</code> applied 
 to a nonlist sometimes gives a surprising result; for example
-</p><pre class="example">(%i1) cons(a,-a), inflag : true;
-                                        2
-(%o1)                                - a
+</p>
+<pre class="example">(%i1) cons(a,-a), inflag : true;
+                                 2
+(%o1)                         - a
 (%i2) cons(a,-a), inflag : false;
-(%o2)                                  0
+(%o2)                           0
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1605,7 +1560,7 @@ to a nonlist sometimes gives a surprising result; for example
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
 </p></dd></dl>
 
@@ -1646,7 +1601,7 @@ depend on the current value of <code>i</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
 </p></dd></dl>
 
@@ -1704,8 +1659,6 @@ then all such arguments are removed.
 Arguments which are <code>equal</code> but not &quot;=&quot; are not removed.
 </p>
 <pre class="example">(%i1) [is (equal (0, 0)), is (equal (0, 0.0)), is (equal (0, 0b0))];
-rat: replaced 0.0 by 0/1 = 0.0
-`rat' replaced 0.0B0 by 0/1 = 0.0B0
 (%o1)                  [true, true, true]
 (%i2) [is (0 = 0), is (0 = 0.0), is (0 = 0b0)];
 (%o2)                 [true, false, false]
@@ -1721,8 +1674,8 @@ rat: replaced 0.0 by 0/1 = 0.0
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1737,8 +1690,8 @@ See <code><a href="#first">first</a></code> for more details.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1754,10 +1707,11 @@ See <code><a href="#first">first</a></code> for more details.
 the second argument is other than a list and this might be useful. In this case,
 <code>endcons (<var>expr_1</var>, <var>expr_2</var>)</code> returns an expression with same operator as 
 <var>expr_2</var> but with argument <code>endcons(expr_1, args(expr_2))</code>. Examples:
-</p><pre class="example">(%i1) endcons(a,[b,c,d]);
-(%o1)                            [b, c, d, a]
+</p>
+<pre class="example">(%i1) endcons(a,[b,c,d]);
+(%o1)                     [b, c, d, a]
 (%i2) endcons(a,f(b,c,d));
-(%o2)                            f(b, c, d, a)
+(%o2)                     f(b, c, d, a)
 </pre>
 <p>In general, <code>endcons</code> applied to a nonlist doesn't make sense. For instance, <code>endcons(a,b^c)</code>
 results in an illegal expression, since '^' cannot take three arguments. 
@@ -1765,16 +1719,17 @@ results in an illegal expression, since '^' cannot take three arguments.
 <p>When <code>inflag</code> is true, <code>endcons</code> operates on the internal structure of an expression, otherwise
 <code>endcons</code> operates on the displayed form. Especially when <code>inflag</code> is true, <code>endcons</code> applied 
 to a nonlist sometimes gives a surprising result; for example
-</p><pre class="example">(%i1) endcons(a,-a),inflag : true;
-                                        2
-(%o1)                                - a
-(%i2) endcons(a,-a),inflag : false;
-(%o2)                                  0
+</p>
+<pre class="example">(%i1) endcons(a,-a), inflag : true;
+                                 2
+(%o1)                         - a
+(%i2) endcons(a,-a), inflag : false;
+(%o2)                           0
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1790,11 +1745,10 @@ See <code><a href="#first">first</a></code> for more details.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
-
 
 <p><a name="first"></a>
 <a name="Item_003a-first"></a>
@@ -1803,20 +1757,136 @@ See <code><a href="#first">first</a></code> for more details.
 <a name="IDX116"></a>
 </dt>
 <dd><p>Returns the first part of <var>expr</var> which may result in the first element of a
-list, the first row of a matrix, the first term of a sum, etc.  Note that
+list, the first row of a matrix, the first term of a sum, etc.:
+</p>
+<pre class="example">(%i1) matrix([1,2],[3,4]);
+                                   [ 1  2 ]
+(%o1)                              [      ]
+                                   [ 3  4 ]
+(%i2) first(%);
+(%o2)                              [1,2]
+(%i3) first(%);
+(%o3)                              1
+(%i4) first(a*b/c+d+e/x);
+                                   a b
+(%o4)                              ---
+                                    c
+(%i5) first(a=b/c+d+e/x);
+(%o5)                              a
+</pre>
+<p>Note that
 <code>first</code> and its related functions, <code>rest</code> and <code>last</code>, work
 on the form of <var>expr</var> which is displayed not the form which is typed on
 input.  If the variable <code><a href="maxima_6.html#inflag">inflag</a></code> is set to <code>true</code> however, these
-functions will look at the internal form of <var>expr</var>.  Note that the
-simplifier re-orders expressions.  Thus <code>first(x+y)</code> will be <code>x</code> if
-<code>inflag</code> is <code>true</code> and <code>y</code> if <code>inflag</code> is <code>false</code>
-(<code>first(y+x)</code> gives the same results).  The functions <code>second</code> &hellip;
+functions will look at the internal form of <var>expr</var>. One reason why this may
+make a difference is that the simplifier re-orders expressions:
+</p>
+<pre class="example">(%i1) x+y;
+(%o1)                              y+1
+(%i2) first(x+y),inflag : true;
+(%o2)                              x
+(%i3) first(x+y),inflag : false;
+(%o3)                              y
+</pre>
+<p>The functions <code>second</code> &hellip;
 <code>tenth</code> yield the second through the tenth part of their input argument.
+</p>
+<p>See also <code><a href="#firstn">firstn</a></code> and <code><a href="maxima_6.html#part">part</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p></dd></dl>
+
+<p><a name="firstn"></a>
+<a name="Item_003a-firstn"></a>
+</p><dl>
+<dt><u>Function:</u> <b>firstn</b><i> (<var>expr</var>, <var>count</var>)</i>
+<a name="IDX117"></a>
+</dt>
+<dd><p>Returns the first <var>count</var> arguments of <var>expr</var>, if <var>expr</var> has at least <var>count</var> arguments.
+Returns <var>expr</var> if <var>expr</var> has less than <var>count</var> arguments.
+</p>
+<p><var>expr</var> may be any nonatomic expression. 
+When <var>expr</var> is something other than a list,
+<code>firstn</code> returns an expression which has the same operator as <var>expr</var>.
+<var>count</var> must be a nonnegative integer.
+</p>
+<p><code>firstn</code> honors the global flag <code>inflag</code>,
+which governs whether the internal form of an expression is processed (when <code>inflag</code> is true)
+or the displayed form (when <code>inflag</code> is false).
+</p>
+<p>Note that <code>firstn(<var>expr</var>, 1)</code>,
+which returns a nonatomic expression containing the first argument,
+is not the same as <code>first(<var>expr</var>)</code>,
+which returns the first argument by itself.
+</p>
+<p>See also <code><a href="#lastn">lastn</a></code> and <code><a href="#rest">rest</a></code>.
+</p>
+<p>Examples:
+</p>
+<p><code>firstn</code> returns the first <var>count</var> elements of <var>expr</var>, if <var>expr</var> has at least <var>count</var> elements.
+</p>
+<pre class="example">(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];
+(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]
+(%i2) firstn (mylist, 0);
+(%o2)                          []
+(%i3) firstn (mylist, 1);
+(%o3)                          [1]
+(%i4) firstn (mylist, 2);
+(%o4)                        [1, a]
+(%i5) firstn (mylist, 7);
+(%o5)               [1, a, 2, b, 3, x, 4 - y]
+</pre>
+<p><code>firstn</code> returns <var>expr</var> if <var>expr</var> has less than <var>count</var> elements.
+</p>
+<pre class="example">(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];
+(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]
+(%i2) firstn (mylist, 100);
+(%o2)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]
+</pre>
+<p><var>expr</var> may be any nonatomic expression. 
+</p>
+<pre class="example">(%i1) myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));
+(%o1)      foo(1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))
+(%i2) firstn (myfoo, 4);
+(%o2)                    foo(1, a, 2, b)
+(%i3) mybar : bar[m, n](1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));
+(%o3)    bar    (1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))
+            m, n
+(%i4) firstn (mybar, 4);
+(%o4)                  bar    (1, a, 2, b)
+                          m, n
+(%i5) mymatrix : genmatrix (lambda ([i, j], 10*i + j), 10, 4) $
+(%i6) firstn (mymatrix, 3);
+                       [ 11  12  13  14 ]
+                       [                ]
+(%o6)                  [ 21  22  23  24 ]
+                       [                ]
+                       [ 31  32  33  34 ]
+</pre>
+<p><code>firstn</code> honors the global flag <code>inflag</code>.
+</p>
+<pre class="example">(%i1) myexpr : a + b + c + d + e;
+(%o1)                   e + d + c + b + a
+(%i2) firstn (myexpr, 3), inflag=true;
+(%o2)                       c + b + a
+(%i3) firstn (myexpr, 3), inflag=false;
+(%o3)                       e + d + c
+</pre>
+<p>Note that <code>firstn(<var>expr</var>, 1)</code> is not the same as <code>first(<var>expr</var>)</code>.
+</p>
+<pre class="example">(%i1) firstn ([w, x, y, z], 1);
+(%o1)                          [w]
+(%i2) first ([w, x, y, z]);
+(%o2)                           w
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1824,15 +1894,15 @@ simplifier re-orders expressions.  Thus <code>first(x+y)</code> will be <code>x<
 <a name="Item_003a-fourth"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fourth</b><i> (<var>expr</var>)</i>
-<a name="IDX117"></a>
+<a name="IDX118"></a>
 </dt>
 <dd><p>Returns the 4'th item of expression or list <var>expr</var>.
 See <code><a href="#first">first</a></code> for more details.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1840,7 +1910,7 @@ See <code><a href="#first">first</a></code> for more details.
 <a name="Item_003a-join"></a>
 </p><dl>
 <dt><u>Function:</u> <b>join</b><i> (<var>l</var>, <var>m</var>)</i>
-<a name="IDX118"></a>
+<a name="IDX119"></a>
 </dt>
 <dd><p>Creates a new list containing the elements of lists <var>l</var> and <var>m</var>,
 interspersed.  The result has elements <code>[<var>l</var>[1], <var>m</var>[1],
@@ -1851,6 +1921,8 @@ type of elements.
 list.
 </p>
 <p>Maxima complains if <var>l</var> or <var>m</var> is not a list.
+</p>
+<p>See also <code><a href="#append">append</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -1863,7 +1935,7 @@ list.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
 </p></dd></dl>
 
@@ -1872,23 +1944,115 @@ list.
 <a name="Item_003a-last"></a>
 </p><dl>
 <dt><u>Function:</u> <b>last</b><i> (<var>expr</var>)</i>
-<a name="IDX119"></a>
+<a name="IDX120"></a>
 </dt>
 <dd><p>Returns the last part (term, row, element, etc.) of the <var>expr</var>.
 </p>
+<p>See also <code><a href="#lastn">lastn</a></code>.
+</p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
+
+<p><a name="lastn"></a>
+<a name="Item_003a-lastn"></a>
+</p><dl>
+<dt><u>Function:</u> <b>lastn</b><i> (<var>expr</var>, <var>count</var>)</i>
+<a name="IDX121"></a>
+</dt>
+<dd><p>Returns the last <var>count</var> arguments of <var>expr</var>, if <var>expr</var> has at least <var>count</var> arguments.
+Returns <var>expr</var> if <var>expr</var> has less than <var>count</var> arguments.
+</p>
+<p><var>expr</var> may be any nonatomic expression. 
+When <var>expr</var> is something other than a list,
+<code>lastn</code> returns an expression which has the same operator as <var>expr</var>.
+<var>count</var> must be a nonnegative integer.
+</p>
+<p><code>lastn</code> honors the global flag <code>inflag</code>,
+which governs whether the internal form of an expression is processed (when <code>inflag</code> is true)
+or the displayed form (when <code>inflag</code> is false).
+</p>
+<p>Note that <code>lastn(<var>expr</var>, 1)</code>,
+which returns a nonatomic expression containing the last argument,
+is not the same as <code>last(<var>expr</var>)</code>,
+which returns the last argument by itself.
+</p>
+<p>See also <code><a href="#firstn">firstn</a></code> and <code><a href="#rest">rest</a></code>.
+</p>
+<p>Examples:
+</p>
+<p><code>lastn</code> returns the last <var>count</var> elements of <var>expr</var>, if <var>expr</var> has at least <var>count</var> elements.
+</p>
+<pre class="example">(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];
+(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]
+(%i2) lastn (mylist, 0);
+(%o2)                          []
+(%i3) lastn (mylist, 1);
+(%o3)                    [2 z + sin(u)]
+(%i4) lastn (mylist, 2);
+(%o4)                 [4 - y, 2 z + sin(u)]
+(%i5) lastn (mylist, 7);
+(%o5)         [a, 2, b, 3, x, 4 - y, 2 z + sin(u)]
+</pre>
+<p><code>lastn</code> returns <var>expr</var> if <var>expr</var> has less than <var>count</var> elements.
+</p>
+<pre class="example">(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];
+(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]
+(%i2) lastn (mylist, 100);
+(%o2)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]
+</pre>
+<p><var>expr</var> may be any nonatomic expression. 
+</p>
+<pre class="example">(%i1) myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));
+(%o1)      foo(1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))
+(%i2) lastn (myfoo, 4);
+(%o2)            foo(3, x, 4 - y, 2 z + sin(u))
+(%i3) mybar : bar[m, n](1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));
+(%o3)    bar    (1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))
+            m, n
+(%i4) lastn (mybar, 4);
+(%o4)          bar    (3, x, 4 - y, 2 z + sin(u))
+                  m, n
+(%i5) mymatrix : genmatrix (lambda ([i, j], 10*i + j), 10, 4) $
+(%i6) lastn (mymatrix, 3);
+                     [ 81   82   83   84  ]
+                     [                    ]
+(%o6)                [ 91   92   93   94  ]
+                     [                    ]
+                     [ 101  102  103  104 ]
+</pre>
+<p><code>lastn</code> honors the global flag <code>inflag</code>.
+</p>
+<pre class="example">(%i1) myexpr : a + b + c + d + e;
+(%o1)                   e + d + c + b + a
+(%i2) lastn (myexpr, 3), inflag=true;
+(%o2)                       e + d + c
+(%i3) lastn (myexpr, 3), inflag=false;
+(%o3)                       c + b + a
+</pre>
+<p>Note that <code>lastn(<var>expr</var>, 1)</code> is not the same as <code>last(<var>expr</var>)</code>.
+</p>
+<pre class="example">(%i1) lastn ([w, x, y, z], 1);
+(%o1)                          [z]
+(%i2) last ([w, x, y, z]);
+(%o2)                           z
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p></dd></dl>
 
 <p><a name="length"></a>
 <a name="Item_003a-length"></a>
 </p><dl>
 <dt><u>Function:</u> <b>length</b><i> (<var>expr</var>)</i>
-<a name="IDX120"></a>
+<a name="IDX122"></a>
 </dt>
 <dd><p>Returns (by default) the number of parts in the external
 (displayed) form of <var>expr</var>.  For lists this is the number of elements,
@@ -1900,10 +2064,15 @@ of terms (see <code><a href="maxima_6.html#dispform">dispform</a></code>).
 <code><a href="maxima_4.html#exptdispflag">exptdispflag</a></code> is <code>true</code>), but 3 if <code>inflag</code> is <code>true</code> (the
 internal representation is essentially <code>a*b^-1*c^-1</code>).
 </p>
+<p>Determining a list's length typically needs an amount of time proportional
+to the number of elements in the list. If the length of a list is used inside
+a loop it therefore might drastically increase the performance if the length
+is calculated outside the loop instead.
+</p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1911,7 +2080,7 @@ internal representation is essentially <code>a*b^-1*c^-1</code>).
 <a name="Item_003a-listarith"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>listarith</b>
-<a name="IDX121"></a>
+<a name="IDX123"></a>
 </dt>
 <dd><p>Default value: <code>true</code> 
 </p>
@@ -1922,30 +2091,80 @@ list-list operations should return lists.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-listp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>listp</b><i> (<var>expr</var>)</i>
-<a name="IDX122"></a>
+<a name="IDX124"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a list else <code>false</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
+
+<p><a name="lreduce"></a>
+<a name="Item_003a-lreduce"></a>
+</p><dl>
+<dt><u>Function:</u> <b>lreduce</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lreduce</tt> (<var>F</var>, <var>s</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lreduce</tt> (<var>F</var>, <var>s</var>, <var>s_0</var>)</i>
+<a name="IDX125"></a>
+</dt>
+<dd><p>Extends the binary function <var>F</var> to an n-ary function by composition,
+where <var>s</var> is a list.
+</p>
+<p><code>lreduce(<var>F</var>, <var>s</var>)</code> returns <code>F(... F(F(s_1, s_2), s_3), ... s_n)</code>.
+When the optional argument <var>s_0</var> is present,
+the result is equivalent to <code>lreduce(<var>F</var>, cons(<var>s_0</var>, <var>s</var>))</code>.
+</p>
+<p>The function <var>F</var> is first applied to the
+<i>leftmost</i> list elements, thus the name &quot;lreduce&quot;.
+</p>
+<p>See also <code><a href="#rreduce">rreduce</a></code>, <code><a href="#xreduce">xreduce</a></code>, and <code><a href="#tree_005freduce">tree_reduce</a></code>.
+</p>
+<p>Examples:
+</p>
+<p><code>lreduce</code> without the optional argument.
+</p>
+<pre class="example">(%i1) lreduce (f, [1, 2, 3]);
+(%o1)                     f(f(1, 2), 3)
+(%i2) lreduce (f, [1, 2, 3, 4]);
+(%o2)                  f(f(f(1, 2), 3), 4)
+</pre>
+<p><code>lreduce</code> with the optional argument.
+</p>
+<pre class="example">(%i1) lreduce (f, [1, 2, 3], 4);
+(%o1)                  f(f(f(4, 1), 2), 3)
+</pre>
+<p><code>lreduce</code> applied to built-in binary operators.
+<code>/</code> is the division operator.
+</p>
+<pre class="example">(%i1) lreduce (&quot;^&quot;, args ({a, b, c, d}));
+                               b c d
+(%o1)                       ((a ) )
+(%i2) lreduce (&quot;/&quot;, args ({a, b, c, d}));
+                                a
+(%o2)                         -----
+                              b c d
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
+</div>
+</p>
+</dd></dl>
 
 <p><a name="makelist"></a>
 <a name="Item_003a-makelist"></a>
 </p><dl>
 <dt><u>Function:</u> <b>makelist</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>makelist</tt> () &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>makelist</tt> (<var>expr</var>, <var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>makelist</tt> (<var>expr</var>, <var>i</var>, <var>i_max</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>makelist</tt> (<var>expr</var>, <var>i</var>, <var>i_0</var>, <var>i_max</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>makelist</tt> (<var>expr</var>, <var>i</var>, <var>i_0</var>, <var>i_max</var>, <var>step</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>makelist</tt> (<var>expr</var>, <var>x</var>, <var>list</var>)</i>
-<a name="IDX123"></a>
+<a name="IDX126"></a>
 </dt>
 <dd><p>The first form, <code>makelist ()</code>, creates an empty list. The second form,
 <code>makelist (<var>expr</var>)</code>, creates a list with <var>expr</var> as its single
@@ -1985,7 +2204,7 @@ value of 1.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
 </p></dd></dl>
 
@@ -1993,7 +2212,7 @@ value of 1.
 <a name="Item_003a-member"></a>
 </p><dl>
 <dt><u>Function:</u> <b>member</b><i> (<var>expr_1</var>, <var>expr_2</var>)</i>
-<a name="IDX124"></a>
+<a name="IDX127"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <code>is(<var>expr_1</var> = <var>a</var>)</code>
 for some element <var>a</var> in <code>args(<var>expr_2</var>)</code>,
@@ -2032,9 +2251,9 @@ may return <code>false</code> even if <code>expr_1</code> is a part of some argu
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -2042,15 +2261,15 @@ may return <code>false</code> even if <code>expr_1</code> is a part of some argu
 <a name="Item_003a-ninth"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ninth</b><i> (<var>expr</var>)</i>
-<a name="IDX125"></a>
+<a name="IDX128"></a>
 </dt>
 <dd><p>Returns the 9'th item of expression or list <var>expr</var>.
 See <code><a href="#first">first</a></code> for more details.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2058,7 +2277,7 @@ See <code><a href="#first">first</a></code> for more details.
 <a name="Item_003a-pop"></a>
 </p><dl>
 <dt><u>Function:</u> <b>pop</b><i> (<var>list</var>)</i>
-<a name="IDX126"></a>
+<a name="IDX129"></a>
 </dt>
 <dd><p><code>pop</code> removes and returns the first element from the list <var>list</var>. The second argument 
 <var>list</var> must be a mapatom that is bound to a nonempty list. If the argument <var>list</var> is 
@@ -2066,8 +2285,8 @@ not bound to a nonempty list, Maxima signals an error. For examples, see <code><
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2075,7 +2294,7 @@ not bound to a nonempty list, Maxima signals an error. For examples, see <code><
 <a name="Item_003a-push"></a>
 </p><dl>
 <dt><u>Function:</u> <b>push</b><i> (<var>item</var>, <var>list</var>)</i>
-<a name="IDX127"></a>
+<a name="IDX130"></a>
 </dt>
 <dd><p><code>push</code> prepends the item <var>item</var> to the list <var>list</var> and returns a copy of the new list. 
 The second argument <var>list</var> must be a mapatom that is bound to a list. The first argument <var>item</var> 
@@ -2088,31 +2307,33 @@ signals an error.
 
 <p>Examples:
 </p>
-<pre class="example">(%i1) ll : [];
-(%o1)                                 []
-(%i2) push(x,ll);
-(%o2)                                 [x]
-(%i3) push(x^2+y,ll);
-                                        2
-(%o3)                             [y + x , x]
-(%i4) push(&quot;string&quot;,ll);
-                                            2
-(%o4)                         [string, y + x , x]
-(%i5) pop(ll);
-(%o5)                               string
-(%i6) pop(ll);
-                                         2
-(%o6)                               y + x
-(%i7) pop(ll);
-(%o7)                                  x
+<pre class="example">(%i1) ll: [];
+(%o1)                          []
+(%i2) push (x, ll);
+(%o2)                          [x]
+(%i3) push (x^2+y, ll);
+                                 2
+(%o3)                      [y + x , x]
+(%i4) a: push (&quot;string&quot;, ll);
+                                     2
+(%o4)                  [string, y + x , x]
+(%i5) pop (ll);
+(%o5)                        string
+(%i6) pop (ll);
+                                  2
+(%o6)                        y + x
+(%i7) pop (ll);
+(%o7)                           x
 (%i8) ll;
-(%o8)                                 []
-(%i9)
+(%o8)                          []
+(%i9) a;
+                                     2
+(%o9)                  [string, y + x , x]
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2120,13 +2341,13 @@ signals an error.
 <a name="Item_003a-rest"></a>
 </p><dl>
 <dt><u>Function:</u> <b>rest</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rest</tt> (<var>expr</var>, <var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rest</tt> (<var>expr</var>)</i>
-<a name="IDX128"></a>
+<a name="IDX131"></a>
 </dt>
 <dd><p>Returns <var>expr</var> with its first <var>n</var> elements removed if <var>n</var>
 is positive and its last <code>- <var>n</var></code> elements removed if <var>n</var>
 is negative. If <var>n</var> is 1 it may be omitted. The first argument
 <var>expr</var> may be a list, matrix, or other expression. When <var>expr</var>
-is a mapatom, <code>rest</code> signals an error; when <var>expr</var> is an empty
+is an atom, <code>rest</code> signals an error; when <var>expr</var> is an empty
 list and <code>partswitch</code> is false, <code>rest</code> signals an error. When 
 <var>expr</var> is an empty list and <code>partswitch</code> is true, <code>rest</code> 
 returns <code>end</code>.
@@ -2138,6 +2359,8 @@ make sense. For example, because '^' requires two arguments,
 <code>args</code> and <code>op</code> may be useful as well, since <code>args(a^b)</code>
 returns <code>[a,b]</code> and <code>op(a^b)</code> returns ^.
 </p>
+<p>See also <code><a href="#firstn">firstn</a></code> and <code><a href="#lastn">lastn</a></code>.
+</p>
 <pre class="example">(%i1) rest(a+b+c);
 (%o1) b+a
 (%i2) rest(a+b+c,2);
@@ -2147,8 +2370,8 @@ returns <code>[a,b]</code> and <code>op(a^b)</code> returns ^.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2157,7 +2380,7 @@ returns <code>[a,b]</code> and <code>op(a^b)</code> returns ^.
 <a name="Item_003a-reverse"></a>
 </p><dl>
 <dt><u>Function:</u> <b>reverse</b><i> (<var>list</var>)</i>
-<a name="IDX129"></a>
+<a name="IDX132"></a>
 </dt>
 <dd><p>Reverses the order of the members of the <var>list</var> (not
 the members themselves).  <code>reverse</code> also works on general expressions,
@@ -2165,24 +2388,76 @@ e.g.  <code>reverse(a=b);</code> gives <code>b=a</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
+
+<p><a name="rreduce"></a>
+<a name="Item_003a-rreduce"></a>
+</p><dl>
+<dt><u>Function:</u> <b>rreduce</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rreduce</tt> (<var>F</var>, <var>s</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rreduce</tt> (<var>F</var>, <var>s</var>, <var>s_{n + 1}</var>)</i>
+<a name="IDX133"></a>
+</dt>
+<dd><p>Extends the binary function <var>F</var> to an n-ary function by composition,
+where <var>s</var> is a list.
+</p>
+<p><code>rreduce(<var>F</var>, <var>s</var>)</code> returns <code>F(s_1, ... F(s_{n - 2}, F(s_{n - 1}, s_n)))</code>.
+When the optional argument <var>s_{n + 1}</var> is present,
+the result is equivalent to <code>rreduce(<var>F</var>, endcons(<var>s_{n + 1}</var>, <var>s</var>))</code>.
+</p>
+<p>The function <var>F</var> is first applied to the
+<i>rightmost</i> list elements, thus the name &quot;rreduce&quot;.
+</p>
+<p>See also <code><a href="#lreduce">lreduce</a></code>, <code><a href="#tree_005freduce">tree_reduce</a></code>, and <code><a href="#xreduce">xreduce</a></code>.
+</p>
+<p>Examples:
+</p>
+<p><code>rreduce</code> without the optional argument.
+</p>
+<pre class="example">(%i1) rreduce (f, [1, 2, 3]);
+(%o1)                     f(1, f(2, 3))
+(%i2) rreduce (f, [1, 2, 3, 4]);
+(%o2)                  f(1, f(2, f(3, 4)))
+</pre>
+<p><code>rreduce</code> with the optional argument.
+</p>
+<pre class="example">(%i1) rreduce (f, [1, 2, 3], 4);
+(%o1)                  f(1, f(2, f(3, 4)))
+</pre>
+<p><code>rreduce</code> applied to built-in binary operators.
+<code>/</code> is the division operator.
+</p>
+<pre class="example">(%i1) rreduce (&quot;^&quot;, args ({a, b, c, d}));
+                                 d
+                                c
+                               b
+(%o1)                         a
+(%i2) rreduce (&quot;/&quot;, args ({a, b, c, d}));
+                               a c
+(%o2)                          ---
+                               b d
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
+</div>
+</p>
+</dd></dl>
 
 <p><a name="second"></a>
 <a name="Item_003a-second"></a>
 </p><dl>
 <dt><u>Function:</u> <b>second</b><i> (<var>expr</var>)</i>
-<a name="IDX130"></a>
+<a name="IDX134"></a>
 </dt>
 <dd><p>Returns the 2'nd item of expression or list <var>expr</var>.
 See <code><a href="#first">first</a></code> for more details.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2190,15 +2465,15 @@ See <code><a href="#first">first</a></code> for more details.
 <a name="Item_003a-seventh"></a>
 </p><dl>
 <dt><u>Function:</u> <b>seventh</b><i> (<var>expr</var>)</i>
-<a name="IDX131"></a>
+<a name="IDX135"></a>
 </dt>
 <dd><p>Returns the 7'th item of expression or list <var>expr</var>.
 See <code><a href="#first">first</a></code> for more details.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2206,15 +2481,15 @@ See <code><a href="#first">first</a></code> for more details.
 <a name="Item_003a-sixth"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sixth</b><i> (<var>expr</var>)</i>
-<a name="IDX132"></a>
+<a name="IDX136"></a>
 </dt>
 <dd><p>Returns the 6'th item of expression or list <var>expr</var>.
 See <code><a href="#first">first</a></code> for more details.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2222,7 +2497,7 @@ See <code><a href="#first">first</a></code> for more details.
 <a name="Item_003a-sort"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sort</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sort</tt> (<var>L</var>, <var>P</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sort</tt> (<var>L</var>)</i>
-<a name="IDX133"></a>
+<a name="IDX137"></a>
 </dt>
 <dd><p><code>sort(<var>L</var>, <var>P</var>)</code> sorts a list <var>L</var> according to a predicate <code>P</code> of two arguments
 which defines a strict weak order on the elements of <var>L</var>.
@@ -2277,8 +2552,8 @@ the name of an operator, the name must be enclosed in double quotes.
 (%i4) infix (&quot;&gt;&gt;&quot;);
 (%o4)                          &gt;&gt;
 (%i5) a &gt;&gt; b := a[1] &gt; b[1];
-(%o5)                   a &gt;&gt; b := a  &gt; b
-                                   1    1
+(%o5)                  (a &gt;&gt; b) := a  &gt; b
+                                    1    1
 (%i6) sort (L, &quot;&gt;&gt;&quot;);
 (%o6)           [[4, w], [3, y], [2, z], [1, x]]
 (%i7) sort (L, lambda ([a, b], a[1] &gt; b[1]));
@@ -2296,11 +2571,11 @@ the name of an operator, the name must be enclosed in double quotes.
 <p>The default sorting order is ascending, as determined by <code><a href="maxima_6.html#orderlessp">orderlessp</a></code>. The predicate <code>ordergreatp</code> sorts a list in descending order.
 </p>
 <pre class="example">(%i1) L : [a, 2*b, -5, 7, 1 + %e, %pi];
-(%o1)                    [a, 2 b, - 5, 7, %e + 1, %pi]
+(%o1)             [a, 2 b, - 5, 7, %e + 1, %pi]
 (%i2) sort (L);
-(%o2)                    [- 5, 7, %e + 1, %pi, a, 2 b]
+(%o2)             [- 5, 7, %e + 1, %pi, a, 2 b]
 (%i3) sort (L, 'ordergreatp);
-(%o3)                    [2 b, a, %pi, %e + 1, 7, - 5]
+(%o3)             [2 b, a, %pi, %e + 1, 7, - 5]
 </pre>
 <p>All Maxima atoms and expressions are comparable under <code>orderlessp</code> and <code>ordergreatp</code>.
 </p>
@@ -2337,12 +2612,12 @@ and all other elements the same as <code>orderlessp</code>.
 (%o2) [minf, 0, sin(1), 1, 1.0, 1.0b0, 2, %e, 3, inf, %i, 
                                                      %i + 1, 2 x]
 (%i3) sort (L, orderlessp);
-(%o3) [0, 1, 1.0, 2, 3, %e, %i, %i + 1, inf, minf, sin(1), 
-                                                      1.0b0, 2 x]
+(%o3) [0, 1, 1.0, 2, 3, sin(1), 1.0b0, %e, %i, %i + 1, inf, 
+                                                       minf, 2 x]
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
 </p></dd></dl>
 
@@ -2350,7 +2625,7 @@ and all other elements the same as <code>orderlessp</code>.
 <a name="Item_003a-sublist"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sublist</b><i> (<var>list</var>, <var>p</var>)</i>
-<a name="IDX134"></a>
+<a name="IDX138"></a>
 </dt>
 <dd><p>Returns the list of elements of <var>list</var> for which the predicate <code>p</code>
 returns <code>true</code>.
@@ -2364,7 +2639,7 @@ returns <code>true</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
 </p></dd></dl>
 
@@ -2372,7 +2647,7 @@ returns <code>true</code>.
 <a name="Item_003a-sublist_005findices"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sublist_indices</b><i> (<var>L</var>, <var>P</var>)</i>
-<a name="IDX135"></a>
+<a name="IDX139"></a>
 </dt>
 <dd><p>Returns the indices of the elements <code>x</code> of the list <var>L</var> for which
 the predicate <code>maybe(<var>P</var>(x))</code> returns <code>true</code>;
@@ -2399,15 +2674,92 @@ this excludes <code>unknown</code> as well as <code>false</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
 </p></dd></dl>
+
+<p><a name="tenth"></a>
+<a name="Item_003a-tenth"></a>
+</p><dl>
+<dt><u>Function:</u> <b>tenth</b><i> (<var>expr</var>)</i>
+<a name="IDX140"></a>
+</dt>
+<dd><p>Returns the 10'th item of expression or list <var>expr</var>.
+See <code><a href="#first">first</a></code> for more details.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p></dd></dl>
+
+<p><a name="third"></a>
+<a name="Item_003a-third"></a>
+</p><dl>
+<dt><u>Function:</u> <b>third</b><i> (<var>expr</var>)</i>
+<a name="IDX141"></a>
+</dt>
+<dd><p>Returns the 3'rd item of expression or list <var>expr</var>.
+See <code><a href="#first">first</a></code> for more details.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Lists">Lists</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p></dd></dl>
+
+<p><a name="tree_005freduce"></a>
+<a name="Item_003a-tree_005freduce"></a>
+</p><dl>
+<dt><u>Function:</u> <b>tree_reduce</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tree_reduce</tt> (<var>F</var>, <var>s</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tree_reduce</tt> (<var>F</var>, <var>s</var>, <var>s_0</var>)</i>
+<a name="IDX142"></a>
+</dt>
+<dd><p>Extends the binary function <var>F</var> to an n-ary function by composition,
+where <var>s</var> is a set or list.
+</p>
+<p><code>tree_reduce</code> is equivalent to the following:
+Apply <var>F</var> to successive pairs of elements
+to form a new list <code>[<var>F</var>(<var>s_1</var>, <var>s_2</var>), <var>F</var>(<var>s_3</var>, <var>s_4</var>), ...]</code>,
+carrying the final element unchanged if there are an odd number of elements.
+Then repeat until the list is reduced to a single element, which is the return value.
+</p>
+<p>When the optional argument <var>s_0</var> is present,
+the result is equivalent <code>tree_reduce(<var>F</var>, cons(<var>s_0</var>, <var>s</var>))</code>.
+</p>
+<p>For addition of floating point numbers,
+<code>tree_reduce</code> may return a sum that has a smaller rounding error
+than either <code>rreduce</code> or <code>lreduce</code>.
+</p>
+<p>The elements of <var>s</var> and the partial results may be arranged in a minimum-depth binary tree,
+thus the name &quot;tree_reduce&quot;.
+</p>
+<p>Examples:
+</p>
+<p><code>tree_reduce</code> applied to a list with an even number of elements.
+</p>
+<pre class="example">(%i1) tree_reduce (f, [a, b, c, d]);
+(%o1)                  f(f(a, b), f(c, d))
+</pre>
+<p><code>tree_reduce</code> applied to a list with an odd number of elements.
+</p>
+<pre class="example">(%i1) tree_reduce (f, [a, b, c, d, e]);
+(%o1)               f(f(f(a, b), f(c, d)), e)
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Sets">Sets</a> &middot;
+<a href="maxima_105.html#Category_003a-Lists">Lists</a>
+</div>
+</p>
+</dd></dl>
 
 <p><a name="unique"></a>
 <a name="Item_003a-unique"></a>
 </p><dl>
 <dt><u>Function:</u> <b>unique</b><i> (<var>L</var>)</i>
-<a name="IDX136"></a>
+<a name="IDX143"></a>
 </dt>
 <dd><p>Returns the unique elements of the list <var>L</var>.
 </p>
@@ -2423,39 +2775,145 @@ not <var>L</var> itself.
 (%o1)              [1, 2, %e, %pi, [1], b + a]
 </pre></dd></dl>
 
-<p><a name="tenth"></a>
-<a name="Item_003a-tenth"></a>
+<p><a name="xreduce"></a>
+<a name="Item_003a-xreduce"></a>
 </p><dl>
-<dt><u>Function:</u> <b>tenth</b><i> (<var>expr</var>)</i>
-<a name="IDX137"></a>
+<dt><u>Function:</u> <b>xreduce</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>xreduce</tt> (<var>F</var>, <var>s</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>xreduce</tt> (<var>F</var>, <var>s</var>, <var>s_0</var>)</i>
+<a name="IDX144"></a>
 </dt>
-<dd><p>Returns the 10'th item of expression or list <var>expr</var>.
-See <code><a href="#first">first</a></code> for more details.
+<dd><p>Extends the function <var>F</var> to an n-ary function by composition,
+or, if <var>F</var> is already n-ary, applies <var>F</var> to <var>s</var>.
+When <var>F</var> is not n-ary, <code>xreduce</code> is the same as <code>lreduce</code>.
+The argument <var>s</var> is a list.
 </p>
+<p>Functions known to be n-ary include
+addition <code>+</code>, multiplication <code>*</code>, <code>and</code>, <code>or</code>, <code>max</code>,
+<code>min</code>, and <code>append</code>.
+Functions may also be declared n-ary by <code>declare(<var>F</var>, nary)</code>.
+For these functions,
+<code>xreduce</code> is expected to be faster than either <code>rreduce</code> or <code>lreduce</code>.
+</p>
+<p>When the optional argument <var>s_0</var> is present,
+the result is equivalent to <code>xreduce(<var>s</var>, cons(<var>s_0</var>, <var>s</var>))</code>.
+</p>
+<p>Floating point addition is not exactly associative; be that as it may,
+<code>xreduce</code> applies Maxima's n-ary addition when <var>s</var> contains floating point numbers.
+</p>
+<p>Examples:
+</p>
+<p><code>xreduce</code> applied to a function known to be n-ary.
+<code>F</code> is called once, with all arguments.
+</p>
+<pre class="example">(%i1) declare (F, nary);
+(%o1)                         done
+(%i2) F ([L]) := L;
+(%o2)                      F([L]) := L
+(%i3) xreduce (F, [a, b, c, d, e]);
+(%o3)         [[[[[(&quot;[&quot;, simp), a], b], c], d], e]
+</pre>
+<p><code>xreduce</code> applied to a function not known to be n-ary.
+<code>G</code> is called several times, with two arguments each time.
+</p>
+<pre class="example">(%i1) G ([L]) := L;
+(%o1)                      G([L]) := L
+(%i2) xreduce (G, [a, b, c, d, e]);
+(%o2)         [[[[[(&quot;[&quot;, simp), a], b], c], d], e]
+(%i3) lreduce (G, [a, b, c, d, e]);
+(%o3)                 [[[[a, b], c], d], e]
+</pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Sets">Sets</a> &middot;
+<a href="maxima_105.html#Category_003a-Lists">Lists</a>
 </div>
-</p></dd></dl>
-
-<p><a name="third"></a>
-<a name="Item_003a-third"></a>
-</p><dl>
-<dt><u>Function:</u> <b>third</b><i> (<var>expr</var>)</i>
-<a name="IDX138"></a>
-</dt>
-<dd><p>Returns the 3'rd item of expression or list <var>expr</var>.
-See <code><a href="#first">first</a></code> for more details.
 </p>
-<div class=categorybox>
+</dd></dl>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Lists">Lists</a> &middot;
-<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
-</div>
-</p></dd></dl>
+<p><a name="Item_003a-Performance-considerations-for-Lists"></a>
+</p><hr size="6">
+<a name="Performance-considerations-for-Lists"></a>
+<a name="SEC24"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC23" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC25" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC21" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_6.html#SEC30" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 5.4.3 Performance considerations for Lists </h3>
 
+<p>Lists provide efficient ways of appending and removing elements.
+They can be created without knowing their final dimensions.
+Lisp provides efficient means of copying and handling lists.
+Also nested lists do not need to be strictly rectangular.
+These advantages over declared arrays come with the drawback that the amount of time
+needed for accessing a random element within a list may be roughly
+proportional to the element's distance from its beginning.
+Efficient traversal of lists is still possible, though, by using the list as a
+stack or a fifo:
+</p>
+<pre class="example">(%i1) l:[Test,1,2,3,4];
+(%o1)                  [Test, 1, 2, 3, 4]
+(%i2) while l # [] do
+   disp(pop(l));
+                              Test
 
+                                1
+
+                                2
+
+                                3
+
+                                4
+
+(%o2)                         done
+</pre><p>Another even faster example would be:
+</p><pre class="example">(%i1) l:[Test,1,2,3,4];
+(%o1)                  [Test, 1, 2, 3, 4]
+(%i2) for i in l do
+   disp(pop(l));
+                              Test
+
+                                1
+
+                                2
+
+                                3
+
+                                4
+
+(%o2)                         done
+</pre>
+<p>Beginning traversal with the last element of a list is possible after
+reversing the list using <code>reverse ()</code>.
+If the elements of a long list need to be processed in a different
+order performance might be increased by converting the list into a
+declared array first.
+</p>
+<p>It is also to note that the ending condition of <code>for</code> loops
+is tested for every iteration which means that the result of a
+<code>length</code> should be cached if it is used in the ending
+condition:
+</p>
+<pre class="example">(%i1) l:makelist(i,i,1,100000)$
+(%i2) lngth:length(l);
+(%o2)                        100000
+(%i3) x:1;
+(%o3)                           1
+(%i4) for i:1 thru lngth do
+    x:x+1$
+(%i5) x;
+(%o5)                        100001
+</pre>
 
 <p><a name="Item_003a-Arrays"></a>
 </p><hr size="6">
@@ -2474,7 +2932,7 @@ See <code><a href="#first">first</a></code> for more details.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 5.5 Arrays </h2>
@@ -2501,7 +2959,7 @@ See <code><a href="#first">first</a></code> for more details.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.5.1 Functions and Variables for Arrays </h3>
@@ -2510,7 +2968,7 @@ See <code><a href="#first">first</a></code> for more details.
 <a name="Item_003a-array"></a>
 </p><dl>
 <dt><u>Function:</u> <b>array</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>array</tt> (<var>name</var>, <var>dim_1</var>, &hellip;, <var>dim_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>array</tt> (<var>name</var>, <var>type</var>, <var>dim_1</var>, &hellip;, <var>dim_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>array</tt> ([<var>name_1</var>, &hellip;, <var>name_m</var>], <var>dim_1</var>, &hellip;, <var>dim_n</var>)</i>
-<a name="IDX139"></a>
+<a name="IDX145"></a>
 </dt>
 <dd><p>Creates an <em>n</em>-dimensional array.  <em>n</em> may be less than or equal to 5.
 The subscripts for the <em>i</em>'th dimension are the integers running from 0 to
@@ -2540,7 +2998,7 @@ array.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -2548,7 +3006,7 @@ array.
 <a name="Item_003a-arrayapply"></a>
 </p><dl>
 <dt><u>Function:</u> <b>arrayapply</b><i> (<var>A</var>, [<var>i_1</var>, &hellip;, <var>i_n</var>])</i>
-<a name="IDX140"></a>
+<a name="IDX146"></a>
 </dt>
 <dd><p>Evaluates <code><var>A</var> [<var>i_1</var>, ..., <var>i_n</var>]</code>,
 where <var>A</var> is an array and <var>i_1</var>, &hellip;, <var>i_n</var> are integers.
@@ -2558,8 +3016,8 @@ instead of a function.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -2567,7 +3025,7 @@ instead of a function.
 <a name="Item_003a-arrayinfo"></a>
 </p><dl>
 <dt><u>Function:</u> <b>arrayinfo</b><i> (<var>A</var>)</i>
-<a name="IDX141"></a>
+<a name="IDX147"></a>
 </dt>
 <dd><p>Returns information about the array <var>A</var>.
 The argument <var>A</var> may be a declared array, an undeclared (hashed) array,
@@ -2666,7 +3124,7 @@ The lambda expressions are returned by <code>listarray</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -2674,7 +3132,7 @@ The lambda expressions are returned by <code>listarray</code>.
 <a name="Item_003a-arraymake"></a>
 </p><dl>
 <dt><u>Function:</u> <b>arraymake</b><i> (<var>A</var>, [<var>i_1</var>, &hellip;, <var>i_n</var>])</i>
-<a name="IDX142"></a>
+<a name="IDX148"></a>
 </dt>
 <dd><p>Returns the expression <code><var>A</var>[<var>i_1</var>, ..., <var>i_n</var>]</code>.
 The result is an unevaluated array reference.
@@ -2720,8 +3178,8 @@ is an unevaluated array reference instead of an unevaluated function call.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -2729,7 +3187,7 @@ is an unevaluated array reference instead of an unevaluated function call.
 <a name="Item_003a-arrays"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>arrays</b>
-<a name="IDX143"></a>
+<a name="IDX149"></a>
 </dt>
 <dd><p>Default value: <code>[]</code>
 </p>
@@ -2762,8 +3220,8 @@ Arrays defined by <code><a href="#make_005farray">make_array</a></code> are not 
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -2771,7 +3229,7 @@ Arrays defined by <code><a href="#make_005farray">make_array</a></code> are not 
 <a name="Item_003a-arraysetapply"></a>
 </p><dl>
 <dt><u>Function:</u> <b>arraysetapply</b><i> (<var>A</var>, [<var>i_1</var>, &hellip;, <var>i_n</var>], <var>x</var>)</i>
-<a name="IDX144"></a>
+<a name="IDX150"></a>
 </dt>
 <dd><p>Assigns <var>x</var> to <code><var>A</var>[<var>i_1</var>, ..., <var>i_n</var>]</code>,
 where <var>A</var> is an array and <var>i_1</var>, &hellip;, <var>i_n</var> are integers.
@@ -2780,8 +3238,8 @@ where <var>A</var> is an array and <var>i_1</var>, &hellip;, <var>i_n</var> are 
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -2789,7 +3247,7 @@ where <var>A</var> is an array and <var>i_1</var>, &hellip;, <var>i_n</var> are 
 <a name="Item_003a-fillarray"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fillarray</b><i> (<var>A</var>, <var>B</var>)</i>
-<a name="IDX145"></a>
+<a name="IDX151"></a>
 </dt>
 <dd><p>Fills array <var>A</var> from <var>B</var>, which is a list or an array.
 </p>
@@ -2807,7 +3265,8 @@ rest of <var>A</var>.  If there are too many, the remaining ones are ignored.
 <p>Examples:
 </p>
 <p>Create an array of 9 elements and fill it from a list.
-</p><pre class="example">(%i1) array (a1, fixnum, 8);
+</p>
+<pre class="example">(%i1) array (a1, fixnum, 8);
 (%o1)                          a1
 (%i2) listarray (a1);
 (%o2)              [0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2820,7 +3279,8 @@ rest of <var>A</var>.  If there are too many, the remaining ones are ignored.
 the last element is repeated.
 When there are too many elements,
 the extra elements are ignored.
-</p><pre class="example">(%i1) a2 : make_array (fixnum, 8);
+</p>
+<pre class="example">(%i1) a2 : make_array (fixnum, 8);
 (%o1)             {Array:  #(0 0 0 0 0 0 0 0)}
 (%i2) fillarray (a2, [1, 2, 3, 4, 5]);
 (%o2)             {Array:  #(1 2 3 4 5 5 5 5)}
@@ -2842,7 +3302,7 @@ the extra elements are ignored.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -2850,7 +3310,7 @@ the extra elements are ignored.
 <a name="Item_003a-listarray"></a>
 </p><dl>
 <dt><u>Function:</u> <b>listarray</b><i> (<var>A</var>)</i>
-<a name="IDX146"></a>
+<a name="IDX152"></a>
 </dt>
 <dd><p>Returns a list of the elements of the array <var>A</var>.
 The argument <var>A</var> may be a declared array, an undeclared (hashed) array,
@@ -2942,7 +3402,7 @@ and subscripted functions are not returned.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -2951,7 +3411,7 @@ and subscripted functions are not returned.
 <a name="Item_003a-make_005farray"></a>
 </p><dl>
 <dt><u>Function:</u> <b>make_array</b><i> (<var>type</var>, <var>dim_1</var>, &hellip;, <var>dim_n</var>)</i>
-<a name="IDX147"></a>
+<a name="IDX153"></a>
 </dt>
 <dd><p>Creates and returns a Lisp array.  <var>type</var> may
 be <code>any</code>, <code>flonum</code>, <code>fixnum</code>, <code>hashed</code> or 
@@ -3000,7 +3460,7 @@ points to that object, so the object can be garbage collected.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -3009,7 +3469,7 @@ points to that object, so the object can be garbage collected.
 <a name="Item_003a-rearray"></a>
 </p><dl>
 <dt><u>Function:</u> <b>rearray</b><i> (<var>A</var>, <var>dim_1</var>, &hellip;, <var>dim_n</var>)</i>
-<a name="IDX148"></a>
+<a name="IDX154"></a>
 </dt>
 <dd><p>Changes the dimensions of an array.
 The new array will be filled with the elements of the old one in
@@ -3021,7 +3481,7 @@ changed.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -3029,7 +3489,7 @@ changed.
 <a name="Item_003a-remarray"></a>
 </p><dl>
 <dt><u>Function:</u> <b>remarray</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remarray</tt> (<var>A_1</var>, &hellip;, <var>A_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remarray</tt> (all)</i>
-<a name="IDX149"></a>
+<a name="IDX155"></a>
 </dt>
 <dd><p>Removes arrays and array associated functions and frees the storage occupied.
 The arguments may be declared arrays, undeclared (hashed) arrays, array
@@ -3046,7 +3506,7 @@ desired to redefine the values in a hashed array.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -3054,7 +3514,7 @@ desired to redefine the values in a hashed array.
 <a name="Item_003a-subvar"></a>
 </p><dl>
 <dt><u>Function:</u> <b>subvar</b><i> (<var>x</var>, <var>i</var>)</i>
-<a name="IDX150"></a>
+<a name="IDX156"></a>
 </dt>
 <dd><p>Evaluates the subscripted expression <code><var>x</var>[<var>i</var>]</code>.
 </p>
@@ -3081,8 +3541,8 @@ desired to redefine the values in a hashed array.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_99.html#Category_003a-Arrays">Arrays</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Arrays">Arrays</a>
 </div>
 </p></dd></dl>
 
@@ -3091,60 +3551,66 @@ desired to redefine the values in a hashed array.
 <a name="Item_003a-subvarp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>subvarp</b><i> (<var>expr</var>)</i>
-<a name="IDX151"></a>
+<a name="IDX157"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a subscripted variable, for example
 <code>a[i]</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
-
 
 <p><a name="use_005ffast_005farrays"></a>
 <a name="Item_003a-use_005ffast_005farrays"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>use_fast_arrays</b>
-<a name="IDX152"></a>
+<a name="IDX158"></a>
 </dt>
-<dd><p>If <code>true</code> then only two types of arrays are recognized:
+<dd><p>Default value: <code>false</code>
 </p>
-<ol>
-<li>
-The art-q array (t in Common Lisp) which may have several dimensions
-indexed by integers, and may hold any Lisp or Maxima object as an
-entry.  To construct such an array, enter <code>a:make_array(any,3,4);</code> 
-then <code>a</code> will have as value, an array with twelve slots, and the 
-indexing is zero based.
-
-</li><li>
-The Hash_table array which is the default type of array created if one
-does <code>b[x+1]:y^2</code> (and <code>b</code> is not already an array, a list, or a
-matrix - if it were one of these an error would be caused since
-<code>x+1</code> would not be a valid subscript for an art-q array, a list or
-a matrix).  Its indices (also known as keys) may be any object.
-It only takes one key at a time (<code>b[x+1,u]:y</code> would ignore the <code>u</code>).
-Referencing is done by <code>b[x+1] ==&gt; y^2</code>.  Of course the key may be
-a list, e.g. <code>b[[x+1,u]]:y</code> would be valid.  This is incompatible 
-with the old Maxima hash arrays, but saves consing.
-</li></ol>
-
-<p>An advantage of storing the arrays as values of the symbol is that the
-usual conventions about local variables of a function apply to arrays as
-well.  The Hash_table type also uses less consing and is more efficient
-than the old type of Maxima hashar.  To obtain consistent behaviour in
-translated and compiled code set <code>translate_fast_arrays</code> to be
-<code>true</code>.
+<p>When <code>use_fast_arrays</code> is <code>true</code>,
+undeclared arrays and arrays declared by <code>array</code> are values instead of properties,
+and undeclared arrays are implemented as Lisp hash tables.
+</p>
+<p>When <code>use_fast_arrays</code> is <code>false</code>,
+undeclared arrays and arrays declared by <code>array</code> are properties,
+and undeclared arrays are implemented with Maxima's own hash table implementation.
+</p>
+<p>Arrays created by <code>make_array</code> are not affected by <code>use_fast_arrays</code>.
+</p>
+<p>See also <code><a href="#translate_005ffast_005farrays">translate_fast_arrays</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Arrays">Arrays</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
+<p><a name="translate_005ffast_005farrays"></a>
+<a name="Item_003a-translate_005ffast_005farrays"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>translate_fast_arrays</b>
+<a name="IDX159"></a>
+</dt>
+<dd><p>Default value: <code>false</code>
+</p>
+<p>When <code>translate_fast_arrays</code> is <code>true</code>,
+the Maxima-to-Lisp translator generates code that assumes arrays are values instead of properties,
+as if <code>use_fast_arrays</code> were <code>true</code>.
+</p>
+<p>When <code>translate_fast_arrays</code> is <code>false</code>,
+the Maxima-to-Lisp translator generates code that assumes arrays are properties,
+as if <code>use_fast_arrays</code> were <code>false</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Arrays">Arrays</a> &middot;
+<a href="maxima_105.html#Category_003a-Translation-flags-and-variables">Translation flags and variables</a>
+</div>
+</p></dd></dl>
 
 
 <p><a name="Item_003a-Structures"></a>
@@ -3164,7 +3630,7 @@ translated and compiled code set <code>translate_fast_arrays</code> to be
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 5.6 Structures </h2>
@@ -3193,7 +3659,7 @@ translated and compiled code set <code>translate_fast_arrays</code> to be
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.6.1 Introduction to Structures </h3>
@@ -3241,29 +3707,31 @@ all fields are always visible.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 5.6.2 Functions and Variables for Structures </h3>
 
-<p><a name="Item_003a-structures"></a>
+<p><a name="structures"></a>
+<a name="Item_003a-structures"></a>
 </p><dl>
 <dt><u>Global variable:</u> <b>structures</b>
-<a name="IDX153"></a>
+<a name="IDX160"></a>
 </dt>
 <dd><p><code>structures</code> is the list of user-defined structures defined by <code>defstruct</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Structures">Structures</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Structures">Structures</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-defstruct"></a>
+<p><a name="defstruct"></a>
+<a name="Item_003a-defstruct"></a>
 </p><dl>
 <dt><u>Function:</u> <b>defstruct</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>defstruct</tt> (<var>S</var>(<var>a_1</var>, &hellip;, <var>a_n</var>)) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>defstruct</tt> (<var>S</var>(<var>a_1</var> = <var>v_1</var>, &hellip;, <var>a_n</var> = <var>v_n</var>))</i>
-<a name="IDX154"></a>
+<a name="IDX161"></a>
 </dt>
 <dd><p>Define a structure, which is a list of named fields <var>a_1</var>, &hellip;,
 <var>a_n</var> associated with a symbol <var>S</var>.
@@ -3302,14 +3770,15 @@ and removes the structure definition.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Structures">Structures</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Structures">Structures</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-new"></a>
+<p><a name="new"></a>
+<a name="Item_003a-new"></a>
 </p><dl>
 <dt><u>Function:</u> <b>new</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>new</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>new</tt> (<var>S</var> (<var>v_1</var>, &hellip;, <var>v_n</var>))</i>
-<a name="IDX155"></a>
+<a name="IDX162"></a>
 </dt>
 <dd><p><code>new</code> creates new instances of structures.
 </p>
@@ -3331,14 +3800,14 @@ in which fields are assigned the values <var>v_1</var>, &hellip;, <var>v_n</var>
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Structures">Structures</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Structures">Structures</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a_0040"></a>
 </p><dl>
 <dt><u>Operator:</u> <b>@</b>
-<a name="IDX156"></a>
+<a name="IDX163"></a>
 </dt>
 <dd><p><code>@</code> is the structure field access operator.
 The expression <code><var>x</var>@ <var>a</var></code> refers to the value of field <var>a</var> of the structure instance <var>x</var>.
@@ -3389,8 +3858,8 @@ The field name is not evaluated.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Structures">Structures</a> &middot;
-<a href="maxima_99.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Structures">Structures</a> &middot;
+<a href="maxima_105.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -3407,12 +3876,12 @@ The field name is not evaluated.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

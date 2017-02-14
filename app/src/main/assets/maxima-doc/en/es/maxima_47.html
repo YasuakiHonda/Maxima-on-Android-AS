@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on abril, 9 2015 by texi2html 1.76 -->
+<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.36.0: 47. draw</title>
+<title>Manual de Maxima 5.39.0: 47. draw</title>
 
-<meta name="description" content="Manual de Maxima 5.36.0: 47. draw">
-<meta name="keywords" content="Manual de Maxima 5.36.0: 47. draw">
+<meta name="description" content="Manual de Maxima 5.39.0: 47. draw">
+<meta name="keywords" content="Manual de Maxima 5.39.0: 47. draw">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -125,10 +125,14 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <p>Tres son las funciones principales a utilizar a nivel de Maxima: 
 <code>draw2d</code>, <code>draw3d</code> y <code>draw</code>.
 </p>
-<p>Sígase este enlace para ver ejemplos más elaborados
+<p>Síganse estos enlaces para ver ejemplos más elaborados
 de este paquete:
 </p>
-<p><a href="http://riotorto.users.sourceforge.net/gnuplot">http://riotorto.users.sourceforge.net/gnuplot</a>
+<p><a href="http://tecnostats.net/Maxima/gnuplot">http://tecnostats.net/Maxima/gnuplot</a>
+</p>
+<p>y 
+</p>
+<p><a href="http://tecnostats.net/Maxima/vtk">http://tecnostats.net/Maxima/vtk</a>
 </p>
 <p>Se necesita tener instalado Gnuplot 4.2 o superior para ejecutar este paquete.
 </p>
@@ -344,8 +348,7 @@ End of animation sequence
 <a name="IDX1977"></a>
 </dt>
 <dd><p>Almacena el gráfico actual en un fichero. Las opciones gráficas que
-acepta son: <code>terminal</code>, <code>dimensions</code>,
-<code>file_name</code> y <code>background_color</code>. 
+acepta son: <code>terminal</code>, <code>dimensions</code> y<code>file_name</code>. 
 </p>
 <p>Ejemplo:
 </p>
@@ -676,8 +679,34 @@ polígonos se dibujan de acuerdo con <code>line_type</code> y
 
 
 <dl>
-<dt><u>Opción gráfica:</u> <b>cbrange</b>
+<dt><u>Opción gráfica:</u> <b>capping</b>
 <a name="IDX1989"></a>
+</dt>
+<dd><p>Valor por defecto: <code>[false, false]</code>
+</p>
+<p>Una lista de dos elementos, <code>true</code> y <code>false</code>,
+indicando si los extremos de un objeto gráfico <code>tube</code>
+permanece abiertos o si deben ser cerrados. Por defecto, ambos
+extremos se dejan abiertos.
+</p>
+<p>La asignación <code>capping = false</code> equivale a <code>capping = [false, false]</code>
+y <code>capping = true</code> equivale a <code>capping = [true, true]</code>.
+</p>
+<p>Ejemplo:
+</p>
+<pre class="example">(%i1) load(draw)$
+(%i2) draw3d(
+        capping = [false, true],
+        tube(0, 0, a, 1,
+             a, 0, 8) )$
+</pre>
+</dd></dl>
+
+
+
+<dl>
+<dt><u>Opción gráfica:</u> <b>cbrange</b>
+<a name="IDX1990"></a>
 </dt>
 <dd><p>Valor por defecto: <code>auto</code>
 </p>
@@ -711,7 +740,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>cbtics</b>
-<a name="IDX1990"></a>
+<a name="IDX1991"></a>
 </dt>
 <dd><p>Valor por defecto: <code>auto</code>
 </p>
@@ -741,7 +770,7 @@ opción <code>cbtics</code> no tiene efecto alguno.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>color</b>
-<a name="IDX1991"></a>
+<a name="IDX1992"></a>
 </dt>
 <dd><p>Valor por defecto: <code>blue</code>
 </p>
@@ -795,7 +824,7 @@ en el formato <code>&quot;#rrggbb&quot;</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>colorbox</b>
-<a name="IDX1992"></a>
+<a name="IDX1993"></a>
 </dt>
 <dd><p>Valor por defecto: <code>true</code>
 </p>
@@ -834,7 +863,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>columns</b>
-<a name="IDX1993"></a>
+<a name="IDX1994"></a>
 </dt>
 <dd><p>Valor por defecto: 1
 </p>
@@ -860,7 +889,7 @@ usarse como argumento de la función <code>draw</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>contour</b>
-<a name="IDX1994"></a>
+<a name="IDX1995"></a>
 </dt>
 <dd><p>Valor por defecto: <code>none</code>
 </p>
@@ -911,7 +940,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>contour_levels</b>
-<a name="IDX1995"></a>
+<a name="IDX1996"></a>
 </dt>
 <dd><p>Valor por defecto: 5
 </p>
@@ -977,7 +1006,7 @@ sencillas.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>data_file_name</b>
-<a name="IDX1996"></a>
+<a name="IDX1997"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;data.gnuplot&quot;</code>
 </p>
@@ -997,7 +1026,7 @@ usarse como argumento de la función <code>draw</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>delay</b>
-<a name="IDX1997"></a>
+<a name="IDX1998"></a>
 </dt>
 <dd><p>Valor por defecto: 5
 </p>
@@ -1031,7 +1060,7 @@ cualquier otro caso.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>dimensions</b>
-<a name="IDX1998"></a>
+<a name="IDX1999"></a>
 </dt>
 <dd><p>Valor por defecto: <code>[600,500]</code>
 </p>
@@ -1083,7 +1112,7 @@ En este caso queremos un fichero eps con dimensiones A4.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>draw_realpart</b>
-<a name="IDX1999"></a>
+<a name="IDX2000"></a>
 </dt>
 <dd><p>Valor por defecto: <code>true</code>
 </p>
@@ -1112,7 +1141,7 @@ objeto <code>parametric_surface</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>enhanced3d</b>
-<a name="IDX2000"></a>
+<a name="IDX2001"></a>
 </dt>
 <dd><p>Valor por defecto: <code>none</code>
 </p>
@@ -1216,7 +1245,7 @@ En este caso, <code>enhanced3d = -a</code> puede ser una simplificación de
 </p>
 <pre class="example">(%i1) load(draw)$
 (%i2) draw3d(
-         tube_extremes = [open, closed],
+         capping = [true, false],
          palette = [26,15,-2],
          enhanced3d = [-foo, foo],
          tube(a, a, a^2, 1, a, -2, 2) )$
@@ -1253,7 +1282,7 @@ el modelo <code>[f(k), k]</code>, siendo <code>k</code> un parámetro de orden.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>error_type</b>
-<a name="IDX2001"></a>
+<a name="IDX2002"></a>
 </dt>
 <dd><p>Valor por defecto: <code>y</code>
 </p>
@@ -1268,7 +1297,7 @@ verticales, o ambas. Si <code>error_type=boxes</code>, se dibujarán cajas en lug
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>file_name</b>
-<a name="IDX2002"></a>
+<a name="IDX2003"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;maxima_out&quot;</code>
 </p>
@@ -1294,7 +1323,7 @@ usarse como argumento de la función <code>draw</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>fill_color</b>
-<a name="IDX2003"></a>
+<a name="IDX2004"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;red&quot;</code>
 </p>
@@ -1310,7 +1339,7 @@ colores.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>fill_density</b>
-<a name="IDX2004"></a>
+<a name="IDX2005"></a>
 </dt>
 <dd><p>Valor por defecto: 0
 </p>
@@ -1326,7 +1355,7 @@ en los objetos <code>bars</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>filled_func</b>
-<a name="IDX2005"></a>
+<a name="IDX2006"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -1338,6 +1367,9 @@ Si <code>filled_func</code> guarda la expresión de una función, entonces la
 región limitada por esta función y la definida en el objeto <code>explicit</code>
 será la que se rellene. Por defecto, las funciones explícitas
 no se rellenan.
+</p>
+<p>Un caso de especial utilidad es <code>filled_func=0</code>, con lo que se sombrea la
+región limitada por el eje horizontal y la función explícita.
 </p>
 <p>Esta opción sólo afecta al objeto gráfico bidimensional <code>explicit</code>.
 </p>
@@ -1366,7 +1398,7 @@ variable en <code>filled_func</code> debe ser la misma que la utilizada en
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>font</b>
-<a name="IDX2006"></a>
+<a name="IDX2007"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;&quot;</code> (cadena vacía)
 </p>
@@ -1468,7 +1500,7 @@ La fuente por defecto es <code>&quot;Times-Roman&quot;</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>font_size</b>
-<a name="IDX2007"></a>
+<a name="IDX2008"></a>
 </dt>
 <dd><p>Valor por defecto: 10
 </p>
@@ -1487,7 +1519,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>gnuplot_file_name</b>
-<a name="IDX2008"></a>
+<a name="IDX2009"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;maxout.gnuplot&quot;</code>
 </p>
@@ -1516,12 +1548,17 @@ usarse como argumento de la función <code>draw</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>grid</b>
-<a name="IDX2009"></a>
+<a name="IDX2010"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
-<p>Cuando <code>grid</code> vale <code>true</code>, se dibujará una rejilla sobre el
-plano <var>xy</var>.
+<p>Cuando 
+</p>
+<p>Cuando <code>grid</code> toma un valor distinto de <code>false</code>, se dibujará una rejilla
+sobre el plano <var>xy</var>. Si a <code>grid</code> se le asigna el valor <code>true</code>, se dibujará
+una línea de la rejilla por cada marca que haya sobre los ejes. Si a <code>grid</code> se le
+asigna la lista <code>[nx,ny]</code>, con <var>[nx,ny] &gt; [0,0]</var>, se dibujarán <code>nx</code> 
+líneas por cada marca del eje-<var>x</var> y <var>ny</var> líneas por cada marca del eje-<var>y</var>.
 </p>
 <p>Puesto que ésta es una opción global, su posición dentro de la
 descripción de la escena no reviste importancia.
@@ -1538,7 +1575,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>head_angle</b>
-<a name="IDX2010"></a>
+<a name="IDX2011"></a>
 </dt>
 <dd><p>Valor por defecto: 45
 </p>
@@ -1580,7 +1617,7 @@ segmento del vector.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>head_both</b>
-<a name="IDX2011"></a>
+<a name="IDX2012"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -1607,7 +1644,7 @@ Si vale <code>false</code>, se dibujan unidireccionales.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>head_length</b>
-<a name="IDX2012"></a>
+<a name="IDX2013"></a>
 </dt>
 <dd><p>Valor por defecto: 2
 </p>
@@ -1637,7 +1674,7 @@ longitud de las flechas de los vectores.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>head_type</b>
-<a name="IDX2013"></a>
+<a name="IDX2014"></a>
 </dt>
 <dd><p>Valor por defecto: <code>filled</code>
 </p>
@@ -1668,7 +1705,7 @@ esta opción son: <code>filled</code> (flechas cerradas y rellenas),
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>interpolate_color</b>
-<a name="IDX2014"></a>
+<a name="IDX2015"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -1739,7 +1776,7 @@ imprevisibles.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>ip_grid</b>
-<a name="IDX2015"></a>
+<a name="IDX2016"></a>
 </dt>
 <dd><p>Valor por defecto: <code>[50, 50]</code>
 </p>
@@ -1753,7 +1790,7 @@ gráficos de funciones implícitas.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>ip_grid_in</b>
-<a name="IDX2016"></a>
+<a name="IDX2017"></a>
 </dt>
 <dd><p>Valor por defecto: <code>[5, 5]</code>
 </p>
@@ -1768,7 +1805,7 @@ gráficos de funciones implícitas.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>key</b>
-<a name="IDX2017"></a>
+<a name="IDX2018"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;&quot;</code> (cadena vacía)
 </p>
@@ -1802,7 +1839,7 @@ y <code>parametric_surface</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>key_pos</b>
-<a name="IDX2018"></a>
+<a name="IDX2019"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;&quot;</code> (cadena vacía)
 </p>
@@ -1821,17 +1858,17 @@ descripción de la escena no reviste importancia.
 <pre class="example">(%i1) load(draw)$
 (%i2) draw2d(
         key_pos = top_left,
-        key   = &quot;x&quot;,
+        key     = &quot;x&quot;,
         explicit(x,  x,0,10),
-        color= red,
-        key   = &quot;x squared&quot;,
+        color   = red,
+        key     = &quot;x squared&quot;,
         explicit(x^2,x,0,10))$
 (%i3) draw3d(
         key_pos = center,
-        key   = &quot;x&quot;,
+        key     = &quot;x&quot;,
         explicit(x+y,x,0,10,y,0,10),
         color= red,
-        key   = &quot;x squared&quot;,
+        key     = &quot;x squared&quot;,
         explicit(x^2+y^2,x,0,10,y,0,10))$
 </pre>
 </dd></dl>
@@ -1840,7 +1877,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>label_alignment</b>
-<a name="IDX2019"></a>
+<a name="IDX2020"></a>
 </dt>
 <dd><p>Valor por defecto: <code>center</code>
 </p>
@@ -1872,7 +1909,7 @@ esta opción son: <code>center</code>, <code>left</code> y <code>right</code>.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>label_orientation</b>
-<a name="IDX2020"></a>
+<a name="IDX2021"></a>
 </dt>
 <dd><p>Valor por defecto: <code>horizontal</code>
 </p>
@@ -1906,7 +1943,7 @@ construir la escena.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>line_type</b>
-<a name="IDX2021"></a>
+<a name="IDX2022"></a>
 </dt>
 <dd><p>Valor por defecto: <code>solid</code>
 </p>
@@ -1943,7 +1980,7 @@ que no esán disponibles en los terminales <code>png</code>, <code>jpg</code> y <
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>line_width</b>
-<a name="IDX2022"></a>
+<a name="IDX2023"></a>
 </dt>
 <dd><p>Valor por defecto: 1
 </p>
@@ -1978,7 +2015,7 @@ Su valor debe ser un número positivo.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>logcb</b>
-<a name="IDX2023"></a>
+<a name="IDX2024"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2010,7 +2047,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>logx</b>
-<a name="IDX2024"></a>
+<a name="IDX2025"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2034,7 +2071,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>logx_secondary</b>
-<a name="IDX2025"></a>
+<a name="IDX2026"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2067,7 +2104,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>logy</b>
-<a name="IDX2026"></a>
+<a name="IDX2027"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2090,7 +2127,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>logy_secondary</b>
-<a name="IDX2027"></a>
+<a name="IDX2028"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2123,7 +2160,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>logz</b>
-<a name="IDX2028"></a>
+<a name="IDX2029"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2147,7 +2184,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>nticks</b>
-<a name="IDX2029"></a>
+<a name="IDX2030"></a>
 </dt>
 <dd><p>Valor por defecto: 29
 </p>
@@ -2179,7 +2216,7 @@ puntos que se representan en las curvas paramétricas y polares.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>palette</b>
-<a name="IDX2030"></a>
+<a name="IDX2031"></a>
 </dt>
 <dd><p>Valor por defecto: <code>color</code>
 </p>
@@ -2262,7 +2299,7 @@ se colorean en rojo y altos en amarillo.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>point_size</b>
-<a name="IDX2031"></a>
+<a name="IDX2032"></a>
 </dt>
 <dd><p>Valor por defecto: 1
 </p>
@@ -2294,7 +2331,7 @@ ser un número no negativo.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>point_type</b>
-<a name="IDX2032"></a>
+<a name="IDX2033"></a>
 </dt>
 <dd><p>Valor por defecto: 1
 </p>
@@ -2345,7 +2382,7 @@ o también nombres de estilos: <code>$none</code> (-1), <code>dot</code> (0), <co
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>points_joined</b>
-<a name="IDX2033"></a>
+<a name="IDX2034"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2386,7 +2423,7 @@ segmentos verticales desde los puntos hasta el eje-x (2D) o hasta el plano-xy (3
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>proportional_axes</b>
-<a name="IDX2034"></a>
+<a name="IDX2035"></a>
 </dt>
 <dd><p>Valor por defecto: <code>none</code>
 </p>
@@ -2432,7 +2469,7 @@ o superior.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>surface_hide</b>
-<a name="IDX2035"></a>
+<a name="IDX2036"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2456,7 +2493,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>terminal</b>
-<a name="IDX2036"></a>
+<a name="IDX2037"></a>
 </dt>
 <dd><p>Valor por defecto: <code>screen</code>
 </p>
@@ -2543,7 +2580,7 @@ cualquier otro caso.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>title</b>
-<a name="IDX2037"></a>
+<a name="IDX2038"></a>
 </dt>
 <dd><p>Valor por defecto: <code>&quot;&quot;</code> (cadena vacía)
 </p>
@@ -2565,7 +2602,7 @@ descripción de la escena no reviste importancia.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>transform</b>
-<a name="IDX2038"></a>
+<a name="IDX2039"></a>
 </dt>
 <dd><p>Valor por defecto: <code>none</code>
 </p>
@@ -2612,7 +2649,7 @@ de aquellas utilizadas en las definiciones de los objetos gráficos.
 
 <dl>
 <dt><u>Opción gráfica:</u> <b>transparent</b>
-<a name="IDX2039"></a>
+<a name="IDX2040"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -2633,31 +2670,6 @@ los polígonos se rellenan de acuerdo con <code>fill_color</code>.
              color       = blue,
              polygon([[5,2],[9,2],[7,5]]) )$
 </pre></dd></dl>
-
-
-
-
-<dl>
-<dt><u>Opción gráfica:</u> <b>tube_extremes</b>
-<a name="IDX2040"></a>
-</dt>
-<dd><p>Valor por defecto: <code>[open, open]</code>
-</p>
-<p>Una lista de dos elementos, <code>open</code> y <code>closed</code>,
-indicando si los extremos de un objeto gráfico <code>tube</code>
-permanece abiertos o si deben ser cerrados. Por defecto, ambos
-extremos se dejan abiertos.
-</p>
-<p>Ejemplo:
-</p>
-<pre class="example">(%i1) load(draw)$
-(%i2) draw3d(
-        tube_extremes = [open, closed],
-        tube(0, 0, a, 1,
-             a, 0, 8) )$
-</pre>
-</dd></dl>
-
 
 
 
@@ -2922,10 +2934,10 @@ descripción de la escena no reviste importancia.
 <dt><u>Opción gráfica:</u> <b>xlabel</b>
 <a name="IDX2051"></a>
 </dt>
-<dd><p>Valor por defecto: <code>&quot;&quot;</code> (cadena vacía)
+<dd><p>Valor por defecto: <code>&quot;&quot;</code>
 </p>
 <p>La opción <code>xlabel</code> almacena una cadena con la
-etiqueta del eje <var>x</var>. Por defecto, el eje no tiene etiqueta.
+etiqueta del eje <var>x</var>. Por defecto, el eje tiene etiqueta <code>&quot;x&quot;</code>.
 </p>
 <p>Puesto que ésta es una opción global, su posición dentro de la
 descripción de la escena no reviste importancia.
@@ -3382,10 +3394,10 @@ descripción de la escena no reviste importancia.
 <dt><u>Opción gráfica:</u> <b>ylabel</b>
 <a name="IDX2070"></a>
 </dt>
-<dd><p>Valor por defecto: <code>&quot;&quot;</code> (cadena vacía)
+<dd><p>Valor por defecto: <code>&quot;&quot;</code>
 </p>
 <p>La opción <code>ylabel</code> almacena una cadena con la
-etiqueta del eje <var>y</var>. Por defecto, el eje no tiene etiqueta.
+etiqueta del eje <var>y</var>. Por defecto, el eje tiene etiqueta <code>&quot;y&quot;</code>.
 </p>
 <p>Puesto que ésta es una opción global, su posición dentro de la
 descripción de la escena no reviste importancia.
@@ -3750,10 +3762,10 @@ descripción de la escena no reviste importancia.
 <dt><u>Opción gráfica:</u> <b>zlabel</b>
 <a name="IDX2086"></a>
 </dt>
-<dd><p>Valor por defecto: <code>&quot;&quot;</code> (cadena vacía)
+<dd><p>Valor por defecto: <code>&quot;&quot;</code>
 </p>
 <p>La opción <code>zlabel</code> almacena una cadena con la
-etiqueta del eje <var>z</var>. Por defecto, el eje no tiene etiqueta.
+etiqueta del eje <var>z</var>. Por defecto, el eje tiene etiqueta <code>&quot;z&quot;</code>.
 </p>
 <p>Puesto que ésta es una opción global, su posición dentro de la
 descripción de la escena no reviste importancia.
@@ -4872,14 +4884,14 @@ con sus centros sobre la curva paramétrica y perpendiculares a ella.
 </p>
 <p>Este objeto se ve afectado por las siguientes <i>opciones gráficas</i>: <code>xu_grid</code>, 
 <code>yv_grid</code>, <code>line_type</code>, <code>line_width</code>, <code>key</code>, <code>wired_surface</code>, <code>enhanced3d</code>,
-<code>color</code> y <code>tube_extremes</code>.
+<code>color</code> y <code>capping</code>.
 </p>
 <p>Ejemplo:
 </p>
 <pre class="example">(%i1) load(draw)$
 (%i2) draw3d(
         enhanced3d = true,
-        xu_grid = 50,
+        xu_grid    = 50,
         tube(cos(a), a, 0, cos(a/10)^2,
              a, 0, 4*%pi) )$
 </pre>
@@ -5475,12 +5487,12 @@ fichero <code>share/draw/worldmap.mac</code> para más
 información). El paquete <code>worldmap</code> carga
 automáticamente el paquete <code>draw</code>.
 </p><pre class="example">(%i1) load(worldmap)$
-(%i2) c1: gr2d(geomap(Canada,United_States,
-                      Mexico,Cuba))$
+(%i2) c1: gr2d(geomap([Canada,United_States,
+                       Mexico,Cuba]))$
 (%i3) c2: gr2d(geomap(Africa))$
-(%i4) c3: gr2d(geomap(Oceania,China,Japan))$
-(%i5) c4: gr2d(geomap(France,Portugal,Spain,
-                      Morocco,Western_Sahara))$
+(%i4) c3: gr2d(geomap([Oceania,China,Japan]))$
+(%i5) c4: gr2d(geomap([France,Portugal,Spain,
+                       Morocco,Western_Sahara]))$
 (%i6) draw(columns  = 2,
            c1,c2,c3,c4)$
 </pre>
@@ -5537,7 +5549,7 @@ y centro (<var>x</var>,<var>y</var>,<var>z</var>). Ambos conos, norte y sur, son
                     [conic_projection,0,0,0,1,90]))$
 </pre></li></ul>
 
-<p>En <a href="http://www.telefonica.net/web2/biomates/maxima/gpdraw/geomap">http://www.telefonica.net/web2/biomates/maxima/gpdraw/geomap</a>
+<p>En <a href="http://riotorto.users.sf.net/gnuplot/geomap">http://riotorto.users.sf.net/gnuplot/geomap</a>
 hay ejemplos más elaborados.
 </p></dd></dl>
 
@@ -5558,7 +5570,7 @@ hay ejemplos más elaborados.
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>abril, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 32. Runtime Environment</title>
+<title>Maxima 5.39.0 Manual: 32. Runtime Environment</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 32. Runtime Environment">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 32. Runtime Environment">
+<meta name="description" content="Maxima 5.39.0 Manual: 32. Runtime Environment">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 32. Runtime Environment">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Runtime-Environment"></a>
 <a name="SEC176"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC177" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_31.html#SEC174" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 32. Runtime Environment </h1>
@@ -115,15 +130,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC178" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC176" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC176" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 32.1 Introduction for Runtime Environment </h2>
@@ -137,9 +152,9 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <p>以下は <code>maxima-init.mac</code>ファイルの例です:
 </p>
-<pre class="example">setup_autoload (&quot;specfun.mac&quot;, ultraspherical, assoc_legendre_p);
+<table><tr><td>&nbsp;</td><td><pre class="example">setup_autoload (&quot;specfun.mac&quot;, ultraspherical, assoc_legendre_p);
 showtime:all;
-</pre>
+</pre></td></tr></table>
 <p>この例では、 <code>setup_autoload</code>はMaximaに
 もし関数 (<code>ultraspherical</code>,
 <code>assoc_legendre_p</code>)のいずれかがコールされた時まだ定義されていなかったら、
@@ -151,7 +166,7 @@ showtime:all;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Session-management">Session management</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Session-management">Session management</a>
 </div>
 </p>
 <p><a name="Item_003a-Interrupts"></a>
@@ -163,15 +178,15 @@ showtime:all;
 <td valign="middle" align="left">[<a href="#SEC179" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC176" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC176" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 32.2 Interrupts </h2>
@@ -182,8 +197,8 @@ showtime:all;
 </p>
 <p>もし
 </p>
-<pre class="example">:lisp (setq *debugger-hook* nil)
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">:lisp (setq *debugger-hook* nil)
+</pre></td></tr></table>
 
 <p>を実行することによって、
 Lisp変数　<code>*debugger-hook*</code>が　<code>nil</code>に設定されているなら、
@@ -200,7 +215,7 @@ Lispデバッガから Maximaに戻る方法は Lispのバージョンそれぞ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Console-interaction">Console interaction</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Console-interaction">Console interaction</a>
 </div>
 </p>
 
@@ -213,15 +228,15 @@ Lispデバッガから Maximaに戻る方法は Lispのバージョンそれぞ�
 <td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC176" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC176" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 32.3 Functions and Variables for Runtime Environment </h2>
@@ -230,7 +245,7 @@ Lispデバッガから Maximaに戻る方法は Lispのバージョンそれぞ�
 <a name="Item_003a-maxima_005ftempdir"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>maxima_tempdir</b>
-<a name="IDX1232"></a>
+<a name="IDX1254"></a>
 </dt>
 <dd><p><code>maxima_tempdir</code>は
 Maximaが一時的なファイルを生成するディレクトリを指名します。
@@ -245,7 +260,7 @@ Maximaが一時的なファイルを生成するディレクトリを指名し�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -253,7 +268,7 @@ Maximaが一時的なファイルを生成するディレクトリを指名し�
 <a name="Item_003a-maxima_005fuserdir"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>maxima_userdir</b>
-<a name="IDX1233"></a>
+<a name="IDX1255"></a>
 </dt>
 <dd><p><code>maxima_userdir</code>は、
 Maximaが Maximaや Lispファイルを見つけるために検索するディレクトリを指名します。
@@ -273,7 +288,7 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -281,7 +296,7 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 <a name="Item_003a-room"></a>
 </p><dl>
 <dt><u>関数:</u> <b>room</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>room</tt> () &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>room</tt> (true) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>room</tt> (false)</i>
-<a name="IDX1234"></a>
+<a name="IDX1256"></a>
 </dt>
 <dd><p>Maximaの記憶装置とスタックマネージメントの状態の描写を印字します。
 <code>room</code>は同じ名前の Lisp関数をコールします。
@@ -297,7 +312,7 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -305,7 +320,7 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 <a name="Item_003a-sstatus"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sstatus</b><i> (<var>keyword</var>, <var>item</var>)</i>
-<a name="IDX1235"></a>
+<a name="IDX1257"></a>
 </dt>
 <dd><p><var>keyword</var>がシンボル <code>feature</code>の時、
 <var>item</var>がシステムフィーチャのリスト上に追加されます。
@@ -315,11 +330,11 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 <var>item</var>はシステムフィーチャのリストから削除されます。
 これはパッケージ作者が、搭載したフィーチャの追跡をするのに役に立つかもしれません。
 </p>
-<p><code>status</code>も参照してください。
+<p><code><a href="#status">status</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Programming">Programming</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Programming">Programming</a>
 </div>
 </p></dd></dl>
 
@@ -327,7 +342,7 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 <a name="Item_003a-status"></a>
 </p><dl>
 <dt><u>関数:</u> <b>status</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>status</tt> (<code>feature</code>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>status</tt> (<code>feature</code>, <var>item</var>)</i>
-<a name="IDX1236"></a>
+<a name="IDX1258"></a>
 </dt>
 <dd><p>いくつかのシステム依存のフィーチャの存在と不在についての情報を返す。
 </p>
@@ -348,14 +363,14 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 <code>status (feature, &quot;ansi-cl&quot;)</code>。
 </li></ul>
 
-<p><code>sstatus</code>も参照してください。
+<p><code><a href="#sstatus">sstatus</a></code>も参照してください。
 </p>
 <p>変数 <code>features</code>は数式に適用されるフィーチャのリストを含みます。
 もっと情報を知るには、 <code>features</code>と <code>featurep</code>を参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Programming">Programming</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Programming">Programming</a>
 </div>
 </p></dd></dl>
 
@@ -364,7 +379,7 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 <a name="Item_003a-system"></a>
 </p><dl>
 <dt><u>関数:</u> <b>system</b><i> (<var>command</var>)</i>
-<a name="IDX1237"></a>
+<a name="IDX1259"></a>
 </dt>
 <dd><p>別のプロセスとして <var>command</var>を実行します。
 コマンドは実行のためデフォルトのシェルに渡されます。
@@ -374,23 +389,23 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 <p><code>_hist.out</code>は、
 <code>xgraph</code>を使ってバーグラフとしてプロットしたい頻度のリストだと仮定します。
 </p>
-<pre class="example">(%i1) (with_stdout(&quot;_hist.out&quot;,
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) (with_stdout(&quot;_hist.out&quot;,
            for i:1 thru length(hist) do (
              print(i,hist[i]))),
        system(&quot;xgraph -bar -brw .7 -nl &lt; _hist.out&quot;));
-</pre>
+</pre></td></tr></table>
 <p>プロットをバックグラウンドで（ Maximaに制御を戻すように）させるようにし、
 終了した後、一次ファルを削除するようにするためには以下のようにします:
 </p>
-<pre class="example">system(&quot;(xgraph -bar -brw .7 -nl &lt; _hist.out;  rm -f _hist.out)&amp;&quot;)
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">system(&quot;(xgraph -bar -brw .7 -nl &lt; _hist.out;  rm -f _hist.out)&amp;&quot;)
+</pre></td></tr></table>
 </dd></dl>
 
 <p><a name="time"></a>
 <a name="Item_003a-time"></a>
 </p><dl>
 <dt><u>関数:</u> <b>time</b><i> (%o1, %o2, %o3, &hellip;)</i>
-<a name="IDX1238"></a>
+<a name="IDX1260"></a>
 </dt>
 <dd><p>出力行 <code>%o1</code>, <code>%o2</code>, <code>%o3</code>,
 &hellip;を計算するために使った時間のリストを秒で返します。
@@ -403,45 +418,64 @@ Maximaが Maximaや Lispファイルを見つけるために検索するディ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
 <p><a name="timedate"></a>
 <a name="Item_003a-timedate"></a>
 </p><dl>
-<dt><u>関数:</u> <b>timedate</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timedate</tt> () &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timedate</tt> (<var>T</var>)</i>
-<a name="IDX1239"></a>
+<dt><u>関数:</u> <b>timedate</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timedate</tt> (<var>T</var>, <var>tz_offset</var>)</i>
+<a name="IDX1261"></a>
 </dt>
-<dd><p>引数なしの <code>timedate()</code>は現在時刻と日付を表す文字列を返します。
-文字列は、フォーマット <code>YYYY-MM-DD HH:MM:SS[+|-]ZZ:ZZ</code>を持ちます。
-ここで、欄は、年、月、日、時、分、秒、時間と分のタイムゾーンオフセットです。
+<dd><br><p>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timedate</tt> (<var>T</var>)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timedate</tt> () &nbsp;</p>
+<p><code>timedate(<var>T</var>, <var>tz_offset</var>)</code>は
+タイムゾーン <var>tz_offset</var>での時刻 <var>T</var>を表す文字列を返します。
+文字列フォーマットは
+(小数部を表すのにひつよなだけの数字を使った)
+<code>YYYY-MM-DD HH:MM:SS.NNN[+|-]ZZ:ZZ</code>か
+もし小数部がなければ <code>YYYY-MM-DD HH:MM:SS[+|-]ZZ:ZZ</code>です。
 </p>
-<p><code>timedate(<var>T</var>)</code>はフォーマット
-<code>YYYY-MM-DD HH:MM:SS[+|-]ZZ:ZZ</code>の文字列として時刻
-<var>T</var>を返します。
-<var>T</var>は <code>absolute_real_time</code>が返すような
-1990年1月1日の真夜中以来の秒数として解釈されます。
+<p><var>T</var>は GMTタイムゾーンで1900年1月1日0時から測定された秒です。
+</p>
+<p><var>tz_offset</var>はGMTからのタイムゾーンのオフセット時間です。
+東が正で西が負です。
+<var>tz_offset</var>は-24以上24以下の整数か有理数か浮動小数点でなければいけません。
+もし <var>tz_offset</var>が1/60の倍数でなければ、
+それは最も近い1/60の倍数に丸められます。
+</p>
+<p><code>timedate(<var>T</var>)</code>は
+ローカルタイムゾーンのオフセットに等しい <var>tz_offset</var>での
+<code>timedate(<var>T</var>, <var>tz_offset</var>)</code>と同値です。
+</p>
+<p><code>timedate()</code>は <code>timedate(absolute_real_time())</code>と同値です。
+すなわち、ローカルタイムゾーンで現在時刻を返します。
 </p>
 <p>例:
 </p>
 <p>引数なしの <code>timedate()</code>は現在時刻と日付を表す文字列を返します。
 </p>
-<pre class="example">(%i1) d : timedate ();
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) d : timedate ();
 (%o1)                      2010-06-08 04:08:09+01:00
 (%i2) print (&quot;timedate reports current time&quot;, d) $
 timedate reports current time 2010-06-08 04:08:09+01:00
-</pre>
+</pre></td></tr></table>
 <p>引数ありの <code>timedate</code>は引数を表す文字列を返します。
 </p>
-<pre class="example">(%i1) timedate (0);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) timedate (0);
 (%o1)                      1900-01-01 01:00:00+01:00
 (%i2) timedate (absolute_real_time () - 7*24*3600);
 (%o2)                      2010-06-01 04:19:51+01:00
-</pre>
+</pre></td></tr></table>
+<p>オプションのタイムゾーンオフセットありの <code>timedate</code>。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) timedate (1000000000, -9.5);
+(%o1)               1931-09-09 16:16:40-09:30
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Time-and-date-functions">Time and date functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Time-and-date-functions">Time and date functions</a>
 </div>
 </p></dd></dl>
 
@@ -449,12 +483,15 @@ timedate reports current time 2010-06-08 04:08:09+01:00
 <a name="Item_003a-parse_005ftimedate"></a>
 </p><dl>
 <dt><u>関数:</u> <b>parse_timedate</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>parse_timedate</tt> (<var>S</var>)</i>
-<a name="IDX1240"></a>
+<a name="IDX1262"></a>
 </dt>
 <dd><p>日付や日時を表す文字列 <var>S</var>をパースし、GMT 1900年1月1日零時からの秒数を返します。
-もしゼロでないミリ秒部分があれば戻り値は有理数で、そうでなければ整数です。
+もしゼロでない小数部があれば戻り値は有理数で、そうでなければ整数です。
+もし許されるフォーマットのどれによっても <var>S</var>をパースできなければ、
+<code>parse_timedate</code>は <code>false</code>を返します。
 </p>
-<p>文字列 <var>S</var>は以下のフォーマットのいずれかでなければいけません:
+<p>文字列 <var>S</var>は、オプションとしてタイムゾーン指定が続くような
+以下のフォーマットのいずれかでなければいけません:
 </p>
 <ul>
 <li>
@@ -465,16 +502,49 @@ timedate reports current time 2010-06-08 04:08:09+01:00
 <code>YYYY-MM-DD</code>
 </li></ul>
 
-<p>ここで、フィールドは年、月、日、時、分、秒、ミリ秒で、
+<p>ここで、フィールドは年、月、日、時、分、秒、少数で、
 カギ括弧は可能な代替文字を示します。
+小数は1つ以上の数字を含むかもしれません。
 </p>
-<p><code>timedate</code>と <code>absolute_real_time</code>も参照してください。
+<p>秒の小数を除いてそれぞれの欄は指定の数字数を持たなければいけません:
+年は4つの数字、月、日、時間、分、秒は2つの数字。
+</p>
+<p>タイムゾーン指定は以下の形式のどれかでなくてはいけません:
+</p>
+<ul>
+<li>
+<code>[+-]hh:mm</code>
+</li><li>
+<code>[+-]hhmm</code>
+</li><li>
+<code>[+-]hh</code>
+</li><li>
+<code>Z</code>
+</li></ul>
+
+<p>ここで <code>hh</code>と <code>mm</code>は時刻と分です
+符号はGMTの東 (<code>+</code>)か西 (<code>-</code>)です。
+タイムゾーンは+24時間から-24時間までです。
+</p>
+<p>文字 <code>Z</code>は <code>+00:00</code>やその変形と同値で、
+GMTを示します。
+</p>
+<p>もしタイムゾーン指定がないなら、
+時刻はローカルタイムゾーンと仮定されます。
+</p>
+<p>頭やお尻の空白文字(スペース, タブ, 改行, キャリッジリターン)は無視されますが、
+他の文字は <code>parse_timedate</code>が失敗して <code>false</code>を返す原因となります。
+</p>
+<p><code><a href="#timedate">timedate</a></code>と <code><a href="#absolute_005freal_005ftime">absolute_real_time</a></code>も参照してください。
 </p>
 <p>例:
 </p>
 <p>可能なフォーマットそれぞれでのローカルタイムゾーンでの 1900年1月1日零時。
+結果はローカルタイムゾーンでの秒数です。
+GMTに先行する場合マイナスでGMTに遅れる場合プラスされます。
+この例ではローカルタイムゾーンはGMTに遅れること8時間です。
 </p>
-<pre class="example">(%i1) parse_timedate (&quot;1900-01-01 00:00:00,000&quot;);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) parse_timedate (&quot;1900-01-01 00:00:00,000&quot;);
 (%o1)                         28800
 (%i2) parse_timedate (&quot;1900-01-01 00:00:00.000&quot;);
 (%o2)                         28800
@@ -488,10 +558,28 @@ timedate reports current time 2010-06-08 04:08:09+01:00
 (%o6)                         28800
 (%i7) parse_timedate (&quot;1900-01-01&quot;);
 (%o7)                         28800
-</pre>
+</pre></td></tr></table>
+<p>異なる指定のタイムゾーンでの 1900年1月1日零時。
+Midnight, January 1, 1900, GMT, in different indicated time zones.
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) parse_timedate (&quot;1900-01-01 19:00:00+19:00&quot;);
+(%o1)                           0
+(%i2) parse_timedate (&quot;1900-01-01 07:00:00+07:00&quot;);
+(%o2)                           0
+(%i3) parse_timedate (&quot;1900-01-01 01:00:00+01:00&quot;);
+(%o3)                           0
+(%i4) parse_timedate (&quot;1900-01-01Z&quot;);
+(%o4)                           0
+(%i5) parse_timedate (&quot;1899-12-31 21:00:00-03:00&quot;);
+(%o5)                           0
+(%i6) parse_timedate (&quot;1899-12-31 13:00:00-11:00&quot;);
+(%o6)                           0
+(%i7) parse_timedate (&quot;1899-12-31 08:00:00-16:00&quot;);
+(%o7)                           0
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Time-and-date-functions">Time and date functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Time-and-date-functions">Time and date functions</a>
 </div>
 </p></dd></dl>
 
@@ -499,23 +587,23 @@ timedate reports current time 2010-06-08 04:08:09+01:00
 <a name="Item_003a-absolute_005freal_005ftime"></a>
 </p><dl>
 <dt><u>関数:</u> <b>absolute_real_time</b><i> ()</i>
-<a name="IDX1241"></a>
+<a name="IDX1263"></a>
 </dt>
-<dd><p>協定世界時で1900年1月1日の深夜以来の秒数を返します。
+<dd><p>GMTで1900年1月1日0時からの秒数を返します。
 戻り値は整数です。
 </p>
-<p><code>elapsed_real_time</code>と <code>elapsed_run_time</code>も参照してください。
+<p><code><a href="#elapsed_005freal_005ftime">elapsed_real_time</a></code>と <code><a href="#elapsed_005frun_005ftime">elapsed_run_time</a></code>も参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) absolute_real_time ();
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) absolute_real_time ();
 (%o1)                      3385045277
 (%i2) 1900 + absolute_real_time () / (365.25 * 24 * 3600);
 (%o2)                   2007.265612087104
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Time-and-date-functions">Time and date functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Time-and-date-functions">Time and date functions</a>
 </div>
 </p></dd></dl>
 
@@ -523,25 +611,25 @@ timedate reports current time 2010-06-08 04:08:09+01:00
 <a name="Item_003a-elapsed_005freal_005ftime"></a>
 </p><dl>
 <dt><u>関数:</u> <b>elapsed_real_time</b><i> ()</i>
-<a name="IDX1242"></a>
+<a name="IDX1264"></a>
 </dt>
 <dd><p>Maximaがもっとも最近スタートしたか再スタートして以来の
 (1秒の小数を含む)秒数を返します。
 戻り値は浮動小数点数です。
 </p>
-<p><code>absolute_real_time</code>と <code>elapsed_run_time</code>も参照してください。
+<p><code><a href="#absolute_005freal_005ftime">absolute_real_time</a></code>と <code><a href="#elapsed_005frun_005ftime">elapsed_run_time</a></code>も参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) elapsed_real_time ();
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) elapsed_real_time ();
 (%o1)                       2.559324
 (%i2) expand ((a + b)^500)$
 (%i3) elapsed_real_time ();
 (%o3)                       7.552087
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Time-and-date-functions">Time and date functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Time-and-date-functions">Time and date functions</a>
 </div>
 </p></dd></dl>
 
@@ -549,25 +637,25 @@ timedate reports current time 2010-06-08 04:08:09+01:00
 <a name="Item_003a-elapsed_005frun_005ftime"></a>
 </p><dl>
 <dt><u>関数:</u> <b>elapsed_run_time</b><i> ()</i>
-<a name="IDX1243"></a>
+<a name="IDX1265"></a>
 </dt>
 <dd><p>Maximaがもっとも最近スタートしたか再スタートして以来
 Maximaが計算に費やした(1秒の小数を含む)秒数の概算を返します。
 戻り値は浮動小数点数です。
 </p>
-<p><code>absolute_real_time</code>と <code>elapsed_real_time</code>も参照してください。
+<p><code><a href="#absolute_005freal_005ftime">absolute_real_time</a></code>と <code><a href="#elapsed_005freal_005ftime">elapsed_real_time</a></code>も参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) elapsed_run_time ();
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) elapsed_run_time ();
 (%o1)                         0.04
 (%i2) expand ((a + b)^500)$
 (%i3) elapsed_run_time ();
 (%o3)                         1.26
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Time-and-date-functions">Time and date functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Time-and-date-functions">Time and date functions</a>
 </div>
 </p></dd></dl>
 
@@ -581,14 +669,14 @@ Maximaが計算に費やした(1秒の小数を含む)秒数の概算を返し�
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

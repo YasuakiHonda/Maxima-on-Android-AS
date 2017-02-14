@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 2. Programmfehler </h1>
@@ -107,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 2.1 Einf&uuml;hrung in Programmfehler </h2>
@@ -141,7 +141,7 @@ Testen der Installation und das Berichten von Fehlern:
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 2.2 Funktionen und Variablen f&uuml;r Programmfehler </h2>
@@ -325,18 +325,19 @@ hilfreich, die Maxima- und Lisp-Version in den Fehlerbericht aufzunehmen.
 <p>Beispiel:
 </p>
 <pre class="example">(%i1) bug_report();
-The Maxima bug database is available at
-    http://sourceforge.net/tracker/?atid=104933&amp;group_id=4933
-Submit bug reports by following the 'Add new' link on that page.
+
+Please report bugs to:
+    https://sourceforge.net/p/maxima/bugs/
+To report a bug, you must have a Sourceforge account.
 Please include the following information with your bug report:
 -------------------------------------------------------------
-Maxima version: 5.20post
-Maxima build date: 19:59 5/10/2010
-Host type: i686-pc-linux-gnu
-Lisp implementation type: SBCL
-Lisp implementation version: 1.0.29.11.debian
+Maxima version: &quot;5.36.1&quot;
+Maxima build date: &quot;2015-06-02 11:26:48&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;GNU Common Lisp (GCL)&quot;
+Lisp implementation version: &quot;GCL 2.6.12&quot;
 -------------------------------------------------------------
-The above information is also reported by the function 'build_info'
+The above information is also reported by the function 'build_info()'.
 </pre></dd></dl>
 
 <p><a name="build_005finfo"></a>
@@ -344,18 +345,58 @@ The above information is also reported by the function 'build_info'
 <dt><u>Funktion:</u> <b>build_info</b><i> ()</i>
 <a name="IDX4"></a>
 </dt>
-<dd><p>Zeigt die Maxima- und Lisp-Version der Installation.  <code>build_info</code> gibt
-eine leere Zeichenkette <code>&quot;&quot;</code> zur&uuml;ck.
+<dd><p>Zeigt die Maxima- und Lisp-Version der Installation.  <code>build_info</code> gibt die Eigenschaften der Maxima-Version als Maxima structure (definiert durch <code>defstruct</code>) zur&uuml;ck.
+Die Felder der Struktur sind:
+<code>version</code>, <code>timestamp</code>, <code>host</code>, <code>lisp_name</code> und <code>lisp_version</code>.
+Wenn die Ausgabe formatiert erfolgt (mit <code>display2d:true;</code>),
+werden die Ergebnisse als kurze Tabelle ausgegeben.
 </p>
 <p>Beispiel:
 </p>
+<pre class="example">(%i1) build_info ();
+(%o1) 
+Maxima version: &quot;5.36.1&quot;
+Maxima build date: &quot;2015-06-02 11:26:48&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;GNU Common Lisp (GCL)&quot;
+Lisp implementation version: &quot;GCL 2.6.12&quot;
+(%i2) x : build_info ()$
+(%i3) x@version;
+(%o3)                               5.36.1
+(%i4) x@timestamp;
+(%o4)                         2015-06-02 11:26:48
+(%i5) x@host;
+(%o5)                      x86_64-unknown-linux-gnu
+(%i6) x@lisp_name;
+(%o6)                        GNU Common Lisp (GCL)
+(%i7) x@lisp_version;
+(%o7)                             GCL 2.6.12
+(%i8) x;
+(%o8) 
+Maxima version: &quot;5.36.1&quot;
+Maxima build date: &quot;2015-06-02 11:26:48&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;GNU Common Lisp (GCL)&quot;
+Lisp implementation version: &quot;GCL 2.6.12&quot;
+</pre>
+<p>Der Versionsstring (hier 5.36.1) kann auch folgendermassen aussehen:
+branch_5_37_base_331_g8322940_dirty
+</p>
 <pre class="example">(%i1) build_info();
-Maxima version: 5.20post
-Maxima build date: 19:59 5/10/2010
-Host type: i686-pc-linux-gnu
-Lisp implementation type: SBCL
-Lisp implementation version: 1.0.29.11.debian
-</pre></dd></dl>
+(%o1) 
+Maxima version: &quot;branch_5_37_base_331_g8322940_dirty&quot;
+Maxima build date: &quot;2016-01-01 15:37:35&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;CLISP&quot;
+Lisp implementation version: &quot;2.49 (2010-07-07) (built 3605577779) 
+     (memory 3660647857)&quot;
+</pre>
+<p>In diesem Fall wurde Maxima nicht von einem Release sondern direkt aus dem Git checkout des
+Sourcecodes compiliert.
+Im obigen Beispiel ist der Checkout 331 Commits nach dem letzten Git-Tag (&uuml;blicherweise ein
+Maxima-Release (5.37 im obigen Beispiel)) und der verk&uuml;rzte Commit Hash des letzten Commits
+lautet &quot;8322940&quot;.
+</p></dd></dl>
 
 
 
@@ -370,12 +411,12 @@ Lisp implementation version: 1.0.29.11.debian
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

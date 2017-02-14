@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 55. lapack </h1>
@@ -107,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 55.1 Introduction to lapack </h2>
@@ -131,17 +131,17 @@ Fortran library LAPACK, as obtained from the SLATEC project.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 55.2 Functions and Variables for lapack </h2>
 
 <dl>
 <dt><u>Function:</u> <b>dgeev</b><i> (<var>A</var>)</i>
-<a name="IDX2414"></a>
+<a name="IDX2421"></a>
 </dt>
 <dt><u>Function:</u> <b>dgeev</b><i> (<var>A</var>, <var>right_p</var>, <var>left_p</var>)</i>
-<a name="IDX2415"></a>
+<a name="IDX2422"></a>
 </dt>
 <dd><p>Computes the eigenvalues and, optionally, the eigenvectors of a matrix <var>A</var>.
 All elements of <var>A</var> must be integer or floating point numbers.
@@ -209,7 +209,7 @@ equal to 1, and largest component has imaginary part equal to zero.
 
 <dl>
 <dt><u>Function:</u> <b>dgeqrf</b><i> (<var>A</var>)</i>
-<a name="IDX2416"></a>
+<a name="IDX2423"></a>
 </dt>
 <dd><p>Computes the QR decomposition of the matrix <var>A</var>.
 All elements of <var>A</var> must be integer or floating point numbers.
@@ -246,7 +246,7 @@ errors).
 
 <dl>
 <dt><u>Function:</u> <b>dgesv</b><i> (<var>A</var>, <var>b</var>)</i>
-<a name="IDX2417"></a>
+<a name="IDX2424"></a>
 </dt>
 <dd><p>Computes the solution <var>x</var> of the linear equation <em><var>A</var> <var>x</var> =
 <var>b</var></em>, where <var>A</var> is a square matrix, and <var>b</var> is a matrix of the same
@@ -322,10 +322,10 @@ numbers.
 
 <dl>
 <dt><u>Function:</u> <b>dgesvd</b><i> (<var>A</var>)</i>
-<a name="IDX2418"></a>
+<a name="IDX2425"></a>
 </dt>
 <dt><u>Function:</u> <b>dgesvd</b><i> (<var>A</var>, <var>left_p</var>, <var>right_p</var>)</i>
-<a name="IDX2419"></a>
+<a name="IDX2426"></a>
 </dt>
 <dd><p>Computes the singular value decomposition (SVD) of a matrix <var>A</var>, comprising
 the singular values and, optionally, the left and right singular vectors.
@@ -429,10 +429,10 @@ The third item is <code>false</code> or the matrix of right singular vectors.
 
 <dl>
 <dt><u>Function:</u> <b>dlange</b><i> (<var>norm</var>, <var>A</var>)</i>
-<a name="IDX2420"></a>
+<a name="IDX2427"></a>
 </dt>
 <dt><u>Function:</u> <b>zlange</b><i> (<var>norm</var>, <var>A</var>)</i>
-<a name="IDX2421"></a>
+<a name="IDX2428"></a>
 </dt>
 <dd><p>Computes a norm or norm-like function of the matrix <var>A</var>.
 </p>
@@ -459,10 +459,10 @@ that is, the square root of the sum of squares of the matrix elements.
 
 <dl>
 <dt><u>Function:</u> <b>dgemm</b><i> (<var>A</var>, <var>B</var>)</i>
-<a name="IDX2422"></a>
+<a name="IDX2429"></a>
 </dt>
 <dt><u>Function:</u> <b>dgemm</b><i> (<var>A</var>, <var>B</var>, <var>options</var>)</i>
-<a name="IDX2423"></a>
+<a name="IDX2430"></a>
 </dt>
 <dd><p>Compute the product of two matrices and optionally add the product to
 a third matrix.
@@ -589,12 +589,12 @@ for the product.  The default is <code>false</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

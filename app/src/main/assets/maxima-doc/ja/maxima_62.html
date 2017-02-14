@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 62. lapack</title>
+<title>Maxima 5.39.0 Manual: 62. grobner</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 62. lapack">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 62. lapack">
+<meta name="description" content="Maxima 5.39.0 Manual: 62. grobner">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 62. grobner">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,619 +72,1123 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="lapack"></a>
-<a name="SEC306"></a>
+<a name="grobner_002dpkg"></a>
+<a name="SEC298"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_61.html#SEC305" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC307" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_61.html#SEC297" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC299" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_61.html#SEC303" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 62. lapack </h1>
+<h1 class="chapter"> 62. grobner </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC307">62.1 Introduction to lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC299">62.1 Introduction to grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC308">62.2 Functions and Variables for lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC302">62.2 Functions and Variables for grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Introduction-to-lapack"></a>
+<p><a name="Item_003a-Introduction-to-grobner"></a>
 </p><hr size="6">
-<a name="Introduction-to-lapack"></a>
-<a name="SEC307"></a>
+<a name="Introduction-to-grobner"></a>
+<a name="SEC299"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC306" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC308" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC298" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC300" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 62.1 Introduction to lapack </h2>
+<h2 class="section"> 62.1 Introduction to grobner </h2>
 
-<p><code>lapack</code>は SLATECプロジェクトから得られるような Fortranライブラリ
-LAPACKの(プログラム <code>f2cl</code>を介した) Common Lisp翻訳です。
+<p><code>grobner</code>は Maximaで Groebner基底を使うためのパッケージです。
 </p>
-<p>(訳者注意書き: lapackを使用するには、
-load(&quot;lapack&quot;); load(&quot;eigensys&quot;);を実行してください。
-load(&quot;lapack&quot;)には、初回だけコンパイルで時間がかかるかもしれません。)
+
+<p>以下の関数を使うには <tt>`grobner.lisp'</tt>パッケージをロードしなければいけません。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">load(grobner);
+</pre></td></tr></table>
+
+<table><tr><td>&nbsp;</td><td><pre class="example">demo(&quot;grobner.demo&quot;);
+</pre></td></tr></table>
+
+<p>もしくは
+</p><table><tr><td>&nbsp;</td><td><pre class="example">batch(&quot;grobner.demo&quot;)
+</pre></td></tr></table><p>でデモを開始することができます。
+</p>
+
+<p>デモの中の計算のいくつかは長い時間かかります。
+だから、デモの出力 <tt>`grobner-demo.output'</tt>を
+デモファイルと同じディレクトリに用意しています。
+</p>
+<hr size="6">
+<a name="SEC300"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC299" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC301" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC299" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.1.1 Notes on the grobner package </h3>
+<p>パッケージは
+</p>
+
+<p>Marek Rychlik 
+</p>
+
+<p><a href="http://alamos.math.arizona.edu">http://alamos.math.arizona.edu</a>
+</p>
+
+<p>によって書かれ、
+General Public License(GPL)の条件の下、 2002-05-24にリリースされました。
+(ファイル <tt>`grobner.lisp'</tt>を参照してください。)
+このドキュメントはファイル
+</p><p align="left"><tt>`README'</tt>, <tt>`grobner.lisp'</tt>, <tt>`grobner.demo'</tt>, <tt>`grobner-demo.output'</tt>
+</p><p>から
+</p>
+
+<p>G&uuml;nter Nowakによって抽出されました。
+</p>
+<p>ドキュメントの改善に関する提案は
+<em>maxima</em>メーリングリスト
+<a href="mailto:maxima@math.utexas.edu">maxima@math.utexas.edu</a>で議論することができます。
+現在、コードは若干古くなっています。
+モダンな実装は以下に記載されている高速の <em>F4</em>アルゴリズムを使います。
+</p><table><tr><td>&nbsp;</td><td><pre class="smallformat">A new efficient algorithm for computing Gr&ouml;bner bases (F4) 
+Jean-Charles Faug&egrave;re
+LIP6/CNRS Universit&eacute; Paris VI 
+January 20, 1999
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Groebner-bases">Groebner bases</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+<hr size="6">
+<a name="SEC301"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC300" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC299" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.1.2 Implementations of admissible monomial orders in grobner </h3>
+
+<ul>
+<li> <code>lex</code>
+
+<p>純粋に辞書式の、単項式比較のデフォルト順序。
+</p></li><li> <code>grlex</code>
+
+<p>全次数順序。同点は辞書式で決めます。
+</p>
+</li><li> <code>grevlex</code>
+
+<p>全次数。同点は逆辞書式で決めます。
+</p>
+</li><li> <code>invlex</code>
+
+<p>逆時書式順序。
+</p>
+</li></ul>
+
+<p><a name="Item_003a-Functions-and-Variables-for-grobner"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-grobner"></a>
+<a name="SEC302"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC301" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC303" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 62.2 Functions and Variables for grobner </h2>
+
+<hr size="6">
+<a name="SEC303"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC302" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC304" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.2.1 Global switches for grobner </h3>
+
+<p><a name="Item_003a-poly_005fmonomial_005forder"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_monomial_order</b>
+<a name="IDX2198"></a>
+</dt>
+<dd><p>デフォルト値: <code>lex</code>
+</p>
+<p>このグローバルスイッチはどの単項式順序を多項式と Groebner基底計算で使うか制御します。
+もし設定しないなら <code>lex</code>を使います。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
+</dd></dl>
 
-<p><a name="Item_003a-Functions-and-Variables-for-lapack"></a>
-</p><hr size="6">
-<a name="Functions-and-Variables-for-lapack"></a>
-<a name="SEC308"></a>
+
+<p><a name="Item_003a-poly_005fcoefficient_005fring"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_coefficient_ring</b>
+<a name="IDX2199"></a>
+</dt>
+<dd><p>デフォルト値: <code>expression_ring</code>
+</p>
+<p>このスイッチは grober計算で使う多項式の係数環を示します。
+もし設定しないなら <em>maximaの</em> 一般式環を使います。
+もし望むならこの変数を <code>ring_of_integers</code>に設定できます。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fprimary_005felimination_005forder"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_primary_elimination_order</b>
+<a name="IDX2200"></a>
+</dt>
+<dd><p>デフォルト値: <code>false</code>
+</p>
+<p>消去ベース関数で消去される変数のデフォルト順序名。
+設定しないなら <code>lex</code>を使います。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fsecondary_005felimination_005forder"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_secondary_elimination_order</b>
+<a name="IDX2201"></a>
+</dt>
+<dd><p>デフォルト値: <code>false</code>
+</p>
+<p>消去ベース関数で保持される変数のデフォルト順序名。
+設定しないなら <code>lex</code>を使います。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005felimination_005forder"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_elimination_order</b>
+<a name="IDX2202"></a>
+</dt>
+<dd><p>デフォルト値: <code>false</code>
+</p>
+<p>消去計算で使われるデフォルト消去順序名。
+設定したなら、
+変数 <code>poly_primary_elimination_order</code>と
+<code>poly_secondary_elimination_order</code>の設定を上書きします。
+ユーザーはこれが消去変数の数に有効な真の消去順序であることを保証しなければいけません。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005freturn_005fterm_005flist"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_return_term_list</b>
+<a name="IDX2203"></a>
+</dt>
+<dd><p>デフォルト値: <code>false</code>
+</p>
+<p>もし <code>true</code>に設定したなら、
+このパッケージの関数すべては
+<em>maxima</em>一般式ではなく、
+それぞれの多項式を現在の単項式順序で並べた項のリストとして返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fgrobner_005fdebug"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_grobner_debug</b>
+<a name="IDX2204"></a>
+</dt>
+<dd><p>デフォルト値: <code>false</code>
+</p>
+<p>もし <code>true</code>に設定したなら、
+デバッグ用、トレース用出力を生成します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fgrobner_005falgorithm"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_grobner_algorithm</b>
+<a name="IDX2205"></a>
+</dt>
+<dd><p>デフォルト値: <code>buchberger</code>
+</p>
+<p>可能な値: 
+</p><ul class="toc">
+<li> <code>buchberger</code>
+</li><li> <code>parallel_buchberger</code>
+</li><li> <code>gebauer_moeller</code>
+</li></ul>
+
+<p>Groebner基底を見つけるのに使うアルゴリズム名。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005ftop_005freduction_005fonly"></a>
+</p><dl>
+<dt><u>オブション変数:</u> <b>poly_top_reduction_only</b>
+<a name="IDX2206"></a>
+</dt>
+<dd><p>デフォルト値: <code>false</code>
+</p>
+<p>もし <code>false</code>でないなら、
+可能な時はいつでも、頭項簡約を使います。
+頭項簡約は割り算アルゴリズムが最初の簡約後に停止することを意味します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<hr size="6">
+<a name="SEC304"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC307" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC303" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC305" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 62.2 Functions and Variables for lapack </h2>
-
-<p><a name="Item_003a-dgeev"></a>
+<h3 class="subsection"> 62.2.2 Simple operators in grobner </h3>
+<p><code>poly_add</code>, <code>poly_subtract</code>, <code>poly_multiply</code>, <code>poly_expt</code>は
+多項式の算出演算子です。
+これらは内部表現を使って実行されますが、
+結果は <em>maxima</em>一般形式に変換されます。
+</p>
+<p><a name="Item_003a-poly_005fadd"></a>
 </p><dl>
-<dt><u>関数:</u> <b>dgeev</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgeev</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgeev</tt> (<var>A</var>, <var>right_p</var>, <var>left_p</var>)</i>
+<dt><u>関数:</u> <b>poly_add</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2207"></a>
+</dt>
+<dd><p>2つの多項式 <var>poly1</var>と <var>poly2</var>を足します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">
+(%i1) poly_add(z+x^2*y,x-z,[x,y,z]);
+                                    2
+(%o1)                              x  y + x
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fsubtract"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_subtract</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2208"></a>
+</dt>
+<dd><p>多項式 <var>poly1</var>から <var>poly2</var>を引きます。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">
+(%i1) poly_subtract(z+x^2*y,x-z,[x,y,z]);
+                                      2
+(%o1)                          2 z + x  y - x
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fmultiply"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_multiply</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2209"></a>
+</dt>
+<dd><p>多項式 <var>poly1</var>と <var>poly2</var>の積を返します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">
+(%i2) poly_multiply(z+x^2*y,x-z,[x,y,z])-(z+x^2*y)*(x-z),expand;
+(%o1)                                  0
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fs_005fpolynomial"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_s_polynomial</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2210"></a>
+</dt>
+<dd><p>2つの多項式 <var>poly1</var>と <var>poly2</var>の
+<em>シジジー (syzygy)多項式</em> (<em>S多項式</em>)を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fprimitive_005fpart"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_primitive_part</b><i> (<var>poly1</var>, <var>varlist</var>)</i>
+<a name="IDX2211"></a>
+</dt>
+<dd><p>多項式 <var>poly1</var>を係数の GCDで割ったものを返します。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) poly_primitive_part(35*y+21*x,[x,y]);
+(%o1)                              5 y + 3 x
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fnormalize"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_normalize</b><i> (<var>poly</var>, <var>varlist</var>)</i>
 <a name="IDX2212"></a>
 </dt>
-<dd><p>行列 <var>A</var>の固有値と、オプションで固有ベクトルを計算します。
-<var>A</var>の要素はすべて整数か浮動小数点数でなければいけません。
-<var>A</var>は平方(行と列が同じ数)でなければいけません。
-<var>A</var>は対称であってもなくてもいいです。
+<dd><p>多項式 <var>poly1</var>を主係数で割ったものを返します。
+割り算が可能であることを仮定しています。
+これは体の場合には大丈夫ですが、環の場合にはいつも可能なわけではありません。
 </p>
-<p><code>dgeev(<var>A</var>)</code>は<var>A</var>の固有値だけを計算します。
-<code>dgeev(<var>A</var>, <var>right_p</var>, <var>left_p</var>)</code>は
-<var>A</var>の固有値と、
-<em><var>right_p</var> = <code>true</code></em>の時、右固有ベクトル、
-<em><var>left_p</var> = <code>true</code></em>の時、左固有ベクトルを計算します。
-</p>
-<p>3項目のリストが返されます。
-最初の項目は固有値のリストです。
-二番目の項目は <code>false</code>か右固有ベクトルの行列です。
-三番目の項目は <code>false</code>か左固有ベクトルの行列です。
-</p>
-<p>右固有ベクトル <em>v(j)</em> (右固有ベクトル行列の <em>j</em>番目の列)は
-</p>
-<p><em>A . v(j) = lambda(j) . v(j)</em>
-</p>
-<p>を満たします。ここで <em>lambda(j)</em>は対応する固有値です。
-</p>
-<p>左固有ベクトル <em>v(j)</em> (左固有ベクトル行列の <em>j</em>番目の列)は
-</p>
-<p><em>u(j)**H . A = lambda(j) . u(j)**H</em>
-</p>
-<p>を満たします。ここで <em>u(j)**H</em>は <em>u(j)</em>の共役転置を意味します。
-Maxima関数 <code>ctranspose</code>が共役転置を計算します。
-</p>
-<p>計算された固有ベクトルは、
-Euclideanノルムが 1に等しく、最大成分の虚部が
-0になるように規格化されます。
-</p>
-<p>例:
-</p>
-<pre class="example">(%i1) load (lapack)$
-(%i2) fpprintprec : 6;
-(%o2)                           6
-(%i3) M : matrix ([9.5, 1.75], [3.25, 10.45]);
-                         [ 9.5   1.75  ]
-(%o3)                    [             ]
-                         [ 3.25  10.45 ]
-(%i4) dgeev (M);
-(%o4)          [[7.54331, 12.4067], false, false]
-(%i5) [L, v, u] : dgeev (M, true, true);
-                           [ - .666642  - .515792 ]
-(%o5) [[7.54331, 12.4067], [                      ], 
-                           [  .745378   - .856714 ]
-                                        [ - .856714  - .745378 ]
-                                        [                      ]]
-                                        [  .515792   - .666642 ]
-(%i6) D : apply (diag_matrix, L);
-                      [ 7.54331     0    ]
-(%o6)                 [                  ]
-                      [    0     12.4067 ]
-(%i7) M . v - v . D;
-                [      0.0       - 8.88178E-16 ]
-(%o7)           [                              ]
-                [ - 8.88178E-16       0.0      ]
-(%i8) transpose (u) . M - D . transpose (u);
-                     [ 0.0  - 4.44089E-16 ]
-(%o8)                [                    ]
-                     [ 0.0       0.0      ]
-</pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgeqrf"></a>
+<hr size="6">
+<a name="SEC305"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC304" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC306" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.2.3 Other functions in grobner </h3>
+
+<p><a name="Item_003a-poly_005fexpand"></a>
 </p><dl>
-<dt><u>関数:</u> <b>dgeqrf</b><i> (<var>A</var>)</i>
+<dt><u>関数:</u> <b>poly_expand</b><i> (<var>poly</var>, <var>varlist</var>)</i>
 <a name="IDX2213"></a>
 </dt>
-<dd><p>行列 <var>A</var>の QR分解します。
-<var>A</var>のすべての要素は整数か浮動小数点数でなければいけません。
-<var>A</var>は行と列の数は同じかもしれませんし違うかもしれません。
-</p>
-<p>2つの項目のリストを返します。
-一番目の項目は行列 <var>Q</var>で、それは <var>A</var>と同じ行数を持つ平方正規直交行列です。
-二番目の項目は行列 <var>R</var>で、それは <var>A</var>と同じサイズで、
-対角以下のすべての要素が零に等しいものです。
-積 <code><var>Q</var> . <var>R</var></code>は(浮動小数点の丸め誤差を除いて) <var>A</var>に等しい。
-ここで &quot;.&quot;は非可換乗算演算子です。
-</p>
-<pre class="example">(%i1) load (lapack) $
-(%i2) fpprintprec : 6 $
-(%i3) M : matrix ([1, -3.2, 8], [-11, 2.7, 5.9]) $
-(%i4) [q, r] : dgeqrf (M);
-       [ - .0905357  .995893  ]
-(%o4) [[                      ], 
-       [  .995893    .0905357 ]
-                               [ - 11.0454   2.97863   5.15148 ]
-                               [                               ]]
-                               [     0      - 2.94241  8.50131 ]
-(%i5) q . r - M;
-         [ - 7.77156E-16   1.77636E-15   - 8.88178E-16 ]
-(%o5)    [                                             ]
-         [      0.0       - 1.33227E-15   8.88178E-16  ]
-(%i6) mat_norm (%, 1);
-(%o6)                      3.10862E-15
-</pre>
+<dd><p>この関数は多項式を内部形式にパースします。
+もし <var>poly</var>が多項式を正確にパースしたら、それは
+<code>expand(<var>poly</var>)</code>と同値です。
+もし表現が変数
+<var>varlist</var>の多項式と互換性がないなら、結果はエラーです。
+式が正確に内部表現にパースするかテストするのに使うことができます。
+以下の例は添字付き変数と超越関数変数が許されることを例示します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">
+(%i1) poly_expand((x-y)*(y+x),[x,y]);
+                                     2    2
+(%o1)                               x  - y
+(%i2) poly_expand((y+x)^2,[x,y]);
+                                2            2
+(%o2)                          y  + 2 x y + x
+(%i3) poly_expand((y+x)^5,[x,y]);
+                  5      4         2  3       3  2      4      5
+(%o3)            y  + 5 x y  + 10 x  y  + 10 x  y  + 5 x  y + x
+(%i4) poly_expand(-1-x*exp(y)+x^2/sqrt(y),[x]);
+                                          2
+                                  y      x
+(%o4)                       - x %e  + ------- - 1
+                                       sqrt(y)
+
+(%i5) poly_expand(-1-sin(x)^2+sin(x),[sin(x)]);
+                                2
+(%o5)                      - sin (x) + sin(x) - 1
+
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgesv"></a>
+<p><a name="Item_003a-poly_005fexpt"></a>
 </p><dl>
-<dt><u>関数:</u> <b>dgesv</b><i> (<var>A</var>, <var>b</var>)</i>
+<dt><u>関数:</u> <b>poly_expt</b><i> (<var>poly</var>, <var>number</var>, <var>varlist</var>)</i>
 <a name="IDX2214"></a>
 </dt>
-<dd><p>線形方程式 <em><var>A</var> <var>x</var> = <var>b</var></em>の解 <var>x</var>を計算します。
-ここで、 <var>A</var>は平方行列、
-<var>b</var>は <var>A</var>と同じ数の行と任意の長さの列を持つ行列です。
-戻り値 <var>x</var>は <var>b</var>と同じサイズです。
-</p>
-<p><var>A</var>と <var>b</var>の要素は
-<code>float</code>を介して実の浮動小数点数に評価されなければいけません;
-従って、要素は任意の数値型か、数値定数のシンボルか、浮動小数点に評価される式であり得ます。
-<var>x</var>の要素はいつも浮動小数点数です。
-すべての算術は浮動小数演算として実行されます。
-</p>
-<p><code>dgesv</code>は <var>A</var>の LU分解を介して解を計算します。
-</p>
-<p>例:
-</p>
-<p><code>dgesv</code>は線形方程式 <em><var>A</var> <var>x</var> = <var>b</var></em>の解を計算します。
-</p>
-<pre class="example">(%i1) A : matrix ([1, -2.5], [0.375, 5]);
-                               [   1    - 2.5 ]
-(%o1)                          [              ]
-                               [ 0.375    5   ]
-(%i2) b : matrix ([1.75], [-0.625]);
-                                  [  1.75   ]
-(%o2)                             [         ]
-                                  [ - 0.625 ]
-(%i3) x : dgesv (A, b);
-                            [  1.210526315789474  ]
-(%o3)                       [                     ]
-                            [ - 0.215789473684211 ]
-(%i4) dlange (inf_norm, b - A.x);
-(%o4)                                 0.0
-</pre>
-<p><var>b</var>は <var>A</var>と同じ数の行と任意の長さの列を持つ行列です。
-<var>x</var>は <var>b</var>と同じサイズです。
-</p>
-<pre class="example">(%i1) A : matrix ([1, -0.15], [1.82, 2]);
-                               [  1    - 0.15 ]
-(%o1)                          [              ]
-                               [ 1.82    2    ]
-(%i2) b : matrix ([3.7, 1, 8], [-2.3, 5, -3.9]);
-                              [  3.7   1    8   ]
-(%o2)                         [                 ]
-                              [ - 2.3  5  - 3.9 ]
-(%i3) x : dgesv (A, b);
-      [  3.103827540695117   1.20985481742191    6.781786185657722  ]
-(%o3) [                                                             ]
-      [ - 3.974483062032557  1.399032116146062  - 8.121425428948527 ]
-(%i4) dlange (inf_norm, b - A . x);
-(%o4)                       1.1102230246251565E-15
-</pre>
-<p><var>A</var>と <var>b</var>の要素は実の浮動小数点数に評価されなければいけません;
-</p>
-<pre class="example">(%i1) A : matrix ([5, -%pi], [1b0, 11/17]);
-                               [   5    - %pi ]
-                               [              ]
-(%o1)                          [         11   ]
-                               [ 1.0b0   --   ]
-                               [         17   ]
-(%i2) b : matrix ([%e], [sin(1)]);
-                                  [   %e   ]
-(%o2)                             [        ]
-                                  [ sin(1) ]
-(%i3) x : dgesv (A, b);
-                             [ 0.690375643155986 ]
-(%o3)                        [                   ]
-                             [ 0.233510982552952 ]
-(%i4) dlange (inf_norm, b - A . x);
-(%o4)                        2.220446049250313E-16
-</pre>
+<dd><p><var>poly</var>の正の整数 <var>number</var>のべき乗を返します。
+もし <var>number</var>が正の整数でないならエラーが生じます。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">
+(%i1) poly_expt(x-y,3,[x,y])-(x-y)^3,expand;
+(%o1)                                  0
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a> &middot;
-<a href="maxima_100.html#Category_003a-Linear-equations">Linear equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgesvd"></a>
+<p><a name="Item_003a-poly_005fcontent"></a>
 </p><dl>
-<dt><u>関数:</u> <b>dgesvd</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgesvd</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgesvd</tt> (<var>A</var>, <var>left_p</var>, <var>right_p</var>)</i>
+<dt><u>関数:</u> <b>poly_content</b><i> (<var>poly</var>. <var>varlist</var>)</i>
 <a name="IDX2215"></a>
 </dt>
-<dd><p>特異値から成る行列 <var>A</var>の特異値分解 (SVD)を計算します。
-オプションで左および右特異ベクトルを取ります。
+<dd><p><code>poly_content</code>は係数の GCDを抽出します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">
+(%i1) poly_content(35*y+21*x,[x,y]);
+(%o1)                                  7
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
 </p>
-<p><var>A</var>の要素はすべて整数か浮動小数点数でなければいけません。
-<var>A</var>は(行と列が同じ数の)平方かもしれませんし、そうでないかもしれません。
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fpseudo_005fdivide"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_pseudo_divide</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2216"></a>
+</dt>
+<dd><p>多項式 <var>poly</var>を <em>n</em>個の多項式のリスト <var>polylist</var>で擬似的に割ります。
+複数の値を返します。
+一番目の値は商のリスト <em>a</em>です。
+二番目の値は余り <em>r</em>です。
+三番目の値は、係数環(体である必要はありません)内で
+<var>polylist</var>が <em>c*poly</em>を割れるようなスカラ係数 <em>c</em>です。
+最後に四番目の値は実行された簡約の回数です。
+結果のオブジェクトは以下の等式を満たします:
 </p>
-<p><em>m</em>を <var>A</var>の行数、<em>n</em>を列数とします。
-<var>A</var>の特異値分解は
-<em><var>A</var> = <var>U</var> . <var>Sigma</var> . <var>V</var>^T</em>のような 3つの行列
-<var>U</var>, <var>Sigma</var>, <var>V^T</var>から構成されます。
-ここで、 <var>U</var>は <em>m</em>掛け<em>m</em>のユニタリ行列、
-<var>Sigma</var>は <em>m</em>掛け<em>n</em>の対角行列、
-<var>V^T</var>は <em>n</em>掛け<em>n</em>のユニタリ行列です。
+<p><em>c*poly=sum(a[i]*polylist[i],i=1...n)+r</em>.
 </p>
-<p><em>sigma[i]</em>を <em>Sigma</em>の対角要素、すなわち、
-<em><var>Sigma</var>[i, i] = <var>sigma</var>[i]</em>とします。
-要素 <em>sigma[i]</em>は <var>A</var>のいわゆる特異値です;
-これらは実数で、非負で、降順で返されます。
-<var>U</var>と <var>V</var>の最初の <em>min(m, n)</em>列は <var>A</var>の左と右特異ベクトルです。
-<code>dgesvd</code>は <var>V</var>自身ではなく <var>V</var>の転置を返すことに注意してください。
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
 </p>
-<p><code>dgesvd(<var>A</var>)</code>は <var>A</var>の特異値だけを計算します。
-<code>dgesvd(<var>A</var>, <var>left_p</var>, <var>right_p</var>)</code>は
-<var>A</var>の特異値と、
-<em><var>left_p</var> = <code>true</code></em>の時、左特異ベクトル、
-<em><var>right_p</var> = <code>true</code></em>の時、右特異ベクトルを計算します。
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fexact_005fdivide"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_exact_divide</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2217"></a>
+</dt>
+<dd><p>多項式 <var>poly1</var>を多項式 <var>poly2</var>で割ります。
+余りのない厳密な割り算が可能と仮定します。
+商を返します。
 </p>
-<p>3つの項目のリストを返します。
-一つ目の項目は特異値のリストです。
-二つ目の項目は <code>false</code>か、左特異ベクトルの行列です。
-三つ目の項目は <code>false</code>か、右特異ベクトルの行列です。
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fnormal_005fform"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_normal_form</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2218"></a>
+</dt>
+<dd><p><code>poly_normal_form</code>は多項式の集合 <var>polylist</var>に関して多項式
+<var>poly</var>の正規形を見つけます。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fbuchberger_005fcriterion"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_buchberger_criterion</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2219"></a>
+</dt>
+<dd><p>Buchberger判定 (criterion)を使ってもし <var>polylist</var>が現在の項順序に関して
+Groebner基底なら <code>true</code>を返します:
+Buchberger判定(criterion)は、
+<var>polylist</var>の2つの多項式 <em>h1</em>と <em>h2</em>すべてに関して、
+S多項式 <em>S(h1,h2)</em>が <var>polylist</var>を<em>法</em>として0に簡約されるというものです。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fbuchberger"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_buchberger</b><i> (<var>polylist_fl</var> <var>varlist</var>)</i>
+<a name="IDX2220"></a>
+</dt>
+<dd><p><code>poly_buchberger</code>は多項式のリスト上で Buchbergerアルゴリズムを実行し、結果の
+Groebner基底を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<hr size="6">
+<a name="SEC306"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC305" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.2.4 Standard postprocessing of Groebner Bases </h3>
+
+
+<p><em>K[ x[1],...,x[n] ]</em>上のイデアル <em>I</em>の
+<em>k番目の消去イデアル</em> <em>I_k</em>は
+イデアル <em>intersect(I, K[ x[k+1],...,x[n] ])</em>です。<br>
+
+<em>コロンイデアル</em> <em>I:J</em>は
+イデアル <em>{h|for all w in J: w*h in I}</em>です。.<br>
+
+イデアル <em>I:p^inf</em>はイデアル <em>{h| there is a n in N: p^n*h in I}</em>です。<br>
+
+イデアル <em>I:J^inf</em>はイデアル <em>{h| there is a n in N and a p in J: p^n*h in I}</em>です。<br>
+
+The <em>根基イデアル</em> <em>sqrt(I)</em>はイデアル
+<em>{h| there is a n in N : h^n in I }</em>です。
+</p>
+
+<p><a name="Item_003a-poly_005freduction"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_reduction</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2221"></a>
+</dt>
+<dd><p><code>poly_reduction</code>は多項式のリスト <var>polylist</var>を簡約します。
+それぞれの多項式は他の多項式で完全に簡約されます。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fminimization"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_minimization</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2222"></a>
+</dt>
+<dd><p><var>polylist</var>と同じ単項式イデアルの最小全域である、
+多項式リスト <var>polylist</var>の部分リストを返します。
+すなわち、部分リストの中の多項式の主単項式はすべて、他の多項式の主単項式を割りません。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005fnormalize_005flist"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_normalize_list</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2223"></a>
+</dt>
+<dd><p><code>poly_normalize_list</code>は
+<code>poly_normalize</code>をリストの中の多項式それぞれに適用します。
+これはリスト <var>polylist</var>の中のすべての多項式を主係数で割ることを意味します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fgrobner"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_grobner</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2224"></a>
+</dt>
+<dd><p>多項式リスト <var>polylist</var>で張られたイデアルの Groebner基底を返します。
+グローバルフラグで影響を受けます。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005freduced_005fgrobner"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_reduced_grobner</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2225"></a>
+</dt>
+<dd><p>多項式リスト <var>polylist</var>で張られたイデアルの簡約 Groebner基底を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005fdepends_005fp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_depends_p</b><i> (<var>poly</var>, <var>var</var>, <var>varlist</var>)</i>
+<a name="IDX2226"></a>
+</dt>
+<dd><p><code>poly_depends</code>は多項式が変数 <var>var</var>に依存するかテストします。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005felimination_005fideal"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_elimination_ideal</b><i> (<var>polylist</var>, <var>number</var>, <var>varlist</var>)</i>
+<a name="IDX2227"></a>
+</dt>
+<dd><p><code>poly_elimination_ideal</code>は、
+(必ずしも Groebner基底である必要はない)生成多項式のリストとして指定されたイデアルの
+<em>number</em>番目の消去イデアルの Groebner基底を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fcolon_005fideal"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_colon_ideal</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2228"></a>
+</dt>
+<dd><p>コロンイデアル
+</p>
+<p><em>I(polylist1):I(polylist2)</em>
+</p>
+<p>の簡約 Groebner基底を返します。
+</p>
+
+<p>ここで <em>polylist1</em>と <em>polylist2</em>は 2つの多項式リストです。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fintersection"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_ideal_intersection</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2229"></a>
+</dt>
+<dd><p><code>poly_ideal_intersection</code>は 2つのイデアルの交わりです。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005flcm"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_lcm</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2230"></a>
+</dt>
+<dd><p><var>poly1</var>と <var>poly2</var>の最小公倍数(式)を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="poly_005fgcd"></a>
+<a name="Item_003a-poly_005fgcd"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_gcd</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2231"></a>
+</dt>
+<dd><p><var>poly1</var>と <var>poly2</var>の最大公約数(式)を返します。
+</p>
+<p><code><a href="maxima_14.html#ezgcd">ezgcd</a></code>, <code><a href="maxima_14.html#gcd">gcd</a></code>, <code><a href="maxima_14.html#gcdex">gcdex</a></code>,
+<code><a href="maxima_80.html#gcdivide">gcdivide</a></code>も参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) load (lapack)$
-(%i2) fpprintprec : 6;
-(%o2)                           6
-(%i3) M: matrix([1, 2, 3], [3.5, 0.5, 8], [-1, 2, -3], [4, 9, 7]);
-                        [  1    2    3  ]
-                        [               ]
-                        [ 3.5  0.5   8  ]
-(%o3)                   [               ]
-                        [ - 1   2   - 3 ]
-                        [               ]
-                        [  4    9    7  ]
-(%i4) dgesvd (M);
-(%o4)      [[14.4744, 6.38637, .452547], false, false]
-(%i5) [sigma, U, VT] : dgesvd (M, true, true);
-(%o5) [[14.4744, 6.38637, .452547], 
-[ - .256731  .00816168   .959029    - .119523 ]
-[                                             ]
-[ - .526456   .672116   - .206236   - .478091 ]
-[                                             ], 
-[  .107997   - .532278  - .0708315  - 0.83666 ]
-[                                             ]
-[ - .803287  - .514659  - .180867    .239046  ]
-[ - .374486  - .538209  - .755044 ]
-[                                 ]
-[  .130623   - .836799   0.5317   ]]
-[                                 ]
-[ - .917986   .100488    .383672  ]
-(%i6) m : length (U);
-(%o6)                           4
-(%i7) n : length (VT);
-(%o7)                           3
-(%i8) Sigma:
-        genmatrix(lambda ([i, j], if i=j then sigma[i] else 0),
-                  m, n);
-                  [ 14.4744     0        0    ]
-                  [                           ]
-                  [    0     6.38637     0    ]
-(%o8)             [                           ]
-                  [    0        0     .452547 ]
-                  [                           ]
-                  [    0        0        0    ]
-(%i9) U . Sigma . VT - M;
-          [  1.11022E-15        0.0       1.77636E-15 ]
-          [                                           ]
-          [  1.33227E-15    1.66533E-15       0.0     ]
-(%o9)     [                                           ]
-          [ - 4.44089E-16  - 8.88178E-16  4.44089E-16 ]
-          [                                           ]
-          [  8.88178E-16    1.77636E-15   8.88178E-16 ]
-(%i10) transpose (U) . U;
-       [     1.0      5.55112E-17    2.498E-16     2.77556E-17  ]
-       [                                                        ]
-       [ 5.55112E-17      1.0       5.55112E-17    4.16334E-17  ]
-(%o10) [                                                        ]
-       [  2.498E-16   5.55112E-17       1.0       - 2.08167E-16 ]
-       [                                                        ]
-       [ 2.77556E-17  4.16334E-17  - 2.08167E-16       1.0      ]
-(%i11) VT . transpose (VT);
-          [      1.0           0.0      - 5.55112E-17 ]
-          [                                           ]
-(%o11)    [      0.0           1.0       5.55112E-17  ]
-          [                                           ]
-          [ - 5.55112E-17  5.55112E-17       1.0      ]
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) p1:6*x^3+19*x^2+19*x+6; 
+                        3       2
+(%o1)                6 x  + 19 x  + 19 x + 6
+(%i2) p2:6*x^5+13*x^4+12*x^3+13*x^2+6*x;
+                  5       4       3       2
+(%o2)          6 x  + 13 x  + 12 x  + 13 x  + 6 x
+(%i3) poly_gcd(p1, p2, [x]);
+                            2
+(%o3)                    6 x  + 13 x + 6
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
-</p>
-</dd></dl>
+</p></dd></dl>
 
-<p><a name="Item_003a-dlange"></a>
+<p><a name="Item_003a-poly_005fgrobner_005fequal"></a>
 </p><dl>
-<dt><u>関数:</u> <b>dlange</b><i> (<var>norm</var>, <var>A</var>)</i>
-<a name="IDX2216"></a>
+<dt><u>関数:</u> <b>poly_grobner_equal</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2232"></a>
 </dt>
-<dt><u>関数:</u> <b>zlange</b><i> (<var>norm</var>, <var>A</var>)</i>
-<a name="IDX2217"></a>
-</dt>
-<dd><p>行列 <var>A</var>のノルムもしくはノルムのような関数を計算します。
+<dd><p><code>poly_grobner_equal</code>は 2つの
+Groebner基底が同じイデアルを生成するかテストします。
+もし Groebner基底と仮定された2つの多項式リスト <var>polylist1</var>と
+<var>polylist2</var>が同じイデアルを生成するなら、 <code>true</code>を返します。
+そうでないなら <code>false</code>を返します。
+これは、一番目の基底のすべての多項式が二番目の基底を法として
+0に簡約されるかとその逆をチェックすることと同値です。
+以下の例では、一番目のリストが Groebner基底でないので結果が
+<code>false</code>であることに注意してください。
 </p>
-<dl compact="compact">
-<dt> <code>max</code></dt>
-<dd><p><em>max(abs(A(i, j)))</em>を計算します。
-ここで <em>i</em>と <em>j</em>はそれぞれ行と列を行き渡ります。
-この関数は適切な行列ノルムではないことに注意してください。
-</p></dd>
-<dt> <code>one_norm</code></dt>
-<dd><p><var>A</var>の
-<em>L[1]</em>ノルム、すなわち、それぞれの列の要素の絶対値の和の最大値を計算します。
-</p></dd>
-<dt> <code>inf_norm</code></dt>
-<dd><p><var>A</var>の
-<em>L[inf]</em>ノルム、すなわち、それぞれの行の要素の絶対値の和の最大値を計算します。
-</p></dd>
-<dt> <code>frobenius</code></dt>
-<dd><p><var>A</var>の Frobeniusノルム、すなわち、行列要素の平方の和の平方根を計算します。
-</p></dd>
-</dl>
-
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) poly_grobner_equal([y+x,x-y],[x,y],[x,y]);
+(%o1)                         false
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgemm"></a>
+<p><a name="Item_003a-poly_005fgrobner_005fsubsetp"></a>
 </p><dl>
-<dt><u>関数:</u> <b>dgemm</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgemm</tt> (<var>A</var>, <var>B</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgemm</tt> (<var>A</var>, <var>B</var>, <var>options</var>)</i>
-<a name="IDX2218"></a>
+<dt><u>関数:</u> <b>poly_grobner_subsetp</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2233"></a>
 </dt>
-<dd><p>2つの行列の積を計算します。オプションで積を三つ目の行列に足し算します。
-</p>
-<p>最も簡単な形式では、 <code>dgemm(<var>A</var>, <var>B</var>)</code>は
-2つの実行列 <var>A</var>と <var>B</var>の積を計算します。
-</p>
-<p>二番目の形式では、
-<code>dgemm</code>は
-<em><var>alpha</var> * <var>A</var> * <var>B</var> + <var>beta</var> * <var>C</var></em>を計算します。
-ここで <var>A</var>, <var>B</var>, <var>C</var>は適当なサイズの実行列であり、
-<var>alpha</var>と <var>beta</var>は実数です。
-オプションで、 <var>A</var>と/もしくは <var>B</var>は積を計算する前に転置を取ることができます。
-追加のパラメータはオプションのキーワード引数で指定できます:
-キーワード引数はオプションで、どんな順番でも指定できます。
-それらはすべて、形式 <code>key=val</code>を取ります。
-キーワード引数は以下の通りです:
-</p>
-<dl compact="compact">
-<dt> <code>C</code></dt>
-<dd><p>足すべき行列 <var>C</var>。
-デフォルトは <code>false</code>であり、行列を足さないことを意味します。
-</p></dd>
-<dt> <code>alpha</code></dt>
-<dd><p><var>A</var>と <var>B</var>の積をこの値に掛けます。
-デフォルトは 1です。
-</p></dd>
-<dt> <code>beta</code></dt>
-<dd><p>もし行列 <var>C</var>が与えられたら、
-この値を、足される前に<var>C</var>に掛けます。
-デフォルト値は 0で、これはたとえ<var>C</var>が与えられても
-<var>C</var>が足されないことを意味します。
-故に、必ず <var>beta</var>に零でない値を指定してください。
-</p></dd>
-<dt> <code>transpose_a</code></dt>
-<dd><p>もし <code>true</code>なら、
-<var>A</var>の代わりに <var>A</var>の転置を積に使います。
-デフォルトは <code>false</code>です。
-</p></dd>
-<dt> <code>transpose_b</code></dt>
-<dd><p>もし <code>true</code>なら
-<var>B</var>の代わりに <var>B</var>の転置を積に使います。
-デフォルトは <code>false</code>です。
-</p></dd>
-</dl>
-
-<pre class="example">(%i1) load (lapack)$
-(%i2) A : matrix([1,2,3],[4,5,6],[7,8,9]);
-                                  [ 1  2  3 ]
-                                  [         ]
-(%o2)                             [ 4  5  6 ]
-                                  [         ]
-                                  [ 7  8  9 ]
-(%i3) B : matrix([-1,-2,-3],[-4,-5,-6],[-7,-8,-9]);
-                               [ - 1  - 2  - 3 ]
-                               [               ]
-(%o3)                          [ - 4  - 5  - 6 ]
-                               [               ]
-                               [ - 7  - 8  - 9 ]
-(%i4) C : matrix([3,2,1],[6,5,4],[9,8,7]);
-                                  [ 3  2  1 ]
-                                  [         ]
-(%o4)                             [ 6  5  4 ]
-                                  [         ]
-                                  [ 9  8  7 ]
-(%i5) dgemm(A,B);
-                         [ - 30.0   - 36.0   - 42.0  ]
-                         [                           ]
-(%o5)                    [ - 66.0   - 81.0   - 96.0  ]
-                         [                           ]
-                         [ - 102.0  - 126.0  - 150.0 ]
-(%i6) A . B;
-                            [ - 30   - 36   - 42  ]
-                            [                     ]
-(%o6)                       [ - 66   - 81   - 96  ]
-                            [                     ]
-                            [ - 102  - 126  - 150 ]
-(%i7) dgemm(A,B,transpose_a=true);
-                         [ - 66.0  - 78.0   - 90.0  ]
-                         [                          ]
-(%o7)                    [ - 78.0  - 93.0   - 108.0 ]
-                         [                          ]
-                         [ - 90.0  - 108.0  - 126.0 ]
-(%i8) transpose(A) . B;
-                           [ - 66  - 78   - 90  ]
-                           [                    ]
-(%o8)                      [ - 78  - 93   - 108 ]
-                           [                    ]
-                           [ - 90  - 108  - 126 ]
-(%i9) dgemm(A,B,c=C,beta=1);
-                         [ - 27.0  - 34.0   - 41.0  ]
-                         [                          ]
-(%o9)                    [ - 60.0  - 76.0   - 92.0  ]
-                         [                          ]
-                         [ - 93.0  - 118.0  - 143.0 ]
-(%i10) A . B + C;
-                            [ - 27  - 34   - 41  ]
-                            [                    ]
-(%o10)                      [ - 60  - 76   - 92  ]
-                            [                    ]
-                            [ - 93  - 118  - 143 ]
-(%i11) dgemm(A,B,c=C,beta=1, alpha=-1);
-                            [ 33.0   38.0   43.0  ]
-                            [                     ]
-(%o11)                      [ 72.0   86.0   100.0 ]
-                            [                     ]
-                            [ 111.0  134.0  157.0 ]
-(%i12) -A . B + C;
-                               [ 33   38   43  ]
-                               [               ]
-(%o12)                         [ 72   86   100 ]
-                               [               ]
-                               [ 111  134  157 ]
-
-</pre><div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-zgeev"></a>
-</p><dl>
-<dt><u>関数:</u> <b>zgeev</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zgeev</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zgeev</tt> (<var>A</var>, <var>right_p</var>, <var>left_p</var>)</i>
-<a name="IDX2219"></a>
-</dt>
-<dd><p><code>dgeev</code>同様、しかし行列  <var>A</var>は複素行列です。
+<dd><p><code>poly_grobner_subsetp</code>は
+<var>polylist1</var>が生成するイデアルが
+<var>polylist2</var>が生成するイデアルに含まれるかテストします。
+このテストが常に成功するには <var>polylist2</var>が Groebner基底でなければいけません。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-zheev"></a>
+<p><a name="Item_003a-poly_005fgrobner_005fmember"></a>
 </p><dl>
-<dt><u>関数:</u> <b>zheev</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zheev</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zheev</tt> (<var>A</var>, <var>eigvec_p</var>)</i>
-<a name="IDX2220"></a>
+<dt><u>関数:</u> <b>poly_grobner_member</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2234"></a>
 </dt>
-<dd><p><code>zheev</code>同様、しかし行列 <var>A</var>は平方複素エルミート行列と仮定されます。
-もし <var>eigvec_p</var>が <code>true</code>なら、
-行列の固有ベクトルも計算します。
+<dd><p>もし多項式 <var>poly</var>が Groebner基底であると仮定された多項式リスト
+<var>polylist</var>が生成するイデアルに属するなら、 <code>true</code>を返します。
+そうでないなら <code>false</code>を返します。
 </p>
-<p>実際には行列 <var>A</var>がエルミートであることはチェックしません。
+<p><code>poly_grobner_member</code>は多項式が
+Groebner基底であると仮定された多項式のリストが生成するイデアルに属するかテストします。
+<code>normal_form</code>が 0と同値です。
 </p>
-<p><code>dgeev</code>と同じように2つの項目のリストを返します:
-固有値のリストと、 <code>false</code>または固有ベクトルの行列。
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fsaturation1"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_ideal_saturation1</b><i> (<var>polylist</var>, <var>poly</var>, <var>varlist</var>)</i>
+<a name="IDX2235"></a>
+</dt>
+<dd><p>イデアル
+</p>
+<p>I(polylist):poly^inf
+の saturationの簡約 Groebner基底を返します。
+</p>
+
+
+<p>幾何学的に、代数的閉体上で、これは
+<var>poly</var>の多様体上で恒等的に 0とならない
+<var>polylist</var>が生成するイデアルの中の多項式の集合です。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fsaturation"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_ideal_saturation</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2236"></a>
+</dt>
+<dd><p>イデアル
+</p>
+<p>I(polylist1):I(polylist2)^inf
+の saturationの簡約 Groebner基底を返します。
+</p>
+
+<p>幾何学的に、代数的閉体上で、これは
+<var>polylist2</var>の多様体上で恒等的に 0とならない
+<var>polylist1</var>が生成するイデアルの中の多項式の集合です。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fpolysaturation1"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_ideal_polysaturation1</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2237"></a>
+</dt>
+<dd><p><var>polylist2</var>は 2個の多項式のリスト <code>[poly1,...,polyn]</code>です。
+多項式リスト <var>polylist1</var>が生成するイデアルの多項式リスト
+<var>polylist2</var>の多項式に関する連続 saturationの列によって得られるイデアル
+</p>
+<p>I(polylist):poly1^inf:...:polyn^inf
+</p>
+
+<p>の簡約 Groebner基底を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fpolysaturation"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_ideal_polysaturation</b><i> (<var>polylist</var>, <var>polylistlist</var>, <var>varlist</var>)</i>
+<a name="IDX2238"></a>
+</dt>
+<dd><p><var>polylistlist</var>は多項式リスト n個のリスト <code>[polylist1,...,polylistn]</code>です。
+イデアル
+</p>
+<p>I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf
+の saturationの簡約 Groebner基底を返します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fsaturation_005fextension"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_saturation_extension</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist1</var>, <var>varlist2</var>)</i>
+<a name="IDX2239"></a>
+</dt>
+<dd><p><code>poly_saturation_extension</code>は有名な Rabinowitzのトリックを実装します。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fpolysaturation_005fextension"></a>
+</p><dl>
+<dt><u>関数:</u> <b>poly_polysaturation_extension</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist1</var>, <var>varlist2</var>)</i>
+<a name="IDX2240"></a>
+</dt>
+<dd><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
 
-
-<p><a name="Item_003a-lbfgs"></a>
+<p><a name="Item_003a-impdiff_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC306" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

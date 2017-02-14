@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 60. impdiff</title>
+<title>Maxima 5.39.0 Manual: 60. ggf</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 60. impdiff">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 60. impdiff">
+<meta name="description" content="Maxima 5.39.0 Manual: 60. ggf">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 60. ggf">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,89 +54,150 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-<a name="impdiff"></a>
-<a name="SEC301"></a>
+<a name="ggf_002dpkg"></a>
+<a name="SEC288"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_59.html#SEC300" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC302" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_59.html#SEC287" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC289" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_59.html#SEC292" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_59.html#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_61.html#SEC303" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC290" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 60. impdiff </h1>
+<h1 class="chapter"> 60. ggf </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC302">60.1 Functions and Variables for impdiff</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC289">60.1 Functions and Variables for ggf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-impdiff"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-ggf"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-impdiff"></a>
-<a name="SEC302"></a>
+<a name="Functions-and-Variables-for-ggf"></a>
+<a name="SEC289"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC301" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_61.html#SEC303" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC288" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC290" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC301" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC301" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_61.html#SEC303" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC288" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC288" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC290" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 60.1 Functions and Variables for impdiff </h2>
+<h2 class="section"> 60.1 Functions and Variables for ggf </h2>
 
-<p><a name="Item_003a-implicit_005fderivative"></a>
+<p><a name="Item_003a-GGFINFINITY"></a>
 </p><dl>
-<dt><u>Function:</u> <b>implicit_derivative</b><i> (<var>f</var>,<var>indvarlist</var>,<var>orderlist</var>,<var>depvar</var>)</i>
-<a name="IDX2204"></a>
+<dt><u>Option variable:</u> <b>GGFINFINITY</b>
+<a name="IDX2019"></a>
 </dt>
-<dd><p>This subroutine computes implicit derivatives of multivariable functions.
-<var>f</var> is an array function, the indexes are the derivative degree in the <var>indvarlist</var> order;
-<var>indvarlist</var> is the independent variable list; <var>orderlist</var> is the order desired; and 
-<var>depvar</var> is the dependent variable.
+<dd><p>Default value: 3
 </p>
-<p>To use this function write first <code>load(&quot;impdiff&quot;)</code>.
+<p>This is an option variable for function <code>ggf</code>.
+</p>
+<p>When computing the continued fraction of the
+generating function, a partial quotient having a degree
+(strictly) greater than <var>GGFINFINITY</var> will be discarded and
+the current convergent will be considered as the exact value
+of the generating function; most often the degree of all
+partial quotients will be 0 or 1; if you use a greater value,
+then you should give enough terms in order to make the
+computation accurate enough.
+</p>
+
+<p>See also <code><a href="#ggf">ggf</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-impdiff">Package impdiff</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-ggf">Package ggf</a>
 </div>
 </p>
 </dd></dl>
 
 
-<p><a name="Item_003a-interpol"></a>
+<p><a name="Item_003a-GGFCFMAX"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>GGFCFMAX</b>
+<a name="IDX2020"></a>
+</dt>
+<dd><p>Default value: 3
+</p>
+<p>This is an option variable for function <code>ggf</code>.
+</p>
+<p>When computing the continued fraction of the
+generating function, if no good result has been found (see
+the <var>GGFINFINITY</var> flag) after having computed <var>GGFCFMAX</var> partial
+quotients, the generating function will be considered as
+not being a fraction of two polynomials and the function will
+exit. Put freely a greater value for more complicated
+generating functions.
+</p>
+<p>See also <code><a href="#ggf">ggf</a></code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-ggf">Package ggf</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="ggf"></a>
+<a name="Item_003a-ggf"></a>
+</p><dl>
+<dt><u>Function:</u> <b>ggf</b><i> (<var>l</var>)</i>
+<a name="IDX2021"></a>
+</dt>
+<dd><p>Compute the generating function (if it is a fraction of two
+polynomials) of a sequence, its first terms being given. <var>l</var>
+is a list of numbers.
+</p>
+<p>The solution is returned as a fraction of two polynomials.
+If no solution has been found, it returns with <code>done</code>.
+</p>
+<p>This function is controlled by global variables <var>GGFINFINITY</var> and <var>GGFCFMAX</var>. See also <var>GGFINFINITY</var> and <var>GGFCFMAX</var>.
+</p>
+<p>To use this function write first <code>load(&quot;ggf&quot;)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Generating-functions">Generating functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-ggf">Package ggf</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-graphs_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC301" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_61.html#SEC303" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC288" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC290" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -144,12 +205,12 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

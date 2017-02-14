@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 21. Differential Equations</title>
+<title>Maxima 5.39.0 Manual: 21. Differential Equations</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 21. Differential Equations">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 21. Differential Equations">
+<meta name="description" content="Maxima 5.39.0 Manual: 21. Differential Equations">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 21. Differential Equations">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Differential-Equations"></a>
 <a name="SEC105"></a>
@@ -84,23 +99,23 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC106" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_20.html#SEC103" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_22.html#SEC108" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 21. Differential Equations </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC106">21.1 Introduction to Differential Equations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC106">21.1 Introduction to Differential Equations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC107">21.2 Functions and Variables for Differential Equations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC107">21.2 Functions and Variables for Differential Equations</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -113,15 +128,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC107" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC105" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC105" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC105" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_22.html#SEC108" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 21.1 Introduction to Differential Equations </h2>
@@ -143,24 +158,25 @@ Maximaで利用可能な、
 <td valign="middle" align="left">[<a href="maxima_22.html#SEC108" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC105" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC105" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC105" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_22.html#SEC108" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 21.2 Functions and Variables for Differential Equations </h2>
 
 
-<p><a name="Item_003a-bc2"></a>
+<p><a name="bc2"></a>
+<a name="Item_003a-bc2"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bc2</b><i> (<var>solution</var>, <var>xval1</var>, <var>yval1</var>, <var>xval2</var>, <var>yval2</var>)</i>
-<a name="IDX805"></a>
+<a name="IDX813"></a>
 </dt>
 <dd><p>二階微分方程式の境界値問題を解きます。
 ここで: <var>solution</var>は <code>ode2</code>が見つけるような方程式の一般解です;
@@ -169,19 +185,20 @@ Maximaで利用可能な、
 式 <var>xval2</var>と <var>yval2</var>は
 対応する変数の二番目の点での値を同じ形式を使って与えます。
 </p>
-<p>用法の例については <code>ode2</code>を参照してください。
+<p>用法の例については <code><a href="#ode2">ode2</a></code>を参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-desolve"></a>
+<p><a name="desolve"></a>
+<a name="Item_003a-desolve"></a>
 </p><dl>
 <dt><u>関数:</u> <b>desolve</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>desolve</tt> (<var>eqn</var>, <var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>desolve</tt> ([<var>eqn_1</var>, ..., <var>eqn_n</var>], [<var>x_1</var>, ..., <var>x_n</var>])</i>
-<a name="IDX806"></a>
+<a name="IDX814"></a>
 </dt>
 <dd><p>関数 <code>desolve</code>はラプラス変換を使って線形常微分方程式系を解きます。
 ここで <var>eqn</var>群は従属変数 <var>x_1</var>, ..., <var>x_n</var>に関する微分方程式です。
@@ -189,22 +206,22 @@ Maximaで利用可能な、
 変数や導関数の中で明示されなければいけません。
 例えば、以下は２つの方程式を定義する正しい方法ではありません:
 </p>
-<pre class="example">eqn_1: 'diff(f,x,2) = sin(x) + 'diff(g,x);
+<table><tr><td>&nbsp;</td><td><pre class="example">eqn_1: 'diff(f,x,2) = sin(x) + 'diff(g,x);
 eqn_2: 'diff(f,x) + x^2 - f = 2*'diff(g,x,2);
-</pre>
+</pre></td></tr></table>
 <p>正しい方法は以下の通りです:
 </p>
-<pre class="example">eqn_1: 'diff(f(x),x,2) = sin(x) + 'diff(g(x),x);
+<table><tr><td>&nbsp;</td><td><pre class="example">eqn_1: 'diff(f(x),x,2) = sin(x) + 'diff(g(x),x);
 eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
-</pre>
+</pre></td></tr></table>
 <p>関数 <code>desolve</code>のコールは、
-</p><pre class="example">desolve([eqn_1, eqn_2], [f(x),g(x)]);
-</pre><p>です。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">desolve([eqn_1, eqn_2], [f(x),g(x)]);
+</pre></td></tr></table><p>です。
 </p>
 <p>もし <code>x=0</code>の初期条件が既知なら、
 それらは <code>atvalue</code>を使って <code>desolve</code>コールの前に供給することができます。
 </p>
-<pre class="example">(%i1) <b><tt>'diff(f(x),x)='diff(g(x),x)+sin(x);</tt></b>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) <b><tt>'diff(f(x),x)='diff(g(x),x)+sin(x);</tt></b>
                  d           d
 (%o1)            -- (f(x)) = -- (g(x)) + sin(x)
                  dx          dx
@@ -220,7 +237,7 @@ eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
 (%o4)                           1
 (%i5) <b><tt>desolve([%o1,%o2],[f(x),g(x)]);</tt></b>
                   x
-(%o5) [f(x) = a %e  - a + 1, g(x) = 
+(%o5) [f(x) = a %e  - a + 1, g(x) =
 
                                                 x
                                    cos(x) + a %e  - a + g(0) - 1]
@@ -228,38 +245,38 @@ eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
              x       x      x                x
 (%o6)   [a %e  = a %e , a %e  - cos(x) = a %e  - cos(x)]
 
-</pre>
+</pre></td></tr></table>
 <p>もし <code>desolve</code>が解を得られないなら <code>false</code>を返します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a> &middot;
-<a href="maxima_100.html#Category_003a-Laplace-transform">Laplace transform</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_106.html#Category_003a-Laplace-transform">Laplace transform</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-ic1"></a>
+<p><a name="ic1"></a>
+<a name="Item_003a-ic1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ic1</b><i> (<var>solution</var>, <var>xval</var>, <var>yval</var>)</i>
-<a name="IDX807"></a>
+<a name="IDX815"></a>
 </dt>
 <dd><p>一階微分方程式の初期値問題を解きます。
 ここで <var>solution</var>は <code>ode2</code>が見つけるような方程式の一般解であり、
 <var>xval</var>は独立変数の初期値を形式 <code><var>x</var> = <var>x0</var></code>で与え、
 <var>yval</var>は従属変数の初期値を形式 <code><var>y</var> = <var>y0</var></code>で与えます。
 </p>
-<p>用法の例については <code>ode2</code>を参照してください。
+<p>用法の例については <code><a href="#ode2">ode2</a></code>を参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-ic2"></a>
+<p><a name="ic2"></a>
+<a name="Item_003a-ic2"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ic2</b><i> (<var>solution</var>, <var>xval</var>, <var>yval</var>, <var>dval</var>)</i>
-<a name="IDX808"></a>
+<a name="IDX816"></a>
 </dt>
 <dd><p>二階微分方程式の初期値を解きます。
 ここで  <var>solution</var>は <code>ode2</code>が見つけるような方程式の一般解のであり、
@@ -269,18 +286,19 @@ eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
 <code>diff(<var>y</var>,<var>x</var>) = <var>dy0</var></code>で与えます。
 (<code>diff</code>はクォートの必要はありません。)
 </p>
-<p>用法の例については <code>ode2</code>を参照してください。
+<p>用法の例については <code><a href="#ode2">ode2</a></code>を参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ode2"></a>
+<p><a name="ode2"></a>
+<a name="Item_003a-ode2"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ode2</b><i> (<var>eqn</var>, <var>dvar</var>, <var>ivar</var>)</i>
-<a name="IDX809"></a>
+<a name="IDX817"></a>
 </dt>
 <dd><p>関数 <code>ode2</code>は一階または二階常微分方程式 (ODE)を解きます。
 ３つの引数を取ります:
@@ -312,7 +330,7 @@ eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) <b><tt>x^2*'diff(y,x) + 3*y*x = sin(x)/x;</tt></b>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) <b><tt>x^2*'diff(y,x) + 3*y*x = sin(x)/x;</tt></b>
                       2 dy           sin(x)
 (%o1)                x  -- + 3 x y = ------
                         dx             x
@@ -348,10 +366,10 @@ eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
 (%o7)                   --------- = x - -
                             6           2
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
@@ -366,14 +384,14 @@ eqn_2: 'diff(f(x),x) + x^2 - f(x) = 2*'diff(g(x),x,2);
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

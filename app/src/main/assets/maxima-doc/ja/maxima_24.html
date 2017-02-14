@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 24. Affine</title>
+<title>Maxima 5.39.0 Manual: 24. Affine</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 24. Affine">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 24. Affine">
+<meta name="description" content="Maxima 5.39.0 Manual: 24. Affine">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 24. Affine">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Affine"></a>
 <a name="SEC120"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC121" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_23.html#SEC114" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_25.html#SEC123" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 24. Affine </h1>
@@ -113,15 +128,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC122" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC120" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC120" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC120" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_25.html#SEC123" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 24.1 Introduction to Affine </h2>
@@ -130,10 +145,10 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_100.html#Category_003a-Groebner-bases">Groebner bases</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_106.html#Category_003a-Groebner-bases">Groebner bases</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p>
 
@@ -146,23 +161,24 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="maxima_25.html#SEC123" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC120" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC120" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC120" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_25.html#SEC123" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 24.2 Functions and Variables for Affine </h2>
 
-<p><a name="Item_003a-fast_005flinsolve"></a>
+<p><a name="fast_005flinsolve"></a>
+<a name="Item_003a-fast_005flinsolve"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fast_linsolve</b><i> ([<var>expr_1</var>, ..., <var>expr_m</var>], [<var>x_1</var>, ..., <var>x_n</var>])</i>
-<a name="IDX905"></a>
+<a name="IDX920"></a>
 </dt>
 <dd><p>変数 <var>x_1</var>, ..., <var>x_n</var>に関する連立線形方程式
 <var>expr_1</var>, ..., <var>expr_m</var>を解きます。
@@ -181,22 +197,23 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-grobner_005fbasis"></a>
+<p><a name="grobner_005fbasis"></a>
+<a name="Item_003a-grobner_005fbasis"></a>
 </p><dl>
 <dt><u>関数:</u> <b>grobner_basis</b><i> ([<var>expr_1</var>, ..., <var>expr_m</var>])</i>
-<a name="IDX906"></a>
+<a name="IDX921"></a>
 </dt>
 <dd><p>等式 <var>expr_1</var>, ..., <var>expr_m</var>のグレブナー基底を返します。
 等式に関係する他の関数を整理するために、その後、関数 <code>polysimp</code>を使うことができます。
 </p>
-<pre class="example">grobner_basis ([3*x^2+1, y*x])$
+<table><tr><td>&nbsp;</td><td><pre class="example">grobner_basis ([3*x^2+1, y*x])$
 
 polysimp (y^2*x + x^3*9 + 2) ==&gt; -3*x + 2
-</pre>
+</pre></td></tr></table>
 <p><code>polysimp(f)</code>は、
 <var>f</var>が
 <var>expr_1</var>, ..., <var>expr_m</var>によって生成されたイデアルに含まれるときだけ、
@@ -207,14 +224,15 @@ polysimp (y^2*x + x^3*9 + 2) ==&gt; -3*x + 2
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-set_005fup_005fdot_005fsimplifications"></a>
+<p><a name="set_005fup_005fdot_005fsimplifications"></a>
+<a name="Item_003a-set_005fup_005fdot_005fsimplifications"></a>
 </p><dl>
 <dt><u>関数:</u> <b>set_up_dot_simplifications</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>set_up_dot_simplifications</tt> (<var>eqns</var>, <var>check_through_degree</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>set_up_dot_simplifications</tt> (<var>eqns</var>)</i>
-<a name="IDX907"></a>
+<a name="IDX922"></a>
 </dt>
 <dd><p><var>eqns</var>は非可換変数を含む多項式方程式です。
 <code>current_variables</code>の値は次数を計算するために使われる変数のリストです。
@@ -235,14 +253,15 @@ polysimp (y^2*x + x^3*9 + 2) ==&gt; -3*x + 2
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-declare_005fweights"></a>
+<p><a name="declare_005fweights"></a>
+<a name="Item_003a-declare_005fweights"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_weights</b><i> (<var>x_1</var>, <var>w_1</var>, ..., <var>x_n</var>, <var>w_n</var>)</i>
-<a name="IDX908"></a>
+<a name="IDX923"></a>
 </dt>
 <dd><p>重み <var>w_1</var>, ..., <var>w_n</var>それぞれを <var>x_1</var>, ..., <var>x_n</var>に割り当てます。
 これらは <code>nc_degree</code>を計算する時に使われる重みです。
@@ -251,14 +270,15 @@ polysimp (y^2*x + x^3*9 + 2) ==&gt; -3*x + 2
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-nc_005fdegree"></a>
+<p><a name="nc_005fdegree"></a>
+<a name="Item_003a-nc_005fdegree"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nc_degree</b><i> (<var>p</var>)</i>
-<a name="IDX909"></a>
+<a name="IDX924"></a>
 </dt>
 <dd><p>非可換多項式 <var>p</var>の次数を返します。
 <code>declare_weights</code>を参照してください。
@@ -267,14 +287,15 @@ polysimp (y^2*x + x^3*9 + 2) ==&gt; -3*x + 2
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-dotsimp"></a>
+<p><a name="dotsimp"></a>
+<a name="Item_003a-dotsimp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dotsimp</b><i> (<var>f</var>)</i>
-<a name="IDX910"></a>
+<a name="IDX925"></a>
 </dt>
 <dd><p><var>f</var>が方程式によって生成されたイデアルに含まれる時だけ、すなわち、
 <var>f</var>が方程式の要素の多項式結合の時だけ 0を返します。
@@ -283,36 +304,38 @@ polysimp (y^2*x + x^3*9 + 2) ==&gt; -3*x + 2
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-fast_005fcentral_005felements"></a>
+<p><a name="fast_005fcentral_005felements"></a>
+<a name="Item_003a-fast_005fcentral_005felements"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fast_central_elements</b><i> ([<var>x_1</var>, ..., <var>x_n</var>], <var>n</var>)</i>
-<a name="IDX911"></a>
+<a name="IDX926"></a>
 </dt>
 <dd><p>もし <code>set_up_dot_simplifications</code>が以前に実行されていたら、
 与えられた次数 <var>n</var>での変数
 <var>x_1</var>, ..., <var>x_n</var>に関する中心多項式を見つけます。
 </p>
 <p>例えば:
-</p><pre class="example">set_up_dot_simplifications ([y.x + x.y], 3);
+</p><table><tr><td>&nbsp;</td><td><pre class="example">set_up_dot_simplifications ([y.x + x.y], 3);
 fast_central_elements ([x, y], 2);
 [y.y, x.x];
-</pre>
+</pre></td></tr></table>
 <p><code>load(affine)</code> loads this function.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-check_005foverlaps"></a>
+<p><a name="check_005foverlaps"></a>
+<a name="Item_003a-check_005foverlaps"></a>
 </p><dl>
 <dt><u>関数:</u> <b>check_overlaps</b><i> (<var>n</var>, <var>add_to_simps</var>)</i>
-<a name="IDX912"></a>
+<a name="IDX927"></a>
 </dt>
 <dd><p>次数 <var>n</var>までの重複をチェックします。
 すなわち、 <code>dotsimp</code>が正しく機能するように
@@ -327,14 +350,15 @@ fast_central_elements ([x, y], 2);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-mono"></a>
+<p><a name="mono"></a>
+<a name="Item_003a-mono"></a>
 </p><dl>
 <dt><u>関数:</u> <b>mono</b><i> ([<var>x_1</var>, ..., <var>x_n</var>], <var>n</var>)</i>
-<a name="IDX913"></a>
+<a name="IDX928"></a>
 </dt>
 <dd><p>次数 <var>n</var>の変数 <var>x_1</var>, ...,
 <var>x_n</var>に関する現在のドット整理に関係した独立な単項式のリストを返します。
@@ -343,14 +367,15 @@ fast_central_elements ([x, y], 2);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-monomial_005fdimensions"></a>
+<p><a name="monomial_005fdimensions"></a>
+<a name="Item_003a-monomial_005fdimensions"></a>
 </p><dl>
 <dt><u>関数:</u> <b>monomial_dimensions</b><i> (<var>n</var>)</i>
-<a name="IDX914"></a>
+<a name="IDX929"></a>
 </dt>
 <dd><p>カレント代数に関する次数 <var>n</var>までのヒルベルト級数を計算します。
 </p>
@@ -358,14 +383,15 @@ fast_central_elements ([x, y], 2);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-extract_005flinear_005fequations"></a>
+<p><a name="extract_005flinear_005fequations"></a>
+<a name="Item_003a-extract_005flinear_005fequations"></a>
 </p><dl>
 <dt><u>関数:</u> <b>extract_linear_equations</b><i> ([<var>p_1</var>, ..., <var>p_n</var>], [<var>m_1</var>, ..., <var>m_n</var>])</i>
-<a name="IDX915"></a>
+<a name="IDX930"></a>
 </dt>
 <dd><p>非可換単項式 <var>m_1</var>, ..., <var>m_n</var>の非可換多項式
 <var>p_1</var>, ..., <var>p_n</var>の係数のリストを作ります。
@@ -376,14 +402,15 @@ fast_central_elements ([x, y], 2);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-list_005fnc_005fmonomials"></a>
+<p><a name="list_005fnc_005fmonomials"></a>
+<a name="Item_003a-list_005fnc_005fmonomials"></a>
 </p><dl>
 <dt><u>Function:</u> <b>list_nc_monomials</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>list_nc_monomials</tt> ([<var>p_1</var>, ..., <var>p_n</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>list_nc_monomials</tt> (<var>p</var>)</i>
-<a name="IDX916"></a>
+<a name="IDX931"></a>
 </dt>
 <dd><p>多項式 <var>p</var>または多項式のリスト
 <var>p_1</var>, ..., <var>p_n</var>の中に現れる非可換単項式のリストを返します。
@@ -392,16 +419,17 @@ fast_central_elements ([x, y], 2);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p></dd></dl>
 
 
 
-<p><a name="Item_003a-all_005fdotsimp_005fdenoms"></a>
+<p><a name="all_005fdotsimp_005fdenoms"></a>
+<a name="Item_003a-all_005fdotsimp_005fdenoms"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>all_dotsimp_denoms</b>
-<a name="IDX917"></a>
+<a name="IDX932"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -414,13 +442,10 @@ fast_central_elements ([x, y], 2);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-affine">Package affine</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-affine">Package affine</a>
 </div>
 </p>
 </dd></dl>
-
-
-
 
 <p><a name="Item_003a-itensor"></a>
 </p><hr size="6">
@@ -432,14 +457,14 @@ fast_central_elements ([x, y], 2);
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

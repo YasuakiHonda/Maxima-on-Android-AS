@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 44. clebsch_gordan</title>
+<title>Maxima 5.39.0 Manual: 44. bode</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 44. clebsch_gordan">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 44. clebsch_gordan">
+<meta name="description" content="Maxima 5.39.0 Manual: 44. bode">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 44. bode">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,153 +72,215 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="clebsch_005fgordan"></a>
-<a name="SEC222"></a>
+<a name="bode_002dpkg"></a>
+<a name="SEC221"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_43.html#SEC221" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC223" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_43.html#SEC220" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC222" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_43.html#SEC220" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_45.html#SEC224" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_43.html#SEC219" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_45.html#SEC223" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 44. clebsch_gordan </h1>
+<h1 class="chapter"> 44. bode </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC223">44.1 Functions and Variables for clebsch_gordan</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC222">44.1 Functions and Variables for bode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-clebsch_005fgordan"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-bode"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-clebsch_005fgordan"></a>
-<a name="SEC223"></a>
+<a name="Functions-and-Variables-for-bode"></a>
+<a name="SEC222"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC222" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_45.html#SEC224" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC221" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_45.html#SEC223" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC222" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC222" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_45.html#SEC224" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC221" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC221" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_45.html#SEC223" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 44.1 Functions and Variables for clebsch_gordan </h2>
+<h2 class="section"> 44.1 Functions and Variables for bode </h2>
 
 
-<dl>
-<dt><u>関数:</u> <b>clebsch_gordan</b><i> (<var>j1</var>, <var>j2</var>, <var>m1</var>, <var>m2</var>, <var>j</var>, <var>m</var>)</i>
-<a name="IDX1425"></a>
-</dt>
-<dd><p>Clebsch-Gordan 係数 <tt>&lt;j1, j2, m1, m2 | j, m&gt;</tt> を計算します。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-clebsch_005fgordan">clebsch_gordan</a>
-</div>
-</p></dd></dl>
-
-<p><a name="Item_003a-racah_005fv"></a>
+<p><a name="bode_005fgain"></a>
+<a name="Item_003a-bode_005fgain"></a>
 </p><dl>
-<dt><u>関数:</u> <b>racah_v</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>a1</var>, <var>b1</var>, <var>c1</var>)</i>
-<a name="IDX1426"></a>
+<dt><u>関数:</u> <b>bode_gain</b><i> (<var>H</var>, <var>range</var>, ...<var>plot_opts</var>...)</i>
+<a name="IDX1453"></a>
 </dt>
-<dd><p>(関連の Clebsch-Gordan 係数を使って計算される) Racah's V 係数を計算します。
+<dd><p>Bodeのゲイン線図を描く関数。
+</p>
+<p>例 (1から7までは
+</p><table><tr><td>&nbsp;</td><td><pre class="example"><a href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a>,
+</pre></td></tr></table><p>から、8はRon Crummettから):
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bode&quot;)$
+
+(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$
+
+(%i3) bode_gain (H1 (s), [w, 1/1000, 1000])$
+
+(%i4) H2 (s) := 1 / (1 + s/omega0)$
+
+(%i5) bode_gain (H2 (s), [w, 1/1000, 1000]), omega0 = 10$
+
+(%i6) H3 (s) := 1 / (1 + s/omega0)^2$
+
+(%i7) bode_gain (H3 (s), [w, 1/1000, 1000]), omega0 = 10$
+
+(%i8) H4 (s) := 1 + s/omega0$
+
+(%i9) bode_gain (H4 (s), [w, 1/1000, 1000]), omega0 = 10$
+
+(%i10) H5 (s) := 1/s$
+
+(%i11) bode_gain (H5 (s), [w, 1/1000, 1000])$
+
+(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$
+
+(%i13) bode_gain (H6 (s), [w, 1/1000, 1000]),
+                  omega0 = 10, zeta = 1/10$
+
+(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$
+
+(%i15) bode_gain (H7 (s), [w, 1/1000, 1000]),
+                  omega0 = 10, zeta = 1/10$
+
+(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$
+
+(%i17) bode_gain (H8 (s), [w, 1/1000, 1000])$
+</pre></td></tr></table>
+<p>この関数を使うためには、最初に <code>load(&quot;bode&quot;)</code>と書いてください。
+<code><a href="#bode_005fphase">bode_phase</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-clebsch_005fgordan">clebsch_gordan</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Plotting">Plotting</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-bode">Package bode</a>
 </div>
-</p></dd></dl>
+</p>
+</dd></dl>
 
-<p><a name="Item_003a-racah_005fw"></a>
+
+<p><a name="bode_005fphase"></a>
+<a name="Item_003a-bode_005fphase"></a>
 </p><dl>
-<dt><u>関数:</u> <b>racah_w</b><i> (<var>j1</var>, <var>j2</var>, <var>j5</var>, <var>j4</var>, <var>j3</var>, <var>j6</var>)</i>
-<a name="IDX1427"></a>
+<dt><u>関数:</u> <b>bode_phase</b><i> (<var>H</var>, <var>range</var>, ...<var>plot_opts</var>...)</i>
+<a name="IDX1454"></a>
 </dt>
-<dd><p>(Wigner <tt>6j</tt> シンボルを使って計算される)Racah's W 係数を計算します。
+<dd><p>Bodeの位相線図を描く関数。
+</p>
+<p>例 (1から7までは
+</p><table><tr><td>&nbsp;</td><td><pre class="example"><a href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a>,
+</pre></td></tr></table><p>から、8はRon Crummettから):
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bode&quot;)$
+
+(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$
+
+(%i3) bode_phase (H1 (s), [w, 1/1000, 1000])$
+
+(%i4) H2 (s) := 1 / (1 + s/omega0)$
+
+(%i5) bode_phase (H2 (s), [w, 1/1000, 1000]), omega0 = 10$
+
+(%i6) H3 (s) := 1 / (1 + s/omega0)^2$
+
+(%i7) bode_phase (H3 (s), [w, 1/1000, 1000]), omega0 = 10$
+
+(%i8) H4 (s) := 1 + s/omega0$
+
+(%i9) bode_phase (H4 (s), [w, 1/1000, 1000]), omega0 = 10$
+
+(%i10) H5 (s) := 1/s$
+
+(%i11) bode_phase (H5 (s), [w, 1/1000, 1000])$
+
+(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$
+
+(%i13) bode_phase (H6 (s), [w, 1/1000, 1000]),
+                   omega0 = 10, zeta = 1/10$
+
+(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$
+
+(%i15) bode_phase (H7 (s), [w, 1/1000, 1000]),
+                   omega0 = 10, zeta = 1/10$
+
+(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$
+
+(%i17) bode_phase (H8 (s), [w, 1/1000, 1000])$
+
+(%i18) block ([bode_phase_unwrap : false],
+              bode_phase (H8 (s), [w, 1/1000, 1000]));
+
+(%i19) block ([bode_phase_unwrap : true],
+              bode_phase (H8 (s), [w, 1/1000, 1000]));
+</pre></td></tr></table>
+<p>この関数を使うためには、最初に<code>load(&quot;bode&quot;)</code>と書いてください。
+<code><a href="#bode_005fgain">bode_gain</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-clebsch_005fgordan">clebsch_gordan</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Plotting">Plotting</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-bode">Package bode</a>
 </div>
-</p></dd></dl>
-
-<p><a name="Item_003a-wigner_005f3j"></a>
-</p><dl>
-<dt><u>関数:</u> <b>wigner_3j</b><i> (<var>j1</var>, <var>j2</var>, <var>j3</var>, <var>m1</var>, <var>m2</var>, <var>m3</var>)</i>
-<a name="IDX1428"></a>
-</dt>
-<dd><p>(関連の Clebsch-Gordan 係数を使って計算される) Wigner's <tt>3j</tt> シンボルを計算します。
 </p>
-<div class=categorybox>
+</dd></dl>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-clebsch_005fgordan">clebsch_gordan</a>
-</div>
-</p></dd></dl>
-
-<p><a name="Item_003a-wigner_005f6j"></a>
-</p><dl>
-<dt><u>関数:</u> <b>wigner_6j</b><i> (<var>j1</var>, <var>j2</var>, <var>j3</var>, <var>j4</var>, <var>j5</var>, <var>j6</var>)</i>
-<a name="IDX1429"></a>
-</dt>
-<dd><p>Wigner's <tt>6j</tt> シンボルを計算します。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-clebsch_005fgordan">clebsch_gordan</a>
-</div>
-</p></dd></dl>
-
-<p><a name="Item_003a-wigner_005f9j"></a>
-</p><dl>
-<dt><u>関数:</u> <b>wigner_9j</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>d</var>, <var>e</var>, <var>f</var>, <var>g</var>, <var>h</var>, <var>i</var>, <var>j</var>,)</i>
-<a name="IDX1430"></a>
-</dt>
-<dd><p>Wigner's <tt>9j</tt> シンボルを計算します。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-clebsch_005fgordan">clebsch_gordan</a>
-</div>
-</p></dd></dl>
-
-<p><a name="Item_003a-cobyla"></a>
+<p><a name="Item_003a-celine_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC222" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_45.html#SEC224" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC221" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_45.html#SEC223" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

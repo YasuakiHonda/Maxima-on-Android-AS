@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 26. Laufzeitumgebung </h1>
@@ -109,7 +109,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 26.1 Initialisierung von Maxima </h2>
@@ -241,7 +241,7 @@ Patch in Maxima einzuspielen, um einen Programmierfehler zu beheben.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 26.2 Interrupts </h2>
@@ -384,7 +384,7 @@ Maxima restarted.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 26.3 Funktionen und Variablen der Laufzeitumgebung </h2>
@@ -392,7 +392,7 @@ Maxima restarted.
 <p><a name="maxima_005ftempdir"></a>
 </p><dl>
 <dt><u>Systemvariable:</u> <b>maxima_tempdir</b>
-<a name="IDX1432"></a>
+<a name="IDX1439"></a>
 </dt>
 <dd><p>Die Systemvariable <code>maxima_tempdir</code> enth&auml;lt das Verzeichnis, in dem
 Maxima tempor&auml;re Dateien ablegt.  Insbesondere werden tempor&auml;re
@@ -409,7 +409,7 @@ werden, die ein Verzeichnis bezeichnet.
 <p><a name="maxima_005fuserdir"></a>
 </p><dl>
 <dt><u>Systemvariable:</u> <b>maxima_userdir</b>
-<a name="IDX1433"></a>
+<a name="IDX1440"></a>
 </dt>
 <dd><p>Die Systemvariable <code>maxima_userdir</code> enth&auml;lt ein Verzeichnis, das Maxima
 durchsucht, um Maxima- oder Lisp-Dateien zu finden.  Der Standardwert der
@@ -433,13 +433,13 @@ ge&auml;ndert wird, werden die Variablen <code>file_search_maxima</code> und
 <p><a name="room"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>room</b><i> ()</i>
-<a name="IDX1434"></a>
+<a name="IDX1441"></a>
 </dt>
 <dt><u>Funktion:</u> <b>room</b><i> (true)</i>
-<a name="IDX1435"></a>
+<a name="IDX1442"></a>
 </dt>
 <dt><u>Funktion:</u> <b>room</b><i> (false)</i>
-<a name="IDX1436"></a>
+<a name="IDX1443"></a>
 </dt>
 <dd><p>Gibt eine Beschreibung der Speicherplatznutzung aus.  Die Darstellung und der
 Inhalt der Beschreibung h&auml;ngt von dem Maxima zugrunde liegendem Lisp ab.  Mit
@@ -467,7 +467,7 @@ Garbage collection is currently enabled.
 <p><a name="sstatus"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>sstatus</b><i> (<var>keyword</var>, <var>item</var>)</i>
-<a name="IDX1437"></a>
+<a name="IDX1444"></a>
 </dt>
 <dd><p>Hat das Argument <var>keyword</var> den Wert <code>feature</code>, wird das Argument
 <var>item</var> der internen Lisp-Eigenschaftsliste <code>*features*</code> hinzugef&uuml;gt.
@@ -481,10 +481,10 @@ Hat das Argument <var>keyword</var> den Wert <code>nofeature</code>, wird das Ar
 <p><a name="status"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>status</b><i> (<code>feature</code>)</i>
-<a name="IDX1438"></a>
+<a name="IDX1445"></a>
 </dt>
 <dt><u>Funktion:</u> <b>status</b><i> (<code>feature</code>, <var>item</var>)</i>
-<a name="IDX1439"></a>
+<a name="IDX1446"></a>
 </dt>
 <dd><p>Das Kommando <code>status(feature)</code> gibt die interne Lisp-Eigenschaftsliste
 <code>*features*</code> zur&uuml;ck.  <code>status(feature,item)</code> gibt <code>true</code>
@@ -516,7 +516,7 @@ cltl2, ansi-cl, common-lisp, sbcl, ...]
 <p><a name="system"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>system</b><i> (<var>command</var>)</i>
-<a name="IDX1440"></a>
+<a name="IDX1447"></a>
 </dt>
 <dd><p><code>system(command)</code> f&uuml;hrt das Kommando <var>command</var> in einem eigenen 
 Prozess aus.  Das Kommando wird an die Standard-Shell &uuml;bergeben.
@@ -527,7 +527,7 @@ Allgemeinen unter Unix oder Unix &auml;hnlichen Betriebssystemen zur Verf&uuml;g
 <p><a name="time"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>time</b><i> (%o1, %o2, %o3, &hellip;)</i>
-<a name="IDX1441"></a>
+<a name="IDX1448"></a>
 </dt>
 <dd><p>Gibt eine Liste mit den Ausf&uuml;hrungszeiten zur&uuml;ck, die ben&ouml;tigt wurden, um
 die Ergebnisse <code>%o1</code>, <code>%o2</code>, <code>%o3</code>, &hellip; zu berechnen.
@@ -551,7 +551,7 @@ mit <code>time</code> ausgegeben.
 <p><a name="timedate"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>timedate</b><i> ()</i>
-<a name="IDX1442"></a>
+<a name="IDX1449"></a>
 </dt>
 <dd><p>Gibt eine Zeichenkette zur&uuml;ck, die das aktuelle Datum und die aktuelle Zeit 
 enth&auml;lt.  Die Zeichenkette hat das Format <code>yyyy-mm-dd HH:MM:SS (GMT-n)</code>.
@@ -565,7 +565,7 @@ enth&auml;lt.  Die Zeichenkette hat das Format <code>yyyy-mm-dd HH:MM:SS (GMT-n)
 <p><a name="absolute_005freal_005ftime"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>absolute_real_time</b><i> ()</i>
-<a name="IDX1443"></a>
+<a name="IDX1450"></a>
 </dt>
 <dd><p>Gibt die Sekunden zur&uuml;ck, die seit dem 1. Januar 1990 UTC verstrichen 
 sind.  Die R&uuml;ckgabe ist eine ganze Zahl.
@@ -583,7 +583,7 @@ sind.  Die R&uuml;ckgabe ist eine ganze Zahl.
 <p><a name="elapsed_005freal_005ftime"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>elapsed_real_time</b><i> ()</i>
-<a name="IDX1444"></a>
+<a name="IDX1451"></a>
 </dt>
 <dd><p>Gibt die Sekunden zur&uuml;ck, die seit dem letzten Start von Maxima verstrichen 
 sind.  Die R&uuml;ckgabe ist eine Gleitkommazahl.
@@ -602,7 +602,7 @@ sind.  Die R&uuml;ckgabe ist eine Gleitkommazahl.
 <p><a name="elapsed_005frun_005ftime"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>elapsed_run_time</b><i> ()</i>
-<a name="IDX1445"></a>
+<a name="IDX1452"></a>
 </dt>
 <dd><p>Gibt eine Sch&auml;tzung der Zeit in Sekunden zur&uuml;ck, die Maxima f&uuml;r 
 Berechnungen seit dem letzten Start ben&ouml;tigt hat.  Der R&uuml;ckgabewert ist
@@ -632,12 +632,12 @@ eine Gleitkommazahl.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

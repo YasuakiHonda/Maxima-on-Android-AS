@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 23. Matrices and Linear Algebra</title>
+<title>Maxima 5.39.0 Manual: 23. Matrices and Linear Algebra</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 23. Matrices and Linear Algebra">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 23. Matrices and Linear Algebra">
+<meta name="description" content="Maxima 5.39.0 Manual: 23. Matrices and Linear Algebra">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 23. Matrices and Linear Algebra">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 23. Matrices and Linear Algebra </h1>
@@ -107,7 +109,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 23.1 Introduction to Matrices and Linear Algebra </h2>
@@ -138,7 +140,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 23.1.1 Dot </h3>
@@ -187,7 +189,7 @@ involving <code>.</code>, namely <code><a href="#dot0nscsimp">dot0nscsimp</a></c
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 23.1.2 Vectors </h3>
@@ -214,9 +216,9 @@ commutative operator.  To get a commutative dot operator <code>.</code>, the com
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Vectors">Vectors</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-vect">Package vect</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Vectors">Vectors</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-vect">Package vect</a>
 </div>
 </p>
 <p><a name="Item_003a-eigen"></a>
@@ -236,7 +238,7 @@ commutative operator.  To get a commutative dot operator <code>.</code>, the com
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 23.1.3 eigen </h3>
@@ -260,10 +262,10 @@ but without the user prompt between successive computations.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Vectors">Vectors</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Vectors">Vectors</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p>
 
@@ -284,7 +286,7 @@ but without the user prompt between successive computations.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 23.2 Functions and Variables for Matrices and Linear Algebra </h2>
@@ -293,14 +295,16 @@ but without the user prompt between successive computations.
 <a name="Item_003a-addcol"></a>
 </p><dl>
 <dt><u>Function:</u> <b>addcol</b><i> (<var>M</var>, <var>list_1</var>, &hellip;, <var>list_n</var>)</i>
-<a name="IDX823"></a>
+<a name="IDX840"></a>
 </dt>
 <dd><p>Appends the column(s) given by the one
 or more lists (or matrices) onto the matrix <var>M</var>.
 </p>
+<p>See also <code><a href="#addrow">addrow</a></code> and <code><a href="maxima_5.html#append">append</a></code>.
+</p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -308,14 +312,16 @@ or more lists (or matrices) onto the matrix <var>M</var>.
 <a name="Item_003a-addrow"></a>
 </p><dl>
 <dt><u>Function:</u> <b>addrow</b><i> (<var>M</var>, <var>list_1</var>, &hellip;, <var>list_n</var>)</i>
-<a name="IDX824"></a>
+<a name="IDX841"></a>
 </dt>
 <dd><p>Appends the row(s) given by the one or
 more lists (or matrices) onto the matrix <var>M</var>.
 </p>
+<p>See also <code><a href="#addcol">addcol</a></code> and <code><a href="maxima_5.html#append">append</a></code>.
+</p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -323,14 +329,14 @@ more lists (or matrices) onto the matrix <var>M</var>.
 <a name="Item_003a-adjoint"></a>
 </p><dl>
 <dt><u>Function:</u> <b>adjoint</b><i> (<var>M</var>)</i>
-<a name="IDX825"></a>
+<a name="IDX842"></a>
 </dt>
 <dd><p>Returns the adjoint of the matrix <var>M</var>.
 The adjoint matrix is the transpose of the matrix of cofactors of <var>M</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -338,7 +344,7 @@ The adjoint matrix is the transpose of the matrix of cofactors of <var>M</var>.
 <a name="Item_003a-augcoefmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>augcoefmatrix</b><i> ([<var>eqn_1</var>, &hellip;, <var>eqn_m</var>], [<var>x_1</var>, &hellip;, <var>x_n</var>])</i>
-<a name="IDX826"></a>
+<a name="IDX843"></a>
 </dt>
 <dd><p>Returns the augmented coefficient
 matrix for the variables <var>x_1</var>, &hellip;, <var>x_n</var> of the system of linear
@@ -354,8 +360,8 @@ terms not dependent upon <var>x_1</var>, &hellip;, <var>x_n</var>).
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Linear-equations">Linear equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Linear-equations">Linear equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -363,7 +369,7 @@ terms not dependent upon <var>x_1</var>, &hellip;, <var>x_n</var>).
 <a name="Item_003a-cauchy_005fmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cauchy_matrix</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>cauchy_matrix</tt> ([<var>x_1</var>, <var>x_2</var>, &hellip;, <var>x_m</var>], [<var>y_1</var>, <var>y_2</var>, &hellip;, <var>y_n</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>cauchy_matrix</tt> ([<var>x_1</var>, <var>x_2</var>, &hellip;, <var>x_n</var>])</i>
-<a name="IDX827"></a>
+<a name="IDX844"></a>
 </dt>
 <dd><p>Returns a <code>n</code> by <var>m</var> Cauchy matrix with the elements <var>a[i,j]</var> 
 = 1/(<var>x_i</var>+<var>y_i</var>).  The second argument of <code>cauchy_matrix</code> is 
@@ -395,7 +401,7 @@ A second definition is <var>a[i,j]</var> = 1/(<var>x_i</var>-<var>y_i</var>).
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -403,7 +409,7 @@ A second definition is <var>a[i,j]</var> = 1/(<var>x_i</var>-<var>y_i</var>).
 <a name="Item_003a-charpoly"></a>
 </p><dl>
 <dt><u>Function:</u> <b>charpoly</b><i> (<var>M</var>, <var>x</var>)</i>
-<a name="IDX828"></a>
+<a name="IDX845"></a>
 </dt>
 <dd><p>Returns the characteristic polynomial for the matrix <var>M</var>
 with respect to variable <var>x</var>.  That is,
@@ -442,7 +448,7 @@ with respect to variable <var>x</var>.  That is,
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -450,7 +456,7 @@ with respect to variable <var>x</var>.  That is,
 <a name="Item_003a-coefmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>coefmatrix</b><i> ([<var>eqn_1</var>, &hellip;, <var>eqn_m</var>], [<var>x_1</var>, &hellip;, <var>x_n</var>])</i>
-<a name="IDX829"></a>
+<a name="IDX846"></a>
 </dt>
 <dd><p>Returns the coefficient matrix for the
 variables <var>x_1</var>, &hellip;, <var>x_n</var> of the system of linear equations
@@ -463,8 +469,8 @@ variables <var>x_1</var>, &hellip;, <var>x_n</var> of the system of linear equat
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Linear-equations">Linear equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Linear-equations">Linear equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -472,14 +478,14 @@ variables <var>x_1</var>, &hellip;, <var>x_n</var> of the system of linear equat
 <a name="Item_003a-col"></a>
 </p><dl>
 <dt><u>Function:</u> <b>col</b><i> (<var>M</var>, <var>i</var>)</i>
-<a name="IDX830"></a>
+<a name="IDX847"></a>
 </dt>
 <dd><p>Returns the <var>i</var>'th column of the matrix <var>M</var>.
 The return value is a matrix.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -488,10 +494,10 @@ The return value is a matrix.
 <a name="Item_003a-columnvector"></a>
 </p><dl>
 <dt><u>Function:</u> <b>columnvector</b><i> (<var>L</var>)</i>
-<a name="IDX831"></a>
+<a name="IDX848"></a>
 </dt>
 <dt><u>Function:</u> <b>covect</b><i> (<var>L</var>)</i>
-<a name="IDX832"></a>
+<a name="IDX849"></a>
 </dt>
 <dd><p>Returns a matrix of one column and <code>length (<var>L</var>)</code> rows,
 containing the elements of the list <var>L</var>.
@@ -519,7 +525,7 @@ Warning - you are redefining the Macsyma function eigenvectors
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -527,7 +533,7 @@ Warning - you are redefining the Macsyma function eigenvectors
 <a name="Item_003a-copymatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>copymatrix</b><i> (<var>M</var>)</i>
-<a name="IDX833"></a>
+<a name="IDX850"></a>
 </dt>
 <dd><p>Returns a copy of the matrix <var>M</var>.  This is the only way
 to make a copy aside from copying <var>M</var> element by element.
@@ -539,7 +545,7 @@ using assignment creates a separate, modified copy.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -547,7 +553,7 @@ using assignment creates a separate, modified copy.
 <a name="Item_003a-determinant"></a>
 </p><dl>
 <dt><u>Function:</u> <b>determinant</b><i> (<var>M</var>)</i>
-<a name="IDX834"></a>
+<a name="IDX851"></a>
 </dt>
 <dd><p>Computes the determinant of <var>M</var> by a method similar to
 Gaussian elimination.
@@ -559,7 +565,7 @@ when the switches <code>ratmx</code> and <code><a href="#sparse">sparse</a></cod
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -567,7 +573,7 @@ when the switches <code>ratmx</code> and <code><a href="#sparse">sparse</a></cod
 <a name="Item_003a-detout"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>detout</b>
-<a name="IDX835"></a>
+<a name="IDX852"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -596,8 +602,8 @@ given to <code><a href="maxima_8.html#ev">ev</a></code> which causes the other t
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a> &middot;
-<a href="maxima_99.html#Category_003a-Evaluation-flags">Evaluation flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a> &middot;
+<a href="maxima_105.html#Category_003a-Evaluation-flags">Evaluation flags</a>
 </div>
 </p></dd></dl>
 
@@ -605,7 +611,7 @@ given to <code><a href="maxima_8.html#ev">ev</a></code> which causes the other t
 <a name="Item_003a-diagmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>diagmatrix</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX836"></a>
+<a name="IDX853"></a>
 </dt>
 <dd><p>Returns a diagonal matrix of size <var>n</var> by <var>n</var> with the diagonal elements
 all equal to <var>x</var>.  <code>diagmatrix (<var>n</var>, 1)</code> returns an identity matrix
@@ -620,7 +626,7 @@ a matrix, it is not copied; all diagonal elements refer to the same instance,
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -628,7 +634,7 @@ a matrix, it is not copied; all diagonal elements refer to the same instance,
 <a name="Item_003a-doallmxops"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>doallmxops</b>
-<a name="IDX837"></a>
+<a name="IDX854"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -639,7 +645,7 @@ individual <code>dot</code> switches govern which operations are performed.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -647,7 +653,7 @@ individual <code>dot</code> switches govern which operations are performed.
 <a name="Item_003a-domxexpt"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>domxexpt</b>
-<a name="IDX838"></a>
+<a name="IDX855"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -682,7 +688,7 @@ or constant, and <var>power</var> is a list or matrix.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -690,7 +696,7 @@ or constant, and <var>power</var> is a list or matrix.
 <a name="Item_003a-domxmxops"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>domxmxops</b>
-<a name="IDX839"></a>
+<a name="IDX856"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -700,7 +706,7 @@ operations); if this switch is <code>false</code> such operations are not carrie
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -708,7 +714,7 @@ operations); if this switch is <code>false</code> such operations are not carrie
 <a name="Item_003a-domxnctimes"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>domxnctimes</b>
-<a name="IDX840"></a>
+<a name="IDX857"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -717,7 +723,7 @@ matrices are carried out.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -725,7 +731,7 @@ matrices are carried out.
 <a name="Item_003a-dontfactor"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dontfactor</b>
-<a name="IDX841"></a>
+<a name="IDX858"></a>
 </dt>
 <dd><p>Default value: <code>[]</code>
 </p>
@@ -737,7 +743,7 @@ those on the <code>dontfactor</code> list.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -745,7 +751,7 @@ those on the <code>dontfactor</code> list.
 <a name="Item_003a-doscmxops"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>doscmxops</b>
-<a name="IDX842"></a>
+<a name="IDX859"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -754,7 +760,7 @@ carried out.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -762,7 +768,7 @@ carried out.
 <a name="Item_003a-doscmxplus"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>doscmxplus</b>
-<a name="IDX843"></a>
+<a name="IDX860"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -771,7 +777,7 @@ a matrix result.  This switch is not subsumed under <code><a href="#doallmxops">
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -779,7 +785,7 @@ a matrix result.  This switch is not subsumed under <code><a href="#doallmxops">
 <a name="Item_003a-dot0nscsimp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dot0nscsimp</b>
-<a name="IDX844"></a>
+<a name="IDX861"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -788,7 +794,7 @@ and a nonscalar term is simplified to a commutative product.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -796,7 +802,7 @@ and a nonscalar term is simplified to a commutative product.
 <a name="Item_003a-dot0simp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dot0simp</b>
-<a name="IDX845"></a>
+<a name="IDX862"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -806,7 +812,7 @@ a scalar term is simplified to a commutative product.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -814,7 +820,7 @@ a scalar term is simplified to a commutative product.
 <a name="Item_003a-dot1simp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dot1simp</b>
-<a name="IDX846"></a>
+<a name="IDX863"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -824,7 +830,7 @@ another term is simplified to a commutative product.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -832,7 +838,7 @@ another term is simplified to a commutative product.
 <a name="Item_003a-dotassoc"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dotassoc</b>
-<a name="IDX847"></a>
+<a name="IDX864"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -841,7 +847,7 @@ another term is simplified to a commutative product.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -849,7 +855,7 @@ another term is simplified to a commutative product.
 <a name="Item_003a-dotconstrules"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dotconstrules</b>
-<a name="IDX848"></a>
+<a name="IDX865"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -860,7 +866,7 @@ Turning on this flag effectively turns on <code><a href="#dot0simp">dot0simp</a>
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -868,7 +874,7 @@ Turning on this flag effectively turns on <code><a href="#dot0simp">dot0simp</a>
 <a name="Item_003a-dotdistrib"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dotdistrib</b>
-<a name="IDX849"></a>
+<a name="IDX866"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -877,7 +883,7 @@ to <code>A.B + A.C</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -885,7 +891,7 @@ to <code>A.B + A.C</code>.
 <a name="Item_003a-dotexptsimp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dotexptsimp</b>
-<a name="IDX850"></a>
+<a name="IDX867"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -894,7 +900,7 @@ to <code>A.B + A.C</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -902,7 +908,7 @@ to <code>A.B + A.C</code>.
 <a name="Item_003a-dotident"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dotident</b>
-<a name="IDX851"></a>
+<a name="IDX868"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -910,7 +916,7 @@ to <code>A.B + A.C</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -918,7 +924,7 @@ to <code>A.B + A.C</code>.
 <a name="Item_003a-dotscrules"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>dotscrules</b>
-<a name="IDX852"></a>
+<a name="IDX869"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -927,7 +933,7 @@ simplifies to <code>SC*A</code> and <code>A.(SC*B)</code> simplifies to <code>SC
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -935,7 +941,7 @@ simplifies to <code>SC*A</code> and <code>A.(SC*B)</code> simplifies to <code>SC
 <a name="Item_003a-echelon"></a>
 </p><dl>
 <dt><u>Function:</u> <b>echelon</b><i> (<var>M</var>)</i>
-<a name="IDX853"></a>
+<a name="IDX870"></a>
 </dt>
 <dd><p>Returns the echelon form of the matrix <var>M</var>,
 as produced by Gaussian elimination.
@@ -947,7 +953,7 @@ column elements under the first one in each row are all zero.
 <p><code><a href="#triangularize">triangularize</a></code> also carries out Gaussian elimination, but it does not
 normalize the leading non-zero element in each row.
 </p>
-<p><code><a href="maxima_65.html#lu_005ffactor">lu_factor</a></code> and <code><a href="maxima_65.html#cholesky">cholesky</a></code> are other functions which yield
+<p><code><a href="maxima_68.html#lu_005ffactor">lu_factor</a></code> and <code><a href="maxima_68.html#cholesky">cholesky</a></code> are other functions which yield
 triangularized matrices.
 </p>
 <pre class="example">(%i1) M: matrix ([3, 7, aa, bb], [-1, 8, 5, 2], [9, 2, 11, 4]);
@@ -969,8 +975,8 @@ triangularized matrices.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Linear-equations">Linear equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Linear-equations">Linear equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -979,10 +985,10 @@ triangularized matrices.
 <a name="Item_003a-eigenvalues"></a>
 </p><dl>
 <dt><u>Function:</u> <b>eigenvalues</b><i> (<var>M</var>)</i>
-<a name="IDX854"></a>
+<a name="IDX871"></a>
 </dt>
 <dt><u>Function:</u> <b>eivals</b><i> (<var>M</var>)</i>
-<a name="IDX855"></a>
+<a name="IDX872"></a>
 </dt>
 <dd><p>Returns a list of two lists containing the eigenvalues of the matrix <var>M</var>.
 The first sublist of the return value is the list of eigenvalues of the
@@ -996,6 +1002,10 @@ characteristic polynomial of the matrix.  Sometimes <code>solve</code> may not b
 to find the roots of the polynomial; in that case some other functions in this
 package (except <code><a href="#innerproduct">innerproduct</a></code>, <code><a href="#unitvector">unitvector</a></code>,
 <code><a href="#columnvector">columnvector</a></code> and <code><a href="#gramschmidt">gramschmidt</a></code>) will not work.
+Sometimes <code>solve</code> may find only a subset of the roots of the polynomial.
+This may happen when the factoring of the polynomial contains polynomials
+of degree 5 or more. In such cases a warning message is displayed and the
+only the roots found and their corresponding multiplicities are returned.
 </p>
 <p>In some cases the eigenvalues found by <code>solve</code> may be complicated
 expressions.  (This may happen when <code>solve</code> returns a not-so-obviously real
@@ -1010,7 +1020,7 @@ After loading, all functions and variables in the package are available.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p></dd></dl>
 
@@ -1019,10 +1029,10 @@ After loading, all functions and variables in the package are available.
 <a name="Item_003a-eigenvectors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>eigenvectors</b><i> (<var>M</var>)</i>
-<a name="IDX856"></a>
+<a name="IDX873"></a>
 </dt>
 <dt><u>Function:</u> <b>eivects</b><i> (<var>M</var>)</i>
-<a name="IDX857"></a>
+<a name="IDX874"></a>
 </dt>
 <dd><p>Computes eigenvectors of the matrix <var>M</var>.
 The return value is a list of two elements.
@@ -1039,6 +1049,12 @@ There may be one or more eigenvectors in each list.
 If <code>eigen.mac</code> is not already loaded,
 <code>load (&quot;eigen&quot;)</code> loads it.
 After loading, all functions and variables in the package are available.
+</p>
+<p>Note that <code>eigenvectors</code> internally calls <code>eigenvalues</code> to
+obtain eigenvalues. So, when <code>eigenvalues</code> returns a subset of
+all the eigenvalues, the <code>eigenvectors</code> returns the corresponding
+subset of the all the eigenvectors, with the same warning displayed as
+<code>eigenvalues</code>.
 </p>
 <p>The flags that affect this function are:
 </p>
@@ -1136,7 +1152,7 @@ to <code>true</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p></dd></dl>
 
@@ -1144,14 +1160,14 @@ to <code>true</code>.
 <a name="Item_003a-ematrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ematrix</b><i> (<var>m</var>, <var>n</var>, <var>x</var>, <var>i</var>, <var>j</var>)</i>
-<a name="IDX858"></a>
+<a name="IDX875"></a>
 </dt>
 <dd><p>Returns an <var>m</var> by <var>n</var> matrix, all elements of which
 are zero except for the <code>[<var>i</var>, <var>j</var>]</code> element which is <var>x</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1159,7 +1175,7 @@ are zero except for the <code>[<var>i</var>, <var>j</var>]</code> element which 
 <a name="Item_003a-entermatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>entermatrix</b><i> (<var>m</var>, <var>n</var>)</i>
-<a name="IDX859"></a>
+<a name="IDX876"></a>
 </dt>
 <dd><p>Returns an <var>m</var> by <var>n</var> matrix, reading the elements interactively.
 </p>
@@ -1200,8 +1216,8 @@ Matrix entered.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Console-interaction">Console interaction</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Console-interaction">Console interaction</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1209,7 +1225,7 @@ Matrix entered.
 <a name="Item_003a-genmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>genmatrix</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>genmatrix</tt> (<var>a</var>, <var>i_2</var>, <var>j_2</var>, <var>i_1</var>, <var>j_1</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>genmatrix</tt> (<var>a</var>, <var>i_2</var>, <var>j_2</var>, <var>i_1</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>genmatrix</tt> (<var>a</var>, <var>i_2</var>, <var>j_2</var>)</i>
-<a name="IDX860"></a>
+<a name="IDX877"></a>
 </dt>
 <dd><p>Returns a matrix generated from <var>a</var>, taking element
 <code><var>a</var>[<var>i_1</var>, <var>j_1</var>]</code> as the upper-left element and
@@ -1269,7 +1285,7 @@ the matrix will contain a symbolic element <code><var>a</var>[i,j]</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1277,7 +1293,7 @@ the matrix will contain a symbolic element <code><var>a</var>[i,j]</code>.
 <a name="Item_003a-gramschmidt"></a>
 </p><dl>
 <dt><u>Function:</u> <b>gramschmidt</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>gramschmidt</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>gramschmidt</tt> (<var>x</var>, <var>F</var>)</i>
-<a name="IDX861"></a>
+<a name="IDX878"></a>
 </dt>
 <dd><p>Carries out the Gram-Schmidt orthogonalization algorithm on <var>x</var>, which is
 either a matrix or a list of lists.  <var>x</var> is not modified by
@@ -1331,7 +1347,7 @@ results.  As a consequence, the return value may contain factored integers.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p></dd></dl>
 
@@ -1339,13 +1355,13 @@ results.  As a consequence, the return value may contain factored integers.
 <a name="Item_003a-ident"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ident</b><i> (<var>n</var>)</i>
-<a name="IDX862"></a>
+<a name="IDX879"></a>
 </dt>
 <dd><p>Returns an <var>n</var> by <var>n</var> identity matrix.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1354,10 +1370,10 @@ results.  As a consequence, the return value may contain factored integers.
 <a name="Item_003a-innerproduct"></a>
 </p><dl>
 <dt><u>Function:</u> <b>innerproduct</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX863"></a>
+<a name="IDX880"></a>
 </dt>
 <dt><u>Function:</u> <b>inprod</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX864"></a>
+<a name="IDX881"></a>
 </dt>
 <dd><p>Returns the inner product (also called the scalar product or dot product) of
 <var>x</var> and <var>y</var>, which are lists of equal length, or both 1-column or 1-row
@@ -1370,7 +1386,7 @@ where <code>.</code> is the noncommutative multiplication operator.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p></dd></dl>
 
@@ -1378,7 +1394,7 @@ where <code>.</code> is the noncommutative multiplication operator.
 <a name="Item_003a-invert_005fby_005fadjoint"></a>
 </p><dl>
 <dt><u>Function:</u> <b>invert_by_adjoint</b><i> (<var>M</var>)</i>
-<a name="IDX865"></a>
+<a name="IDX882"></a>
 </dt>
 <dd><p>Returns the inverse of the matrix <var>M</var>.
 The inverse is computed by the adjoint method.
@@ -1392,7 +1408,7 @@ the same as <code><a href="#invert">invert</a></code>.
 <a name="Item_003a-invert"></a>
 </p><dl>
 <dt><u>Function:</u> <b>invert</b><i> (<var>M</var>)</i>
-<a name="IDX866"></a>
+<a name="IDX883"></a>
 </dt>
 <dd><p>Returns the inverse of the matrix <var>M</var>.
 The inverse is computed via the LU decomposition.
@@ -1420,7 +1436,7 @@ In particular, when <var>M</var> has polynomial elements,
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1428,7 +1444,7 @@ In particular, when <var>M</var> has polynomial elements,
 <a name="Item_003a-list_005fmatrix_005fentries"></a>
 </p><dl>
 <dt><u>Function:</u> <b>list_matrix_entries</b><i> (<var>M</var>)</i>
-<a name="IDX867"></a>
+<a name="IDX884"></a>
 </dt>
 <dd><p>Returns a list containing the elements of the matrix <var>M</var>.
 </p>
@@ -1439,7 +1455,7 @@ In particular, when <var>M</var> has polynomial elements,
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1447,7 +1463,7 @@ In particular, when <var>M</var> has polynomial elements,
 <a name="Item_003a-lmxchar"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>lmxchar</b>
-<a name="IDX868"></a>
+<a name="IDX885"></a>
 </dt>
 <dd><p>Default value: <code>[</code>
 </p>
@@ -1466,8 +1482,8 @@ See also <code><a href="#rmxchar">rmxchar</a></code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Display-flags-and-variables">Display flags and variables</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Display-flags-and-variables">Display flags and variables</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1475,7 +1491,7 @@ See also <code><a href="#rmxchar">rmxchar</a></code>.
 <a name="Item_003a-matrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>matrix</b><i> (<var>row_1</var>, &hellip;, <var>row_n</var>)</i>
-<a name="IDX869"></a>
+<a name="IDX886"></a>
 </dt>
 <dd><p>Returns a rectangular matrix which has the rows <var>row_1</var>, &hellip;,
 <var>row_n</var>.  Each row is a list of expressions.  All rows must be the same
@@ -1584,6 +1600,7 @@ Scalar base to a matrix exponent, element by element.
 </pre><ul>
 <li>
 Matrix base to a matrix exponent.  This is not carried out element by element.
+See also <code><a href="#matrixexp">matrixexp</a></code>.
 </li></ul>
 <pre class="example">(%i9) x ^ y;
                                 [ %pi  %e ]
@@ -1640,15 +1657,36 @@ matrix inverse, if it exists.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
+
+<p><a name="matrixexp"></a>
+<a name="Item_003a-matrixexp"></a>
+</p><dl>
+<dt><u>Function:</u> <b>matrixexp</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>matrixexp</tt> (<var>M</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>matrixexp</tt> (<var>M</var>, <var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>matrixexp</tt> (<var>M</var>, <var>V</var>)</i>
+<a name="IDX887"></a>
+</dt>
+<dd><p>Calculates the matrix exponential
+<em>e^(M*V)</em>
+. Instead of the vector <var>V</var> a number <var>n</var> can be specified as the second
+argument. If this argument is omitted <code>matrixexp</code> replaces it by <code>1</code>.
+</p>
+<p>The matrix exponential of a matrix <var>M</var> can be expressed as a power series:
+<em>e^M=sum(M^k/k!,0,inf)</em>
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
+</div>
+</p></dd></dl>
+
 
 <p><a name="matrixmap"></a>
 <a name="Item_003a-matrixmap"></a>
 </p><dl>
 <dt><u>Function:</u> <b>matrixmap</b><i> (<var>f</var>, <var>M</var>)</i>
-<a name="IDX870"></a>
+<a name="IDX888"></a>
 </dt>
 <dd><p>Returns a matrix with element <code>i,j</code> equal to <code><var>f</var>(<var>M</var>[i,j])</code>.
 </p>
@@ -1657,7 +1695,7 @@ matrix inverse, if it exists.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1665,14 +1703,14 @@ matrix inverse, if it exists.
 <a name="Item_003a-matrixp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>matrixp</b><i> (<var>expr</var>)</i>
-<a name="IDX871"></a>
+<a name="IDX889"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is a matrix, otherwise <code>false</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1680,7 +1718,7 @@ matrix inverse, if it exists.
 <a name="Item_003a-matrix_005felement_005fadd"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>matrix_element_add</b>
-<a name="IDX872"></a>
+<a name="IDX890"></a>
 </dt>
 <dd><p>Default value: <code>+</code>
 </p>
@@ -1715,7 +1753,7 @@ or a lambda expression.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1723,7 +1761,7 @@ or a lambda expression.
 <a name="Item_003a-matrix_005felement_005fmult"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>matrix_element_mult</b>
-<a name="IDX873"></a>
+<a name="IDX891"></a>
 </dt>
 <dd><p>Default value: <code>*</code>
 </p>
@@ -1768,7 +1806,7 @@ or a lambda expression.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1776,7 +1814,7 @@ or a lambda expression.
 <a name="Item_003a-matrix_005felement_005ftranspose"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>matrix_element_transpose</b>
-<a name="IDX874"></a>
+<a name="IDX892"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1828,7 +1866,7 @@ while the <code>transpose</code> option always applies <code>transpose</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1837,7 +1875,7 @@ while the <code>transpose</code> option always applies <code>transpose</code>.
 <a name="Item_003a-mattrace"></a>
 </p><dl>
 <dt><u>Function:</u> <b>mattrace</b><i> (<var>M</var>)</i>
-<a name="IDX875"></a>
+<a name="IDX893"></a>
 </dt>
 <dd><p>Returns the trace (that is, the sum of the elements on the main diagonal) of
 the square matrix <var>M</var>.
@@ -1849,8 +1887,8 @@ the square matrix <var>M</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-nchrpl">Package nchrpl</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-nchrpl">Package nchrpl</a>
 </div>
 </p></dd></dl>
 
@@ -1858,14 +1896,14 @@ the square matrix <var>M</var>.
 <a name="Item_003a-minor"></a>
 </p><dl>
 <dt><u>Function:</u> <b>minor</b><i> (<var>M</var>, <var>i</var>, <var>j</var>)</i>
-<a name="IDX876"></a>
+<a name="IDX894"></a>
 </dt>
 <dd><p>Returns the <var>i</var>, <var>j</var> minor of the matrix <var>M</var>.  That is, <var>M</var>
 with row <var>i</var> and column <var>j</var> removed.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1873,7 +1911,7 @@ with row <var>i</var> and column <var>j</var> removed.
 <a name="Item_003a-ncharpoly"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ncharpoly</b><i> (<var>M</var>, <var>x</var>)</i>
-<a name="IDX877"></a>
+<a name="IDX895"></a>
 </dt>
 <dd><p>Returns the characteristic polynomial of the matrix <var>M</var>
 with respect to <var>x</var>.  This is an alternative to Maxima's <code><a href="#charpoly">charpoly</a></code>.
@@ -1891,8 +1929,8 @@ with integers, since it avoids polynomial arithmetic altogether.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-nchrpl">Package nchrpl</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-nchrpl">Package nchrpl</a>
 </div>
 </p></dd></dl>
 
@@ -1900,14 +1938,14 @@ with integers, since it avoids polynomial arithmetic altogether.
 <a name="Item_003a-newdet"></a>
 </p><dl>
 <dt><u>Function:</u> <b>newdet</b><i> (<var>M</var>)</i>
-<a name="IDX878"></a>
+<a name="IDX896"></a>
 </dt>
 <dd><p>Computes the determinant of the matrix <var>M</var> by the Johnson-Gentleman tree 
 minor algorithm.  <code>newdet</code> returns the result in CRE form.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1915,7 +1953,7 @@ minor algorithm.  <code>newdet</code> returns the result in CRE form.
 <a name="Item_003a-permanent"></a>
 </p><dl>
 <dt><u>Function:</u> <b>permanent</b><i> (<var>M</var>)</i>
-<a name="IDX879"></a>
+<a name="IDX897"></a>
 </dt>
 <dd><p>Computes the permanent of the matrix <var>M</var> by the Johnson-Gentleman tree
 minor algorithm.  A permanent is like a determinant but with no sign changes.
@@ -1925,7 +1963,7 @@ minor algorithm.  A permanent is like a determinant but with no sign changes.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1933,7 +1971,7 @@ minor algorithm.  A permanent is like a determinant but with no sign changes.
 <a name="Item_003a-rank"></a>
 </p><dl>
 <dt><u>Function:</u> <b>rank</b><i> (<var>M</var>)</i>
-<a name="IDX880"></a>
+<a name="IDX898"></a>
 </dt>
 <dd><p>Computes the rank of the matrix <var>M</var>.  That is, the order of the
 largest non-singular subdeterminant of <var>M</var>.
@@ -1944,7 +1982,7 @@ equivalent to zero is indeed so.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1952,7 +1990,7 @@ equivalent to zero is indeed so.
 <a name="Item_003a-ratmx"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>ratmx</b>
-<a name="IDX881"></a>
+<a name="IDX899"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1969,8 +2007,8 @@ which might not always be desired.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a> &middot;
-<a href="maxima_99.html#Category_003a-Rational-expressions">Rational expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a> &middot;
+<a href="maxima_105.html#Category_003a-Rational-expressions">Rational expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1978,14 +2016,14 @@ which might not always be desired.
 <a name="Item_003a-row"></a>
 </p><dl>
 <dt><u>Function:</u> <b>row</b><i> (<var>M</var>, <var>i</var>)</i>
-<a name="IDX882"></a>
+<a name="IDX900"></a>
 </dt>
 <dd><p>Returns the <var>i</var>'th row of the matrix <var>M</var>.
 The return value is a matrix.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -1993,7 +2031,7 @@ The return value is a matrix.
 <a name="Item_003a-rmxchar"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>rmxchar</b>
-<a name="IDX883"></a>
+<a name="IDX901"></a>
 </dt>
 <dd><p>Default value: <code>]</code>
 </p>
@@ -2003,7 +2041,7 @@ The return value is a matrix.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2011,7 +2049,7 @@ The return value is a matrix.
 <a name="Item_003a-scalarmatrixp"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>scalarmatrixp</b>
-<a name="IDX884"></a>
+<a name="IDX902"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -2027,8 +2065,8 @@ to scalars.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a> &middot;
-<a href="maxima_99.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a> &middot;
+<a href="maxima_105.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -2037,7 +2075,7 @@ to scalars.
 <a name="Item_003a-scalefactors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>scalefactors</b><i> (<var>coordinatetransform</var>)</i>
-<a name="IDX885"></a>
+<a name="IDX903"></a>
 </dt>
 <dd><p>Here the argument <var>coordinatetransform</var> evaluates to the form
 <code>[[expression1, expression2, ...], indeterminate1, indeterminat2, ...]</code>,
@@ -2055,7 +2093,7 @@ current coordinate system, there is a function with usage of the form
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-vect">Package vect</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-vect">Package vect</a>
 </div>
 </p></dd></dl>
 
@@ -2063,7 +2101,7 @@ current coordinate system, there is a function with usage of the form
 <a name="Item_003a-setelmx"></a>
 </p><dl>
 <dt><u>Function:</u> <b>setelmx</b><i> (<var>x</var>, <var>i</var>, <var>j</var>, <var>M</var>)</i>
-<a name="IDX886"></a>
+<a name="IDX904"></a>
 </dt>
 <dd><p>Assigns <var>x</var> to the (<var>i</var>, <var>j</var>)'th element of the matrix <var>M</var>,
 and returns the altered matrix.
@@ -2073,7 +2111,7 @@ but returns <var>x</var> instead of <var>M</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -2082,10 +2120,10 @@ but returns <var>x</var> instead of <var>M</var>.
 <a name="Item_003a-similaritytransform"></a>
 </p><dl>
 <dt><u>Function:</u> <b>similaritytransform</b><i> (<var>M</var>)</i>
-<a name="IDX887"></a>
+<a name="IDX905"></a>
 </dt>
 <dt><u>Function:</u> <b>simtran</b><i> (<var>M</var>)</i>
-<a name="IDX888"></a>
+<a name="IDX906"></a>
 </dt>
 <dd><p><code>similaritytransform</code> computes a similarity transform of the matrix
 <code>M</code>.  It returns a list which is the output of the <code>uniteigenvectors</code>
@@ -2112,7 +2150,7 @@ to be able to form <code>rightmatrix</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p></dd></dl>
 
@@ -2120,7 +2158,7 @@ to be able to form <code>rightmatrix</code>.
 <a name="Item_003a-sparse"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>sparse</b>
-<a name="IDX889"></a>
+<a name="IDX907"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2129,7 +2167,7 @@ to be able to form <code>rightmatrix</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -2137,14 +2175,14 @@ to be able to form <code>rightmatrix</code>.
 <a name="Item_003a-submatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>submatrix</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>submatrix</tt> (<var>i_1</var>, &hellip;, <var>i_m</var>, <var>M</var>, <var>j_1</var>, &hellip;, <var>j_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>submatrix</tt> (<var>i_1</var>, &hellip;, <var>i_m</var>, <var>M</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>submatrix</tt> (<var>M</var>, <var>j_1</var>, &hellip;, <var>j_n</var>)</i>
-<a name="IDX890"></a>
+<a name="IDX908"></a>
 </dt>
 <dd><p>Returns a new matrix composed of the matrix <var>M</var> with rows <var>i_1</var>,
 &hellip;, <var>i_m</var> deleted, and columns <var>j_1</var>, &hellip;, <var>j_n</var> deleted.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -2152,7 +2190,7 @@ to be able to form <code>rightmatrix</code>.
 <a name="Item_003a-transpose"></a>
 </p><dl>
 <dt><u>Function:</u> <b>transpose</b><i> (<var>M</var>)</i>
-<a name="IDX891"></a>
+<a name="IDX909"></a>
 </dt>
 <dd><p>Returns the transpose of <var>M</var>.
 </p>
@@ -2167,7 +2205,7 @@ and the return value is a noun expression <code>'transpose (<var>M</var>)</code>
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -2175,7 +2213,7 @@ and the return value is a noun expression <code>'transpose (<var>M</var>)</code>
 <a name="Item_003a-triangularize"></a>
 </p><dl>
 <dt><u>Function:</u> <b>triangularize</b><i> (<var>M</var>)</i>
-<a name="IDX892"></a>
+<a name="IDX910"></a>
 </dt>
 <dd><p>Returns the upper triangular form of the matrix <code>M</code>,
 as produced by Gaussian elimination.
@@ -2200,8 +2238,8 @@ triangularized matrices.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Linear-equations">Linear equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Linear-equations">Linear equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -2210,10 +2248,10 @@ triangularized matrices.
 <a name="Item_003a-uniteigenvectors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>uniteigenvectors</b><i> (<var>M</var>)</i>
-<a name="IDX893"></a>
+<a name="IDX911"></a>
 </dt>
 <dt><u>Function:</u> <b>ueivects</b><i> (<var>M</var>)</i>
-<a name="IDX894"></a>
+<a name="IDX912"></a>
 </dt>
 <dd><p>Computes unit eigenvectors of the matrix <var>M</var>.
 The return value is a list of lists, the first sublist of which is the
@@ -2241,7 +2279,7 @@ eigenvectors of which do not span the vector space of the appropriate dimension.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p></dd></dl>
 
@@ -2250,10 +2288,10 @@ eigenvectors of which do not span the vector space of the appropriate dimension.
 <a name="Item_003a-unitvector"></a>
 </p><dl>
 <dt><u>Function:</u> <b>unitvector</b><i> (<var>x</var>)</i>
-<a name="IDX895"></a>
+<a name="IDX913"></a>
 </dt>
 <dt><u>Function:</u> <b>uvect</b><i> (<var>x</var>)</i>
-<a name="IDX896"></a>
+<a name="IDX914"></a>
 </dt>
 <dd><p>Returns <em><var>x</var>/norm(<var>x</var>)</em>;
 this is a unit vector in the same direction as <var>x</var>.
@@ -2264,7 +2302,7 @@ this is a unit vector in the same direction as <var>x</var>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-eigen">Package eigen</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-eigen">Package eigen</a>
 </div>
 </p></dd></dl>
 
@@ -2273,7 +2311,7 @@ this is a unit vector in the same direction as <var>x</var>.
 <a name="Item_003a-vectorpotential"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vectorpotential</b><i> (<var>givencurl</var>)</i>
-<a name="IDX897"></a>
+<a name="IDX915"></a>
 </dt>
 <dd><p>Returns the vector potential of a given curl vector, in the current coordinate
 system.  <code>potentialzeroloc</code> has a similar role as for <code>potential</code>, but
@@ -2282,7 +2320,7 @@ of the coordinate variables.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-vect">Package vect</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-vect">Package vect</a>
 </div>
 </p></dd></dl>
 
@@ -2291,7 +2329,7 @@ of the coordinate variables.
 <a name="Item_003a-vectorsimp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vectorsimp</b><i> (<var>expr</var>)</i>
-<a name="IDX898"></a>
+<a name="IDX916"></a>
 </dt>
 <dd><p>Applies simplifications and expansions according to the following global flags:
 </p>
@@ -2332,8 +2370,8 @@ expansion for an operand that is any kind of product.
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-vect">Package vect</a> &middot;
-<a href="maxima_99.html#Category_003a-Simplification-functions">Simplification functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-vect">Package vect</a> &middot;
+<a href="maxima_105.html#Category_003a-Simplification-functions">Simplification functions</a>
 </div>
 </p></dd></dl>
 
@@ -2341,7 +2379,7 @@ expansion for an operand that is any kind of product.
 <a name="Item_003a-vect_005fcross"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>vect_cross</b>
-<a name="IDX899"></a>
+<a name="IDX917"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2350,8 +2388,8 @@ expansion for an operand that is any kind of product.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-vect">Package vect</a> &middot;
-<a href="maxima_99.html#Category_003a-Differential-calculus">Differential calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-vect">Package vect</a> &middot;
+<a href="maxima_105.html#Category_003a-Differential-calculus">Differential calculus</a>
 </div>
 </p></dd></dl>
 
@@ -2359,13 +2397,13 @@ expansion for an operand that is any kind of product.
 <a name="Item_003a-zeromatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>zeromatrix</b><i> (<var>m</var>, <var>n</var>)</i>
-<a name="IDX900"></a>
+<a name="IDX918"></a>
 </dt>
 <dd><p>Returns an <var>m</var> by <var>n</var> matrix, all elements of which are zero.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Matrices">Matrices</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
 </div>
 </p></dd></dl>
 
@@ -2382,12 +2420,12 @@ expansion for an operand that is any kind of product.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

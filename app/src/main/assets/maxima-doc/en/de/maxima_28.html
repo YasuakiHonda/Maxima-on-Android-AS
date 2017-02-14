@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 28. &Uuml;bersetzer </h1>
@@ -107,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 28.1 Einf&uuml;hrung in den &Uuml;bersetzer </h2>
@@ -128,7 +128,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 28.2 Funktionen und Variablen des &Uuml;bersetzers </h2>
@@ -136,13 +136,13 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <p><a name="compfile"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>compfile</b><i> (<var>filename</var>, <var>f_1</var>, &hellip;, <var>f_n</var>)</i>
-<a name="IDX1470"></a>
+<a name="IDX1477"></a>
 </dt>
 <dt><u>Funktion:</u> <b>compfile</b><i> (<var>filename</var>, functions)</i>
-<a name="IDX1471"></a>
+<a name="IDX1478"></a>
 </dt>
 <dt><u>Funktion:</u> <b>compfile</b><i> (<var>filename</var>, all)</i>
-<a name="IDX1472"></a>
+<a name="IDX1479"></a>
 </dt>
 <dd>
 <p>&Uuml;bersetzt Maxima-Funktionen nach Lisp und schreibt den &uuml;bersetzten Code in 
@@ -167,13 +167,13 @@ dann den Lisp-Compiler aus.
 <p><a name="compile"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>compile</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>)</i>
-<a name="IDX1473"></a>
+<a name="IDX1480"></a>
 </dt>
 <dt><u>Funktion:</u> <b>compile</b><i> (functions)</i>
-<a name="IDX1474"></a>
+<a name="IDX1481"></a>
 </dt>
 <dt><u>Funktion:</u> <b>compile</b><i> (all)</i>
-<a name="IDX1475"></a>
+<a name="IDX1482"></a>
 </dt>
 <dd>
 <p>&Uuml;bersetzt die Maxima-Funktionen <var>f_1</var>, &hellip;, <var>f_n</var> nach Lisp, 
@@ -194,13 +194,13 @@ nutzerdefinierten Funktionen.
 <p><a name="compile_005ffile"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>compile_file</b><i> (<var>filename</var>)</i>
-<a name="IDX1476"></a>
+<a name="IDX1483"></a>
 </dt>
 <dt><u>Funktion:</u> <b>compile_file</b><i> (<var>filename</var>, <var>compiled_filename</var>)</i>
-<a name="IDX1477"></a>
+<a name="IDX1484"></a>
 </dt>
 <dt><u>Funktion:</u> <b>compile_file</b><i> (<var>filename</var>, <var>compiled_filename</var>, <var>lisp_filename</var>)</i>
-<a name="IDX1478"></a>
+<a name="IDX1485"></a>
 </dt>
 <dd>
 <p>&Uuml;bersetzt die Maxima-Datei <var>filename</var> nach Lisp, ruft den Lisp-Compiler 
@@ -243,7 +243,7 @@ Programmfehler
 <p><a name="declare_005ftranslated"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>declare_translated</b><i> (<var>f_1</var>, <var>f_2</var>, &hellip;)</i>
-<a name="IDX1479"></a>
+<a name="IDX1486"></a>
 </dt>
 <dd>
 <p>Bei der &Uuml;bersetzung einer Datei von Maxima-Code nach Lisp-Code ist es f&uuml;r 
@@ -261,7 +261,7 @@ repr&auml;sentieren.  Fehlt dem &Uuml;bersetzer diese Information wird das Komma
 <p><a name="mode_005fcheckp"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>mode_checkp</b>
-<a name="IDX1480"></a>
+<a name="IDX1487"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -294,7 +294,7 @@ warning: n was declared with mode fixnum, but it has value: 2.0
 <p><a name="mode_005fcheck_005ferrorp"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>mode_check_errorp</b>
-<a name="IDX1481"></a>
+<a name="IDX1488"></a>
 </dt>
 <dd><p>Standardwert: <code>false</code>
 </p>
@@ -321,7 +321,7 @@ Error: n was declared mode fixnum, has value: 2.0
 <p><a name="mode_005fcheck_005fwarnp"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>mode_check_warnp</b>
-<a name="IDX1482"></a>
+<a name="IDX1489"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -338,7 +338,7 @@ haben.  Siehe <code><a href="#mode_005fcheckp">mode_checkp</a></code> und <code>
 <p><a name="mode_005fdeclare"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>mode_declare</b><i> (<var>y_1</var>, <var>mode_1</var>, &hellip;, <var>y_n</var>, <var>mode_n</var>)</i>
-<a name="IDX1483"></a>
+<a name="IDX1490"></a>
 </dt>
 <dd>
 <p><code>mode_declare</code> deklariert den Typ von Variablen und Funktionen f&uuml;r den
@@ -383,7 +383,7 @@ definiert.
 <p><a name="mode_005fidentity"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>mode_identity</b><i> (<var>mode</var>, <var>expr</var>)</i>
-<a name="IDX1484"></a>
+<a name="IDX1491"></a>
 </dt>
 <dd>
 <p>Mit der Funktion <code>mode_identity</code> wird der Typ <var>mode</var> f&uuml;r das
@@ -410,7 +410,7 @@ warning: sin(a) was declared with mode fixnum, but it has value:
 <p><a name="savedef"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>savedef</b>
-<a name="IDX1485"></a>
+<a name="IDX1492"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -466,7 +466,7 @@ fundef: no such function: g
 <p><a name="transcompile"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>transcompile</b>
-<a name="IDX1486"></a>
+<a name="IDX1493"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -483,13 +483,13 @@ des Codes verbessern.
 <p><a name="translate"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>translate</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>)</i>
-<a name="IDX1487"></a>
+<a name="IDX1494"></a>
 </dt>
 <dt><u>Funktion:</u> <b>translate</b><i> (functions)</i>
-<a name="IDX1488"></a>
+<a name="IDX1495"></a>
 </dt>
 <dt><u>Funktion:</u> <b>translate</b><i> (all)</i>
-<a name="IDX1489"></a>
+<a name="IDX1496"></a>
 </dt>
 <dd>
 <p>Die vom Nutzer definierten Maxima-Funktionen <var>f_1</var>, &hellip;, <var>f_n</var> 
@@ -551,10 +551,10 @@ Originalversionen der &uuml;bersetzten Funktion ausgef&uuml;hrt.
 <p><a name="translate_005ffile"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>translate_file</b><i> (<var>maxima_filename</var>)</i>
-<a name="IDX1490"></a>
+<a name="IDX1497"></a>
 </dt>
 <dt><u>Funktion:</u> <b>translate_file</b><i> (<var>maxima_filename</var>, <var>lisp_filename</var>)</i>
-<a name="IDX1491"></a>
+<a name="IDX1498"></a>
 </dt>
 <dd>
 <p>&Uuml;bersetzt eine Datei mit Maxima-Code in eine Datei mit Lisp-Code.
@@ -621,7 +621,7 @@ und <code>tr_warn_undefined_variable</code>.
 <p><a name="transrun"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>transrun</b>
-<a name="IDX1492"></a>
+<a name="IDX1499"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -636,7 +636,7 @@ Siehe <code><a href="#savedef">savedef</a></code>.
 <p><a name="tr_005farray_005fas_005fref"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_array_as_ref</b>
-<a name="IDX1493"></a>
+<a name="IDX1500"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -655,7 +655,7 @@ Wert <code>true</code> hat.
 <p><a name="tr_005fbound_005ffunction_005fapplyp"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_bound_function_applyp</b>
-<a name="IDX1494"></a>
+<a name="IDX1501"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -674,7 +674,7 @@ Warnung.
 <p><a name="tr_005ffile_005ftty_005fmessagep"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_file_tty_messagesp</b>
-<a name="IDX1495"></a>
+<a name="IDX1502"></a>
 </dt>
 <dd><p>Standardwert: <code>false</code>
 </p>
@@ -690,7 +690,7 @@ Datei <code>.UNILISP</code> geschrieben.
 <p><a name="tr_005ffloat_005fcan_005fbranch_005fcomplex"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_float_can_branch_complex</b>
-<a name="IDX1496"></a>
+<a name="IDX1503"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -706,7 +706,7 @@ Datei <code>.UNILISP</code> geschrieben.
 <p><a name="tr_005ffunction_005fcall_005fdefault"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_function_call_default</b>
-<a name="IDX1497"></a>
+<a name="IDX1504"></a>
 </dt>
 <dd><p>Standardwert: <code>general</code>
 </p>
@@ -724,7 +724,7 @@ urspr&uuml;nglichen Funktion ist.
 <p><a name="tr_005fnumer"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_numer</b>
-<a name="IDX1498"></a>
+<a name="IDX1505"></a>
 </dt>
 <dd><p>Standardwert: <code>false</code>
 </p>
@@ -737,7 +737,7 @@ von Symbolen vom &Uuml;bersetzer angewendet.
 <p><a name="tr_005foptimize_005fmax_005floop"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_optimize_max_loop</b>
-<a name="IDX1499"></a>
+<a name="IDX1506"></a>
 </dt>
 <dd><p>Standardwert: 100
 </p>
@@ -751,7 +751,7 @@ Schleifen des &Uuml;bersetzers vermieden.
 <p><a name="tr_005fsemicompile"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_semicompile</b>
-<a name="IDX1500"></a>
+<a name="IDX1507"></a>
 </dt>
 <dd><p>Standardwert: <code>false</code>
 </p>
@@ -766,7 +766,7 @@ expandiert sind, der aber nicht kompliliert ist.
 <p><a name="tr_005fstate_005fvars"></a>
 </p><dl>
 <dt><u>Systemvariable:</u> <b>tr_state_vars</b>
-<a name="IDX1501"></a>
+<a name="IDX1508"></a>
 </dt>
 <dd><p>Standardwert:
 </p><pre class="verbatim">[transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,
@@ -782,7 +782,7 @@ tr_function_call_default, tr_array_as_ref,tr_numer]
 <p><a name="tr_005fwarnings_005fget"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>tr_warnings_get</b><i> ()</i>
-<a name="IDX1502"></a>
+<a name="IDX1509"></a>
 </dt>
 <dd>
 <p>Gebe die Liste der Warnungen aus, welche bei der letzten &Uuml;bersetzung erzeugt 
@@ -793,7 +793,7 @@ wurden.
 <p><a name="tr_005fwarn_005fbad_005ffunction_005fcalls"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_warn_bad_function_calls</b>
-<a name="IDX1503"></a>
+<a name="IDX1510"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -807,7 +807,7 @@ nicht korrekt sind, aufgrund von ungeeigneten Deklarationen f&uuml;r die
 <p><a name="tr_005fwarn_005ffexpr"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_warn_fexpr</b>
-<a name="IDX1504"></a>
+<a name="IDX1511"></a>
 </dt>
 <dd><p>Standardwert: <code>compfile</code>
 </p>
@@ -820,7 +820,7 @@ auftreten.
 <p><a name="tr_005fwarn_005fmeval"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_warn_meval</b>
-<a name="IDX1505"></a>
+<a name="IDX1512"></a>
 </dt>
 <dd><p>Standardwert: <code>compfile</code>
 </p>
@@ -833,7 +833,7 @@ signalisiert Probleme bei der &Uuml;bersetzung.
 <p><a name="tr_005fwarn_005fmode"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_warn_mode</b>
-<a name="IDX1506"></a>
+<a name="IDX1513"></a>
 </dt>
 <dd><p>Standardwert: <code>all</code>
 </p>
@@ -846,7 +846,7 @@ deklarierten Typ passen.
 <p><a name="tr_005fwarn_005fundeclared"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_warn_undeclared</b>
-<a name="IDX1507"></a>
+<a name="IDX1514"></a>
 </dt>
 <dd><p>Standardwert: <code>compile</code>
 </p>
@@ -859,7 +859,7 @@ sollen.
 <p><a name="tr_005fwarn_005fundedined_005fvariable"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>tr_warn_undefined_variable</b>
-<a name="IDX1508"></a>
+<a name="IDX1515"></a>
 </dt>
 <dd><p>Standardwert: <code>all</code>
 </p>
@@ -881,12 +881,12 @@ sollen.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

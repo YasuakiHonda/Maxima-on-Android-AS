@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 80. to_poly_solve</title>
+<title>Maxima 5.39.0 Manual: 80. simplification</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 80. to_poly_solve">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 80. to_poly_solve">
+<meta name="description" content="Maxima 5.39.0 Manual: 80. simplification">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 80. simplification">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,1329 +54,1162 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-<a name="to_005fpoly_005fsolve"></a>
-<a name="SEC379"></a>
+<a name="simplification_002dpkg"></a>
+<a name="SEC368"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_79.html#SEC378" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_79.html#SEC367" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC381" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 80. to_poly_solve </h1>
+<h1 class="chapter"> 80. simplification </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC380">80.1 Functions and Variables for to_poly_solve</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC369">80.1 Introduction to simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC370">80.2 Package absimp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC371">80.3 Package facexp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC372">80.4 Package functs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC373">80.5 Package ineq</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC374">80.6 Package rducon</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC375">80.7 Package scifac</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC376">80.8 Package sqdnst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-to_005fpoly_005fsolve"></a>
+<p><a name="Item_003a-Introduction-to-simplification"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-to_005fpoly_005fsolve"></a>
-<a name="SEC380"></a>
+<a name="Introduction-to-simplification"></a>
+<a name="SEC369"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC379" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC381" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC368" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC370" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC379" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC379" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC381" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 80.1 Functions and Variables for to_poly_solve </h2>
+<h2 class="section"> 80.1 Introduction to simplification </h2>
 
-<p>The packages <code>to_poly</code> and <code>to_poly_solve</code> are experimental;
-the specifications of the functions in these packages might change or
-the some of the functions in these packages might be merged into other
-Maxima functions.
+<p>The directory <code>maxima/share/simplification</code> contains several scripts
+which implement simplification rules and functions,
+and also some functions not related to simplification.
 </p>
-<p>Barton Willis (Professor of Mathematics, University of Nebraska at
-Kearney) wrote the <code>to_poly</code> and <code>to_poly_solve</code> packages and the
-English language user documentation for these packages.
+
+<p><a name="Item_003a-Package-absimp"></a>
+</p><hr size="6">
+<a name="Package-absimp"></a>
+<a name="SEC370"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC369" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC371" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 80.2 Package absimp </h2>
+
+<p>The <code>absimp</code> package contains pattern-matching rules that
+extend the built-in simplification rules for the <code>abs</code> and <code>signum</code>
+functions.
+<code>absimp</code> respects relations
+established with the built-in <code>assume</code> function and by declarations such
+as  <code>modedeclare (m, even, n, odd)</code>  for even or odd integers.
 </p>
-<p><a name="Item_003a-_0025and"></a>
+<p><code>absimp</code> defines <code>unitramp</code> and <code>unitstep</code> functions
+in terms of <code>abs</code> and <code>signum</code>.
+</p>
+<p><code>load (absimp)</code> loads this package.
+<code>demo (absimp)</code> shows a demonstration of this package.
+</p>
+<p>Examples:
+</p>
+<pre class="example">(%i1) load (absimp)$
+(%i2) (abs (x))^2;
+                                2
+(%o2)                          x
+(%i3) diff (abs (x), x);
+                               x
+(%o3)                        ------
+                             abs(x)
+(%i4) cosh (abs (x));
+(%o4)                        cosh(x)
+</pre>
+
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-functions">Simplification functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Rules-and-patterns">Rules and patterns</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-absimp">Package absimp</a>
+</div>
+</p>
+
+<p><a name="Item_003a-Package-facexp"></a>
+</p><hr size="6">
+<a name="Package-facexp"></a>
+<a name="SEC371"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC370" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC372" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 80.3 Package facexp </h2>
+
+<p>The <code>facexp</code> package contains several related  functions that
+provide the user with the ability to structure expressions by controlled
+expansion.   This capability  is especially  useful when  the expression
+contains variables that have physical meaning, because it is  often true
+that the most economical form  of such an expression can be  obtained by
+fully expanding the expression with respect to those variables, and then
+factoring their coefficients.  While it is  true that this  procedure is
+not difficult to carry out using standard Maxima  functions, additional
+fine-tuning may also  be desirable, and  these finishing touches  can be
+more  difficult to  apply.
+</p>
+<p>The  function <code>facsum</code>  and its  related forms
+provide a convenient means for controlling the structure  of expressions
+in this way.  Another function, <code>collectterms</code>, can be used to add  two or
+more expressions that have already been simplified to this form, without
+resimplifying the whole expression again.  This function may be
+useful when the expressions are very large.
+</p>
+
+<p><code>load (facexp)</code> loads this package.
+<code>demo (facexp)</code> shows a demonstration of this package.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-facexp">Package facexp</a>
+</div>
+</p>
+
+<p><a name="facsum"></a>
+<a name="Item_003a-facsum"></a>
 </p><dl>
-<dt><u>Operator:</u> <b>%and</b>
-<a name="IDX2457"></a>
+<dt><u>Function:</u> <b>facsum</b><i> (<var>expr</var>, <var>arg_1</var>, ..., <var>arg_n</var>)</i>
+<a name="IDX2377"></a>
 </dt>
-<dd><p>The operator <code>%and</code> is a simplifying nonshort-circuited logical
-conjunction.  Maxima simplifies an <code>%and</code> expression to either true,
-false, or a logically equivalent, but simplified, expression.  The
-operator <code>%and</code> is associative, commutative, and idempotent.  Thus
-when <code>%and</code> returns a noun form, the arguments of <code>%and</code> form
-a non-redundant sorted list; for example
+<dd><p>Returns  a form  of <var>expr</var>  which depends  on the
+arguments <var>arg_1</var>, ..., <var>arg_n</var>.
+The arguments can be any form suitable for <code>ratvars</code>, or they can be
+lists  of such  forms.  If  the arguments  are not  lists, then  the form
+returned is  fully expanded with respect  to the arguments,  and the
+coefficients of the arguments are factored.  These  coefficients are
+free of the arguments, except perhaps in a non-rational sense.
 </p>
-<pre class="example">(%i1) a %and (a %and b);
-(%o1)                       a %and b
-</pre>
-<p>If one argument to a conjunction is the <i>explicit</i> the negation of another
-argument, <code>%and</code> returns false:
+<p>If any of the arguments are  lists, then all such lists are combined
+into  a  single  list,   and  instead  of  calling  <code>factor</code>   on  the
+coefficients  of  the  arguments,  <code>facsum</code>  calls  itself   on  these
+coefficients, using  this newly constructed  single list as  the new
+argument list  for this  recursive  call.  This  process can  be  repeated to
+arbitrary depth by nesting the desired elements in lists.
 </p>
-<pre class="example">(%i2) a %and (not a);
-(%o2)                         false
-</pre>
-<p>If any member of the conjunction is false, the conjunction simplifies
-to false even if other members are manifestly non-boolean; for example
+<p>It is possible that one may wish to <code>facsum</code> with respect  to more
+complicated subexpressions,  such as  <code>log (x + y)</code>.  Such  arguments are
+also  permissible.   
 </p>
-<pre class="example">(%i3) 42 %and false;
-(%o3)                         false
-</pre>
-<p>Any argument of an <code>%and</code> expression that is an inequation (that
-is, an inequality or equation), is simplified using the Fourier
-elimination package.  The Fourier elimination simplifier has a
-pre-processor that converts some, but not all, nonlinear inequations
-into linear inequations; for example the Fourier elimination code
-simplifies <code>abs(x) + 1 &gt; 0</code> to true, so
-</p>
-<pre class="example">(%i4) (x &lt; 1) %and (abs(x) + 1 &gt; 0);
-(%o4)                         x &lt; 1
-</pre>
-<p><b>Notes</b>  
-</p><ul>
-<li> The option variable <code>prederror</code> does <i>not</i> alter the
-simplification <code>%and</code> expressions.
 
-</li><li> To avoid operator precedence errors, compound expressions
-involving the operators <code>%and, %or</code>, and <code>not</code> should be
-fully parenthesized.
+<p>Occasionally the user may wish to obtain any of the  above forms
+for expressions which are specified only by their leading operators.
+For example, one may wish  to <code>facsum</code> with respect to all  <code>log</code>'s.  In
+this situation, one may  include among the arguments either  the specific
+<code>log</code>'s which are to be treated in this way, or  alternatively, either
+the expression  <code>operator (log)</code> or <code>'operator (log)</code>.   If one  wished to
+<code>facsum</code> the expression <var>expr</var> with respect to the operators <var>op_1</var>, ..., <var>op_n</var>,
+one   would  evaluate  <code>facsum (<var>expr</var>, operator (<var>op_1</var>, ..., <var>op_n</var>))</code>.
+The <code>operator</code> form may also appear inside list arguments.
+</p>
+<p>In  addition,  the  setting  of  the  switches   <code>facsum_combine</code>  and
+<code>nextlayerfactor</code> may affect the result of <code>facsum</code>.
+</p>
+<div class=categorybox>
 
-</li><li> The Maxima operators <code>and</code> and <code>or</code> are both
-short-circuited.  Thus <code>and</code> isn't associative or commutative.
-
-</li></ul>
-
-<p><b>Limitations</b> The conjunction <code>%and</code> simplifies inequations
-<i>locally, not globally</i>.  This means that conjunctions such as
-</p>
-<pre class="example">(%i5) (x &lt; 1) %and (x &gt; 1);
-(%o5)                 (x &gt; 1) %and (x &lt; 1)
-</pre>
-<p>do <i>not</i> simplify to false.  Also, the Fourier elimination code <i>ignores</i>
-the fact database;
-</p>
-<pre class="example">(%i6) assume(x &gt; 5);
-(%o6)                        [x &gt; 5]
-(%i7) (x &gt; 1) %and (x &gt; 2);
-(%o7)                 (x &gt; 1) %and (x &gt; 2)
-</pre>
-<p>Finally, nonlinear inequations that aren't easily converted into an
-equivalent linear inequation aren't simplified.
-</p>
-<p>There is no support for distributing <code>%and</code> over <code>%or</code>;
-neither is there support for distributing a logical negation over
-<code>%and</code>.
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Related functions</b> <code>%or, %if, and, or, not</code>
-</p>
-<p><b>Status</b> The operator <code>%and</code> is experimental; the
-specifications of this function might change and its functionality
-might be merged into other Maxima functions.
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-facexp">Package facexp</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-_0025if"></a>
+<p><a name="nextlayerfactor"></a>
+<a name="Item_003a-nextlayerfactor"></a>
 </p><dl>
-<dt><u>Operator:</u> <b>%if</b><i> (<var>bool</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX2458"></a>
+<dt><u>Global variable:</u> <b>nextlayerfactor</b>
+<a name="IDX2378"></a>
 </dt>
-<dd><p>The operator <code>%if</code> is a simplifying conditional.  The
-<i>conditional</i> <var>bool</var> should be boolean-valued.  When the
-conditional is true, return the second argument; when the conditional is
-false, return the third; in all other cases, return a noun form.
+<dd><p>Default value: <code>false</code>
 </p>
-<p>Maxima inequations (either an inequality or an equality) are <i>not</i>
-boolean-valued; for example, Maxima does <i>not</i> simplify <em>5 &lt; 6</em>
-to true, and it does not simplify <em>5 = 6</em> to false; however, in
-the context of a conditional to an <code>%if</code> statement, Maxima
-<i>automatically</i> attempts to determine the truth value of an
-inequation.  Examples:
+<p>When <code>nextlayerfactor</code> is <code>true</code>, recursive calls  of <code>facsum</code>
+are applied  to  the  factors  of  the  factored  form   of  the
+coefficients of the arguments.
 </p>
-<pre class="example">(%i1) f : %if(x # 1, 2, 8);
-(%o1)                 %if(x - 1 # 0, 2, 8)
-(%i2) [subst(x = -1,f), subst(x=1,f)];
-(%o2)                        [2, 8]
-</pre>
-<p>If the conditional involves an inequation, Maxima simplifies it using
-the Fourier elimination package.
+<p>When  <code>false</code>, <code>facsum</code> is applied to
+each coefficient as a whole whenever recusive calls to  <code>facsum</code> occur.
 </p>
-<p><b>Notes</b> 
+<p>Inclusion   of   the  atom
+<code>nextlayerfactor</code> in  the argument  list of <code>facsum</code>  has the  effect of
+<code>nextlayerfactor: true</code>, but for the next level of the expression <i>only</i>.
+Since <code>nextlayerfactor</code> is  always bound to  either <code>true</code> or  <code>false</code>, it
+must be presented single-quoted whenever it appears in the argument list of <code>facsum</code>.
 </p>
-<ul>
-<li> If the conditional is manifestly non-boolean, Maxima returns a noun form:
-</li></ul>
+<div class=categorybox>
 
-<pre class="example">(%i3) %if(42,1,2);
-(%o3)                     %if(42, 1, 2)
-</pre>
-<ul>
-<li> The Maxima operator <code>if</code> is nary, the operator <code>%if</code> <i>isn't</i>
-nary.
-</li></ul>
-
-<p><b>Limitations</b> The Fourier elimination code only simplifies nonlinear
-inequations that are readily convertible to an equivalent linear
-inequation.
-</p>
-<p><b>To use:</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status:</b> The operator <code>%if</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
-  
-<p><a name="Item_003a-_0025or"></a>
-</p><dl>
-<dt><u>Operator:</u> <b>%or</b>
-<a name="IDX2459"></a>
-</dt>
-<dd><p>The operator <code>%or</code> is a simplifying nonshort-circuited logical
-disjunction.  Maxima simplifies an <code>%or</code> expression to either
-true, false, or a logically equivalent, but simplified,
-expression.  The operator <code>%or</code> is associative, commutative, and
-idempotent.  Thus when <code>%or</code> returns a noun form, the arguments
-of <code>%or</code> form a non-redundant sorted list; for example
-</p>
-<pre class="example">(%i1) a %or (a %or b);
-(%o1)                        a %or b
-</pre>
-<p>If one member of the disjunction is the <i>explicit</i> the negation of another
-member, <code>%or</code> returns true:
-</p>
-<pre class="example">(%i2) a %or (not a);
-(%o2)                         true
-</pre>
-<p>If any member of the disjunction is true, the disjunction simplifies
-to true even if other members of the disjunction are manifestly non-boolean;
-for example
-</p>
-<pre class="example">(%i3) 42 %or true;
-(%o3)                         true
-</pre>
-<p>Any argument of an <code>%or</code> expression that is an inequation (that
-is, an inequality or equation), is simplified using the Fourier
-elimination package.  The Fourier elimination code simplifies
-<code>abs(x) + 1 &gt; 0</code> to true, so we have
-</p>
-<pre class="example">(%i4) (x &lt; 1) %or (abs(x) + 1 &gt; 0);
-(%o4)                         true
-</pre>
-<p><b>Notes</b>  
-</p><ul>
-<li> The option variable <code>prederror</code> does <i>not</i> alter the 
-simplification of <code>%or</code> expressions.
-
-</li><li> You should parenthesize compound expressions involving the
-operators <code>%and, %or</code>, and <code>not</code>; the binding powers of these
-operators might not match your expectations.
-
-</li><li> The Maxima operators <code>and</code> and <code>or</code> are both short-circuited.
-Thus <code>or</code> isn't associative or commutative.
-
-</li></ul>
-
-<p><b>Limitations</b> The conjunction <code>%or</code> simplifies inequations
-<i>locally, not globally</i>.  This means that conjunctions such as
-</p>
-
-<pre class="example">(%i1) (x &lt; 1) %or (x &gt;= 1);
-(%o1) (x &gt; 1) %or (x &gt;= 1)
-</pre>
-<p>do <i>not</i> simplify to true.  Further, the Fourier elimination code ignores
-the fact database;
-</p>
-<pre class="example">(%i2) assume(x &gt; 5);
-(%o2)                        [x &gt; 5]
-(%i3) (x &gt; 1) %and (x &gt; 2);
-(%o3)                 (x &gt; 1) %and (x &gt; 2)
-</pre>
-<p>Finally, nonlinear inequations that aren't easily converted into an
-equivalent linear inequation aren't simplified.
-</p>
-<p>The algorithm that looks for terms that cannot both be false is weak;
-also there is no support for distributing <code>%or</code> over <code>%and</code>;
-neither is there support for distributing a logical negation over
-<code>%or</code>.
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Related functions</b> <code>%or, %if, and, or, not</code>
-</p>
-<p><b>Status</b> The operator <code>%or</code> is experimental; the
-specifications of this function might change and its functionality
-might be merged into other Maxima functions.
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-facexp">Package facexp</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-complex_005fnumber_005fp"></a>
+<p><a name="facsum_005fcombine"></a>
+<a name="Item_003a-facsum_005fcombine"></a>
 </p><dl>
-<dt><u>Function:</u> <b>complex_number_p</b><i> (<var>x</var>)</i>
-<a name="IDX2460"></a>
+<dt><u>Global variable:</u> <b>facsum_combine</b>
+<a name="IDX2379"></a>
 </dt>
-<dd><p>The predicate <code>complex_number_p</code> returns true if its argument is
-either <code>a + %i * b</code>, <code>a</code>, <code>%i b</code>, or <code>%i</code>,
-where <code>a</code> and <code>b</code> are either rational or floating point
-numbers (including big floating point); for all other inputs,
-<code>complex_number_p</code> returns false; for example
+<dd><p>Default value: <code>true</code>
 </p>
-<pre class="example">(%i1) map('complex_number_p,[2/3, 2 + 1.5 * %i, %i]);
-(%o1)                  [true, true, true]
-(%i2) complex_number_p((2+%i)/(5-%i));
-(%o2)                         false
-(%i3) complex_number_p(cos(5 - 2 * %i));
-(%o3)                         false
-</pre>
-<p><b>Related functions</b> <code>isreal_p</code>
+<p><code>facsum_combine</code> controls the form  of the final result  returned by
+<code>facsum</code>  when  its  argument  is  a  quotient  of   polynomials.   If
+<code>facsum_combine</code> is <code>false</code>  then the form will  be returned as  a fully
+expanded  sum  as described  above,  but if  <code>true</code>,  then  the expression
+returned is a ratio of polynomials, with each polynomial in the form
+described above.
 </p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
+<p>The <code>true</code> setting of this switch is useful when one
+wants to  <code>facsum</code> both  the numerator and  denominator of  a rational
+expression,  but  does not  want  the denominator  to  be multiplied
+through the terms of the numerator.
 </p>
-<p><b>Status</b> The operator <code>complex_number_p</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-facexp">Package facexp</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-compose_005ffunctions"></a>
+<p><a name="factorfacsum"></a>
+<a name="Item_003a-factorfacsum"></a>
 </p><dl>
-<dt><u>Function:</u> <b>compose_functions</b><i> (<var>l</var>)</i>
-<a name="IDX2461"></a>
+<dt><u>Function:</u> <b>factorfacsum</b><i> (<var>expr</var>, <var>arg_1</var>, ... <var>arg_n</var>)</i>
+<a name="IDX2380"></a>
 </dt>
-<dd><p>The function call <code>compose_functions(l)</code> returns a lambda form that is
-the <i>composition</i> of the functions in the list <var>l</var>.  The functions are
-applied from <i>right</i> to <i>left</i>; for example
+<dd><p>Returns a  form of <var>expr</var>  which is
+obtained by calling  <code>facsum</code> on the factors  of <var>expr</var> with <var>arg_1</var>, ... <var>arg_n</var> as
+arguments.  If any of the factors of <var>expr</var> is raised to a  power, both
+the factor and the exponent will be processed in this way.
 </p>
-<pre class="example">(%i1) compose_functions([cos, exp]);
-                                        %g151
-(%o1)             lambda([%g151], cos(%e     ))
-(%i2) %(x);
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-facexp">Package facexp</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="collectterms"></a>
+<a name="Item_003a-collectterms"></a>
+</p><dl>
+<dt><u>Function:</u> <b>collectterms</b><i> (<var>expr</var>, <var>arg_1</var>, &hellip;, <var>arg_n</var>)</i>
+<a name="IDX2381"></a>
+</dt>
+<dd><p>Collects all terms that contain <var>arg_1</var> ... <var>arg_n</var>.
+If several expressions have been simplified  with the following functions
+<code>facsum</code>, <code>factorfacsum</code>, <code>factenexpand</code>, <code>facexpten</code> or
+<code>factorfacexpten</code>, and they are to be added together, it may be desirable
+to combine them using the function  <code>collecterms</code>.  <code>collecterms</code> can
+take as arguments all of the arguments that can be given to these other
+associated functions with the exception of <code>nextlayerfactor</code>, which has no
+effect on <code>collectterms</code>.  The advantage of <code>collectterms</code> is that it
+returns a form  similar to <code>facsum</code>, but since it is adding forms that have
+already been processed by <code>facsum</code>, it does not need to repeat that effort.
+This capability is especially useful when the expressions to be summed are very
+large.
+</p>
+<p>See also <code><a href="maxima_14.html#factor">factor</a></code>.
+</p>
+<p>Example:
+</p>
+<pre class="example">(%i1) (exp(x)+2)*x+exp(x);
+                             x          x
+(%o1)                   x (%e  + 2) + %e
+(%i2) collectterms(expand(%),exp(x));
                                   x
-(%o2)                       cos(%e )
+(%o2)                   (x + 1) %e  + 2 x
 </pre>
-<p>When the function list is empty, return the identity function:
-</p>
-<pre class="example">(%i3) compose_functions([]);
-(%o3)                lambda([%g152], %g152)
-(%i4)  %(x);
-(%o4)                           x
-</pre>
-<p><b>Notes</b> 
-</p><ul>
-<li> When Maxima determines that a list member isn't a symbol or
-a lambda form, <code>funmake</code> (<i>not</i> <code>compose_functions</code>)
-signals an error:
-</li></ul>
+<div class=categorybox>
 
-<pre class="example">(%i5) compose_functions([a &lt; b]);
-
-funmake: first argument must be a symbol, subscripted symbol,
-string, or lambda expression; found: a &lt; b
-#0: compose_functions(l=[a &lt; b])(to_poly_solve.mac line 40)
- -- an error. To debug this try: debugmode(true);
-</pre>
-<ul>
-<li> To avoid name conflicts, the independent variable is determined by the
-function <code>new_variable</code>.
-
-<pre class="example">(%i6) compose_functions([%g0]);
-(%o6)              lambda([%g154], %g0(%g154))
-(%i7) compose_functions([%g0]);
-(%o7)              lambda([%g155], %g0(%g155))
-</pre>
-<p>Although the independent variables are different, Maxima is able to to
-deduce that these lambda forms are semantically equal:
-</p>
-<pre class="example">(%i8) is(equal(%o6,%o7));
-(%o8)                         true
-</pre></li></ul>
-
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status</b>  The function <code>compose_functions</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p></dd></dl>
-
-<p><a name="Item_003a-dfloat"></a>
-</p><dl>
-<dt><u>Function:</u> <b>dfloat</b><i> (<var>x</var>)</i>
-<a name="IDX2462"></a>
-</dt>
-<dd><p>The function <code>dfloat</code> is a similar to <code>float</code>, but the function
-<code>dfloat</code> applies <code>rectform</code> when <code>float</code> fails to evaluate
-to an IEEE double floating point number; thus
-</p>
-<pre class="example">(%i1) float(4.5^(1 + %i));
-                               %i + 1
-(%o1)                       4.5
-(%i2) dfloat(4.5^(1 + %i));
-(%o2)        4.48998802962884 %i + .3000124893895671
-</pre>
-<p><b>Notes</b> 
-</p>
-<ul>
-<li> The rectangular form of an expression might be poorly suited for
-numerical evaluation-for example, the rectangular form might
-needlessly involve the difference of floating point numbers
-(subtractive cancellation).
-
-
-</li><li> The identifier <code>float</code> is both an option variable (default
-value false) and a function name.
-
-
-</li></ul>
-
-<p><b>Related functions</b> <code>float, bfloat</code>
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status</b> The function <code>dfloat</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-elim"></a>
-</p><dl>
-<dt><u>Function:</u> <b>elim</b><i> (<var>l</var>, <var>x</var>)</i>
-<a name="IDX2463"></a>
-</dt>
-<dd><p>The function <code>elim</code> eliminates the variables in the set or list
-<code>x</code> from the equations in the set or list <code>l</code>.  Each member
-of <code>x</code> must be a symbol; the members of <code>l</code> can either be
-equations, or expressions that are assumed to equal zero.
-</p>
-<p>The function <code>elim</code> returns a list of two lists; the first is
-the list of expressions with the variables eliminated; the second
-is the list of pivots; thus, the second list is a list of
-expressions that <code>elim</code> used to eliminate the variables.
-</p>
-<p>Here is a example of eliminating between linear equations:
-</p>
-<pre class="example">(%i1) elim(set(x + y + z = 1, x - y  - z = 8, x - z = 1), 
-           set(x,y));
-(%o1)            [[2 z - 7], [y + 7, z - x + 1]]
-</pre>
-<p>Eliminating <code>x</code> and <code>y</code> yields the single equation <code>2 z - 7 = 0</code>;
-the equations <code>y + 7 = 0</code> and <code>z - z + 1 = 1</code> were used as pivots.
-Eliminating all three variables from these equations, triangularizes the linear
-system:
-</p>
-<pre class="example">(%i2) elim(set(x + y + z = 1, x - y  - z = 8, x - z = 1),
-           set(x,y,z));
-(%o2)           [[], [2 z - 7, y + 7, z - x + 1]]
-</pre>
-<p>Of course, the equations needn't be linear:
-</p>
-<pre class="example">(%i3) elim(set(x^2 - 2 * y^3 = 1,  x - y = 5), [x,y]);
-                     3    2
-(%o3)       [[], [2 y  - y  - 10 y - 24, y - x + 5]]
-</pre>
-<p>The user doesn't control the order the variables are
-eliminated.  Instead, the algorithm uses a heuristic to <i>attempt</i> to
-choose the best pivot and the best elimination order.
-</p>
-<p><b>Notes</b> 
-</p>
-<ul>
-<li> Unlike the related function <code>eliminate</code>, the function
-<code>elim</code> does <i>not</i> invoke <code>solve</code> when the number of equations
-equals the number of variables.
-
-</li><li> The function <code>elim</code> works by applying resultants; the option
-variable <code>resultant</code> determines which algorithm Maxima
-uses.  Using <code>sqfr</code>, Maxima factors each resultant and suppresses
-multiple zeros.
-
-</li><li> The <code>elim</code> will triangularize a nonlinear set of polynomial
-equations; the solution set of the triangularized set <i>can</i> be larger
-than that solution set of the untriangularized set.  Thus, the triangularized
-equations can have <i>spurious</i> solutions.
-</li></ul>
-
-<p><b>Related functions</b> <i>elim_allbut, eliminate_using, eliminate</i>
-</p>
-<p><b>Option variables</b> <i>resultant</i>
-</p>
-<p><b>To use</b> <tt>`load(to_poly)'</tt>
-</p>
-<p><b>Status</b> The function <code>elim</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
- 
-<p><a name="Item_003a-elim_005fallbut"></a>
-</p><dl>
-<dt><u>Function:</u> <b>elim_allbut</b><i> (<var>l</var>, <var>x</var>)</i>
-<a name="IDX2464"></a>
-</dt>
-<dd><p>This function is similar to <code>elim</code>, except that it eliminates all the
-variables in the list of equations <code>l</code> <i>except</i> for those variables that
-in in the list <code>x</code>
-</p>
-<pre class="example">(%i1) elim_allbut([x+y = 1, x - 5*y = 1],[]);
-(%o1)                 [[], [y, y + x - 1]]
-(%i2) elim_allbut([x+y = 1, x - 5*y = 1],[x]);
-(%o2)                [[x - 1], [y + x - 1]]
-</pre>
-<p><b>To use</b> <tt>`load(to_poly)'</tt>
-</p>
-<p><b>Option variables</b> <i>resultant</i>
-</p>
-<p><b>Related functions</b> <i>elim, eliminate_using, eliminate</i>
-</p>
-<p><b>Status</b> The function <code>elim_allbut</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-eliminate_005fusing"></a>
-</p><dl>
-<dt><u>Function:</u> <b>eliminate_using</b><i> (<var>l</var>, <var>e</var>, <var>x</var>)</i>
-<a name="IDX2465"></a>
-</dt>
-<dd><p>Using <code>e</code> as the pivot, eliminate the symbol <code>x</code> from the
-list or set of equations in <code>l</code>.  The function <code>eliminate_using</code>
-returns a set.
-</p>
-<pre class="example">(%i1) eq : [x^2 - y^2 - z^3 , x*y - z^2 - 5, x - y + z];
-               3    2    2     2
-(%o1)      [- z  - y  + x , - z  + x y - 5, z - y + x]
-(%i2) eliminate_using(eq,first(eq),z);
-        3              2      2      3    2
-(%o2) {y  + (1 - 3 x) y  + 3 x  y - x  - x , 
-                        4    3  3       2  2             4
-                       y  - x  y  + 13 x  y  - 75 x y + x  + 125}
-(%i3) eliminate_using(eq,second(eq),z);
-        2            2       4    3  3       2  2             4
-(%o3) {y  - 3 x y + x  + 5, y  - x  y  + 13 x  y  - 75 x y + x
-                                                           + 125}
-(%i4) eliminate_using(eq, third(eq),z);
-        2            2       3              2      2      3    2
-(%o4) {y  - 3 x y + x  + 5, y  + (1 - 3 x) y  + 3 x  y - x  - x }
-</pre>
-<p><b>Option variables</b> <i>resultant</i>
-</p>
-<p><b>Related functions</b> <i>elim, eliminate, elim_allbut</i>
-</p>
-<p><b>To use</b> <tt>`load(to_poly)'</tt>
-</p>
-<p><b>Status</b> The function <code>eliminate_using</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-fourier_005felim"></a>
-</p><dl>
-<dt><u>Function:</u> <b>fourier_elim</b><i> ([<var>eq1</var>, <var>eq2</var>, &hellip;], [<var>var1</var>, <var>var</var>, &hellip;])</i>
-<a name="IDX2466"></a>
-</dt>
-<dd><p>Fourier elimination is the analog of Gauss elimination for linear inequations
-(equations or inequalities).  The function call <code>fourier_elim([eq1, eq2,
-...], [var1, var2, ...])</code> does Fourier elimination on a list of linear
-inequations <code>[eq1, eq2, ...]</code> with respect to the variables
-<code>[var1, var2, ...]</code>; for example
-</p>
-<pre class="example">(%i1) fourier_elim([y-x &lt; 5, x - y &lt; 7, 10 &lt; y],[x,y]);
-(%o1)            [y - 5 &lt; x, x &lt; y + 7, 10 &lt; y]
-(%i2) fourier_elim([y-x &lt; 5, x - y &lt; 7, 10 &lt; y],[y,x]);
-(%o2)        [max(10, x - 7) &lt; y, y &lt; x + 5, 5 &lt; x]
-</pre>
-<p>Eliminating first with respect to <em>x</em> and second with respect to
-<em>y</em> yields lower and upper bounds for <em>x</em> that depend on
-<em>y</em>, and lower and upper bounds for <em>y</em> that are numbers.
-Eliminating in the other order gives <em>x</em> dependent lower and
-upper bounds for <em>y</em>, and numerical lower and upper bounds for
-<em>x</em>.
-</p>
-<p>When necessary, <code>fourier_elim</code> returns a <em>disjunction</em> of lists of
-inequations:
-</p>
-<pre class="example">(%i3) fourier_elim([x # 6],[x]);
-(%o3)                  [x &lt; 6] or [6 &lt; x]
-</pre>
-<p>When the solution set is empty,  <code>fourier_elim</code> returns <code>emptyset</code>,
-and when the solution set is all reals, <code>fourier_elim</code> returns <code>universalset</code>;
-for example
-</p>
-<pre class="example">(%i4) fourier_elim([x &lt; 1, x &gt; 1],[x]);
-(%o4)                       emptyset
-(%i5) fourier_elim([minf &lt; x, x &lt; inf],[x]);
-(%o5)                     universalset
-</pre>
-<p>For nonlinear inequations, <code>fourier_elim</code> returns a (somewhat) 
-simplified list of inequations:
-</p>
-<pre class="example">(%i6) fourier_elim([x^3 - 1 &gt; 0],[x]);
-               2                             2
-(%o6) [1 &lt; x, x  + x + 1 &gt; 0] or [x &lt; 1, - (x  + x + 1) &gt; 0]
-(%i7) fourier_elim([cos(x) &lt; 1/2],[x]);
-(%o7)                  [1 - 2 cos(x) &gt; 0]
-</pre>
-<p>Instead of a list of inequations, the first argument to <code>fourier_elim</code>
-may be a logical disjunction or conjunction:
-</p>
-<pre class="example">(%i8) fourier_elim((x + y &lt; 5) and (x - y &gt;8),[x,y]);
-                                              3
-(%o8)            [y + 8 &lt; x, x &lt; 5 - y, y &lt; - -]
-                                              2
-(%i9) fourier_elim(((x + y &lt; 5) and x &lt; 1) or  (x - y &gt;8),[x,y]);
-(%o9)          [y + 8 &lt; x] or [x &lt; min(1, 5 - y)]
-</pre>
-<p>The function <code>fourier_elim</code> supports the inequation operators 
-<code>&lt;, &lt;=, &gt;, &gt;=, #</code>, and <code>=</code>.
-</p>
-<p>The Fourier elimination code has a preprocessor that converts some
-nonlinear inequations that involve the absolute value, minimum, and
-maximum functions into linear in equations.  Additionally, the preprocessor
-handles some expressions that are the product or quotient of linear terms:
-</p>
-<pre class="example">(%i10) fourier_elim([max(x,y) &gt; 6, x # 8, abs(y-1) &gt; 12],[x,y]);
-(%o10) [6 &lt; x, x &lt; 8, y &lt; - 11] or [8 &lt; x, y &lt; - 11]
- or [x &lt; 8, 13 &lt; y] or [x = y, 13 &lt; y] or [8 &lt; x, x &lt; y, 13 &lt; y]
- or [y &lt; x, 13 &lt; y]
-(%i11) fourier_elim([(x+6)/(x-9) &lt;= 6],[x]);
-(%o11)           [x = 12] or [12 &lt; x] or [x &lt; 9]
-(%i12) fourier_elim([x^2 - 1 # 0],[x]);
-(%o12)      [- 1 &lt; x, x &lt; 1] or [1 &lt; x] or [x &lt; - 1]
-</pre>
-<p><b>To use</b> <tt>`load(fourier_elim)'</tt>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-isreal_005fp"></a>
-</p><dl>
-<dt><u>Function:</u> <b>isreal_p</b><i> (<var>e</var>)</i>
-<a name="IDX2467"></a>
-</dt>
-<dd><p>The predicate <code>isreal_p</code> returns true when Maxima is able to
-determine that <code>e</code> is real-valued on the <i>entire</i> real line; it
-returns false when Maxima is able to determine that <code>e</code> <i>isn't</i>
-real-valued on some nonempty subset of the real line; and it returns a
-noun form for all other cases.
-</p>
-<pre class="example">(%i1) map('isreal_p, [-1, 0, %i, %pi]);
-(%o1)               [true, true, false, true]
-</pre>
-<p>Maxima variables are assumed to be real; thus
-</p>
-<pre class="example">(%i2) isreal_p(x);
-(%o2)                         true
-</pre>
-<p>The function <code>isreal_p</code> examines the fact database:
-</p>
-<pre class="example">(%i3) declare(z,complex)$
-
-(%i4) isreal_p(z);
-(%o4)                      isreal_p(z)
-</pre>
-<p><b>Limitations</b>
-Too often, <code>isreal_p</code> returns a noun form when it should be able
-to return false; a simple example: the logarithm function isn't
-real-valued on the entire real line, so <code>isreal_p(log(x))</code> should
-return false; however
-</p>
-<pre class="example">(%i5) isreal_p(log(x));
-(%o5)                   isreal_p(log(x))
-</pre>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Related functions</b> <i>complex_number_p</i>
-</p>
-<p><b>Status</b> The function <code>isreal_p</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-facexp">Package facexp</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-new_005fvariable"></a>
-</p><dl>
-<dt><u>Function:</u> <b>new_variable</b><i> (type)</i>
-<a name="IDX2468"></a>
-</dt>
-<dd><p>Return a unique symbol of the form <code>%[z,n,r,c,g]k</code>, where
-<code>k</code> is an integer.  The allowed values for <em>type</em> are
-<i>integer, natural_number, real, natural_number,</i> and <i>general</i>.
-(By natural number, we mean the <i>nonnegative integers</i>; thus zero is
-a natural number.  Some, but not all,definitions of natural number
-<i>exclude</i> zero.)
-</p>
-<p>When <em>type</em> isn't one of the allowed values, <em>type</em> defaults
-to <em>general</em>.  For integers, natural numbers, and complex numbers,
-Maxima automatically appends this information to the fact database.
-</p>
-<pre class="example">(%i1) map('new_variable,
-          ['integer, 'natural_number, 'real, 'complex, 'general]);
-(%o1)          [%z144, %n145, %r146, %c147, %g148]
-(%i2) nicedummies(%);
-(%o2)               [%z0, %n0, %r0, %c0, %g0]
-(%i3) featurep(%z0, 'integer);
-(%o3)                         true
-(%i4) featurep(%n0, 'integer);
-(%o4)                         true
-(%i5) is(%n0 &gt;= 0);
-(%o5)                         true
-(%i6) featurep(%c0, 'complex);
-(%o6)                         true
-</pre>
-<p><b>Note</b> Generally, the argument to <code>new_variable</code> should be quoted.  The quote
-will protect against errors similar to
-</p>
-<pre class="example">(%i7) integer : 12$
+<p><a name="Item_003a-Package-functs"></a>
+</p><hr size="6">
+<a name="Package-functs"></a>
+<a name="SEC372"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC371" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC373" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 80.4 Package functs </h2>
 
-(%i8) new_variable(integer);
-(%o8)                         %g149
-(%i9) new_variable('integer);
-(%o9)                         %z150
-</pre>
-<p><b>Related functions</b> <i>nicedummies</i>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a>
+</div>
 </p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
+<p><a name="Item_003a-rempart"></a>
+</p><dl>
+<dt><u>Function:</u> <b>rempart</b><i> (<var>expr</var>, <var>n</var>)</i>
+<a name="IDX2382"></a>
+</dt>
+<dd><p>Removes part <var>n</var> from the expression <var>expr</var>.
 </p>
-<p><b>Status</b> The function <code>new_variable</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
+<p>If <var>n</var> is a list of the form <code>[<var>l</var>, <var>m</var>]</code>
+then parts <var>l</var> thru <var>m</var> are removed.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-nicedummies"></a>
+<p><a name="Item_003a-wronskian"></a>
 </p><dl>
-<dt><u>Function:</u> <b>nicedummies</b>
-<a name="IDX2469"></a>
+<dt><u>Function:</u> <b>wronskian</b><i> ([<var>f_1</var>, ..., <var>f_n</var>], <var>x</var>)</i>
+<a name="IDX2383"></a>
 </dt>
-<dd><p>Starting with zero, the function <code>nicedummies</code> re-indexes the variables 
-in an expression that were introduced by <code>new_variable</code>;
+<dd><p>Returns the Wronskian matrix of the list of expressions [<var>f_1</var>, ..., <var>f_n</var>] in the variable <var>x</var>.
+The determinant of the Wronskian matrix is the Wronskian determinant of the list of expressions.
 </p>
-<pre class="example">(%i1) new_variable('integer) + 52 * new_variable('integer);
-(%o1)                   52 %z136 + %z135
-(%i2) new_variable('integer) - new_variable('integer);
-(%o2)                     %z137 - %z138
-(%i3) nicedummies(%);
-(%o3)                       %z0 - %z1
+<p>To use <code>wronskian</code>, first <code>load(functs)</code>. Example:
+</p>
+<pre class="example">(%i1) load (functs)$
+(%i2) wronskian([f(x), g(x)],x);
+                    [   f(x)       g(x)    ]
+                    [                      ]
+(%o2)               [ d          d         ]
+                    [ -- (f(x))  -- (g(x)) ]
+                    [ dx         dx        ]
 </pre>
-<p><b>Related functions</b> <i>new_variable</i>
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status</b> The function <code>nicedummies</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Differential-calculus">Differential calculus</a>
+</div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-parg"></a>
+
+<p><a name="Item_003a-tracematrix"></a>
 </p><dl>
-<dt><u>Function:</u> <b>parg</b><i> (<var>x</var>)</i>
-<a name="IDX2470"></a>
+<dt><u>Function:</u> <b>tracematrix</b><i> (<var>M</var>)</i>
+<a name="IDX2384"></a>
 </dt>
-<dd><p>The function <code>parg</code> is a simplifying version of the complex argument function 
-<code>carg</code>; thus
+<dd><p>Returns the trace (sum of the diagonal elements) of matrix <var>M</var>.
 </p>
-<pre class="example">(%i1) map('parg,[1,1+%i,%i, -1 + %i, -1]);
-                        %pi  %pi  3 %pi
-(%o1)               [0, ---, ---, -----, %pi]
-                         4    2     4
-</pre>
-<p>Generally, for a non-constant input, <code>parg</code> returns a noun form; thus
+<p>To use this function write first <code>load(functs)</code>.
 </p>
-<pre class="example">(%i2) parg(x + %i * sqrt(x));
-(%o2)                 parg(x + %i sqrt(x))
-</pre>
-<p>When <code>sign</code> can determine that the input is a positive or negative real
-number, <code>parg</code> will return a non-noun form for a non-constant input.
-Here are two examples:
-</p>
+<div class=categorybox>
 
-<pre class="example">(%i3) parg(abs(x));
-(%o3) 0
-(%i4) parg(-x^2-1);
-(%o4)                          %pi
-</pre>
-<p><b>Note</b> The <code>sign</code> function mostly ignores the variables that are declared
-to be complex (<code>declare(x,complex)</code>); for variables that are declared
-to be complex, the <code>parg</code> can return incorrect values; for example
-</p>
-
-<pre class="example">(%i1) declare(x,complex)$
-
-(%i2) parg(x^2 + 1);
-(%o2) 0
-</pre>
-<p><b>Related function</b> <i>carg, isreal_p</i>
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status</b> The function <code>parg</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-real_005fimagpart_005fto_005fconjugate"></a>
-</p><dl>
-<dt><u>Function:</u> <b>real_imagpart_to_conjugate</b><i> (<var>e</var>)</i>
-<a name="IDX2471"></a>
-</dt>
-<dd><p>The function <code>real_imagpart_to_conjugate</code> replaces all occurrences
-of <code>realpart</code> and <code>imagpart</code> to algebraically equivalent expressions
-involving the <code>conjugate</code>.
-</p>
-<pre class="example">(%i1) declare(x, complex)$
-
-(%i2) real_imagpart_to_conjugate(realpart(x) +  imagpart(x) = 3);
-          conjugate(x) + x   %i (x - conjugate(x))
-(%o2)     ---------------- - --------------------- = 3
-                 2                     2
-</pre>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status</b> The function <code>real_imagpart_to_conjugate</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-rectform_005flog_005fif_005fconstant"></a>
-</p><dl>
-<dt><u>Function:</u> <b>rectform_log_if_constant</b><i> (<var>e</var>)</i>
-<a name="IDX2472"></a>
-</dt>
-<dd><p>The function <code>rectform_log_if_constant</code> converts all terms of the form
-<code> log(c)</code> to  <code>rectform(log(c))</code>, where <code>c</code> is
-either a declared constant expression or explicitly declared constant
-</p>
-<pre class="example">(%i1) rectform_log_if_constant(log(1-%i) - log(x - %i));
-                                 log(2)   %i %pi
-(%o1)            - log(x - %i) + ------ - ------
-                                   2        4
-(%i2) declare(a,constant, b,constant)$
-
-(%i3) rectform_log_if_constant(log(a + %i*b));
-                       2    2
-                  log(b  + a )
-(%o3)             ------------ + %i atan2(b, a)
-                       2
-</pre>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status</b> The function <code>rectform_log_if_constant</code> is
-experimental; the specifications of this function might change might change and its functionality
-might be merged into other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-simp_005finequality"></a>
-</p><dl>
-<dt><u>Function:</u> <b>simp_inequality</b><i> (<var>e</var>)</i>
-<a name="IDX2473"></a>
-</dt>
-<dd><p>The function <code>simp_inequality</code> applies some simplifications to
-conjunctions and disjunctions of inequations.
-</p>
-<p><b>Limitations</b> The function <code>simp_inequality</code> is limited in at least two ways;
-first, the simplifications are local; thus
-</p>
-
-<pre class="example">(%i1) simp_inequality((x &gt; minf) %and (x &lt; 0));
-(%o1) (x&gt;1) %and (x&lt;1)
-</pre>
-<p>And second, <code>simp_inequality</code> doesn't consult the fact database:
-</p>
-<pre class="example">(%i2) assume(x &gt; 0)$
-
-(%i3) simp_inequality(x &gt; 0);
-(%o3)                         x &gt; 0
-</pre>
-<p><b>To use</b> <tt>`load(fourier_elim)'</tt>
-</p>
-<p><b>Status</b> The function <code>simp_inequality</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-standardize_005finverse_005ftrig"></a>
-</p><dl>
-<dt><u>Function:</u> <b>standardize_inverse_trig</b><i> (<var>e</var>)</i>
-<a name="IDX2474"></a>
-</dt>
-<dd><p>This function applies the identities <code>cot(x) = atan(1/x),
-acsc(x) = asin(1/x),</code> and similarly for <code>asec, acoth, acsch</code>
-and <code>asech</code> to an expression.  See Abramowitz and Stegun, 
-Eqs. 4.4.6 through 4.4.8 and 4.6.4 through 4.6.6.
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status</b> The function <code>standardize_inverse_trig</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
-</p></dd></dl>
-
-<p><a name="Item_003a-subst_005fparallel"></a>
-</p><dl>
-<dt><u>Function:</u> <b>subst_parallel</b><i> (<var>l</var>, <var>e</var>)</i>
-<a name="IDX2475"></a>
-</dt>
-<dd><p>When <code>l</code> is a single equation or a list of equations, substitute
-the right hand side of each equation for the left hand side.  The
-substitutions are made in parallel; for example
-</p>
-<pre class="example">(%i1) load(to_poly_solve)$
-
-(%i2) subst_parallel([x=y,y=x], [x,y]);
-(%o2)                        [y, x]
-</pre>
-<p>Compare this to substitutions made serially:
-</p>
-<pre class="example">(%i3) subst([x=y,y=x],[x,y]);
-(%o3)                        [x, x]
-</pre>
-<p>The function <code>subst_parallel</code> is similar to <code>sublis</code> except that
-<code>subst_parallel</code> allows for substitution of nonatoms; for example
-</p>
-<pre class="example">(%i4) subst_parallel([x^2 = a, y = b], x^2 * y);
-(%o4)                          a b
-(%i5) sublis([x^2 = a, y = b], x^2 * y);
-
-                                                             2
-sublis: left-hand side of equation must be a symbol; found: x
- -- an error. To debug this try: debugmode(true);
-</pre>
-<p>The substitutions made by <code>subst_parallel</code> are literal, not semantic; thus 
-<code>subst_parallel</code> <i>does not</i> recognize that <em>x * y</em> is a subexpression 
-of <em>x^2 * y</em>
-</p>
-<pre class="example">(%i6) subst_parallel([x * y = a], x^2 * y);
-                               2
-(%o6)                         x  y
-</pre>
-<p>The function <code>subst_parallel</code> completes all substitutions
-<i>before</i> simplifications.  This allows for substitutions into
-conditional expressions where errors might occur if the
-simplifications were made earlier:
-</p>
-<pre class="example">(%i7) subst_parallel([x = 0], %if(x &lt; 1, 5, log(x)));
-(%o7)                           5
-(%i8) subst([x = 0], %if(x &lt; 1, 5, log(x)));
-
-log: encountered log(0).
- -- an error. To debug this try: debugmode(true);
-</pre>
-<p><b>Related functions</b> <i>subst, sublis, ratsubst</i>
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve_extra.lisp)'</tt>
-</p>
-<p><b>Status</b> The function <code>subst_parallel</code> is experimental; the
-specifications of this function might change might change and its
-functionality might be merged into other Maxima functions.
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-to_005fpoly"></a>
-</p><dl>
-<dt><u>Function:</u> <b>to_poly</b><i> (<var>e</var>, <var>l</var>)</i>
-<a name="IDX2476"></a>
-</dt>
-<dd><p>The function <code>to_poly</code> attempts to convert the equation <code>e</code>
-into a polynomial system along with inequality constraints; the
-solutions to the polynomial system that satisfy the constraints are
-solutions to the equation <code>e</code>.  Informally, <code>to_poly</code>
-attempts to polynomialize the equation <var>e</var>; an example might
-clarify:
-</p>
-<pre class="example">(%i1) load(to_poly_solve)$
-
-(%i2) to_poly(sqrt(x) = 3, [x]);
-                            2
-(%o2) [[%g130 - 3, x = %g130 ], 
-                      %pi                               %pi
-                   [- --- &lt; parg(%g130), parg(%g130) &lt;= ---], []]
-                       2                                 2
-</pre>
-<p>The conditions <code>-%pi/2&lt;parg(%g130),parg(%g130)&lt;=%pi/2</code> tell us that
-<code>%g130</code> is in the range of the square root function.  When this is
-true, the solution set to <code>sqrt(x) = 3</code> is the same as the
-solution set to <code>%g130-3,x=%g130^2</code>.
-</p>
-<p>To polynomialize trigonometric expressions, it is necessary to
-introduce a non algebraic substitution; these non algebraic substitutions
-are returned in the third list returned by <code>to_poly</code>; for example
-</p>
-<pre class="example">(%i3) to_poly(cos(x),[x]);
-                2                                 %i x
-(%o3)    [[%g131  + 1], [2 %g131 # 0], [%g131 = %e    ]]
-</pre>
-<p>Constant terms aren't polynomializied unless the number one is a member of
-the variable list; for example
-</p>
-<pre class="example">(%i4) to_poly(x = sqrt(5),[x]);
-(%o4)                [[x - sqrt(5)], [], []]
-(%i5) to_poly(x = sqrt(5),[1,x]);
-                            2
-(%o5) [[x - %g132, 5 = %g132 ], 
-                      %pi                               %pi
-                   [- --- &lt; parg(%g132), parg(%g132) &lt;= ---], []]
-                       2                                 2
-</pre>
-<p>To generate a polynomial with <em>sqrt(5) + sqrt(7)</em> as
-one of its roots, use the commands
-</p>
-<pre class="example">(%i6) first(elim_allbut(first(to_poly(x = sqrt(5) + sqrt(7),
-                                      [1,x])), [x]));
-                          4       2
-(%o6)                   [x  - 24 x  + 4]
-</pre>
-<p><b>Related functions</b> <i>to_poly_solve</i>
-</p>
-<p><b>To use</b> <tt>`load(to_poly)'</tt>
-</p>
-<p><b>Status:</b> The function <code>to_poly</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Matrices">Matrices</a>
+</div>
 </p>
 </dd></dl>
 
 
 <dl>
-<dt><u>Function:</u> <b>to_poly_solve</b><i> (<var>e</var>, <var>l</var>, [options])</i>
-<a name="IDX2477"></a>
+<dt><u>Function:</u> <b>rational</b><i> (<var>z</var>)</i>
+<a name="IDX2385"></a>
 </dt>
-<dd><p>The function <code>to_poly_solve</code> tries to solve the equations <em>e</em>
-for the variables <em>l</em>.  The equation(s) <em>e</em> can either be a
-single expression or a set or list of expressions; similarly, <em>l</em>
-can either be a single symbol or a list of set of symbols.  When
-a member of <em>e</em> isn't explicitly an equation, for example <em>x^2 -1</em>,
-the solver asummes that the expression vanishes.
+<dd><p>Multiplies numerator and denominator of <var>z</var> by the complex conjugate of denominator,
+thus rationalizing the denominator.
+Returns canonical rational expression (CRE) form if given one, else returns general form.
 </p>
-<p>The basic strategy of <code>to_poly_solve</code> is to convert the input into a polynomial form and to 
-call <code>algsys</code> on the polynomial system. Internally  <code>to_poly_solve</code> defaults <code>algexact</code> 
-to true. To change the default for <code>algexact</code>, append 'algexact=false to the <code>to_poly_solve</code> 
-argument list.
+<p>To use this function write first <code>load(functs)</code>.
 </p>
-<p>When <code>to_poly_solve</code> is able to determine the solution set, each
-member of the solution set is a list in a <code>%union</code> object:
-</p>
-<pre class="example">(%i1) load(to_poly_solve)$
+<div class=categorybox>
 
-(%i2) to_poly_solve(x*(x-1) = 0, x);
-(%o2)               %union([x = 0], [x = 1])
-</pre>
-<p>When  <code>to_poly_solve</code> is <i>unable</i> to determine the solution set, a
-<code>%solve</code> nounform is returned (in this case, a warning is printed)
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
 </p>
-<pre class="example">(%i3) to_poly_solve(x^k + 2* x + 1 = 0, x);
+</dd></dl>
 
-Nonalgebraic argument given to 'to_poly'
-unable to solve
-                          k
-(%o3)            %solve([x  + 2 x + 1 = 0], [x])
-</pre>
-<p>Subsitution into a <code>%solve</code> nounform can sometimes result in the solution
-</p>
-<pre class="example">(%i4) subst(k = 2, %);
-(%o4)                   %union([x = - 1])
-</pre>
-<p>Especially for trigonometric equations, the solver sometimes needs
-to introduce an arbitary integer.  These arbitary integers have the 
-form <code>%zXXX</code>, where <code>XXX</code> is an integer; for example
-</p>
-<pre class="example">(%i5) to_poly_solve(sin(x) = 0, x);
-(%o5)   %union([x = 2 %pi %z33 + %pi], [x = 2 %pi %z35])
-</pre>
-<p>To re-index these variables to zero, use <code>nicedummies</code>:
-</p>
-<pre class="example">(%i6) nicedummies(%);
-(%o6)    %union([x = 2 %pi %z0 + %pi], [x = 2 %pi %z1])
-</pre>
-<p>Occasionally, the solver introduces an arbitary complex number of the
-form <code>%cXXX</code> or an  arbitary real number of the form <code>%rXXX</code>.
-The function <code>nicedummies</code> will re-index these identifiers to zero.
-</p>
-<p>The solution set sometimes involves simplifing versions of various
-of logical operators including <code>%and</code>, <code>%or</code>, or <code>%if</code>
-for conjunction, disjuntion, and implication, respectively; for example
-</p>
-<pre class="example">(%i7) sol : to_poly_solve(abs(x) = a, x);
-(%o7) %union(%if(isnonnegative_p(a), [x = - a], %union()), 
-                      %if(isnonnegative_p(a), [x = a], %union()))
-(%i8) subst(a = 42, sol);
-(%o8)             %union([x = - 42], [x = 42])
-(%i9) subst(a = -42, sol);
-(%o9)                       %union()
-</pre>
-<p>The empty set is represented by <code>%union</code>.
-</p>
-<p>The function <code>to_poly_solve</code> is able to solve some, but not all,
-equations involving rational powers, some nonrational powers, absolute
-values, trigonometric functions, and minimum and maximum.  Also, some it
-can solve some equations that are solvable in in terms of the Lambert W
-function; some examples:
-</p>
-<pre class="example">(%i1) load(to_poly_solve)$
 
-(%i2) to_poly_solve(set(max(x,y) = 5, x+y = 2), set(x,y));
-(%o2)      %union([x = - 3, y = 5], [x = 5, y = - 3])
-(%i3) to_poly_solve(abs(1-abs(1-x)) = 10,x);
-(%o3)             %union([x = - 10], [x = 12])
-(%i4) to_poly_solve(set(sqrt(x) + sqrt(y) = 5, x + y = 10),
-                    set(x,y));
-                     3/2               3/2
-                    5    %i - 10      5    %i + 10
-(%o4) %union([x = - ------------, y = ------------], 
-                         2                 2
-                                3/2                 3/2
-                               5    %i + 10        5    %i - 10
-                          [x = ------------, y = - ------------])
-                                    2                   2
-(%i5) to_poly_solve(cos(x) * sin(x) = 1/2,x,
-                    'simpfuncs = ['expand, 'nicedummies]);
-                                         %pi
-(%o5)              %union([x = %pi %z0 + ---])
-                                          4
-(%i6) to_poly_solve(x^(2*a) + x^a + 1,x);
-                                        2 %i %pi %z81
-                                        -------------
-                                  1/a         a
-                  (sqrt(3) %i - 1)    %e
-(%o6) %union([x = -----------------------------------], 
-                                  1/a
-                                 2
-                                                  2 %i %pi %z83
-                                                  -------------
-                                            1/a         a
-                          (- sqrt(3) %i - 1)    %e
-                     [x = -------------------------------------])
-                                           1/a
-                                          2
-(%i7) to_poly_solve(x * exp(x) = a, x);
-(%o7)              %union([x = lambert_w(a)])
-</pre>
-<p>For <i>linear</i> inequalities, <code>to_poly_solve</code> automatically does Fourier
-elimination:
+
+<p><a name="Item_003a-nonzeroandfreeof"></a>
+</p><dl>
+<dt><u>Function:</u> <b>nonzeroandfreeof</b><i> (<var>x</var>, <var>expr</var>)</i>
+<a name="IDX2386"></a>
+</dt>
+<dd><p>Returns <code>true</code> if <var>expr</var> is nonzero and <code>freeof (<var>x</var>, <var>expr</var>)</code> returns <code>true</code>.
+Returns <code>false</code> otherwise.
 </p>
-<pre class="example">(%i8) to_poly_solve([x + y &lt; 1, x - y &gt;= 8], [x,y]);
-                               7
-(%o8) %union([x = y + 8, y &lt; - -], 
-                               2
-                                                              7
-                                 [y + 8 &lt; x, x &lt; 1 - y, y &lt; - -])
-                                                              2
-</pre>
-<p>Each optional argument to <code>to_poly_solve</code> must be an equation;
-generally, the order of these options does not matter.
+<p>To use this function write first <code>load(functs)</code>.
 </p>
-<ul>
-<li> <code>simpfuncs = l</code>, where <code>l</code> is a list of functions.
-Apply the composition of the members of l to each solution.
+<div class=categorybox>
 
-<pre class="example">(%i1) to_poly_solve(x^2=%i,x);
-                               1/4             1/4
-(%o1)       %union([x = - (- 1)   ], [x = (- 1)   ])
-(%i2) to_poly_solve(x^2= %i,x, 'simpfuncs = ['rectform]);
-                      %i         1             %i         1
-(%o2) %union([x = - ------- - -------], [x = ------- + -------])
-                    sqrt(2)   sqrt(2)        sqrt(2)   sqrt(2)
-</pre>
-<p>Sometimes additional simplification can revert a simplification; for example
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
 </p>
-<pre class="example">(%i3) to_poly_solve(x^2=1,x);
-(%o3)              %union([x = - 1], [x = 1])
-(%i4) to_poly_solve(x^2= 1,x, 'simpfuncs = [polarform]);
-                                        %i %pi
-(%o4)            %union([x = 1], [x = %e      ]
-</pre>
-<p>Maxima doesn't try to check that each member of the function list <code>l</code> is
-purely a simplification; thus
+</dd></dl>
+
+
+<dl>
+<dt><u>Function:</u> <b>linear</b><i> (<var>expr</var>, <var>x</var>)</i>
+<a name="IDX2387"></a>
+</dt>
+<dd><p>When <var>expr</var> is an expression of the form <code><var>a</var>*<var>x</var> + <var>b</var></code>
+where <var>a</var> is nonzero, and <var>a</var> and <var>b</var> are free of <var>x</var>,
+<code>linear</code> returns a list of three equations, one for each of the three formal
+variables <var>b</var>, <var>a</var>, and <var>x</var>. Otherwise, <code>linear</code> returns <code>false</code>.
 </p>
-<pre class="example">(%i5) to_poly_solve(x^2 = %i,x, 'simpfuncs = [lambda([s],s^2)]);
-(%o5)                   %union([x = %i])
-</pre>
-<p>To convert each solution to a double float, use <code>simpfunc = ['dfloat]</code>:
+<p><code>load(antid)</code> loads this function.
 </p>
-<pre class="example">(%i6) to_poly_solve(x^3 +x + 1 = 0,x, 
-                    'simpfuncs = ['dfloat]), algexact : true;
-(%o6) %union([x = - .6823278038280178], 
-[x = .3411639019140089 - 1.161541399997251 %i], 
-[x = 1.161541399997251 %i + .3411639019140089])
-</pre>
-</li><li> <code>use_grobner = true</code> With this option, the function
-<code>poly_reduced_grobner</code> is applied to the equations before
-attempting their solution.  Primarily, this option provides a workaround
-for weakness in the function <code>algsys</code>.  Here is an example of
-such a workaround:
-
-<pre class="example">(%i7) to_poly_solve([x^2+y^2=2^2,(x-1)^2+(y-1)^2=2^2],[x,y],
-                    'use_grobner = true);
-                    sqrt(7) - 1      sqrt(7) + 1
-(%o7) %union([x = - -----------, y = -----------], 
-                         2                2
-                                 sqrt(7) + 1        sqrt(7) - 1
-                            [x = -----------, y = - -----------])
-                                      2                  2
-(%i8) to_poly_solve([x^2+y^2=2^2,(x-1)^2+(y-1)^2=2^2],[x,y]);
-(%o8)                       %union()
-</pre>
-</li><li> <code>maxdepth = k</code>, where <code>k</code> is a positive integer.  This
-function controls the maximum recursion depth for the solver.  The
-default value for <code>maxdepth</code> is five.  When the recursions depth is
-exceeded, the solver signals an error:
-
-<pre class="example">(%i9) to_poly_solve(cos(x) = x,x, 'maxdepth = 2);
-
-Unable to solve
-Unable to solve
-(%o9)        %solve([cos(x) = x], [x], maxdepth = 2)
-</pre>
-</li><li> <code>parameters = l</code>, where <code>l</code> is a list of symbols.  The solver
-attempts to return a solution that is valid for all members of the list
-<code>l</code>; for example:
-
-<pre class="example">(%i10) to_poly_solve(a * x = x, x);
-(%o10)                   %union([x = 0])
-(%i11) to_poly_solve(a * x = x, x, 'parameters = [a]);
-(%o11) %union(%if(a - 1 = 0, [x = %c111], %union()), 
-                               %if(a - 1 # 0, [x = 0], %union()))
-</pre>
-<p>In <code>(%o2)</code>, the solver introduced a dummy variable; to re-index the
-these dummy variables, use the function <code>nicedummies</code>:
+<p>Example:
 </p>
-<pre class="example">(%i12) nicedummies(%);
-(%o12) %union(%if(a - 1 = 0, [x = %c0], %union()), 
-                               %if(a - 1 # 0, [x = 0], %union()))
-</pre></li></ul>
-
-<p>The <code>to_poly_solve</code> uses data stored in the hashed array
-<code>one_to_one_reduce</code> to solve equations of the form <em>f(a) =
-f(b)</em>.  The assignment <code>one_to_one_reduce['f,'f] : lambda([a,b],
-a=b)</code> tells <code>to_poly_solve</code> that the solution set of <em>f(a)
-= f(b)</em> equals the solution set of <em>a=b</em>; for example
-</p>
-<pre class="example">(%i13) one_to_one_reduce['f,'f] : lambda([a,b], a=b)$
-
-(%i14) to_poly_solve(f(x^2-1) = f(0),x);
-(%o14)             %union([x = - 1], [x = 1])
+<pre class="example">(%i1) load (antid);
+(%o1)  /maxima/share/integration/antid.mac
+(%i2) linear ((1 - w)*(1 - x)*z, z);
+(%o2) [bargumentb = 0, aargumenta = (w - 1) x - w + 1, 
+                                                  xargumentx = z]
+(%i3) linear (cos(u - v) + cos(u + v), u);
+(%o3)                         false
 </pre>
-<p>More generally, the assignment <code>one_to_one_reduce['f,'g] : lambda([a,b],
-w(a, b) = 0</code> tells <code>to_poly_solve</code> that the solution set of <em>f(a)
-= f(b)</em> equals the solution set of <em>w(a,b) = 0</em>; for example
-</p>
-<pre class="example">(%i15) one_to_one_reduce['f,'g] : lambda([a,b], a = 1 + b/2)$
+<div class=categorybox>
 
-(%i16) to_poly_solve(f(x) - g(x),x);
-(%o16)                   %union([x = 2])
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-antid">Package antid</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="gcdivide"></a>
+<a name="Item_003a-gcdivide"></a>
+</p><dl>
+<dt><u>Function:</u> <b>gcdivide</b><i> (<var>p</var>, <var>q</var>)</i>
+<a name="IDX2388"></a>
+</dt>
+<dd><p>When the option variable <code>takegcd</code> is <code>true</code> which is the default,
+<code>gcdivide</code> divides the polynomials <var>p</var> and <var>q</var> by their greatest
+common divisor and returns the ratio of the results.  <code>gcdivde</code> calls the
+function <code><a href="maxima_14.html#ezgcd">ezgcd</a></code> to divide the polynomials by the greatest common divisor.
+</p>
+<p>When <code>takegcd</code> is <code>false</code>, <code>gcdivide</code> returns the ratio
+<code><var>p</var>/<var>q</var></code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<p>See also <code><a href="maxima_14.html#ezgcd">ezgcd</a></code>, <code><a href="maxima_14.html#gcd">gcd</a></code>, <code><a href="maxima_14.html#gcdex">gcdex</a></code>, and
+<code><a href="maxima_62.html#poly_005fgcd">poly_gcd</a></code>.
+</p>
+<p>Example:
+</p>
+<pre class="example">(%i1) load(functs)$
+
+(%i2) p1:6*x^3+19*x^2+19*x+6; 
+                        3       2
+(%o2)                6 x  + 19 x  + 19 x + 6
+(%i3) p2:6*x^5+13*x^4+12*x^3+13*x^2+6*x;
+                  5       4       3       2
+(%o3)          6 x  + 13 x  + 12 x  + 13 x  + 6 x
+(%i4) gcdivide(p1, p2);
+                             x + 1
+(%o4)                        ------
+                              3
+                             x  + x
+(%i5) takegcd:false;
+(%o5)                         false
+(%i6) gcdivide(p1, p2);
+                       3       2
+                    6 x  + 19 x  + 19 x + 6
+(%o6)          ----------------------------------
+                  5       4       3       2
+               6 x  + 13 x  + 12 x  + 13 x  + 6 x
+(%i7) ratsimp(%);
+                             x + 1
+(%o7)                        ------
+                              3
+                             x  + x
 </pre>
-<p>Additionally, the function <code>to_poly_solve</code> uses data stored in the hashed array 
-<code>function_inverse</code> to solve equations of the form <em>f(a) = b</em>.
-The assignment <code>function_inverse['f] : lambda([s], g(s))</code> 
-informs  <code>to_poly_solve</code> that the solution set to <code>f(x) = b</code> equals
-the solution set to <code>x = g(b)</code>; two examples:
-</p>
-<pre class="example">(%i17) function_inverse['Q] : lambda([s], P(s))$
+<div class=categorybox>
 
-(%i18) to_poly_solve(Q(x-1) = 2009,x);
-(%o18)              %union([x = P(2009) + 1])
-(%i19) function_inverse['G] : lambda([s], s+new_variable(integer));
-(%o19)       lambda([s], s + new_variable(integer))
-(%i20) to_poly_solve(G(x - a) = b,x);
-(%o20)             %union([x = b + a + %z125])
-</pre>
-
-<p><b>Notes</b>
-</p>
-<ul class="toc">
-<li> The solve variables needn't be symbols; when <code>fullratsubst</code> is 
-able to appropriately make substitutions, the solve variables can be nonsymbols:
-</li></ul>
-
-<pre class="example">(%i1) to_poly_solve([x^2 + y^2 + x * y = 5, x * y = 8],
-                    [x^2 + y^2, x * y]);
-                                  2    2
-(%o1)           %union([x y = 8, y  + x  = - 3])
-</pre>
-<ul class="toc">
-<li> For equations that involve complex conjugates, the solver automatically
-appends the conjugate equations; for example
-</li></ul>
-
-<pre class="example">(%i1) declare(x,complex)$
-
-(%i2) to_poly_solve(x + (5 + %i) * conjugate(x) = 1, x);
-                                   %i + 21
-(%o2)              %union([x = - -----------])
-                                 25 %i - 125
-(%i3) declare(y,complex)$
-
-(%i4) to_poly_solve(set(conjugate(x) - y = 42 + %i,
-                        x + conjugate(y) = 0), set(x,y));
-                           %i - 42        %i + 42
-(%o4)        %union([x = - -------, y = - -------])
-                              2              2
-</pre>
-<ul class="toc">
-<li> For an equation that involves the absolute value function, the
-<code>to_poly_solve</code> consults the fact database to decide if the
-argument to the absolute value is complex valued.  When
-
-<pre class="example">(%i1) to_poly_solve(abs(x) = 6, x);
-(%o1)              %union([x = - 6], [x = 6])
-(%i2) declare(z,complex)$
-
-(%i3) to_poly_solve(abs(z) = 6, z);
-(%o3) %union(%if((%c11 # 0) %and (%c11 conjugate(%c11) - 36 = 
-                                       0), [z = %c11], %union()))
-</pre>
-<p><i>This is the only situation that the solver consults the fact database.  If
-a solve variable is declared to be an integer, for example, <code>to_poly_solve</code>
-ignores this declaration</i>.
-</p></li></ul>
-
-<p><b>Relevant option variables</b> <i>algexact, resultant, algebraic</i>
-</p>
-<p><b>Related functions</b> <i>to_poly</i>
-</p>
-<p><b>To use</b> <tt>`load(to_poly_solve)'</tt>
-</p>
-<p><b>Status:</b> The function <code>to_poly_solve</code> is experimental; its
-specifications might change and its functionality might be merged into
-other Maxima functions.
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Polynomials">Polynomials</a>
+</div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-unit"></a>
+<p><a name="arithmetic"></a>
+<a name="Item_003a-arithmetic"></a>
+</p><dl>
+<dt><u>Function:</u> <b>arithmetic</b><i> (<var>a</var>, <var>d</var>, <var>n</var>)</i>
+<a name="IDX2389"></a>
+</dt>
+<dd><p>Returns the <var>n</var>-th term of the arithmetic series
+<code><var>a</var>, <var>a</var> + <var>d</var>, <var>a</var> + 2*<var>d</var>, ..., <var>a</var> + (<var>n</var> - 1)*<var>d</var></code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Sums-and-products">Sums and products</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="geometric"></a>
+<a name="Item_003a-geometric"></a>
+</p><dl>
+<dt><u>Function:</u> <b>geometric</b><i> (<var>a</var>, <var>r</var>, <var>n</var>)</i>
+<a name="IDX2390"></a>
+</dt>
+<dd><p>Returns the <var>n</var>-th term of the geometric series
+<code><var>a</var>, <var>a</var>*<var>r</var>, <var>a</var>*<var>r</var>^2, ..., <var>a</var>*<var>r</var>^(<var>n</var> - 1)</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Sums-and-products">Sums and products</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="harmonic"></a>
+<a name="Item_003a-harmonic"></a>
+</p><dl>
+<dt><u>Function:</u> <b>harmonic</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>n</var>)</i>
+<a name="IDX2391"></a>
+</dt>
+<dd><p>Returns the <var>n</var>-th term of the harmonic series
+<code><var>a</var>/<var>b</var>, <var>a</var>/(<var>b</var> + <var>c</var>), <var>a</var>/(<var>b</var> + 2*<var>c</var>), ..., <var>a</var>/(<var>b</var> + (<var>n</var> - 1)*<var>c</var>)</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Sums-and-products">Sums and products</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="arithsum"></a>
+<a name="Item_003a-arithsum"></a>
+</p><dl>
+<dt><u>Function:</u> <b>arithsum</b><i> (<var>a</var>, <var>d</var>, <var>n</var>)</i>
+<a name="IDX2392"></a>
+</dt>
+<dd><p>Returns the sum of the arithmetic series from 1 to <var>n</var>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Sums-and-products">Sums and products</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="geosum"></a>
+<a name="Item_003a-geosum"></a>
+</p><dl>
+<dt><u>Function:</u> <b>geosum</b><i> (<var>a</var>, <var>r</var>, <var>n</var>)</i>
+<a name="IDX2393"></a>
+</dt>
+<dd><p>Returns the sum of the geometric series from 1 to <var>n</var>.  If <var>n</var> is
+infinity (<code>inf</code>) then a sum is finite only if the absolute value
+of <var>r</var> is less than 1.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Sums-and-products">Sums and products</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="gaussprob"></a>
+<a name="Item_003a-gaussprob"></a>
+</p><dl>
+<dt><u>Function:</u> <b>gaussprob</b><i> (<var>x</var>)</i>
+<a name="IDX2394"></a>
+</dt>
+<dd><p>Returns the Gaussian probability function
+<code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="gd"></a>
+<a name="Item_003a-gd"></a>
+</p><dl>
+<dt><u>Function:</u> <b>gd</b><i> (<var>x</var>)</i>
+<a name="IDX2395"></a>
+</dt>
+<dd><p>Returns the Gudermannian function
+<code>2*atan(%e^x)-%pi/2</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="agd"></a>
+<a name="Item_003a-agd"></a>
+</p><dl>
+<dt><u>Function:</u> <b>agd</b><i> (<var>x</var>)</i>
+<a name="IDX2396"></a>
+</dt>
+<dd><p>Returns the inverse Gudermannian function
+<code>log (tan (%pi/4 + x/2))</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="vers"></a>
+<a name="Item_003a-vers"></a>
+</p><dl>
+<dt><u>Function:</u> <b>vers</b><i> (<var>x</var>)</i>
+<a name="IDX2397"></a>
+</dt>
+<dd><p>Returns the versed sine <code>1 - cos (x)</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="covers"></a>
+<a name="Item_003a-covers"></a>
+</p><dl>
+<dt><u>Function:</u> <b>covers</b><i> (<var>x</var>)</i>
+<a name="IDX2398"></a>
+</dt>
+<dd><p>Returns the coversed sine <code>1 - sin (<var>x</var>)</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="exsec"></a>
+<a name="Item_003a-exsec"></a>
+</p><dl>
+<dt><u>Function:</u> <b>exsec</b><i> (<var>x</var>)</i>
+<a name="IDX2399"></a>
+</dt>
+<dd><p>Returns the exsecant <code>sec (<var>x</var>) - 1</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="hav"></a>
+<a name="Item_003a-hav"></a>
+</p><dl>
+<dt><u>Function:</u> <b>hav</b><i> (<var>x</var>)</i>
+<a name="IDX2400"></a>
+</dt>
+<dd><p>Returns the haversine <code>(1 - cos(x))/2</code>.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="combination"></a>
+<a name="Item_003a-combination"></a>
+</p><dl>
+<dt><u>Function:</u> <b>combination</b><i> (<var>n</var>, <var>r</var>)</i>
+<a name="IDX2401"></a>
+</dt>
+<dd><p>Returns the number of combinations of <var>n</var> objects
+taken <var>r</var> at a time.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="permutation"></a>
+<a name="Item_003a-permutation"></a>
+</p><dl>
+<dt><u>Function:</u> <b>permutation</b><i> (<var>n</var>, <var>r</var>)</i>
+<a name="IDX2402"></a>
+</dt>
+<dd><p>Returns the number of permutations of <var>r</var> objects
+selected from a set of <var>n</var> objects.
+</p>
+<p>To use this function write first <code>load(functs)</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-functs">Package functs</a> &middot;
+<a href="maxima_105.html#Category_003a-Mathematical-functions">Mathematical functions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-Package-ineq"></a>
+</p><hr size="6">
+<a name="Package-ineq"></a>
+<a name="SEC373"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC372" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC374" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 80.5 Package ineq </h2>
+
+<p>The <code>ineq</code> package contains simplification rules
+for inequalities.
+</p>
+<p>Example session:
+</p>
+<pre class="example">(%i1) load(ineq)$
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+tellsimp: warning: rule will treat '+
+                          ' as noncommutative and nonassociative.
+(%i2) a&gt;=4;  /* a sample inequality */
+(%o2)                        a &gt;= 4
+(%o3)                     b + a &gt; c + 4
+(%o4)                       7 x &lt; 7 y
+(%o5)                    - 2 x &lt;= - 6 z
+                                 2
+(%o6)                      1 &lt;= a  + 1
+(%o8)                       2 x &lt; 3 x
+(%o9)                        a &gt;= b
+(%o10)                   a + 3 &gt;= b + 3
+(%o11)                       a &gt;= b
+(%o12)                     a &gt;= c - b
+(%o13)                     b + a &gt;= c
+(%o14)                 (- c) + b + a &gt;= 0
+(%o15)                   c - b - a &lt;= 0
+                               2
+(%o16)                  (z - 1)  &gt; - 2 z
+                            2
+(%o17)                     z  + 1 &gt; 0
+(%o18)                        true
+(%i19) (b&gt;c)+%; /* add a second, strict inequality */
+</pre>
+<p>Be careful about using parentheses
+around the inequalities: when the user types in <code>(A &gt; B) + (C = 5)</code> the
+result is <code>A + C &gt; B + 5</code>, but <code>A &gt; B + C = 5</code> is a syntax error,
+and <code>(A &gt; B + C) = 5</code> is something else entirely.
+</p>
+<p>Do <code>disprule (all)</code> to see a complete listing
+of the rule definitions.
+</p>
+<p>The user will be queried if Maxima is
+unable to decide the sign of a quantity multiplying an inequality.
+</p>
+<p>The most common mis-feature is illustrated by:
+</p>
+<pre class="example">(%i1) eq: a &gt; b;
+(%o1)                         a &gt; b
+(%i2) 2*eq;
+(%o2)                       2 (a &gt; b)
+(%i3) % - eq;
+(%o3)                         a &gt; b
+</pre>
+<p>Another problem is 0 times an inequality; the default to have this
+turn into 0 has been left alone. However, if you type 
+<code>X*<var>some_inequality</var></code> and Maxima asks about the sign of <code>X</code> and you
+respond <code>zero</code> (or <code>z</code>), the program returns <code>X*<var>some_inequality</var></code>
+and not use the information that <code>X</code> is 0. You should do <code>ev (%, x: 0)</code> in such
+a case, as the database will only be used for comparison purposes
+in decisions, and not for the purpose of evaluating <code>X</code>.
+</p>
+<p>The user may note a slower response when this package is loaded, as
+the simplifier is forced to examine more rules than without the
+package, so you might wish to remove the rules after making use of
+them. Do <code>kill (rules)</code> to eliminate all of the rules (including any
+that you might have defined); or you may be more selective by
+killing only some of them; or use <code>remrule</code> on a specific rule.
+</p>
+<p>Note that if you load this package after defining your own
+rules you will clobber your rules that have the same name. The
+rules in this package are:
+<code>*rule1</code>, ..., <code>*rule8</code>,
+<code>+rule1</code>, ..., <code>+rule18</code>,
+and you must enclose the rulename in quotes to refer to it, as
+in <code>remrule (&quot;+&quot;, &quot;+rule1&quot;)</code> to specifically remove the first rule on <code>&quot;+&quot;</code>
+or <code>disprule (&quot;*rule2&quot;)</code> to display the definition of the second multiplicative rule.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Simplification-functions">Simplification functions</a> &middot;
+<a href="maxima_105.html#Category_003a-Rules-and-patterns">Rules and patterns</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-ineq">Package ineq</a>
+</div>
+</p>
+
+
+<p><a name="Item_003a-Package-rducon"></a>
+</p><hr size="6">
+<a name="Package-rducon"></a>
+<a name="SEC374"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC373" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC375" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 80.6 Package rducon </h2>
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-rducon">Package rducon</a>
+</div>
+</p>
+
+<p><a name="reduce_005fconsts"></a>
+<a name="Item_003a-reduce_005fconsts"></a>
+</p><dl>
+<dt><u>Function:</u> <b>reduce_consts</b><i> (<var>expr</var>)</i>
+<a name="IDX2403"></a>
+</dt>
+<dd><p>Replaces constant subexpressions of <var>expr</var> with
+constructed constant atoms, saving the definition of all these
+constructed constants in the list of equations <code>const_eqns</code>, and
+returning the modified <var>expr</var>.  Those parts of <var>expr</var> are constant which
+return <code>true</code> when operated on by the function <code>constantp</code>.  Hence,
+before invoking <code>reduce_consts</code>, one should do
+</p>
+<pre class="example">declare ([<var>objects to be given the constant property</var>], constant)$
+</pre>
+<p>to set up a database of the constant quantities occurring in your
+expressions.
+</p>
+<p>If you are planning to generate Fortran output after these symbolic
+calculations, one of the first code sections should be the calculation
+of all constants.  To generate this code segment, do
+</p>
+<pre class="example">map ('fortran, const_eqns)$
+</pre>
+<p>Variables besides <code>const_eqns</code> which affect <code>reduce_consts</code> are:
+</p>
+<p><code>const_prefix</code> (default value: <code>xx</code>) is the string of characters used to prefix all
+symbols generated by <code>reduce_consts</code> to represent constant subexpressions.
+</p>
+<p><code>const_counter</code> (default value: 1) is the integer index used to generate unique
+symbols to represent each constant subexpression found by <code>reduce_consts</code>.
+</p>
+<p><code>load (rducon)</code> loads this function.
+<code>demo (rducon)</code> shows a demonstration of this function.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-rducon">Package rducon</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-Package-scifac"></a>
+</p><hr size="6">
+<a name="Package-scifac"></a>
+<a name="SEC375"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC374" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC376" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 80.7 Package scifac </h2>
+
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-scifac">Package scifac</a>
+</div>
+</p>
+
+<p><a name="gcfac"></a>
+<a name="Item_003a-gcfac"></a>
+</p><dl>
+<dt><u>Function:</u> <b>gcfac</b><i> (<var>expr</var>)</i>
+<a name="IDX2404"></a>
+</dt>
+<dd><p><code>gcfac</code> is a factoring function that attempts to apply the same heuristics which
+scientists apply in trying to make expressions simpler.  <code>gcfac</code> is limited
+to monomial-type factoring.  For a sum, <code>gcfac</code> does the following:
+</p>
+<ol>
+<li>
+Factors over the integers.
+</li><li>
+Factors out the largest powers of terms occurring as
+coefficients, regardless of the complexity of the terms.
+</li><li>
+Uses (1) and (2) in factoring adjacent pairs of terms.
+</li><li>
+Repeatedly and recursively applies these techniques until
+the expression no longer changes.
+</li></ol>
+
+<p>Item (3) does not necessarily do an optimal job of pairwise
+factoring because of the combinatorially-difficult nature of finding
+which of all possible rearrangements of the pairs yields the most
+compact pair-factored result.
+</p>
+<p><code>load (scifac)</code> loads this function.
+<code>demo (scifac)</code> shows a demonstration of this function.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-scifac">Package scifac</a> &middot;
+<a href="maxima_105.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-Package-sqdnst"></a>
+</p><hr size="6">
+<a name="Package-sqdnst"></a>
+<a name="SEC376"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC375" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 80.8 Package sqdnst </h2>
+
+<p><a name="sqrtdenest"></a>
+<a name="Item_003a-sqrtdenest"></a>
+</p><dl>
+<dt><u>Function:</u> <b>sqrtdenest</b><i> (<var>expr</var>)</i>
+<a name="IDX2405"></a>
+</dt>
+<dd><p>Denests <code>sqrt</code> of simple, numerical, binomial surds, where possible.  E.g.
+</p>
+<pre class="example">(%i1) load (sqdnst)$
+(%i2) sqrt(sqrt(3)/2+1)/sqrt(11*sqrt(2)-12);
+                             sqrt(3)
+                        sqrt(------- + 1)
+                                2
+(%o2)                 ---------------------
+                      sqrt(11 sqrt(2) - 12)
+(%i3) sqrtdenest(%);
+                           sqrt(3)   1
+                           ------- + -
+                              2      2
+(%o3)                     -------------
+                             1/4    3/4
+                          3 2    - 2
+</pre>
+<p>Sometimes it helps to apply <code>sqrtdenest</code> more than once, on such as
+<code>(19601-13860 sqrt(2))^(7/4)</code>.
+</p>
+<p><code>load (sqdnst)</code> loads this function.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-sqdnst">Package sqdnst</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-solve_005frec_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC379" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC381" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1384,12 +1217,12 @@ other Maxima functions.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

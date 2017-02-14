@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 21. Differential Equations</title>
+<title>Maxima 5.39.0 Manual: 21. Differential Equations</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 21. Differential Equations">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 21. Differential Equations">
+<meta name="description" content="Maxima 5.39.0 Manual: 21. Differential Equations">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 21. Differential Equations">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 21. Differential Equations </h1>
@@ -107,7 +109,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 21.1 Introduction to Differential Equations </h2>
@@ -136,16 +138,16 @@ representations in phase space, see the additional package
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 21.2 Functions and Variables for Differential Equations </h2>
 
-
-<p><a name="Item_003a-bc2"></a>
+<p><a name="bc2"></a>
+<a name="Item_003a-bc2"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bc2</b><i> (<var>solution</var>, <var>xval1</var>, <var>yval1</var>, <var>xval2</var>, <var>yval2</var>)</i>
-<a name="IDX802"></a>
+<a name="IDX813"></a>
 </dt>
 <dd><p>Solves a boundary value problem for a second order differential equation.
 Here: <var>solution</var> is a general solution to the equation, as found by
@@ -156,19 +158,19 @@ gives the value of the dependent variable in that point, in the form
 give the values for these variables at a second point, using the same
 form.
 </p>
-<p>See <code>ode2</code> for an example of its usage.
+<p>See <code><a href="#ode2">ode2</a></code> for an example of its usage.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
-
-<p><a name="Item_003a-desolve"></a>
+<p><a name="desolve"></a>
+<a name="Item_003a-desolve"></a>
 </p><dl>
 <dt><u>Function:</u> <b>desolve</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>desolve</tt> (<var>eqn</var>, <var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>desolve</tt> ([<var>eqn_1</var>, ..., <var>eqn_n</var>], [<var>x_1</var>, ..., <var>x_n</var>])</i>
-<a name="IDX803"></a>
+<a name="IDX814"></a>
 </dt>
 <dd><p>The function <code>desolve</code> solves systems of linear ordinary
 differential equations using Laplace transform.  Here the <var>eqn</var>'s
@@ -221,15 +223,15 @@ calling <code>desolve</code> by using <code>atvalue</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Laplace-transform">Laplace transform</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Laplace-transform">Laplace transform</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-ic1"></a>
+<p><a name="ic1"></a>
+<a name="Item_003a-ic1"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ic1</b><i> (<var>solution</var>, <var>xval</var>, <var>yval</var>)</i>
-<a name="IDX804"></a>
+<a name="IDX815"></a>
 </dt>
 <dd><p>Solves initial value problems for first order differential equations.
 Here <var>solution</var> is a general solution to the equation, as found by
@@ -238,18 +240,18 @@ variable in the form <code><var>x</var> = <var>x0</var></code>, and <var>yval</v
 initial value for the dependent variable in the form <code><var>y</var> =
 <var>y0</var></code>.
 </p>
-<p>See <code>ode2</code> for an example of its usage.
+<p>See <code><a href="#ode2">ode2</a></code> for an example of its usage.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
-
-<p><a name="Item_003a-ic2"></a>
+<p><a name="ic2"></a>
+<a name="Item_003a-ic2"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ic2</b><i> (<var>solution</var>, <var>xval</var>, <var>yval</var>, <var>dval</var>)</i>
-<a name="IDX805"></a>
+<a name="IDX816"></a>
 </dt>
 <dd><p>Solves initial value problems for second-order differential equations.
 Here <var>solution</var> is a general solution to the equation, as found by
@@ -261,18 +263,19 @@ derivative of the dependent variable with respect to independent
 variable, in the form <code>diff(<var>y</var>,<var>x</var>) = <var>dy0</var></code>
 (<code>diff</code> does not have to be quoted).
 </p>
-<p>See <code>ode2</code> for an example of its usage.
+<p>See <code><a href="#ode2">ode2</a></code> for an example of its usage.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ode2"></a>
+<p><a name="ode2"></a>
+<a name="Item_003a-ode2"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ode2</b><i> (<var>eqn</var>, <var>dvar</var>, <var>ivar</var>)</i>
-<a name="IDX806"></a>
+<a name="IDX817"></a>
 </dt>
 <dd><p>The function <code>ode2</code> solves an ordinary differential equation (ODE)
 of first or second order. It takes three arguments: an ODE given by
@@ -352,7 +355,7 @@ can be used.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
@@ -369,12 +372,12 @@ can be used.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

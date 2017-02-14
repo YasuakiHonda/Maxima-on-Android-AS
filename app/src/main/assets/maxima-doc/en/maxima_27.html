@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 27. atensor</title>
+<title>Maxima 5.39.0 Manual: 27. atensor</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 27. atensor">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 27. atensor">
+<meta name="description" content="Maxima 5.39.0 Manual: 27. atensor">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 27. atensor">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 27. atensor </h1>
@@ -107,7 +109,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 27.1 Introduction to atensor </h2>
@@ -197,9 +199,9 @@ simplifications.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Tensors">Tensors</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Tensors">Tensors</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 <p><a name="Item_003a-Functions-and-Variables-for-atensor"></a>
@@ -218,17 +220,18 @@ simplifications.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 
 <a name="SEC154"></a>
 <h2 class="section"> 27.2 Functions and Variables for atensor </h2>
 
-<p><a name="Item_003a-init_005fatensor"></a>
+<p><a name="init_005fatensor"></a>
+<a name="Item_003a-init_005fatensor"></a>
 </p><dl>
 <dt><u>Function:</u> <b>init_atensor</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>init_atensor</tt> (<var>alg_type</var>, <var>opt_dims</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>init_atensor</tt> (<var>alg_type</var>)</i>
-<a name="IDX1066"></a>
+<a name="IDX1084"></a>
 </dt>
 <dd><p>Initializes the <code>atensor</code> package with the specified algebra type. <var>alg_type</var>
 can be one of the following:
@@ -284,15 +287,16 @@ Cl(3,1). A call to <code>init_atensor(dirac)</code> is equivalent to
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-atensimp"></a>
+<p><a name="atensimp"></a>
+<a name="Item_003a-atensimp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>atensimp</b><i> (<var>expr</var>)</i>
-<a name="IDX1067"></a>
+<a name="IDX1085"></a>
 </dt>
 <dd><p>Simplifies an algebraic tensor expression <var>expr</var> according to the rules
 configured by a call to <code>init_atensor</code>. Simplification includes
@@ -303,31 +307,33 @@ for complex expressions.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_99.html#Category_003a-Simplification-functions">Simplification functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_105.html#Category_003a-Simplification-functions">Simplification functions</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-alg_005ftype"></a>
+<p><a name="alg_005ftype"></a>
+<a name="Item_003a-alg_005ftype"></a>
 </p><dl>
 <dt><u>Function:</u> <b>alg_type</b>
-<a name="IDX1068"></a>
+<a name="IDX1086"></a>
 </dt>
 <dd><p>The algebra type. Valid values are <code>universal</code>, <code>grassmann</code>,
 <code>clifford</code>, <code>symmetric</code>, <code>symplectic</code> and <code>lie_envelop</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-adim"></a>
+<p><a name="adim"></a>
+<a name="Item_003a-adim"></a>
 </p><dl>
 <dt><u>Variable:</u> <b>adim</b>
-<a name="IDX1069"></a>
+<a name="IDX1087"></a>
 </dt>
 <dd><p>Default value: 0
 </p>
@@ -336,16 +342,17 @@ to determine if an indexed object is a valid base vector.  See <code>abasep</cod
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-aform"></a>
+<p><a name="aform"></a>
+<a name="Item_003a-aform"></a>
 </p><dl>
 <dt><u>Variable:</u> <b>aform</b>
-<a name="IDX1070"></a>
+<a name="IDX1088"></a>
 </dt>
 <dd><p>Default value: <code>ident(3)</code>
 </p>
@@ -354,16 +361,17 @@ to determine if an indexed object is a valid base vector.  See <code>abasep</cod
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-asymbol"></a>
+<p><a name="asymbol"></a>
+<a name="Item_003a-asymbol"></a>
 </p><dl>
 <dt><u>Variable:</u> <b>asymbol</b>
-<a name="IDX1071"></a>
+<a name="IDX1089"></a>
 </dt>
 <dd><p>Default value: <code>v</code>
 </p>
@@ -371,8 +379,8 @@ to determine if an indexed object is a valid base vector.  See <code>abasep</cod
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p>
 </dd></dl>
@@ -380,7 +388,7 @@ to determine if an indexed object is a valid base vector.  See <code>abasep</cod
 <p><a name="Item_003a-sf"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sf</b><i> (<var>u</var>, <var>v</var>)</i>
-<a name="IDX1072"></a>
+<a name="IDX1090"></a>
 </dt>
 <dd><p>A symmetric scalar function that is used in commutation relations.
 The default implementation checks if both arguments are base vectors
@@ -389,15 +397,16 @@ corresponding value from the matrix <code>aform</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-af"></a>
+<p><a name="af"></a>
+<a name="Item_003a-af"></a>
 </p><dl>
 <dt><u>Function:</u> <b>af</b><i> (<var>u</var>, <var>v</var>)</i>
-<a name="IDX1073"></a>
+<a name="IDX1091"></a>
 </dt>
 <dd><p>An antisymmetric scalar function that is used in commutation relations.
 The default implementation checks if both arguments are base vectors
@@ -406,15 +415,16 @@ corresponding value from the matrix <code>aform</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-av"></a>
+<p><a name="av"></a>
+<a name="Item_003a-av"></a>
 </p><dl>
 <dt><u>Function:</u> <b>av</b><i> (<var>u</var>, <var>v</var>)</i>
-<a name="IDX1074"></a>
+<a name="IDX1092"></a>
 </dt>
 <dd><p>An antisymmetric function that is used in commutation relations.
 The default implementation checks if both arguments are base vectors
@@ -441,16 +451,17 @@ corresponding value from the matrix <code>aform</code>.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a>
 </div>
 </p>
 </dd></dl>
 
 
-<p><a name="Item_003a-abasep"></a>
+<p><a name="abasep"></a>
+<a name="Item_003a-abasep"></a>
 </p><dl>
 <dt><u>Function:</u> <b>abasep</b><i> (<var>v</var>)</i>
-<a name="IDX1075"></a>
+<a name="IDX1093"></a>
 </dt>
 <dd><p>Checks if its argument is an <code>atensor</code> base vector. That is, if it is
 an indexed symbol, with the symbol being the same as the value of
@@ -459,8 +470,8 @@ and <code>adim</code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-atensor">Package atensor</a> &middot;
-<a href="maxima_99.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-atensor">Package atensor</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p>
 </dd></dl>
@@ -477,12 +488,12 @@ and <code>adim</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

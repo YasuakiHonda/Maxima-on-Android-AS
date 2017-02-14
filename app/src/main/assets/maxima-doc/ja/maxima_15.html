@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 15. Special Functions</title>
+<title>Maxima 5.39.0 Manual: 15. Special Functions</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 15. Special Functions">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 15. Special Functions">
+<meta name="description" content="Maxima 5.39.0 Manual: 15. Special Functions">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 15. Special Functions">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Special-Functions"></a>
 <a name="SEC78"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC79" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_14.html#SEC75" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 15. Special Functions </h1>
@@ -116,7 +131,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </td></tr>
 <tr><td align="left" valign="top"><a href="#SEC87">15.9 Parabolic Cylinder Functions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC88">15.10 Functions and Variables for Special Functions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC88">15.10 Functions and Variables for Special Functions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -129,22 +144,22 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC80" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.1 Introduction to Special Functions </h2>
 
 <p>特殊函数表記は以下の通りです:
 </p>
-<pre class="example">bessel_j (index, expr)         第一種ベッセル函数
+<table><tr><td>&nbsp;</td><td><pre class="example">bessel_j (index, expr)         第一種ベッセル函数
 bessel_y (index, expr)         第二種ベッセル函数
 bessel_i (index, expr)         第一種変形ベッセル函数
 bessel_k (index, expr)         第二種変形ベッセル函数
@@ -169,12 +184,12 @@ erfc (z)                       相補誤差函数
 ei (z)                         指数積分 (?)
 kelliptic (z)                  第一種完全楕円積分 (K)
 parabolic_cylinder_d (v,z)     放物円筒D函数
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Airy-functions">Airy functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Airy-functions">Airy functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p>
 <p><a name="Item_003a-Bessel-Functions"></a>
@@ -186,15 +201,15 @@ parabolic_cylinder_d (v,z)     放物円筒D函数
 <td valign="middle" align="left">[<a href="#SEC81" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.2 Bessel Functions </h2>
@@ -203,27 +218,27 @@ parabolic_cylinder_d (v,z)     放物円筒D函数
 <a name="Item_003a-bessel_005fj"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bessel_j</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX615"></a>
+<a name="IDX621"></a>
 </dt>
 <dd><p>次数 <em>v</em>と独立変数 <em>z</em>の第一種ベッセル函数。
 </p>
 <p><code>bessel_j</code>は以下のように定義されます。
 </p>
-<pre class="example">                inf
+<table><tr><td>&nbsp;</td><td><pre class="example">                inf
                 ====       k  - v - 2 k  v + 2 k
                 \     (- 1)  2          z
                  &gt;    --------------------------
                 /        k! gamma(v + k + 1)
                 ====
                 k = 0
-</pre>
+</pre></td></tr></table>
 
 <p>計算のために無限級数は使われませんが。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -231,24 +246,24 @@ parabolic_cylinder_d (v,z)     放物円筒D函数
 <a name="Item_003a-bessel_005fy"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bessel_y</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX616"></a>
+<a name="IDX622"></a>
 </dt>
 <dd><p>次数 <em>v</em>と独立変数 <em>z</em>の第二種ベッセル函数
 </p>
 <p><em>v</em>が整数でない時、
 <code>bessel_y</code>は以下のように定義されます。
-</p><pre class="example">              cos(%pi v) bessel_j(v, z) - bessel_j(-v, z)
+</p><table><tr><td>&nbsp;</td><td><pre class="example">              cos(%pi v) bessel_j(v, z) - bessel_j(-v, z)
               -------------------------------------------
                              sin(%pi v)
-</pre>
+</pre></td></tr></table>
 
 <p><em>v</em>が整数 <em>n</em>の時、
 <em>v</em>が <em>n</em>に近づく極限が取られます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -256,26 +271,26 @@ parabolic_cylinder_d (v,z)     放物円筒D函数
 <a name="Item_003a-bessel_005fi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bessel_i</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX617"></a>
+<a name="IDX623"></a>
 </dt>
 <dd><p>次数 <em>v</em>、独立変数 <em>z</em>の第一種変形ベッセル函数
 </p>
 <p><code>bessel_i</code>は以下のように定義されます。
-</p><pre class="example">                    inf
+</p><table><tr><td>&nbsp;</td><td><pre class="example">                    inf
                     ====   - v - 2 k  v + 2 k
                     \     2          z
                      &gt;    -------------------
                     /     k! gamma(v + k + 1)
                     ====
                     k = 0
-</pre>
+</pre></td></tr></table>
 
 <p>無限級数は計算には使われませんが。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -283,23 +298,23 @@ parabolic_cylinder_d (v,z)     放物円筒D函数
 <a name="Item_003a-bessel_005fk"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bessel_k</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX618"></a>
+<a name="IDX624"></a>
 </dt>
 <dd><p>次数 <em>v</em>、独立変数 <em>z</em>の第二種変形ベッセル函数
 </p>
 <p><em>v</em>が整数の時
 <code>bessel_k</code>は以下のように定義されます。
-</p><pre class="example">           %pi csc(%pi v) (bessel_i(-v, z) - bessel_i(v, z))
+</p><table><tr><td>&nbsp;</td><td><pre class="example">           %pi csc(%pi v) (bessel_i(-v, z) - bessel_i(v, z))
            -------------------------------------------------
                                   2
-</pre>
+</pre></td></tr></table>
 <p>もし <em>v</em>が整数 <em>n</em>でないなら、
 <em>v</em>が <em>n</em>に近づく極限が取られます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -307,13 +322,13 @@ parabolic_cylinder_d (v,z)     放物円筒D函数
 <a name="Item_003a-hankel_005f1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>hankel_1</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX619"></a>
+<a name="IDX625"></a>
 </dt>
 <dd><p>次数 <em>v</em>、独立変数 <em>z</em>の第一種ハンケル函数 (A&amp;S 9.1.3)。
 <code>hankel_1</code>は以下のように定義されます。
 </p>
-<pre class="example">   bessel_j(v,z) + %i * bessel_y(v,z)
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">   bessel_j(v,z) + %i * bessel_y(v,z)
+</pre></td></tr></table>
 <p>Maximaは浮動小数点精度の複素次数 <em>v</em>と複素独立変数 <em>z</em>に対して
 <code>hankel_1</code>を数値的に評価します。
 多倍長浮動小数点精度の数値評価はサポートされていません。
@@ -328,23 +343,23 @@ parabolic_cylinder_d (v,z)     放物円筒D函数
 </p>
 <p>数値評価:
 </p>
-<pre class="example">(%i1) hankel_1(1,0.5);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) hankel_1(1,0.5);
 (%o1)        0.24226845767487 - 1.471472392670243 %i
 (%i2) hankel_1(1,0.5+%i);
 (%o2)       - 0.25582879948621 %i - 0.23957560188301
-</pre>
+</pre></td></tr></table>
 <p><code>besselexpand</code>が <code>true</code>の時の <code>hankel_1</code>の展開:
 </p>
-<pre class="example">(%i1) hankel_1(1/2,z),besselexpand:true;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) hankel_1(1/2,z),besselexpand:true;
                sqrt(2) sin(z) - sqrt(2) %i cos(z)
 (%o1)          ----------------------------------
                        sqrt(%pi) sqrt(z)
-</pre>
+</pre></td></tr></table>
 <p><code>hankel_1</code>の独立変数 <em>z</em>に関する導函数。
 次数 <em>v</em>に関する導函数はサポートされていません。
 Maximaは名詞形を返します:
 </p>
-<pre class="example">(%i1) diff(hankel_1(v,z),z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) diff(hankel_1(v,z),z);
              hankel_1(v - 1, z) - hankel_1(v + 1, z)
 (%o1)        ---------------------------------------
                                 2
@@ -352,11 +367,11 @@ Maximaは名詞形を返します:
                        d
 (%o2)                  -- (hankel_1(v, z))
                        dv
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -364,13 +379,13 @@ Maximaは名詞形を返します:
 <a name="Item_003a-hankel_005f2"></a>
 </p><dl>
 <dt><u>関数:</u> <b>hankel_2</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX620"></a>
+<a name="IDX626"></a>
 </dt>
 <dd><p>次数 <em>v</em>、独立変数 <em>z</em>の第二種ハンケル函数 (A&amp;S 9.1.4)。
 <code>hankel_2</code>は以下のように定義されます。
 </p>
-<pre class="example">   bessel_j(v,z) - %i * bessel_y(v,z)
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">   bessel_j(v,z) - %i * bessel_y(v,z)
+</pre></td></tr></table>
 <p>Maximaは浮動小数点精度の複素次数 <em>v</em>と複素独立変数 <em>z</em>に対して
 <code>hankel_2</code>を数値的に評価します。
 多倍長浮動小数点精度の数値評価はサポートされていません。
@@ -385,8 +400,8 @@ Maximaは名詞形を返します:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -394,7 +409,7 @@ Maximaは名詞形を返します:
 <a name="Item_003a-besselexpand"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>besselexpand</b>
-<a name="IDX621"></a>
+<a name="IDX627"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -402,7 +417,7 @@ Maximaは名詞形を返します:
 この場合、ベッセル函数は他の初等函数で展開することができます。
 <code>besselexpand</code>が <code>true</code>の時、ベッセル函数は展開されます。
 </p>
-<pre class="example">(%i1) besselexpand: false$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) besselexpand: false$
 (%i2) bessel_j (3/2, z);
                                     3
 (%o2)                      bessel_j(-, z)
@@ -415,20 +430,21 @@ Maximaは名詞形を返します:
                                           z
 (%o4)                  ---------------------------------
                                    sqrt(%pi)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a> 
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-scaled_005fbessel_005fi"></a>
+<p><a name="scaled_005fbessel_005fi"></a>
+<a name="Item_003a-scaled_005fbessel_005fi"></a>
 </p><dl>
-<dt><u>関数:</u> <b>scaled_bessel_i</b><i> (<var>v</var>, <var>z</var>) </i>
-<a name="IDX622"></a>
+<dt><u>関数:</u> <b>scaled_bessel_i</b><i> (<var>v</var>, <var>z</var>)</i>
+<a name="IDX628"></a>
 </dt>
 <dd><p>次数 <em>v</em>、独立変数 <em>z</em>の、スケールされた第一種変形ベッセル函数。
 すなわち <em>scaled_bessel_i(v,z) = exp(-abs(z))*bessel_i(v, z)</em>。
@@ -440,48 +456,50 @@ Maximaは名詞形を返します:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-scaled_005fbessel_005fi0"></a>
+<p><a name="scaled_005fbessel_005fi0"></a>
+<a name="Item_003a-scaled_005fbessel_005fi0"></a>
 </p><dl>
-<dt><u>関数:</u> <b>scaled_bessel_i0</b><i> (<var>z</var>) </i>
-<a name="IDX623"></a>
+<dt><u>関数:</u> <b>scaled_bessel_i0</b><i> (<var>z</var>)</i>
+<a name="IDX629"></a>
 </dt>
 <dd><p><code>scaled_bessel_i(0,z)</code>と同一です。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-scaled_005fbessel_005fi1"></a>
+<p><a name="scaled_005fbessel_005fi1"></a>
+<a name="Item_003a-scaled_005fbessel_005fi1"></a>
 </p><dl>
-<dt><u>関数:</u> <b>scaled_bessel_i1</b><i> (<var>z</var>) </i>
-<a name="IDX624"></a>
+<dt><u>関数:</u> <b>scaled_bessel_i1</b><i> (<var>z</var>)</i>
+<a name="IDX630"></a>
 </dt>
 <dd><p><code>scaled_bessel_i(1,z)</code>と同一です。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-_0025s"></a>
 </p><dl>
-<dt><u>関数:</u> <b>%s</b><i> [<var>u</var>,<var>v</var>] (<var>z</var>) </i>
-<a name="IDX625"></a>
+<dt><u>関数:</u> <b>%s</b><i> [<var>u</var>,<var>v</var>] (<var>z</var>)</i>
+<a name="IDX631"></a>
 </dt>
 <dd><p>Lommelの小s[u,v](z)函数。
 多分 Gradshteyn &amp; Ryzhik 8.570.1.
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -494,15 +512,15 @@ Maximaは名詞形を返します:
 <td valign="middle" align="left">[<a href="#SEC82" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.3 Airy Functions </h2>
@@ -515,28 +533,30 @@ Maximaは名詞形を返します:
 </p>
 <p>もし引数 <code>x</code>が実数か複素数の浮動小数点数なら関数の数値が返されます。
 </p>
-<p><a name="Item_003a-airy_005fai"></a>
+<p><a name="airy_005fai"></a>
+<a name="Item_003a-airy_005fai"></a>
 </p><dl>
 <dt><u>関数:</u> <b>airy_ai</b><i> (<var>x</var>)</i>
-<a name="IDX626"></a>
+<a name="IDX632"></a>
 </dt>
 <dd><p>エアリー函数Ai(x)。  (A&amp;S 10.4.2)
 </p>
 <p>導函数 <code>diff (airy_ai(x), x)</code>は <code>airy_dai(x)</code>です。
 </p>
-<p><code>airy_bi</code>, <code>airy_dai</code>, <code>airy_dbi</code>も参照してください。
+<p><code><a href="#airy_005fbi">airy_bi</a></code>, <code><a href="#airy_005fdai">airy_dai</a></code>, <code><a href="#airy_005fdbi">airy_dbi</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Airy-functions">Airy functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Airy-functions">Airy functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-airy_005fdai"></a>
+<p><a name="airy_005fdai"></a>
+<a name="Item_003a-airy_005fdai"></a>
 </p><dl>
 <dt><u>関数:</u> <b>airy_dai</b><i> (<var>x</var>)</i>
-<a name="IDX627"></a>
+<a name="IDX633"></a>
 </dt>
 <dd><p>エアリー函数Ai <code>airy_ai(x)</code>の導函数。
 </p>
@@ -544,15 +564,16 @@ Maximaは名詞形を返します:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Airy-functions">Airy functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Airy-functions">Airy functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-airy_005fbi"></a>
+<p><a name="airy_005fbi"></a>
+<a name="Item_003a-airy_005fbi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>airy_bi</b><i> (<var>x</var>)</i>
-<a name="IDX628"></a>
+<a name="IDX634"></a>
 </dt>
 <dd><p>エアリー函数Bi(x)。 (A&amp;S 10.4.3)
 </p>
@@ -562,16 +583,17 @@ Maximaは名詞形を返します:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Airy-functions">Airy functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Airy-functions">Airy functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-airy_005fdbi"></a>
+<p><a name="airy_005fdbi"></a>
+<a name="Item_003a-airy_005fdbi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>airy_dbi</b><i> (<var>x</var>)</i>
-<a name="IDX629"></a>
+<a name="IDX635"></a>
 </dt>
 <dd><p>エアリーBi函数 <code>airy_bi(x)</code>の導函数。
 </p>
@@ -579,8 +601,8 @@ Maximaは名詞形を返します:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Airy-functions">Airy functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Airy-functions">Airy functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -593,15 +615,15 @@ Maximaは名詞形を返します:
 <td valign="middle" align="left">[<a href="#SEC83" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.4 Gamma and factorial Functions </h2>
@@ -617,7 +639,7 @@ Abramowitz and Stegun,
 <a name="Item_003a-bffac"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bffac</b><i> (<var>expr</var>, <var>n</var>)</i>
-<a name="IDX630"></a>
+<a name="IDX636"></a>
 </dt>
 <dd><p>階乗（シフトガンマ）函数の多倍長浮動小数点バージョン。
 ２番目の引数は、保持し返す桁数です。
@@ -625,8 +647,8 @@ Abramowitz and Stegun,
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -634,10 +656,10 @@ Abramowitz and Stegun,
 <a name="Item_003a-bfpsi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bfpsi</b><i> (<var>n</var>, <var>z</var>, <var>fpprec</var>)</i>
-<a name="IDX631"></a>
+<a name="IDX637"></a>
 </dt>
 <dt><u>関数:</u> <b>bfpsi0</b><i> (<var>z</var>, <var>fpprec</var>)</i>
-<a name="IDX632"></a>
+<a name="IDX638"></a>
 </dt>
 <dd><p><code>bfpsi</code>は実引数 <var>z</var>と整数次数 <var>n</var>の多ガンマ函数です。
 <code>bfpsi0</code>はディガンマ函数です。
@@ -650,8 +672,8 @@ Abramowitz and Stegun,
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -659,7 +681,7 @@ Abramowitz and Stegun,
 <a name="Item_003a-cbffac"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cbffac</b><i> (<var>z</var>, <var>fpprec</var>)</i>
-<a name="IDX633"></a>
+<a name="IDX639"></a>
 </dt>
 <dd><p>複素多倍長浮動小数点の階乗です。
 </p>
@@ -667,9 +689,9 @@ Abramowitz and Stegun,
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Complex-variables">Complex variables</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Complex-variables">Complex variables</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-evaluation">Numerical evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -677,18 +699,18 @@ Abramowitz and Stegun,
 <a name="Item_003a-gamma"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gamma</b><i> (<var>z</var>)</i>
-<a name="IDX634"></a>
+<a name="IDX640"></a>
 </dt>
 <dd><p>ガンマ函数の基本的な定義 (A&amp;S 6.1.1) は、
 </p>
-<pre class="example">                         inf
+<table><tr><td>&nbsp;</td><td><pre class="example">                         inf
                         /
                         [     z - 1   - t
              gamma(z) = I    t      %e    dt
                         ]
                         /
                          0
-</pre><p>です。
+</pre></td></tr></table><p>です。
 </p>
 <p>Maximaは正の整数と正負の有理数に関して <code>gamma</code>を整理します。
 半整数値に関して結果は有理数掛ける <code>sqrt(%pi)</code>です。
@@ -717,7 +739,7 @@ Maximaは引数 <code>z+n</code>と <code>z-n</code>―<code>n</code>は整数�
 </p>
 <p>整数、半整数、有理数に関する整理:
 </p>
-<pre class="example">(%i1) map('gamma,[1,2,3,4,5,6,7,8,9]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) map('gamma,[1,2,3,4,5,6,7,8,9]);
 (%o1)        [1, 1, 2, 6, 24, 120, 720, 5040, 40320]
 (%i2) map('gamma,[1/2,3/2,5/2,7/2]);
                     sqrt(%pi)  3 sqrt(%pi)  15 sqrt(%pi)
@@ -729,145 +751,146 @@ Maximaは引数 <code>z+n</code>と <code>z-n</code>―<code>n</code>は整数�
                       2           3           3
 (%o3)          [gamma(-), ----------, ----------]
                       3       3           9
-</pre>
+</pre></td></tr></table>
 <p>実数と複素数の数値評価:
 </p>
-<pre class="example">(%i4) map('gamma,[2.5,2.5b0]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) map('gamma,[2.5,2.5b0]);
 (%o4)     [1.329340388179137, 1.329340388179137b0]
 (%i5) map('gamma,[1.0+%i,1.0b0+%i]);
-(%o5) [.4980156681183558 - .1549498283018108 %i, 
+(%o5) [.4980156681183558 - .1549498283018108 %i,
          4.980156681183561b-1 - 1.549498283018107b-1 %i]
-</pre>
+</pre></td></tr></table>
 <p><code>gamma</code>は鏡像対称性を持ちます:
 </p>
-<pre class="example">(%i6) declare(z,complex)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i6) declare(z,complex)$
 (%i7) conjugate(gamma(z));
 (%o7)                  gamma(conjugate(z))
-</pre>
+</pre></td></tr></table>
 <p><code>gamma_expand</code>が <code>true</code>の時
 Maximaは <code>gamma(z+n)</code>と <code>gamma(z-n)</code>を展開します:
 </p>
-<pre class="example">(%i8) gamma_expand:true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i8) gamma_expand:true$
 
 (%i9) [gamma(z+1),gamma(z-1),gamma(z+2)/gamma(z+1)];
                                gamma(z)
 (%o9)             [z gamma(z), --------, z + 1]
                                 z - 1
-</pre>
+</pre></td></tr></table>
 <p><code>gamma</code>の導函数:
 </p>
-<pre class="example">(%i10) diff(gamma(z),z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i10) diff(gamma(z),z);
 (%o10)                  psi (z) gamma(z)
                            0
-</pre>
-<p><code>makegamma</code>も参照してください。
+</pre></td></tr></table>
+<p><code><a href="#makegamma">makegamma</a></code>も参照してください。
 </p>
 <p>オイラー-マスケローニ定数は <code>%gamma</code>です。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-log_005fgamma"></a>
 </p><dl>
 <dt><u>関数:</u> <b>log_gamma</b><i> (<var>z</var>)</i>
-<a name="IDX635"></a>
+<a name="IDX641"></a>
 </dt>
 <dd><p>ガンマ函数の自然対数。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-gamma_005fgreek"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gamma_greek</b><i> (<var>a</var>, <var>z</var>)</i>
-<a name="IDX636"></a>
+<a name="IDX642"></a>
 </dt>
 <dd><p>第一種不完全ガンマ函数 (A&amp;S 6.5.2):
 </p>
-<pre class="example">                         z
+<table><tr><td>&nbsp;</td><td><pre class="example">                         z
                         /
                         [  a - 1   - t
     gamma_greek(a, z) = I t      %e    dt
                         ]
                         /
                          0
-</pre>
-<p>See also <code>gamma_incomplete</code> (upper incomplete gamma function).
+</pre></td></tr></table>
+<p><code><a href="#gamma_005fincomplete">gamma_incomplete</a></code> (上側不完全ガンマ函数)も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-gamma_005fincomplete"></a>
+<p><a name="gamma_005fincomplete"></a>
+<a name="Item_003a-gamma_005fincomplete"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gamma_incomplete</b><i> (<var>a</var>,<var>z</var>)</i>
-<a name="IDX637"></a>
+<a name="IDX643"></a>
 </dt>
-<dd><p>第二種不完全ガンマ函数 A&amp;S 6.5.2:
+<dd><p>第二種不完全ガンマ函数 (A&amp;S 6.5.3):
 </p>
-<pre class="example">                              inf
+<table><tr><td>&nbsp;</td><td><pre class="example">                              inf
                              /
                              [     a - 1   - t
     gamma_incomplete(a, z) = I    t      %e    dt
                              ]
                              /
                               z
-</pre>
+</pre></td></tr></table>
 <p>初等函数と <code>erfc</code>の項でいかに <code>gamma_incomplete</code>を表すかを制御するには、
-<code>gamma_expand</code>も参照してください。
+<code><a href="#gamma_005fexpand">gamma_expand</a></code>も参照してください。
 </p>
 <p>関連の関数 <code>gamma_incomplete_regularized</code>や <code>gamma_incomplete_generalized</code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-gamma_005fincomplete_005fregularized"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gamma_incomplete_regularized</b><i> (<var>a</var>, <var>z</var>)</i>
-<a name="IDX638"></a>
+<a name="IDX644"></a>
 </dt>
-<dd><p>正則第二種不完全ガンマ函数 A&amp;S 6.5.1:
+<dd><p>正則第二種不完全ガンマ函数 (A&amp;S 6.5.1):
 </p>
-<pre class="example">gamma_incomplete_regularized(a, z) = 
+<table><tr><td>&nbsp;</td><td><pre class="example">gamma_incomplete_regularized(a, z) =
                                         gamma_incomplete(a, z)
                                         ----------------------
                                                gamma(a)
-</pre>
-<p>初等函数と <code>erfc</code>の項でいかに <code>gamma_incomplete</code>を表すかを制御するには、
-<code>gamma_expand</code>も参照してください。
+</pre></td></tr></table>
+<p>初等函数と <code><a href="#erfc">erfc</a></code>の項でいかに <code>gamma_incomplete</code>を表すかを制御するには、
+<code><a href="#gamma_005fexpand">gamma_expand</a></code>も参照してください。
 </p>
 <p><code>gamma_incomplete</code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-gamma_005fincomplete_005fgeneralized"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gamma_incomplete_generalized</b><i> (<var>a</var>,<var>z1</var>,<var>z1</var> )</i>
-<a name="IDX639"></a>
+<a name="IDX645"></a>
 </dt>
 <dd><p>一般化不完全ガンマ函数
 </p>
-<pre class="example">gamma_incomplete_generalized(a, z1, z2) = 
+<table><tr><td>&nbsp;</td><td><pre class="example">gamma_incomplete_generalized(a, z1, z2) =
                                                z2
                                               /
                                               [    a - 1   - t
@@ -875,21 +898,22 @@ Maximaは <code>gamma(z+n)</code>と <code>gamma(z-n)</code>を展開します:
                                               ]
                                               /
                                                z1
-</pre>
+</pre></td></tr></table>
 <p><code>gamma_incomplete</code>や <code>gamma_incomplete_regularized</code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-gamma_005fexpand"></a>
+<p><a name="gamma_005fexpand"></a>
+<a name="Item_003a-gamma_005fexpand"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>gamma_expand</b>
-<a name="IDX640"></a>
+<a name="IDX646"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -898,7 +922,7 @@ Maximaは <code>gamma(z+n)</code>と <code>gamma(z-n)</code>を展開します:
 <code>gamma_incomplete(v,z)</code>は、可能なら、
 <code>z</code>, <code>exp(z)</code>, <code>erfc(z)</code>の項で展開されます。
 </p>
-<pre class="example">(%i1) gamma_incomplete(2,z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) gamma_incomplete(2,z);
 (%o1)                       gamma_incomplete(2, z)
 (%i2) gamma_expand:true;
 (%o2)                                true
@@ -909,11 +933,11 @@ Maximaは <code>gamma(z+n)</code>と <code>gamma(z-n)</code>を展開します:
                               - z   sqrt(%pi) erfc(sqrt(z))
 (%o4)               sqrt(z) %e    + -----------------------
                                                2
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p>
 </dd></dl>
@@ -921,7 +945,7 @@ Maximaは <code>gamma(z+n)</code>と <code>gamma(z-n)</code>を展開します:
 <a name="Item_003a-gammalim"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>gammalim</b>
-<a name="IDX641"></a>
+<a name="IDX647"></a>
 </dt>
 <dd><p>デフォルト値: 10000
 </p>
@@ -933,8 +957,8 @@ Maximaは <code>gamma(z+n)</code>と <code>gamma(z-n)</code>を展開します:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p>
 </dd></dl>
@@ -944,24 +968,24 @@ Maximaは <code>gamma(z+n)</code>と <code>gamma(z-n)</code>を展開します:
 <a name="Item_003a-makegamma"></a>
 </p><dl>
 <dt><u>関数:</u> <b>makegamma</b><i> (<var>expr</var>)</i>
-<a name="IDX642"></a>
+<a name="IDX648"></a>
 </dt>
 <dd><p><var>expr</var>の中の２項、階乗、ベータ函数のインスタンスをガンマ函数に変換します。
 </p>
-<p><code>makefact</code>も参照してください。
+<p><code><a href="#makefact">makefact</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-beta"></a>
 </p><dl>
 <dt><u>関数:</u> <b>beta</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX643"></a>
+<a name="IDX649"></a>
 </dt>
-<dd><p>ベータ函数は <code>gamma(a) gamma(b)/gamma(a+b)</code> 
+<dd><p>ベータ函数は <code>gamma(a) gamma(b)/gamma(a+b)</code>
 (A&amp;S 6.2.1)として定義されます。
 </p>
 <p>Maximaは、正の整数と、合計すると整数になる有理数についてベータ函数を整理します。
@@ -983,9 +1007,9 @@ Maximaはこの場合結果を与えます。
 <p>Maximaは、実数値と複素数値のベータ函数を浮動小数点と多倍長浮動小数点精度で評価できます。
 数値評価のために Maximaは <code>log_gamma</code>を使います:
 </p>
-<pre class="example">           - log_gamma(b + a) + log_gamma(b) + log_gamma(a)
+<table><tr><td>&nbsp;</td><td><pre class="example">           - log_gamma(b + a) + log_gamma(b) + log_gamma(a)
          %e
-</pre>
+</pre></td></tr></table>
 <p>Maximaはベータ函数が対称で、鏡像対称性を持つことを知っています。
 </p>
 <p>Maximaは <var>a</var>か <var>b</var>に関するベータ函数の導函数を知っています。
@@ -996,53 +1020,53 @@ Maximaはこの場合結果を与えます。
 </p>
 <p>引数の１つが整数の時の整理:
 </p>
-<pre class="example">(%i1) [beta(2,3),beta(2,1/3),beta(2,a)];
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) [beta(2,3),beta(2,1/3),beta(2,a)];
                                1   9      1
 (%o1)                         [--, -, ---------]
                                12  4  a (a + 1)
-</pre>
+</pre></td></tr></table>
 <p>２つの有理数引数の和が整数になる時の整理:
 </p>
-<pre class="example">(%i2) [beta(1/2,5/2),beta(1/3,2/3),beta(1/4,3/4)];
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i2) [beta(1/2,5/2),beta(1/3,2/3),beta(1/4,3/4)];
                           3 %pi   2 %pi
 (%o2)                    [-----, -------, sqrt(2) %pi]
                             8    sqrt(3)
-</pre>
+</pre></td></tr></table>
 <p><code>beta_args_sum_to_integer</code>を <code>true</code>に設定した場合、
 引数の和が整数の時より一般的な式を整理します:
 </p>
-<pre class="example">(%i3) beta_args_sum_to_integer:true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) beta_args_sum_to_integer:true$
 (%i4) beta(a+1,-a+2);
                                 %pi (a - 1) a
 (%o4)                         ------------------
                               2 sin(%pi (2 - a))
-</pre>
-<p>引数の１つが負の整数の時、可能な結果: 
+</pre></td></tr></table>
+<p>引数の１つが負の整数の時、可能な結果:
 </p>
-<pre class="example">(%i5) [beta(-3,1),beta(-3,2),beta(-3,3)];
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i5) [beta(-3,1),beta(-3,2),beta(-3,3)];
                                     1  1    1
 (%o5)                            [- -, -, - -]
                                     3  6    3
-</pre>
+</pre></td></tr></table>
 <p><code>beta_expand</code>が <code>true</code>の時、
 <code>n</code>が整数として <code>beta(a+n,b)</code>や <code>beta(a-n)</code>は整理されます:
 </p>
-<pre class="example">(%i6) beta_expand:true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i6) beta_expand:true$
 (%i7) [beta(a+1,b),beta(a-1,b),beta(a+1,b)/beta(a,b+1)];
                     a beta(a, b)  beta(a, b) (b + a - 1)  a
 (%o7)              [------------, ----------------------, -]
                        b + a              a - 1           b
 
-</pre>
+</pre></td></tr></table>
 <p>引数の１つがゼロの時、ベータは未定義です:
 </p>
-<pre class="example">(%i7) beta(0,b);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i7) beta(0,b);
 beta: expected nonzero arguments; found 0, b
  -- an error.  To debug this try debugmode(true);
-</pre>
+</pre></td></tr></table>
 <p>実数値と複素数値の浮動小数点または多倍長浮動小数点精度での数値評価:
 </p>
-<pre class="example">(%i8) beta(2.5,2.3);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i8) beta(2.5,2.3);
 (%o8) .08694748611299981
 
 (%i9) beta(2.5,1.4+%i);
@@ -1053,61 +1077,62 @@ beta: expected nonzero arguments; found 0, b
 
 (%i11) beta(2.5b0,1.4b0+%i);
 (%o11) 6.401449507966944b-2 - 1.502078053286415b-1 %i
-</pre>
+</pre></td></tr></table>
 <p>ベータは対称で、鏡像対称性を持ちます:
 </p>
-<pre class="example">(%i14) beta(a,b)-beta(b,a);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i14) beta(a,b)-beta(b,a);
 (%o14)                                 0
 (%i15) declare(a,complex,b,complex)$
 (%i16) conjugate(beta(a,b));
 (%o16)                 beta(conjugate(a), conjugate(b))
-</pre>
+</pre></td></tr></table>
 <p><code>a</code>に関するベータ函数の導函数:
-</p><pre class="example">(%i17) diff(beta(a,b),a);
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i17) diff(beta(a,b),a);
 (%o17)               - beta(a, b) (psi (b + a) - psi (a))
                                       0             0
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-beta_005fincomplete"></a>
 </p><dl>
 <dt><u>関数:</u> <b>beta_incomplete</b><i> (<var>a</var>, <var>b</var>, <var>z</var>)</i>
-<a name="IDX644"></a>
+<a name="IDX650"></a>
 </dt>
 <dd><p>不完全ベータ函数の基本定義(A&amp;S 6.6.1)は以下の通りです。
 </p>
-<pre class="example">        z
+<table><tr><td>&nbsp;</td><td><pre class="example">        z
        /
        [         b - 1  a - 1
        I  (1 - t)      t      dt
        ]
        /
         0
-</pre>
+</pre></td></tr></table>
 <p>この定義は　<em>realpart(a)&gt;0</em>かつ
 <em>realpart(b)&gt;0</em>かつ
 <em>abs(z)&lt;1</em>で可能です。
 他の値では不完全ベータ函数は一般化超幾何函数を通じて定義することができます。
 </p>
-<pre class="example">   gamma(a) hypergeometric_generalized([a, 1 - b], [a + 1], z) z
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">   gamma(a) hypergeometric_generalized([a, 1 - b], [a + 1], z) z
+</pre></td></tr></table>
 <p>(不完全ベータ函数の完全な定義については、functions.wolfram.comを参照してください。)
 </p>
 <p>負の整数 <em>a = -n</em>と正の整数 <em>b=m</em>で <em>m&lt;=n</em>の場合、
 不完全ベータ函数は以下を通して定義されます。
 </p>
-<pre class="example">                            m - 1           k
+<table><tr><td>&nbsp;</td><td><pre class="example">                            m - 1           k
                             ====  (1 - m)  z
                       n - 1 \            k
                      z       &gt;    -----------
                             /     k! (n - k)
                             ====
                             k = 0
-</pre>
+</pre></td></tr></table>
 <p>Maximaは、
 負の整数 <var>a</var>に関する
 <code>beta_incomplete</code>を整理するためにこの定義を使います。
@@ -1136,68 +1161,68 @@ Maximaは <code>beta_incomplete(a+n,b,z)</code>や
 </p>
 <p>正の整数 <var>a</var>に関する整理:
 </p>
-<pre class="example">(%i1) beta_incomplete(2,b,z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) beta_incomplete(2,b,z);
                                        b
                             1 - (1 - z)  (b z + 1)
 (%o1)                       ----------------------
                                   b (b + 1)
-</pre>
+</pre></td></tr></table>
 <p>正の整数 <var>b</var>に関する整理:
 </p>
-<pre class="example">(%i2) beta_incomplete(a,2,z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i2) beta_incomplete(a,2,z);
                                                a
                               (a (1 - z) + 1) z
 (%o2)                         ------------------
                                   a (a + 1)
-</pre>
+</pre></td></tr></table>
 <p>正の整数 <var>a</var>, <var>b</var>に関する整理:
 </p>
-<pre class="example">(%i3) beta_incomplete(3,2,z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) beta_incomplete(3,2,z);
                                                3
                               (3 (1 - z) + 1) z
 (%o3)                         ------------------
                                       12
-</pre>
+</pre></td></tr></table>
 <p><var>a</var>が負の整数でかつ <em>b&lt;=(-a)</em>の時、Maximaは整理します:
 </p>
-<pre class="example">(%i4) beta_incomplete(-3,1,z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) beta_incomplete(-3,1,z);
                                        1
 (%o4)                              - ----
                                         3
                                      3 z
-</pre>
+</pre></td></tr></table>
 <p>特定の値 <em>z=0</em>と <em>z=1</em>に関して, Maximaは整理します:
 </p>
-<pre class="example">(%i5) assume(a&gt;0,b&gt;0)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i5) assume(a&gt;0,b&gt;0)$
 (%i6) beta_incomplete(a,b,0);
 (%o6)                                 0
 (%i7) beta_incomplete(a,b,1);
 (%o7)                            beta(a, b)
-</pre>
+</pre></td></tr></table>
 <p>浮動小数点または多倍長浮動小数点精度の数値評価:
 </p>
-<pre class="example">(%i8) beta_incomplete(0.25,0.50,0.9);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i8) beta_incomplete(0.25,0.50,0.9);
 (%o8)                          4.594959440269333
 (%i9)  fpprec:25$
 (%i10) beta_incomplete(0.25,0.50,0.9b0);
 (%o10)                    4.594959440269324086971203b0
-</pre>
+</pre></td></tr></table>
 <p><em>abs(z)&gt;1</em>の時 <code>beta_incomplete</code>は複素数を返します:
 </p>
-<pre class="example">(%i11) beta_incomplete(0.25,0.50,1.7);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i11) beta_incomplete(0.25,0.50,1.7);
 (%o11)              5.244115108584249 - 1.45518047787844 %i
-</pre>
+</pre></td></tr></table>
 <p>より一般的な複素引数に関する結果:
 </p>
-<pre class="example">(%i14) beta_incomplete(0.25+%i,1.0+%i,1.7+%i);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i14) beta_incomplete(0.25+%i,1.0+%i,1.7+%i);
 (%o14)             2.726960675662536 - .3831175704269199 %i
 (%i15) beta_incomplete(1/2,5/4*%i,2.8+%i);
 (%o15)             13.04649635168716 %i - 5.802067956270001
-(%i16) 
-</pre>
+(%i16)
+</pre></td></tr></table>
 <p><code>beta_expand</code>が <code>true</code>の時の展開:
 </p>
-<pre class="example">(%i23) beta_incomplete(a+1,b,z),beta_expand:true;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i23) beta_incomplete(a+1,b,z),beta_expand:true;
                                                        b  a
                    a beta_incomplete(a, b, z)   (1 - z)  z
 (%o23)             -------------------------- - -----------
@@ -1208,10 +1233,10 @@ Maximaは <code>beta_incomplete(a+n,b,z)</code>や
            beta_incomplete(a, b, z) (- b - a + 1)   (1 - z)  z
 (%o24)     -------------------------------------- - ---------------
                            1 - a                         1 - a
-</pre> 
+</pre></td></tr></table>
 <p><code>beta_incomplete</code>の微分と積分:
 </p>
-<pre class="example">(%i34) diff(beta_incomplete(a, b, z), z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i34) diff(beta_incomplete(a, b, z), z);
                               b - 1  a - 1
 (%o34)                 (1 - z)      z
 (%i35) integrate(beta_incomplete(a, b, z), z);
@@ -1224,23 +1249,23 @@ Maximaは <code>beta_incomplete(a+n,b,z)</code>や
                                                  b + a
 (%i36) factor(diff(%, z));
 (%o36)              beta_incomplete(a, b, z)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-beta_005fincomplete_005fregularized"></a>
 </p><dl>
 <dt><u>関数:</u> <b>beta_incomplete_regularized</b><i> (<var>a</var>, <var>b</var>, <var>z</var>)</i>
-<a name="IDX645"></a>
+<a name="IDX651"></a>
 </dt>
-<dd><pre class="example">beta_incomplete_regularized(a, b, z) = 
+<dd><table><tr><td>&nbsp;</td><td><pre class="example">beta_incomplete_regularized(a, b, z) =
                                       beta_incomplete(a, b, z)
                                       ------------------------
                                              beta(a, b)
-</pre><p>として定義された正則不完全ベータ函数 A&amp;S 6.6.2。
+</pre></td></tr></table><p>として定義された正則不完全ベータ函数 (A&amp;S 6.6.2)。
 </p>
 <p><code>beta_incomplete</code>同様、この定義は完全ではありません。
 <code>beta_incomplete_regularized</code>の完全な定義については
@@ -1269,7 +1294,7 @@ Maximaは、 nは整数として引数 <em>a+n</em>または <em>a-n</em>に関�
 </p>
 <p><var>a</var>か <var>b</var>が正の整数の時の整理:
 </p>
-<pre class="example">(%i1) beta_incomplete_regularized(2,b,z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) beta_incomplete_regularized(2,b,z);
                                        b
 (%o1)                       1 - (1 - z)  (b z + 1)
 
@@ -1280,18 +1305,18 @@ Maximaは、 nは整数として引数 <em>a+n</em>または <em>a-n</em>に関�
 (%i3) beta_incomplete_regularized(3,2,z);
                                                3
 (%o3)                         (3 (1 - z) + 1) z
-</pre>
+</pre></td></tr></table>
 <p>特定の値<em>z=0</em>, <em>z=1</em>について、Maximaは整理します:
 </p>
-<pre class="example">(%i4) assume(a&gt;0,b&gt;0)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) assume(a&gt;0,b&gt;0)$
 (%i5) beta_incomplete_regularized(a,b,0);
 (%o5)                                 0
 (%i6) beta_incomplete_regularized(a,b,1);
 (%o6)                                 1
-</pre>
+</pre></td></tr></table>
 <p>実数と複素数引数に関する浮動小数点または多倍長浮動小数点精度の数値評価:
 </p>
-<pre class="example">(%i7) beta_incomplete_regularized(0.12,0.43,0.9);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i7) beta_incomplete_regularized(0.12,0.43,0.9);
 (%o7)                         .9114011367359802
 (%i8) fpprec:32$
 (%i9) beta_incomplete_regularized(0.12,0.43,0.9b0);
@@ -1301,10 +1326,10 @@ Maximaは、 nは整数として引数 <em>a+n</em>または <em>a-n</em>に関�
 (%i11) fpprec:20$
 (%i12) beta_incomplete_regularized(1+%i,3/3,1.5b0*%i);
 (%o12)      2.8653674999354036142b-1 %i - 1.2299596333468400163b-1
-</pre>
+</pre></td></tr></table>
 <p><code>beta_expand</code>が <code>true</code>の時の展開:
 </p>
-<pre class="example">(%i13) beta_incomplete_regularized(a+1,b,z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i13) beta_incomplete_regularized(a+1,b,z);
                                                      b  a
                                               (1 - z)  z
 (%o13) beta_incomplete_regularized(a, b, z) - ------------
@@ -1315,10 +1340,10 @@ Maximaは、 nは整数として引数 <em>a+n</em>または <em>a-n</em>に関�
                                               (1 - z)  z
                                          - ----------------------
                                            beta(a, b) (b + a - 1)
-</pre>
+</pre></td></tr></table>
 <p><var>z</var>に関する微分と積分:
 </p>
-<pre class="example">(%i15) diff(beta_incomplete_regularized(a,b,z),z);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i15) diff(beta_incomplete_regularized(a,b,z),z);
                               b - 1  a - 1
                        (1 - z)      z
 (%o15)                 -------------------
@@ -1331,28 +1356,28 @@ Maximaは、 nは整数として引数 <em>a+n</em>または <em>a-n</em>に関�
                                                     a beta(a, b)
         - -------------------------------------------------------
                                    b + a
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-beta_005fincomplete_005fgeneralized"></a>
 </p><dl>
 <dt><u>関数:</u> <b>beta_incomplete_generalized</b><i> (<var>a</var>, <var>b</var>, <var>z1</var>, <var>z2</var>)</i>
-<a name="IDX646"></a>
+<a name="IDX652"></a>
 </dt>
 <dd><p>一般化不完全ベータ函数の基本的な定義は以下の通りです。
 </p>
-<pre class="example">             z2
+<table><tr><td>&nbsp;</td><td><pre class="example">             z2
            /
            [          b - 1  a - 1
            I   (1 - t)      t      dt
            ]
            /
             z1
-</pre>
+</pre></td></tr></table>
 <p>Maximaは、
 <var>a</var>と <var>b</var>が正の整数の時、
 <code>beta_incomplete_regularized</code>を整理します。
@@ -1381,7 +1406,7 @@ Maximaは、<em>a+n</em>や <em>a-n</em>に関して
 <p>Maximaは、<var>a</var>と <var>b</var>が正の整数の時、
 <code>beta_incomplete_generalized</code>を整理します:
 </p>
-<pre class="example">(%i1) beta_incomplete_generalized(2,b,z1,z2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) beta_incomplete_generalized(2,b,z1,z2);
                    b                      b
            (1 - z1)  (b z1 + 1) - (1 - z2)  (b z2 + 1)
 (%o1)      -------------------------------------------
@@ -1396,10 +1421,10 @@ Maximaは、<em>a+n</em>や <em>a-n</em>に関して
       (1 - z1)  (3 z1  + 2 z1 + 1) - (1 - z2)  (3 z2  + 2 z2 + 1)
 (%o3) -----------------------------------------------------------
                                   12
-</pre>
+</pre></td></tr></table>
 <p>特定の値 <em>z1=0</em>, <em>z2=0</em>, <em>z1=1</em>または <em>z2=1</em>に関する整理:
 </p>
-<pre class="example">(%i4) assume(a &gt; 0, b &gt; 0)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) assume(a &gt; 0, b &gt; 0)$
 (%i5) beta_incomplete_generalized(a,b,z1,0);
 (%o5)                    - beta_incomplete(a, b, z1)
 
@@ -1411,29 +1436,29 @@ Maximaは、<em>a+n</em>や <em>a-n</em>に関して
 
 (%i8) beta_incomplete_generalized(a,b,1,z2);
 (%o8)              beta_incomplete(a, b, z2) - beta(a, b)
-</pre>
+</pre></td></tr></table>
 <p>浮動小数点もしくは多倍長浮動小数点精度での実数値引数に関する数値評価:
 </p>
-<pre class="example">(%i9) beta_incomplete_generalized(1/2,3/2,0.25,0.31);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i9) beta_incomplete_generalized(1/2,3/2,0.25,0.31);
 (%o9)                        .09638178086368676
 
 (%i10) fpprec:32$
 (%i10) beta_incomplete_generalized(1/2,3/2,0.25,0.31b0);
 (%o10)               9.6381780863686935309170054689964b-2
-</pre>
+</pre></td></tr></table>
 <p>浮動小数点もしくは多倍長浮動小数点精度での複素数値引数に関する数値評価:
 </p>
-<pre class="example">(%i11) beta_incomplete_generalized(1/2+%i,3/2+%i,0.25,0.31);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i11) beta_incomplete_generalized(1/2+%i,3/2+%i,0.25,0.31);
 (%o11)           - .09625463003205376 %i - .003323847735353769
 (%i12) fpprec:20$
 (%i13) beta_incomplete_generalized(1/2+%i,3/2+%i,0.25,0.31b0);
 (%o13)     - 9.6254630032054178691b-2 %i - 3.3238477353543591914b-3
-</pre>
+</pre></td></tr></table>
 <p><code>beta_expand</code>が <code>true</code>の時、
 <var>n</var>を正の整数として
 <em>a+n</em>か <em>a-n</em>に関する整理:
 </p>
-<pre class="example">(%i14) beta_expand:true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i14) beta_expand:true$
 
 (%i15) beta_incomplete_generalized(a+1,b,z1,z2);
 
@@ -1453,10 +1478,10 @@ Maximaは、<em>a+n</em>や <em>a-n</em>に関して
                             (1 - z2)  z2      - (1 - z1)  z1
                           - -------------------------------------
                                             1 - a
-</pre>
+</pre></td></tr></table>
 <p>変数 <var>z1</var>に関する微分と <var>z1</var>や <var>z2</var>に関する積分:
 </p>
-<pre class="example">(%i17) diff(beta_incomplete_generalized(a,b,z1,z2),z1);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i17) diff(beta_incomplete_generalized(a,b,z1,z2),z1);
                                b - 1   a - 1
 (%o17)               - (1 - z1)      z1
 (%i18) integrate(beta_incomplete_generalized(a,b,z1,z2),z1);
@@ -1465,17 +1490,17 @@ Maximaは、<em>a+n</em>や <em>a-n</em>に関して
 (%i19) integrate(beta_incomplete_generalized(a,b,z1,z2),z2);
 (%o19) beta_incomplete_generalized(a, b, z1, z2) z2
                                   - beta_incomplete(a + 1, b, z2)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-beta_005fexpand"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>beta_expand</b>
-<a name="IDX647"></a>
+<a name="IDX653"></a>
 </dt>
 <dd><p>デフォルト値: false
 </p>
@@ -1486,15 +1511,15 @@ Maximaは、<em>a+n</em>や <em>a-n</em>に関して
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-beta_005fargs_005fsum_005fto_005finteger"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>beta_args_sum_to_integer</b>
-<a name="IDX648"></a>
+<a name="IDX654"></a>
 </dt>
 <dd><p>デフォルト値: false
 </p>
@@ -1504,8 +1529,8 @@ Maximaは <code>beta(a,b)</code>を整理します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1513,7 +1538,7 @@ Maximaは <code>beta(a,b)</code>を整理します。
 <p><a name="Item_003a-psi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>psi</b><i> [<var>n</var>](<var>x</var>)</i>
-<a name="IDX649"></a>
+<a name="IDX655"></a>
 </dt>
 <dd><p><code>log (gamma (<var>x</var>))</code>の次数 <code><var>n</var>+1</code>の導函数。
 例えば、
@@ -1535,14 +1560,14 @@ Maximaは <code>beta(a,b)</code>を整理します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-maxpsiposint"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>maxpsiposint</b>
-<a name="IDX650"></a>
+<a name="IDX656"></a>
 </dt>
 <dd><p>デフォルト値: 20
 </p>
@@ -1551,7 +1576,7 @@ Maximaは <code>beta(a,b)</code>を整理します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p>
 </dd></dl>
@@ -1559,7 +1584,7 @@ Maximaは <code>beta(a,b)</code>を整理します。
 <p><a name="Item_003a-maxpsinegint"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>maxpsinegint</b>
-<a name="IDX651"></a>
+<a name="IDX657"></a>
 </dt>
 <dd><p>デフォルト値: -10
 </p>
@@ -1570,7 +1595,7 @@ Maximaは <code>beta(a,b)</code>を整理します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p>
 </dd></dl>
@@ -1578,7 +1603,7 @@ Maximaは <code>beta(a,b)</code>を整理します。
 <p><a name="Item_003a-maxpsifracnum"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>maxpsifracnum</b>
-<a name="IDX652"></a>
+<a name="IDX658"></a>
 </dt>
 <dd><p>デフォルト値: 6
 </p>
@@ -1588,7 +1613,7 @@ Maximaは <code>beta(a,b)</code>を整理します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p>
 </dd></dl>
@@ -1596,7 +1621,7 @@ Maximaは <code>beta(a,b)</code>を整理します。
 <p><a name="Item_003a-maxpsifracdenom"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>maxpsifracdenom</b>
-<a name="IDX653"></a>
+<a name="IDX659"></a>
 </dt>
 <dd><p>デフォルト値: 6
 </p>
@@ -1606,23 +1631,24 @@ Maximaは <code>beta(a,b)</code>を整理します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-makefact"></a>
+<p><a name="makefact"></a>
+<a name="Item_003a-makefact"></a>
 </p><dl>
 <dt><u>関数:</u> <b>makefact</b><i> (<var>expr</var>)</i>
-<a name="IDX654"></a>
+<a name="IDX660"></a>
 </dt>
 <dd><p><var>expr</var>の中の二項、ガンマ、ベータ函数のインスタンスを階乗に変換します。
 </p>
-<p><code>makegamma</code>も参照してください。
+<p><code><a href="#makegamma">makegamma</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a>
 </div>
 </p></dd></dl>
 
@@ -1630,14 +1656,14 @@ Maximaは <code>beta(a,b)</code>を整理します。
 <p><a name="Item_003a-numfactor"></a>
 </p><dl>
 <dt><u>関数:</u> <b>numfactor</b><i> (<var>expr</var>)</i>
-<a name="IDX655"></a>
+<a name="IDX661"></a>
 </dt>
 <dd><p>式 <var>expr</var>を掛ける数値因子を返します。
 式 <var>expr</var>は単一項でなければいけません。
 </p>
 <p><code>content</code>は輪の中のすべての項の最大公約数を返します。
 </p>
-<pre class="example">(%i1) gamma (7/2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) gamma (7/2);
                           15 sqrt(%pi)
 (%o1)                     ------------
                                8
@@ -1645,10 +1671,10 @@ Maximaは <code>beta(a,b)</code>を整理します。
                                15
 (%o2)                          --
                                8
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1662,15 +1688,15 @@ Maximaは <code>beta(a,b)</code>を整理します。
 <td valign="middle" align="left">[<a href="#SEC84" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.5 Exponential Integrals </h2>
@@ -1682,129 +1708,152 @@ Abramowitz and Stegun,
 <p><a name="Item_003a-expintegral_005fe1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_e1</b><i> (<var>z</var>)</i>
-<a name="IDX656"></a>
+<a name="IDX662"></a>
 </dt>
-<dd><p>指数積分E1(z) (A&amp;S 5.1.1)
+<dd><p>以下のように定義される指数積分E1(z) (A&amp;S 5.1.1)
+</p>
+
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintegral_005fei"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_ei</b><i> (<var>z</var>)</i>
-<a name="IDX657"></a>
+<a name="IDX663"></a>
 </dt>
 <dd><p>指数積分Ei(z) (A&amp;S 5.1.2)
+</p>
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintegral_005fli"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_li</b><i> (<var>z</var>)</i>
-<a name="IDX658"></a>
+<a name="IDX664"></a>
 </dt>
 <dd><p>指数積分Li(z)  (A&amp;S 5.1.3)
+</p>
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintegral_005fe"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_e</b><i> (<var>n</var>,<var>z</var>)</i>
-<a name="IDX659"></a>
+<a name="IDX665"></a>
 </dt>
-<dd><p>指数積分 En(z)  (A&amp;S 5.1.4)
+<dd><p>以下のように定義される指数積分 En(z)  (A&amp;S 5.1.4)
+</p>
+
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintegral_005fsi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_si</b><i> (<var>z</var>)</i>
-<a name="IDX660"></a>
+<a name="IDX666"></a>
 </dt>
-<dd><p>指数積分 Si(z) (A&amp;S 5.2.1)
+<dd><p>以下のように定義される指数積分 Si(z) (A&amp;S 5.2.1)
+</p>
+
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintegral_005fci"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_ci</b><i> (<var>z</var>)</i>
-<a name="IDX661"></a>
+<a name="IDX667"></a>
 </dt>
-<dd><p>指数積分 Ci(z) (A&amp;S 5.2.2)
+<dd><p>以下のように定義される指数積分 Ci(z) (A&amp;S 5.2.2)
+</p>
+
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintegral_005fshi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_shi</b><i> (<var>z</var>)</i>
-<a name="IDX662"></a>
+<a name="IDX668"></a>
 </dt>
-<dd><p>指数積分 Shi(z) (A&amp;S 5.2.3)
+<dd><p>以下のように定義される指数積分 Shi(z) (A&amp;S 5.2.3)
+</p>
+
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintegral_005fchi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_chi</b><i> (<var>z</var>)</i>
-<a name="IDX663"></a>
+<a name="IDX669"></a>
 </dt>
-<dd><p>指数積分 Chi(z) (A&amp;S 5.2.4)
+<dd><p>以下のように定義される指数積分 Chi(z) (A&amp;S 5.2.4)
+</p>
+
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintrep"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>expintrep</b>
-<a name="IDX664"></a>
+<a name="IDX670"></a>
 </dt>
 <dd><p>デフォルト値: false
 </p>
-<p>指数積分の表現を、
-  gamma_incomplete, expintegral_e1, expintegral_ei, 
-  expintegral_li, expintegral_trig, expintegral_hyp
-に変えます。
+<p>可能なら指数積分
+<var>expintegral_e(m, z)</var>, <var>expintegral_e1</var>,
+<var>expintegral_ei</var>
+の1つの表現を、等価形式にに変えます。
+</p>
+<p><var>expintrep</var>の取りうる値は <var>false</var>,
+<var>gamma_incomplete</var>, <var>expintegral_e1</var>, <var>expintegral_ei</var>,
+<var>expintegral_li</var>, <var>expintegral_trig</var>, <var>expintegral_hyp</var>です。
+</p>
+<p><var>false</var>は表現を変えないことを意味します。
+他の値は指定された関数を使って表現を変えることを示します。
+ここで、<var>expintegral_trig</var>は <var>expintegral_si</var>か <var>expintegral_ci</var>を意味し、
+<var>expintegral_hyp</var>は <var>expintegral_shi</var>か <var>expintegral_chi</var>を意味します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-expintexpand"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>expintexpand</b>
-<a name="IDX665"></a>
+<a name="IDX671"></a>
 </dt>
 <dd><p>デフォルト値: false
 </p>
@@ -1812,7 +1861,7 @@ Abramowitz and Stegun,
 整数値のそれをEiの項で展開します。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Exponential-Integrals">Exponential Integrals</a>
+<a href="maxima_106.html#Category_003a-Exponential-Integrals">Exponential Integrals</a>
 </div>
 </p></dd></dl>
 
@@ -1825,15 +1874,15 @@ Abramowitz and Stegun,
 <td valign="middle" align="left">[<a href="#SEC85" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.6 Error Function </h2>
@@ -1846,61 +1895,62 @@ Abramowitz and Stegun,
 <a name="Item_003a-erf"></a>
 </p><dl>
 <dt><u>関数:</u> <b>erf</b><i> (<var>z</var>)</i>
-<a name="IDX666"></a>
+<a name="IDX672"></a>
 </dt>
 <dd><p>誤差函数erf(z) (A&amp;S 7.1.1)
 </p>
-<p>See also flag <code>erfflag</code>.
+<p>グラグ <code><a href="maxima_19.html#erfflag">erfflag</a></code>も参照してください。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-erfc"></a>
+<p><a name="erfc"></a>
+<a name="Item_003a-erfc"></a>
 </p><dl>
 <dt><u>関数:</u> <b>erfc</b><i> (<var>z</var>)</i>
-<a name="IDX667"></a>
+<a name="IDX673"></a>
 </dt>
 <dd><p>相補誤差函数erfc(z) (A&amp;S 7.1.2)
 </p>
 <p><code>erfc(z) = 1-erf(z)</code>
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-erfi"></a>
 </p><dl>
 <dt><u>関数:</u> <b>erfi</b><i> (<var>z</var>)</i>
-<a name="IDX668"></a>
+<a name="IDX674"></a>
 </dt>
 <dd><p>虚数誤差函数
 </p>
 <p><code>erfi(z) = -%i*erf(%i*z)</code>
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-erf_005fgeneralized"></a>
 </p><dl>
 <dt><u>関数:</u> <b>erf_generalized</b><i> (<var>z1</var>,<var>z2</var>)</i>
-<a name="IDX669"></a>
+<a name="IDX675"></a>
 </dt>
 <dd><p>一般化誤差函数Erf(z1,z2)
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-fresnel_005fc"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fresnel_c</b><i> (<var>z</var>)</i>
-<a name="IDX670"></a>
+<a name="IDX676"></a>
 </dt>
 <dd><p>フレネル積分C(z) = integrate(cos((%pi/2)*t^2),t,0,z) (A&amp;S 7.3.1)
 </p>
@@ -1909,7 +1959,7 @@ Abramowitz and Stegun,
 が適用されます。
 </p>
 <p>フラグ <code>%iargs</code>が <code>true</code>の時、
-整理 fresnel_c(%i*x) =  %i*fresnel_c(x) 
+整理 fresnel_c(%i*x) =  %i*fresnel_c(x)
 が適用されます。
 </p>
 
@@ -1917,14 +1967,14 @@ Abramowitz and Stegun,
 <code>hypergeometric_representation</code>を参照してください。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-fresnel_005fs"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fresnel_s</b><i> (<var>z</var>)</i>
-<a name="IDX671"></a>
+<a name="IDX677"></a>
 </dt>
 <dd><p>フレネル積分S(z) = integrate(sin((%pi/2)*t^2),t,0,z). (A&amp;S 7.3.2)
 </p>
@@ -1940,14 +1990,14 @@ Abramowitz and Stegun,
 <code>hypergeometric_representation</code>を参照してください。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-erf_005frepresentation"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>erf_representation</b>
-<a name="IDX672"></a>
+<a name="IDX678"></a>
 </dt>
 <dd><p>デフォルト値: false
 </p>
@@ -1958,7 +2008,7 @@ Abramowitz and Stegun,
 <p><a name="Item_003a-hypergeometric_005frepresentation"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>hypergeometric_representation</b>
-<a name="IDX673"></a>
+<a name="IDX679"></a>
 </dt>
 <dd><p>デフォルト値: false
 </p>
@@ -1974,15 +2024,15 @@ Abramowitz and Stegun,
 <td valign="middle" align="left">[<a href="#SEC86" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.7 Struve Functions </h2>
@@ -1993,13 +2043,13 @@ Abramowitz and Stegun,
 <p><a name="Item_003a-struve_005fh"></a>
 </p><dl>
 <dt><u>関数:</u> <b>struve_h</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX674"></a>
+<a name="IDX680"></a>
 </dt>
 <dd><p>次数v, 独立変数zのシュトルーベ函数H (A&amp;S 12.1.1)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -2007,13 +2057,13 @@ Abramowitz and Stegun,
 <p><a name="Item_003a-struve_005fl"></a>
 </p><dl>
 <dt><u>関数:</u> <b>struve_l</b><i> (<var>v</var>, <var>z</var>)</i>
-<a name="IDX675"></a>
+<a name="IDX681"></a>
 </dt>
 <dd><p>次数v、独立変数zの変形シュトルーベ函数L (A&amp;S 12.2.1)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -2028,15 +2078,15 @@ Abramowitz and Stegun,
 <td valign="middle" align="left">[<a href="#SEC87" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.8 Hypergeometric Functions </h2>
@@ -2049,50 +2099,50 @@ Abramowitz and Stegun,
 </p>
 <p><a name="Item_003a-_0025m"></a>
 </p><dl>
-<dt><u>関数:</u> <b>%m</b><i> [<var>k</var>,<var>u</var>] (<var>z</var>) </i>
-<a name="IDX676"></a>
+<dt><u>関数:</u> <b>%m</b><i> [<var>k</var>,<var>u</var>] (<var>z</var>)</i>
+<a name="IDX682"></a>
 </dt>
 <dd><p>Whittaker M函数
-<code>M[k,u](z) = exp(-z/2)*z^(1/2+u)*M(1/2+u-k,1+2*u,z)</code>.  
+<code>M[k,u](z) = exp(-z/2)*z^(1/2+u)*M(1/2+u-k,1+2*u,z)</code>.
 (A&amp;S 13.1.32)
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-_0025w"></a>
 </p><dl>
-<dt><u>関数:</u> <b>%w</b><i> [<var>k</var>,<var>u</var>] (<var>z</var>) </i>
-<a name="IDX677"></a>
+<dt><u>関数:</u> <b>%w</b><i> [<var>k</var>,<var>u</var>] (<var>z</var>)</i>
+<a name="IDX683"></a>
 </dt>
 <dd><p>Whittaker W函数  (A&amp;S 13.1.33)
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 
 <p><a name="Item_003a-_0025f"></a>
 </p><dl>
-<dt><u>関数:</u> <b>%f</b><i> [<var>p</var>,<var>q</var>] (<var>[a],[b],z</var>) </i>
-<a name="IDX678"></a>
+<dt><u>関数:</u> <b>%f</b><i> [<var>p</var>,<var>q</var>] (<var>[a],[b],z</var>)</i>
+<a name="IDX684"></a>
 </dt>
 <dd><p>pFq(a1,a2,..ap;b1,b2,..bq;z)超幾何函数。
 ここで <code>a</code>は長さ <code>p</code>のリストで、
 <code>b</code>は長さ <code>q</code>のリストです。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Bessel-functions">Bessel functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-hypergeometric"></a>
 </p><dl>
 <dt><u>関数:</u> <b>hypergeometric</b><i> ([<var>a1</var>, ..., <var>ap</var>],[<var>b1</var>, ... ,<var>bq</var>], x)</i>
-<a name="IDX679"></a>
+<a name="IDX685"></a>
 </dt>
 <dd><p>超幾何函数。
 Maximaの<code>%f</code>超幾何函数と違って，
@@ -2108,27 +2158,27 @@ Maximaの<code>%f</code>超幾何函数と違って，
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1)  hypergeometric([],[],x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1)  hypergeometric([],[],x);
 (%o1) %e^x
-</pre>
+</pre></td></tr></table>
 <p><code>expand_hypergeometric</code>が trueの時、多項式の場合は自動的に展開されます:
 </p>
-<pre class="example">(%i2) hypergeometric([-3],[7],x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i2) hypergeometric([-3],[7],x);
 (%o2) hypergeometric([-3],[7],x)
 
 (%i3) hypergeometric([-3],[7],x), expand_hypergeometric : true;
 (%o3) -x^3/504+3*x^2/56-3*x/7+1
-</pre>
+</pre></td></tr></table>
 <p>倍精度と多倍長浮動小数点評価の両方がサポートされています:
 </p>
-<pre class="example">(%i4) hypergeometric([5.1],[7.1 + %i],0.42);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) hypergeometric([5.1],[7.1 + %i],0.42);
 (%o4)       1.346250786375334 - 0.0559061414208204 %i
 (%i5) hypergeometric([5,6],[8], 5.7 - %i);
 (%o5)     .00737582400977495 - 0.001049813688578674 %i
 (%i6) hypergeometric([5,6],[8], 5.7b0 - %i), fpprec : 30;
 (%o6) 7.37582400977494674506442010824b-3
                           - 1.04981368857867315858055393376b-3 %i
-</pre></dd></dl>
+</pre></td></tr></table></dd></dl>
 
 <p><a name="Item_003a-Parabolic-Cylinder-Functions"></a>
 </p><hr size="6">
@@ -2139,15 +2189,15 @@ Maximaの<code>%f</code>超幾何函数と違って，
 <td valign="middle" align="left">[<a href="#SEC88" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.9 Parabolic Cylinder Functions </h2>
@@ -2160,13 +2210,13 @@ Maximaの<code>%f</code>超幾何函数と違って，
 </p>
 <p><a name="Item_003a-parabolic_005fcylinder_005fd"></a>
 </p><dl>
-<dt><u>関数:</u> <b>parabolic_cylinder_d</b><i> (<var>v</var>, <var>z</var>) </i>
-<a name="IDX680"></a>
+<dt><u>関数:</u> <b>parabolic_cylinder_d</b><i> (<var>v</var>, <var>z</var>)</i>
+<a name="IDX686"></a>
 </dt>
 <dd><p>放物円筒函数<code>parabolic_cylinder_d(v,z)</code>. (A&amp;S 19.3.1)
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -2179,25 +2229,25 @@ Maximaの<code>%f</code>超幾何函数と違って，
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC78" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC78" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC78" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_16.html#SEC89" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 15.10 Functions and Variables for Special Functions </h2>
 
 
-
-<p><a name="Item_003a-specint"></a>
+<p><a name="specint"></a>
+<a name="Item_003a-specint"></a>
 </p><dl>
 <dt><u>関数:</u> <b>specint</b><i> (exp(- s*<var>t</var>) * <var>expr</var>, <var>t</var>)</i>
-<a name="IDX681"></a>
+<a name="IDX687"></a>
 </dt>
 <dd><p><var>expr</var>の変数 <var>t</var>に関するラプラス変換を計算します。
 以下の特殊函数は <code>specint</code>で扱われます:
@@ -2223,7 +2273,7 @@ Maximaの<code>%f</code>超幾何函数と違って，
 
 <p>例:
 </p>
-<pre class="example">(%i1) assume (p &gt; 0, a &gt; 0)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) assume (p &gt; 0, a &gt; 0)$
 (%i2) specint (t^(1/2) * exp(-a*t/4) * exp(-p*t), t);
                            sqrt(%pi)
 (%o2)                     ------------
@@ -2237,10 +2287,10 @@ Maximaの<code>%f</code>超幾何函数と違って，
 (%o3)                    ---------------
                                 2
                                p
-</pre>
+</pre></td></tr></table>
 <p>指数積分の例:
 </p>
-<pre class="example">(%i4) assume(s&gt;0,a&gt;0,s-a&gt;0)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i4) assume(s&gt;0,a&gt;0,s-a&gt;0)$
 (%i5) ratsimp(specint(%e^(a*t)
                       *(log(a)+expintegral_e1(a*t))*%e^(-s*t),t));
                              log(s)
@@ -2263,11 +2313,11 @@ Maximaの<code>%f</code>超幾何函数と違って，
 (%o9)                     ------------
                                 2
                                s
-</pre>
+</pre></td></tr></table>
 <p><code>gamma_incomplete</code>の展開を使った時と、
 <code>expintegral_e1</code>への表現の変形を使った時の結果:
 </p>
-<pre class="example">(%i10) assume(s&gt;0)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i10) assume(s&gt;0)$
 (%i11) specint(1/sqrt(%pi*t)*unit_step(t-k)*%e^(-s*t),t);
                                             1
                             gamma_incomplete(-, k s)
@@ -2287,17 +2337,62 @@ Maximaの<code>%f</code>超幾何函数と違って，
                         a s %e    expintegral_e1(a s) - 1
 (%o15)                - ---------------------------------
                                         a
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Laplace-transform">Laplace transform</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Laplace-transform">Laplace transform</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-hgfred"></a>
+<p><a name="Item_003a-hypergeometric_005fsimp"></a>
+</p><dl>
+<dt><u>関数:</u> <b>hypergeometric_simp</b><i> (<var>e</var>)</i>
+<a name="IDX688"></a>
+</dt>
+<dd><p><code>hypergeometric_simp</code>は、
+式 <var>e</var>の中の任意の超幾何函数の引数に
+<code>hgfred</code>を適用して超幾何函数を整理します。
+</p>
+<p><code>hypergeometric</code>のインスタンスだけが影響を受けます;
+式 <var>e</var>の中の <code>%f</code>, <code>%w</code>, <code>%m</code>のいずれも影響を受けません。
+任意の未整理の超幾何函数は
+(<code>hgfred</code>がするように <code>%f</code>に変えることなく)
+変更されずに返されます。
+</p>
+<p><code>load(hypergeometric);</code>はこの関数をロードします。
+</p>
+<p><code><a href="#hgfred">hgfred</a></code>も参照しくてください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (hypergeometric) $
+(%i2) foo : [hypergeometric([1,1], [2], z), hypergeometric([1/2], [1], z)];
+(%o2) [hypergeometric([1, 1], [2], z),
+                                                     1
+                                     hypergeometric([-], [1], z)]
+                                                     2
+(%i3) hypergeometric_simp (foo);
+                 log(1 - z)              z    z/2
+(%o3)         [- ----------, bessel_i(0, -) %e   ]
+                     z                   2
+(%i4) bar : hypergeometric([n], [m], z + 1);
+(%o4)            hypergeometric([n], [m], z + 1)
+(%i5) hypergeometric_simp (bar);
+(%o5)            hypergeometric([n], [m], z + 1)
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Hypergeometric-functions">Hypergeometric functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-functions">Simplification functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
+</div>
+</p></dd></dl>
+
+<p><a name="hgfred"></a>
+<a name="Item_003a-hgfred"></a>
 </p><dl>
 <dt><u>関数:</u> <b>hgfred</b><i> (<var>a</var>, <var>b</var>, <var>t</var>)</i>
-<a name="IDX682"></a>
+<a name="IDX689"></a>
 </dt>
 <dd><p>一般化超幾何函数を他のより簡単な形式に整理します。
 <var>a</var>は分子パラメータのリストで、 <var>b</var>は分母パラメータのリストです。
@@ -2308,7 +2403,7 @@ Maximaの<code>%f</code>超幾何函数と違って，
 <var>q</var>は <var>b</var>の中の要素の数です。
 これは通常の <code>pFq</code>一般化超幾何函数です。
 </p>
-<pre class="example">(%i1) assume(not(equal(z,0)));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) assume(not(equal(z,0)));
 (%o1)                          [notequal(z, 0)]
 (%i2) hgfred([v+1/2],[2*v+1],2*%i*z);
 
@@ -2329,11 +2424,11 @@ Maximaの<code>%f</code>超幾何函数と違って，
 (%o4)                   -------------------------------
                                  2 (1 - 2 a) z
 
-</pre>
+</pre></td></tr></table>
 <p>以下の例が示すように、 orthopolyもロードすることは有益なことがあります。
 <var>L</var>は一般化ラーゲル多項式であることに注意してください。
 </p>
-<pre class="example">(%i5) load(orthopoly)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i5) load(orthopoly)$
 (%i6) hgfred([-2],[a],z);
 
                                     (a - 1)
@@ -2348,25 +2443,25 @@ Maximaの<code>%f</code>超幾何函数と違って，
 (%o7)                         --------- - --- + 1
                               a (a + 1)    a
 
-</pre></dd></dl>
+</pre></td></tr></table></dd></dl>
 
 <p><a name="Item_003a-lambert_005fw"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lambert_w</b><i> (<var>z</var>)</i>
-<a name="IDX683"></a>
+<a name="IDX690"></a>
 </dt>
 <dd><p>LambertのW函数W(z)の主枝、
 <code>z = W(z) * exp(W(z))</code>の解。  (DLMF 4.13)
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-generalized_005flambert_005fw"></a>
 </p><dl>
 <dt><u>関数:</u> <b>generalized_lambert_w</b><i> (<var>k</var>, <var>z</var>)</i>
-<a name="IDX684"></a>
+<a name="IDX691"></a>
 </dt>
 <dd><p>LambertのW函数W(z)の <var>k</var>番目の枝、
 <code>z = W(z) * exp(W(z))</code>の解。 (DLMF 4.13)
@@ -2376,7 +2471,7 @@ Maximaの<code>%f</code>超幾何函数と違って，
 <p>DLMFでWm(z)と表記される実値を持つ他の枝は <code>generalized_lambert_w(-1,z)</code>です。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -2385,37 +2480,37 @@ Maximaの<code>%f</code>超幾何函数と違って，
 <p><a name="Item_003a-nzeta"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nzeta</b><i> (<var>z</var>)</i>
-<a name="IDX685"></a>
+<a name="IDX692"></a>
 </dt>
 <dd><p>プラズマ分散函数
 <code>nzeta(z) = %i*sqrt(%pi)*exp(-z^2)*(1-erf(-%i*z))</code>
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-nzetar"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nzetar</b><i> (<var>z</var>)</i>
-<a name="IDX686"></a>
+<a name="IDX693"></a>
 </dt>
 <dd><p><code>realpart(nzeta(z))</code>を返します。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-nzetai"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nzetai</b><i> (<var>z</var>)</i>
-<a name="IDX687"></a>
+<a name="IDX694"></a>
 </dt>
 <dd><p><code>imagpart(nzeta(z))</code>を返します。
 <div class=categorybox>
 
-<a href="maxima_100.html#Category_003a-Special-functions">Special functions</a>
+<a href="maxima_106.html#Category_003a-Special-functions">Special functions</a>
 </div>
 </p></dd></dl>
 
@@ -2429,14 +2524,14 @@ Maximaの<code>%f</code>超幾何函数と違って，
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

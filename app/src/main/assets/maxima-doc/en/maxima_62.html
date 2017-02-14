@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 62. lapack</title>
+<title>Maxima 5.39.0 Manual: 62. grobner</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 62. lapack">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 62. lapack">
+<meta name="description" content="Maxima 5.39.0 Manual: 62. grobner">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 62. grobner">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,602 +54,1071 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
-<a name="lapack"></a>
-<a name="SEC306"></a>
+<a name="grobner_002dpkg"></a>
+<a name="SEC298"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_61.html#SEC305" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC307" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_61.html#SEC297" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC299" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_61.html#SEC303" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_61.html#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 62. lapack </h1>
+<h1 class="chapter"> 62. grobner </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC307">62.1 Introduction to lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC299">62.1 Introduction to grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC308">62.2 Functions and Variables for lapack</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC302">62.2 Functions and Variables for grobner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Introduction-to-lapack"></a>
+<p><a name="Item_003a-Introduction-to-grobner"></a>
 </p><hr size="6">
-<a name="Introduction-to-lapack"></a>
-<a name="SEC307"></a>
+<a name="Introduction-to-grobner"></a>
+<a name="SEC299"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC306" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC308" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC298" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC300" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 62.1 Introduction to lapack </h2>
+<h2 class="section"> 62.1 Introduction to grobner </h2>
 
-<p><code>lapack</code> is a Common Lisp translation (via the program <code>f2cl</code>) of the Fortran library LAPACK,
-as obtained from the SLATEC project.
+<p><code>grobner</code> is a package for working with Groebner bases in Maxima.
+</p>
+
+<p>To use the following functions you must load the <tt>`grobner.lisp'</tt> package.
+</p>
+<pre class="example">load(grobner);
+</pre>
+
+<p>A demo can be started by 
+</p><pre class="example">demo(&quot;grobner.demo&quot;);
+</pre>
+
+<p>or
+</p><pre class="example">batch(&quot;grobner.demo&quot;)
+</pre>
+
+<p>Some of the calculation in the demo will take a lot of time 
+therefore the output <tt>`grobner-demo.output'</tt> of the demo can 
+be found in the same directory as the demo file.
+</p>
+<hr size="6">
+<a name="SEC300"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC299" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC301" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC299" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.1.1 Notes on the grobner package </h3>
+<p>The package was written by 
+</p>
+
+<p>Marek Rychlik 
+</p>
+
+<p><a href="http://alamos.math.arizona.edu">http://alamos.math.arizona.edu</a>
+</p>
+
+<p>and is released 2002-05-24 under the terms of the General Public License(GPL) (see file <tt>`grobner.lisp'</tt>).
+This documentation was extracted from the files
+</p><p align="left"><tt>`README'</tt>, <tt>`grobner.lisp'</tt>, <tt>`grobner.demo'</tt>, <tt>`grobner-demo.output'</tt>
+</p>
+
+<p>by G&uuml;nter Nowak. Suggestions for improvement of the documentation can 
+be discussed at the <em>maxima</em>-mailing-list <a href="mailto:maxima@math.utexas.edu">maxima@math.utexas.edu</a>.
+The code is a little bit out of date now. Modern implementation use the fast <em>F4</em> algorithm described in 
+</p><table><tr><td>&nbsp;</td><td><pre class="smallformat">A new efficient algorithm for computing Gr&ouml;bner bases (F4) 
+Jean-Charles Faug&egrave;re
+LIP6/CNRS Universit&eacute; Paris VI 
+January 20, 1999
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Groebner-bases">Groebner bases</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+<hr size="6">
+<a name="SEC301"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC300" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC299" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.1.2 Implementations of admissible monomial orders in grobner </h3>
+
+<ul>
+<li> <code>lex</code>
+
+<p>pure lexicographic,
+default order for monomial comparisons
+</p></li><li> <code>grlex</code>
+
+<p>total degree order, ties broken by lexicographic
+</p>
+</li><li> <code>grevlex</code>
+
+<p>total degree, ties broken by reverse lexicographic
+</p>
+</li><li> <code>invlex</code>
+
+<p>inverse lexicographic order
+</p>
+</li></ul>
+
+<p><a name="Item_003a-Functions-and-Variables-for-grobner"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-grobner"></a>
+<a name="SEC302"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC301" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC303" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 62.2 Functions and Variables for grobner </h2>
+
+<hr size="6">
+<a name="SEC303"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC302" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC304" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.2.1 Global switches for grobner </h3>
+
+<p><a name="Item_003a-poly_005fmonomial_005forder"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_monomial_order</b>
+<a name="IDX2197"></a>
+</dt>
+<dd><p>Default value: <code>lex</code>
+</p>
+<p>This global switch controls which monomial order is used in polynomial and Groebner Bases calculations. If not set, <code>lex</code> will be used.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
+</dd></dl>
 
-<p><a name="Item_003a-Functions-and-Variables-for-lapack"></a>
-</p><hr size="6">
-<a name="Functions-and-Variables-for-lapack"></a>
-<a name="SEC308"></a>
+
+<p><a name="Item_003a-poly_005fcoefficient_005fring"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_coefficient_ring</b>
+<a name="IDX2198"></a>
+</dt>
+<dd><p>Default value: <code>expression_ring</code>
+</p>
+<p>This switch indicates the coefficient ring of the polynomials that
+will be used in grobner calculations. If not set, <em>maxima's</em> general
+expression ring will be used. This variable may be set to
+<code>ring_of_integers</code> if desired.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fprimary_005felimination_005forder"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_primary_elimination_order</b>
+<a name="IDX2199"></a>
+</dt>
+<dd><p>Default value: <code>false</code>
+</p>
+<p>Name of the default order for eliminated variables in
+elimination-based functions. If not set, <code>lex</code> will be used.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fsecondary_005felimination_005forder"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_secondary_elimination_order</b>
+<a name="IDX2200"></a>
+</dt>
+<dd><p>Default value: <code>false</code>
+</p>
+<p>Name of the default order for kept variables in elimination-based functions. If not set, <code>lex</code> will be used.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005felimination_005forder"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_elimination_order</b>
+<a name="IDX2201"></a>
+</dt>
+<dd><p>Default value: <code>false</code>
+</p>
+<p>Name of the default elimination order used in elimination
+calculations. If set, it overrides the settings in variables
+<code>poly_primary_elimination_order</code> and <code>poly_secondary_elimination_order</code>.
+The user must ensure that this is a true elimination order valid
+for the number of eliminated variables. 
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005freturn_005fterm_005flist"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_return_term_list</b>
+<a name="IDX2202"></a>
+</dt>
+<dd><p>Default value: <code>false</code>
+</p>
+<p>If set to <code>true</code>, all functions in this package will return each
+polynomial as a list of terms in the current monomial order rather
+than a <em>maxima</em> general expression.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fgrobner_005fdebug"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_grobner_debug</b>
+<a name="IDX2203"></a>
+</dt>
+<dd><p>Default value: <code>false</code>
+</p>
+<p>If set to <code>true</code>, produce debugging and tracing output.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fgrobner_005falgorithm"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_grobner_algorithm</b>
+<a name="IDX2204"></a>
+</dt>
+<dd><p>Default value: <code>buchberger</code>
+</p>
+<p>Possible values: 
+</p><ul class="toc">
+<li> <code>buchberger</code>
+</li><li> <code>parallel_buchberger</code>
+</li><li> <code>gebauer_moeller</code>
+</li></ul>
+
+<p>The name of the algorithm used to find the Groebner Bases.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005ftop_005freduction_005fonly"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>poly_top_reduction_only</b>
+<a name="IDX2205"></a>
+</dt>
+<dd><p>Default value: <code>false</code>
+</p>
+<p>If not <code>false</code>, use top reduction only whenever possible. Top
+reduction means that division algorithm stops after the first
+reduction.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<hr size="6">
+<a name="SEC304"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC307" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC303" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC305" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC306" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 62.2 Functions and Variables for lapack </h2>
-
-<p><a name="Item_003a-dgeev"></a>
+<h3 class="subsection"> 62.2.2 Simple operators in grobner </h3>
+<p><code>poly_add</code>, <code>poly_subtract</code>, <code>poly_multiply</code> and <code>poly_expt</code>
+are the arithmetical operations on polynomials.
+These are performed using the internal representation, but the results are converted back to the
+<em>maxima</em> general form.
+</p>
+<p><a name="Item_003a-poly_005fadd"></a>
 </p><dl>
-<dt><u>Function:</u> <b>dgeev</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgeev</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgeev</tt> (<var>A</var>, <var>right_p</var>, <var>left_p</var>)</i>
+<dt><u>Function:</u> <b>poly_add</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2206"></a>
+</dt>
+<dd><p>Adds two polynomials <var>poly1</var> and <var>poly2</var>.
+</p><pre class="example">
+(%i1) poly_add(z+x^2*y,x-z,[x,y,z]);
+                                    2
+(%o1)                              x  y + x
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fsubtract"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_subtract</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2207"></a>
+</dt>
+<dd><p>Subtracts a polynomial <var>poly2</var> from <var>poly1</var>.
+</p><pre class="example">
+(%i1) poly_subtract(z+x^2*y,x-z,[x,y,z]);
+                                      2
+(%o1)                          2 z + x  y - x
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fmultiply"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_multiply</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2208"></a>
+</dt>
+<dd><p>Returns the product of polynomials <var>poly1</var> and <var>poly2</var>.
+</p><pre class="example">
+(%i2) poly_multiply(z+x^2*y,x-z,[x,y,z])-(z+x^2*y)*(x-z),expand;
+(%o1)                                  0
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fs_005fpolynomial"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_s_polynomial</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2209"></a>
+</dt>
+<dd><p>Returns the <em>syzygy polynomial</em> (<em>S-polynomial</em>) of two polynomials <var>poly1</var> and <var>poly2</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fprimitive_005fpart"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_primitive_part</b><i> (<var>poly1</var>, <var>varlist</var>)</i>
 <a name="IDX2210"></a>
 </dt>
-<dd><p>Computes the eigenvalues and, optionally, the eigenvectors of a matrix <var>A</var>.
-All elements of <var>A</var> must be integer or floating point numbers.
-<var>A</var> must be square (same number of rows and columns).
-<var>A</var> might or might not be symmetric.
+<dd><p>Returns the polynomial <var>poly</var> divided by the GCD of its coefficients. 
 </p>
-<p><code>dgeev(<var>A</var>)</code> computes only the eigenvalues of <var>A</var>.
-<code>dgeev(<var>A</var>, <var>right_p</var>, <var>left_p</var>)</code> computes the eigenvalues of <var>A</var>
-and the right eigenvectors when <em><var>right_p</var> = <code>true</code></em>
-and the left eigenvectors when <em><var>left_p</var> = <code>true</code></em>.
-</p>
-<p>A list of three items is returned.
-The first item is a list of the eigenvalues.
-The second item is <code>false</code> or the matrix of right eigenvectors.
-The third item is <code>false</code> or the matrix of left eigenvectors.
-</p>
-<p>The right eigenvector <em>v(j)</em> (the <em>j</em>-th column of the right eigenvector matrix) satisfies
-</p>
-<p><em>A . v(j) = lambda(j) . v(j)</em>
-</p>
-<p>where <em>lambda(j)</em> is the corresponding eigenvalue.
-The left eigenvector <em>u(j)</em> (the <em>j</em>-th column of the left eigenvector matrix) satisfies
-</p>
-<p><em>u(j)**H . A = lambda(j) . u(j)**H</em>
-</p>
-<p>where <em>u(j)**H</em> denotes the conjugate transpose of <em>u(j)</em>.
-The Maxima function <code>ctranspose</code> computes the conjugate transpose.
-</p>
-<p>The computed eigenvectors are normalized to have Euclidean norm
-equal to 1, and largest component has imaginary part equal to zero.
-</p>
-<p>Example:
-</p>
-<pre class="example">(%i1) load (lapack)$
-(%i2) fpprintprec : 6;
-(%o2)                           6
-(%i3) M : matrix ([9.5, 1.75], [3.25, 10.45]);
-                         [ 9.5   1.75  ]
-(%o3)                    [             ]
-                         [ 3.25  10.45 ]
-(%i4) dgeev (M);
-(%o4)          [[7.54331, 12.4067], false, false]
-(%i5) [L, v, u] : dgeev (M, true, true);
-                           [ - .666642  - .515792 ]
-(%o5) [[7.54331, 12.4067], [                      ], 
-                           [  .745378   - .856714 ]
-                                        [ - .856714  - .745378 ]
-                                        [                      ]]
-                                        [  .515792   - .666642 ]
-(%i6) D : apply (diag_matrix, L);
-                      [ 7.54331     0    ]
-(%o6)                 [                  ]
-                      [    0     12.4067 ]
-(%i7) M . v - v . D;
-                [      0.0       - 8.88178E-16 ]
-(%o7)           [                              ]
-                [ - 8.88178E-16       0.0      ]
-(%i8) transpose (u) . M - D . transpose (u);
-                     [ 0.0  - 4.44089E-16 ]
-(%o8)                [                    ]
-                     [ 0.0       0.0      ]
+<pre class="example">(%i1) poly_primitive_part(35*y+21*x,[x,y]);
+(%o1)                              5 y + 3 x
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgeqrf"></a>
+<p><a name="Item_003a-poly_005fnormalize"></a>
 </p><dl>
-<dt><u>Function:</u> <b>dgeqrf</b><i> (<var>A</var>)</i>
+<dt><u>Function:</u> <b>poly_normalize</b><i> (<var>poly</var>, <var>varlist</var>)</i>
 <a name="IDX2211"></a>
 </dt>
-<dd><p>Computes the QR decomposition of the matrix <var>A</var>.
-All elements of <var>A</var> must be integer or floating point numbers.
-<var>A</var> may or may not have the same number of rows and columns.
+<dd><p>Returns the polynomial <var>poly</var> divided by the leading coefficient.
+It assumes that the division is possible, which may not always be the
+case in rings which are not fields.
 </p>
-<p>A list of two items is returned.
-The first item is the matrix <var>Q</var>, which is a square, orthonormal matrix
-which has the same number of rows as <var>A</var>.
-The second item is the matrix <var>R</var>, which is the same size as <var>A</var>,
-and which has all elements equal to zero below the diagonal.
-The product <code><var>Q</var> . <var>R</var></code>, where &quot;.&quot; is the noncommutative multiplication operator,
-is equal to <var>A</var> (ignoring floating point round-off errors).
-</p>
-<pre class="example">(%i1) load (lapack) $
-(%i2) fpprintprec : 6 $
-(%i3) M : matrix ([1, -3.2, 8], [-11, 2.7, 5.9]) $
-(%i4) [q, r] : dgeqrf (M);
-       [ - .0905357  .995893  ]
-(%o4) [[                      ], 
-       [  .995893    .0905357 ]
-                               [ - 11.0454   2.97863   5.15148 ]
-                               [                               ]]
-                               [     0      - 2.94241  8.50131 ]
-(%i5) q . r - M;
-         [ - 7.77156E-16   1.77636E-15   - 8.88178E-16 ]
-(%o5)    [                                             ]
-         [      0.0       - 1.33227E-15   8.88178E-16  ]
-(%i6) mat_norm (%, 1);
-(%o6)                      3.10862E-15
-</pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgesv"></a>
+<hr size="6">
+<a name="SEC305"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC304" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC306" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.2.3 Other functions in grobner </h3>
+
+<p><a name="Item_003a-poly_005fexpand"></a>
 </p><dl>
-<dt><u>Function:</u> <b>dgesv</b><i> (<var>A</var>, <var>b</var>)</i>
+<dt><u>Function:</u> <b>poly_expand</b><i> (<var>poly</var>, <var>varlist</var>)</i>
 <a name="IDX2212"></a>
 </dt>
-<dd><p>Computes the solution <var>x</var> of the linear equation <em><var>A</var> <var>x</var> = <var>b</var></em>,
-where <var>A</var> is a square matrix, and <var>b</var> is a matrix of the same number of rows
-as <var>A</var> and any number of columns.
-The return value <var>x</var> is the same size as <var>b</var>.
-</p>
-<p>The elements of <var>A</var> and <var>b</var> must evaluate to real floating point numbers via <code>float</code>;
-thus elements may be any numeric type, symbolic numerical constants, or expressions which evaluate to floats.
-The elements of <var>x</var> are always floating point numbers.
-All arithmetic is carried out as floating point operations.
-</p>
-<p><code>dgesv</code> computes the solution via the LU decomposition of <var>A</var>.
-</p>
-<p>Examples:
-</p>
-<p><code>dgesv</code> computes the solution of the linear equation <em><var>A</var> <var>x</var> = <var>b</var></em>.
-</p>
-<pre class="example">(%i1) A : matrix ([1, -2.5], [0.375, 5]);
-                               [   1    - 2.5 ]
-(%o1)                          [              ]
-                               [ 0.375    5   ]
-(%i2) b : matrix ([1.75], [-0.625]);
-                                  [  1.75   ]
-(%o2)                             [         ]
-                                  [ - 0.625 ]
-(%i3) x : dgesv (A, b);
-                            [  1.210526315789474  ]
-(%o3)                       [                     ]
-                            [ - 0.215789473684211 ]
-(%i4) dlange (inf_norm, b - A.x);
-(%o4)                                 0.0
-</pre>
-<p><var>b</var> is a matrix with the same number of rows as <var>A</var> and any number of columns.
-<var>x</var> is the same size as <var>b</var>.
-</p>
-<pre class="example">(%i1) A : matrix ([1, -0.15], [1.82, 2]);
-                               [  1    - 0.15 ]
-(%o1)                          [              ]
-                               [ 1.82    2    ]
-(%i2) b : matrix ([3.7, 1, 8], [-2.3, 5, -3.9]);
-                              [  3.7   1    8   ]
-(%o2)                         [                 ]
-                              [ - 2.3  5  - 3.9 ]
-(%i3) x : dgesv (A, b);
-      [  3.103827540695117  1.20985481742191    6.781786185657722 ]
-(%o3) [                                                           ]
-      [ -3.974483062032557  1.399032116146062  -8.121425428948527 ]
-(%i4) dlange (inf_norm, b - A . x);
-(%o4)                       1.1102230246251565E-15
-</pre>
-<p>The elements of <var>A</var> and <var>b</var> must evaluate to real floating point numbers.
-</p>
-<pre class="example">(%i1) A : matrix ([5, -%pi], [1b0, 11/17]);
-                               [   5    - %pi ]
-                               [              ]
-(%o1)                          [         11   ]
-                               [ 1.0b0   --   ]
-                               [         17   ]
-(%i2) b : matrix ([%e], [sin(1)]);
-                                  [   %e   ]
-(%o2)                             [        ]
-                                  [ sin(1) ]
-(%i3) x : dgesv (A, b);
-                             [ 0.690375643155986 ]
-(%o3)                        [                   ]
-                             [ 0.233510982552952 ]
-(%i4) dlange (inf_norm, b - A . x);
-(%o4)                        2.220446049250313E-16
+<dd><p>This function parses polynomials to internal form and back. It
+is equivalent to <code>expand(<var>poly</var>)</code> if <var>poly</var> parses correctly to
+a polynomial. If the representation is not compatible with a
+polynomial in variables <var>varlist</var>, the result is an error.
+It can be used to test whether an expression correctly parses to the
+internal representation. The following examples illustrate that
+indexed and transcendental function variables are allowed.
+</p><pre class="example">
+(%i1) poly_expand((x-y)*(y+x),[x,y]);
+                                     2    2
+(%o1)                               x  - y
+(%i2) poly_expand((y+x)^2,[x,y]);
+                                2            2
+(%o2)                          y  + 2 x y + x
+(%i3) poly_expand((y+x)^5,[x,y]);
+                  5      4         2  3       3  2      4      5
+(%o3)            y  + 5 x y  + 10 x  y  + 10 x  y  + 5 x  y + x
+(%i4) poly_expand(-1-x*exp(y)+x^2/sqrt(y),[x]);
+                                          2
+                                  y      x
+(%o4)                       - x %e  + ------- - 1
+                                       sqrt(y)
+
+(%i5) poly_expand(-1-sin(x)^2+sin(x),[sin(x)]);
+                                2
+(%o5)                      - sin (x) + sin(x) - 1
+
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a> &middot;
-<a href="maxima_99.html#Category_003a-Linear-equations">Linear equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgesvd"></a>
+<p><a name="Item_003a-poly_005fexpt"></a>
 </p><dl>
-<dt><u>Function:</u> <b>dgesvd</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgesvd</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgesvd</tt> (<var>A</var>, <var>left_p</var>, <var>right_p</var>)</i>
+<dt><u>Function:</u> <b>poly_expt</b><i> (<var>poly</var>, <var>number</var>, <var>varlist</var>)</i>
 <a name="IDX2213"></a>
 </dt>
-<dd><p>Computes the singular value decomposition (SVD) of a matrix <var>A</var>,
-comprising the singular values and, optionally, the left and right singular vectors.
-All elements of <var>A</var> must be integer or floating point numbers.
-<var>A</var> might or might not be square (same number of rows and columns).
+<dd><p>exponentitates <var>poly</var> by a positive integer <var>number</var>. If <var>number</var> is not a positive integer number an error will be raised.
+</p><pre class="example">
+(%i1) poly_expt(x-y,3,[x,y])-(x-y)^3,expand;
+(%o1)                                  0
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
 </p>
-<p>Let <em>m</em> be the number of rows, and <em>n</em> the number of columns of <var>A</var>.
-The singular value decomposition of <var>A</var> comprises three matrices,
-<var>U</var>, <var>Sigma</var>, and <var>V^T</var>,
-such that
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fcontent"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_content</b><i> (<var>poly</var>. <var>varlist</var>)</i>
+<a name="IDX2214"></a>
+</dt>
+<dd><p><code>poly_content</code> extracts the GCD of its coefficients
+</p><pre class="example">
+(%i1) poly_content(35*y+21*x,[x,y]);
+(%o1)                                  7
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
 </p>
-<p><em><var>A</var> = <var>U</var> . <var>Sigma</var> . <var>V</var>^T</em>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fpseudo_005fdivide"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_pseudo_divide</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2215"></a>
+</dt>
+<dd><p>Pseudo-divide a polynomial <var>poly</var> by the list of <em>n</em> polynomials <var>polylist</var>. Return
+multiple values. The first value is a list of quotients <em>a</em>. The
+second value is the remainder <em>r</em>. The third argument is a scalar
+coefficient <em>c</em>, such that <em>c*poly</em> can be divided by <var>polylist</var> within the ring
+of coefficients, which is not necessarily a field. Finally, the
+fourth value is an integer count of the number of reductions
+performed. The resulting objects satisfy the equation:
 </p>
-<p>where <var>U</var> is an <em>m</em>-by-<em>m</em> unitary matrix,
-<var>Sigma</var> is an <em>m</em>-by-<em>n</em> diagonal matrix,
-and <var>V^T</var> is an <em>n</em>-by-<em>n</em> unitary matrix.
+<p><em>c*poly=sum(a[i]*polylist[i],i=1...n)+r</em>.
 </p>
-<p>Let <em>sigma[i]</em> be a diagonal element of <em>Sigma</em>,
-that is, <em><var>Sigma</var>[i, i] = <var>sigma</var>[i]</em>.
-The elements <em>sigma[i]</em> are the so-called singular values of <var>A</var>;
-these are real and nonnegative, and returned in descending order.
-The first <em>min(m, n)</em> columns of <var>U</var> and <var>V</var> are
-the left and right singular vectors of <var>A</var>.
-Note that <code>dgesvd</code> returns the transpose of <var>V</var>, not <var>V</var> itself.
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
 </p>
-<p><code>dgesvd(<var>A</var>)</code> computes only the singular values of <var>A</var>.
-<code>dgesvd(<var>A</var>, <var>left_p</var>, <var>right_p</var>)</code> computes the singular values of <var>A</var>
-and the left singular vectors when <em><var>left_p</var> = <code>true</code></em>
-and the right singular vectors when <em><var>right_p</var> = <code>true</code></em>.
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fexact_005fdivide"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_exact_divide</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2216"></a>
+</dt>
+<dd><p>Divide a polynomial <var>poly1</var> by another polynomial <var>poly2</var>. Assumes that exact
+division with no remainder is possible. Returns the quotient.
 </p>
-<p>A list of three items is returned.
-The first item is a list of the singular values.
-The second item is <code>false</code> or the matrix of left singular vectors.
-The third item is <code>false</code> or the matrix of right singular vectors.
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fnormal_005fform"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_normal_form</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2217"></a>
+</dt>
+<dd><p><code>poly_normal_form</code> finds the normal form of a polynomial <var>poly</var> with respect
+to a set of polynomials <var>polylist</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fbuchberger_005fcriterion"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_buchberger_criterion</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2218"></a>
+</dt>
+<dd><p>Returns <code>true</code> if <var>polylist</var> is a Groebner basis with respect to the current term
+order, by using the Buchberger
+criterion: for every two polynomials <em>h1</em> and <em>h2</em> in <var>polylist</var> the
+S-polynomial <em>S(h1,h2)</em> reduces to 0 <em>modulo</em> <var>polylist</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fbuchberger"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_buchberger</b><i> (<var>polylist_fl</var> <var>varlist</var>)</i>
+<a name="IDX2219"></a>
+</dt>
+<dd><p><code>poly_buchberger</code> performs the Buchberger algorithm on a list of
+polynomials and returns the resulting Groebner basis.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<hr size="6">
+<a name="SEC306"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC305" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC302" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h3 class="subsection"> 62.2.4 Standard postprocessing of Groebner Bases </h3>
+
+
+<p>The <em>k-th elimination Ideal</em> <em>I_k</em> of an Ideal <em>I</em> over <em>K[ x[1],...,x[n] ]</em> is the ideal <em>intersect(I, K[ x[k+1],...,x[n] ])</em>.<br>
+
+The <em>colon ideal</em> <em>I:J</em> is the ideal <em>{h|for all w in J: w*h in I}</em>.<br>
+
+The ideal <em>I:p^inf</em> is the ideal <em>{h| there is a n in N: p^n*h in I}</em>.<br>
+
+The ideal <em>I:J^inf</em> is the ideal <em>{h| there is a n in N and a p in J: p^n*h in I}</em>.<br>
+
+The <em>radical ideal</em> <em>sqrt(I)</em> is the ideal 
+<em>{h| there is a n in N : h^n in I }</em>.
+</p>
+
+<p><a name="Item_003a-poly_005freduction"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_reduction</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2220"></a>
+</dt>
+<dd><p><code>poly_reduction</code> reduces a list of polynomials <var>polylist</var>, so that
+each polynomial is fully reduced with respect to the other polynomials.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fminimization"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_minimization</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2221"></a>
+</dt>
+<dd><p>Returns a sublist of the polynomial list <var>polylist</var> spanning the same
+monomial ideal as <var>polylist</var> but minimal, i.e. no leading monomial
+of a polynomial in the sublist divides the leading monomial
+of another polynomial.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005fnormalize_005flist"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_normalize_list</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2222"></a>
+</dt>
+<dd><p><code>poly_normalize_list</code> applies <code>poly_normalize</code> to each polynomial in the list.
+That means it divides every polynomial in a list <var>polylist</var> by its leading coefficient.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fgrobner"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_grobner</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2223"></a>
+</dt>
+<dd><p>Returns a Groebner basis of the ideal span by the polynomials <var>polylist</var>. Affected by the global flags.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005freduced_005fgrobner"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_reduced_grobner</b><i> (<var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2224"></a>
+</dt>
+<dd><p>Returns a reduced Groebner basis of the ideal span by the polynomials <var>polylist</var>. Affected by the global flags.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005fdepends_005fp"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_depends_p</b><i> (<var>poly</var>, <var>var</var>, <var>varlist</var>)</i>
+<a name="IDX2225"></a>
+</dt>
+<dd><p><code>poly_depends</code> tests whether a polynomial depends on a variable <var>var</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005felimination_005fideal"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_elimination_ideal</b><i> (<var>polylist</var>, <var>number</var>, <var>varlist</var>)</i>
+<a name="IDX2226"></a>
+</dt>
+<dd><p><code>poly_elimination_ideal</code> returns the grobner basis of the <em>number</em>-th elimination ideal of an
+ideal specified as a list of generating polynomials (not necessarily Groebner basis).
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fcolon_005fideal"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_colon_ideal</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2227"></a>
+</dt>
+<dd><p>Returns the reduced Groebner basis of the colon ideal 
+</p>
+<p><em>I(polylist1):I(polylist2)</em>
+</p>
+
+<p>where <em>polylist1</em> and <em>polylist2</em> are two lists of polynomials.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fintersection"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_ideal_intersection</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2228"></a>
+</dt>
+<dd><p><code>poly_ideal_intersection</code> returns the intersection of two ideals.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+
+<p><a name="Item_003a-poly_005flcm"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_lcm</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2229"></a>
+</dt>
+<dd><p>Returns the lowest common multiple of <var>poly1</var> and <var>poly2</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="poly_005fgcd"></a>
+<a name="Item_003a-poly_005fgcd"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_gcd</b><i> (<var>poly1</var>, <var>poly2</var>, <var>varlist</var>)</i>
+<a name="IDX2230"></a>
+</dt>
+<dd><p>Returns the greatest common divisor of <var>poly1</var> and <var>poly2</var>.
+</p>
+<p>See also <code><a href="maxima_14.html#ezgcd">ezgcd</a></code>, <code><a href="maxima_14.html#gcd">gcd</a></code>, <code><a href="maxima_14.html#gcdex">gcdex</a></code>, and
+<code><a href="maxima_80.html#gcdivide">gcdivide</a></code>.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (lapack)$
-(%i2) fpprintprec : 6;
-(%o2)                           6
-(%i3) M: matrix([1, 2, 3], [3.5, 0.5, 8], [-1, 2, -3], [4, 9, 7]);
-                        [  1    2    3  ]
-                        [               ]
-                        [ 3.5  0.5   8  ]
-(%o3)                   [               ]
-                        [ - 1   2   - 3 ]
-                        [               ]
-                        [  4    9    7  ]
-(%i4) dgesvd (M);
-(%o4)      [[14.4744, 6.38637, .452547], false, false]
-(%i5) [sigma, U, VT] : dgesvd (M, true, true);
-(%o5) [[14.4744, 6.38637, .452547], 
-[ - .256731  .00816168   .959029    - .119523 ]
-[                                             ]
-[ - .526456   .672116   - .206236   - .478091 ]
-[                                             ], 
-[  .107997   - .532278  - .0708315  - 0.83666 ]
-[                                             ]
-[ - .803287  - .514659  - .180867    .239046  ]
-[ - .374486  - .538209  - .755044 ]
-[                                 ]
-[  .130623   - .836799   0.5317   ]]
-[                                 ]
-[ - .917986   .100488    .383672  ]
-(%i6) m : length (U);
-(%o6)                           4
-(%i7) n : length (VT);
-(%o7)                           3
-(%i8) Sigma:
-        genmatrix(lambda ([i, j], if i=j then sigma[i] else 0),
-                  m, n);
-                  [ 14.4744     0        0    ]
-                  [                           ]
-                  [    0     6.38637     0    ]
-(%o8)             [                           ]
-                  [    0        0     .452547 ]
-                  [                           ]
-                  [    0        0        0    ]
-(%i9) U . Sigma . VT - M;
-          [  1.11022E-15        0.0       1.77636E-15 ]
-          [                                           ]
-          [  1.33227E-15    1.66533E-15       0.0     ]
-(%o9)     [                                           ]
-          [ - 4.44089E-16  - 8.88178E-16  4.44089E-16 ]
-          [                                           ]
-          [  8.88178E-16    1.77636E-15   8.88178E-16 ]
-(%i10) transpose (U) . U;
-       [     1.0      5.55112E-17    2.498E-16     2.77556E-17  ]
-       [                                                        ]
-       [ 5.55112E-17      1.0       5.55112E-17    4.16334E-17  ]
-(%o10) [                                                        ]
-       [  2.498E-16   5.55112E-17       1.0       - 2.08167E-16 ]
-       [                                                        ]
-       [ 2.77556E-17  4.16334E-17  - 2.08167E-16       1.0      ]
-(%i11) VT . transpose (VT);
-          [      1.0           0.0      - 5.55112E-17 ]
-          [                                           ]
-(%o11)    [      0.0           1.0       5.55112E-17  ]
-          [                                           ]
-          [ - 5.55112E-17  5.55112E-17       1.0      ]
+<pre class="example">(%i1) p1:6*x^3+19*x^2+19*x+6; 
+                        3       2
+(%o1)                6 x  + 19 x  + 19 x + 6
+(%i2) p2:6*x^5+13*x^4+12*x^3+13*x^2+6*x;
+                  5       4       3       2
+(%o2)          6 x  + 13 x  + 12 x  + 13 x  + 6 x
+(%i3) poly_gcd(p1, p2, [x]);
+                            2
+(%o3)                    6 x  + 13 x + 6
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
-</p>
-</dd></dl>
+</p></dd></dl>
 
-<p><a name="Item_003a-dlange"></a>
+<p><a name="Item_003a-poly_005fgrobner_005fequal"></a>
 </p><dl>
-<dt><u>Function:</u> <b>dlange</b><i> (<var>norm</var>, <var>A</var>)</i>
-<a name="IDX2214"></a>
+<dt><u>Function:</u> <b>poly_grobner_equal</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2231"></a>
 </dt>
-<dt><u>Function:</u> <b>zlange</b><i> (<var>norm</var>, <var>A</var>)</i>
-<a name="IDX2215"></a>
-</dt>
-<dd><p>Computes a norm or norm-like function of the matrix <var>A</var>.
+<dd><p><code>poly_grobner_equal</code> tests whether two Groebner Bases generate the same ideal.
+Returns <code>true</code> if two lists of polynomials <var>polylist1</var> and <var>polylist2</var>, assumed to be Groebner Bases,
+generate the same ideal, and <code>false</code> otherwise.
+This is equivalent to checking that every polynomial of the first basis reduces to 0
+modulo the second basis and vice versa. Note that in the example below the
+first list is not a Groebner basis, and thus the result is <code>false</code>.
 </p>
-<dl compact="compact">
-<dt> <code>max</code></dt>
-<dd><p>Compute <em>max(abs(A(i, j)))</em> where <em>i</em> and <em>j</em> range over
-the rows and columns, respectively, of <var>A</var>.
-Note that this function is not a proper matrix norm.
-</p></dd>
-<dt> <code>one_norm</code></dt>
-<dd><p>Compute the <em>L[1]</em> norm of <var>A</var>,
-that is, the maximum of the sum of the absolute value of elements in each column.
-</p></dd>
-<dt> <code>inf_norm</code></dt>
-<dd><p>Compute the <em>L[inf]</em> norm of <var>A</var>,
-that is, the maximum of the sum of the absolute value of elements in each row.
-</p></dd>
-<dt> <code>frobenius</code></dt>
-<dd><p>Compute the Frobenius norm of <var>A</var>,
-that is, the square root of the sum of squares of the matrix elements.
-</p></dd>
-</dl>
-
+<pre class="example">(%i1) poly_grobner_equal([y+x,x-y],[x,y],[x,y]);
+(%o1)                         false
+</pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-dgemm"></a>
+<p><a name="Item_003a-poly_005fgrobner_005fsubsetp"></a>
 </p><dl>
-<dt><u>Function:</u> <b>dgemm</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgemm</tt> (<var>A</var>, <var>B</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dgemm</tt> (<var>A</var>, <var>B</var>, <var>options</var>)</i>
-<a name="IDX2216"></a>
+<dt><u>Function:</u> <b>poly_grobner_subsetp</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2232"></a>
 </dt>
-<dd><p>Compute the product of two matrices and optionally add the product to
-a third matrix.
-</p>
-<p>In the simplest form, <code>dgemm(<var>A</var>, <var>B</var>)</code> computes the
-product of the two real matrices, <var>A</var> and <var>B</var>.
-</p>
-<p>In the second form, <code>dgemm</code> computes the <em><var>alpha</var> *
-<var>A</var> * <var>B</var> + <var>beta</var> * <var>C</var></em> where <var>A</var>, <var>B</var>,
-<var>C</var> are real matrices of the appropriate sizes and <var>alpha</var> and
-<var>beta</var> are real numbers.  Optionally, <var>A</var> and/or <var>B</var> can
-be transposed before computing the product.  The extra parameters are
-specifed by optional keyword arguments: The keyword arguments are
-optional and may be specified in any order.  They all take the form
-<code>key=val</code>.  The keyword arguments are:
-</p>
-<dl compact="compact">
-<dt> <code>C</code></dt>
-<dd><p>The matrix <var>C</var> that should be added.  The default is <code>false</code>,
-which means no matrix is added.
-</p></dd>
-<dt> <code>alpha</code></dt>
-<dd><p>The product of <var>A</var> and <var>B</var> is multiplied by this value.  The
-default is 1.
-</p></dd>
-<dt> <code>beta</code></dt>
-<dd><p>If a matrix <var>C</var> is given, this value multiplies <var>C</var> before it
-is added.  The default value is 0, which implies that <var>C</var> is not
-added, even if <var>C</var> is given.  Hence, be sure to specify a non-zero
-value for <var>beta</var>.
-</p></dd>
-<dt> <code>transpose_a</code></dt>
-<dd><p>If <code>true</code>, the transpose of <var>A</var> is used instead of <var>A</var>
-for the product.  The default is <code>false</code>.
-</p></dd>
-<dt> <code>transpose_b</code></dt>
-<dd><p>If <code>true</code>, the transpose of <var>B</var> is used instead of <var>B</var>
-for the product.  The default is <code>false</code>.
-</p></dd>
-</dl>
-
-<pre class="example">(%i1) load (lapack)$
-(%i2) A : matrix([1,2,3],[4,5,6],[7,8,9]);
-                                  [ 1  2  3 ]
-                                  [         ]
-(%o2)                             [ 4  5  6 ]
-                                  [         ]
-                                  [ 7  8  9 ]
-(%i3) B : matrix([-1,-2,-3],[-4,-5,-6],[-7,-8,-9]);
-                               [ - 1  - 2  - 3 ]
-                               [               ]
-(%o3)                          [ - 4  - 5  - 6 ]
-                               [               ]
-                               [ - 7  - 8  - 9 ]
-(%i4) C : matrix([3,2,1],[6,5,4],[9,8,7]);
-                                  [ 3  2  1 ]
-                                  [         ]
-(%o4)                             [ 6  5  4 ]
-                                  [         ]
-                                  [ 9  8  7 ]
-(%i5) dgemm(A,B);
-                         [ - 30.0   - 36.0   - 42.0  ]
-                         [                           ]
-(%o5)                    [ - 66.0   - 81.0   - 96.0  ]
-                         [                           ]
-                         [ - 102.0  - 126.0  - 150.0 ]
-(%i6) A . B;
-                            [ - 30   - 36   - 42  ]
-                            [                     ]
-(%o6)                       [ - 66   - 81   - 96  ]
-                            [                     ]
-                            [ - 102  - 126  - 150 ]
-(%i7) dgemm(A,B,transpose_a=true);
-                         [ - 66.0  - 78.0   - 90.0  ]
-                         [                          ]
-(%o7)                    [ - 78.0  - 93.0   - 108.0 ]
-                         [                          ]
-                         [ - 90.0  - 108.0  - 126.0 ]
-(%i8) transpose(A) . B;
-                           [ - 66  - 78   - 90  ]
-                           [                    ]
-(%o8)                      [ - 78  - 93   - 108 ]
-                           [                    ]
-                           [ - 90  - 108  - 126 ]
-(%i9) dgemm(A,B,c=C,beta=1);
-                         [ - 27.0  - 34.0   - 41.0  ]
-                         [                          ]
-(%o9)                    [ - 60.0  - 76.0   - 92.0  ]
-                         [                          ]
-                         [ - 93.0  - 118.0  - 143.0 ]
-(%i10) A . B + C;
-                            [ - 27  - 34   - 41  ]
-                            [                    ]
-(%o10)                      [ - 60  - 76   - 92  ]
-                            [                    ]
-                            [ - 93  - 118  - 143 ]
-(%i11) dgemm(A,B,c=C,beta=1, alpha=-1);
-                            [ 33.0   38.0   43.0  ]
-                            [                     ]
-(%o11)                      [ 72.0   86.0   100.0 ]
-                            [                     ]
-                            [ 111.0  134.0  157.0 ]
-(%i12) -A . B + C;
-                               [ 33   38   43  ]
-                               [               ]
-(%o12)                         [ 72   86   100 ]
-                               [               ]
-                               [ 111  134  157 ]
-
-</pre><div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
-</div>
-</p>
-</dd></dl>
-
-<p><a name="Item_003a-zgeev"></a>
-</p><dl>
-<dt><u>Function:</u> <b>zgeev</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zgeev</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zgeev</tt> (<var>A</var>, <var>right_p</var>, <var>left_p</var>)</i>
-<a name="IDX2217"></a>
-</dt>
-<dd><p>Like <code>dgeev</code>, but the matrix <var>A</var> is complex.
+<dd><p><code>poly_grobner_subsetp</code> tests whether an ideal generated by <var>polylist1</var>
+is contained in the ideal generated by <var>polylist2</var>. For this test to always succeed,
+<var>polylist2</var> must be a Groebner basis.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a> &middot;
+<a href="maxima_105.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-zheev"></a>
+<p><a name="Item_003a-poly_005fgrobner_005fmember"></a>
 </p><dl>
-<dt><u>Function:</u> <b>zheev</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zheev</tt> (<var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>zheev</tt> (<var>A</var>, <var>eigvec_p</var>)</i>
-<a name="IDX2218"></a>
+<dt><u>Function:</u> <b>poly_grobner_member</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist</var>)</i>
+<a name="IDX2233"></a>
 </dt>
-<dd><p>Like <code>zheev</code>, but the matrix <var>A</var> is assumed to be a square
-complex Hermitian matrix. If <var>eigvec_p</var> is <code>true</code>, then the
-eigenvectors of the matrix are also computed.
+<dd><p>Returns <code>true</code> if a polynomial <var>poly</var> belongs to the ideal generated by the
+polynomial list <var>polylist</var>, which is assumed to be a Groebner basis. Returns <code>false</code> otherwise.
 </p>
-<p>No check is made that the matrix <var>A</var> is, in fact, Hermitian.
-</p>
-<p>A list of two items is returned, as in <code>dgeev</code>: a list of
-eigenvalues, and <code>false</code> or the matrix of the eigenvectors.
+<p><code>poly_grobner_member</code> tests whether a polynomial belongs to an ideal generated by a list of polynomials,
+which is assumed to be a Groebner basis. Equivalent to <code>normal_form</code> being 0. 
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-lapack">Package lapack</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fsaturation1"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_ideal_saturation1</b><i> (<var>polylist</var>, <var>poly</var>, <var>varlist</var>)</i>
+<a name="IDX2234"></a>
+</dt>
+<dd><p>Returns the reduced Groebner basis of the saturation of the ideal
+</p>
+<p>I(polylist):poly^inf
+</p>
+
+<p>Geometrically, over an algebraically closed field, this is the set
+of polynomials in the ideal generated by <var>polylist</var> which do not identically
+vanish on the variety of <var>poly</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fsaturation"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_ideal_saturation</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2235"></a>
+</dt>
+<dd><p>Returns the reduced Groebner basis of the saturation of the ideal
+</p>
+<p>I(polylist1):I(polylist2)^inf
+</p>
+
+<p>Geometrically, over an algebraically closed field, this is the set of polynomials in
+the ideal generated by <var>polylist1</var> which do not identically vanish on the
+variety of <var>polylist2</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fpolysaturation1"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_ideal_polysaturation1</b><i> (<var>polylist1</var>, <var>polylist2</var>, <var>varlist</var>)</i>
+<a name="IDX2236"></a>
+</dt>
+<dd><p><var>polylist2</var> ist a list of n polynomials <code>[poly1,...,polyn]</code>.
+Returns the reduced Groebner basis of the ideal
+</p>
+<p>I(polylist):poly1^inf:...:polyn^inf
+</p>
+
+<p>obtained by a
+sequence of successive saturations in the polynomials
+of the polynomial list <var>polylist2</var> of the ideal generated by the
+polynomial list <var>polylist1</var>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fideal_005fpolysaturation"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_ideal_polysaturation</b><i> (<var>polylist</var>, <var>polylistlist</var>, <var>varlist</var>)</i>
+<a name="IDX2237"></a>
+</dt>
+<dd><p><var>polylistlist</var> is a list of n list of polynomials <code>[polylist1,...,polylistn]</code>.
+Returns the reduced Groebner basis of the saturation of the ideal
+</p>
+<p>I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fsaturation_005fextension"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_saturation_extension</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist1</var>, <var>varlist2</var>)</i>
+<a name="IDX2238"></a>
+</dt>
+<dd><p><code>poly_saturation_extension</code> implements the famous Rabinowitz trick.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-poly_005fpolysaturation_005fextension"></a>
+</p><dl>
+<dt><u>Function:</u> <b>poly_polysaturation_extension</b><i> (<var>poly</var>, <var>polylist</var>, <var>varlist1</var>, <var>varlist2</var>)</i>
+<a name="IDX2239"></a>
+</dt>
+<dd><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-grobner">Package grobner</a>
 </div>
 </p>
 </dd></dl>
 
 
-<p><a name="Item_003a-lbfgs"></a>
+<p><a name="Item_003a-impdiff_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC306" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC298" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -657,12 +1126,12 @@ eigenvalues, and <code>false</code> or the matrix of the eigenvectors.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

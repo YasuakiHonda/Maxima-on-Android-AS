@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 69. mnewton</title>
+<title>Maxima 5.39.0 Manual: 69. lsquares</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 69. mnewton">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 69. mnewton">
+<meta name="description" content="Maxima 5.39.0 Manual: 69. lsquares">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 69. lsquares">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,191 +72,725 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="mnewton"></a>
-<a name="SEC325"></a>
+<a name="lsquares_002dpkg"></a>
+<a name="SEC323"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_68.html#SEC324" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC326" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_68.html#SEC322" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC324" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_68.html#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC328" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_68.html#SEC320" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 69. mnewton </h1>
+<h1 class="chapter"> 69. lsquares </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC326">69.1 Introduction to mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC324">69.1 Introduction to lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC327">69.2 Functions and Variables for mnewton</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC325">69.2 Functions and Variables for lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Introduction-to-mnewton"></a>
+<p><a name="Item_003a-Introduction-to-lsquares"></a>
 </p><hr size="6">
-<a name="Introduction-to-mnewton"></a>
-<a name="SEC326"></a>
+<a name="Introduction-to-lsquares"></a>
+<a name="SEC324"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC325" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC327" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC323" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC325" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC325" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC325" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC328" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC323" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 69.1 Introduction to mnewton </h2>
+<h2 class="section"> 69.1 Introduction to lsquares </h2>
 
-<p><code>mnewton</code>は１変数または多変数の非線形方程式を解くための Newton法の実装です。
+<p><code>lsquares</code>は数値データからモデルのパラメータを見積もる最小二乗法を実装するための
+関数のコレクションです。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-mnewton">Package mnewton</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Statistical-estimation">Statistical estimation</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a>
 </div>
 </p>
-<p><a name="Item_003a-Functions-and-Variables-for-mnewton"></a>
+
+<p><a name="Item_003a-Functions-and-Variables-for-lsquares"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-mnewton"></a>
-<a name="SEC327"></a>
+<a name="Functions-and-Variables-for-lsquares"></a>
+<a name="SEC325"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC326" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC328" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC324" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC325" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC325" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC328" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC323" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 69.2 Functions and Variables for mnewton </h2>
+<h2 class="section"> 69.2 Functions and Variables for lsquares </h2>
 
-<p><a name="newtonepsilon"></a>
-<a name="Item_003a-newtonepsilon"></a>
+<p><a name="lsquares_005festimates"></a>
+<a name="Item_003a-lsquares_005festimates"></a>
 </p><dl>
-<dt><u>オプション変数:</u> <b>newtonepsilon</b>
-<a name="IDX2278"></a>
+<dt><u>関数:</u> <b>lsquares_estimates</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lsquares_estimates</tt> (<var>D</var>, <var>x</var>, <var>e</var>, <var>a</var>) &nbsp;
+最小二乗の方法で決定されるような変数 <var>x</var>と <var>a</var>の方程式 <var>e</var>をデータ</i>
+<a name="IDX2302"></a>
 </dt>
-<dd><p>デフォルト値: <code>10.0^(-fpprec/2)</code>
+<dd><p><var>D</var>に最良フィットするパラメータ <var>a</var>を見積もります。
+<code>lsquares_estimates</code>は最初に厳密な解を探し、それが失敗したら近似的な解を探します。
 </p>
-<p><code>mnewton</code>関数が解に向かって収束した時を決定する精度。
-もし <code>newtonepsilon</code>が多倍長浮動小数点なら、
-<code>mnewton</code>計算を多倍長浮動小数点でします。
-<code>mnewton</code>も参照してください。
+<p>戻り値は形式 <code>[a = ..., b = ..., c = ...]</code>の等式のリストのリストです。
+リストのそれぞれの要素は二乗平均誤差の、個別の等価な最小です。
 </p>
+<p>データ <var>D</var>は行列でなければいけません。
+行それぞれは(文脈によって「レコード」とか「ケース」とか呼ばれる)1つのデータで、
+列それぞれはすべてのデータに関するある変数の値を含みます。
+変数のリスト <var>x</var>は <var>D</var>の列それぞれの名前を与えます。
+解析をしない列にも名前を与えます。
+</p>
+<p>パラメータのリスト <var>a</var>は見積もられるパラメータの名前を与えます。
+方程式 <var>e</var>は変数 <var>x</var>と <var>a</var>に関する式か等式です;
+もし <var>e</var>が等式でないなら <code><var>e</var> = 0</code>と同様に扱われます。
+</p>
+<p><code>lsquares_estimates</code>の付加引数は等式として指定され、
+厳密な結果が見つからなかった時、数値方法で見積もりを見つけるためにコールされる関数
+<code>lbfgs</code>へそのまま渡されます。
+</p>
+<p>もしある厳密解が (<code>solve</code>を介して)見つけることができるなら、データ
+<var>D</var>は非数値を含むかもしれません。
+しかし、もし厳密解が見つからないなら <var>D</var>の要素それぞれは数値でなければいけません。
+これは数リテラル(整数、有理数、通常の浮動小数点、多倍長浮動小数点)はもちろん、
+<code>%pi</code>や <code>%e</code>のような数値定数を含みます。
+数値計算は通常の浮動小数点算出で実行されます。
+他の種類の数値は計算のため、すべて通常の浮動小数点に変換されます。
+</p>
+<p><code>load(lsquares)</code>はこの関数をロードします。
+</p>
+<p><code><a href="#lsquares_005festimates_005fexact">lsquares_estimates_exact</a></code>,
+<code><a href="#lsquares_005festimates_005fapproximate">lsquares_estimates_approximate</a></code>,<br>
+<code><a href="#lsquares_005fmse">lsquares_mse</a></code>,
+<code><a href="#lsquares_005fresiduals">lsquares_residuals</a></code>,
+<code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></code>も参照してください。
+</p>
+<p>例:
+</p>
+<p>厳密解が見つかる問題。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) M : matrix (
+        [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
+                           [ 1  1  1 ]
+                           [         ]
+                           [ 3       ]
+                           [ -  1  2 ]
+                           [ 2       ]
+                           [         ]
+(%o2)                      [ 9       ]
+                           [ -  2  1 ]
+                           [ 4       ]
+                           [         ]
+                           [ 3  2  2 ]
+                           [         ]
+                           [ 2  2  1 ]
+(%i3) lsquares_estimates (
+         M, [z,x,y], (z+D)^2 = A*x+B*y+C, [A,B,C,D]);
+                  59        27      10921        107
+(%o3)     [[A = - --, B = - --, C = -----, D = - ---]]
+                  16        16      1024         32
+</pre></td></tr></table>
+<p>厳密解が見つからない問題。
+だから <code>lsquares_estimates</code>は数値近似に頼ります。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) M : matrix ([1, 1], [2, 7/4], [3, 11/4], [4, 13/4]);
+                            [ 1  1  ]
+                            [       ]
+                            [    7  ]
+                            [ 2  -  ]
+                            [    4  ]
+                            [       ]
+(%o2)                       [    11 ]
+                            [ 3  -- ]
+                            [    4  ]
+                            [       ]
+                            [    13 ]
+                            [ 4  -- ]
+                            [    4  ]
+(%i3) lsquares_estimates (
+  M, [x,y], y=a*x^b+c, [a,b,c], initial=[3,3,3], iprint=[-1,0]);
+(%o3) [[a = 1.375751433061394, b = 0.7148891534417651,
+                                       c = - 0.4020908910062951]]
+</pre></td></tr></table>
+<p>指数関数は最小二乗法フィッティングにはよい条件ではありません。
+それらにフィッティングする場合、対数を使って指数関数を避けられるかもしれません。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) yvalues:[1,3,5,60,200,203,80]$
+(%i3) time:[1,2,4,5,6,8,10]$
+(%i4) f:y=a*exp(b*t);
+                                   b t
+(%o4)                      y = a %e
+(%i5) yvalues_log:log(yvalues)$
+(%i6) f_log:log(subst(y=exp(y),f));
+                                    b t
+(%o6)                   y = log(a %e   )
+(%i7) lsquares_estimates(
+    transpose(matrix(yvalues_log,time)),
+    [y,t],
+    f_log,
+    [a,b]
+ );
+*************************************************
+  N=    2   NUMBER OF CORRECTIONS=25
+       INITIAL VALUES
+ F=  6.802906290754687D+00   GNORM=  2.851243373781393D+01
+*************************************************
+
+   I  NFN     FUNC                    GNORM                   STEPLENGTH
+
+   1    3     1.141838765593467D+00   1.067358003667488D-01   1.390943719972406D-02
+   2    5     1.141118195694385D+00   1.237977833033414D-01   5.000000000000000D+00
+   3    6     1.136945723147959D+00   3.806696991691383D-01   1.000000000000000D+00
+   4    7     1.133958243220262D+00   3.865103550379243D-01   1.000000000000000D+00
+   5    8     1.131725773805499D+00   2.292258231154026D-02   1.000000000000000D+00
+   6    9     1.131625585698168D+00   2.664440547017370D-03   1.000000000000000D+00
+   7   10     1.131620564856599D+00   2.519366958715444D-04   1.000000000000000D+00
+
+ THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.
+ IFLAG = 0
+(%o7)   [[a = 1.155904145765554, b = 0.5772666876959847]]
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-mnewton">Package mnewton</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
-</p></dd></dl>
+</p>
+</dd></dl>
 
-<p><a name="newtonmaxiter"></a>
-<a name="Item_003a-newtonmaxiter"></a>
+<p><a name="lsquares_005festimates_005fexact"></a>
+<a name="Item_003a-lsquares_005festimates_005fexact"></a>
 </p><dl>
-<dt><u>オプション変数:</u> <b>newtonmaxiter</b>
-<a name="IDX2279"></a>
+<dt><u>関数:</u> <b>lsquares_estimates_exact</b><i> (<var>MSE</var>, <var>a</var>)</i>
+<a name="IDX2303"></a>
 </dt>
-<dd><p>デフォルト値: <code>50</code>
+<dd><p>方程式系を構成し、<code>solve</code>を介して記号的にそれらを解くことを試みることで、平均二乗誤差
+<var>MSE</var>を最小化するパラメータ <var>a</var>を見積もります。
+平均二乗誤差は <code>lsquares_mse</code>が返すようなパラメータ <var>a</var>の式です。
 </p>
-<p>もし収束しないか収束が遅すぎるなら
-<code>mnewton</code>関数を止める繰り返しの最大数。
+<p>戻り値は形式 <code>[a = ..., b = ..., c = ...]</code>の等式のリストのリストです。
+戻り値は、 0個か 1個、 2以上の要素を含むかもしれません。
+もし複数の要素が返されたら、それぞれは個別の、平均二乗誤差の等価最小を表します。
 </p>
-<p><code>mnewton</code>も参照してください。
+<p><code><a href="#lsquares_005festimates">lsquares_estimates</a></code>,
+<code><a href="#lsquares_005festimates_005fapproximate">lsquares_estimates_approximate</a></code>,
+<code><a href="#lsquares_005fmse">lsquares_mse</a></code>,<br>
+<code><a href="#lsquares_005fresiduals">lsquares_residuals</a></code>,
+<code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></code>も参照してください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) M : matrix (
+         [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
+                           [ 1  1  1 ]
+                           [         ]
+                           [ 3       ]
+                           [ -  1  2 ]
+                           [ 2       ]
+                           [         ]
+(%o2)                      [ 9       ]
+                           [ -  2  1 ]
+                           [ 4       ]
+                           [         ]
+                           [ 3  2  2 ]
+                           [         ]
+                           [ 2  2  1 ]
+(%i3) mse : lsquares_mse (M, [z, x, y], (z + D)^2 = A*x + B*y + C);
+         5
+        ====
+        \                                         2     2
+         &gt;    ((- B M    ) - A M     + (M     + D)  - C)
+        /            i, 3       i, 2     i, 1
+        ====
+        i = 1
+(%o3)   -------------------------------------------------
+                                5
+(%i4) lsquares_estimates_exact (mse, [A, B, C, D]);
+                  59        27      10921        107
+(%o4)     [[A = - --, B = - --, C = -----, D = - ---]]
+                  16        16      1024         32
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="lsquares_005festimates_005fapproximate"></a>
+<a name="Item_003a-lsquares_005festimates_005fapproximate"></a>
+</p><dl>
+<dt><u>関数:</u> <b>lsquares_estimates_approximate</b><i> (<var>MSE</var>, <var>a</var>, initial = <var>L</var>, tol = <var>t</var>)</i>
+<a name="IDX2304"></a>
+</dt>
+<dd><p>平均二乗誤差 <var>MSE</var>を最小化するパラメータ <var>a</var>を数値最小化関数
+<code>lbfgs</code>を介して見積もります。
+平均二乗誤差は <code>lsquares_mse</code>が返すようなパラメータ <var>a</var>の式です。
+</p>
+
+<p><code>lsquares_estimates_approximate</code>が返す解は平均二乗誤差の
+(たぶん大域ですが)局所最小値です。
+<code>lsquares_estimates_exact</code>との一貫性のため、戻り値は要素 1つ、すなわち、形式
+<code>[a = ..., b = ..., c = ...]</code>の等式のリストを持つ入れ子のリストです。
+</p>
+<p><code>lsquares_estimates_approximate</code>の付加引数は等式として指定され、
+数値方法で見積もりを見つけるためにコールされる関数 <code>lbfgs</code>へそのまま渡されます。
+</p>
+<p>パラメータが数値が割り当てられた時 <var>MSE</var>は数に評価されなければいけません。
+これは <var>MSE</var>を構成するデータが <code>%pi</code>や<code>%e</code>、数リテラル
+(整数、有理数、通常の浮動小数点、多倍長浮動小数点)のような数値定数だけを含むことを
+要求します。
+数値計算は通常の浮動小数点算出で実行されます。
+他の種類の数値は計算のため、すべて通常の浮動小数点に変換されます。
+</p>
+<p><code>load(lsquares)</code>はこの関数をロードします。
+</p>
+<p><code><a href="#lsquares_005festimates">lsquares_estimates</a></code>,
+<code><a href="#lsquares_005festimates_005fexact">lsquares_estimates_exact</a></code>,
+<code><a href="#lsquares_005fmse">lsquares_mse</a></code>,
+<code><a href="#lsquares_005fresiduals">lsquares_residuals</a></code>,
+<code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></code>も参照してください。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) M : matrix (
+         [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
+                           [ 1  1  1 ]
+                           [         ]
+                           [ 3       ]
+                           [ -  1  2 ]
+                           [ 2       ]
+                           [         ]
+(%o2)                      [ 9       ]
+                           [ -  2  1 ]
+                           [ 4       ]
+                           [         ]
+                           [ 3  2  2 ]
+                           [         ]
+                           [ 2  2  1 ]
+(%i3) mse : lsquares_mse (M, [z, x, y], (z + D)^2 = A*x + B*y + C);
+         5
+        ====
+        \                                         2     2
+         &gt;    ((- B M    ) - A M     + (M     + D)  - C)
+        /            i, 3       i, 2     i, 1
+        ====
+        i = 1
+(%o3)   -------------------------------------------------
+                                5
+(%i4) lsquares_estimates_approximate (
+        mse, [A, B, C, D], iprint = [-1, 0]);
+(%o4) [[A = - 3.678504947401971, B = - 1.683070351177937,
+                 C = 10.63469950148714, D = - 3.340357993175297]]
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="lsquares_005fmse"></a>
+<a name="Item_003a-lsquares_005fmse"></a>
+</p><dl>
+<dt><u>関数:</u> <b>lsquares_mse</b><i> (<var>D</var>, <var>x</var>, <var>e</var>)</i>
+<a name="IDX2305"></a>
+</dt>
+<dd><p>平均二乗誤差 (MSE)、すなわち、変数 <var>x</var>の 方程式<var>e</var>に関するデータ
+<var>D</var>の和の式を返します。
+</p>
+<p>MSEは以下のように定義されます:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">                    n
+                   ====
+               1   \                        2
+               -    &gt;    (lhs(e ) - rhs(e ))
+               n   /           i         i
+                   ====
+                   i = 1
+</pre></td></tr></table>
+<p>ここで、 <var>n</var>はデータ数で、
+<code><var>e</var>[i]</code>は、 <code>i</code>番目のデータ
+<code><var>D</var>[i]</code>から値を割り当てられた
+<var>x</var>の中の変数に対して評価された方程式 <var>e</var>です。
+</p>
+<p><code>load(lsquares)</code>はこの関数をロードします。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) M : matrix (
+         [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
+                           [ 1  1  1 ]
+                           [         ]
+                           [ 3       ]
+                           [ -  1  2 ]
+                           [ 2       ]
+                           [         ]
+(%o2)                      [ 9       ]
+                           [ -  2  1 ]
+                           [ 4       ]
+                           [         ]
+                           [ 3  2  2 ]
+                           [         ]
+                           [ 2  2  1 ]
+(%i3) mse : lsquares_mse (M, [z, x, y], (z + D)^2 = A*x + B*y + C);
+         5
+        ====
+        \                                         2     2
+         &gt;    ((- B M    ) - A M     + (M     + D)  - C)
+        /            i, 3       i, 2     i, 1
+        ====
+        i = 1
+(%o3)   -------------------------------------------------
+                                5
+(%i4) diff (mse, D);
+(%o4)
+      5
+     ====
+     \                                                     2
+   4  &gt;    (M     + D) ((- B M    ) - A M     + (M     + D)  - C)
+     /       i, 1             i, 3       i, 2     i, 1
+     ====
+     i = 1
+   --------------------------------------------------------------
+                                 5
+(%i5) ''mse, nouns;
+               2                 2         9 2               2
+(%o5) (((D + 3)  - C - 2 B - 2 A)  + ((D + -)  - C - B - 2 A)
+                                           4
+           2               2         3 2               2
+ + ((D + 2)  - C - B - 2 A)  + ((D + -)  - C - 2 B - A)
+                                     2
+           2             2
+ + ((D + 1)  - C - B - A) )/5
+</pre></td></tr></table><table><tr><td>&nbsp;</td><td><pre class="example">(%i3) mse : lsquares_mse (M, [z, x, y], (z + D)^2 = A*x + B*y + C);
+           5
+          ====
+          \                 2                         2
+           &gt;    ((D + M    )  - C - M     B - M     A)
+          /            i, 1          i, 3      i, 2
+          ====
+          i = 1
+(%o3)     ---------------------------------------------
+                                5
+</pre></td></tr></table><table><tr><td>&nbsp;</td><td><pre class="example">(%i4) diff (mse, D);
+         5
+        ====
+        \                             2
+      4  &gt;    (D + M    ) ((D + M    )  - C - M     B - M     A)
+        /           i, 1         i, 1          i, 3      i, 2
+        ====
+        i = 1
+(%o4) ----------------------------------------------------------
+                                  5
+</pre></td></tr></table><table><tr><td>&nbsp;</td><td><pre class="example">(%i5) ''mse, nouns;
+               2                 2         9 2               2
+(%o5) (((D + 3)  - C - 2 B - 2 A)  + ((D + -)  - C - B - 2 A)
+                                           4
+           2               2         3 2               2
+ + ((D + 2)  - C - B - 2 A)  + ((D + -)  - C - 2 B - A)
+                                     2
+           2             2
+ + ((D + 1)  - C - B - A) )/5
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="lsquares_005fresiduals"></a>
+<a name="Item_003a-lsquares_005fresiduals"></a>
+</p><dl>
+<dt><u>関数:</u> <b>lsquares_residuals</b><i> (<var>D</var>, <var>x</var>, <var>e</var>, <var>a</var>)</i>
+<a name="IDX2306"></a>
+</dt>
+<dd><p>指定されたパラメータ <var>a</var>とデータ <var>D</var>での方程式 <var>e</var>に関する残差を返します。
+</p>
+
+<p><var>D</var>は行列で、 <var>x</var>は変数のリスト、 <var>e</var>は方程式か一般式です;
+もし方程式でないなら、 <var>e</var>は <code><var>e</var> = 0</code>であるかのように扱われます。
+<var>a</var>は <var>x</var>を除いた <var>e</var>の任意の自由変数に値を指定する方程式のリストです。
+</p>
+<p>残差は以下のように定義されます:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">                        lhs(e ) - rhs(e )
+                             i         i
+</pre></td></tr></table>
+<p>ここで、 <code><var>e</var>[i]</code>は、
+<var>a</var>から任意の残りの自由変数を割り当てて、
+<code>i</code>番目のデータ <code><var>D</var>[i]</code>から値を割り当てられた
+<var>x</var>の中の変数に対して評価された方程式 <var>e</var>です。
+</p>
+<p><code>load(lsquares)</code>はこの関数をロードします。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) M : matrix (
+         [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
+                           [ 1  1  1 ]
+                           [         ]
+                           [ 3       ]
+                           [ -  1  2 ]
+                           [ 2       ]
+                           [         ]
+(%o2)                      [ 9       ]
+                           [ -  2  1 ]
+                           [ 4       ]
+                           [         ]
+                           [ 3  2  2 ]
+                           [         ]
+                           [ 2  2  1 ]
+(%i3) a : lsquares_estimates (
+          M, [z,x,y], (z+D)^2 = A*x+B*y+C, [A,B,C,D]);
+                  59        27      10921        107
+(%o3)     [[A = - --, B = - --, C = -----, D = - ---]]
+                  16        16      1024         32
+(%i4) lsquares_residuals (
+          M, [z,x,y], (z+D)^2 = A*x+B*y+C, first(a));
+                     13    13    13  13  13
+(%o4)               [--, - --, - --, --, --]
+                     64    64    32  64  64
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="lsquares_005fresidual_005fmse"></a>
+<a name="Item_003a-lsquares_005fresidual_005fmse"></a>
+</p><dl>
+<dt><u>関数:</u> <b>lsquares_residual_mse</b><i> (<var>D</var>, <var>x</var>, <var>e</var>, <var>a</var>)</i>
+<a name="IDX2307"></a>
+</dt>
+<dd><p>指定されたパラメータ <var>a</var>とデータ <var>D</var>での方程式
+<var>e</var>に関する残差平均二乗誤差を返します。
+</p>
+<p>残差 MSEは以下のように定義されます:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">                    n
+                   ====
+               1   \                        2
+               -    &gt;    (lhs(e ) - rhs(e ))
+               n   /           i         i
+                   ====
+                   i = 1
+</pre></td></tr></table>
+<p>ここで、
+<code><var>e</var>[i]</code>は、
+<var>a</var>から任意の残りの自由変数を割り当てて、
+<code>i</code>番目のデータ <code><var>D</var>[i]</code>から値を割り当てられた
+<var>x</var>の中の変数に対して評価された方程式 <var>e</var>です。
+</p>
+<p><code>load(lsquares)</code>はこの関数をロードします。
+</p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lsquares)$
+(%i2) M : matrix (
+         [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
+                           [ 1  1  1 ]
+                           [         ]
+                           [ 3       ]
+                           [ -  1  2 ]
+                           [ 2       ]
+                           [         ]
+(%o2)                      [ 9       ]
+                           [ -  2  1 ]
+                           [ 4       ]
+                           [         ]
+                           [ 3  2  2 ]
+                           [         ]
+                           [ 2  2  1 ]
+(%i3) a : lsquares_estimates (
+       M, [z,x,y], (z+D)^2 = A*x+B*y+C, [A,B,C,D]);
+                  59        27      10921        107
+(%o3)     [[A = - --, B = - --, C = -----, D = - ---]]
+                  16        16      1024         32
+(%i4) lsquares_residual_mse (
+       M, [z,x,y], (z + D)^2 = A*x + B*y + C, first (a));
+                              169
+(%o4)                         ----
+                              2560
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="plsquares"></a>
+<a name="Item_003a-plsquares"></a>
+</p><dl>
+<dt><u>関数:</u> <b>plsquares</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plsquares</tt> (<var>Mat</var>,<var>VarList</var>,<var>depvars</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plsquares</tt> (<var>Mat</var>,<var>VarList</var>,<var>depvars</var>,<var>maxexpon</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plsquares</tt> (<var>Mat</var>,<var>VarList</var>,<var>depvars</var>,<var>maxexpon</var>,<var>maxdegree</var>)</i>
+<a name="IDX2308"></a>
+</dt>
+<dd><p>「最小二乗」法によるデータ表の多変数多項式調整。
+<var>Mat</var>はデータを含む行列であり、
+<var>VarList</var>は変数名 (Mat列それぞれの名前ですが、
+Mat列を無視する際には変数名の代わりに&quot;-&quot;)のリストであり、
+<var>depvars</var>は従属変数の名前か、
+従属変数の1つ以上の名前(その名前 <var>VarList</var>の中になければいけません)のリストであり、
+<var>maxexpon</var>はオプションの、独立変数それぞれの最大指数(デフォルト1)であり、
+<var>maxdegree</var>はオプションの最大多項式次数(デフォルトで <var>maxexpon</var>)です;
+それぞれの項の指数の和は <var>maxdegree</var>以下でなければいけないことに注意してください。
+もし <code>maxdgree = 0</code>なら制限は適用されません。
+</p>
+<p>もし <var>depvars</var>が(リストではなく)従属変数の名前なら、
+<code>plsquares</code>は調整された多項式を返します。
+もし <var>depvars</var>が1つ以上の従属変数のリストなら、
+<code>plsquares</code>は調整された多項式のリストを返します。
+適合度について知らせるために決定係数が表示されます。
+それは 0(無相関)から 1(厳密相関)までの範囲です。
+これらの値はグローバル変数 <var>DETCOEF</var>(もし
+<var>depvars</var>がリストならリスト)にも保管されます。
+</p>
+
+<p>多変数線形調整の簡単な例:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;plsquares&quot;)$
+
+(%i2) plsquares(matrix([1,2,0],[3,5,4],[4,7,9],[5,8,10]),
+                [x,y,z],z);
+     Determination Coefficient for z = .9897039897039897
+                       11 y - 9 x - 14
+(%o2)              z = ---------------
+                              3
+</pre></td></tr></table>
+<p>次数制限のない同じ例:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i3) plsquares(matrix([1,2,0],[3,5,4],[4,7,9],[5,8,10]),
+                [x,y,z],z,1,0);
+     Determination Coefficient for z = 1.0
+                    x y + 23 y - 29 x - 19
+(%o3)           z = ----------------------
+                              6
+</pre></td></tr></table>
+<p>N面ポリゴンは何本の対角線を持ちますか？
+いくつの多項式次数を使うべきですか？
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i4) plsquares(matrix([3,0],[4,2],[5,5],[6,9],[7,14],[8,20]),
+                [N,diagonals],diagonals,5);
+     Determination Coefficient for diagonals = 1.0
+                                2
+                               N  - 3 N
+(%o4)              diagonals = --------
+                                  2
+(%i5) ev(%, N=9);   /* Testing for a 9 sides polygon */
+(%o5)                 diagonals = 27
+</pre></td></tr></table>
+<p>何通りの方法でn掛けnのチェス盤に2つのクィーンを取られないように置けますか？
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i6) plsquares(matrix([0,0],[1,0],[2,0],[3,8],[4,44]),
+                [n,positions],[positions],4);
+     Determination Coefficient for [positions] = [1.0]
+                         4       3      2
+                      3 n  - 10 n  + 9 n  - 2 n
+(%o6)    [positions = -------------------------]
+                                  6
+(%i7) ev(%[1], n=8); /* Testing for a (8 x 8) chessboard */
+(%o7)                positions = 1288
+</pre></td></tr></table>
+<p>6つの従属変数を持つ例:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i8) mtrx:matrix([0,0,0,0,0,1,1,1],[0,1,0,1,1,1,0,0],
+                  [1,0,0,1,1,1,0,0],[1,1,1,1,0,0,0,1])$
+(%i8) plsquares(mtrx,[a,b,_And,_Or,_Xor,_Nand,_Nor,_Nxor],
+                     [_And,_Or,_Xor,_Nand,_Nor,_Nxor],1,0);
+      Determination Coefficient for
+[_And, _Or, _Xor, _Nand, _Nor, _Nxor] =
+[1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+(%o2) [_And = a b, _Or = - a b + b + a,
+_Xor = - 2 a b + b + a, _Nand = 1 - a b,
+_Nor = a b - b - a + 1, _Nxor = 2 a b - b - a + 1]
+</pre></td></tr></table>
+<p>この関数を使うには最初に <code>load(&quot;lsquares&quot;)</code>と書いてください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-mnewton">Package mnewton</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-lsquares">Package lsquares</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
-</p></dd></dl>
-
-<p><a name="function_005fmnewton"></a>
 </p>
-<dl>
-<dt><u>関数:</u> <b>mnewton</b><i> (<var>FuncList</var>,<var>VarList</var>,<var>GuessList</var>)</i>
-<a name="IDX2280"></a>
-</dt>
-<dd><p>Newton法を使った複数非線形関数の解。
-<var>FuncList</var>は解くべき関数のリスト、
-<var>VarList</var>は変数名のリスト、
-<var>GuessList</var>は初期近似のリストです。
-</p>
-<p><code>solve()</code>が返すのと同じフォーマットで解を返されます。
-もし解が見つからないなら、<code>[]</code>を返します。
-</p>
-<p>グローバル変数 <code>newtonepsilon</code>と
-<code>newtonmaxiter</code>がこの関数を制御します。
-</p>
-<pre class="example">(%i1) load(&quot;mnewton&quot;)$
+</dd></dl>
 
-(%i2) mnewton([x1+3*log(x1)-x2^2, 2*x1^2-x1*x2-5*x1+1],
-              [x1, x2], [5, 5]);
-(%o2) [[x1 = 3.756834008012769, x2 = 2.779849592817897]]
-(%i3) mnewton([2*a^a-5],[a],[1]);
-(%o3)             [[a = 1.70927556786144]]
-(%i4) mnewton([2*3^u-v/u-5, u+2^v-4], [u, v], [2, 2]);
-(%o4) [[u = 1.066618389595407, v = 1.552564766841786]]
-</pre>
-<p>変数 <code>newtonepsilon</code>は近似の精度を制御します。
-それはまた、計算を浮動小数点で実行するか、多倍長浮動小数点で実行するかを制御します。
-</p>
-<pre class="example">(%i1) (load(&quot;mnewton&quot;), fpprec : 25, newtonepsilon : bfloat(10^(-fpprec+5)))$
-
-(%i2) mnewton([2*3^u-v/u-5, u+2^v-4], [u, v], [2, 2]);
-(%o2) [[u = 1.066618389595406772591173b0, v = 1.552564766841786450100418b0]]
-</pre>
-<p>この関数を使うためには最初に <code>load(&quot;mnewton&quot;)</code>と書いてください。
-<code>newtonepsilon</code>と <code>newtonmaxiter</code>も参照してください。
-</p>
-<div class=categorybox>
-
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-mnewton">Package mnewton</a>
-</div>
-</p></dd></dl>
-
-
-<p><a name="Item_003a-numericalio"></a>
+<p><a name="Item_003a-minpack_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC325" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC328" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

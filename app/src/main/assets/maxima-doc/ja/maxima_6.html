@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 6. Expressions</title>
+<title>Maxima 5.39.0 Manual: 6. Expressions</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 6. Expressions">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 6. Expressions">
+<meta name="description" content="Maxima 5.39.0 Manual: 6. Expressions">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 6. Expressions">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Expressions"></a>
 <a name="SEC30"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC31" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_5.html#SEC11" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_7.html#SEC36" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 6. Expressions </h1>
@@ -119,15 +134,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC32" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC30" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC30" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC30" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_7.html#SEC36" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 6.1 Introduction to Expressions </h2>
@@ -135,39 +150,39 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <p>変数名として使えないたくさんの予約語があります。
 これらを使うと不可解な構文法エラーの原因となります。
 </p>
-<pre class="example">integrate            next           from                 diff
+<table><tr><td>&nbsp;</td><td><pre class="example">integrate            next           from                 diff
 in                   at             limit                sum
 for                  and            elseif               then
 else                 do             or                   if
 unless               product        while                thru
 step
-</pre>
+</pre></td></tr></table>
 <p>Maximaのほとんどのものは式です。
 括弧で囲みコンマで区切ることで、式の列が構成できます。
 これは <b>C</b>言語の<i>コンマ式</i>に似ています。
 </p>
-<pre class="example">(%i1) x: 3$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) x: 3$
 (%i2) (x: x+1, x: x^2);
 (%o2)                          16
 (%i3) (if (x &gt; 17) then 2 else 4);
 (%o3)                           4
 (%i4) (if (x &gt; 17) then x: 2 else y: 4, y+x);
 (%o4)                          20
-</pre>
+</pre></td></tr></table>
 <p>Maximaではループでさえ式です。ループが返す値はあまり役に立たない<code>done</code>ですけれども。
 </p>
-<pre class="example">(%i1) y: (x: 1, for i from 1 thru 10 do (x: x*i))$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) y: (x: 1, for i from 1 thru 10 do (x: x*i))$
 (%i2) y;
 (%o2)                         done
-</pre>
+</pre></td></tr></table>
 <p>ということなので、本当にしたいことはたぶん、<i>コンマ式</i>に
 実際に値を返す３番目の項を含めることです。
 </p>
 
-<pre class="example">(%i3) y: (x: 1, for i from 1 thru 10 do (x: x*i), x)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) y: (x: 1, for i from 1 thru 10 do (x: x*i), x)$
 (%i4) y;
 (%o4)                        3628800
-</pre>
+</pre></td></tr></table>
 <p><a name="Item_003a-Nouns-and-Verbs"></a>
 </p><hr size="6">
 <a name="Nouns-and-Verbs"></a>
@@ -177,15 +192,15 @@ step
 <td valign="middle" align="left">[<a href="#SEC33" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC30" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC30" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC30" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_7.html#SEC36" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 6.2 Nouns and Verbs </h2>
@@ -212,7 +227,7 @@ Maximaは先頭にクォートマーク<code>'</code>をつけて名詞形を表
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) foo (x) := x^2;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) foo (x) := x^2;
                                      2
 (%o1)                     foo(x) := x
 (%i2) foo (42);
@@ -224,15 +239,13 @@ Maximaは先頭にクォートマーク<code>'</code>をつけて名詞形を表
 (%i5) declare (bar, noun);
 (%o5)                         done
 (%i6) bar (x) := x/17;
-                                     x
-(%o6)                    ''bar(x) := --
-                                     17
+                                    x
+(%o6)                     bar(x) := --
+                                    17
 (%i7) bar (52);
 (%o7)                        bar(52)
 (%i8) bar (52), nouns;
-                               52
-(%o8)                          --
-                               17
+(%o8)                        bar(52)
 (%i9) integrate (1/x, x, 1, 42);
 (%o9)                        log(42)
 (%i10) 'integrate (1/x, x, 1, 42);
@@ -245,11 +258,11 @@ Maximaは先頭にクォートマーク<code>'</code>をつけて名詞形を表
                              1
 (%i11) ev (%, nouns);
 (%o11)                       log(42)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Evaluation">Evaluation</a> &middot;
-<a href="maxima_100.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Evaluation">Evaluation</a> &middot;
+<a href="maxima_106.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
 </div>
 </p>
 <p><a name="Item_003a-Identifiers"></a>
@@ -261,15 +274,15 @@ Maximaは先頭にクォートマーク<code>'</code>をつけて名詞形を表
 <td valign="middle" align="left">[<a href="#SEC34" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC30" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC30" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC30" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_7.html#SEC36" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 6.3 Identifiers </h2>
@@ -286,15 +299,15 @@ Maximaは先頭にクォートマーク<code>'</code>をつけて名詞形を表
 </p>
 <p>Maximaは大文字小文字を区別します。
 識別子<code>foo</code>, <code>FOO</code>, と<code>Foo</code>は別の物です。
-この点に関して<a href="maxima_37.html#SEC202">Lisp and Maxima</a>を参照してください。
+この点に関して<a href="maxima_37.html#SEC201">Lisp and Maxima</a>を参照してください。
 </p>
 <p>Maximaの識別子はドル記号<code>$</code>で始まるLispのシンボルです。
 Maximaの中で現れる時、他の任意のLispシンボルはクエスチョンマーク<code>?</code>で始まります。
-この点に関して<a href="maxima_37.html#SEC202">Lisp and Maxima</a>を参照してください。
+この点に関して<a href="maxima_37.html#SEC201">Lisp and Maxima</a>を参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) %an_ordinary_identifier42;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) %an_ordinary_identifier42;
 (%o1)               %an_ordinary_identifier42
 (%i2) embedded\ spaces\ in\ an\ identifier;
 (%o2)           embedded spaces in an identifier
@@ -320,10 +333,10 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 *MY-LISP-VARIABLE*
 (%i12) ?\*my\-lisp\-variable\*;
 (%o12)                         foo
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Syntax">Syntax</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Syntax">Syntax</a>
 </div>
 </p>
 <p><a name="Item_003a-Inequality"></a>
@@ -335,15 +348,15 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <td valign="middle" align="left">[<a href="#SEC35" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC30" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC30" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC30" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_7.html#SEC36" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 6.4 Inequality </h2>
@@ -360,15 +373,15 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <td valign="middle" align="left">[<a href="maxima_7.html#SEC36" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC30" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC30" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC30" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_7.html#SEC36" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 6.5 Functions and Variables for Expressions </h2>
@@ -378,14 +391,14 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-alias"></a>
 </p><dl>
 <dt><u>関数:</u> <b>alias</b><i> (<var>new_name_1</var>, <var>old_name_1</var>, &hellip;, <var>new_name_n</var>, <var>old_name_n</var>)</i>
-<a name="IDX157"></a>
+<a name="IDX164"></a>
 </dt>
 <dd><p>(利用者もしくはシステム)関数や変数、配列等に対して別名を与えます。
 任意の偶数個の引数を取ります。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -393,7 +406,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-aliases"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>aliases</b>
-<a name="IDX158"></a>
+<a name="IDX165"></a>
 </dt>
 <dd><p>デフォルト値: <code>[]</code>
 </p>
@@ -405,8 +418,8 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -415,32 +428,32 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-allbut"></a>
 </p><dl>
 <dt><u>キーワード:</u> <b>allbut</b>
-<a name="IDX159"></a>
+<a name="IDX166"></a>
 </dt>
 <dd><p><code>part</code>コマンド(すなわち、<code><a href="#part">part</a></code>,<code><a href="#inpart">inpart</a></code>,<code><a href="#substpart">substpart</a></code>,
 <code><a href="#substinpart">substinpart</a></code>,<code><a href="#dpart">dpart</a></code>, <code><a href="#lpart">lpart</a></code>)と共に動作します。例えば、
 </p>
-<pre class="example">(%i1) expr : e + d + c + b + a;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr : e + d + c + b + a;
 (%o1)                   e + d + c + b + a
 (%i2) part (expr, [2, 5]);
 (%o2)                         d + a
-</pre>
+</pre></td></tr></table>
 <p>一方、
 </p>
-<pre class="example">(%i1) expr : e + d + c + b + a;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr : e + d + c + b + a;
 (%o1)                   e + d + c + b + a
 (%i2) part (expr, allbut (2, 5));
 (%o2)                       e + c + b
-</pre>
+</pre></td></tr></table>
 <p><code><a href="maxima_4.html#kill">kill</a></code>も<code>allbut</code>を認識します。
 </p>
-<pre class="example">(%i1) [aa : 11, bb : 22, cc : 33, dd : 44, ee : 55];
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) [aa : 11, bb : 22, cc : 33, dd : 44, ee : 55];
 (%o1)                 [11, 22, 33, 44, 55]
 (%i2) kill (allbut (cc, dd));
 (%o0)                         done
 (%i1) [aa, bb, cc, dd];
 (%o1)                   [aa, bb, 33, 44]
-</pre>
+</pre></td></tr></table>
 <p><code>kill(allbut(<var>a_1</var>, <var>a_2</var>, ...))</code>は、
 シンボル<var>a_1</var>, <var>a_2</var>, &hellip;をキルしないよう除外して
 <code>kill(all)</code>を実行します。
@@ -452,7 +465,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-args"></a>
 </p><dl>
 <dt><u>関数:</u> <b>args</b><i> (<var>expr</var>)</i>
-<a name="IDX160"></a>
+<a name="IDX167"></a>
 </dt>
 <dd><p><code>expr</code>の引数のリストを返します。
 ここで <code>expr</code>はアトム以外のいかなる種類の式を取り得ます。
@@ -462,11 +475,30 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <p>リストの中の項目の順序はグローバルフラグ<code><a href="#inflag">inflag</a></code>に依存するかもしれません。
 </p>
 <p><code>args (<var>expr</var>)</code>は <code>substpart (&quot;[&quot;, <var>expr</var>, 0)</code>と同値です。
-<code><a href="#substpart">substpart</a></code>と<code><a href="#op">op</a></code>も参照してください。
+<code><a href="#substpart">substpart</a></code>と <code><a href="maxima_36.html#apply">apply</a></code>, <code><a href="maxima_36.html#funmake">funmake</a></code>, <code><a href="#op">op</a></code>も参照してください。
 </p>
+<p>行列を入れ子のリストに変換する方法:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) M:matrix([1,2],[3,4]);
+                            [ 1  2 ]
+(%o1)                       [      ]
+                            [ 3  4 ]
+(%i2) args(M);
+(%o2)                   [[1, 2], [3, 4]]
+</pre></td></tr></table>
+<p>maximaは <code>n</code>項の和を内部的に <code>n</code>個の引数の加算コマンドとして扱うので、
+args()は和の項のリストを抽出できます:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) a+b+c;
+(%o1)                       c + b + a
+(%i2) args(%);
+(%o2)                       [c, b, a]
+</pre></td></tr></table>
+
+
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -475,7 +507,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-atom"></a>
 </p><dl>
 <dt><u>関数:</u> <b>atom</b><i> (<var>expr</var>)</i>
-<a name="IDX161"></a>
+<a name="IDX168"></a>
 </dt>
 <dd><p>もし <var>expr</var>がアトム(すなわち、数や名前や文字)なら
 <code>true</code>、そうでなければ <code>false</code>を返します。
@@ -485,8 +517,8 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_100.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -494,7 +526,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-box"></a>
 </p><dl>
 <dt><u>関数:</u> <b>box</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>box</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>box</tt> (<var>expr</var>, <var>a</var>)</i>
-<a name="IDX162"></a>
+<a name="IDX169"></a>
 </dt>
 <dd><p>枠で囲んだ<var>expr</var>を返します。
 返り値は、演算子として<code>box</code>を持ち引数として<var>expr</var>を持つ式です。
@@ -513,7 +545,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) box (a^2 + b^2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) box (a^2 + b^2);
                             &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
                             &quot; 2    2&quot;
 (%o1)                       &quot;b  + a &quot;
@@ -542,10 +574,10 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
                         -----------------
 (%o8)                   -cos(y) + sin(x)-
                         -----------------
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -553,7 +585,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-boxchar"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>boxchar</b>
-<a name="IDX163"></a>
+<a name="IDX170"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;</code>
 </p>
@@ -565,7 +597,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -574,7 +606,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-collapse"></a>
 </p><dl>
 <dt><u>関数:</u> <b>collapse</b><i> (<var>expr</var>)</i>
-<a name="IDX164"></a>
+<a name="IDX171"></a>
 </dt>
 <dd><p>共通の（すなわち等しい）部分式すべてを共用する（すなわち、同じセルを使用する）ことで、
 <var>expr</var>を縮約しスペースを節約します。
@@ -588,7 +620,43 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
+</div>
+</p></dd></dl>
+
+<p><a name="copy"></a>
+<a name="Item_003a-copy"></a>
+</p><dl>
+<dt><u>関数:</u> <b>copy</b><i> (<var>e</var>)</i>
+<a name="IDX172"></a>
+</dt>
+<dd><p>Maxima式 <var>e</var>のコピーを返します。
+<var>e</var>は任意の Maxima式ですが、コピー関数は
+<var>e</var>はリストか行列の時最も役に立ちます; 以下を考えてください:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) m : [1,[2,3]]$
+(%i2) mm : m$
+(%i3) mm[2][1] : x$
+(%i4) m;
+(%o4)                      [1,[x,3]]
+(%i5) mm;
+(%o5)                      [1,[x,3]]
+</pre></td></tr></table>
+<p>同じ実験をしてみましょう。しかし今回 <var>mm</var>は <var>m</var>のコピーとします。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i6) m : [1,[2,3]]$
+(%i7) mm : copy(m)$
+(%i8) mm[2][1] : x$
+(%i9) m;
+(%o9)                     [1,[2,3]]
+(%i10) mm;
+(%o10)                    [1,[x,3]]
+</pre></td></tr></table>
+<p>今回、 <var>mm</var>への割り当ては <var>m</var>の値を変えません。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -597,10 +665,10 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-disolate"></a>
 </p><dl>
 <dt><u>関数:</u> <b>disolate</b><i> (<var>expr</var>, <var>x_1</var>, &hellip;, <var>x_n</var>)</i>
-<a name="IDX165"></a>
+<a name="IDX173"></a>
 </dt>
 <dd><p>ユーザーに複数の変数を同時に隔離できるようにすることを除いて、
-<code>isolate (<var>expr</var>, <var>x</var>)</code>に似ています。
+<code><a href="#isolate">isolate</a></code><code> (<var>expr</var>, <var>x</var>)</code>に似ています。
 例えば、もし多重積分の中で変数を変えようとしていて
 それが２つ以上の積分変数を含んだ変数変換なら、これは役立つかもしれません。
 この関数は <tt>`simplification/disol.mac'</tt>から自動ロードされます。
@@ -608,7 +676,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -616,7 +684,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-dispform"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dispform</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispform</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispform</tt> (<var>expr</var>, all)</i>
-<a name="IDX166"></a>
+<a name="IDX174"></a>
 </dt>
 <dd><p><var>expr</var>の外部表現を返します。
 </p>
@@ -631,7 +699,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <p><code>- x</code>の内部表現は「-1掛ける<code>x</code>」ですが、
 外部表現は「マイナス<code>x</code>」です。
 </p>
-<pre class="example">(%i1) - x;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) - x;
 (%o1)                          - x
 (%i2) ?format (true, &quot;~S~%&quot;, %);
 ((MTIMES SIMP) -1 $X)
@@ -641,11 +709,11 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 (%i4) ?format (true, &quot;~S~%&quot;, %);
 ((MMINUS SIMP) $X)
 (%o4)                         false
-</pre>
+</pre></td></tr></table>
 <p><code>sqrt(x)</code>の内部表現は「<code>x</code>の1/2乗」ですが、
 外部表現は「<code>x</code>の平方根」です。
 </p>
-<pre class="example">(%i1) sqrt (x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sqrt (x);
 (%o1)                        sqrt(x)
 (%i2) ?format (true, &quot;~S~%&quot;, %);
 ((MEXPT SIMP) $X ((RAT SIMP) 1 2))
@@ -655,10 +723,10 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 (%i4) ?format (true, &quot;~S~%&quot;, %);
 ((%SQRT SIMP) $X)
 (%o4)                         false
-</pre>
+</pre></td></tr></table>
 <p>オプション引数<code>all</code>の使用。
 </p>
-<pre class="example">(%i1) expr : sin (sqrt (x));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr : sin (sqrt (x));
 (%o1)                     sin(sqrt(x))
 (%i2) freeof (sqrt, expr);
 (%o2)                         true
@@ -666,10 +734,10 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 (%o3)                         true
 (%i4) freeof (sqrt, dispform (expr, all));
 (%o4)                         false
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -678,24 +746,24 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-dpart"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dpart</b><i> (<var>expr</var>, <var>n_1</var>, &hellip;, <var>n_k</var>)</i>
-<a name="IDX167"></a>
+<a name="IDX175"></a>
 </dt>
 <dd><p><code><a href="#part">part</a></code>と同じ部分式を選択しますが、
 その部分式を値として返すだけの代わりに
 枠の中に表示されて選択された部分式を持つ式全体を返します。
 枠は実際に式の一部です。
 </p>
-<pre class="example">(%i1) dpart (x+y/z^2, 1, 2, 1);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) dpart (x+y/z^2, 1, 2, 1);
                              y
 (%o1)                       ---- + x
                                2
                             &quot;&quot;&quot;
                             &quot;z&quot;
                             &quot;&quot;&quot;
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -703,7 +771,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-exptisolate"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>exptisolate</b>
-<a name="IDX168"></a>
+<a name="IDX176"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -713,7 +781,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -721,31 +789,31 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-exptsubst"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>exptsubst</b>
-<a name="IDX169"></a>
+<a name="IDX177"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
 <p><code>exptsubst</code>が<code>true</code>の時、
 <code>%e^(a x)</code>の中の<code>%e^x</code>へ<code>y</code>を代入するような代入を許します。
 </p>
-<pre class="example">(%i1) %e^(a*x);
-                                       a x
-(%o1)                                %e
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) %e^(a*x);
+                                a x
+(%o1)                         %e
 (%i2) exptsubst;
-(%o2)                                false
+(%o2)                         false
 (%i3) subst(y, %e^x, %e^(a*x));
-                                       a x
-(%o3)                                %e
+                                a x
+(%o3)                         %e
 (%i4) exptsubst: not exptsubst;
-(%o4)                                true
+(%o4)                         true
 (%i5) subst(y, %e^x, %e^(a*x));
-                                       a
-(%o5)                                 y
-</pre>
+                                a
+(%o5)                          y
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Exponential-and-logarithm-functions">Exponential and logarithm functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Exponential-and-logarithm-functions">Exponential and logarithm functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -753,7 +821,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-freeof"></a>
 </p><dl>
 <dt><u>関数:</u> <b>freeof</b><i> (<var>x_1</var>, &hellip;, <var>x_n</var>, <var>expr</var>)</i>
-<a name="IDX170"></a>
+<a name="IDX178"></a>
 </dt>
 <dd><p>もし<var>x_1</var>と等しい<var>expr</var>の部分式がないか、
 <var>x_1</var>が<var>expr</var>の中でダミー変数としてのみ現れるか、
@@ -790,7 +858,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <code>freeof (a, b, expr)</code>は
 <code>freeof (a, expr) and freeof (b, expr)</code>と同値です。
 </p>
-<pre class="example">(%i1) expr: z^3 * cos (a[1]) * b^(c+d);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr: z^3 * cos (a[1]) * b^(c+d);
                                  d + c  3
 (%o1)                   cos(a ) b      z
                              1
@@ -808,18 +876,18 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 (%o7)                         false
 (%i8) freeof (w, sin, a[2], sin (a[2]), b*(c+d), expr);
 (%o8)                         true
-</pre>
+</pre></td></tr></table>
 <p><code>freeof</code>は引数を評価します。
 </p>
-<pre class="example">(%i1) expr: (a+b)^5$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr: (a+b)^5$
 (%i2) c: a$
 (%i3) freeof (c, expr);
 (%o3)                         false
-</pre>
+</pre></td></tr></table>
 <p><code>freeof</code>は同値の式を考慮しません。
 整理は、同値ですが異なる式を生成します。
 </p>
-<pre class="example">(%i1) expr: (a+b)^5$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr: (a+b)^5$
 (%i2) expand (expr);
           5        4       2  3       3  2      4      5
 (%o2)    b  + 5 a b  + 10 a  b  + 10 a  b  + 5 a  b + a
@@ -832,20 +900,20 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 (%o5)                          %e
 (%i6) freeof (exp, exp (x));
 (%o6)                         true
-</pre>
+</pre></td></tr></table>
 <p>和や定積分はダミー変数から自由です。
 不定積分は積分変数から自由ではありません。
 </p>
-<pre class="example">(%i1) freeof (i, 'sum (f(i), i, 0, n));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) freeof (i, 'sum (f(i), i, 0, n));
 (%o1)                         true
 (%i2) freeof (x, 'integrate (x^2, x, 0, 1));
 (%o2)                         true
 (%i3) freeof (x, 'integrate (x^2, x));
 (%o3)                         false
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -853,7 +921,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-inflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>inflag</b>
-<a name="IDX171"></a>
+<a name="IDX179"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -877,7 +945,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -886,7 +954,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-inpart"></a>
 </p><dl>
 <dt><u>関数:</u> <b>inpart</b><i> (<var>expr</var>, <var>n_1</var>, ..., <var>n_k</var>)</i>
-<a name="IDX172"></a>
+<a name="IDX180"></a>
 </dt>
 <dd><p><code>part</code>に似ていますが、表示形式ではなく内部表現上で機能し、
 フォーマットが実行されないのでより速いかもしれません。
@@ -901,7 +969,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) x + y + w*z;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) x + y + w*z;
 (%o1)                      w z + y + x
 (%i2) inpart (%, 3, 2);
 (%o2)                           z
@@ -913,10 +981,10 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
                       x -&gt; 0-
 (%i5) inpart (%, 1, 2);
 (%o5)                       g(x + 1)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -925,7 +993,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-isolate"></a>
 </p><dl>
 <dt><u>関数:</u> <b>isolate</b><i> (<var>expr</var>, <var>x</var>)</i>
-<a name="IDX173"></a>
+<a name="IDX181"></a>
 </dt>
 <dd><p><var>x</var>を含まない部分式を
 (<code>%t1</code>, <code>%t2</code>, ...のようなアトムシンボルの)中間式ラベルで置き換えた
@@ -940,12 +1008,14 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <p>もし<code>isolate_wrt_times</code>が<code>true</code>なら、
 <code>isolate</code>は積に関しても隔離します。
 <code><a href="#isolate_005fwrt_005ftimes">isolate_wrt_times</a></code>を参照してください。
+<code><a href="#disolate">disolate</a></code>も参照してください。
 </p>
+
 <p>サンプルを見るには <code>example (isolate)</code>を実行してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -954,7 +1024,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-isolate_005fwrt_005ftimes"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>isolate_wrt_times</b>
-<a name="IDX174"></a>
+<a name="IDX182"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -962,7 +1032,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <code>isolate</code>は積に関しても隔離します。
 例えば、スイッチの両方の設定を比較すると、
 </p>
-<pre class="example">(%i1) isolate_wrt_times: true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) isolate_wrt_times: true$
 (%i2) isolate (expand ((a+b+c)^2), c);
 
 (%t2)                          2 a
@@ -979,10 +1049,10 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 (%i5) isolate (expand ((a+b+c)^2), c);
                      2
 (%o5)               c  + 2 b c + 2 a c + %t4
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -991,7 +1061,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-listconstvars"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>listconstvars</b>
-<a name="IDX175"></a>
+<a name="IDX183"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1005,7 +1075,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1013,7 +1083,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-listdummyvars"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>listdummyvars</b>
-<a name="IDX176"></a>
+<a name="IDX184"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1024,16 +1094,16 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) listdummyvars: true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) listdummyvars: true$
 (%i2) listofvars ('sum(f(i), i, 0, n));
 (%o2)                        [i, n]
 (%i3) listdummyvars: false$
 (%i4) listofvars ('sum(f(i), i, 0, n));
 (%o4)                          [n]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1042,7 +1112,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-listofvars"></a>
 </p><dl>
 <dt><u>関数:</u> <b>listofvars</b><i> (<var>expr</var>)</i>
-<a name="IDX177"></a>
+<a name="IDX185"></a>
 </dt>
 <dd><p><var>expr</var>の中の変数のリストを返します。
 </p>
@@ -1055,13 +1125,13 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <p>変数のリストのなかの「ダミー変数」を除外したり含めたりするには、オプション変数 <code><a href="#listdummyvars">listdummyvars</a></code>も参照してください。
 </p>
-<pre class="example">(%i1) listofvars (f (x[1]+y) / g^(2+a));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) listofvars (f (x[1]+y) / g^(2+a));
 (%o1)                     [g, a, x , y]
                                   1
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1070,7 +1140,7 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 <a name="Item_003a-lfreeof"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lfreeof</b><i> (<var>list</var>, <var>expr</var>)</i>
-<a name="IDX178"></a>
+<a name="IDX186"></a>
 </dt>
 <dd><p><var>list</var>のそれぞれのメンバー<var>m</var>に関して、
 <code>freeof (<var>m</var>, <var>expr</var>)</code>をコールします。
@@ -1079,16 +1149,16 @@ Maximaの中で現れる時、他の任意のLispシンボルはクエスチョ�
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) lfreeof ([ a, x], x^2+b);
-(%o1)                                false
-lfreeof ([ b, x], x^2+b);
-(%o2)                                false
-lfreeof ([ a, y], x^2+b);
-(%o3)                                true
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) lfreeof ([ a, x], x^2+b);
+(%o1)                         false
+(%i2) lfreeof ([ b, x], x^2+b);
+(%o2)                         false
+(%i3) lfreeof ([ a, y], x^2+b);
+(%o3)                         true
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1097,7 +1167,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-lpart"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lpart</b><i> (<var>label</var>, <var>expr</var>, <var>n_1</var>, &hellip;, <var>n_k</var>)</i>
-<a name="IDX179"></a>
+<a name="IDX187"></a>
 </dt>
 <dd><p><code>dpart</code>に似ていますが、ラベルされた枠を使います。
 ラベルされた枠は　<code>dpart</code>によって生成されたものに似ていますが、
@@ -1105,7 +1175,7 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1114,7 +1184,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-mainvar"></a>
 </p><dl>
 <dt><u>プロパティ:</u> <b>mainvar</b>
-<a name="IDX180"></a>
+<a name="IDX188"></a>
 </dt>
 <dd><p>変数を <code>mainvar</code>に宣言することができます。
 アトムに関する順序付けスケールは本質的に以下の通りです:
@@ -1134,8 +1204,8 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1144,15 +1214,28 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-noun"></a>
 </p><dl>
 <dt><u>宣言:</u> <b>noun</b>
-<a name="IDX181"></a>
+<a name="IDX189"></a>
 </dt>
 <dd><p><code>noun</code>は <code><a href="maxima_11.html#declare">declare</a></code>コマンドのオプションの１つです。
 関数を「名詞」に宣言するのに使います。
 「名詞」は自動的には評価されないことを意味します。
 </p>
+<p>例:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) factor (12345678);
+                             2
+(%o1)                     2 3  47 14593
+(%i2) declare (factor, noun);
+(%o2)                         done
+(%i3) factor (12345678);
+(%o3)                   factor(12345678)
+(%i4) ''%, nouns;
+                             2
+(%o4)                     2 3  47 14593
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
 </div>
 </p></dd></dl>
 
@@ -1161,7 +1244,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-noundisp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>noundisp</b>
-<a name="IDX182"></a>
+<a name="IDX190"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1171,8 +1254,8 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Display-flags-and-variables">Display flags and variables</a> &middot;
-<a href="maxima_100.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Display-flags-and-variables">Display flags and variables</a> &middot;
+<a href="maxima_106.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
 </div>
 </p></dd></dl>
 
@@ -1181,7 +1264,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-nounify"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nounify</b><i> (<var>f</var>)</i>
-<a name="IDX183"></a>
+<a name="IDX191"></a>
 </dt>
 <dd><p>関数名<var>f</var>の名詞形を返します。
 もし動詞関数の名前を名詞のように参照したいならこれが必要になります。
@@ -1193,7 +1276,7 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
 </div>
 </p></dd></dl>
 
@@ -1202,7 +1285,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-nterms"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nterms</b><i> (<var>expr</var>)</i>
-<a name="IDX184"></a>
+<a name="IDX192"></a>
 </dt>
 <dd><p>式が完全に展開されて項の打ち消しや結合が起こらないという仮定の下、
 <var>expr</var>が持つ項の数を返します。
@@ -1213,7 +1296,7 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1222,7 +1305,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-op"></a>
 </p><dl>
 <dt><u>関数:</u> <b>op</b><i> (<var>expr</var>)</i>
-<a name="IDX185"></a>
+<a name="IDX193"></a>
 </dt>
 <dd><p>式<var>expr</var>の主演算子を返します。
 <code>op (<var>expr</var>)</code>は<code>part (<var>expr</var>, 0)</code>と同値です。
@@ -1245,7 +1328,7 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) stringdisp: true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) stringdisp: true$
 (%i2) op (a * b * c);
 (%o2)                          &quot;*&quot;
 (%i3) op (a * b + c);
@@ -1271,11 +1354,11 @@ lfreeof ([ a, y], x^2+b);
                                x, y
 (%i13) op (G [u, v, w]);
 (%o13)                          G
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_100.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_106.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -1284,7 +1367,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-operatorp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>operatorp</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>operatorp</tt> (<var>expr</var>, <var>op</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>operatorp</tt> (<var>expr</var>, [<var>op_1</var>, &hellip;, <var>op_n</var>])</i>
-<a name="IDX186"></a>
+<a name="IDX194"></a>
 </dt>
 <dd><p>もし<var>op</var>が<var>expr</var>の演算子に等しければ、
 <code>operatorp (<var>expr</var>, <var>op</var>)</code>は<code>true</code>を返します。
@@ -1294,8 +1377,8 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Operators">Operators</a> &middot;
-<a href="maxima_100.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Operators">Operators</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -1304,7 +1387,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-opsubst"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>opsubst</b>
-<a name="IDX187"></a>
+<a name="IDX195"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1313,25 +1396,25 @@ lfreeof ([ a, y], x^2+b);
 例えば、
 <code>(opsubst: false, subst (x^2, r, r+r[0]))</code>はうまくいきます。
 </p>
-<pre class="example">(%i1) r+r[0];
-(%o1)                               r + r
-                                         0
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) r+r[0];
+(%o1)                        r + r
+                                  0
 (%i2) opsubst;
-(%o2)                                true
+(%o2)                         true
 (%i3) subst (x^2, r, r+r[0]);
-                                   2     2
-(%o3)                             x  + (x )
-                                           0
+                            2     2
+(%o3)                      x  + (x )
+                                    0
 (%i4) opsubst: not opsubst;
-(%o4)                                false
+(%o4)                         false
 (%i5) subst (x^2, r, r+r[0]);
-                                     2
-(%o5)                               x  + r
-                                          0
-</pre>
+                              2
+(%o5)                        x  + r
+                                   0
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1340,7 +1423,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-optimize"></a>
 </p><dl>
 <dt><u>関数:</u> <b>optimize</b><i> (<var>expr</var>)</i>
-<a name="IDX188"></a>
+<a name="IDX196"></a>
 </dt>
 <dd><p><var>expr</var>と同じ値と副作用を生成する式を返しますが、
 共通の部分式の再計算を避けることによってより効率的に行います。
@@ -1349,7 +1432,7 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1358,7 +1441,7 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-optimprefix"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>optimprefix</b>
-<a name="IDX189"></a>
+<a name="IDX197"></a>
 </dt>
 <dd><p>デフォルト値: <code>%</code>
 </p>
@@ -1367,7 +1450,7 @@ lfreeof ([ a, y], x^2+b);
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1376,10 +1459,10 @@ lfreeof ([ a, y], x^2+b);
 <a name="Item_003a-ordergreat"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ordergreat</b><i> (<var>v_1</var>, &hellip;, <var>v_n</var>)</i>
-<a name="IDX190"></a>
+<a name="IDX198"></a>
 </dt>
 <dt><u>関数:</u> <b>orderless</b><i> (<var>v_1</var>, &hellip;, <var>v_n</var>)</i>
-<a name="IDX191"></a>
+<a name="IDX199"></a>
 </dt>
 <dd><p><code>ordergreat</code>は、
 <var>v_1</var>が<var>v_2</var>に続き、<var>v_2</var>は、&hellip;, <var>v_n</var>に続き、
@@ -1402,7 +1485,7 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1411,10 +1494,10 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-ordergreatp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ordergreatp</b><i> (<var>expr_1</var>, <var>expr_2</var>)</i>
-<a name="IDX192"></a>
+<a name="IDX200"></a>
 </dt>
 <dt><u>関数:</u> <b>orderlessp</b><i> (<var>expr_1</var>, <var>expr_2</var>)</i>
-<a name="IDX193"></a>
+<a name="IDX201"></a>
 </dt>
 <dd><p>もしMaximaの式の標準の順序付けの中で、<var>expr_1</var>が<var>expr_2</var>に続くなら、
 <code>ordergreatp</code>は、<code>true</code>を返し、
@@ -1463,14 +1546,14 @@ Maximaの式の標準の順序付けを変えます。
 <p>通常のシンボルや定数の順序付け。
 <code>%pi</code>は数値に従って順序付けされないことに注意してください。
 </p>
-<pre class="example">(%i1) stringdisp : true;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) stringdisp : true;
 (%o1)                         true
-(%i2) sort([%pi, 3b0, 3.0, x, X, &quot;foo&quot;, 3, a, 4, &quot;bar&quot;, 4.0, 4b0]);
-(%o2) [3, 3.0, 4, 4.0, 3.0b0, 4.0b0, %pi, &quot;bar&quot;, &quot;foo&quot;, a, x, X]
-</pre>
+(%i2) sort ([%pi, 3b0, 3.0, x, X, &quot;foo&quot;, 3, a, 4, &quot;bar&quot;, 4.0, 4b0]);
+(%o2) [3, 3.0, 4, 4.0, 3.0b0, 4.0b0, %pi, &quot;bar&quot;, &quot;foo&quot;, X, a, x]
+</pre></td></tr></table>
 <p><code>ordergreat</code>、<code>orderless</code>関数の効果。
 </p>
-<pre class="example">(%i1) sort ([M, H, K, T, E, W, G, A, P, J, S]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sort ([M, H, K, T, E, W, G, A, P, J, S]);
 (%o1)           [A, E, G, H, J, K, M, P, S, T, W]
 (%i2) ordergreat (S, J);
 (%o2)                         done
@@ -1478,11 +1561,11 @@ Maximaの式の標準の順序付けを変えます。
 (%o3)                         done
 (%i4) sort ([M, H, K, T, E, W, G, A, P, J, S]);
 (%o4)           [M, H, A, E, G, K, P, T, W, J, S]
-</pre>
+</pre></td></tr></table>
 <p><code>mainvar</code>, <code>constant</code>, <code>scalar</code>宣言の効果
 </p>
-<pre class="example">(%i1) sort ([aa, foo, bar, bb, baz, quux, cc, dd, A1, B1, C1]);
-(%o1)   [aa, bar, baz, bb, cc, dd, foo, quux, A1, B1, C1]
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sort ([aa, foo, bar, bb, baz, quux, cc, dd, A1, B1, C1]);
+(%o1)   [A1, B1, C1, aa, bar, baz, bb, cc, dd, foo, quux]
 (%i2) declare (aa, mainvar);
 (%o2)                         done
 (%i3) declare ([baz, quux], constant);
@@ -1490,22 +1573,22 @@ Maximaの式の標準の順序付けを変えます。
 (%i4) declare ([A1, B1], scalar);
 (%o4)                         done
 (%i5) sort ([aa, foo, bar, bb, baz, quux, cc, dd, A1, B1, C1]);
-(%o5)   [baz, quux, A1, B1, bar, bb, cc, dd, foo, C1, aa]
-</pre>
+(%o5)   [baz, quux, A1, B1, C1, bar, bb, cc, dd, foo, aa]
+</pre></td></tr></table>
 <p>アトムでない式の順序付け
 </p>
-<pre class="example">(%i1) sort ([1, 2, n, f(1), f(2), f(2, 1), g(1), g(1, 2), g(n),
-             f(n, 1)]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sort ([1, 2, n, f(1), f(2), f(2, 1), g(1), g(1, 2), g(n),
+       f(n, 1)]);
 (%o1) [1, 2, f(1), g(1), g(1, 2), f(2), f(2, 1), n, g(n),
                                                          f(n, 1)]
 (%i2) sort ([foo(1), X[1], X[k], foo(k), 1, k]);
-(%o2)            [1, foo(1), X , k, foo(k), X ]
-                              1              k
-</pre>
+(%o2)            [1, X , foo(1), k, X , foo(k)]
+                      1              k
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_100.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -1514,7 +1597,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-part"></a>
 </p><dl>
 <dt><u>関数:</u> <b>part</b><i> (<var>expr</var>, <var>n_1</var>, &hellip;, <var>n_k</var>)</i>
-<a name="IDX194"></a>
+<a name="IDX202"></a>
 </dt>
 <dd><p><code>expr</code>の表示形式のパーツを返します。
 <code>expr</code>の最初のパーツ<var>n_1</var>、それから、パーツ<var>n_2</var>などなど、
@@ -1539,18 +1622,18 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) part(z+2*y+a,2);
-(%o1)                                 2 y
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) part(z+2*y+a,2);
+(%o1)                          2 y
 (%i2) part(z+2*y+a,[1,3]);
-(%o2)                                z + a
+(%o2)                         z + a
 (%i3) part(z+2*y+a,2,1);
-(%o3)                                  2
-</pre>
+(%o3)                           2
+</pre></td></tr></table>
 <p><code>example (part)</code>でさらに例を見ることができます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1559,7 +1642,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-partition"></a>
 </p><dl>
 <dt><u>関数:</u> <b>partition</b><i> (<var>expr</var>, <var>x</var>)</i>
-<a name="IDX195"></a>
+<a name="IDX203"></a>
 </dt>
 <dd><p>２つの式のリストを返します。
 それらは、
@@ -1569,16 +1652,16 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) partition (2*a*x*f(x), x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) partition (2*a*x*f(x), x);
 (%o1)                     [2 a, x f(x)]
 (%i2) partition (a+b, x);
 (%o2)                      [b + a, 0]
 (%i3) partition ([a, b, f(a), c], a);
 (%o3)                  [[b, c], [a, f(a)]]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1587,7 +1670,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-partswitch"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>partswitch</b>
-<a name="IDX196"></a>
+<a name="IDX204"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1597,7 +1680,7 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1605,7 +1688,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-pickapart"></a>
 </p><dl>
 <dt><u>関数:</u> <b>pickapart</b><i> (<var>expr</var>, <var>n</var>)</i>
-<a name="IDX197"></a>
+<a name="IDX205"></a>
 </dt>
 <dd><p><var>expr</var>の 深さ <var>n</var>の部分式に中間式ラベルを割り当てます。
 より大きなもしくは小さな深さでの部分式はラベルに割り当てられません。
@@ -1616,7 +1699,7 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) expr: (a+b)/2 + sin (x^2)/3 - log (1 + sqrt(x+1));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr: (a+b)/2 + sin (x^2)/3 - log (1 + sqrt(x+1));
                                           2
                                      sin(x )   b + a
 (%o1)       - log(sqrt(x + 1) + 1) + ------- + -----
@@ -1688,10 +1771,10 @@ Maximaの式の標準の順序付けを変えます。
              sin(x )   b + a
 (%o12)       ------- + ----- - log(sqrt(x + 1) + 1)
                 3        2
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1700,7 +1783,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-piece"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>piece</b>
-<a name="IDX198"></a>
+<a name="IDX206"></a>
 </dt>
 <dd><p><code>part</code>関数を使った時m、選択された最後の式を返します。
 関数の実行中に設定され、関数そのものの中で参照されることもあります。
@@ -1708,7 +1791,7 @@ Maximaの式の標準の順序付けを変えます。
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1716,7 +1799,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-psubst"></a>
 </p><dl>
 <dt><u>関数:</u> <b>psubst</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>psubst</tt> (<var>list</var>, <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>psubst</tt> (<var>a</var>, <var>b</var>, <var>expr</var>)</i>
-<a name="IDX199"></a>
+<a name="IDX207"></a>
 </dt>
 <dd><p><code>psubst(<var>a</var>, <var>b</var>, <var>expr</var>)</code>は<code>subst</code>に似ています。
 <code>subst</code>を参照してください。
@@ -1735,14 +1818,14 @@ Maximaの式の標準の順序付けを変えます。
 二番目の例は
 関数<code>subst</code>での結果を示します。それは逐次代入します。
 </p>
-<pre class="example">(%i4) psubst ([a^2=b, b=a], sin(a^2) + sin(b));
-(%o4)                           sin(b) + sin(a)
-(%i5) subst ([a^2=b, b=a], sin(a^2) + sin(b));
-(%o5)                              2 sin(a)
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) psubst ([a^2=b, b=a], sin(a^2) + sin(b));
+(%o1)                    sin(b) + sin(a)
+(%i2) subst ([a^2=b, b=a], sin(a^2) + sin(b));
+(%o2)                       2 sin(a)
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1750,7 +1833,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-rembox"></a>
 </p><dl>
 <dt><u>関数:</u> <b>rembox</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rembox</tt> (<var>expr</var>, unlabelled) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rembox</tt> (<var>expr</var>, <var>label</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rembox</tt> (<var>expr</var>)</i>
-<a name="IDX200"></a>
+<a name="IDX208"></a>
 </dt>
 <dd><p><var>expr</var>から枠を取り除きます。
 </p>
@@ -1767,27 +1850,21 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) expr: (a*d - b*c)/h^2 + sin(%pi*x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr: (a*d - b*c)/h^2 + sin(%pi*x);
                                   a d - b c
 (%o1)                sin(%pi x) + ---------
                                       2
                                      h
 (%i2) dpart (dpart (expr, 1, 1), 2, 2);
-                        &quot;&quot;&quot;&quot;&quot;&quot;&quot;    a d - b c
-(%o2)               sin(&quot;%pi x&quot;) + ---------
-                        &quot;&quot;&quot;&quot;&quot;&quot;&quot;      &quot;&quot;&quot;&quot;
-                                     &quot; 2&quot;
-                                     &quot;h &quot;
-                                     &quot;&quot;&quot;&quot;
+dpart: fell off the end.
+ -- an error. To debug this try: debugmode(true);
 (%i3) expr2: lpart (BAR, lpart (FOO, %, 1), 2);
-                  FOO&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;   BAR&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-                  &quot;    &quot;&quot;&quot;&quot;&quot;&quot;&quot; &quot;   &quot;a d - b c&quot;
-(%o3)             &quot;sin(&quot;%pi x&quot;)&quot; + &quot;---------&quot;
-                  &quot;    &quot;&quot;&quot;&quot;&quot;&quot;&quot; &quot;   &quot;  &quot;&quot;&quot;&quot;   &quot;
-                  &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;   &quot;  &quot; 2&quot;   &quot;
-                                   &quot;  &quot;h &quot;   &quot;
-                                   &quot;  &quot;&quot;&quot;&quot;   &quot;
-                                   &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+                                  BAR&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+                   FOO&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;   &quot;a d - b c&quot;
+(%o3)              &quot;sin(%pi x)&quot; + &quot;---------&quot;
+                   &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;   &quot;    2    &quot;
+                                  &quot;   h     &quot;
+                                  &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
 (%i4) rembox (expr2, unlabelled);
                                   BAR&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
                    FOO&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;   &quot;a d - b c&quot;
@@ -1796,31 +1873,26 @@ Maximaの式の標準の順序付けを変えます。
                                   &quot;   h     &quot;
                                   &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
 (%i5) rembox (expr2, FOO);
-                                  BAR&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-                       &quot;&quot;&quot;&quot;&quot;&quot;&quot;    &quot;a d - b c&quot;
-(%o5)              sin(&quot;%pi x&quot;) + &quot;---------&quot;
-                       &quot;&quot;&quot;&quot;&quot;&quot;&quot;    &quot;  &quot;&quot;&quot;&quot;   &quot;
-                                  &quot;  &quot; 2&quot;   &quot;
-                                  &quot;  &quot;h &quot;   &quot;
-                                  &quot;  &quot;&quot;&quot;&quot;   &quot;
-                                  &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+                                 BAR&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+                                 &quot;a d - b c&quot;
+(%o5)               sin(%pi x) + &quot;---------&quot;
+                                 &quot;    2    &quot;
+                                 &quot;   h     &quot;
+                                 &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
 (%i6) rembox (expr2, BAR);
-                   FOO&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
-                   &quot;    &quot;&quot;&quot;&quot;&quot;&quot;&quot; &quot;   a d - b c
-(%o6)              &quot;sin(&quot;%pi x&quot;)&quot; + ---------
-                   &quot;    &quot;&quot;&quot;&quot;&quot;&quot;&quot; &quot;     &quot;&quot;&quot;&quot;
-                   &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;     &quot; 2&quot;
-                                      &quot;h &quot;
-                                      &quot;&quot;&quot;&quot;
+                    FOO&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;   a d - b c
+(%o6)               &quot;sin(%pi x)&quot; + ---------
+                    &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;       2
+                                      h
 (%i7) rembox (expr2);
                                   a d - b c
 (%o7)                sin(%pi x) + ---------
                                       2
                                      h
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1828,7 +1900,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-reveal"></a>
 </p><dl>
 <dt><u>関数:</u> <b>reveal</b><i> (<var>expr</var>, <var>depth</var>)</i>
-<a name="IDX201"></a>
+<a name="IDX209"></a>
 </dt>
 <dd><p>指定された整数<var>depth</var>の<var>expr</var>の部分を記述的な要約で置き換えます。
 </p>
@@ -1858,7 +1930,7 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <p>例:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) e: expand ((a - b)^2)/expand ((exp(a) + exp(b))^2);
                           2            2
                          b  - 2 a b + a
@@ -1893,11 +1965,11 @@ Maximaの式の標準の順序付けを変えます。
 (%o7)               -------------------------
                         b + a     2 b     2 a
                     2 %e      + %e    + %e
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_100.html#Category_003a-Display-functions">Display functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_106.html#Category_003a-Display-functions">Display functions</a>
 </div>
 </p></dd></dl>
 
@@ -1906,7 +1978,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-sublis"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sublis</b><i> (<var>list</var>, <var>expr</var>)</i>
-<a name="IDX202"></a>
+<a name="IDX210"></a>
 </dt>
 <dd><p>式に対して多重平行代入を行います。
 <var>list</var>は等式のリストです。
@@ -1918,12 +1990,12 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) sublis ([a=b, b=a], sin(a) + cos(b));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sublis ([a=b, b=a], sin(a) + cos(b));
 (%o1)                    sin(b) + cos(a)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1931,7 +2003,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-sublis_005fapply_005flambda"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>sublis_apply_lambda</b>
-<a name="IDX203"></a>
+<a name="IDX211"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1941,7 +2013,7 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1949,7 +2021,7 @@ Maximaの式の標準の順序付けを変えます。
 <a name="Item_003a-subnumsimp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>subnumsimp</b>
-<a name="IDX204"></a>
+<a name="IDX212"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1958,7 +2030,7 @@ Maximaの式の標準の順序付けを変えます。
 </p>
 <p><code>subst</code>も参照してください。
 </p>
-<pre class="example">(%i1) subst(100,g,g[x]+2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) subst(100,g,g[x]+2);
 
 subst: cannot substitute 100 for operator g in expression g
                                                            x
@@ -1966,10 +2038,10 @@ subst: cannot substitute 100 for operator g in expression g
 
 (%i2) subst(100,g,g[x]+2),subnumsimp:true;
 (%o2)                          102
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1978,7 +2050,7 @@ subst: cannot substitute 100 for operator g in expression g
 <a name="Item_003a-subst"></a>
 </p><dl>
 <dt><u>関数:</u> <b>subst</b><i> (<var>a</var>, <var>b</var>, <var>c</var>)</i>
-<a name="IDX205"></a>
+<a name="IDX213"></a>
 </dt>
 <dd><p><var>c</var>の中の <var>b</var>に <var>a</var>を代入します。
 <var>b</var>はアトムもしくは <var>c</var>の完全な部分式でなければなりません。
@@ -2012,26 +2084,32 @@ subst: cannot substitute 100 for operator g in expression g
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) subst (a, x+y, x + (x+y)^2 + y);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) subst (a, x+y, x + (x+y)^2 + y);
                                     2
 (%o1)                      y + x + a
 (%i2) subst (-%i, %i, a + b*%i);
 (%o2)                       a - %i b
-</pre>
+</pre></td></tr></table>
 <p>代入は等式のリストに関して逐次になされます。
 これを並列代入と比較してください。
 </p>
-<pre class="example">(%i3) subst([a=b, b=c], a+b);
-(%o3)                                 2 c
-(%i4) sublis([a=b, b=c], a+b);
-(%o4)                                c + b
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) subst([a=b, b=c], a+b);
+(%o1)                          2 c
+(%i2) sublis([a=b, b=c], a+b);
+(%o2)                         c + b
+</pre></td></tr></table>
+<p><code>+</code>や <code>-</code> のような単一文字演算子を substで置き換えるには、引用符で括らなければいけません。
+しかし、 <code>a+b-c</code>は内部的に <code>a+b+(-1*c)</code>と表現されている可能性があることに注意してください。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) subst([&quot;+&quot;=&quot;-&quot;],a+b-c);
+(%o3)                                 c-b+a
+</pre></td></tr></table>
 
 <p>もっと例を見るには <code>example (subst)</code>を実行してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2039,14 +2117,14 @@ subst: cannot substitute 100 for operator g in expression g
 <a name="Item_003a-substinpart"></a>
 </p><dl>
 <dt><u>関数:</u> <b>substinpart</b><i> (<var>x</var>, <var>expr</var>, <var>n_1</var>, ..., <var>n_k</var>)</i>
-<a name="IDX206"></a>
+<a name="IDX214"></a>
 </dt>
 <dd><p><code><a href="#substpart">substpart</a></code>と同様ですが、
 <code>substinpart</code>は<var>expr</var>の内部表現上で働きます。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) x . 'diff (f(x), x, 2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) x . 'diff (f(x), x, 2);
                               2
                              d
 (%o1)                   x . (--- (f(x)))
@@ -2057,21 +2135,21 @@ subst: cannot substitute 100 for operator g in expression g
 (%o2)                        x . d
 (%i3) substinpart (f1, f[1](x + 1), 0);
 (%o3)                       f1(x + 1)
-</pre>
+</pre></td></tr></table>
 <p>もし<code>part</code>関数の最後の引数がインデックスのリストなら、
 複数の部分式が選ばれます。それぞれはリストのインデックスに対応します。
 例えば、
 </p>
-<pre class="example">(%i1) part (x + y + z, [1, 3]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) part (x + y + z, [1, 3]);
 (%o1)                         z + x
-</pre>
+</pre></td></tr></table>
 <p><code>part</code>関数を使った時、 <code><a href="#piece">piece</a></code>は最後の式の値を保持します。
 関数の実行の間に設定され、以下で示すように関数自身の中で参照されることもあります。
 もし<code><a href="#partswitch">partswitch</a></code>が<code>true</code>に設定されたら、
 式の選択された部分が存在しない時には<code>end</code>が返されます。
 そうでなければ、エラーメッセージが出力されます。
 </p>
-<pre class="example">(%i1) expr: 27*y^3 + 54*x*y^2 + 36*x^2*y + y + 8*x^3 + x + 1;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) expr: 27*y^3 + 54*x*y^2 + 36*x^2*y + y + 8*x^3 + x + 1;
               3         2       2            3
 (%o1)     27 y  + 54 x y  + 36 x  y + y + 8 x  + x + 1
 (%i2) part (expr, 2, [1, 3]);
@@ -2083,14 +2161,14 @@ subst: cannot substitute 100 for operator g in expression g
                                3
 (%o4)               (3 y + 2 x)  + y + x + 1
 (%i5) expr: 1/x + y/x - 1/z;
-                             1   y   1
-(%o5)                      - - + - + -
-                             z   x   x
+                             1    y   1
+(%o5)                     (- -) + - + -
+                             z    x   x
 (%i6) substpart (xthru (piece), expr, [2, 3]);
                             y + 1   1
 (%o6)                       ----- - -
                               x     z
-</pre>
+</pre></td></tr></table>
 <p>また、
 オプション <code><a href="#inflag">inflag</a></code>を <code>true</code>に設定し
 <code><a href="#part">part</a></code>か <code><a href="#substpart">substpart</a></code>をコールすることは、
@@ -2098,7 +2176,7 @@ subst: cannot substitute 100 for operator g in expression g
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2107,7 +2185,7 @@ subst: cannot substitute 100 for operator g in expression g
 <a name="Item_003a-substpart"></a>
 </p><dl>
 <dt><u>関数:</u> <b>substpart</b><i> (<var>x</var>, <var>expr</var>, <var>n_1</var>, &hellip;, <var>n_k</var>)</i>
-<a name="IDX207"></a>
+<a name="IDX215"></a>
 </dt>
 <dd><p>残りの引数を<code>part</code>に食わせた結果の部分式に <var>x</var>を代入します。
 <var>expr</var>の新しい値を返します。
@@ -2117,7 +2195,7 @@ subst: cannot substitute 100 for operator g in expression g
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) 1/(x^2 + 2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) 1/(x^2 + 2);
                                1
 (%o1)                        ------
                               2
@@ -2131,14 +2209,14 @@ subst: cannot substitute 100 for operator g in expression g
 (%o3)                     a x + f(b, y)
 (%i4) substpart (&quot;+&quot;, %, 1, 0);
 (%o4)                    x + f(b, y) + a
-</pre>
+</pre></td></tr></table>
 <p>また、オプション <code><a href="#inflag">inflag</a></code>を <code>true</code>に設定し
 <code><a href="#part">part</a></code>や <code>substpart</code>をコールすることは、
 <code>inpart</code>や <code><a href="#substinpart">substinpart</a></code>をコールすることと同じになります。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2146,7 +2224,7 @@ subst: cannot substitute 100 for operator g in expression g
 <a name="Item_003a-symbolp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>symbolp</b><i> (<var>expr</var>)</i>
-<a name="IDX208"></a>
+<a name="IDX216"></a>
 </dt>
 <dd><p>もし <var>expr</var>がシンボルなら <code>true</code>、そうでないなら <code>false</code>を返します。
 事実上、 <code>symbolp(x)</code>は述語論理 <code>atom(x) and not numberp(x)</code>と同値です。
@@ -2155,7 +2233,7 @@ subst: cannot substitute 100 for operator g in expression g
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Predicate-functions">Predicate functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Predicate-functions">Predicate functions</a>
 </div>
 </p></dd></dl>
 
@@ -2163,7 +2241,7 @@ subst: cannot substitute 100 for operator g in expression g
 <a name="Item_003a-unorder"></a>
 </p><dl>
 <dt><u>関数:</u> <b>unorder</b><i> ()</i>
-<a name="IDX209"></a>
+<a name="IDX217"></a>
 </dt>
 <dd><p>順序付けコマンド<code>ordergreat</code>と
 <code>orderless</code>の最後の使用で生成されたエーリアシングを使用不可にします。
@@ -2184,28 +2262,26 @@ subst: cannot substitute 100 for operator g in expression g
 <code>unorder</code>はシンボル<code>a</code>を再代入しないし、
 出力<code>%o7</code>にエーリアスが現れます。
 </p>
-<pre class="example">(%i1) unorder();
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) unorder();
 (%o1)                          []
-(%i2) b*x+a^2;
+(%i2) b*x + a^2;
                                    2
 (%o2)                       b x + a
-(%i3) ordergreat(a);
+(%i3) ordergreat (a);
 (%o3)                         done
-(%i4) b*x+a^2;
+(%i4) b*x + a^2;
+ %th(1) - %th(3);
                              2
 (%o4)                       a  + b x
-(%i5) %th(1)-%th(3);
+(%i5) unorder();
                               2    2
 (%o5)                        a  - a
-(%i6) unorder();
+(%i6) %th(2);
 (%o6)                          [a]
-(%i7) %th(2);
-                                2    2
-(%o7)                      _101a  - a
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -2213,14 +2289,14 @@ subst: cannot substitute 100 for operator g in expression g
 <a name="Item_003a-verbify"></a>
 </p><dl>
 <dt><u>関数:</u> <b>verbify</b><i> (<var>f</var>)</i>
-<a name="IDX210"></a>
+<a name="IDX218"></a>
 </dt>
 <dd><p>関数名<var>f</var>の動詞形を返します。
 <code>verb</code>, <code>noun</code>, <code>nounify</code>も参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) verbify ('foo);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) verbify ('foo);
 (%o1)                          foo
 (%i2) :lisp $%
 $FOO
@@ -2228,10 +2304,10 @@ $FOO
 (%o2)                          foo
 (%i3) :lisp $%
 %FOO
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Nouns-and-verbs">Nouns and verbs</a>
 </div>
 </p></dd></dl>
 
@@ -2245,14 +2321,14 @@ $FOO
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

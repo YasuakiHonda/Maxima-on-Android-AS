@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 23. Fourier-Transformationen </h1>
@@ -111,7 +111,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 23.1 Einf&uuml;hrung in die schnelle Fourier-Transformation </h2>
@@ -136,7 +136,7 @@ schnellen Fourier Transformation (FFT - &quot;Fast Fourier Transform&quot;).
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 23.2 Funktionen und Variablen f&uuml;r die schnelle Fourier-Transformation </h2>
@@ -144,7 +144,7 @@ schnellen Fourier Transformation (FFT - &quot;Fast Fourier Transform&quot;).
 <p><a name="polartorect"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>polartorect</b><i> (<var>r</var>, <var>t</var>)</i>
-<a name="IDX1335"></a>
+<a name="IDX1342"></a>
 </dt>
 <dd>
 <p>Transformiert komplexe Zahlen der Form <code>r %e^(%i t)</code> in die Standardform
@@ -164,7 +164,7 @@ Das Kommando <code>load(fft)</code> l&auml;dt die Funktion.
 <p><a name="recttopolar"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>recttopolar</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX1336"></a>
+<a name="IDX1343"></a>
 </dt>
 <dd>
 <p>Transformiert komplexe Zahlen der Form <code>a + b %i</code> in die Polarform
@@ -185,7 +185,7 @@ Das Kommando <code>load(fft)</code> l&auml;dt die Funktion.
 <p><a name="inverse_005ffft"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>inverse_fft</b><i> (<var>y</var>)</i>
-<a name="IDX1337"></a>
+<a name="IDX1344"></a>
 </dt>
 <dd>
 <p>Berechnet die inverse schnelle Fourier-Transformation.  Das Argument <var>y</var> ist
@@ -251,7 +251,7 @@ Die Ergebnisse sind immer Gleitkommazahlen oder komplexe Zahlen
 <p><a name="fft"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>fft</b><i> (<var>x</var>)</i>
-<a name="IDX1338"></a>
+<a name="IDX1345"></a>
 </dt>
 <dd>
 <p>Berechnet die schnelle Fourier-Transformation.  Das Argument <var>x</var> ist eine
@@ -367,10 +367,10 @@ Siehe auch <code><a href="#inverse_005ffft">inverse_fft</a></code> f&uuml;r die 
 <p><a name="horner"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>horner</b><i> (<var>expr</var>, <var>x</var>)</i>
-<a name="IDX1339"></a>
+<a name="IDX1346"></a>
 </dt>
 <dt><u>Funktion:</u> <b>horner</b><i> (<var>expr</var>)</i>
-<a name="IDX1340"></a>
+<a name="IDX1347"></a>
 </dt>
 <dd>
 <p>Formt ein Polynom <var>expr</var> in das Horner-Schema um.  Mit <var>x</var> wird die
@@ -406,19 +406,19 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 <a name="find_005froot_005frel"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>find_root</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX1341"></a>
+<a name="IDX1348"></a>
 </dt>
 <dt><u>Funktion:</u> <b>find_root</b><i> (<var>f</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX1342"></a>
+<a name="IDX1349"></a>
 </dt>
 <dt><u>Optionsvariable:</u> <b>find_root_error</b>
-<a name="IDX1343"></a>
+<a name="IDX1350"></a>
 </dt>
 <dt><u>Optionsvariable:</u> <b>find_root_abs</b>
-<a name="IDX1344"></a>
+<a name="IDX1351"></a>
 </dt>
 <dt><u>Optionsvariable:</u> <b>find_root_rel</b>
-<a name="IDX1345"></a>
+<a name="IDX1352"></a>
 </dt>
 <dd>
 <p>Findet die Nullstellen eines Ausdrucks <var>expr</var> oder einer Funktion <var>f</var>
@@ -506,7 +506,7 @@ zur&uuml;ck.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 23.3 Einf&uuml;hrung in Fourierreihen </h2>
@@ -532,7 +532,7 @@ Fourierkoeffizienten zu berechnen und einige weitere Funktionen.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 23.4 Funktionen und Variablen f&uuml;r Fourierreihen </h2>
@@ -541,7 +541,7 @@ Fourierkoeffizienten zu berechnen und einige weitere Funktionen.
 <p><a name="equalp"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>equalp</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX1346"></a>
+<a name="IDX1353"></a>
 </dt>
 <dd>
 <p>Gibt <code>true</code> zur&uuml;ck, wenn <code>equal(<var>x</var>, <var>y</var>)</code> das Ergebnis
@@ -550,10 +550,10 @@ Fourierkoeffizienten zu berechnen und einige weitere Funktionen.
 
 <dl>
 <dt><u>Funktion:</u> <b>remfun</b><i> (<var>f</var>, <var>expr</var>)</i>
-<a name="IDX1347"></a>
+<a name="IDX1354"></a>
 </dt>
 <dt><u>Funktion:</u> <b>remfun</b><i> (<var>f</var>, <var>expr</var>, <var>x</var>)</i>
-<a name="IDX1348"></a>
+<a name="IDX1355"></a>
 </dt>
 <dd>
 <p><code>remfun(<var>f</var>, <var>expr</var></code> ersetzt <code><var>f</var>(<var>arg</var>)</code> durch
@@ -568,10 +568,10 @@ durch <var>arg</var> im Ausdruck <var>expr</var> nur dann, wenn <var>arg</var> d
 <p><a name="funp"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>funp</b><i> (<var>f</var>, <var>expr</var>)</i>
-<a name="IDX1349"></a>
+<a name="IDX1356"></a>
 </dt>
 <dt><u>Funktion:</u> <b>funp</b><i> (<var>f</var>, <var>expr</var>, <var>x</var>)</i>
-<a name="IDX1350"></a>
+<a name="IDX1357"></a>
 </dt>
 <dd>
 <p><code>funp(<var>f</var>, <var>expr</var>)</code> hat das Ergebnis <code>true</code>, wenn der
@@ -586,13 +586,13 @@ ein Argument der Funktion <var>f</var> ist.
 <p><a name="absint"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>absint</b><i> (<var>f</var>, <var>x</var>, <var>halfplane</var>)</i>
-<a name="IDX1351"></a>
+<a name="IDX1358"></a>
 </dt>
 <dt><u>Funktion:</u> <b>absint</b><i> (<var>f</var>, <var>x</var>)</i>
-<a name="IDX1352"></a>
+<a name="IDX1359"></a>
 </dt>
 <dt><u>Funktion:</u> <b>absint</b><i> (<var>f</var>, <var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX1353"></a>
+<a name="IDX1360"></a>
 </dt>
 <dd>
 <p><code>absint(<var>f</var>, <var>x</var>, <var>halfplane</var>)</code> gibt das unbestimmte Integral
@@ -614,7 +614,7 @@ der Funktion <var>f</var> f&uuml;r die Variable <var>x</var> in den Grenzen <var
 <p><a name="fourier"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>fourier</b><i> (<var>f</var>, <var>x</var>, <var>l</var>)</i>
-<a name="IDX1354"></a>
+<a name="IDX1361"></a>
 </dt>
 <dd><p>Berechnet die Fourier-Koeffizienten <code>a[0]</code>, <code>a[n]</code> und <code>b[n]</code>
 der Funktion <code><var>f</var>(<var>x</var>)</code> f&uuml;r das Intervall <code>[-l, l]</code>.  Die
@@ -714,7 +714,7 @@ Koeffizienten der Kosinus- und Sinus-Entwicklung berechnet.
 <p><a name="foursimp"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>foursimp</b><i> (<var>l</var>)</i>
-<a name="IDX1355"></a>
+<a name="IDX1362"></a>
 </dt>
 <dd><p><code>foursimp</code> wird auf das Ergebnis der Funktion <code><a href="#fourier">fourier</a></code> angewendet,
 um Sinus- und Kosinus-Funktionen zu vereinfachen, die ganzzahlige Vielfache
@@ -733,7 +733,7 @@ hat.
 <p><a name="sinnpiflag"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>sinnpiflag</b>
-<a name="IDX1356"></a>
+<a name="IDX1363"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -744,7 +744,7 @@ hat.
 <p><a name="cosnpiflag"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>cosnpiflag</b>
-<a name="IDX1357"></a>
+<a name="IDX1364"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -756,7 +756,7 @@ hat.
 <p><a name="fourexpand"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>fourexpand</b><i> (<var>l</var>, <var>x</var>, <var>p</var>, <var>limit</var>)</i>
-<a name="IDX1358"></a>
+<a name="IDX1365"></a>
 </dt>
 <dd><p>Konstruiert aus der Liste der Fourier-Koeffizienten <var>l</var> eine Fourierreihe
 mit <var>limit</var> Termen.  Das Argument <var>limit</var> kann <code>inf</code> sein.  Die
@@ -769,7 +769,7 @@ Argumente <var>x</var> und <var>p</var> haben dieselbe Bedeutung wie f&uuml;r di
 <p><a name="fourcos"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>fourcos</b><i> (<var>f</var>, <var>x</var>, <var>p</var>)</i>
-<a name="IDX1359"></a>
+<a name="IDX1366"></a>
 </dt>
 <dd>
 <p>Gibt die Kosinus-Koeffizienten einer Fourierreihe f&uuml;r die Funktion
@@ -780,7 +780,7 @@ definiert ist.
 <p><a name="foursin"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>foursin</b><i> (<var>f</var>, <var>x</var>, <var>p</var>)</i>
-<a name="IDX1360"></a>
+<a name="IDX1367"></a>
 </dt>
 <dd>
 <p>Gibt die Sinus-Koeffizienten einer Fourierreihe f&uuml;r die Funktion
@@ -792,7 +792,7 @@ definiert ist.
 <p><a name="totalfourier"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>totalfourier</b><i> (<var>f</var>, <var>x</var>, <var>l</var>)</i>
-<a name="IDX1361"></a>
+<a name="IDX1368"></a>
 </dt>
 <dd><p>Gibt die Fourierreihe der Funktion <var>f(x)</var> f&uuml;r das Intervall
 <code>[<var>-l</var>, <var>l</var>]</code> zur&uuml;ck.  Das Ergebnis wird berechnet, indem
@@ -840,7 +840,7 @@ Ergebnis der Funktion <code><a href="#fourier">fourier</a></code> angewendet wer
 <p><a name="fourint"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>fourint</b><i> (<var>f</var>, <var>x</var>)</i>
-<a name="IDX1362"></a>
+<a name="IDX1369"></a>
 </dt>
 <dd>
 <p>Konstruiert eine Liste der Fourierintegral-Koeffizienten der Funktion
@@ -851,7 +851,7 @@ Ergebnis der Funktion <code><a href="#fourier">fourier</a></code> angewendet wer
 <p><a name="fourintcos"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>fourintcos</b><i> (<var>f</var>, <var>x</var>)</i>
-<a name="IDX1363"></a>
+<a name="IDX1370"></a>
 </dt>
 <dd>
 <p>Gibt die Koeffizienten des Kosinus-Fourierintegrals der Funktion
@@ -864,7 +864,7 @@ definiert ist.
 <p><a name="fourintsin"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>fourintsin</b><i> (<var>f</var>, <var>x</var>)</i>
-<a name="IDX1364"></a>
+<a name="IDX1371"></a>
 </dt>
 <dd>
 <p>Gibt die Koeffizienten des Sinus-Fourierintegrals der Funktion
@@ -885,12 +885,12 @@ definiert ist.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

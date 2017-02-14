@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 44. dynamics </h1>
@@ -107,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 44.1 Introduction to dynamics </h2>
@@ -155,14 +155,14 @@ values; the number of steps can now be changed with the option
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 44.2 Functions and Variables for dynamics </h2>
 
 <dl>
 <dt><u>Function:</u> <b>chaosgame</b><i> (<code>[[</code><var>x1</var>, <var>y1</var><code>]</code>, &hellip;, <code>[</code><var>xm</var>, <var>ym</var><code>]]</code>, <code>[</code><var>x0</var>, <var>y0</var><code>]</code>, <var>b</var>, <var>n</var>, &hellip;, options, &hellip;)</i>
-<a name="IDX2116"></a>
+<a name="IDX2123"></a>
 </dt>
 <dd><p>Implements the so-called chaos game: the initial point (<var>x0</var>,
 <var>y0</var>) is plotted and then one of the <var>m</var> points
@@ -175,7 +175,7 @@ length.  The procedure is repeated <var>n</var> times.
 
 <dl>
 <dt><u>Function:</u> <b>evolution</b><i> (<var>F</var>, <var>y0</var>, <var>n</var>, &hellip;, options, &hellip;)</i>
-<a name="IDX2117"></a>
+<a name="IDX2124"></a>
 </dt>
 <dd><p>Draws <var>n+1</var> points in a two-dimensional graph, where the horizontal
 coordinates of the points are the integers 0, 1, 2, &hellip;, <var>n</var>, and
@@ -191,7 +191,7 @@ depend on <var>y</var>, but any other variable can be used),
 
 <dl>
 <dt><u>Function:</u> <b>evolution2d</b><i> (<code>[</code><var>F</var>, <var>G</var><code>]</code>, <code>[</code><var>u</var>, <var>v</var><code>]</code>, <code>[</code><var>u0</var>, <var>y0</var><code>]</code>, <var>n</var>, &hellip;, options, &hellip;)</i>
-<a name="IDX2118"></a>
+<a name="IDX2125"></a>
 </dt>
 <dd><p>Shows, in a two-dimensional plot, the first <var>n+1</var> points in the
 sequence of points defined by the two-dimensional discrete dynamical
@@ -205,7 +205,7 @@ two expressions that depend only on two variables, <var>u</var> and
 
 <dl>
 <dt><u>Function:</u> <b>ifs</b><i> (<code>[</code><var>r1</var>, &hellip;, <var>rm</var><code>]</code>, <code>[</code><var>A1</var>, &hellip;, <var>Am</var><code>]</code>, <code>[[</code><var>x1</var>, <var>y1</var><code>]</code>, &hellip;, <code>[</code><var>xm</var>, <var>ym</var><code>]]</code>, <code>[</code><var>x0</var>, <var>y0</var><code>]</code>, <var>n</var>, &hellip;, options, &hellip;)</i>
-<a name="IDX2119"></a>
+<a name="IDX2126"></a>
 </dt>
 <dd><p>Implements the Iterated Function System method.  This method is similar
 to the method described in the function <code>chaosgame</code>, but instead of
@@ -223,7 +223,7 @@ instance if there are 3 points with probabilities 0.2, 0.5 and
 
 <dl>
 <dt><u>Function:</u> <b>orbits</b><i> (<var>F</var>, <var>y0</var>, <var>n1</var>, <var>n2</var>, [<var>x</var>, <var>x0</var>, <var>xf</var>, <var>xstep</var>], &hellip;, options, &hellip;)</i>
-<a name="IDX2120"></a>
+<a name="IDX2127"></a>
 </dt>
 <dd><p>Draws the orbits diagram for a family of one-dimensional
 discrete dynamical systems, with one parameter <var>x</var>; that kind of
@@ -242,10 +242,10 @@ the sequence evolve <var>n1</var> iterations.
 
 <dl>
 <dt><u>Function:</u> <b>rk</b><i> (<var>ODE</var>, <var>var</var>, <var>initial</var>, <var>domain</var>)</i>
-<a name="IDX2121"></a>
+<a name="IDX2128"></a>
 </dt>
 <dt><u>Function:</u> <b>rk</b><i> ([<var>ODE1</var>, &hellip;, <var>ODEm</var>], [<var>v1</var>, &hellip;, <var>vm</var>], [<var>init1</var>, &hellip;, <var>initm</var>], <var>domain</var>)</i>
-<a name="IDX2122"></a>
+<a name="IDX2129"></a>
 </dt>
 <dd><p>The first form solves numerically one first-order ordinary differential
 equation, and the second form solves a system of m of those equations,
@@ -287,7 +287,7 @@ by the values of the dependent variables corresponding to that point.
 
 <dl>
 <dt><u>Function:</u> <b>staircase</b><i> (<var>F</var>, <var>y0</var>, <var>n</var>, &hellip;, options, &hellip;)</i>
-<a name="IDX2123"></a>
+<a name="IDX2130"></a>
 </dt>
 <dd><p>Draws a staircase diagram for the sequence defined by the recurrence
 relation
@@ -326,8 +326,8 @@ different points that will be represented in the vertical direction.
 
 (%i3) staircase(cos(y), 1, 11, [y, 0, 1.2]);
 </pre>
-<p><div class="image"><img src="./../figures/dynamics1.gif" alt="../figures/dynamics1"></div>
-<div class="image"><img src="./../figures/dynamics2.gif" alt="../figures/dynamics2"></div>
+<p><div class="image"><img src="./../figures/dynamics1.png" alt="../figures/dynamics1"></div>
+<div class="image"><img src="./../figures/dynamics2.png" alt="../figures/dynamics2"></div>
 </p>
 <p>If your system is slow, you'll have to reduce the number of iterations in
 the following examples.  And if the dots appear too small in your
@@ -339,13 +339,13 @@ monitor, you might want to try a different style, such as
 </pre>
 <pre class="example">(%i4) orbits(x^2+a, 0, 50, 200, [a, -2, 0.25], [style, dots]);
 </pre>
-<p><div class="image"><img src="./../figures/dynamics3.gif" alt="../figures/dynamics3"></div>
+<p><div class="image"><img src="./../figures/dynamics3.png" alt="../figures/dynamics3"></div>
 </p>
 <p>To enlarge the region around the lower bifurcation near x <code>=</code> -1.25 use:
 </p><pre class="example">(%i5) orbits(x^2+a, 0, 100, 400, [a,-1,-1.53], [x,-1.6,-0.8],
              [nticks, 400], [style,dots]);
 </pre>
-<p><div class="image"><img src="./../figures/dynamics4.gif" alt="../figures/dynamics4"></div>
+<p><div class="image"><img src="./../figures/dynamics4.png" alt="../figures/dynamics4"></div>
 </p>
 <p>Evolution of a two-dimensional system that leads to a fractal:
 </p>
@@ -355,21 +355,21 @@ monitor, you might want to try a different style, such as
 
 (%i8) evolution2d([f,g], [x,y], [-0.5,0], 50000, [style,dots]);
 </pre>
-<p><div class="image"><img src="./../figures/dynamics5.gif" alt="../figures/dynamics5"></div>
+<p><div class="image"><img src="./../figures/dynamics5.png" alt="../figures/dynamics5"></div>
 </p>
 <p>And an enlargement of a small region in that fractal:
 </p>
 <pre class="example">(%i9) evolution2d([f,g], [x,y], [-0.5,0], 300000, [x,-0.8,-0.6],
                   [y,-0.4,-0.2], [style, dots]);
 </pre>
-<p><div class="image"><img src="./../figures/dynamics6.gif" alt="../figures/dynamics6"></div>
+<p><div class="image"><img src="./../figures/dynamics6.png" alt="../figures/dynamics6"></div>
 </p>
 <p>A plot of Sierpinsky's triangle, obtained with the chaos game:
 </p>
 <pre class="example">(%i9) chaosgame([[0, 0], [1, 0], [0.5, sqrt(3)/2]], [0.1, 0.1], 1/2,
                  30000, [style, dots]);
 </pre>
-<p><div class="image"><img src="./../figures/dynamics7.gif" alt="../figures/dynamics7"></div>
+<p><div class="image"><img src="./../figures/dynamics7.png" alt="../figures/dynamics7"></div>
 </p>
 <p>Barnsley's fern, obtained with an Iterated Function System:
 </p>
@@ -393,7 +393,7 @@ monitor, you might want to try a different style, such as
 
 (%i19) ifs(w, [a1,a2,a3,a4], [p1,p2,p3,p4], [5,0], 50000, [style,dots]);
 </pre>
-<p><div class="image"><img src="./../figures/dynamics8.gif" alt="../figures/dynamics8"></div>
+<p><div class="image"><img src="./../figures/dynamics8.png" alt="../figures/dynamics8"></div>
 </p>
 
 <p>To solve numerically the differential equation
@@ -428,12 +428,12 @@ increments of 0.1 for t, use:
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

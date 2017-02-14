@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 2. Bug Detection and Reporting</title>
+<title>Maxima 5.39.0 Manual: 2. Bug Detection and Reporting</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 2. Bug Detection and Reporting">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 2. Bug Detection and Reporting">
+<meta name="description" content="Maxima 5.39.0 Manual: 2. Bug Detection and Reporting">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 2. Bug Detection and Reporting">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 2. Bug Detection and Reporting </h1>
@@ -105,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 2.1 Functions and Variables for Bug Detection and Reporting </h2>
@@ -141,6 +143,14 @@ test file is displayed.  If <code>all</code>, the time for each individual
 test is shown if <code>display_all</code> is <code>true</code>.  The default is
 <code>false</code>, so no timing information is shown.
 </p></dd>
+<dt> <code>share_tests</code></dt>
+<dd><p>Load additional tests for the <code>share</code> directory.  If <code>true</code>,
+these additional tests are run as a part of the testsuite.  If
+<code>false</code>, no tests from the <code>share</code> directory are run.  If
+<code>only</code>, only the tests from the <code>share</code> directory are run.
+Of course, the actual set of test that are run can be controlled by
+the <code>tests</code> option. The default is <code>false</code>.
+</p></dd>
 </dl>
 
 <p>For example <code>run_testsuite(display_known_bugs = true, tests=[rtest5])</code>
@@ -159,7 +169,7 @@ and then defines functions and variables appropriate to the test.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -185,8 +195,24 @@ and 63.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Debugging">Debugging</a> &middot;
-<a href="maxima_99.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Debugging">Debugging</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-share_005ftestsuite_005ffiles"></a>
+</p><dl>
+<dt><u>Option variable:</u> <b>share_testsuite_files</b>
+<a name="IDX3"></a>
+</dt>
+<dd><p><code>share_testsuite_files</code> is the set of tests from the <code>share</code>
+directory that is run as a part of the test suite by
+<code><a href="#run_005ftestsuite">run_testsuite</a></code>..
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Debugging">Debugging</a> &middot;
+<a href="maxima_105.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -194,7 +220,7 @@ and 63.
 <a name="Item_003a-bug_005freport"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bug_report</b><i> ()</i>
-<a name="IDX3"></a>
+<a name="IDX4"></a>
 </dt>
 <dd><p>Prints out Maxima and Lisp version numbers, and gives a link
 to the Maxima project bug report web page.
@@ -207,7 +233,7 @@ and Lisp version information into the bug report.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -215,7 +241,7 @@ and Lisp version information into the bug report.
 <a name="Item_003a-build_005finfo"></a>
 </p><dl>
 <dt><u>Function:</u> <b>build_info</b><i> ()</i>
-<a name="IDX4"></a>
+<a name="IDX5"></a>
 </dt>
 <dd><p>Returns a summary of the parameters of the Maxima build,
 as a Maxima structure (defined by <code>defstruct</code>).
@@ -230,34 +256,49 @@ the structure is displayed as a short table.
 </p>
 <pre class="example">(%i1) build_info ();
 (%o1) 
-Maxima version: &quot;5.26.0_16_gb72c64c_dirty&quot;
-Maxima build date: &quot;2012-01-29 12:29:04&quot;
-Host type: &quot;i686-pc-linux-gnu&quot;
-Lisp implementation type: &quot;CMU Common Lisp&quot;
-Lisp implementation version: &quot;CVS release-19a 19a-release-20040728 + minimal debian patches&quot;
+Maxima version: &quot;5.36.1&quot;
+Maxima build date: &quot;2015-06-02 11:26:48&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;GNU Common Lisp (GCL)&quot;
+Lisp implementation version: &quot;GCL 2.6.12&quot;
 (%i2) x : build_info ()$
 (%i3) x@version;
-(%o3)               5.26.0_16_gb72c64c_dirty
+(%o3)                               5.36.1
 (%i4) x@timestamp;
-(%o4)                  2012-01-29 12:29:04
+(%o4)                         2015-06-02 11:26:48
 (%i5) x@host;
-(%o5)                   i686-pc-linux-gnu
+(%o5)                      x86_64-unknown-linux-gnu
 (%i6) x@lisp_name;
-(%o6)                    CMU Common Lisp
+(%o6)                        GNU Common Lisp (GCL)
 (%i7) x@lisp_version;
-(%o7) 
-    CVS release-19a 19a-release-20040728 + minimal debian patches
+(%o7)                             GCL 2.6.12
 (%i8) x;
 (%o8) 
-Maxima version: &quot;5.26.0_16_gb72c64c_dirty&quot;
-Maxima build date: &quot;2012-01-29 12:29:04&quot;
-Host type: &quot;i686-pc-linux-gnu&quot;
-Lisp implementation type: &quot;CMU Common Lisp&quot;
-Lisp implementation version: &quot;CVS release-19a 19a-release-20040728 + minimal debian patches&quot;
+Maxima version: &quot;5.36.1&quot;
+Maxima build date: &quot;2015-06-02 11:26:48&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;GNU Common Lisp (GCL)&quot;
+Lisp implementation version: &quot;GCL 2.6.12&quot;
 </pre>
+<p>The Maxima version string can (here 5.36.1) can look very different:
+</p>
+<pre class="example">(%i1) build_info();
+(%o1) 
+Maxima version: &quot;branch_5_37_base_331_g8322940_dirty&quot;
+Maxima build date: &quot;2016-01-01 15:37:35&quot;
+Host type: &quot;x86_64-unknown-linux-gnu&quot;
+Lisp implementation type: &quot;CLISP&quot;
+Lisp implementation version: &quot;2.49 (2010-07-07) (built 3605577779) (memory 3660647857)&quot;
+</pre>
+<p>In that case, Maxima was not build from a released sourcecode, 
+but directly from the GIT-checkout of the sourcecode.
+In the example, the checkout is 331 commits after the latest GIT tag
+(usually a Maxima (major) release (5.37 in our example)) and the 
+abbreviated commit hash of the last commit was &quot;8322940&quot;.
+</p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -274,12 +315,12 @@ Lisp implementation version: &quot;CVS release-19a 19a-release-20040728 + minima
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

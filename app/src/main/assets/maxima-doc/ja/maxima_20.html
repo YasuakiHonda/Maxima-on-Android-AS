@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 20. Equations</title>
+<title>Maxima 5.39.0 Manual: 20. Equations</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 20. Equations">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 20. Equations">
+<meta name="description" content="Maxima 5.39.0 Manual: 20. Equations">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 20. Equations">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Equations"></a>
 <a name="SEC103"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC104" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_19.html#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_21.html#SEC105" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 20. Equations </h1>
@@ -111,25 +126,44 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="maxima_21.html#SEC105" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC103" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC103" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC103" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_21.html#SEC105" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 20.1 Functions and Variables for Equations </h2>
 
+<p><a name="g_t_0025rnum"></a>
+<a name="Item_003a-_0025rnum"></a>
+</p><dl>
+<dt><u>システム変数:</u> <b>%rnum</b>
+<a name="IDX776"></a>
+</dt>
+<dd><p>デフォルト値: <code>0</code>
+</p>
+<p><code>%rnum</code>は
+<code><a href="#solve">solve</a></code>と <code><a href="#algsys">algsys</a></code>が階の中で導入する <code>%r</code>変数のカウンタです。
+次の <code>%r</code>変数は <code>%rnum+1</code>に番号付けされます。
+</p>
+<p><code><a href="#g_t_0025rnum_005flist">%rnum_list</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+</div>
+</p></dd></dl>
 
 <p><a name="g_t_0025rnum_005flist"></a>
 <a name="Item_003a-_0025rnum_005flist"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>%rnum_list</b>
-<a name="IDX769"></a>
+<a name="IDX777"></a>
 </dt>
 <dd><p>デフォルト値: <code>[]</code>
 </p>
@@ -138,7 +172,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 これはあとで解への代入を行うのに便利です。
 <code>concat ('%r, j)</code>とするより このリストを使うことを推奨します。
 </p>
-<pre class="example">(%i1) solve ([x + y = 3], [x,y]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) solve ([x + y = 3], [x,y]);
 (%o1)              [[x = 3 - %r1, y = %r1]]
 (%i2) %rnum_list;
 (%o2)                       [%r1]
@@ -151,10 +185,10 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 (%i6) sol;
 (%o6)     [[x = - 2 t  - 3 t  + 4, y = t , z = t ]]
                      2      1           2       1
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -162,7 +196,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-algepsilon"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>algepsilon</b>
-<a name="IDX770"></a>
+<a name="IDX778"></a>
 </dt>
 <dd><p>デフォルト値: 10^8
 </p>
@@ -170,7 +204,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -178,7 +212,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-algexact"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>algexact</b>
-<a name="IDX771"></a>
+<a name="IDX779"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -201,7 +235,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -209,7 +243,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-algsys"></a>
 </p><dl>
 <dt><u>関数:</u> <b>algsys</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>algsys</tt> ([<var>expr_1</var>, &hellip;, <var>expr_m</var>], [<var>x_1</var>, &hellip;, <var>x_n</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>algsys</tt> ([<var>eqn_1</var>, &hellip;, <var>eqn_m</var>], [<var>x_1</var>, &hellip;, <var>x_n</var>])</i>
-<a name="IDX772"></a>
+<a name="IDX780"></a>
 </dt>
 <dd><p>同時多項式 <var>expr_1</var>, &hellip;, <var>expr_m</var>
 または多項式方程式 <var>eqn_1</var>, &hellip;, <var>eqn_m</var>
@@ -282,7 +316,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) e1: 2*x*(1 - a1) - 2*(x - 1)*a2;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) e1: 2*x*(1 - a1) - 2*(x - 1)*a2;
 (%o1)              2 (1 - a1) x - 2 a2 (x - 1)
 (%i2) e2: a2 - a1;
 (%o2)                        a2 - a1
@@ -310,10 +344,10 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
         1              1             1        1
 [x = -------, y = - -------], [x = - -, y = - -], [x = 1, y = 1]]
      sqrt(3)        sqrt(3)          3        3
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -321,7 +355,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-allroots"></a>
 </p><dl>
 <dt><u>関数:</u> <b>allroots</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>allroots</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>allroots</tt> (<var>eqn</var>)</i>
-<a name="IDX773"></a>
+<a name="IDX781"></a>
 </dt>
 <dd><p>1変数多項式 <var>expr</var>もしくは1変数多項式方程式
 <var>eqn</var>の実数と複素数の根の数値近似を計算します。
@@ -348,7 +382,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) eqn: (1 + 2*x)^3 = 13.5*(1 + x^5);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) eqn: (1 + 2*x)^3 = 13.5*(1 + x^5);
                             3          5
 (%o1)              (2 x + 1)  = 13.5 (x  + 1)
 (%i2) soln: allroots (eqn);
@@ -378,11 +412,11 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
  (x + 1.015755543828121) (x  + .8139194463848151 x
 
  + 1.098699797110288)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -390,7 +424,7 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 <a name="Item_003a-bfallroots"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bfallroots</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>bfallroots</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>bfallroots</tt> (<var>eqn</var>)</i>
-<a name="IDX774"></a>
+<a name="IDX782"></a>
 </dt>
 <dd><p>１変数の多項式 <var>expr</var>または多項式方程式
 <var>eqn</var>の実数根と複素数根の数値近似を計算します。
@@ -401,8 +435,8 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -410,7 +444,7 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 <a name="Item_003a-backsubst"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>backsubst</b>
-<a name="IDX775"></a>
+<a name="IDX783"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -419,7 +453,7 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 これは
 後退代入が極端に大きな式の生成のもととなる非常に大きな問題に対して役立つかもしれません。
 </p>
-<pre class="example">(%i1) eq1 : x + y + z = 6$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) eq1 : x + y + z = 6$
 (%i2) eq2 : x - y + z = 2$
 (%i3) eq3 : x + y - z = 0$
 (%i4) backsubst : false$
@@ -428,10 +462,10 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 (%i6) backsubst : true$
 (%i7) linsolve ([eq1, eq2, eq3], [x,y,z]);
 (%o7)               [x = 1, y = 2, z = 3]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -439,7 +473,7 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 <a name="Item_003a-breakup"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>breakup</b>
-<a name="IDX776"></a>
+<a name="IDX784"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -453,7 +487,7 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) programmode: false$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) programmode: false$
 (%i2) breakup: true$
 (%i3) solve (x^3 + x^2 - 1);
 
@@ -510,10 +544,10 @@ Solution:
                                  9 (--------- + --)
                                     6 sqrt(3)   54
 (%o9)                    [%t7, %t8, %t9]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -521,7 +555,7 @@ Solution:
 <a name="Item_003a-dimension"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dimension</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dimension</tt> (<var>eqn</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dimension</tt> (<var>eqn_1</var>, &hellip;, <var>eqn_n</var>)</i>
-<a name="IDX777"></a>
+<a name="IDX785"></a>
 </dt>
 <dd><p><code>dimen</code>は、次元解析パッケージです。
 <code>load (&quot;dimen&quot;)</code>はこのパッケージをロードします。
@@ -529,7 +563,7 @@ Solution:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a>
 </div>
 </p></dd></dl>
 
@@ -537,7 +571,7 @@ Solution:
 <a name="Item_003a-dispflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>dispflag</b>
-<a name="IDX778"></a>
+<a name="IDX786"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -548,8 +582,8 @@ Solution:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
-<a href="maxima_100.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
+<a href="maxima_106.html#Category_003a-Display-flags-and-variables">Display flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -558,7 +592,7 @@ Solution:
 <a name="Item_003a-funcsolve"></a>
 </p><dl>
 <dt><u>関数:</u> <b>funcsolve</b><i> (<var>eqn</var>, <var>g</var>(<var>t</var>))</i>
-<a name="IDX779"></a>
+<a name="IDX787"></a>
 </dt>
 <dd><p><var>eqn</var>を満たす有理関数 <code><var>g</var>(<var>t</var>)</code>が存在するかどうかに依存して、
 <code>[<var>g</var>(<var>t</var>) = ...]</code>か <code>[]</code>を返します。
@@ -566,7 +600,7 @@ Solution:
 <code><var>g</var>(<var>t</var>)</code>と<code><var>g</var>(<var>t</var>+1)</code>に関して
 一次、線形多項式(first order, linear polynomial)でなければいけません。
 </p>
-<pre class="example">(%i1) eqn: (n + 1)*f(n) - (n + 3)*f(n + 1)/(n + 1) =
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) eqn: (n + 1)*f(n) - (n + 3)*f(n + 1)/(n + 1) =
       (n - 1)/(n + 2);
                             (n + 3) f(n + 1)   n - 1
 (%o1)        (n + 1) f(n) - ---------------- = -----
@@ -577,13 +611,13 @@ Dependent equations eliminated:  (4 3)
                                    n
 (%o2)                f(n) = ---------------
                             (n + 1) (n + 2)
-</pre>
+</pre></td></tr></table>
 <p>警告: これはとても未完成な実装です
 - 多くの安全性チェックや明らかな一般化が忘れられています。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -591,7 +625,7 @@ Dependent equations eliminated:  (4 3)
 <a name="Item_003a-globalsolve"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>globalsolve</b>
-<a name="IDX780"></a>
+<a name="IDX788"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -610,7 +644,7 @@ Dependent equations eliminated:  (4 3)
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) globalsolve: true$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) globalsolve: true$
 (%i2) solve ([x + 3*y = 2, 2*x - y = 5], [x, y]);
 Solution
 
@@ -647,10 +681,10 @@ Solution
 (%o8)                           x
 (%i9) y;
 (%o9)                           y
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Linear-equations">Linear equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Linear-equations">Linear equations</a>
 </div>
 </p></dd></dl>
 
@@ -660,7 +694,7 @@ Solution
 <a name="Item_003a-ieqn"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ieqn</b><i> (<var>ie</var>, <var>unk</var>, <var>tech</var>, <var>n</var>, <var>guess</var>)</i>
-<a name="IDX781"></a>
+<a name="IDX789"></a>
 </dt>
 <dd><p><code>inteqn</code>は積分方程式を解くためのパッケージです。
 <code>load (&quot;inteqn&quot;)</code>はこのパッケージをロードします。
@@ -694,7 +728,7 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-equations">Integral equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-equations">Integral equations</a>
 </div>
 </p></dd></dl>
 
@@ -702,7 +736,7 @@ Solution
 <a name="Item_003a-ieqnprint"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>ieqnprint</b>
-<a name="IDX782"></a>
+<a name="IDX790"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -725,7 +759,7 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-equations">Integral equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-equations">Integral equations</a>
 </div>
 </p></dd></dl>
 
@@ -733,7 +767,7 @@ Solution
 <a name="Item_003a-lhs"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lhs</b><i> (<var>expr</var>)</i>
-<a name="IDX783"></a>
+<a name="IDX791"></a>
 </dt>
 <dd><p><var>expr</var>の演算子が関係演算子 <code>&lt; &lt;= = # equal notequal &gt;= &gt;</code>の１つか
 割り当て演算子 <code>:= ::= : ::</code>の１つ、
@@ -747,7 +781,7 @@ Solution
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) e: aa + bb = cc;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) e: aa + bb = cc;
 (%o1)                     bb + aa = cc
 (%i2) lhs (e);
 (%o2)                        bb + aa
@@ -773,10 +807,10 @@ Solution
 (%o11)                         ][
 (%i12) lhs (aa ][ bb);
 (%o12)                         aa
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -785,7 +819,7 @@ Solution
 <a name="Item_003a-linsolve"></a>
 </p><dl>
 <dt><u>関数:</u> <b>linsolve</b><i> ([<var>expr_1</var>, &hellip;, <var>expr_m</var>], [<var>x_1</var>, &hellip;, <var>x_n</var>])</i>
-<a name="IDX784"></a>
+<a name="IDX792"></a>
 </dt>
 <dd><p>変数のリストに関して連立線形方程式のリストを解きます。
 それぞれの式は変数に関する多項式でなければならず、等式も受け付けます。
@@ -809,7 +843,7 @@ Solution
 <p><code><a href="#programmode">programmode</a></code>が <code>false</code>の時、
 <code>linsolve</code>は中間式(<code>%t</code>)ラベルを使って解を表示し、ラベルのリストを返します。
 </p>
-<pre class="example">(%i1) e1: x + z = y;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) e1: x + z = y;
 (%o1)                       z + x = y
 (%i2) e2: 2*a*x - y = 2*a^2;
                                        2
@@ -854,10 +888,10 @@ Solution
 (%o16)           [x : a + 1, y : 2 a, z : a - 1]
 (%i17) [x, y, z];
 (%o17)                 [a + 1, 2 a, a - 1]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Linear-equations">Linear equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Linear-equations">Linear equations</a>
 </div>
 </p></dd></dl>
 
@@ -866,7 +900,7 @@ Solution
 <a name="Item_003a-linsolvewarn"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>linsolvewarn</b>
-<a name="IDX785"></a>
+<a name="IDX793"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -875,7 +909,7 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Linear-equations">Linear equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Linear-equations">Linear equations</a>
 </div>
 </p></dd></dl>
 
@@ -883,7 +917,7 @@ Solution
 <a name="Item_003a-linsolve_005fparams"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>linsolve_params</b>
-<a name="IDX786"></a>
+<a name="IDX794"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -896,7 +930,7 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Linear-equations">Linear equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Linear-equations">Linear equations</a>
 </div>
 </p></dd></dl>
 
@@ -904,7 +938,7 @@ Solution
 <a name="Item_003a-multiplicities"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>multiplicities</b>
-<a name="IDX787"></a>
+<a name="IDX795"></a>
 </dt>
 <dd><p>デフォルト値: <code>not_set_yet</code>
 </p>
@@ -913,8 +947,8 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
-<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
+<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a>
 </div>
 </p></dd></dl>
 
@@ -922,7 +956,7 @@ Solution
 <a name="Item_003a-nroots"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nroots</b><i> (<var>p</var>, <var>low</var>, <var>high</var>)</i>
-<a name="IDX788"></a>
+<a name="IDX796"></a>
 </dt>
 <dd><p>半開区間 <code>(<var>low</var>, <var>high</var>]</code>の中の実数一変数多項式
 <var>p</var>の実根の数を返します。
@@ -930,14 +964,14 @@ Solution
 </p>
 <p><code>nroots</code>は、Sturm列の方法を使います。
 </p>
-<pre class="example">(%i1) p: x^10 - 2*x^4 + 1/2$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) p: x^10 - 2*x^4 + 1/2$
 (%i2) nroots (p, -6, 9.1);
 (%o2)                           4
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -946,7 +980,7 @@ Solution
 <a name="Item_003a-nthroot"></a>
 </p><dl>
 <dt><u>関数:</u> <b>nthroot</b><i> (<var>p</var>, <var>n</var>)</i>
-<a name="IDX789"></a>
+<a name="IDX797"></a>
 </dt>
 <dd><p><var>p</var>は整数係数多項式で、 <var>n</var>は正の整数です。
 <code>q^n = p</code>のような整数上の多項式 <code>q</code>を返すか、
@@ -956,7 +990,7 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a>
 </div>
 </p></dd></dl>
 
@@ -964,7 +998,7 @@ Solution
 <a name="Item_003a-polyfactor"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>polyfactor</b>
-<a name="IDX790"></a>
+<a name="IDX798"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -976,8 +1010,8 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -985,7 +1019,7 @@ Solution
 <a name="Item_003a-programmode"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>programmode</b>
-<a name="IDX791"></a>
+<a name="IDX799"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1001,8 +1035,8 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
-<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
+<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a>
 </div>
 </p></dd></dl>
 
@@ -1010,7 +1044,7 @@ Solution
 <a name="Item_003a-realonly"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>realonly</b>
-<a name="IDX792"></a>
+<a name="IDX800"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1019,7 +1053,7 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -1027,7 +1061,7 @@ Solution
 <a name="Item_003a-realroots"></a>
 </p><dl>
 <dt><u>関数:</u> <b>realroots</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>realroots</tt> (<var>expr</var>, <var>bound</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>realroots</tt> (<var>eqn</var>, <var>bound</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>realroots</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>realroots</tt> (<var>eqn</var>)</i>
-<a name="IDX793"></a>
+<a name="IDX801"></a>
 </dt>
 <dd><p>変数多項式 <var>expr</var>か1変数多項方程式 <var>eqn</var>の実根の有理近似を
 <code>bound</code>の許容誤差の範囲内で計算します。
@@ -1058,7 +1092,7 @@ Solution
 <p>例:
 </p>
 
-<pre class="example">(%i1) realroots (-1 - x + x^5, 5e-6);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) realroots (-1 - x + x^5, 5e-6);
                                612003
 (%o1)                     [x = ------]
                                524288
@@ -1066,17 +1100,17 @@ Solution
 (%o2)                 x = 1.167303085327148
 (%i3) ev (-1 - x + x^5, %);
 (%o3)                - 7.396496210176905E-6
-</pre>
+</pre></td></tr></table>
 
-<pre class="example">(%i1) realroots (expand ((1 - x)^5 * (2 - x)^3 * (3 - x)), 1e-20);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) realroots (expand ((1 - x)^5 * (2 - x)^3 * (3 - x)), 1e-20);
 (%o1)                 [x = 1, x = 2, x = 3]
 (%i2) multiplicities;
 (%o2)                       [5, 3, 1]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -1084,7 +1118,7 @@ Solution
 <a name="Item_003a-rhs"></a>
 </p><dl>
 <dt><u>関数:</u> <b>rhs</b><i> (<var>expr</var>)</i>
-<a name="IDX794"></a>
+<a name="IDX802"></a>
 </dt>
 <dd><p><var>expr</var>の演算子が関係演算子 <code>&lt; &lt;= = # equal notequal &gt;= &gt;</code>の１つか、
 割り当て演算子<code>:= ::= : ::</code>の１つ、
@@ -1098,7 +1132,7 @@ Solution
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) e: aa + bb = cc;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) e: aa + bb = cc;
 (%o1)                     bb + aa = cc
 (%i2) lhs (e);
 (%o2)                        bb + aa
@@ -1124,10 +1158,10 @@ Solution
 (%o11)                         ][
 (%i12) rhs (aa ][ bb);
 (%o12)                         bb
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -1135,7 +1169,7 @@ Solution
 <a name="Item_003a-rootsconmode"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>rootsconmode</b>
-<a name="IDX795"></a>
+<a name="IDX803"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1144,8 +1178,8 @@ Solution
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Expressions">Expressions</a> &middot;
-<a href="maxima_100.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Expressions">Expressions</a> &middot;
+<a href="maxima_106.html#Category_003a-Simplification-flags-and-variables">Simplification flags and variables</a>
 </div>
 </p></dd></dl>
 
@@ -1154,7 +1188,7 @@ Solution
 <a name="Item_003a-rootscontract"></a>
 </p><dl>
 <dt><u>関数:</u> <b>rootscontract</b><i> (<var>expr</var>)</i>
-<a name="IDX796"></a>
+<a name="IDX804"></a>
 </dt>
 <dd><p>根の積を積の根に変換します。
 例えば、
@@ -1166,7 +1200,7 @@ Solution
 </p>
 <p>以下のように <code><a href="#rootscontract">rootscontract</a></code>に影響するオプション <code>rootsconmode</code>があります:
 </p>
-<pre class="example">問題               rootsconmodeの値　rootscontractを適用した値
+<table><tr><td>&nbsp;</td><td><pre class="example">問題               rootsconmodeの値　rootscontractを適用した値
 
 x^(1/2)*y^(3/2)      false          (x*y^3)^(1/2)
 x^(1/2)*y^(1/4)      false          x^(1/2)*y^(1/4)
@@ -1174,7 +1208,7 @@ x^(1/2)*y^(1/4)      true           (x*y^(1/2))^(1/2)
 x^(1/2)*y^(1/3)      true           x^(1/2)*y^(1/3)
 x^(1/2)*y^(1/4)      all            (x^2*y)^(1/4)
 x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)
-</pre>
+</pre></td></tr></table>
 <p><code>rootsconmode</code>が <code>false</code>の時、
 <code>rootscontract</code>は分母が同じ有理数指数に関してだけ短縮します。
 <code>rootsconmode: true</code>の例のキーは、
@@ -1186,7 +1220,7 @@ x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) rootsconmode: false$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) rootsconmode: false$
 (%i2) rootscontract (x^(1/2)*y^(3/2));
                                    3
 (%o2)                      sqrt(x y )
@@ -1213,10 +1247,10 @@ x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)
 (%i12) rootsconmode: true$
 (%i13) rootscontract (sqrt(5+sqrt(5)) - 5^(1/4)*sqrt(1+sqrt(5)));
 (%o13)                          0
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Simplification-functions">Simplification functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Simplification-functions">Simplification functions</a>
 </div>
 </p></dd></dl>
 
@@ -1224,7 +1258,7 @@ x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)
 <a name="Item_003a-rootsepsilon"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>rootsepsilon</b>
-<a name="IDX797"></a>
+<a name="IDX805"></a>
 </dt>
 <dd><p>デフォルト値: 1.0e-7
 </p>
@@ -1233,8 +1267,8 @@ x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Polynomials">Polynomials</a> &middot;
-<a href="maxima_100.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Polynomials">Polynomials</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -1243,7 +1277,7 @@ x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)
 <a name="Item_003a-solve"></a>
 </p><dl>
 <dt><u>関数:</u> <b>solve</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>solve</tt> (<var>expr</var>, <var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>solve</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>solve</tt> ([<var>eqn_1</var>, &hellip;, <var>eqn_n</var>], [<var>x_1</var>, &hellip;, <var>x_n</var>])</i>
-<a name="IDX798"></a>
+<a name="IDX806"></a>
 </dt>
 <dd><p>代数等式 <var>expr</var>を <var>x</var>について解き、 <var>x</var>の解等式のリストを返します。
 もし <var>expr</var>が等式でなければ、等式 <code><var>expr</var> = 0</code>を仮定します。
@@ -1298,7 +1332,7 @@ x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) solve (asin (cos (3*x))*(f(x) - 1), x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) solve (asin (cos (3*x))*(f(x) - 1), x);
 
 solve: using arc-trig functions to get a solution.
 Some solutions will be lost.
@@ -1384,26 +1418,27 @@ y = - .1535675710019696]]
 (%o11)                  [x = - 1, x = 1]
 (%i12) ev (%th(2), %[1]);
 (%o12)                          0
-</pre>
+</pre></td></tr></table>
 <p>シンボル <code>%r</code>が解の中で任意定数を示すのに使われます。
 </p>
-<pre class="example">(%i1) solve([x+y=1,2*x+2*y=2],[x,y]);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) solve([x+y=1,2*x+2*y=2],[x,y]);
 
 solve: dependent equations eliminated: (2)
 (%o1)                      [[x = 1 - %r1, y = %r1]]
-</pre>
+</pre></td></tr></table>
 <p>更に知るには <code><a href="#algsys">algsys</a></code>と <code><a href="#g_t_0025rnum_005flist">%rnum_list</a></code>を参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-solvedecomposes"></a>
+<p><a name="solvedecomposes"></a>
+<a name="Item_003a-solvedecomposes"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>solvedecomposes</b>
-<a name="IDX799"></a>
+<a name="IDX807"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1413,7 +1448,7 @@ solve: dependent equations eliminated: (2)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -1421,7 +1456,7 @@ solve: dependent equations eliminated: (2)
 <a name="Item_003a-solveexplicit"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>solveexplicit</b>
-<a name="IDX800"></a>
+<a name="IDX808"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1431,7 +1466,7 @@ solve: dependent equations eliminated: (2)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -1439,7 +1474,7 @@ solve: dependent equations eliminated: (2)
 <a name="Item_003a-solvefactors"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>solvefactors</b>
-<a name="IDX801"></a>
+<a name="IDX809"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1449,7 +1484,7 @@ solve: dependent equations eliminated: (2)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -1457,7 +1492,7 @@ solve: dependent equations eliminated: (2)
 <a name="Item_003a-solvenullwarn"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>solvenullwarn</b>
-<a name="IDX802"></a>
+<a name="IDX810"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1468,7 +1503,7 @@ solve: dependent equations eliminated: (2)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -1476,7 +1511,7 @@ solve: dependent equations eliminated: (2)
 <a name="Item_003a-solveradcan"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>solveradcan</b>
-<a name="IDX803"></a>
+<a name="IDX811"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1486,7 +1521,7 @@ solve: dependent equations eliminated: (2)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -1494,7 +1529,7 @@ solve: dependent equations eliminated: (2)
 <a name="Item_003a-solvetrigwarn"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>solvetrigwarn</b>
-<a name="IDX804"></a>
+<a name="IDX812"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1504,7 +1539,7 @@ solve: dependent equations eliminated: (2)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Algebraic-equations">Algebraic equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Algebraic-equations">Algebraic equations</a>
 </div>
 </p></dd></dl>
 
@@ -1518,14 +1553,14 @@ solve: dependent equations eliminated: (2)
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

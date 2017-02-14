@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on April, 9 2015 by texi2html 1.76 -->
+<!-- Created on December, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.0 Manual: 22. Numerical</title>
+<title>Maxima 5.39.0 Manual: 22. Numerical</title>
 
-<meta name="description" content="Maxima 5.36.0 Manual: 22. Numerical">
-<meta name="keywords" content="Maxima 5.36.0 Manual: 22. Numerical">
+<meta name="description" content="Maxima 5.39.0 Manual: 22. Numerical">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 22. Numerical">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,11 +54,13 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
+
+
 </head>
 
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
@@ -78,7 +80,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 22. Numerical </h1>
@@ -113,7 +115,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 22.1 Introduction to fast Fourier transform </h2>
@@ -123,10 +125,10 @@ computation of the fast Fourier transform.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Fourier-transform">Fourier transform</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_99.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_99.html#Category_003a-Package-fft">Package fft</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Fourier-transform">Fourier transform</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_105.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
 </div>
 </p>
 
@@ -147,7 +149,7 @@ computation of the fast Fourier transform.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 22.2 Functions and Variables for fast Fourier transform </h2>
@@ -156,7 +158,7 @@ computation of the fast Fourier transform.
 <a name="Item_003a-polartorect"></a>
 </p><dl>
 <dt><u>Function:</u> <b>polartorect</b><i> (<var>r</var>, <var>t</var>)</i>
-<a name="IDX807"></a>
+<a name="IDX818"></a>
 </dt>
 <dd><p>Translates complex values of the form <code>r %e^(%i t)</code> to the form
 <code>a + b %i</code>, where <var>r</var> is the magnitude and <var>t</var> is the phase.
@@ -170,14 +172,14 @@ The outputs are calculated as
 <pre class="example">a = r cos(t)
 b = r sin(t)
 </pre>
-<p><code>polartorect</code> is the inverse function of <code>recttopolar</code>.
+<p><code><a href="#polartorect">polartorect</a></code> is the inverse function of <code><a href="#recttopolar">recttopolar</a></code>.
 </p>
-<p><code>load(fft)</code> loads this function.  See also <code>fft</code>.
+<p><code>load(fft)</code> loads this function.  See also <code><a href="#fft">fft</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-fft">Package fft</a> &middot;
-<a href="maxima_99.html#Category_003a-Complex-variables">Complex variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a> &middot;
+<a href="maxima_105.html#Category_003a-Complex-variables">Complex variables</a>
 </div>
 </p></dd></dl>
 
@@ -185,7 +187,7 @@ b = r sin(t)
 <a name="Item_003a-recttopolar"></a>
 </p><dl>
 <dt><u>Function:</u> <b>recttopolar</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX808"></a>
+<a name="IDX819"></a>
 </dt>
 <dd><p>Translates complex values of the form <code>a + b %i</code> to the form
 <code>r %e^(%i t)</code>, where <var>a</var> is the real part and <var>b</var> is the imaginary
@@ -201,14 +203,14 @@ t = atan2(b, a)
 </pre>
 <p>The computed angle is in the range <code>-%pi</code> to <code>%pi</code>.
 </p>
-<p><code>recttopolar</code> is the inverse function of <code>polartorect</code>.
+<p><code>recttopolar</code> is the inverse function of <code><a href="#polartorect">polartorect</a></code>.
 </p>
-<p><code>load(fft)</code> loads this function.  See also <code>fft</code>.
+<p><code>load(fft)</code> loads this function.  See also <code><a href="#fft">fft</a></code>.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-fft">Package fft</a> &middot;
-<a href="maxima_99.html#Category_003a-Complex-variables">Complex variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a> &middot;
+<a href="maxima_105.html#Category_003a-Complex-variables">Complex variables</a>
 </div>
 </p></dd></dl>
 
@@ -216,7 +218,7 @@ t = atan2(b, a)
 <a name="Item_003a-inverse_005ffft"></a>
 </p><dl>
 <dt><u>Function:</u> <b>inverse_fft</b><i> (<var>y</var>)</i>
-<a name="IDX809"></a>
+<a name="IDX820"></a>
 </dt>
 <dd><p>Computes the inverse complex fast Fourier transform.
 <var>y</var> is a list or array (named or unnamed) which contains the data to
@@ -230,6 +232,9 @@ or symbolic constants.
 which is not modified.
 Results are always computed as floats
 or expressions <code>a + b*%i</code> where <code>a</code> and <code>b</code> are floats.
+If bigfloat precision is needed the function <code><a href="#bf_005finverse_005ffft">bf_inverse_fft</a></code> can
+be used instead as a drop-in replacement of <code>inverse_fft</code> that is
+slower, but supports bfloats. 
 </p>
 <p>The inverse discrete Fourier transform is defined as follows.
 Let <code>x</code> be the output of the inverse transform.
@@ -242,8 +247,8 @@ this definition of the transform may differ from that used by other mathematical
 </p>
 <p><code>load(fft)</code> loads this function.
 </p>
-<p>See also <code>fft</code> (forward transform), <code>recttopolar</code>, and
-<code>polartorect</code>.
+<p>See also <code><a href="#fft">fft</a></code> (forward transform), <code><a href="#recttopolar">recttopolar</a></code>, and
+<code><a href="#polartorect">polartorect</a></code>.
 </p>
 <p>Examples:
 </p>
@@ -280,7 +285,7 @@ this definition of the transform may differ from that used by other mathematical
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-fft">Package fft</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
 </div>
 </p></dd></dl>
 
@@ -288,7 +293,7 @@ this definition of the transform may differ from that used by other mathematical
 <a name="Item_003a-fft"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fft</b><i> (<var>x</var>)</i>
-<a name="IDX810"></a>
+<a name="IDX821"></a>
 </dt>
 <dd><p>Computes the complex fast Fourier transform.
 <var>x</var> is a list or array (named or unnamed) which contains the data to
@@ -302,6 +307,11 @@ or symbolic constants.
 which is not modified.
 Results are always computed as floats
 or expressions <code>a + b*%i</code> where <code>a</code> and <code>b</code> are floats.
+If bigfloat precision is needed the function <code><a href="#bf_005ffft">bf_fft</a></code> can be used
+instead as a drop-in replacement of <code>fft</code> that is slower, but
+supports bfloats. In addition if it is known that the input consists
+of only real values (no imaginary parts), <code><a href="#real_005ffft">real_fft</a></code> can be used
+which is potentially faster.
 </p>
 <p>The discrete Fourier transform is defined as follows.
 Let <code>y</code> be the output of the transform.
@@ -334,8 +344,10 @@ b[n/2] = 0
 </pre>
 <p><code>load(fft)</code> loads this function.
 </p>
-<p>See also <code>inverse_fft</code> (inverse transform), <code>recttopolar</code>, and
-<code>polartorect</code>.
+<p>See also <code><a href="#inverse_005ffft">inverse_fft</a></code> (inverse transform), <code><a href="#recttopolar">recttopolar</a></code>, and
+<code><a href="#polartorect">polartorect</a></code>.. See <code><a href="#real_005ffft">real_fft</a></code> for FFTs of a real-valued
+input, and <code><a href="#bf_005ffft">bf_fft</a></code> and <code><a href="#bf_005freal_005ffft">bf_real_fft</a></code> for operations on
+bigfloat values.
 </p>
 <p>Examples:
 </p>
@@ -400,7 +412,113 @@ b[n/2] = 0
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Package-fft">Package fft</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
+</div>
+</p></dd></dl>
+
+<p><a name="real_005ffft"></a>
+<a name="Item_003a-real_005ffft"></a>
+</p><dl>
+<dt><u>Function:</u> <b>real_fft</b><i> (<var>x</var>)</i>
+<a name="IDX822"></a>
+</dt>
+<dd><p>Computes the fast Fourier transform of a real-valued sequence
+<var>x</var>.  This is equivalent to performing <code>fft(x)</code>, except that
+only the first <code>N/2+1</code> results are returned, where <code>N</code> is
+the length of <var>x</var>.  <code>N</code> must be power of two.
+</p>
+<p>No check is made that <var>x</var> contains only real values.
+</p>
+<p>The symmetry properites of the Fourier transform of real sequences to
+reduce he complexity.  In particular the first and last output values
+of <code>real_fft</code> are purely real.  For larger sequencyes, <code>real_fft</code>
+may be computed more quickly than <code>fft</code>.
+</p>
+<p>Since the output length is short, the normal <code><a href="#inverse_005ffft">inverse_fft</a></code> cannot
+be directly used.  Use <code><a href="#inverse_005freal_005ffft">inverse_real_fft</a></code> to compute the inverse.
+<div class=categorybox>
+
+<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
+</div>
+</p></dd></dl>
+
+<p><a name="inverse_005freal_005ffft"></a>
+<a name="Item_003a-inverse_005freal_005ffft"></a>
+</p><dl>
+<dt><u>Function:</u> <b>inverse_real_fft</b><i> (<var>y</var>)</i>
+<a name="IDX823"></a>
+</dt>
+<dd><p>Computes the inverse Fourier transfrom of <var>y</var>, which must have a
+length of <code>N/2+1</code> where <code>N</code> is a power of two.  That is, the
+input <var>x</var> is expected to be the output of <code>real_fft</code>.
+</p>
+<p>No check is made to ensure that the input has the correct format.
+(The first and last elements must be purely real.)
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bf_005finverse_005ffft"></a>
+<a name="Item_003a-bf_005finverse_005ffft"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bf_inverse_fft</b><i> (<var>y</var>)</i>
+<a name="IDX824"></a>
+</dt>
+<dd><p>Computes the inverse complex fast Fourier transform.  This is the
+bigfloat version of <code><a href="#inverse_005ffft">inverse_fft</a></code> that converts the input to
+bigfloats and returns a bigfloat result.
+<div class=categorybox>
+
+<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bf_005ffft"></a>
+<a name="Item_003a-bf_005ffft"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bf_fft</b><i> (<var>y</var>)</i>
+<a name="IDX825"></a>
+</dt>
+<dd><p>Computes the forward complex fast Fourier transform.  This is the
+bigfloat version of <code><a href="#fft">fft</a></code> that converts the input to
+bigfloats and returns a bigfloat result.
+<div class=categorybox>
+
+<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bf_005freal_005ffft"></a>
+<a name="Item_003a-bf_005freal_005ffft"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bf_real_fft</b><i> (<var>x</var>)</i>
+<a name="IDX826"></a>
+</dt>
+<dd><p>Computes the forward fast Fourier transform of a real-valued input
+returning a bigfloat result.  This is the bigfloat version of
+<code>real_fft</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bf_005finverse_005freal_005ffft"></a>
+<a name="Item_003a-bf_005finverse_005freal_005ffft"></a>
+</p><dl>
+<dt><u>Function:</u> <b>bf_inverse_real_fft</b><i> (<var>y</var>)</i>
+<a name="IDX827"></a>
+</dt>
+<dd><p>Computes the inverse fast Fourier transfrom with a real-valued
+bigfloat output.  This is the bigfloat version of <code>inverse_real_fft</code>.
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Package-fft">Package fft</a>
 </div>
 </p></dd></dl>
 
@@ -421,7 +539,7 @@ b[n/2] = 0
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 22.3 Functions for numerical solution of equations </h2>
@@ -430,7 +548,7 @@ b[n/2] = 0
 <a name="Item_003a-horner"></a>
 </p><dl>
 <dt><u>Function:</u> <b>horner</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>horner</tt> (<var>expr</var>, <var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>horner</tt> (<var>expr</var>)</i>
-<a name="IDX811"></a>
+<a name="IDX828"></a>
 </dt>
 <dd><p>Returns a rearranged representation of <var>expr</var> as in Horner's rule, using
 <var>x</var> as the main variable if it is specified.  <code>x</code> may be omitted in
@@ -439,7 +557,7 @@ which case the main variable of the canonical rational expression form of
 </p>
 <p><code>horner</code> sometimes improves stability if <code>expr</code> is
 to be numerically evaluated.  It is also useful if Maxima is used to
-generate programs to be run in Fortran.  See also <code>stringout</code>.
+generate programs to be run in Fortran.  See also <code><a href="maxima_13.html#stringout">stringout</a></code>.
 </p>
 <pre class="example">(%i1) expr: 1e-155*x^2 - 5.5*x + 5.2e155;
                            2
@@ -458,7 +576,7 @@ To enable the Lisp debugger set *debugger-hook* to nil.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -470,29 +588,29 @@ To enable the Lisp debugger set *debugger-hook* to nil.
 <a name="Item_003a-find_005froot"></a>
 </p><dl>
 <dt><u>Function:</u> <b>find_root</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>, [<var>abserr</var>, <var>relerr</var>])</i>
-<a name="IDX812"></a>
+<a name="IDX829"></a>
 </dt>
 <dt><u>Function:</u> <b>find_root</b><i> (<var>f</var>, <var>a</var>, <var>b</var>, [<var>abserr</var>, <var>relerr</var>])</i>
-<a name="IDX813"></a>
+<a name="IDX830"></a>
 </dt>
 <dt><u>Function:</u> <b>bf_find_root</b><i> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>, [<var>abserr</var>, <var>relerr</var>])</i>
-<a name="IDX814"></a>
+<a name="IDX831"></a>
 </dt>
 <dt><u>Function:</u> <b>bf_find_root</b><i> (<var>f</var>, <var>a</var>, <var>b</var>, [<var>abserr</var>, <var>relerr</var>])</i>
-<a name="IDX815"></a>
+<a name="IDX832"></a>
 </dt>
 <dt><u>Option variable:</u> <b>find_root_error</b>
-<a name="IDX816"></a>
+<a name="IDX833"></a>
 </dt>
 <dt><u>Option variable:</u> <b>find_root_abs</b>
-<a name="IDX817"></a>
+<a name="IDX834"></a>
 </dt>
 <dt><u>Option variable:</u> <b>find_root_rel</b>
-<a name="IDX818"></a>
+<a name="IDX835"></a>
 </dt>
 <dd><p>Finds a root of the expression <var>expr</var> or the function <var>f</var> over the
 closed interval <em>[<var>a</var>, <var>b</var>]</em>.  The expression <var>expr</var> may be an
-equation, in which case <code>find_root</code> seeks a root of
+equation, in which case <code><a href="#find_005froot">find_root</a></code> seeks a root of
 <code>lhs(<var>expr</var>) - rhs(<var>expr</var>)</code>.
 </p>
 <p>Given that Maxima can evaluate <var>expr</var> or <var>f</var> over
@@ -579,8 +697,8 @@ sought is <em>[min(<var>a</var>, <var>b</var>), max(<var>a</var>, <var>b</var>)]
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -588,7 +706,7 @@ sought is <em>[min(<var>a</var>, <var>b</var>), max(<var>a</var>, <var>b</var>)]
 <a name="Item_003a-newton"></a>
 </p><dl>
 <dt><u>Function:</u> <b>newton</b><i> (<var>expr</var>, <var>x</var>, <var>x_0</var>, <var>eps</var>)</i>
-<a name="IDX819"></a>
+<a name="IDX836"></a>
 </dt>
 <dd><p>Returns an approximate solution of <code><var>expr</var> = 0</code> by Newton's method,
 considering <var>expr</var> to be a function of one variable, <var>x</var>.
@@ -603,8 +721,8 @@ Thus it is not necessary that <var>expr</var> evaluate to a number.
 </p>
 <p><code>load(newton1)</code> loads this function.
 </p>
-<p>See also <code>realroots</code>, <code>allroots</code>, <code>find_root</code>, and
-<code>mnewton</code>.
+<p>See also <code><a href="maxima_20.html#realroots">realroots</a></code>, <code><a href="maxima_20.html#allroots">allroots</a></code>, <code><a href="#find_005froot">find_root</a></code> and
+<a href="maxima_72.html#SEC331">mnewton</a>
 </p>
 <p>Examples:
 </p>
@@ -624,8 +742,8 @@ Thus it is not necessary that <var>expr</var> evaluate to a number.
 </pre>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Algebraic-equations">Algebraic equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p></dd></dl>
 
@@ -646,7 +764,7 @@ Thus it is not necessary that <var>expr</var> evaluate to a number.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 22.4 Introduction to numerical solution of differential equations </h2>
@@ -674,9 +792,9 @@ autonomous.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
-<a href="maxima_99.html#Category_003a-Plotting">Plotting</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a> &middot;
+<a href="maxima_105.html#Category_003a-Plotting">Plotting</a>
 </div>
 </p>
 
@@ -697,14 +815,14 @@ autonomous.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 22.5 Functions for numerical solution of differential equations </h2>
 <p><a name="Item_003a-plotdf"></a>
 </p><dl>
 <dt><u>Function:</u> <b>plotdf</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plotdf</tt> (<var>dydx</var>, options&hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plotdf</tt> (<var>dvdu</var>, [<var>u</var>,<var>v</var>], options&hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plotdf</tt> ([<var>dxdt</var>,c<var>dydt</var>], options&hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plotdf</tt> ([<var>dudt</var>,c<var>dvdt</var>], [<var>u</var>,c<var>v</var>], options&hellip;)</i>
-<a name="IDX820"></a>
+<a name="IDX837"></a>
 </dt>
 <dd><p>The function <code>plotdf</code> creates a two-dimensional plot of the direction
 field (also called slope field) for a first-order Ordinary Differential
@@ -903,9 +1021,9 @@ the two state variables as a function of time:
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Plotting">Plotting</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Plotting">Plotting</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p>
 </dd></dl>
@@ -913,7 +1031,7 @@ the two state variables as a function of time:
 <p><a name="Item_003a-ploteq"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ploteq</b><i> (<var>exp</var>, ...options...)</i>
-<a name="IDX821"></a>
+<a name="IDX838"></a>
 </dt>
 <dd><p>Plots equipotential curves for <var>exp</var>, which should be an expression
 depending on two variables. The curves are obtained by integrating the
@@ -940,9 +1058,9 @@ interface is the same that was described in plotdf.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Plotting">Plotting</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Plotting">Plotting</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p>
 </dd></dl>
@@ -950,7 +1068,7 @@ interface is the same that was described in plotdf.
 <p><a name="Item_003a-rk"></a>
 </p><dl>
 <dt><u>Function:</u> <b>rk</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rk</tt> (<var>ODE</var>, <var>var</var>, <var>initial</var>, <var>domain</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rk</tt> ([<var>ODE1</var>, &hellip;, <var>ODEm</var>], [<var>v1</var>, &hellip;, <var>vm</var>], [<var>init1</var>, &hellip;, <var>initm</var>], <var>domain</var>)</i>
-<a name="IDX822"></a>
+<a name="IDX839"></a>
 </dt>
 <dd><p>The first form solves numerically one first-order ordinary differential
 equation, and the second form solves a system of m of those equations,
@@ -1014,8 +1132,8 @@ increments of 0.1 for t, use:
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_99.html#Category_003a-Differential-equations">Differential equations</a> &middot;
-<a href="maxima_99.html#Category_003a-Numerical-methods">Numerical methods</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_105.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p>
 </dd></dl>
@@ -1032,12 +1150,12 @@ increments of 0.1 for t, use:
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC392" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>April, 9 2015</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

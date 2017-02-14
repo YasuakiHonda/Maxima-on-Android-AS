@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 25. itensor</title>
+<title>Maxima 5.39.0 Manual: 25. itensor</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 25. itensor">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 25. itensor">
+<meta name="description" content="Maxima 5.39.0 Manual: 25. itensor">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 25. itensor">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="itensor"></a>
 <a name="SEC123"></a>
@@ -84,15 +99,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC124" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_24.html#SEC120" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 25. itensor </h1>
@@ -115,15 +130,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC125" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC123" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC123" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 25.1 Introduction to itensor </h2>
@@ -185,9 +200,9 @@ Brans-Dicke重力理論の作用から Friedmann方程式を計算する方法�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Tensors">Tensors</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Tensors">Tensors</a> &middot;
+<a href="maxima_106.html#Category_003a-Share-packages">Share packages</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p>
 <hr size="6">
@@ -197,15 +212,15 @@ Brans-Dicke重力理論の作用から Friedmann方程式を計算する方法�
 <td valign="middle" align="left">[<a href="#SEC126" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC124" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC124" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.1.1 New tensor notation </h3>
@@ -214,7 +229,7 @@ Brans-Dicke重力理論の作用から Friedmann方程式を計算する方法�
 時々、間違った添字順序に至る表記を使いました。
 例えば、以下を考えてください:
 </p>
-<pre class="example">(%i2) imetric(g);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i2) imetric(g);
 (%o2)                                done
 (%i3) ishow(g([],[j,k])*g([],[i,l])*a([i,j],[]))$
                                  i l  j k
@@ -223,7 +238,7 @@ Brans-Dicke重力理論の作用から Friedmann方程式を計算する方法�
 (%i4) ishow(contract(%))$
                                       k l
 (%t4)                                a
-</pre>
+</pre></td></tr></table>
 <p><code>a</code>が偶然対称テンソルでないなら、この結果は間違っています
 これが起こる理由は、
 <code>itensor</code>は正しく共変添字と反変添字の集合の中の順序を保つけれども、
@@ -233,19 +248,19 @@ Brans-Dicke重力理論の作用から Friedmann方程式を計算する方法�
 存在する表記と完全に互換性を残し、相互に使うことが可能な新しい表記が開発されました。
 この表記では、反変添字は共変添字リストの中の適切な位置に挿入されますが、
 マイナス記号が前に付けられます。
-現在、 <code>contract</code>や <code>ishow</code>のような関数はこの新しい添字表記に通じており、
+現在、 <code><a href="#contract_005fItensor">contract_Itensor</a></code>や <code><a href="#ishow">ishow</a></code>のような関数はこの新しい添字表記に通じており、
 テンソルを適切に処理することができます。
 </p>
 <p>この新しい表記では以前の例は正しい結果をもたらします:
 </p>
-<pre class="example">(%i5) ishow(g([-j,-k],[])*g([-i,-l],[])*a([i,j],[]))$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i5) ishow(g([-j,-k],[])*g([-i,-l],[])*a([i,j],[]))$
                                  i l       j k
 (%t5)                           g    a    g
                                       i j
 (%i6) ishow(contract(%))$
                                       l k
 (%t6)                                a
-</pre>
+</pre></td></tr></table>
 <p>現在、この表記を使う唯一のコードは <code>lc2kdt</code>関数です。
 数値添字に頼らず Levi-Civita記号を決定するために計量テンソルを用いる時、
 この表記を通じて、一貫した結果を達成します。
@@ -263,15 +278,15 @@ Brans-Dicke重力理論の作用から Friedmann方程式を計算する方法�
 <td valign="middle" align="left">[<a href="#SEC127" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC124" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC124" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.1.2 Indicial tensor manipulation </h3>
@@ -324,7 +339,7 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 <code>itensor</code>パッケージをロードし、計量名を指定し、いくつかの簡単な計算を実行する仕方を
 例示します。
 </p>
-<pre class="example">(%i1) load(itensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) imetric(g);
 (%o2)                                done
@@ -395,7 +410,7 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 (%o21)                               done
 (%i22) ishow(canform(a([i,j],[])+a([j,i])))$
 (%t22)                                 0
-</pre>
+</pre></td></tr></table>
 
 <p><a name="Item_003a-Functions-and-Variables-for-itensor"></a>
 </p><hr size="6">
@@ -406,15 +421,15 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 <td valign="middle" align="left">[<a href="#SEC128" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC123" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC123" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 25.2 Functions and Variables for itensor </h2>
@@ -425,15 +440,15 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 <td valign="middle" align="left">[<a href="#SEC129" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.1 Managing indexed objects </h3>
@@ -442,22 +457,23 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 <a name="Item_003a-dispcon"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dispcon</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispcon</tt> (<var>tensor_1</var>, <var>tensor_2</var>, &hellip;) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispcon</tt> (all)</i>
-<a name="IDX918"></a>
+<a name="IDX933"></a>
 </dt>
 <dd><p><code>defcon</code>に与えられたような引数の縮約プロパティを表示します。
 <code>dispcon (all)</code>は、定義された縮約プロパティすべてを表示します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Display-functions">Display functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Display-functions">Display functions</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-entertensor"></a>
+<p><a name="entertensor"></a>
+<a name="Item_003a-entertensor"></a>
 </p><dl>
 <dt><u>関数:</u> <b>entertensor</b><i> (<var>name</var>)</i>
-<a name="IDX919"></a>
+<a name="IDX934"></a>
 </dt>
 <dd><p>プロンプトによって、
 任意の数のテンソル添字や微分添字を持つ
@@ -467,14 +483,15 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-changename"></a>
+<p><a name="changename"></a>
+<a name="Item_003a-changename"></a>
 </p><dl>
 <dt><u>関数:</u> <b>changename</b><i> (<var>old</var>, <var>new</var>, <var>expr</var>)</i>
-<a name="IDX920"></a>
+<a name="IDX935"></a>
 </dt>
 <dd><p><var>expr</var>の中の <var>old</var>と呼ばれるすべての添字付きオブジェクトの名前を
 <var>new</var>に変えます。
@@ -485,19 +502,20 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-listoftens"></a>
+<p><a name="listoftens"></a>
+<a name="Item_003a-listoftens"></a>
 </p><dl>
 <dt><u>関数:</u> <b>listoftens</b>
-<a name="IDX921"></a>
+<a name="IDX936"></a>
 </dt>
 <dd><p>テンソル式の中のすべてのテンソルを添字が完備した形でリストします。
 例えば、
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i6) ishow(a([i,j],[k])*b([u],[],v)+c([x,y],[])*d([],[])*e)$
                                          k
 (%t6)                        d e c    + a    b
@@ -507,17 +525,18 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 (%t7)                        [a   , b   , c   , d]
                                i j   u,v   x y
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ishow"></a>
+<p><a name="ishow"></a>
+<a name="Item_003a-ishow"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ishow</b><i> (<var>expr</var>)</i>
-<a name="IDX922"></a>
+<a name="IDX937"></a>
 </dt>
 <dd><p>下付き添字としての共変添字と上付き添字としての反変添字を持つように
 添字付きオブジェクトを持つ形で <var>expr</var>を表示します。
@@ -526,21 +545,22 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-indices"></a>
+<p><a name="indices"></a>
+<a name="Item_003a-indices"></a>
 </p><dl>
 <dt><u>関数:</u> <b>indices</b><i> (<var>expr</var>)</i>
-<a name="IDX923"></a>
+<a name="IDX938"></a>
 </dt>
 <dd><p>2つの要素のリストを返します。
 以下の例が例示するように、
 一番目は <var>expr</var>の中の自由添字(一度だけ現れるもの)のリストです。
 二番目は <var>expr</var>の中のダミー添字(正確に二回現れるもの)のリストです。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) ishow(a([i,j],[k,l],m,n)*b([k,o],[j,m,p],q,r))$
@@ -550,7 +570,7 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 (%i3) indices(%);
 (%o3)                 [[l, p, i, n, o, q, r], [k, j, m]]
 
-</pre>
+</pre></td></tr></table>
 <p>同じ添字を二回以上含むテンソル積は構文的に認められていません。
 <code>indices</code>は、これらの式を合理的な方法で扱おうとします;
 しかしながら、そんな非合法な式上で動くようにコールされた時は
@@ -558,14 +578,15 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-rename"></a>
+<p><a name="rename"></a>
+<a name="Item_003a-rename"></a>
 </p><dl>
 <dt><u>関数:</u> <b>rename</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rename</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>rename</tt> (<var>expr</var>, <var>count</var>)</i>
-<a name="IDX924"></a>
+<a name="IDX939"></a>
 </dt>
 <dd><p>もしオプションの二番目の引数が省略されたら、
 <var>expr</var>と同値な、しかし、各項に対して集合
@@ -586,7 +607,7 @@ Maximaは添字付きオブジェクトすべてが微分の任意の変数に�
 ２つのリネームの組み合わせた効果が、それ自身によって、
 どちらか１つよりも更に式を簡単にすることがしばしば起こります。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) allsym:true;
@@ -625,10 +646,10 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
         %1 %2  %3 %4      %6         %5         %7        u
      - g      g      ichr2      ichr2      ichr2     ichr2
                           %1 %3      %2 %6      %4 r      %5 %7
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -637,7 +658,7 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 <a name="Item_003a-show"></a>
 </p><dl>
 <dt><u>関数:</u> <b>show</b><i> (<var>expr</var>)</i>
-<a name="IDX925"></a>
+<a name="IDX940"></a>
 </dt>
 <dd><p>下付き添字として共変インデックス、上付き添字として反変インデックスを持つよう、
 インデックスされたオブジェクトと一緒に <code>expr</code>を表示します。
@@ -646,16 +667,17 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Display-functions">Display functions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Display-functions">Display functions</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-flipflag"></a>
+<p><a name="flipflag"></a>
+<a name="Item_003a-flipflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>flipflag</b>
-<a name="IDX926"></a>
+<a name="IDX941"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -671,14 +693,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-defcon"></a>
+<p><a name="defcon"></a>
+<a name="Item_003a-defcon"></a>
 </p><dl>
 <dt><u>関数:</u> <b>defcon</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>defcon</tt> (<var>tensor_1</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>defcon</tt> (<var>tensor_1</var>, <var>tensor_2</var>, <var>tensor_3</var>)</i>
-<a name="IDX927"></a>
+<a name="IDX942"></a>
 </dt>
 <dd><p><var>tensor_1</var>と <var>tensor_2</var>の積の縮約が適切な添字を持つ
 <var>tensor_3</var>に帰着するというプロパティを <var>tensor_1</var>に与えます。
@@ -695,28 +718,30 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-remcon"></a>
+<p><a name="remcon"></a>
+<a name="Item_003a-remcon"></a>
 </p><dl>
 <dt><u>関数:</u> <b>remcon</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remcon</tt> (<var>tensor_1</var>, ..., <var>tensor_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remcon</tt> (all)</i>
-<a name="IDX928"></a>
+<a name="IDX943"></a>
 </dt>
 <dd><p>(<var>tensor_1</var>, ..., <var>tensor_n</var>)からすべての縮約プロパティを取り除きます。
 <code>remcon(all)</code>はすべての添字付きオブジェクトからすべての縮約プロパティを取り除きます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-contract"></a>
+<p><a name="contract_005fItensor"></a>
+<a name="Item_003a-contract"></a>
 </p><dl>
 <dt><u>関数:</u> <b>contract</b><i> (<var>expr</var>)</i>
-<a name="IDX929"></a>
+<a name="IDX944"></a>
 </dt>
 <dd><p>和と積の任意の組み合わせであり得る
 <var>expr</var>に関してテンソル縮約を実行します。
@@ -730,14 +755,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-indexed_005ftensor"></a>
+<p><a name="indexed_005ftensor"></a>
+<a name="Item_003a-indexed_005ftensor"></a>
 </p><dl>
 <dt><u>関数:</u> <b>indexed_tensor</b><i> (<var>tensor</var>)</i>
-<a name="IDX930"></a>
+<a name="IDX945"></a>
 </dt>
 <dd><p><code>ichr1</code>, <code>ichr2</code>, <code>icurvature</code>と合わせて組み込みの値が既に存在する
 <var>tensor</var>に成分を割り当てる前に実行しなければいけません。
@@ -745,14 +771,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-components"></a>
+<p><a name="components"></a>
+<a name="Item_003a-components"></a>
 </p><dl>
 <dt><u>関数:</u> <b>components</b><i> (<var>tensor</var>, <var>expr</var>)</i>
-<a name="IDX931"></a>
+<a name="IDX946"></a>
 </dt>
 <dd><p><var>tensor</var>の成分の値を与える式 <var>expr</var>に添字値を割り当てることを許します。
 その添字のすべてを伴って何かが起こるときはいつでも、これらは自動的にテンソルに代入されます。
@@ -776,15 +803,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <p>1) 添字付き式として。例えば:
 </p>
-<pre class="example">(%i2) components(g([],[i,j]),e([],[i])*p([],[j]))$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i2) components(g([],[i,j]),e([],[i])*p([],[j]))$
 (%i3) ishow(g([],[i,j]))$
                                       i  j
 (%t3)                                e  p
 
-</pre>
+</pre></td></tr></table>
 <p>2) 行列として:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i5) lg:-ident(4)$lg[1,1]:1$lg;
                             [ 1   0    0    0  ]
                             [                  ]
@@ -802,13 +829,13 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 (%o8)                                  1
 (%i9) g([4,4],[]);
 (%o9)                                 - 1
-</pre>
+</pre></td></tr></table>
 <p>3) 関数として。 Maxima関数を使って添字に基づいたテンソルの成分を指定することができます。
 例えば、以下のコードは、
 もし <code>h</code>が同じ数の共変添字と反変添字を持ち、微分添字を持たないなら、
 <code>kdelta</code>を <code>h</code>に割り当て、そうでないなら <code>g</code>を割り当てます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i4) h(l1,l2,[l3]):=if length(l1)=length(l2) and length(l3)=0
   then kdelta(l1,l2) else apply(g,append([l1,l2], l3))$
 (%i5) ishow(h([i],[j]))$
@@ -819,11 +846,11 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
                                      k
 (%t6)                               g
                                      i j,l
-</pre>
+</pre></td></tr></table>
 <p>4) Maximaのパターンマッチング機能、特に <code>defrule</code>と
 <code>applyb1</code>コマンドを使って:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) matchdeclare(l1,listp);
@@ -842,39 +869,41 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
                            %1  %2  %3 m
 (%t6)                     e   q   w     q   e   g
                                          %1  %2  %3 n
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-remcomps"></a>
+<p><a name="remcomps"></a>
+<a name="Item_003a-remcomps"></a>
 </p><dl>
 <dt><u>関数:</u> <b>remcomps</b><i> (<var>tensor</var>)</i>
-<a name="IDX932"></a>
+<a name="IDX947"></a>
 </dt>
 <dd><p><code>components</code>関数で割り当てられたすべての値を
 <var>tensor</var>からアンバインドします。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-showcomps"></a>
+<p><a name="showcomps"></a>
+<a name="Item_003a-showcomps"></a>
 </p><dl>
 <dt><u>関数:</u> <b>showcomps</b><i> (<var>tensor</var>)</i>
-<a name="IDX933"></a>
+<a name="IDX948"></a>
 </dt>
 <dd><p><code>components</code>コマンドを使って作られたようにテンソルの成分割り当てを表示します。
 以下の例で明示されるように、行列が
 <code>components</code>を使って添字テンソルに割り当てられている時、
 この関数は特に役に立ちます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(ctensor);
 (%o1)       /share/tensor/ctensor.mac
 (%i2) load(itensor);
@@ -908,19 +937,20 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
                   [                                         r     ]
 (%o5)                                false
 
-</pre>
+</pre></td></tr></table>
 <p><code>showcomps</code>コマンドは 2よりも高い階数のテンソルの成分も表示することができます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-idummy"></a>
+<p><a name="idummy"></a>
+<a name="Item_003a-idummy"></a>
 </p><dl>
 <dt><u>関数:</u> <b>idummy</b><i> ()</i>
-<a name="IDX934"></a>
+<a name="IDX949"></a>
 </dt>
 <dd><p><code>icounter</code>を1つ増やし、形式 <code>%n</code>の添字を値として返します。
 ここで nは正の整数です。
@@ -929,14 +959,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-idummyx"></a>
+<p><a name="idummyx"></a>
+<a name="Item_003a-idummyx"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>idummyx</b>
-<a name="IDX935"></a>
+<a name="IDX950"></a>
 </dt>
 <dd><p>デフォルト値: <code>%</code>
 </p>
@@ -945,14 +976,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-icounter"></a>
+<p><a name="icounter"></a>
+<a name="Item_003a-icounter"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>icounter</b>
-<a name="IDX936"></a>
+<a name="IDX951"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -961,14 +993,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-kdelta"></a>
+<p><a name="kdelta"></a>
+<a name="Item_003a-kdelta"></a>
 </p><dl>
 <dt><u>関数:</u> <b>kdelta</b><i> (<var>L1</var>, <var>L2</var>)</i>
-<a name="IDX937"></a>
+<a name="IDX952"></a>
 </dt>
 <dd><p>共変添字のリスト <var>L1</var>と反変添字のリスト <var>L2</var>を使った
 <code>itensor</code>パッケージで定義された
@@ -987,19 +1020,20 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-kdels"></a>
+<p><a name="kdels"></a>
+<a name="Item_003a-kdels"></a>
 </p><dl>
 <dt><u>関数:</u> <b>kdels</b><i> (<var>L1</var>, <var>L2</var>)</i>
-<a name="IDX938"></a>
+<a name="IDX953"></a>
 </dt>
 <dd><p>いくつかの計算で使われる、対称化された Kroneckerデルタ。
 例えば:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) kdelta([1,2],[2,1]);
@@ -1015,17 +1049,18 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 (%t4)                  kdelta  kdelta  + kdelta  kdelta
                              a       b         a       b
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-levi_005fcivita"></a>
+<p><a name="levi_005fcivita"></a>
+<a name="Item_003a-levi_005fcivita"></a>
 </p><dl>
 <dt><u>関数:</u> <b>levi_civita</b><i> (<var>L</var>)</i>
-<a name="IDX939"></a>
+<a name="IDX954"></a>
 </dt>
 <dd><p>リスト <var>L</var>が整数の偶置換から成るなら 1を返し、
 <var>L</var>が奇置換なら成るなら -1を返し、
@@ -1033,14 +1068,15 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-lc2kdt"></a>
+<p><a name="lc2kdt"></a>
+<a name="Item_003a-lc2kdt"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lc2kdt</b><i> (<var>expr</var>)</i>
-<a name="IDX940"></a>
+<a name="IDX955"></a>
 </dt>
 <dd><p>Levi-Civitaシンボルを含む式を整理し、可能ならこれらを Kroneckerデルタ式に変換します。
 この関数と単に Levi-Civitaシンボルを評価することの主な違いは、
@@ -1049,7 +1085,7 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 <code>lc2kdt</code>関数はこの問題を避けて、
 <code>rename</code>や <code>contract</code>を使って更に容易に整理される式をもたらします。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) expr:ishow('levi_civita([],[i,j])
@@ -1077,12 +1113,12 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
                                  i           i
 (%t6)                           a  - a kdelta
                                  l           l
-</pre>
+</pre></td></tr></table>
 <p><code>lc2kdt</code>関数は時々計量テンソルを利用します。
 もし前もって計量テンソルが <code>imetric</code>で定義されていなかったなら、
 これはエラーになります。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i7) expr:ishow('levi_civita([],[i,j])
                  *'levi_civita([],[k,l])*a([j,k],[]))$
                                  i j            k l
@@ -1100,7 +1136,7 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 (%o9)                                done
 (%i10) ishow(lc2kdt(expr))$
          %3 i       k   %4 j       l     %3 i       l   %4 j
-(%t10) (g     kdelta   g     kdelta   - g     kdelta   g    
+(%t10) (g     kdelta   g     kdelta   - g     kdelta   g
                     %3             %4               %3
               k
         kdelta  ) a
@@ -1109,19 +1145,20 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
                                   l i    l i  j
 (%t11)                           a    - g    a
                                               j
-</pre>
+</pre></td></tr></table>
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-lc_005fl"></a>
+<p><a name="lc_005fl"></a>
+<a name="Item_003a-lc_005fl"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lc_l</b>
-<a name="IDX941"></a>
+<a name="IDX956"></a>
 </dt>
 <dd><p>未評価の Levi-Civitaシンボル (<code>levi_civita</code>)を含む式のために使われる整理ルール。
 <code>lc_u</code>と組み合わせて、
@@ -1129,7 +1166,7 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 </p>
 <p>例えば:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) el1:ishow('levi_civita([i,j,k],[])*a([],[i])*a([],[j]))$
@@ -1145,10 +1182,10 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 (%i5) canform(contract(expand(applyb1(el2,lc_l,lc_u))));
 (%t5)                                  0
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -1156,7 +1193,7 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 <p><a name="Item_003a-lc_005fu"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lc_u</b>
-<a name="IDX942"></a>
+<a name="IDX957"></a>
 </dt>
 <dd><p>未評価の Levi-Civitaシンボル (<code>levi_civita</code>)を含む式のために使われる整理ルール。
 <code>lc_l</code>と組み合わせて、
@@ -1165,14 +1202,15 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-canten"></a>
+<p><a name="canten"></a>
+<a name="Item_003a-canten"></a>
 </p><dl>
 <dt><u>関数:</u> <b>canten</b><i> (<var>expr</var>)</i>
-<a name="IDX943"></a>
+<a name="IDX958"></a>
 </dt>
 <dd><p>名前を変えて (<code>rename</code>を参照してください)、ダミー添字を置換することで、
 <var>expr</var>を整理します。
@@ -1187,20 +1225,21 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-concan"></a>
+<p><a name="concan"></a>
+<a name="Item_003a-concan"></a>
 </p><dl>
 <dt><u>関数:</u> <b>concan</b><i> (<var>expr</var>)</i>
-<a name="IDX944"></a>
+<a name="IDX959"></a>
 </dt>
 <dd><p><code>canten</code>に似ていますが、添字縮約も実行します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -1211,23 +1250,24 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 <td valign="middle" align="left">[<a href="#SEC130" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.2 Tensor symmetries </h3>
 
-<p><a name="Item_003a-allsym"></a>
+<p><a name="allsym"></a>
+<a name="Item_003a-allsym"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>allsym</b>
-<a name="IDX945"></a>
+<a name="IDX960"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1239,14 +1279,15 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-decsym"></a>
+<p><a name="decsym"></a>
+<a name="Item_003a-decsym"></a>
 </p><dl>
 <dt><u>関数:</u> <b>decsym</b><i> (<var>tensor</var>, <var>m</var>, <var>n</var>, [<var>cov_1</var>, <var>cov_2</var>, ...], [<var>contr_1</var>, <var>contr_2</var>, ...])</i>
-<a name="IDX946"></a>
+<a name="IDX961"></a>
 </dt>
 <dd><p><var>m</var>個の共変添字と <var>n</var>個の反変添字を持つ
 <var>tensor</var>に関する対称プロパティを宣言します。
@@ -1267,7 +1308,7 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 対称宣言のリストのどれかは空であり得ます。
 以下の例で示すように式整理を実行する関数は <code>canform</code>です。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) expr:contract( expand( a([i1, j1, k1], [])
@@ -1296,31 +1337,33 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 (%i12) dispsym(a,3,0);
 (%o12)                     [[cyc, [[1, 2, 3]], []]]
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-remsym"></a>
+<p><a name="remsym"></a>
+<a name="Item_003a-remsym"></a>
 </p><dl>
 <dt><u>関数:</u> <b>remsym</b><i> (<var>tensor</var>, <var>m</var>, <var>n</var>)</i>
-<a name="IDX947"></a>
+<a name="IDX962"></a>
 </dt>
 <dd><p><var>m</var>個の共変添字と <var>n</var>個の反変添字を持つ
 <var>tensor</var>からすべての対称プロパティを取り除きます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-canform"></a>
+<p><a name="canform"></a>
+<a name="Item_003a-canform"></a>
 </p><dl>
 <dt><u>関数:</u> <b>canform</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>canform</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>canform</tt> (<var>expr</var>, <var>rename</var>)</i>
-<a name="IDX948"></a>
+<a name="IDX963"></a>
 </dt>
 <dd><p>ダミー添字をリネームして、
 それらに課せられた対称条件によって指令されたようにすべての添字を並べ替えることで、
@@ -1341,7 +1384,7 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -1352,23 +1395,24 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 <td valign="middle" align="left">[<a href="#SEC131" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.3 Indicial tensor calculus </h3>
 
-
+<p><a name="itensor_005fdiff"></a>
+</p>
 <dl>
 <dt><u>関数:</u> <b>diff</b><i> (<var>expr</var>, <var>v_1</var>, [<var>n_1</var>, [<var>v_2</var>, <var>n_2</var>] ...])</i>
-<a name="IDX949"></a>
+<a name="IDX964"></a>
 </dt>
 <dd><p><code>itensor</code>のための能力に関して拡張された通常の Maxima微分関数です。
 <var>v_1</var>に関して <var>n_1</var>階、 <var>v_2</var>に関して <var>n_2</var>階、
@@ -1392,14 +1436,15 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-idiff"></a>
+<p><a name="idiff"></a>
+<a name="Item_003a-idiff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>idiff</b><i> (<var>expr</var>, <var>v_1</var>, [<var>n_1</var>, [<var>v_2</var>, <var>n_2</var>] ...])</i>
-<a name="IDX950"></a>
+<a name="IDX965"></a>
 </dt>
 <dd><p>添字微分。
 独立変数に関して微分する <code>diff</code>と異なり、
@@ -1417,21 +1462,22 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-liediff"></a>
+<p><a name="liediff"></a>
+<a name="Item_003a-liediff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>liediff</b><i> (<var>v</var>, <var>ten</var>)</i>
-<a name="IDX951"></a>
+<a name="IDX966"></a>
 </dt>
 <dd><p>ベクトル場 <var>v</var>に対してテンソル式 <var>ten</var>の Lie微分を計算します。
 <var>ten</var>は任意の添字付きテンソル式でなければいけません;
 <var>v</var>はベクトル場の(添字なしの)名前でなければいけません。
 例えば:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) ishow(liediff(v,a([i,j],[])*b([],[k],l)))$
@@ -1443,30 +1489,32 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
                       + (v   b      - b   v    + v   b   ) a
                               ,%1 l    ,l  ,%1    ,l  ,%1   i j
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-rediff"></a>
+<p><a name="rediff"></a>
+<a name="Item_003a-rediff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>rediff</b><i> (<var>ten</var>)</i>
-<a name="IDX952"></a>
+<a name="IDX967"></a>
 </dt>
 <dd><p>テンソル式 <var>ten</var>の中の <code>idiff</code>コマンドすべてを評価します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-undiff"></a>
+<p><a name="undiff"></a>
+<a name="Item_003a-undiff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>undiff</b><i> (<var>expr</var>)</i>
-<a name="IDX953"></a>
+<a name="IDX968"></a>
 </dt>
 <dd><p><var>expr</var>と同値ですが、
 添字付きオブジェクトの微分すべてが
@@ -1480,21 +1528,22 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-evundiff"></a>
+<p><a name="evundiff"></a>
+<a name="Item_003a-evundiff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>evundiff</b><i> (<var>expr</var>)</i>
-<a name="IDX954"></a>
+<a name="IDX969"></a>
 </dt>
 <dd><p><code>undiff</code>の実行と同値ですが、 <code>ev</code>と <code>rediff</code>があとに続きます。
 </p>
 <p>この演算のポイントは微分形式で直接評価できない式を簡単に評価することです。
 例えば、以下はエラーをもたらします:
 </p>
-<pre class="example">(%i1) load(itensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) icurvature([i,j,k],[l],m);
 Maxima encountered a Lisp error:
@@ -1504,11 +1553,11 @@ Maxima encountered a Lisp error:
 
 Automatically continuing.
 To reenable the Lisp debugger set *debugger-hook* to nil.
-</pre>
+</pre></td></tr></table>
 <p>しかし、もし <code>icurvature</code>が名詞形で入っているなら、
 <code>evundiff</code>を使って評価できます:
 </p>
-<pre class="example">(%i3) ishow('icurvature([i,j,k],[l],m))$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i3) ishow('icurvature([i,j,k],[l],m))$
                                          l
 (%t3)                          icurvature
                                          i j k,m
@@ -1520,13 +1569,13 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
              l              l         %1           l           %1
       + ichr2        + ichr2     ichr2      + ichr2       ichr2
              i j,k m        %1 k      i j,m        %1 k,m      i j
-</pre>
+</pre></td></tr></table>
 <p>注意: Maximaの以前のバージョンでは、
 Christoffel記号の微分形式も評価できませんでした。
 これは現在修正されています。
 だから <code>evundiff</code>はもはやこのような式に関しては不要です:
 </p>
-<pre class="example">(%i5) imetric(g);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i5) imetric(g);
 (%o5)                                done
 (%i6) ishow(ichr2([i,j],[k],l))$
        k %3
@@ -1540,48 +1589,50 @@ Christoffel記号の微分形式も評価できませんでした。
                          ,l     j %3,i    i j,%3    i %3,j
                       + -----------------------------------
                                          2
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-flush"></a>
+<p><a name="flush"></a>
+<a name="Item_003a-flush"></a>
 </p><dl>
 <dt><u>関数:</u> <b>flush</b><i> (<var>expr</var>, <var>tensor_1</var>, <var>tensor_2</var>, ...)</i>
-<a name="IDX955"></a>
+<a name="IDX970"></a>
 </dt>
 <dd><p><var>expr</var>において微分添字を持たない <var>tensor_i</var>をすべて0にします。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-flushd"></a>
+<p><a name="flushnd"></a>
+<a name="Item_003a-flushd"></a>
 </p><dl>
 <dt><u>関数:</u> <b>flushd</b><i> (<var>expr</var>, <var>tensor_1</var>, <var>tensor_2</var>, ...)</i>
-<a name="IDX956"></a>
+<a name="IDX971"></a>
 </dt>
 <dd><p><var>expr</var>において、
 微分添字を持つ <var>tensor_i</var>をすべて0にします。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
 <p><a name="Item_003a-flushnd"></a>
 </p><dl>
 <dt><u>関数:</u> <b>flushnd</b><i> (<var>expr</var>, <var>tensor</var>, <var>n</var>)</i>
-<a name="IDX957"></a>
+<a name="IDX972"></a>
 </dt>
 <dd><p>以下の例で例示されるように、 <var>expr</var>において
 <var>n</var>以上の微分添字を持つ微分されたオブジェクト <var>tensor</var>をすべて 0にします。
-</p><pre class="example">
+</p><table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) ishow(a([i],[J,r],k,r)+a([i],[j,r,s],k,r,s))$
@@ -1592,17 +1643,18 @@ Christoffel記号の微分形式も評価できませんでした。
                                      J r
 (%t3)                               a
                                      i,k r
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-coord"></a>
+<p><a name="coord"></a>
+<a name="Item_003a-coord"></a>
 </p><dl>
 <dt><u>関数:</u> <b>coord</b><i> (<var>tensor_1</var>, <var>tensor_2</var>, ...)</i>
-<a name="IDX958"></a>
+<a name="IDX973"></a>
 </dt>
 <dd><p>名前が <var>tensor_i</var>の1つである反変ベクトルの微分が
 Kroneckerデルタをもたらすという座標微分プロパティを
@@ -1614,28 +1666,30 @@ Kroneckerデルタをもたらすという座標微分プロパティを
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-remcoord"></a>
+<p><a name="remcoord"></a>
+<a name="Item_003a-remcoord"></a>
 </p><dl>
 <dt><u>関数:</u> <b>remcoord</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remcoord</tt> (<var>tensor_1</var>, <var>tensor_2</var>, ...) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remcoord</tt> (all)</i>
-<a name="IDX959"></a>
+<a name="IDX974"></a>
 </dt>
 <dd><p><code>tensor_i</code>から関数 <code>coord</code>がもたらした座標微分プロパティを削除します。
 <code>remcoord(all)</code>は添字付きオブジェクトすべてからこのプロパティを削除します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-makebox"></a>
+<p><a name="makebox"></a>
+<a name="Item_003a-makebox"></a>
 </p><dl>
 <dt><u>関数:</u> <b>makebox</b><i> (<var>expr</var>)</i>
-<a name="IDX960"></a>
+<a name="IDX975"></a>
 </dt>
 <dd><p><code>show</code>と同じように <var>expr</var>を表示します;
 しかし、
@@ -1645,20 +1699,21 @@ Kroneckerデルタをもたらすという座標微分プロパティを
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-conmetderiv"></a>
+<p><a name="conmetderiv"></a>
+<a name="Item_003a-conmetderiv"></a>
 </p><dl>
 <dt><u>関数:</u> <b>conmetderiv</b><i> (<var>expr</var>, <var>tensor</var>)</i>
-<a name="IDX961"></a>
+<a name="IDX976"></a>
 </dt>
 <dd><p>計量テンソルの共変と反変形式両方(現在の制約)の常微分を含む式を整理します。
 例えば、 以下に見られるように、
 <code>conmetderiv</code>は反変計量テンソルの微分を Christoffelシンボルに結びつけます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) ishow(g([],[a,b],c))$
@@ -1669,42 +1724,43 @@ Kroneckerデルタをもたらすという座標微分プロパティを
                          %1 b      a       %1 a      b
 (%t3)                 - g     ichr2     - g     ichr2
                                    %1 c              %1 c
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-simpmetderiv"></a>
+<p><a name="simpmetderiv"></a>
+<a name="Item_003a-simpmetderiv"></a>
 </p><dl>
 <dt><u>関数:</u> <b>simpmetderiv</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>simpmetderiv</tt> (<var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>simpmetderiv</tt> (<var>expr</var>[, <var>stop</var>])</i>
-<a name="IDX962"></a>
+<a name="IDX977"></a>
 </dt>
 <dd><p>計量テンソルの微分の積を含む式を整理します。
 特に <code>simpmetderiv</code>は2つの恒等式を知っています:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
    ab        ab           ab                 a
   g   g   + g   g     = (g   g  )   = (kdelta )   = 0
    ,d  bc        bc,d         bc ,d          c ,d
 
-</pre>
+</pre></td></tr></table>
 <p>従って、
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
    ab          ab
   g   g   = - g   g
    ,d  bc          bc,d
-</pre>
+</pre></td></tr></table>
 <p>と
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
   ab          ab
  g   g     = g   g
   ,j  ab,i    ,i  ab,j
 
-</pre>
+</pre></td></tr></table>
 <p>これは Christoffel記号の対称性の結果です。
 </p>
 <p><code>simpmetderiv</code>関数はオプションパラメータを1つ取ります。
@@ -1719,7 +1775,7 @@ Kroneckerデルタをもたらすという座標微分プロパティを
 <code>simpmetderiv</code>の部分整理機能を明示的に使って縮約式を得る
 以下の例を通じて例示します:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) imetric(g);
@@ -1753,27 +1809,28 @@ errexp1 has improper indices
 (%t10)                           - g    g
                                     ,e   c b,d
 
-</pre>
+</pre></td></tr></table>
 <p>Weylテンソルの縮約を整理するために
-<code>simpmetderiv</code>と <code>conmetderiv</code>を一緒に使う例として、
+<code><a href="#simpmetderiv">simpmetderiv</a></code>と <code><a href="#conmetderiv">conmetderiv</a></code>を一緒に使う例として、
 <code>weyl.dem</code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-flush1deriv"></a>
+<p><a name="flush1deriv"></a>
+<a name="Item_003a-flush1deriv"></a>
 </p><dl>
 <dt><u>関数:</u> <b>flush1deriv</b><i> (<var>expr</var>, <var>tensor</var>)</i>
-<a name="IDX963"></a>
+<a name="IDX978"></a>
 </dt>
 <dd><p><var>expr</var>の中の、微分添字を 1つだけ持つ <var>tensor</var>をすべて0にします。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -1784,26 +1841,27 @@ errexp1 has improper indices
 <td valign="middle" align="left">[<a href="#SEC132" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.4 Tensors in curved spaces </h3>
 
-<p><a name="Item_003a-imetric"></a>
+<p><a name="imetric"></a>
+<a name="Item_003a-imetric"></a>
 </p><dl>
 <dt><u>関数:</u> <b>imetric</b><i> (<var>g</var>)</i>
-<a name="IDX964"></a>
+<a name="IDX979"></a>
 </dt>
 <dt><u>システム変数:</u> <b>imetric</b>
-<a name="IDX965"></a>
+<a name="IDX980"></a>
 </dt>
 <dd><p>変数 <code>imetric:<var>g</var></code>を割り当てることで計量を指定します。
 更に、コマンド
@@ -1814,83 +1872,88 @@ errexp1 has improper indices
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-idim"></a>
+<p><a name="idim"></a>
+<a name="Item_003a-idim"></a>
 </p><dl>
 <dt><u>関数:</u> <b>idim</b><i> (<var>n</var>)</i>
-<a name="IDX966"></a>
+<a name="IDX981"></a>
 </dt>
 <dd><p>計量の次元を設定します。
 与えられた次元で Levi-Civita記号の反対称プロパティも初期化します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ichr1"></a>
+<p><a name="ichr1"></a>
+<a name="Item_003a-ichr1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ichr1</b><i> ([<var>i</var>, <var>j</var>, <var>k</var>])</i>
-<a name="IDX967"></a>
+<a name="IDX982"></a>
 </dt>
 <dd><p>以下の定義を介して第一種 Christoffel記号をもたらします。
-</p><pre class="example">       (g      + g      - g     )/2 .
+</p><table><tr><td>&nbsp;</td><td><pre class="example">       (g      + g      - g     )/2 .
          ik,j     jk,i     ij,k
-</pre>
+</pre></td></tr></table>
 <p>特定の計量で Christoffel記号を評価するには、
 <code>chr2</code>の下の例のように変数 <code>imetric</code>が名前を割り当てられなければいけません。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ichr2"></a>
+<p><a name="ichr2"></a>
+<a name="Item_003a-ichr2"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ichr2</b><i> ([<var>i</var>, <var>j</var>], [<var>k</var>])</i>
-<a name="IDX968"></a>
+<a name="IDX983"></a>
 </dt>
 <dd><p>以下の定義を介して第二種 Christoffel記号をもたらします。
-</p><pre class="example">                       ks
+</p><table><tr><td>&nbsp;</td><td><pre class="example">                       ks
    ichr2([i,j],[k]) = g    (g      + g      - g     )/2
                              is,j     js,i     ij,s
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-icurvature"></a>
+<p><a name="icurvature"></a>
+<a name="Item_003a-icurvature"></a>
 </p><dl>
 <dt><u>関数:</u> <b>icurvature</b><i> ([<var>i</var>, <var>j</var>, <var>k</var>], [<var>h</var>])</i>
-<a name="IDX969"></a>
+<a name="IDX984"></a>
 </dt>
 <dd><p>第二種 Christoffel記号(<code>ichr2</code>)を使った
 Riemann曲率テンソルをもたらします。
 以下の表記法が使われます:
-</p><pre class="example">            h             h            h         %1         h
+</p><table><tr><td>&nbsp;</td><td><pre class="example">            h             h            h         %1         h
   icurvature     = - ichr2      - ichr2     ichr2    + ichr2
             i j k         i k,j        %1 j      i k        i j,k
                             h          %1
                      + ichr2      ichr2
                             %1 k       i j
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-covdiff"></a>
+<p><a name="covdiff"></a>
+<a name="Item_003a-covdiff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>covdiff</b><i> (<var>expr</var>, <var>v_1</var>, <var>v_2</var>, ...)</i>
-<a name="IDX970"></a>
+<a name="IDX985"></a>
 </dt>
 <dd><p>第二種 Christoffel記号(<code>ichr2</code>)を使って、
 変数 <var>v_i</var>に対する
@@ -1898,7 +1961,7 @@ Riemann曲率テンソルをもたらします。
 これらを評価するには、
 <code>ev(<var>expr</var>,ichr2)</code>を使わなければ行けません。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) entertensor()$
@@ -1936,17 +1999,18 @@ Enter a list of the derivative indices: [];
  + ------------------------------------------- + a
                         2                         i j,s
 (%i6)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-lorentz_005fgauge"></a>
+<p><a name="lorentz"></a>
+<a name="Item_003a-lorentz_005fgauge"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lorentz_gauge</b><i> (<var>expr</var>)</i>
-<a name="IDX971"></a>
+<a name="IDX986"></a>
 </dt>
 <dd><p>反変添字と同一の微分添字を持つ <var>expr</var>の中で
 添字付きオブジェクトすべてに0を代入することで、
@@ -1954,14 +2018,15 @@ Lorentz条件を課します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-igeodesic_005fcoords"></a>
+<p><a name="igeodesic"></a>
+<a name="Item_003a-igeodesic_005fcoords"></a>
 </p><dl>
 <dt><u>関数:</u> <b>igeodesic_coords</b><i> (<var>expr</var>, <var>name</var>)</i>
-<a name="IDX972"></a>
+<a name="IDX987"></a>
 </dt>
 <dd><p><var>expr</var>の中の未微分 Christoffel記号と計量テンソルの一階微分を消すようにします。
 <code>igeodesic_coords</code>関数での <var>name</var>は
@@ -1973,13 +2038,13 @@ Lorentz条件を課します。
 <code>igeodesic_coords</code>関数を使った、
 Riemann曲率テンソルが満たす巡回恒等式の検証を例示します。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) ishow(icurvature([r,s,t],[u]))$
-             u            u         %1         u     
-(%t2) - ichr2      - ichr2     ichr2    + ichr2      
-             r t,s        %1 s      r t        r s,t 
+             u            u         %1         u
+(%t2) - ichr2      - ichr2     ichr2    + ichr2
+             r t,s        %1 s      r t        r s,t
 
                                               u         %1
                                        + ichr2     ichr2
@@ -2001,10 +2066,10 @@ Riemann曲率テンソルが満たす巡回恒等式の検証を例示します�
 (%i5) canform(%);
 (%o5)                                  0
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -2015,15 +2080,15 @@ Riemann曲率テンソルが満たす巡回恒等式の検証を例示します�
 <td valign="middle" align="left">[<a href="#SEC133" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.5 Moving frames </h3>
@@ -2062,7 +2127,7 @@ Minkowski時空での直交標構の Lorentz計量です。
 標構係数 (<code>ifc1</code>と <code>ifc2</code>)を定義します。
 以下の例がそれを例示します:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) iframe_flag:true;
@@ -2090,21 +2155,22 @@ Minkowski時空での直交標構の Lorentz計量です。
 (%t7)               (ifri        - ifri       ) ifr   ifr
                          a %3,%4       a %4,%3     b     c
 
-</pre>
+</pre></td></tr></table>
 <p>もし <code>iframe_bracket_form</code>フラグが <code>false</code>に設定されているなら
 標構ブラケット (frame bracket) (<code>ifb</code>)を計算するのに代わりの方法を使います:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i8) block([iframe_bracket_form:false],ishow(ifb([a,b,c])))$
                                 %6    %5        %5      %6
 (%t8)              ifri     (ifr   ifr     - ifr     ifr  )
                        a %5     b     c,%6      b,%6    c
 
-</pre>
-<p><a name="Item_003a-iframes"></a>
+</pre></td></tr></table>
+<p><a name="iframes"></a>
+<a name="Item_003a-iframes"></a>
 </p><dl>
 <dt><u>関数:</u> <b>iframes</b><i> ()</i>
-<a name="IDX973"></a>
+<a name="IDX988"></a>
 </dt>
 <dd><p>Maximaのこのバージョン以来、
 標構ブラケット (<code>ifb</code>)と同じように
@@ -2113,66 +2179,68 @@ Minkowski時空での直交標構の Lorentz計量です。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ifb"></a>
+<p><a name="ifb"></a>
+<a name="Item_003a-ifb"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ifb</b>
-<a name="IDX974"></a>
+<a name="IDX989"></a>
 </dt>
 <dd><p>標構ブラケット(frame bracket)。
 標構計量の接続係数への寄与が標構ブラケットを使って表されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
           - ifb      + ifb      + ifb
                c a b      b c a      a b c
 ifc1    = --------------------------------
     abc                  2
 
-</pre>
+</pre></td></tr></table>
 <p>標構ブラケット自身は
 標枠と標構計量を使って定義されます。
 <code>frame_bracket_form</code>の値に依存して
 2つの代わりの計算方法が使われます。
 もし true (デフォルト)か <code>itorsion_flag</code>が <code>true</code>なら:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
           d      e                                      f
 ifb =  ifr    ifr   (ifri      - ifri      - ifri    itr   )
    abc    b      c       a d,e       a e,d       a f    d e
 
 
-</pre>
+</pre></td></tr></table>
 <p>そうでないなら:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
              e      d        d      e
 ifb    = (ifr    ifr    - ifr    ifr   ) ifri
    abc       b      c,e      b,e    c        a d
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
 
-<p><a name="Item_003a-icc1"></a>
+<p><a name="icc1"></a>
+<a name="Item_003a-icc1"></a>
 </p><dl>
 <dt><u>変数:</u> <b>icc1</b>
-<a name="IDX975"></a>
+<a name="IDX990"></a>
 </dt>
 <dd><p>第一種接続係数。
 <code>itensor</code>では以下のように定義されます。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 icc1    = ichr1    - ikt1    - inmc1
     abc        abc       abc        abc
 
-</pre>
+</pre></td></tr></table>
 <p>この式では、 <code>iframe_flag</code>が trueなら、
 Christoffel記号 <code>ichr1</code>が標構接続係数 <code>ifc1</code>に置き換えられます。
  <code>itorsion_flag</code>が <code>false</code>なら、 <code>ikt1</code>は省略されます。
@@ -2184,24 +2252,25 @@ Christoffel記号 <code>ichr1</code>が標構接続係数 <code>ifc1</code>に�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-icc2"></a>
+<p><a name="icc2"></a>
+<a name="Item_003a-icc2"></a>
 </p><dl>
 <dt><u>変数:</u> <b>icc2</b>
-<a name="IDX976"></a>
+<a name="IDX991"></a>
 </dt>
 <dd><p>第二種接続係数。
 <code>itensor</code>では以下のように定義されます。
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
     c         c        c         c
 icc2   = ichr2   - ikt2   - inmc2
     ab        ab       ab        ab
 
-</pre>
+</pre></td></tr></table>
 <p>この式では、
 <code>iframe_flag</code>が trueなら、
 Christoffel記号 <code>ichr2</code>が標構接続係数 <code>ifc2</code>に置き換えられます。
@@ -2215,73 +2284,77 @@ Christoffel記号 <code>ichr2</code>が標構接続係数 <code>ifc2</code>に�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ifc1"></a>
+<p><a name="ifc1"></a>
+<a name="Item_003a-ifc1"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ifc1</b>
-<a name="IDX977"></a>
+<a name="IDX992"></a>
 </dt>
 <dd><p>(Ricci回転係数としても知られている)第一種標構係数。
 このテンソルは標構計量の第一種接続係数への寄与を表します。
 以下のように定義されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
           - ifb      + ifb      + ifb
                c a b      b c a      a b c
 ifc1    = --------------------------------
     abc                   2
 
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ifc2"></a>
+<p><a name="ifc2"></a>
+<a name="Item_003a-ifc2"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ifc2</b>
-<a name="IDX978"></a>
+<a name="IDX993"></a>
 </dt>
 <dd><p>第二種標構係数。
 このテンソルは標構計量の第一種接続係数への寄与を表します。
 必要に応じて、標構ブラケット (<code>ifb</code>)の
 適切な上付き、下付き添字での置換として定義されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
     c       cd
 ifc2   = ifg   ifc1
     ab             abd
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ifr"></a>
+<p><a name="ifr"></a>
+<a name="Item_003a-ifr"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ifr</b>
-<a name="IDX979"></a>
+<a name="IDX994"></a>
 </dt>
 <dd><p>標枠。
 標構計量(<code>ifg</code>)を形成するために逆標構場 (<code>ifri</code>)を縮約します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ifri"></a>
+<p><a name="ifri"></a>
+<a name="Item_003a-ifri"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ifri</b>
-<a name="IDX980"></a>
+<a name="IDX995"></a>
 </dt>
 <dd><p>逆標構場。
 (双対基底ベクトル)標構基底を指定します。
@@ -2289,14 +2362,15 @@ ifc2   = ifg   ifc1
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ifg"></a>
+<p><a name="ifg"></a>
+<a name="Item_003a-ifg"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ifg</b>
-<a name="IDX981"></a>
+<a name="IDX996"></a>
 </dt>
 <dd><p>標構計量。
 <code>kdelta</code>のデフォルトですが、
@@ -2304,28 +2378,30 @@ ifc2   = ifg   ifc1
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ifgi"></a>
+<p><a name="ifgi"></a>
+<a name="Item_003a-ifgi"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ifgi</b>
-<a name="IDX982"></a>
+<a name="IDX997"></a>
 </dt>
 <dd><p>逆標構計量。
 標構計量 (<code>ifg</code>)を <code>kdelta</code>に縮約します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-iframe_005fbracket_005fform"></a>
+<p><a name="iframe_005fbracket_005fform"></a>
+<a name="Item_003a-iframe_005fbracket_005fform"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>iframe_bracket_form</b>
-<a name="IDX983"></a>
+<a name="IDX998"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2333,7 +2409,7 @@ ifc2   = ifg   ifc1
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -2344,15 +2420,15 @@ ifc2   = ifg   ifc1
 <td valign="middle" align="left">[<a href="#SEC134" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.6 Torsion and nonmetricity </h3>
@@ -2362,131 +2438,137 @@ ifc2   = ifg   ifc1
 ねじれの寄与が接続係数に加えられます。
 同様に、フラグ <code>inonmet_flag</code>が trueの時、非計量性成分が含まれます。
 </p>
-<p><a name="Item_003a-inm"></a>
+<p><a name="inm"></a>
+<a name="Item_003a-inm"></a>
 </p><dl>
 <dt><u>変数:</u> <b>inm</b>
-<a name="IDX984"></a>
+<a name="IDX999"></a>
 </dt>
 <dd><p>非計量性ベクトル。
 共形非計量性は計量テンソルの共変微分を通して定義されます。
 <code>inonmet_flag</code>が <code>true</code>に設定されている時
 通常零の計量テンソルの共変微分は以下のように評価されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 g     =- g  inm
  ij;k     ij   k
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-inmc1"></a>
+<p><a name="inmc1"></a>
+<a name="Item_003a-inmc1"></a>
 </p><dl>
 <dt><u>変数:</u> <b>inmc1</b>
-<a name="IDX985"></a>
+<a name="IDX1000"></a>
 </dt>
 <dd><p>非計量ベクトル成分の共変置換。
 以下のように定義されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
            g   inm  - inm  g   - g   inm
             ab    c      a  bc    ac    b
 inmc1    = ------------------------------
      abc                 2
 
-</pre>
+</pre></td></tr></table>
 <p>(もし標構計量を使うなら、<code>ifg</code>を <code>g</code>に代入します。)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-inmc2"></a>
+<p><a name="inmc2"></a>
+<a name="Item_003a-inmc2"></a>
 </p><dl>
 <dt><u>変数:</u> <b>inmc2</b>
-<a name="IDX986"></a>
+<a name="IDX1001"></a>
 </dt>
 <dd><p>非計量ベクトル成分の反変置換。
 <code>inonmet_flag</code>が <code>true</code>なら接続係数で使われます。
 以下のように定義されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
                       c         c         cd
           -inm  kdelta  - kdelta  inm  + g   inm  g
      c        a       b         a    b          d  ab
 inmc2   = -------------------------------------------
      ab                        2
 
-</pre>
+</pre></td></tr></table>
 <p>(もし標構計量を使うなら、<code>ifg</code>を <code>g</code>に代入します。)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ikt1"></a>
+<p><a name="ikt1"></a>
+<a name="Item_003a-ikt1"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ikt1</b>
-<a name="IDX987"></a>
+<a name="IDX1002"></a>
 </dt>
 <dd><p>(コントーションとしても知られる)ねじれテンソルの共変置換。
 以下のように定義されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
                   d           d       d
           -g   itr  - g    itr   - itr   g
             ad    cb    bd    ca      ab  cd
 ikt1    = ----------------------------------
     abc                   2
 
-</pre>
+</pre></td></tr></table>
 <p>(標構計量を使うなら、<code>ifg</code>を <code>g</code>に代入します。)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-ikt2"></a>
+<p><a name="ikt2"></a>
+<a name="Item_003a-ikt2"></a>
 </p><dl>
 <dt><u>変数:</u> <b>ikt2</b>
-<a name="IDX988"></a>
+<a name="IDX1003"></a>
 </dt>
 <dd><p>(コントーションとしても知られる)ねじれテンソルの共変置換。
 以下のように定義されます:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
     c     cd
 ikt2   = g   ikt1
     ab           abd
 
-</pre>
+</pre></td></tr></table>
 <p>(標構計量を使うなら、<code>ifg</code>を <code>g</code>に代入します。)
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-itr"></a>
+<p><a name="itr"></a>
+<a name="Item_003a-itr"></a>
 </p><dl>
 <dt><u>変数:</u> <b>itr</b>
-<a name="IDX989"></a>
+<a name="IDX1004"></a>
 </dt>
 <dd><p>ねじれテンソル。
 以下の例で例示されるように、
 ねじれを伴う計量に関してスカラー関数上の繰り返される共変微分は計算されません:
 </p>
-<pre class="example">(%i1) load(itensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) imetric:g;
 (%o2)                                  g
@@ -2534,10 +2616,10 @@ ikt2   = g   ikt1
 (%t16)                           - f    itr
                                     ,%1    i j
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -2548,15 +2630,15 @@ ikt2   = g   ikt1
 <td valign="middle" align="left">[<a href="#SEC135" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.7 Exterior algebra </h3>
@@ -2570,30 +2652,30 @@ ikt2   = g   ikt1
 何人の作者は反対称の概念に対応した定義を好みます:
 これらの仕事では、2つのベクトル場のウェッジ積は、例えば以下のように定義されます。
 </p>
-<pre class="example">            a a  - a a
+<table><tr><td>&nbsp;</td><td><pre class="example">            a a  - a a
              i j    j i
  a  /\ a  = -----------
   i     j        2
-</pre>
+</pre></td></tr></table>
 <p>もっと一般的に、 p形式や q形式の積は以下のように定義されます。
 </p>
-<pre class="example">                       1     k1..kp l1..lq
+<table><tr><td>&nbsp;</td><td><pre class="example">                       1     k1..kp l1..lq
 A       /\ B       = ------ D              A       B
  i1..ip     j1..jq   (p+q)!  i1..ip j1..jq  k1..kp  l1..lq
-</pre>
+</pre></td></tr></table>
 <p>ここで <code>D</code>はKroneckerのデルタを表します。
 </p>
 <p>しかし、他の作者は容積要素の概念に対応する&quot;幾何的&quot;定義を好みます:
 </p>
-<pre class="example">a  /\ a  = a a  - a a
+<table><tr><td>&nbsp;</td><td><pre class="example">a  /\ a  = a a  - a a
  i     j    i j    j i
-</pre>
+</pre></td></tr></table>
 <p>そして一般的な場合、
 </p>
-<pre class="example">                       1    k1..kp l1..lq
+<table><tr><td>&nbsp;</td><td><pre class="example">                       1    k1..kp l1..lq
 A       /\ B       = ----- D              A       B
  i1..ip     j1..jq   p! q!  i1..ip j1..jq  k1..kp  l1..lq
-</pre>
+</pre></td></tr></table>
 <p><code>itensor</code>はテンソル代数パッケージなので、
 これら2つの定義の前者がより自然なもののようです。
 しかし、多くの応用は後者の定義を使います。
@@ -2601,10 +2683,11 @@ A       /\ B       = ----- D              A       B
 <code>igeowedge_flag</code>が <code>false</code> (デフォルト)なら、
 前者の &quot;テンソル的&quot;定義が使われ、そうでないなら，後者の&quot;幾何的&quot;定義が適用されます。
 </p>
-<p><a name="Item_003a-_007e"></a>
+<p><a name="g_t_007e"></a>
+<a name="Item_003a-_007e"></a>
 </p><dl>
 <dt><u>演算子:</u> <b>~</b>
-<a name="IDX990"></a>
+<a name="IDX1005"></a>
 </dt>
 <dd><p>ウェッジ積演算子はティルデ <code>~</code>で示されれます。
 これは二項演算子です。
@@ -2615,7 +2698,7 @@ A       /\ B       = ----- D              A       B
 <p>以下の例のように、
 ウェッジ積演算子の振る舞いは <code>igeowedge_flag</code>フラグで制御されます:
 </p>
-<pre class="example">(%i1) load(itensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) ishow(a([i])~b([j]))$
                                  a  b  - b  a
@@ -2637,18 +2720,19 @@ A       /\ B       = ----- D              A       B
 (%i7) ishow(a([i,j])~b([k]))$
 (%t7)                     a    b  + b  a    - a    b
                            i j  k    i  j k    i k  j
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-_007c"></a>
+<p><a name="g_t_007c"></a>
+<a name="Item_003a-_007c"></a>
 </p><dl>
 <dt><u>演算子:</u> <b>|</b>
-<a name="IDX991"></a>
+<a name="IDX1006"></a>
 </dt>
 <dd><p>縦線 <code>|</code>は&quot;ベクトルの縮約&quot;二項演算子を示します。
 完全反対称共変テンソルが反変ベクトルと縮約される時、
@@ -2660,7 +2744,7 @@ A       /\ B       = ----- D              A       B
 これは <code>|</code>演算子を含む式のより良い整理を保証します。
 例えば:
 </p>
-<pre class="example">(%i1) load(itensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) decsym(a,2,0,[anti(all)],[]);
 (%o2)                                done
@@ -2672,7 +2756,7 @@ A       /\ B       = ----- D              A       B
                                      %1
 (%t4)                             - v   a
                                          %1 j
-</pre>
+</pre></td></tr></table>
 <p><code>|</code>演算子で使われるテンソルは
 は共変添字に対して完全反対称と宣言されなければいけないことが
 本質的であることに注意してください。
@@ -2680,22 +2764,23 @@ A       /\ B       = ----- D              A       B
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-extdiff"></a>
+<p><a name="extdiff"></a>
+<a name="Item_003a-extdiff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>extdiff</b><i> (<var>expr</var>, <var>i</var>)</i>
-<a name="IDX992"></a>
+<a name="IDX1007"></a>
 </dt>
 <dd><p>添字 <var>i</var>に対する <var>expr</var>の外積を計算します。
 外微分は形式的に偏微分演算子のウェッジ積で微分形式として定義されます。
 そんなように、演算子も <code>igeowedge_flag</code>の設定で制御されます。
 例えば:
 </p>
-<pre class="example">(%i1) load(itensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) ishow(extdiff(v([i]),j))$
                                   v    - v
@@ -2718,22 +2803,23 @@ A       /\ B       = ----- D              A       B
 (%t7)                    - (a      - a      + a     )
                              k j,i    k i,j    j i,k
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-hodge"></a>
+<p><a name="hodge"></a>
+<a name="Item_003a-hodge"></a>
 </p><dl>
 <dt><u>関数:</u> <b>hodge</b><i> (<var>expr</var>)</i>
-<a name="IDX993"></a>
+<a name="IDX1008"></a>
 </dt>
 <dd><p><var>expr</var>の Hodge双対を計算します。
 例えば:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) imetric(g);
@@ -2755,7 +2841,7 @@ A       /\ B       = ----- D              A       B
                                    6
 (%i8) ishow(canform(hodge(%)))$
                  %1 %2 %3 %8            %4 %5 %6 %7
-(%t8) levi_civita            levi_civita            g       
+(%t8) levi_civita            levi_civita            g
                                                      %1 %106
                              g        g        g      A         /6
                               %2 %107  %3 %108  %4 %8  %5 %6 %7
@@ -2767,17 +2853,18 @@ A       /\ B       = ----- D              A       B
 (%t11)                     - A
                               %106 %107 %108
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-igeowedge_005fflag"></a>
+<p><a name="igeowedge_005fflag"></a>
+<a name="Item_003a-igeowedge_005fflag"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>igeowedge_flag</b>
-<a name="IDX994"></a>
+<a name="IDX1009"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2788,7 +2875,7 @@ A       /\ B       = ----- D              A       B
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a>
 </div>
 </p></dd></dl>
 
@@ -2799,15 +2886,15 @@ A       /\ B       = ----- D              A       B
 <td valign="middle" align="left">[<a href="#SEC136" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.8 Exporting TeX expressions </h3>
@@ -2819,15 +2906,16 @@ A       /\ B       = ----- D              A       B
 代わりに <code>tentex</code>コマンドを試すことができます。
 これはテンソル式を適切に添字が付けられたTeXオブジェクトに翻訳しようとします。
 </p>
-<p><a name="Item_003a-tentex"></a>
+<p><a name="tentex"></a>
+<a name="Item_003a-tentex"></a>
 </p><dl>
 <dt><u>関数:</u> <b>tentex</b><i> (<var>expr</var>)</i>
-<a name="IDX995"></a>
+<a name="IDX1010"></a>
 </dt>
 <dd><p>以下の例のように、
 <code>tentex</code>関数を使うには、最初に<code>tentex</code>をロードしなければいけません:
 </p>
-<pre class="example">
+<table><tr><td>&nbsp;</td><td><pre class="example">
 (%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) load(tentex);
@@ -2845,7 +2933,7 @@ A       /\ B       = ----- D              A       B
 (%i5) tentex(%)$
 $$\Gamma_{j\,k}^{m_1}\,\Gamma_{l\,m_1}^{i}-\Gamma_{j\,l}^{m_1}\,
  \Gamma_{k\,m_1}^{i}-\Gamma_{j\,l,k}^{i}+\Gamma_{j\,k,l}^{i}$$
-</pre>
+</pre></td></tr></table>
 <p>コンパイルエラーに導かれるTeX式でのパーセント符号の出現を避けるための、
 <code>idummyx</code>割り当ての使用に注意してください。
 </p>
@@ -2853,8 +2941,8 @@ $$\Gamma_{j\,k}^{m_1}\,\Gamma_{l\,m_1}^{i}-\Gamma_{j\,l}^{m_1}\,
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a> &middot;
-<a href="maxima_100.html#Category_003a-TeX-output">TeX output</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a> &middot;
+<a href="maxima_106.html#Category_003a-TeX-output">TeX output</a>
 </div>
 </p></dd></dl>
 
@@ -2865,15 +2953,15 @@ $$\Gamma_{j\,k}^{m_1}\,\Gamma_{l\,m_1}^{i}-\Gamma_{j\,l}^{m_1}\,
 <td valign="middle" align="left">[<a href="#SEC137" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.9 Interfacing with ctensor </h3>
@@ -2883,10 +2971,11 @@ $$\Gamma_{j\,k}^{m_1}\,\Gamma_{l\,m_1}^{i}-\Gamma_{j\,l}^{m_1}\,
 Maximaコードを生成する能力があります。
 この仕事を実行する関数は <code>ic_convert</code>です。
 </p>
-<p><a name="Item_003a-ic_005fconvert"></a>
+<p><a name="ic_005fconvert"></a>
+<a name="Item_003a-ic_005fconvert"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ic_convert</b><i> (<var>eqn</var>)</i>
-<a name="IDX996"></a>
+<a name="IDX1011"></a>
 </dt>
 <dd><p><code>itensor</code>方程式 <var>eqn</var>を
 <code>ctensor</code>割り当て文に変換します。
@@ -2907,7 +2996,7 @@ Christoffel記号 <code>ichr1</code>と <code>ichr2</code>は
 ただ <code>ev</code>するだけで変換される割り当て分を評価することができます。
 以下の例はこの関数の特長を例示します。
 </p>
-<pre class="example">(%i1) load(itensor);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(itensor);
 (%o1)      /share/tensor/itensor.lisp
 (%i2) eqn:ishow(t([i,j],[k])=f([],[])*g([l,m],[])*a([],[m],j)
       *b([i],[l,k]))$
@@ -2934,11 +3023,11 @@ Christoffel記号 <code>ichr1</code>と <code>ichr2</code>は
 
  lg    , l, 1, dim), m, 1, dim)))
    l, m
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Package-itensor">Package itensor</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-itensor">Package itensor</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -2949,15 +3038,15 @@ Christoffel記号 <code>ichr1</code>と <code>ichr2</code>は
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC123" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC127" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC127" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_26.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 25.2.10 Reserved words </h3>
@@ -2965,7 +3054,7 @@ Christoffel記号 <code>ichr1</code>と <code>ichr2</code>は
 <p>以下の Maximaワードは
 <code>itensor</code>パッケージで内部的に使われているので再定義してはいけません:
 </p>
-<pre class="example">  Keyword    Comments
+<table><tr><td>&nbsp;</td><td><pre class="example">  Keyword    Comments
   ------------------------------------------
   indices2() Internal version of indices()
   conti      Lists contravariant indices
@@ -2978,8 +3067,7 @@ Christoffel記号 <code>ichr1</code>と <code>ichr2</code>は
   _lc2kdt0
   _lcprod
   _extlc
-</pre>
-
+</pre></td></tr></table>
 <p><a name="Item_003a-ctensor"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
@@ -2990,14 +3078,14 @@ Christoffel記号 <code>ichr1</code>と <code>ichr2</code>は
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

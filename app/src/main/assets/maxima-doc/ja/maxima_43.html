@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 43. bode</title>
+<title>Maxima 5.39.0 Manual: 43. bitwise</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 43. bode">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 43. bode">
+<meta name="description" content="Maxima 5.39.0 Manual: 43. bitwise">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 43. bitwise">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,198 +72,396 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="bode"></a>
-<a name="SEC220"></a>
+<a name="bitwise_002dpkg"></a>
+<a name="SEC219"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_42.html#SEC219" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC221" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC220" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_42.html#SEC218" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_42.html#SEC217" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 43. bode </h1>
+<h1 class="chapter"> 43. bitwise </h1>
 
+<p>パッケージ <code>bitwise</code>は整数定数のビット操作を可能にする関数を提供します。
+通常通り、知られているかもしれない変数の属性を考慮してもし定数の実際の値が未知なら、
+maximaは演算の結果を整理しようとします。
+<code><a href="maxima_11.html#declare">declare</a></code>メカニズムを参照してください。
+</p>
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC221">43.1 Functions and Variables for bode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC220">43.1 Functions and Variables for bitwise</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-bode"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-bitwise"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-bode"></a>
-<a name="SEC221"></a>
+<a name="Functions-and-Variables-for-bitwise"></a>
+<a name="SEC220"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC220" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC219" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC220" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC220" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC219" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC219" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 43.1 Functions and Variables for bode </h2>
+<h2 class="section"> 43.1 Functions and Variables for bitwise </h2>
 
-
-<p><a name="Item_003a-bode_005fgain"></a>
+<p><a name="bit_005fnot"></a>
+<a name="Item_003a-bit_005fnot"></a>
 </p><dl>
-<dt><u>関数:</u> <b>bode_gain</b><i> (<var>H</var>, <var>range</var>, ...<var>plot_opts</var>...)</i>
-<a name="IDX1423"></a>
+<dt><u>関数:</u> <b>bit_not</b><i> (<var>int</var>)</i>
+<a name="IDX1445"></a>
 </dt>
-<dd><p>Bodeのゲイン線図を描く関数。
+<dd><p>符号付き整数のすべてのビットを反転させます。
+この操作の結果は <code>-int - 1</code>です。
 </p>
-<p>例 (1から7までは
-</p><pre class="example"><a href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a>,
-</pre><p>から、8はRon Crummettから):
-</p><pre class="example">(%i1) load(&quot;bode&quot;)$
-
-(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$
-
-(%i3) bode_gain (H1 (s), [w, 1/1000, 1000])$
-
-(%i4) H2 (s) := 1 / (1 + s/omega0)$
-
-(%i5) bode_gain (H2 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i6) H3 (s) := 1 / (1 + s/omega0)^2$
-
-(%i7) bode_gain (H3 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i8) H4 (s) := 1 + s/omega0$
-
-(%i9) bode_gain (H4 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i10) H5 (s) := 1/s$
-
-(%i11) bode_gain (H5 (s), [w, 1/1000, 1000])$
-
-(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$
-
-(%i13) bode_gain (H6 (s), [w, 1/1000, 1000]), 
-                  omega0 = 10, zeta = 1/10$
-
-(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$
-
-(%i15) bode_gain (H7 (s), [w, 1/1000, 1000]),
-                  omega0 = 10, zeta = 1/10$
-
-(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$
-
-(%i17) bode_gain (H8 (s), [w, 1/1000, 1000])$
-</pre>
-<p>この関数を使うためには、最初に <code>load(&quot;bode&quot;)</code>と書いてください。
-<code>bode_phase</code>も参照してください。
-</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_not(i);
+(%o2)                      bit_not(i)
+(%i3) bit_not(bit_not(i));
+(%o3)                           i
+(%i4) bit_not(3);
+(%o4)                          - 4
+(%i5) bit_not(100);
+(%o5)                         - 101
+(%i6) bit_not(-101);
+(%o6)                          100
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Plotting">Plotting</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-bode">Package bode</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
 </div>
-</p>
-</dd></dl>
+</p></dd></dl>
 
-
-<p><a name="Item_003a-bode_005fphase"></a>
+<p><a name="bit_005fand"></a>
+<a name="Item_003a-bit_005fand"></a>
 </p><dl>
-<dt><u>関数:</u> <b>bode_phase</b><i> (<var>H</var>, <var>range</var>, ...<var>plot_opts</var>...)</i>
-<a name="IDX1424"></a>
+<dt><u>関数:</u> <b>bit_and</b><i> (<var>int1</var>, ...)</i>
+<a name="IDX1446"></a>
 </dt>
-<dd><p>Bodeの位相線図を描く関数。
+<dd><p>この関数は、2つ以上の符号付き整数のビット毎の <code>and</code>を計算します。
 </p>
-<p>例 (1から7までは
-</p><pre class="example"><a href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html">http://www.swarthmore.edu/NatSci/echeeve1/Ref/Bode/BodeHow.html</a>,
-</pre><p>から、8はRon Crummettから):
-</p><pre class="example">(%i1) load(&quot;bode&quot;)$
-
-(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$
-
-(%i3) bode_phase (H1 (s), [w, 1/1000, 1000])$
-
-(%i4) H2 (s) := 1 / (1 + s/omega0)$
-
-(%i5) bode_phase (H2 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i6) H3 (s) := 1 / (1 + s/omega0)^2$
-
-(%i7) bode_phase (H3 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i8) H4 (s) := 1 + s/omega0$
-
-(%i9) bode_phase (H4 (s), [w, 1/1000, 1000]), omega0 = 10$
-
-(%i10) H5 (s) := 1/s$
-
-(%i11) bode_phase (H5 (s), [w, 1/1000, 1000])$
-
-(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$
-
-(%i13) bode_phase (H6 (s), [w, 1/1000, 1000]), 
-                   omega0 = 10, zeta = 1/10$
-
-(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$
-
-(%i15) bode_phase (H7 (s), [w, 1/1000, 1000]), 
-                   omega0 = 10, zeta = 1/10$
-
-(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$
-
-(%i17) bode_phase (H8 (s), [w, 1/1000, 1000])$
-
-(%i18) block ([bode_phase_unwrap : false],
-              bode_phase (H8 (s), [w, 1/1000, 1000]));
-
-(%i19) block ([bode_phase_unwrap : true], 
-              bode_phase (H8 (s), [w, 1/1000, 1000]));
-</pre>
-<p>この関数を使うためには、最初に<code>load(&quot;bode&quot;)</code>と書いてください。
-<code>bode_gain</code>も参照してください。
-</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_and(i,i);
+(%o2)                           i
+(%i3) bit_and(i,i,i);
+(%o3)                           i
+(%i4) bit_and(1,3);
+(%o4)                           1
+(%i5) bit_and(-7,7);
+(%o5)                           1
+</pre></td></tr></table>
+<p>もし <code>bit_and</code>のパラメータの1つが偶数かどうかわかっているなら、
+関数はこの情報を考慮します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_and(1,e);
+(%o3)                           0
+(%i4) bit_and(1,o);
+(%o4)                           1
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Plotting">Plotting</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-bode">Package bode</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
 </div>
+</p></dd></dl>
+
+<p><a name="bit_005for"></a>
+<a name="Item_003a-bit_005for"></a>
+</p><dl>
+<dt><u>関数:</u> <b>bit_or</b><i> (<var>int1</var>, ...)</i>
+<a name="IDX1447"></a>
+</dt>
+<dd><p>この関数は2つ以上の符号付き整数のビット毎の <code>or</code>を計算します。
 </p>
-</dd></dl>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_or(i,i);
+(%o2)                           i
+(%i3) bit_or(i,i,i);
+(%o3)                           i
+(%i4) bit_or(1,3);
+(%o4)                           3
+(%i5) bit_or(-7,7);
+(%o5)                          - 1
+</pre></td></tr></table>
+<p>もし <code>bit_or</code>のパラメータの1つが偶数かどうかわかっているなら、
+関数はこの情報を考慮します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_or(1,e);
+(%o3)                         e + 1
+(%i4) bit_or(1,o);
+(%o4)                           o
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bit_005fxor"></a>
+<a name="Item_003a-bit_005fxor"></a>
+</p><dl>
+<dt><u>関数:</u> <b>bit_xor</b><i> (<var>int1</var>, ...)</i>
+<a name="IDX1448"></a>
+</dt>
+<dd><p>この関数は2つ以上の符号付き整数のビット毎の <code>xor</code>を計算します。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_xor(i,i);
+(%o2)                           0
+(%i3) bit_xor(i,i,i);
+(%o3)                           i
+(%i4) bit_xor(1,3);
+(%o4)                           2
+(%i5) bit_xor(-7,7);
+(%o5)                          - 2
+</pre></td></tr></table>
+<p>もし <code>bit_xor</code>のパラメータの1つが偶数かどうかわかっているなら、
+関数はこの情報を考慮します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_xor(1,e);
+(%o3)                         e + 1
+(%i4) bit_xor(1,o);
+(%o4)                         o - 1
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
 
 
-<p><a name="Item_003a-clebsch_005fgordan"></a>
+<p><a name="bit_005flsh"></a>
+<a name="Item_003a-bit_005flsh"></a>
+</p><dl>
+<dt><u>関数:</u> <b>bit_lsh</b><i> (<var>int</var>, <var>nBits</var>)</i>
+<a name="IDX1449"></a>
+</dt>
+<dd><p>この関数は符号付き整数 <code>int</code>のすべてのビットを <code>nBits</code>だけ左へシフトさせます。
+この操作で整数の幅は <code>nBits</code>だけ拡張されます。
+なので、<code>bit_lsh</code>の結果は <code>int * 2</code>です(原文に従う)。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_lsh(0,1);
+(%o2)                           0
+(%i3) bit_lsh(1,0);
+(%o3)                           1
+(%i4) bit_lsh(1,1);
+(%o4)                           2
+(%i5) bit_lsh(1,i);
+(%o5)                     bit_lsh(1, i)
+(%i6) bit_lsh(-3,1);
+(%o6)                          - 6
+(%i7) bit_lsh(-2,1);
+(%o7)                          - 4
+</pre></td></tr></table><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+
+<p><a name="bit_005frsh"></a>
+<a name="Item_003a-bit_005frsh"></a>
+</p><dl>
+<dt><u>関数:</u> <b>bit_rsh</b><i> (<var>int</var>, <var>nBits</var>)</i>
+<a name="IDX1450"></a>
+</dt>
+<dd><p>この関数は符号付き整数 <code>int</code>のすべてのビットを <code>nBits</code>だけ右へシフトさせます。
+この操作で整数の幅は <code>nBits</code>だけ減らされます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_rsh(0,1);
+(%o2)                           0
+(%i3) bit_rsh(2,0);
+(%o3)                           2
+(%i4) bit_rsh(2,1);
+(%o4)                           1
+(%i5) bit_rsh(2,2);
+(%o5)                           0
+(%i6) bit_rsh(-3,1);
+(%o6)                          - 2
+(%i7) bit_rsh(-2,1);
+(%o7)                          - 1
+(%i8) bit_rsh(-2,2);
+(%o8)                          - 1
+</pre></td></tr></table><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bit_005flength"></a>
+<a name="Item_003a-bit_005flength"></a>
+</p><dl>
+<dt><u>関数:</u> <b>bit_length</b><i> (<var>int</var>)</i>
+<a name="IDX1451"></a>
+</dt>
+<dd><p>変数が数 <code>int</code>を保持するために何ビット長必要か調べます。
+この関数は正整数上のみに演算します。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_length(0);
+(%o2)                           0
+(%i3) bit_length(1);
+(%o3)                           1
+(%i4) bit_length(7);
+(%o4)                           3
+(%i5) bit_length(8);
+(%o5)                           4
+</pre></td></tr></table><div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="bit_005fonep"></a>
+<a name="Item_003a-bit_005fonep"></a>
+</p><dl>
+<dt><u>関数:</u> <b>bit_onep</b><i> (<var>int</var>, <var>nBit</var>)</i>
+<a name="IDX1452"></a>
+</dt>
+<dd><p>符号付き整数 <code>int</code>でビット <code>nBit</code>がセットされているかどうか調べます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_onep(85,0);
+(%o2)                         true
+(%i3) bit_onep(85,1);
+(%o3)                         false
+(%i4) bit_onep(85,2);
+(%o4)                         true
+(%i5) bit_onep(85,3);
+(%o5)                         false
+(%i6) bit_onep(85,100);
+(%o6)                         false
+(%i7) bit_onep(i,100);
+(%o7)                   bit_onep(i, 100)
+</pre></td></tr></table>
+<p>符号付き数では、符号ビットは2の補数相当です。
+(原文: For signed numbers the sign bit is interpreted to be more than <code>nBit</code> to the
+left of the leftmost bit of <code>int</code> that reads <code>1</code>.)
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) bit_onep(-2,0);
+(%o2)                         false
+(%i3) bit_onep(-2,1);
+(%o3)                         true
+(%i4) bit_onep(-2,2);
+(%o4)                         true
+(%i5) bit_onep(-2,3);
+(%o5)                         true
+(%i6) bit_onep(-2,4);
+(%o6)                         true
+</pre></td></tr></table>
+
+<p>もしテストする数が偶数かどうかわかっているなら、
+関数はこの情報を考慮します。
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load(&quot;bitwise&quot;)$
+(%i2) declare(e,even,o,odd);
+(%o2)                         done
+(%i3) bit_onep(e,0);
+(%o3)                         false
+(%i4) bit_onep(o,0);
+(%o4)                         true
+</pre></td></tr></table>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Number-theory">Number theory</a>
+
+<a href="maxima_106.html#Category_003a-Binary-operations">Binary operations</a>
+
+<a href="maxima_106.html#Category_003a-Package-bitwise">Package bitwise</a>
+</div>
+</p></dd></dl>
+
+<p><a name="Item_003a-bode_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC220" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_44.html#SEC222" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC219" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_44.html#SEC221" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

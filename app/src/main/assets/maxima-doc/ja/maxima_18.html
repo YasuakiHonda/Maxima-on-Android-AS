@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 18. Differentiation</title>
+<title>Maxima 5.39.0 Manual: 18. Differentiation</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 18. Differentiation">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 18. Differentiation">
+<meta name="description" content="Maxima 5.39.0 Manual: 18. Differentiation">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 18. Differentiation">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,9 +72,25 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Differentiation"></a>
 <a name="SEC95"></a>
@@ -84,21 +99,21 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="#SEC96" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_17.html#SEC93" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_19.html#SEC97" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 18. Differentiation </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC96">18.1 Functions and Variables for Differentiation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC96">18.1 Functions and Variables for Differentiation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -111,15 +126,15 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left">[<a href="maxima_19.html#SEC97" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC95" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC95" title="Up section">上</a>]</td>
+<td valign="middle" align="left">[<a href="#SEC95" title="Up section"> Up </a>]</td>
 <td valign="middle" align="left">[<a href="maxima_19.html#SEC97" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 18.1 Functions and Variables for Differentiation </h2>
@@ -127,8 +142,8 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <p><a name="antid"></a>
 <a name="Item_003a-antid"></a>
 </p><dl>
-<dt><u>関数:</u> <b>antid</b><i> (<var>expr</var>, <var>x</var>, <var>u(x)</var>) </i>
-<a name="IDX723"></a>
+<dt><u>関数:</u> <b>antid</b><i> (<var>expr</var>, <var>x</var>, <var>u(x)</var>)</i>
+<a name="IDX730"></a>
 </dt>
 <dd><p>２要素リストを返します。
 そのリストから <var>expr</var>の <var>x</var>に関する不定積分(antiderivative)が構成できます。
@@ -146,7 +161,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <p><code>load (&quot;antid&quot;)</code>はこの関数をロードします。
 <code>antid</code>パッケージは関数 <code>nonzeroandfreeof</code>と <code>linear</code>も定義します。
 </p>
-<p><code>antid</code>は以下のように <code>antidiff</code>と関係します。
+<p><code>antid</code>は以下のように <code><a href="#antidiff">antidiff</a></code>と関係します。
 ２要素リスト <var>L</var>が <code>antid</code>の戻り値とします。
 <code>antidiff</code>の戻り値は
 <code><var>L</var>[1] + 'integrate (<var>L</var>[2], <var>x</var>)</code>に等しいです。
@@ -154,7 +169,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) load (&quot;antid&quot;)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;antid&quot;)$
 (%i2) expr: exp (z(x)) * diff (z(x), x) * y(x);
                             z(x)  d
 (%o2)                y(x) %e     (-- (z(x)))
@@ -181,10 +196,10 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 (%o7)             I y(x) %e     (-- (z(x))) dx
                   ]              dx
                   /
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -192,7 +207,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-antidiff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>antidiff</b><i> (<var>expr</var>, <var>x</var>, <var>u</var>(<var>x</var>))</i>
-<a name="IDX724"></a>
+<a name="IDX731"></a>
 </dt>
 <dd><p><var>expr</var>の <var>x</var>に関する不定積分(antiderivative)を返します。
 式 <var>expr</var>は未知の関数 <var>u</var>とその導関数を含むかもしれません。
@@ -214,7 +229,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) load (&quot;antid&quot;)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;antid&quot;)$
 (%i2) expr: exp (z(x)) * diff (z(x), x) * y(x);
                             z(x)  d
 (%o2)                y(x) %e     (-- (z(x)))
@@ -241,10 +256,10 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 (%o7)             I y(x) %e     (-- (z(x))) dx
                   ]              dx
                   /
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Integral-calculus">Integral calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Integral-calculus">Integral calculus</a>
 </div>
 </p></dd></dl>
 
@@ -252,7 +267,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-at"></a>
 </p><dl>
 <dt><u>関数:</u> <b>at</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>at</tt> (<var>expr</var>, [<var>eqn_1</var>, &hellip;, <var>eqn_n</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>at</tt> (<var>expr</var>, <var>eqn</var>)</i>
-<a name="IDX725"></a>
+<a name="IDX732"></a>
 </dt>
 <dd><p>等式のリスト <code>[<var>eqn_1</var>, ..., <var>eqn_n</var>]</code>
 もしくは１つの等式 <var>eqn</var>の中で指定されたように値を仮定された変数を使って
@@ -264,12 +279,12 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 </p>
 <p><code>at</code>は多重代入を並列に実行します。
 </p>
-<p><code>atvalue</code>も参照してください。
-代入を実行する他の関数に関しては <code>subst</code>や <code>ev</code>も参照してください。
+<p><code><a href="#atvalue">atvalue</a></code>も参照してください。
+代入を実行する他の関数に関しては <code><a href="maxima_6.html#subst">subst</a></code>や <code><a href="maxima_8.html#ev">ev</a></code>も参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) atvalue (f(x,y), [x = 0, y = 1], a^2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) atvalue (f(x,y), [x = 0, y = 1], a^2);
                                 2
 (%o1)                          a
 (%i2) atvalue ('diff (f(x,y), x), x = 0, 1 + y);
@@ -295,11 +310,11 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 (%o5)     16 a  - 2 u(0, 1) (-- (u(x, y))!            )
                              dx          !
                                          !x = 0, y = 1
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Evaluation">Evaluation</a> &middot;
-<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Evaluation">Evaluation</a> &middot;
+<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
@@ -308,14 +323,14 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-atomgrad"></a>
 </p><dl>
 <dt><u>Property:</u> <b>atomgrad</b>
-<a name="IDX726"></a>
+<a name="IDX733"></a>
 </dt>
 <dd><p><code>atomgrad</code>は式のアトムの勾配プロパティです。
 このプロパティは <code>gradef</code>で割り当てられます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a>
 </div>
 </p></dd></dl>
 
@@ -323,7 +338,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <a name="Item_003a-atvalue"></a>
 </p><dl>
 <dt><u>関数:</u> <b>atvalue</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>atvalue</tt> (<var>expr</var>, [<var>x_1</var> = <var>a_1</var>, &hellip;, <var>x_m</var> = <var>a_m</var>], <var>c</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>atvalue</tt> (<var>expr</var>, <var>x_1</var> = <var>a_1</var>, <var>c</var>)</i>
-<a name="IDX727"></a>
+<a name="IDX734"></a>
 </dt>
 <dd><p>値 <var>c</var>を点 <code><var>x</var> = <var>a</var></code>の <var>expr</var>に割り当てます。
 典型的にはこのメカニズムが境界値を確立します。
@@ -358,7 +373,7 @@ atvaluesが定義された関数すべての atvalueを表示します。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) atvalue (f(x,y), [x = 0, y = 1], a^2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) atvalue (f(x,y), [x = 0, y = 1], a^2);
                                 2
 (%o1)                          a
 (%i2) atvalue ('diff (f(x,y), x), x = 0, 1 + y);
@@ -384,11 +399,11 @@ atvaluesが定義された関数すべての atvalueを表示します。
 (%o5)     16 a  - 2 u(0, 1) (-- (u(x, y))!            )
                              dx          !
                                          !x = 0, y = 1
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a> &middot;
-<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a> &middot;
+<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -397,7 +412,7 @@ atvaluesが定義された関数すべての atvalueを表示します。
 <a name="Item_003a-cartan"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cartan</b>
-<a name="IDX728"></a>
+<a name="IDX735"></a>
 </dt>
 <dd><p>微分形式の外積代数はエリーカルタンによって開発された微分幾何の基本ツールであり、
 偏微分方程式論で有用な応用があります。
@@ -410,7 +425,7 @@ atvaluesが定義された関数すべての atvalueを表示します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-geometry">Differential geometry</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-geometry">Differential geometry</a>
 </div>
 </p></dd></dl>
 
@@ -418,7 +433,7 @@ atvaluesが定義された関数すべての atvalueを表示します。
 <a name="Item_003a-del"></a>
 </p><dl>
 <dt><u>関数:</u> <b>del</b><i> (<var>x</var>)</i>
-<a name="IDX729"></a>
+<a name="IDX736"></a>
 </dt>
 <dd><p><code>del (<var>x</var>)</code>は変数 <em>x</em>の微分を表します。
 </p>
@@ -428,7 +443,7 @@ atvaluesが定義された関数すべての atvalueを表示します。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) diff (log (x));
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) diff (log (x));
                              del(x)
 (%o1)                        ------
                                x
@@ -437,10 +452,10 @@ atvaluesが定義された関数すべての atvalueを表示します。
 (%o2)            x %e    del(y) + y %e    del(x)
 (%i3) diff (x*y*z);
 (%o3)         x y del(z) + x z del(y) + y z del(x)
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a>
 </div>
 </p></dd></dl>
 
@@ -448,7 +463,7 @@ atvaluesが定義された関数すべての atvalueを表示します。
 <a name="Item_003a-delta"></a>
 </p><dl>
 <dt><u>関数:</u> <b>delta</b><i> (<var>t</var>)</i>
-<a name="IDX730"></a>
+<a name="IDX737"></a>
 </dt>
 <dd><p>Diracのデルタ関数
 </p>
@@ -456,17 +471,17 @@ atvaluesが定義された関数すべての atvalueを表示します。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) laplace (delta (t - a) * sin(b*t), t, s);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) laplace (delta (t - a) * sin(b*t), t, s);
 Is  a  positive, negative, or zero?
 
 p;
                                    - a s
 (%o1)                   sin(a b) %e
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Mathematical-functions">Mathematical functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Laplace-transform">Laplace transform</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Mathematical-functions">Mathematical functions</a> &middot;
+<a href="maxima_106.html#Category_003a-Laplace-transform">Laplace transform</a>
 </div>
 </p></dd></dl>
 
@@ -474,13 +489,13 @@ p;
 <a name="Item_003a-dependencies"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>dependencies</b>
-<a name="IDX731"></a>
+<a name="IDX738"></a>
 </dt>
 <dt><u>関数:</u> <b>dependencies</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>)</i>
-<a name="IDX732"></a>
+<a name="IDX739"></a>
 </dt>
 <dd><p>変数 <code>dependencies</code>は、
-<code>depends</code>や関数 <code>dependencies</code>, <code>gradef</code>が割り当てた関数依存を持つアトムのリストです。
+<code><a href="#depends">depends</a></code>や関数 <code>dependencies</code>, <code>gradef</code>が割り当てた関数依存を持つアトムのリストです。
 <code>dependencies</code>リストは累積的です:
 <code>depends</code>や <code>dependencies</code>, <code>gradef</code>をコールする毎に上乗せの項目を追加します。
 <code>dependencies</code>のデフォルト値は <code>[]</code>です。
@@ -491,9 +506,9 @@ p;
 </p>
 <p><code>dependencies(<var>f</var>(<var>x_1</var>, &hellip;, <var>x_m</var>))</code>は <code>depends(<var>f</var>, [<var>x_1</var>, &hellip;, <var>x_m</var>])</code>と等価です。
 </p>
-<p><code>depends</code>と <code>gradef</code>を参照してください。
+<p><code><a href="#depends">depends</a></code>と <code><a href="#gradef">gradef</a></code>を参照してください。
 </p>
-<pre class="example">(%i1) dependencies;                                
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) dependencies;
 (%o1)                          []
 (%i2) depends (foo, [bar, baz]);
 (%o2)                    [foo(bar, baz)]
@@ -504,17 +519,17 @@ p;
 (%i5) dependencies (quux (x, y), mumble (u));
 (%o5)                [quux(x, y), mumble(u)]
 (%i6) dependencies;
-(%o6) [foo(bar, baz), g(a, b, c), h(a, b, c), quux(x, y), 
+(%o6) [foo(bar, baz), g(a, b, c), h(a, b, c), quux(x, y),
                                                        mumble(u)]
 (%i7) remove (quux, dependency);
 (%o7)                         done
 (%i8) dependencies;
 (%o8)  [foo(bar, baz), g(a, b, c), h(a, b, c), mumble(u)]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -522,7 +537,7 @@ p;
 <a name="Item_003a-depends"></a>
 </p><dl>
 <dt><u>関数:</u> <b>depends</b><i> (<var>f_1</var>, <var>x_1</var>, ..., <var>f_n</var>, <var>x_n</var>)</i>
-<a name="IDX733"></a>
+<a name="IDX740"></a>
 </dt>
 <dd><p>導関数を計算するために変数の間の関数依存を宣言します。
 宣言された依存関係がないと <code>diff (f, x)</code>の結果はゼロです。
@@ -556,7 +571,7 @@ p;
 </p>
 <p><code>depends(<var>f</var>, [<var>x_1</var>, &hellip;, <var>x_n</var>])</code>は <code>dependencies(<var>f</var>(<var>x_1</var>, &hellip;, <var>x_n</var>))</code>と等価です。
 </p>
-<pre class="example">(%i1) depends ([f, g], x);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) depends ([f, g], x);
 (%o1)                     [f(x), g(x)]
 (%i2) depends ([r, s], [u, v, w]);
 (%o2)               [r(u, v, w), s(u, v, w)]
@@ -568,23 +583,23 @@ p;
                          dr           ds
 (%o5)                    -- . s + r . --
                          du           du
-</pre>
-<pre class="example">(%i6) diff (r.s, t);
+</pre></td></tr></table>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i6) diff (r.s, t);
                       dr du           ds du
 (%o6)                 -- -- . s + r . -- --
                       du dt           du dt
-</pre>
-<pre class="example">(%i7) remove (r, dependency);
+</pre></td></tr></table>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i7) remove (r, dependency);
 (%o7)                         done
 (%i8) diff (r.s, t);
                                 ds du
 (%o8)                       r . -- --
                                 du dt
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -592,7 +607,7 @@ p;
 <a name="Item_003a-derivabbrev"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>derivabbrev</b>
-<a name="IDX734"></a>
+<a name="IDX741"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -602,8 +617,8 @@ p;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -612,13 +627,13 @@ p;
 <a name="Item_003a-derivdegree"></a>
 </p><dl>
 <dt><u>関数:</u> <b>derivdegree</b><i> (<var>expr</var>, <var>y</var>, <var>x</var>)</i>
-<a name="IDX735"></a>
+<a name="IDX742"></a>
 </dt>
 <dd><p><var>expr</var>に現れる独立変数 <var>x</var>に関する従属変数 <var>y</var>の微分の最高階数を返します。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) 'diff (y, x, 2) + 'diff (y, z, 3) + 'diff (y, x) * x^2;
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) 'diff (y, x, 2) + 'diff (y, z, 3) + 'diff (y, x) * x^2;
                          3     2
                         d y   d y    2 dy
 (%o1)                   --- + --- + x  --
@@ -626,11 +641,11 @@ p;
                         dz    dx
 (%i2) derivdegree (%, y, x);
 (%o2)                           2
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -639,14 +654,14 @@ p;
 <a name="Item_003a-derivlist"></a>
 </p><dl>
 <dt><u>関数:</u> <b>derivlist</b><i> (<var>var_1</var>, &hellip;, <var>var_k</var>)</i>
-<a name="IDX736"></a>
+<a name="IDX743"></a>
 </dt>
 <dd><p><code>ev</code>コマンド内にて示された変数に関する微分だけを生じさせます。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Evaluation">Evaluation</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Evaluation">Evaluation</a>
 </div>
 </p></dd></dl>
 
@@ -654,7 +669,7 @@ p;
 <a name="Item_003a-derivsubst"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>derivsubst</b>
-<a name="IDX737"></a>
+<a name="IDX744"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -664,8 +679,8 @@ p;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Expressions">Expressions</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Expressions">Expressions</a>
 </div>
 </p></dd></dl>
 
@@ -673,7 +688,7 @@ p;
 <a name="Item_003a-diff"></a>
 </p><dl>
 <dt><u>関数:</u> <b>diff</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>diff</tt> (<var>expr</var>, <var>x_1</var>, <var>n_1</var>, &hellip;, <var>x_m</var>, <var>n_m</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>diff</tt> (<var>expr</var>, <var>x</var>, <var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>diff</tt> (<var>expr</var>, <var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>diff</tt> (<var>expr</var>)</i>
-<a name="IDX738"></a>
+<a name="IDX745"></a>
 </dt>
 <dd><p><var>expr</var>の中のすべての変数の中のいくつかに関する
 <var>expr</var>の導関数すなわち微分を返します。
@@ -702,7 +717,7 @@ p;
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) diff (exp (f(x)), x, 2);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) diff (exp (f(x)), x, 2);
                      2
               f(x)  d               f(x)  d         2
 (%o1)       %e     (--- (f(x))) + %e     (-- (f(x)))
@@ -725,7 +740,7 @@ p;
       ]            x                     x                  x
       /
        g(x)
-</pre>
+</pre></td></tr></table>
 <p>テンソルパッケージのために以下の変更が取り込まれています:
 </p>
 <p>(1) <var>expr</var>の中の任意の添字付きオブジェクトの導関数は
@@ -743,7 +758,7 @@ p;
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a>
 </div>
 </p></dd></dl>
 
@@ -752,7 +767,7 @@ p;
 </p>
 <dl>
 <dt><u>特殊シンボル:</u> <b>diff</b>
-<a name="IDX739"></a>
+<a name="IDX746"></a>
 </dt>
 <dd><p><code>ev</code>コールで <code>evflag</code>として <code>diff</code>が存在する時、
 <code>expr</code>の中で表現されたすべての微分が実行されます。
@@ -764,7 +779,7 @@ p;
 <a name="Item_003a-dscalar"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dscalar</b><i> (<var>f</var>)</i>
-<a name="IDX740"></a>
+<a name="IDX747"></a>
 </dt>
 <dd><p>スカラーのダランベルシアンをスカラー関数 <var>f</var>に適用します。
 </p>
@@ -774,8 +789,8 @@ p;
 
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-ctensor">Package ctensor</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Package-ctensor">Package ctensor</a>
 </div>
 </p></dd></dl>
 
@@ -783,24 +798,24 @@ p;
 <a name="Item_003a-express"></a>
 </p><dl>
 <dt><u>関数:</u> <b>express</b><i> (<var>expr</var>)</i>
-<a name="IDX741"></a>
+<a name="IDX748"></a>
 </dt>
 <dd>
 <p>名詞形の微分演算子を偏微分を使った式に展開します。
 <code>express</code>は演算子
 <code>grad</code>, <code>div</code>, <code>curl</code>, <code>laplacian</code>を認識します。
-<code>express</code>は外積 <code>~</code>も展開します。
+<code>express</code>は外積 <code><a href="maxima_25.html#g_t_007e">~</a></code>も展開します。
 </p>
 <p><code>ev</code>関数コールかコマンドラインに <code>diff</code>を含ませることで、
 expressの戻り値の中のシンボリックな導関数(すなわち
 <code>diff</code>名詞)を評価することができます。
-この文脈では <code>diff</code>は <code>evfun</code>として振る舞います。
+この文脈では <code><a href="#diff">diff</a></code>は <code><a href="maxima_8.html#evfun">evfun</a></code>として振る舞います。
 </p>
 <p><code>load (&quot;vect&quot;)</code>はこの関数をロードします。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) load (&quot;vect&quot;)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;vect&quot;)$
 (%i2) grad (x^2 + y^2 + z^2);
                               2    2    2
 (%o2)                  grad (z  + y  + x )
@@ -844,12 +859,12 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 (%o14)                [a, b, c] ~ [x, y, z]
 (%i15) express (%);
 (%o15)          [b z - c y, c x - a z, a y - b x]
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Vectors">Vectors</a> &middot;
-<a href="maxima_100.html#Category_003a-Operators">Operators</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Vectors">Vectors</a> &middot;
+<a href="maxima_106.html#Category_003a-Operators">Operators</a>
 </div>
 </p></dd></dl>
 
@@ -858,7 +873,7 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 <a name="Item_003a-gradef"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gradef</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>gradef</tt> (<var>f</var>(<var>x_1</var>, &hellip;, <var>x_n</var>), <var>g_1</var>, &hellip;, <var>g_m</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>gradef</tt> (<var>a</var>, <var>x</var>, <var>expr</var>)</i>
-<a name="IDX742"></a>
+<a name="IDX749"></a>
 </dt>
 <dd><p>関数 <var>f</var>または変数 <var>a</var>の偏微分（すなわち、勾配の成分）を定義します。
 </p>
@@ -900,8 +915,8 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -909,7 +924,7 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 <a name="Item_003a-gradefs"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>gradefs</b>
-<a name="IDX743"></a>
+<a name="IDX750"></a>
 </dt>
 <dd><p>デフォルト値: <code>[]</code>
 </p>
@@ -918,8 +933,8 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
-<a href="maxima_100.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Differential-calculus">Differential calculus</a> &middot;
+<a href="maxima_106.html#Category_003a-Declarations-and-inferences">Declarations and inferences</a>
 </div>
 </p></dd></dl>
 
@@ -927,7 +942,7 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 <a name="Item_003a-laplace"></a>
 </p><dl>
 <dt><u>関数:</u> <b>laplace</b><i> (<var>expr</var>, <var>t</var>, <var>s</var>)</i>
-<a name="IDX744"></a>
+<a name="IDX751"></a>
 </dt>
 <dd><p>変数 <var>t</var>に関するラブラス変換 <var>expr</var>を計算し、パラメータ
 <var>s</var>に変換しようとします。
@@ -943,7 +958,7 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 <code>bessel_j</code>, <code>bessel_i</code>, &hellip;のような
 特殊関数を含む式のラプラス変換を見つけることができ、
 <code>unit_step</code>関数を扱うことができます。
-<code>specint</code>も参照してください。
+<code><a href="maxima_15.html#specint">specint</a></code>も参照してください。
 </p>
 <p>もし <code>specint</code>も解を見つけられないなら、
 名詞 <code>laplace</code>を返します。
@@ -966,11 +981,11 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 例えば、もし <var>f</var>が <var>x</var>と <var>y</var>に依存するなら、
 <code>f (x, y)</code>が <var>expr</var>の中に現れなければいけません。
 </p>
-<p>逆ラプラス変換 <code>ilt</code>も参照してください。
+<p>逆ラプラス変換 <code><a href="maxima_19.html#ilt">ilt</a></code>も参照してください。
 </p>
 <p>例:
 </p>
-<pre class="example">(%i1) laplace (exp (2*t + a) * sin(t) * t, t, s);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) laplace (exp (2*t + a) * sin(t) * t, t, s);
                             a
                           %e  (2 s - 4)
 (%o1)                    ---------------
@@ -1022,11 +1037,11 @@ expressの戻り値の中のシンボリックな導関数(すなわち
                                              %pi s
                         (s - %i) (s + %i) (%e      - 1)
 
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Laplace-transform">Laplace transform</a> &middot;
-<a href="maxima_100.html#Category_003a-Differential-equations">Differential equations</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Laplace-transform">Laplace transform</a> &middot;
+<a href="maxima_106.html#Category_003a-Differential-equations">Differential equations</a>
 </div>
 </p></dd></dl>
 
@@ -1040,14 +1055,14 @@ expressの戻り値の中のシンボリックな導関数(すなわち
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

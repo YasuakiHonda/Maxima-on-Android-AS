@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 21. Zahlentheorie </h1>
@@ -105,7 +105,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 21.1 Funktionen und Variablen der Zahlentheorie </h2>
@@ -659,10 +659,21 @@ Wahrscheinlichkeit damit unter einen Wert von 10^-15.
 <code><a href="#primep">primep</a></code>.
 </p></dd></dl>
 
+<p><a name="primes"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>primes</b><i> (<var>start</var>, <var>end</var>)</i>
+<a name="IDX1208"></a>
+</dt>
+<dd><p>Gibt eine Liste mit allen Primzahlen von <var>start</var> bis <var>end</var> zur&uuml;ck.
+</p>
+<pre class="example">(%i1) primes(3, 7);
+(%o1)                     [3, 5, 7]
+</pre></dd></dl>
+
 <p><a name="prev_005fprime"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>prev_prime</b><i> (<var>n</var>)</i>
-<a name="IDX1208"></a>
+<a name="IDX1209"></a>
 </dt>
 <dd>
 <p>Gibt die gr&ouml;&szlig;te Primzahl zur&uuml;ck, die kleiner als die Zahl <var>n</var> ist.
@@ -674,7 +685,7 @@ Wahrscheinlichkeit damit unter einen Wert von 10^-15.
 <p><a name="qunit"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>qunit</b><i> (<var>n</var>)</i>
-<a name="IDX1209"></a>
+<a name="IDX1210"></a>
 </dt>
 <dd>
 <p>Findet f&uuml;r das Argument <var>n</var> L&ouml;sungen der Pellschen Gleichung 
@@ -689,7 +700,7 @@ Wahrscheinlichkeit damit unter einen Wert von 10^-15.
 <p><a name="totient"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>totient</b><i> (<var>n</var>)</i>
-<a name="IDX1210"></a>
+<a name="IDX1211"></a>
 </dt>
 <dd><p>Gibt die Anzahl der ganzen Zahlen zur&uuml;ck, die kleiner oder gleich <var>n</var>
 und teilerfremd zu <var>n</var> sind.
@@ -698,7 +709,7 @@ und teilerfremd zu <var>n</var> sind.
 <p><a name="zerobern"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>zerobern</b>
-<a name="IDX1211"></a>
+<a name="IDX1212"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -711,7 +722,7 @@ ausgeschlossen, die gleich Null sind.  Siehe <code><a href="#bern">bern</a></cod
 <p><a name="zeta"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zeta</b><i> (<var>n</var>)</i>
-<a name="IDX1212"></a>
+<a name="IDX1213"></a>
 </dt>
 <dd>
 <p>Die Riemannsche Zeta-Funktion f&uuml;r <var>s</var>, die wie folgt definiert ist:
@@ -765,7 +776,7 @@ den Wert <code>true</code> hat.
 <p><a name="zeta_0025pi"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>zeta%pi</b>
-<a name="IDX1213"></a>
+<a name="IDX1214"></a>
 </dt>
 <dd><p>Standardwert: <code>true</code>
 </p>
@@ -791,17 +802,107 @@ Substantivform f&uuml;r gerade ganze Zahlen.
 <p><a name="zn_005fadd_005ftable"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_add_table</b><i> (<var>n</var>) </i>
-<a name="IDX1214"></a>
+<a name="IDX1215"></a>
 </dt>
 <dd><p>zeigt eine Additionstabelle von allen Elementen in (Z/<var>n</var>Z).
 </p>
 <p>Siehe auch <code><a href="#zn_005fmult_005ftable">zn_mult_table</a></code>, <code><a href="#zn_005fpower_005ftable">zn_power_table</a></code>.
 </p></dd></dl>
 
+<p><a name="zn_005fcharacteristic_005ffactors"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>zn_characteristic_factors</b><i> (<var>n</var>) </i>
+<a name="IDX1216"></a>
+</dt>
+<dd><p>Gibt eine Liste mit den charakteristischen Faktoren des Totienten von <var>n</var> zur&uuml;ck.
+</p>
+<p>Mit Hilfe der charakteristischen Faktoren kann eine modulo <var>n</var> multiplikative Gruppe 
+als direktes Produkt zyklischer Untergruppen dargestellt werden. 
+</p>
+<p>Ist die Gruppe selbst zyklisch, dann enth&auml;lt die Liste nur den Totienten 
+und mit <code>zn_primroot</code> kann ein Generator berechnet werden. 
+Zerf&auml;llt der Totient in mehrere charakteristische Faktoren, 
+k&ouml;nnen Generatoren der entsprechenden Untergruppen mit <code>zn_factor_generators</code> 
+ermittelt werden.
+</p>
+<p>Jeder der <code>r</code> Faktoren in der Liste teilt die weiter rechts stehenden Faktoren. 
+Fuer den letzten Faktor <code>f_r</code> gilt daher <code>a^f_r = 1 (mod n)</code> 
+f&uuml;r alle <code>a</code> teilerfremd zu <var>n</var>. 
+Dieser Faktor ist auch als Carmichael Funktion bzw. Carmichael Lambda bekannt.
+</p>
+<p>F&uuml;r <code>n &gt; 2</code> ist <code>totient(n)/2^r</code> die Anzahl der quadratischen Reste 
+in der Gruppe und jeder dieser Reste hat <code>2^r</code> Wurzeln.
+</p>
+<p>Siehe auch <code><a href="#totient">totient</a></code>, <code><a href="#zn_005fprimroot">zn_primroot</a></code>, <code><a href="#zn_005ffactor_005fgenerators">zn_factor_generators</a></code>.
+</p>
+<p>Beispiele:
+</p>
+<p>Die multiplikative Gruppe modulo <code>14</code> ist zyklisch und ihre <code>6</code> Elemente 
+lassen sich durch eine Primitivwurzel erzeugen.
+</p>
+<pre class="example">(%i1) [zn_characteristic_factors(14), phi: totient(14)];
+(%o1)                              [[6], 6]
+(%i2) [zn_factor_generators(14), g: zn_primroot(14)];
+(%o2)                              [[3], 3]
+(%i3) M14: makelist(power_mod(g,i,14), i,0,phi-1);
+(%o3)                         [1, 3, 9, 13, 11, 5]
+</pre>
+<p>Die multiplikative Gruppe modulo <code>15</code> ist nicht zyklisch und ihre <code>8</code> Elemente 
+lassen sich mit Hilfe zweier Faktorgeneratoren erzeugen.
+</p>
+<pre class="example">(%i1) [[f1,f2]: zn_characteristic_factors(15), totient(15)];
+(%o1)                             [[2, 4], 8]
+(%i2) [[g1,g2]: zn_factor_generators(15), zn_primroot(15)];
+(%o2)                           [[11, 7], false]
+(%i3) UG1: makelist(power_mod(g1,i,15), i,0,f1-1);
+(%o3)                               [1, 11]
+(%i4) UG2: makelist(power_mod(g2,i,15), i,0,f2-1);
+(%o4)                            [1, 7, 4, 13]
+(%i5) M15: create_list(mod(i*j,15), i,UG1, j,UG2);
+(%o5)                      [1, 7, 4, 13, 11, 2, 14, 8]
+</pre>
+<p>F&uuml;r den letzten charakteristischen Faktor <code>4</code> gilt 
+<code>a^4 = 1 (mod 15)</code> fuer alle <code>a</code> in <code>M15</code>. 
+</p>
+<p><code>M15</code> hat <code>2</code> charakteristische Faktoren und daher die <code>8/2^2</code> 
+quadratischen Reste <code>1</code> und <code>4</code>, und diese haben jeweils <code>2^2</code> Wurzeln.
+</p>
+<pre class="example">(%i6) zn_power_table(15);
+                               [ 1   1  1   1 ]
+                               [              ]
+                               [ 2   4  8   1 ]
+                               [              ]
+                               [ 4   1  4   1 ]
+                               [              ]
+                               [ 7   4  13  1 ]
+(%o6)                          [              ]
+                               [ 8   4  2   1 ]
+                               [              ]
+                               [ 11  1  11  1 ]
+                               [              ]
+                               [ 13  4  7   1 ]
+                               [              ]
+                               [ 14  1  14  1 ]
+(%i7) map(lambda([i], zn_nth_root(i,2,15)), [1,4]);
+(%o7)                   [[1, 4, 11, 14], [2, 7, 8, 13]]
+</pre></dd></dl>
+
+<p><a name="zn_005fcarmichael_005flambda"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>zn_carmichael_lambda</b><i> (<var>n</var>) </i>
+<a name="IDX1217"></a>
+</dt>
+<dd><p>Gibt <code>1</code> zur&uuml;ck, wenn <var>n</var> gleich <code>1</code> ist und andernfalls 
+den gr&ouml;&szlig;ten charakteristischen Faktor des Totienten von <var>n</var>. 
+</p>
+<p>F&uuml;r Erl&auml;uterungen und Beispiele siehe <code><a href="#zn_005fcharacteristic_005ffactors">zn_characteristic_factors</a></code>.
+</p>
+</dd></dl>
+
 <p><a name="zn_005fdeterminant"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_determinant</b><i> (<var>matrix</var>, <var>p</var>) </i>
-<a name="IDX1215"></a>
+<a name="IDX1218"></a>
 </dt>
 <dd><p>verwendet die Technik der LR-Dekomposition, um die Determinante der 
 Matrix <var>matrix</var> &uuml;ber (Z/<var>p</var>Z) zu berechnen, wobei <var>p</var> 
@@ -831,10 +932,22 @@ diesem Fall die Determinante nicht-modular und reduziert im Nachhinein.
 (%o4)                               0
 </pre></dd></dl>
 
+<p><a name="zn_005ffactor_005fgenerators"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>zn_factor_generators</b><i> (<var>n</var>) </i>
+<a name="IDX1219"></a>
+</dt>
+<dd><p>Gibt eine Liste mit Faktorgeneratoren zur&uuml;ck, die zu den charakteristischen 
+Faktoren des Totienten von <var>n</var> passen. 
+</p>
+<p>F&uuml;r Erl&auml;uterungen und Beispiele siehe <code><a href="#zn_005fcharacteristic_005ffactors">zn_characteristic_factors</a></code>.
+</p>
+</dd></dl>
+
 <p><a name="zn_005finvert_005fby_005flu"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_invert_by_lu</b><i> (<var>matrix</var>, <var>p</var>) </i>
-<a name="IDX1216"></a>
+<a name="IDX1220"></a>
 </dt>
 <dd><p>verwendet die Technik der LR-Dekomposition, um ein modulares Inverses der 
 Matrix <var>matrix</var> &uuml;ber (Z/<var>p</var>Z) zu berechnen. Voraussetzung ist, 
@@ -865,10 +978,10 @@ Sollte <var>matrix</var> nicht invertierbar sein, gibt <code>zn_invert_by_lu</co
 <p><a name="zn_005flog"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_log</b><i> (<var>a</var>, <var>g</var>, <var>n</var>) </i>
-<a name="IDX1217"></a>
+<a name="IDX1221"></a>
 </dt>
 <dt><u>Funktion:</u> <b>zn_log</b><i> (<var>a</var>, <var>g</var>, <var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1218"></a>
+<a name="IDX1222"></a>
 </dt>
 <dd><p>Berechnet den diskreten Logarithmus.  Sei (Z/<var>n</var>Z)* eine zyklische Gruppe, 
 <var>g</var> eine Primitivwurzel modulo <var>n</var> und <var>a</var> ein Element dieser Gruppe.
@@ -929,41 +1042,237 @@ Primfaktors des Totienten ab.
 <p><a name="zn_005fmult_005ftable"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_mult_table</b><i> (<var>n</var>) </i>
-<a name="IDX1219"></a>
+<a name="IDX1223"></a>
 </dt>
-<dt><u>Funktion:</u> <b>zn_mult_table</b><i> (<var>n</var>, all)</i>
-<a name="IDX1220"></a>
+<dt><u>Funktion:</u> <b>zn_mult_table</b><i> (<var>n</var>, <var>gcd</var>)</i>
+<a name="IDX1224"></a>
 </dt>
-<dd><p>Ohne das optionale Argument <var>all</var> zeigt <code>zn_mult_table(n)</code> 
+<dd><p>Ohne das optionale Argument <var>gcd</var> zeigt <code>zn_mult_table(n)</code> 
 eine Multiplikationstabelle von allen Elementen in (Z/<var>n</var>Z)*, 
-d.h. von allen modulo <var>n</var> invertierbaren Elementen.
+d.h. von allen zu <var>n</var> teilerfremden Elementen.
 </p>
-<p>Das optionale Argument <var>all</var> bewirkt, dass die Tabelle f&uuml;r alle von Null 
-verschiedenen Elemente gezeigt wird.
+<p>Das optionale zweite Argument <var>gcd</var> erlaubt es, eine bestimmte Untermenge 
+von (Z/<var>n</var>Z) auszuw&auml;hlen. 
+Ist <var>gcd</var> eine nat&uuml;rliche Zahl, enth&auml;lt die Multiplikationstabelle 
+alle Restklassen <code>x</code> mit <code>gcd(x,n) = </code><var>gcd</var>. 
+Zur besseren Lesbarkeit werden Zeilen- und Spaltenk&ouml;pfe hinzugef&uuml;gt. 
+Falls notwendig, lassen sich diese mit <code>submatrix(1, tabelle, 1)</code> 
+wieder einfach entfernen. 
+</p>
+<p>Wird <var>gcd</var> auf <code>all</code> gesetzt, wird die Tabelle f&uuml;r s&auml;mtliche 
+von Null verschiedene Elemente in (Z/<var>n</var>Z) ausgegeben.
+</p>
+<p>Das zweite Beispiel unten zeigt einen alternativen Weg, f&uuml;r Untergruppen 
+eine Multiplikationstabelle zu erzeugen.
 </p>
 <p>Siehe auch <code><a href="#zn_005fadd_005ftable">zn_add_table</a></code>, <code><a href="#zn_005fpower_005ftable">zn_power_table</a></code>.
 </p>
 <p>Beispiele:
 </p>
-<pre class="example">(%i1) zn_mult_table(4);
-                                [ 1  3 ]
-(%o1)                           [      ]
-                                [ 3  1 ]
-(%i2) zn_mult_table(4, all);
-                               [ 1  2  3 ]
-                               [         ]
-(%o2)                          [ 2  0  2 ]
-                               [         ]
-                               [ 3  2  1 ]
+<p>Die Standardtabelle zeigt alle Elemente aus (Z/<var>n</var>Z)* und erlaubt, 
+grundlegende Eigenschaften von modularen Multiplikationsgruppen zu zeigen und 
+zu studieren. Z.B. stehen in der Hauptdiagonale s&auml;mtliche quadratische Reste, 
+jede Zeile und Spalte enth&auml;lt alle Elemente, die Tabelle ist symmetrisch, etc..
+</p>
+<p>Wird <var>gcd</var> auf <code>all</code> gesetzt, wird die Tabelle f&uuml;r s&auml;mtliche 
+von Null verschiedene Elemente in (Z/<var>n</var>Z) ausgegeben.
+</p>
+<pre class="example">(%i1) zn_mult_table(8);
+                                [ 1  3  5  7 ]
+                                [            ]
+                                [ 3  1  7  5 ]
+(%o1)                           [            ]
+                                [ 5  7  1  3 ]
+                                [            ]
+                                [ 7  5  3  1 ]
+(%i2) zn_mult_table(8, all);
+                            [ 1  2  3  4  5  6  7 ]
+                            [                     ]
+                            [ 2  4  6  0  2  4  6 ]
+                            [                     ]
+                            [ 3  6  1  4  7  2  5 ]
+                            [                     ]
+(%o2)                       [ 4  0  4  0  4  0  4 ]
+                            [                     ]
+                            [ 5  2  7  4  1  6  3 ]
+                            [                     ]
+                            [ 6  4  2  0  6  4  2 ]
+                            [                     ]
+                            [ 7  6  5  4  3  2  1 ]
+</pre>
+<p>Ist <var>gcd</var> eine Zahl, wird zur besseren Lesbarkeit ein Zeilen- und Spaltenkopf 
+hinzugef&uuml;gt.
+</p>
+<p>Ist die mit <var>gcd</var> ausgew&auml;hlte Teilmenge eine Gruppe, gibt es einen 
+alternativen Weg, die Multiplikationstabelle zu erzeugen.
+Die Isomorphie zu einer Gruppe mit <code>1</code> als Identit&auml;t l&auml;sst sich nutzen, 
+um eine leicht lesbare Tabelle zu erhalten. Die Abbildung gelingt mit dem CRT.
+</p>
+<p>In der so erzeugten zweiten Version der Tabelle <code>T36_4</code> steht genau wie 
+bei <code>T9</code> die Identit&auml;t, hier <code>28</code>, in der linken oberen Ecke. 
+</p>
+
+<pre class="example">(%i1) T36_4: zn_mult_table(36,4);
+                        [ *   4   8   16  20  28  32 ]
+                        [                            ]
+                        [ 4   16  32  28  8   4   20 ]
+                        [                            ]
+                        [ 8   32  28  20  16  8   4  ]
+                        [                            ]
+(%o1)                   [ 16  28  20  4   32  16  8  ]
+                        [                            ]
+                        [ 20  8   16  32  4   20  28 ]
+                        [                            ]
+                        [ 28  4   8   16  20  28  32 ]
+                        [                            ]
+                        [ 32  20  4   8   28  32  16 ]
+(%i2) T9: zn_mult_table(36/4);
+                             [ 1  2  4  5  7  8 ]
+                             [                  ]
+                             [ 2  4  8  1  5  7 ]
+                             [                  ]
+                             [ 4  8  7  2  1  5 ]
+(%o2)                        [                  ]
+                             [ 5  1  2  7  8  4 ]
+                             [                  ]
+                             [ 7  5  1  8  4  2 ]
+                             [                  ]
+                             [ 8  7  5  4  2  1 ]
+(%i3) T36_4: matrixmap(lambda([x], chinese([0,x],[4,9])), T9);
+                          [ 28  20  4   32  16  8  ]
+                          [                        ]
+                          [ 20  4   8   28  32  16 ]
+                          [                        ]
+                          [ 4   8   16  20  28  32 ]
+(%o3)                     [                        ]
+                          [ 32  28  20  16  8   4  ]
+                          [                        ]
+                          [ 16  32  28  8   4   20 ]
+                          [                        ]
+                          [ 8   16  32  4   20  28 ]
+</pre></dd></dl>
+
+<p><a name="zn_005fnth_005froot"></a>
+</p><dl>
+<dt><u>Funktion:</u> <b>zn_nth_root</b><i> (<var>x</var>, <var>n</var>, <var>m</var>) </i>
+<a name="IDX1225"></a>
+</dt>
+<dt><u>Funktion:</u> <b>zn_nth_root</b><i> (<var>x</var>, <var>n</var>, <var>m</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
+<a name="IDX1226"></a>
+</dt>
+<dd><p>Gibt eine Liste mit allen <var>n</var>-ten Wurzeln von <var>x</var> aus der multiplikativen 
+Untergruppe von (Z/<var>m</var>Z) zur&uuml;ck, in der sich <var>x</var> befindet, 
+oder <code>false</code>, falls <var>x</var> keine <var>n</var>-te Potenz modulo <var>m</var> oder 
+kein Element einer multiplikativen Untergruppe von (Z/<var>m</var>Z) ist.
+</p>
+<p><var>x</var> ist Element einer multiplikativen Untergruppe modulo <var>m</var>, wenn der 
+gr&ouml;&szlig;te gemeinsame Teiler <code>g = gcd(x,m)</code> zu <code>m/g</code> teilerfremd ist.
+</p>
+<p><code>zn_nth_root</code> basiert auf einem Algorithmus von Adleman, Manders und Miller 
+und S&auml;tzen &uuml;ber modulare Multiplikationsgruppen von Daniel Shanks.
+</p>
+<p>Der Algorithmus ben&ouml;tigt eine Primfaktorzerlegung des Modulus <var>m</var>. 
+Es kann eventuell sinnvoll sein, diese Zerlegung vorab zu berechnen und 
+als viertes Argument zu &uuml;bergeben. Die Form muss dabei der R&uuml;ckgabe von 
+<code>ifactors(m)</code> mit der Standardeinstellung <code>false</code> der 
+Optionsvariable <code>factors_only</code> entsprechen. 
+</p>
+<p>Beispiele:
+</p>
+<p>Eine Potenztabelle der multiplikativen Gruppe modulo <code>14</code> 
+gefolgt von einer Liste mit Listen von <var>n</var>-ten Wurzeln der <code>1</code>, 
+wobei <var>n</var> von <code>1</code> bis <code>6</code> variiert.
+</p>
+<pre class="example">(%i1) zn_power_table(14);
+                         [ 1   1   1   1   1   1 ]
+                         [                       ]
+                         [ 3   9   13  11  5   1 ]
+                         [                       ]
+                         [ 5   11  13  9   3   1 ]
+(%o1)                    [                       ]
+                         [ 9   11  1   9   11  1 ]
+                         [                       ]
+                         [ 11  9   1   11  9   1 ]
+                         [                       ]
+                         [ 13  1   13  1   13  1 ]
+(%i2) makelist(zn_nth_root(1,n,14), n,1,6);
+(%o2)  [[1], [1, 13], [1, 9, 11], [1, 13], [1], [1, 3, 5, 9, 11, 13]]
+</pre>
+<p>Im folgenden Beispiel ist <var>x</var> nicht zu <var>m</var> teilerfremd, 
+aber es ist Element einer multiplikativen Untergruppe von (Z/<var>m</var>Z) 
+und jede <var>n</var>-te Wurzel ist aus der selben Untergruppe. 
+</p>
+<p>Die Restklasse <code>3</code> ist kein Element in irgend einer multiplikativen 
+Untergruppe von (Z/63Z) und wird daher nicht als dritte Wurzel von <code>27</code> 
+zur&uuml;ck gegeben.
+</p>
+<p>Hier zeigt <code>zn_power_table</code> alle Reste <code>x</code> in (Z/63Z) 
+mit <code>gcd(x,63) = 9</code>. Diese Untergruppe ist isomorph zu (Z/7Z)* 
+und seine Identit&auml;t <code>36</code> wird mit Hilfe des CRT berechnet.
+</p>
+<pre class="example">(%i1) m: 7*9$
+
+(%i2) zn_power_table(m,9);
+                         [ 9   18  36  9   18  36 ]
+                         [                        ]
+                         [ 18  9   36  18  9   36 ]
+                         [                        ]
+                         [ 27  36  27  36  27  36 ]
+(%o2)                    [                        ]
+                         [ 36  36  36  36  36  36 ]
+                         [                        ]
+                         [ 45  9   27  18  54  36 ]
+                         [                        ]
+                         [ 54  18  27  9   45  36 ]
+(%i3) zn_nth_root(27,3,m);
+(%o3)                           [27, 45, 54]
+(%i4) id7:1$  id63_9: chinese([id7,0],[7,9]);
+(%o5)                                36
+</pre>
+<p>Im folgenden RSA-&auml;hnlichen Beispiel, in dem der Modulus <code>N</code> quadratfrei ist, 
+d.h. in paarweise verschiedene Primfaktoren zerf&auml;llt, 
+ist jedes <code>x</code> von <code>0</code> bis <code>N-1</code>
+in einer multiplikativen Untergruppe enthalten.
+</p>
+<p>Zur Entschl&uuml;sselung wird die <code>e</code>-te Wurzel berechnet. 
+<code>e</code> ist teilerfremd zu <code>N</code> und die <code>e</code>-te Wurzel ist deshalb 
+eindeutig. <code>zn_nth_root</code> wendet hier effektiv den als CRT-RSA 
+bekannten Algorithmus an.
+(Man beachte, dass <code>flatten</code> Klammern entfernt und keine L&ouml;sungen.)
+</p>
+<pre class="example">(%i1) [p,q,e]: [5,7,17]$  N: p*q$
+
+(%i3) xs: makelist(x,x,0,N-1)$
+
+(%i4) ys: map(lambda([x],power_mod(x,e,N)),xs)$
+
+(%i5) zs: flatten(map(lambda([y], zn_nth_root(y,e,N)), ys))$
+
+(%i6) is(zs = xs);
+(%o6)                             true
+</pre>
+<p>Im folgenden Beispiel ist die Faktorisierung des Modulus bekannt und wird 
+als viertes Argument &uuml;bergeben.
+</p>
+<pre class="example">(%i1) p: 2^107-1$  q: 2^127-1$  N: p*q$
+
+(%i4) ibase: obase: 16$
+
+(%i5) msg: 11223344556677889900aabbccddeeff$
+
+(%i6) enc: power_mod(msg, 10001, N);
+(%o6)    1a8db7892ae588bdc2be25dd5107a425001fe9c82161abc673241c8b383
+(%i7) zn_nth_root(enc, 10001, N, [[p,1],[q,1]]);
+(%o7)               [11223344556677889900aabbccddeeff]
 </pre></dd></dl>
 
 <p><a name="zn_005forder"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_order</b><i> (<var>x</var>, <var>n</var>) </i>
-<a name="IDX1221"></a>
+<a name="IDX1227"></a>
 </dt>
 <dt><u>Funktion:</u> <b>zn_order</b><i> (<var>x</var>, <var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1222"></a>
+<a name="IDX1228"></a>
 </dt>
 <dd><p>Ist <var>x</var> eine Einheit in der endlichen Gruppe (Z/<var>n</var>Z)*, so berechnet 
 <code>zn_order</code> die Ordnung dieses Elements.  Andernfalls gibt <code>zn_order</code> 
@@ -1016,51 +1325,112 @@ entsprechen.
 <p><a name="zn_005fpower_005ftable"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_power_table</b><i> (<var>n</var>) </i>
-<a name="IDX1223"></a>
+<a name="IDX1229"></a>
 </dt>
-<dt><u>Funktion:</u> <b>zn_power_table</b><i> (<var>n</var>, all)</i>
-<a name="IDX1224"></a>
+<dt><u>Funktion:</u> <b>zn_power_table</b><i> (<var>n</var>, <var>gcd</var>)</i>
+<a name="IDX1230"></a>
 </dt>
-<dd><p>Ohne das optionale Argument <var>all</var> zeigt <code>zn_power_table(n)</code> 
+<dt><u>Funktion:</u> <b>zn_power_table</b><i> (<var>n</var>, <var>gcd</var>, <var>max_exp</var>)</i>
+<a name="IDX1231"></a>
+</dt>
+<dd><p>Ohne ein optionales Argument zeigt <code>zn_power_table(n)</code> 
 eine Potenzierungstabelle von allen Elementen in (Z/<var>n</var>Z)*, 
-d.h. von allen modulo <var>n</var> invertierbaren Elementen. 
+d.h. von allen zu <var>n</var> teilerfremden Elementen. 
 Der Exponent variiert dabei jeweils zwischen <code>1</code> und 
-dem gr&ouml;&szlig;ten charakteristischen Faktor des Totienten von <var>n</var>, 
+dem gr&ouml;&szlig;ten charakteristischen Faktor des Totienten von <var>n</var>
+(auch bekannt als Carmichael Funktion bzw. Carmichael Lambda), 
 so dass die Tabelle rechts mit einer Spalte von Einsen endet.
 </p>
-<p>Das optionale Argument <var>all</var> bewirkt, dass die Tabelle f&uuml;r alle von Null 
-verschiedenen Elemente gezeigt wird. In diesem Fall 
-variiert der Exponent zwischen <code>1</code> und <code>totient(n) + 1</code>. 
-Ist der Modulus aus voneinander verschiedenen Primzahlen zusammen gesetzt, stimmen dann 
-die erste und letzte Spalte &uuml;berein.
+<p>Das optionale zweite Argument <var>gcd</var> erlaubt es, eine bestimmte Untermenge 
+von (Z/<var>n</var>Z) auszuw&auml;hlen. 
+Ist <var>gcd</var> eine nat&uuml;rliche Zahl, werden Potenzen von allen Restklassen 
+<code>x</code> mit <code>gcd(x,n) = </code><var>gcd</var> zur&uuml;ck gegeben, 
+d.h. <var>gcd</var> ist standardm&auml;&szlig;ig <code>1</code>.
+Wird <var>gcd</var> auf <code>all</code> gesetzt, wird die Tabelle f&uuml;r s&auml;mtliche 
+Elemente in (Z/<var>n</var>Z) ausgegeben.
+</p>
+<p>Wird das optionale dritte Argument <var>max_exp</var> angegeben, variiert der 
+Exponent zwischen <code>1</code> und <var>max_exp</var>.
 </p>
 <p>Siehe auch <code><a href="#zn_005fadd_005ftable">zn_add_table</a></code>, <code><a href="#zn_005fmult_005ftable">zn_mult_table</a></code>.
 </p>
 <p>Beispiele:
 </p>
-<pre class="example">(%i1) zn_power_table(6);
-                                [ 1  1 ]
-(%o1)                           [      ]
-                                [ 5  1 ]
-(%i2) zn_power_table(6, all);
-                               [ 1  1  1 ]
-                               [         ]
-                               [ 2  4  2 ]
-                               [         ]
-(%o2)                          [ 3  3  3 ]
-                               [         ]
-                               [ 4  4  4 ]
-                               [         ]
-                               [ 5  1  5 ]
+<p>Die Standardeinstellung <var>gcd</var><code> = 1</code> erlaubt es, grundlegende S&auml;tze, 
+wie die von Fermat and Euler, zu zeigen und zu betrachten.
+</p>
+<p>Das Argument <var>gcd</var> erlaubt es, bestimmte Teilmengen von (Z/<var>n</var>Z) 
+auszuw&auml;hlen und multiplikative Untergruppen und Isomorphismen zu untersuchen. 
+</p>
+<p>Z.B. sind die Gruppen <code>G10</code> und <code>G10_2</code> unter der Multiplikation 
+beide isomorph zu <code>G5</code>. <code>1</code> ist die Identit&auml;t in <code>G5</code>. 
+So sind <code>1</code> bzw. <code>6</code> die Identit&auml;ten in <code>G10</code> bzw. <code>G10_2</code>. 
+Entsprechende Zuordnungen ergeben sich bei den Primitivwurzeln, n-ten Wurzeln, etc..
+</p>
+<pre class="example">(%i1) zn_power_table(10);
+                              [ 1  1  1  1 ]
+                              [            ]
+                              [ 3  9  7  1 ]
+(%o1)                         [            ]
+                              [ 7  9  3  1 ]
+                              [            ]
+                              [ 9  1  9  1 ]
+(%i2) zn_power_table(10,2);
+                              [ 2  4  8  6 ]
+                              [            ]
+                              [ 4  6  4  6 ]
+(%o2)                         [            ]
+                              [ 6  6  6  6 ]
+                              [            ]
+                              [ 8  4  2  6 ]
+(%i3) zn_power_table(10,5);
+(%o3)                         [ 5  5  5  5 ]
+(%i4) zn_power_table(10,10);
+(%o4)                         [ 0  0  0  0 ]
+(%i5) G5: [1,2,3,4];
+(%o6)                          [1, 2, 3, 4]
+(%i6) G10_2: map(lambda([x], chinese([0,x],[2,5])), G5);
+(%o6)                          [6, 2, 8, 4]
+(%i7) G10: map(lambda([x], power_mod(3, zn_log(x,2,5), 10)), G5);
+(%o7)                          [1, 3, 7, 9]
+</pre>
+<p>Wird <var>gcd</var> auf <code>all</code> gesetzt, wird die Tabelle f&uuml;r s&auml;mtliche 
+Elemente in (Z/<var>n</var>Z) ausgegeben.
+</p>
+<p>Das dritte Argument <var>max_exp</var> erlaubt, den h&ouml;chsten Exponenten zu w&auml;hlen.  
+Die folgende Tabelle zeigt ein kleines RSA-Beispiel.
+</p>
+<pre class="example">(%i1) N:2*5$ phi:totient(N)$ e:7$ d:inv_mod(e,phi)$
+
+(%i5) zn_power_table(N, all, e*d);
+       [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 ]
+       [                                                               ]
+       [ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 ]
+       [                                                               ]
+       [ 2  4  8  6  2  4  8  6  2  4  8  6  2  4  8  6  2  4  8  6  2 ]
+       [                                                               ]
+       [ 3  9  7  1  3  9  7  1  3  9  7  1  3  9  7  1  3  9  7  1  3 ]
+       [                                                               ]
+       [ 4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4 ]
+(%o5)  [                                                               ]
+       [ 5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5 ]
+       [                                                               ]
+       [ 6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6 ]
+       [                                                               ]
+       [ 7  9  3  1  7  9  3  1  7  9  3  1  7  9  3  1  7  9  3  1  7 ]
+       [                                                               ]
+       [ 8  4  2  6  8  4  2  6  8  4  2  6  8  4  2  6  8  4  2  6  8 ]
+       [                                                               ]
+       [ 9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9 ]
 </pre></dd></dl>
 
 <p><a name="zn_005fprimroot"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_primroot</b><i> (<var>n</var>) </i>
-<a name="IDX1225"></a>
+<a name="IDX1232"></a>
 </dt>
 <dt><u>Funktion:</u> <b>zn_primroot</b><i> (<var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1226"></a>
+<a name="IDX1233"></a>
 </dt>
 <dd><p>Ist die multiplikative Gruppe (Z/<var>n</var>Z)* zyklisch, berechnet <code>zn_primroot</code> 
 die kleinste Primitivwurzel modulo <var>n</var>.  Dies ist der Fall, wenn <var>n</var> gleich 
@@ -1120,7 +1490,7 @@ entsprechen.
 <p><a name="zn_005fprimroot_005flimit"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>zn_primroot_limit</b>
-<a name="IDX1227"></a>
+<a name="IDX1234"></a>
 </dt>
 <dd><p>Standardwert: <code>1000</code> 
 </p>
@@ -1133,10 +1503,10 @@ Primitivwurzel.  Wurde die Optionsvariable <code><a href="#zn_005fprimroot_005fv
 <p><a name="zn_005fprimroot_005fp"></a>
 </p><dl>
 <dt><u>Funktion:</u> <b>zn_primroot_p</b><i> (<var>x</var>, <var>n</var>) </i>
-<a name="IDX1228"></a>
+<a name="IDX1235"></a>
 </dt>
 <dt><u>Funktion:</u> <b>zn_primroot_p</b><i> (<var>x</var>, <var>n</var>, [[<var>p1</var>, <var>e1</var>], &hellip;, [<var>pk</var>, <var>ek</var>]])</i>
-<a name="IDX1229"></a>
+<a name="IDX1236"></a>
 </dt>
 <dd><p>Testet, ob <var>x</var> eine Primitivwurzel in der multiplikativen Gruppe (Z/<var>n</var>Z)* 
 ist. 
@@ -1180,7 +1550,7 @@ entsprechen.
 <p><a name="zn_005fprimroot_005fpretest"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>zn_primroot_pretest</b>
-<a name="IDX1230"></a>
+<a name="IDX1237"></a>
 </dt>
 <dd><p>Standardwert: <code>false</code> 
 </p>
@@ -1197,7 +1567,7 @@ ob auf <code>n</code> &uuml;berhaupt einer der oben genannten F&auml;lle zutriff
 <p><a name="zn_005fprimroot_005fverbose"></a>
 </p><dl>
 <dt><u>Optionsvariable:</u> <b>zn_primroot_verbose</b>
-<a name="IDX1231"></a>
+<a name="IDX1238"></a>
 </dt>
 <dd><p>Standardwert: <code>false</code> 
 </p>
@@ -1218,12 +1588,12 @@ einen Hinweis ausgibt.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

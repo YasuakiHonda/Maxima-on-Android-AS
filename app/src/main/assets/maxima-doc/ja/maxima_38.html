@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 38. Debugging</title>
+<title>Maxima 5.39.0 Manual: 38. Debugging</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 38. Debugging">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 38. Debugging">
+<meta name="description" content="Maxima 5.39.0 Manual: 38. Debugging">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 38. Debugging">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,57 +72,73 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
 <a name="Debugging"></a>
-<a name="SEC206"></a>
+<a name="SEC205"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_37.html#SEC205" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC207" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_37.html#SEC204" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 38. Debugging </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC207">38.1 Source Level Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC206">38.1 Source Level Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC208">38.2 Keyword Commands</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC207">38.2 Keyword Commands</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC209">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">   
+<tr><td align="left" valign="top"><a href="#SEC208">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Source-Level-Debugging"></a>
 </p><hr size="6">
 <a name="Source-Level-Debugging"></a>
-<a name="SEC207"></a>
+<a name="SEC206"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC206" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC208" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC205" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC207" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.1 Source Level Debugging </h2>
@@ -145,13 +160,13 @@ Maxima関数も使うことができます。
 <code>:r</code> (&quot;resume&quot;)コマンドは、デバッガーから抜けて、実行を続けます。
 以下の例で、これらのコマンドを例示します。
 </p>
-<pre class="example">(%i1) load (&quot;/tmp/foobar.mac&quot;);
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;/tmp/foobar.mac&quot;);
 
 (%o1)                           /tmp/foobar.mac
 
 (%i2) :br foo
 Turning on debugging debugmode(true)
-Bkpt 0 for foo (in /tmp/foobar.mac line 1) 
+Bkpt 0 for foo (in /tmp/foobar.mac line 1)
 
 (%i2) bar (2,3);
 Bkpt 0:(foobar.mac 1)
@@ -178,20 +193,20 @@ Bkpt 0:(foobar.mac 1)
 (dbm:1) :r                         &lt;-- Type :r to resume the computation
 
 (%o2)                                1094
-</pre>
+</pre></td></tr></table>
 <p>ファイル <code>/tmp/foobar.mac</code>は以下の通りです:
 </p>
-<pre class="example">foo(y) := block ([u:y^2],
+<table><tr><td>&nbsp;</td><td><pre class="example">foo(y) := block ([u:y^2],
   u: u+3,
   u: u^2,
   u);
- 
+
 bar(x,y) := (
   x: x+2,
   y: y+2,
   x: foo(y),
   x+y);
-</pre>
+</pre></td></tr></table>
 <p>EMACSを通してのデバッガーの使用
 </p>
 <p>もしユーザーがシェルウィンドウ (dblシェル)で GNU emacsの下でコードを走らせているか、
@@ -209,13 +224,13 @@ elispファイルをインストールしたか、
 Maxima elispディレクトリをパスに足したかを確認してください:
 例えば、以下を <tt>`.emacs'</tt>ファイルか <tt>`site-init.el'</tt>に足してください。
 </p>
-<pre class="example">(setq load-path (cons &quot;/usr/share/maxima/5.9.1/emacs&quot; load-path))
+<table><tr><td>&nbsp;</td><td><pre class="example">(setq load-path (cons &quot;/usr/share/maxima/5.9.1/emacs&quot; load-path))
 (autoload 'dbl &quot;dbl&quot;)
-</pre>
+</pre></td></tr></table>
 <p>すると emacsの中で、
 </p>
-<pre class="example">M-x dbl
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">M-x dbl
+</pre></td></tr></table>
 <p>は、例えば
 Maxima, gcl, gbbなどのプログラムを走らせることができるシェルウィンドウを開始するでしょう。
 このシェルウィンドウはソースレベルデバッグや
@@ -236,27 +251,27 @@ Maximaに評価ような、そのファイルウィンドウで利用可能な�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p>
 <p><a name="Item_003a-Keyword-Commands"></a>
 </p><hr size="6">
 <a name="Keyword-Commands"></a>
-<a name="SEC208"></a>
+<a name="SEC207"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC207" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC209" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC206" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC208" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.2 Keyword Commands </h2>
@@ -267,9 +282,9 @@ Maximaプロンプトやデバッガープロンプトで入力できます。
 キーワードコマンドはコロン '<code>:</code>'で始まります。
 例えば Lisp形を評価するには <code>:lisp</code>の後に評価される形式をタイプします。
 </p>
-<pre class="example">(%i1) :lisp (+ 2 3) 
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) :lisp (+ 2 3)
 5
-</pre>
+</pre></td></tr></table>
 <p>取られる引数の数は特定のコマンドに依存します。
 コマンド全体をタイプする必要はありません、ただブレイクキーワードの中で唯一であれば十分です。
 例えば <code>:br</code>は <code>:break</code>のために十分です。
@@ -279,7 +294,7 @@ Maximaプロンプトやデバッガープロンプトで入力できます。
 <dl compact="compact">
 <dt> <code>:break F n</code></dt>
 <dd><p>関数 <code>F</code>の中に関数の頭から行オフセット <code>n</code>で
-ブレイクポイントを設定します。 
+ブレイクポイントを設定します。
 もし <code>F</code>が文字列として与えられたら、
 ファイルと仮定され <code>n</code>はファイルの頭からのオフセットです。
 オフセットはオプションです。
@@ -335,30 +350,29 @@ Maximaプロンプトやデバッガープロンプトで入力できます。
 </p></dd>
 </dl>
 
-
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p>
 <p><a name="Item_003a-Functions-and-Variables-for-Debugging"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Debugging"></a>
-<a name="SEC209"></a>
+<a name="SEC208"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC208" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC207" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.3 Functions and Variables for Debugging </h2>
@@ -367,7 +381,7 @@ Maximaプロンプトやデバッガープロンプトで入力できます。
 <a name="Item_003a-debugmode"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>debugmode</b>
-<a name="IDX1396"></a>
+<a name="IDX1418"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -381,8 +395,8 @@ Maximaコードをステップ実行したりなどコマンドを入力する�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -390,7 +404,7 @@ Maximaコードをステップ実行したりなどコマンドを入力する�
 <a name="Item_003a-refcheck"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>refcheck</b>
-<a name="IDX1397"></a>
+<a name="IDX1419"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -399,9 +413,9 @@ Maximaは計算の中で、バイドされた変数が最初に使われる度�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Evaluation">Evaluation</a> &middot;
-<a href="maxima_100.html#Category_003a-Console-interaction">Console interaction</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Evaluation">Evaluation</a> &middot;
+<a href="maxima_106.html#Category_003a-Console-interaction">Console interaction</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -409,7 +423,7 @@ Maximaは計算の中で、バイドされた変数が最初に使われる度�
 <a name="Item_003a-setcheck"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>setcheck</b>
-<a name="IDX1398"></a>
+<a name="IDX1420"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -432,8 +446,8 @@ Maximaは変数またはそれらの添字付き出現が通常の割り当て�
 例えばもし <code>x</code>, <code>y</code>, <code>z</code>が既にバインドされているなら、
 チェックする変数のリストに置くには、
 </p>
-<pre class="example">setcheck: ['x, 'y, 'z]$
-</pre>
+<table><tr><td>&nbsp;</td><td><pre class="example">setcheck: ['x, 'y, 'z]$
+</pre></td></tr></table>
 <p>をタイプしてください。
 </p>
 <p><code>setcheck</code>リスト上の変数が、例えば
@@ -441,8 +455,8 @@ Maximaは変数またはそれらの添字付き出現が通常の割り当て�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Console-interaction">Console interaction</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Console-interaction">Console interaction</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -450,7 +464,7 @@ Maximaは変数またはそれらの添字付き出現が通常の割り当て�
 <a name="Item_003a-setcheckbreak"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>setcheckbreak</b>
-<a name="IDX1399"></a>
+<a name="IDX1421"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -461,12 +475,12 @@ Maximaはブレイクプロンプトを出します。
 この時点で <code>setval</code>が変数が割り当てられようとしている値を保持します。
 なので <code>setval</code>に割り当てることで違う値を割り当てることができます。
 </p>
-<p><code>setcheck</code>と <code>setval</code>も参照してください。
+<p><code><a href="#setcheck">setcheck</a></code>と <code><a href="#setval">setval</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Console-interaction">Console interaction</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Console-interaction">Console interaction</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -474,17 +488,17 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-setval"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>setval</b>
-<a name="IDX1400"></a>
+<a name="IDX1422"></a>
 </dt>
-<dd><p><code>setcheckbreak</code>が起こった時、変数が設定されようとしている値を保持します。
-なので <code>setval</code>に割り当てることで、違う値を割り当てることができます。
+<dd><p><code><a href="#setcheckbreak">setcheckbreak</a></code>が起こった時、変数が設定されようとしている値を保持します。
+なので <code><a href="#setval">setval</a></code>に割り当てることで、違う値を割り当てることができます。
 </p>
-<p><code>setcheck</code>と <code>setcheckbreak</code>も参照してください。
+<p><code><a href="#setcheck">setcheck</a></code>と <code><a href="#setcheckbreak">setcheckbreak</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Console-interaction">Console interaction</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-variables">Global variables</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Console-interaction">Console interaction</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-variables">Global variables</a>
 </div>
 </p></dd></dl>
 
@@ -492,7 +506,7 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-timer"></a>
 </p><dl>
 <dt><u>関数:</u> <b>timer</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer</tt> (all) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer</tt> ()</i>
-<a name="IDX1401"></a>
+<a name="IDX1423"></a>
 </dt>
 <dd><p><code>timer</code>は、タイミング統計が収集される関数のリストに与えられた関数
 <var>f_1</var>, &hellip;, <var>f_n</var>それぞれを入れます。
@@ -517,11 +531,11 @@ Maximaはブレイクプロンプトを出します。
 <p>もし <code>trace(f)</code>が有効なら <code>timer(f)</code>は有効ではないです;
 <code>trace</code>と <code>timer</code>が同時に有効にはできません。
 </p>
-<p><code>timer_devalue</code>も参照してください。
+<p><code><a href="#timer_005fdevalue">timer_devalue</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -529,7 +543,7 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-untimer"></a>
 </p><dl>
 <dt><u>関数:</u> <b>untimer</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untimer</tt> ()</i>
-<a name="IDX1402"></a>
+<a name="IDX1424"></a>
 </dt>
 <dd><p><code>untimer</code>はタイマーリストから与えられた関数
 <var>f_1</var>, &hellip;, <var>f_n</var>それぞれを削除します。
@@ -545,7 +559,7 @@ Maximaはブレイクプロンプトを出します。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -553,7 +567,7 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-timer_005fdevalue"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>timer_devalue</b>
-<a name="IDX1403"></a>
+<a name="IDX1425"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -563,12 +577,12 @@ Maximaは計られる関数から他の計測される関数で費やされた�
 他の関数で計測される時間を含みます。
 計測されない関数で費やされた時間は総時間から引かれないことに注意してください。
 </p>
-<p><code>timer</code>と <code>timer_info</code>も参照してください。
+<p><code><a href="#timer">timer</a></code>と <code><a href="#timer_005finfo">timer_info</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a> &middot;
-<a href="maxima_100.html#Category_003a-Global-flags">Global flags</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a> &middot;
+<a href="maxima_106.html#Category_003a-Global-flags">Global flags</a>
 </div>
 </p></dd></dl>
 
@@ -576,7 +590,7 @@ Maximaは計られる関数から他の計測される関数で費やされた�
 <a name="Item_003a-timer_005finfo"></a>
 </p><dl>
 <dt><u>関数:</u> <b>timer_info</b><i> (<var>f_1</var>, ..., <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer_info</tt> ()</i>
-<a name="IDX1404"></a>
+<a name="IDX1426"></a>
 </dt>
 <dd><p>関数 <var>f_1</var>, ..., <var>f_n</var>が与えられると、
 <code>timer_info</code>は関数それぞれのタイミング情報を含む行列を返します。
@@ -590,13 +604,13 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <p><code>timer_info</code>が戻り値を構成するデータは、
 <code>get</code>関数でも得ることができます:
 </p>
-<pre class="example">get(f, 'calls);  get(f, 'runtime);  get(f, 'gctime);
-</pre>
-<p><code>timer</code>も参照してください。
+<table><tr><td>&nbsp;</td><td><pre class="example">get(f, 'calls);  get(f, 'runtime);  get(f, 'gctime);
+</pre></td></tr></table>
+<p><code><a href="#timer">timer</a></code>も参照してください。
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -604,7 +618,7 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <a name="Item_003a-trace"></a>
 </p><dl>
 <dt><u>関数:</u> <b>trace</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace</tt> (all) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace</tt> ()</i>
-<a name="IDX1405"></a>
+<a name="IDX1427"></a>
 </dt>
 <dd><p>関数 <var>f_1</var>, &hellip;, <var>f_n</var>が与えられると、
 <code>trace</code>は、
@@ -621,7 +635,7 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <code>trace</code>は現在トレースする関数すべてのリストを返します。
 </p>
 <p><code>untrace</code>関数はトレースをディセーブルします。
-<code>trace_options</code>も参照してください。
+<code><a href="#trace_005foptions">trace_options</a></code>も参照してください。
 </p>
 <p><code>trace</code>は引数をクォートします。
 例えば
@@ -638,7 +652,7 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -646,12 +660,12 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <a name="Item_003a-trace_005foptions"></a>
 </p><dl>
 <dt><u>関数:</u> <b>trace_options</b><i> (<var>f</var>, <var>option_1</var>, &hellip;, <var>option_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace_options</tt> (<var>f</var>)</i>
-<a name="IDX1406"></a>
+<a name="IDX1428"></a>
 </dt>
 <dd><p>関数 <var>f</var>についてトレースオプションを設定します。
 いかなる以前のオプションも破棄されます。
 <code>trace_options (<var>f</var>, ...)</code>は、
-もし (<code>trace_options</code>の前でも後でも). 
+もし (<code>trace_options</code>の前でも後でも).
 <code>trace (<var>f</var>)</code>もコールされないなら、有効になりません。
 </p>
 <p><code>trace_options (<var>f</var>)</code>はオプションすべてをデフォルト値に再設定します。
@@ -697,26 +711,26 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 </p>
 <p>以下は無条件トレースオプションの例です:
 </p>
-<pre class="example">(%i1) ff(n) := if equal(n, 0) then 1 else n * ff(n - 1)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) ff(n) := if equal(n, 0) then 1 else n * ff(n - 1)$
 
 (%i2) trace (ff)$
 
 (%i3) trace_options (ff, lisp_print, break)$
 
 (%i4) ff(3);
-</pre>
+</pre></td></tr></table>
 <p>以下は述語論理上の条件の <code>break</code>オプションを持つ同じ関数です:
 </p>
-<pre class="example">(%i5) trace_options (ff, break(pp))$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i5) trace_options (ff, break(pp))$
 
 (%i6) pp (level, direction, function, item) := block (print (item),
     return (function = 'ff and level = 3 and direction = exit))$
 
 (%i7) ff(6);
-</pre>
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
@@ -724,7 +738,7 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <a name="Item_003a-untrace"></a>
 </p><dl>
 <dt><u>関数:</u> <b>untrace</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untrace</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untrace</tt> ()</i>
-<a name="IDX1407"></a>
+<a name="IDX1429"></a>
 </dt>
 <dd><p><code>untrace</code>は、与えられた関数 <var>f_1</var>, &hellip;, <var>f_n</var>について
 <code>trace</code>関数でイネーブルされたトレースをディセーブルします。
@@ -734,28 +748,28 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 </p>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Debugging">Debugging</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Debugging">Debugging</a>
 </div>
 </p></dd></dl>
 
-<p><a name="Item_003a-alt_002ddisplay"></a>
+<p><a name="Item_003a-alt_002ddisplay_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

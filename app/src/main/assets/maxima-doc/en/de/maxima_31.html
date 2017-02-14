@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Dezember, 9 2014 by texi2html 1.76 -->
+<!-- Created on Dezember, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -54,7 +54,7 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
@@ -78,7 +78,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 31. abs_integrate </h1>
@@ -107,7 +107,7 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 31.1 Introduction to abs_integrate </h2>
@@ -217,7 +217,7 @@ located at<br>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 31.2 Functions and Variables for abs_integrate </h2>
@@ -225,7 +225,7 @@ located at<br>
 <p><a name="extra_005fintegration_005fmethods"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>extra_integration_methods</b>
-<a name="IDX1537"></a>
+<a name="IDX1544"></a>
 </dt>
 <dd><p>Default value: <code>['signum_int, 'abs_integrate_use_if]</code>
 </p>
@@ -302,7 +302,7 @@ a conditional expression; for example
 <p><a name="extra_005fdefinite_005fintegration_005fmethods"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>extra_definite_integration_methods</b>
-<a name="IDX1538"></a>
+<a name="IDX1545"></a>
 </dt>
 <dd><p>Default value: <code>['abs_defint]</code>
 </p>
@@ -331,7 +331,7 @@ that does not fail (or a pure noun form if all methods fail).
 <p><a name="intfudu"></a>
 </p><dl>
 <dt><u>Function:</u> <b>intfudu</b><i> (<var>e</var>, <var>x</var>)</i>
-<a name="IDX1539"></a>
+<a name="IDX1546"></a>
 </dt>
 <dd><p>This function uses the derivative divides rule for integrands of the
 form <em>f(w(x)) * diff(w(x),x)</em>.  When <code>infudu</code> is unable to find
@@ -396,7 +396,7 @@ fact to the hash table, say <em>integrate(f) = g</em>, do this:
 <p><a name="intfugudu"></a>
 </p><dl>
 <dt><u>Function:</u> <b>intfugudu</b><i> (<var>e</var>, <var>x</var>)</i>
-<a name="IDX1540"></a>
+<a name="IDX1547"></a>
 </dt>
 <dd><p>This function uses the derivative divides rule for integrands of the
 form <em>f(w(x)) * g(w(x)) * diff(w(x),x)</em>.  When <code>infugudu</code> is
@@ -432,7 +432,7 @@ see the documentation for <code>intfudu</code>.
 <p><a name="signum_005fto_005fabs"></a>
 </p><dl>
 <dt><u>Function:</u> <b>signum_to_abs</b><i> (<var>e</var>)</i>
-<a name="IDX1541"></a>
+<a name="IDX1548"></a>
 </dt>
 <dd><p>This function replaces subexpressions of the form <em>q signum(q)</em> by
 <em>abs(q)</em>.  Before it does these substitutions, it replaces
@@ -452,7 +452,7 @@ subexpressions of the form <em>signum(p) * signum(q)</em> by
 <p><a name="simp_005fassuming"></a>
 </p><dl>
 <dt><u>Macro:</u> <b>simp_assuming</b><i> (<var>e</var>, <var>f_1</var>, <var>f_2</var>, &hellip;, <var>f_n</var>)</i>
-<a name="IDX1542"></a>
+<a name="IDX1549"></a>
 </dt>
 <dd><p>Appended the facts <em>f_1, f_2, &hellip;, f_n</em> to the current context and
 simplify <em>e</em>.  The facts are removed before returning the simplified
@@ -480,7 +480,7 @@ is arguments; this allows
 <p><a name="conditional_005fintegrate"></a>
 </p><dl>
 <dt><u>Function:</u> <b>conditional_integrate</b><i> (<var>e</var>, <var>x</var>)</i>
-<a name="IDX1543"></a>
+<a name="IDX1550"></a>
 </dt>
 <dd><p>For an integrand with one or more parameters, this function tries to determine
 an antiderivative that is valid for all parameter values.  When successful, this
@@ -523,7 +523,7 @@ sin(2 x) + 2 x
 <p><a name="convert_005fto_005fsignum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>convert_to_signum</b><i> (<var>e</var>)</i>
-<a name="IDX1544"></a>
+<a name="IDX1551"></a>
 </dt>
 <dd><p>This function replaces subexpressions of the form <code>abs(q), unit_step(q),
 min(q1, q2, ..., qn)</code> and <code>max(q1, q2, ..., qn)</code> by equivalent
@@ -561,12 +561,12 @@ min(q1, q2, ..., qn)</code> and <code>max(q1, q2, ..., qn)</code> by equivalent
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC409" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC410" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Robert Dodier</em> on <em>Dezember, 9 2014</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>Dezember, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

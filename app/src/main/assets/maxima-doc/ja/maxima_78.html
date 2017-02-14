@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on 5月, 20 2015 by texi2html 1.76 -->
+<!-- Created on December, 27 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.36.1 Manual: 78. stirling</title>
+<title>Maxima 5.39.0 Manual: 78. romberg</title>
 
-<meta name="description" content="Maxima 5.36.1 Manual: 78. stirling">
-<meta name="keywords" content="Maxima 5.36.1 Manual: 78. stirling">
+<meta name="description" content="Maxima 5.39.0 Manual: 78. romberg">
+<meta name="keywords" content="Maxima 5.39.0 Manual: 78. romberg">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -54,12 +54,11 @@ div.spacerbox {border: none; padding-top: 2em; padding-bottom: 2em}
 div.image {margin: 0; padding: 1em; text-align: center}
 div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
     padding-left: 1em; padding-right: 1em; background: rgb(247,242,220)}
-
+img {max-width:80%; max-height: 80%}
 -->
 </style>
 
 <link rel="icon" href="figures/favicon.ico"/>
-
 <script type="text/javascript"><!--
 
   var _gaq = _gaq || [];
@@ -73,141 +72,299 @@ div.categorybox {border: 1px solid gray; padding-top: 0px; padding-bottom: 0px;
   })();
 
 --></script>
+
 </head>
 
-<body lang="ja" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div style="position: fixed; width: 300px; right: 20px;">
+<script>
+  (function() {
+    var cx = '010272381774241760502:zr4s1iggymk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
 
-<a name="stirling"></a>
-<a name="SEC372"></a>
+<a name="romberg_002dpkg"></a>
+<a name="SEC360"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_77.html#SEC371" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC373" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC361" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC367" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h1 class="chapter"> 78. stirling </h1>
+<h1 class="chapter"> 78. romberg </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC373">78.1 Functions and Variables for stirling</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC361">78.1 Functions and Variables for romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-stirling"></a>
+<p><a name="Item_003a-Functions-and-Variables-for-romberg"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-stirling"></a>
-<a name="SEC373"></a>
+<a name="Functions-and-Variables-for-romberg"></a>
+<a name="SEC361"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC372" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC360" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC372" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC372" title="Up section">上</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC360" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC360" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 78.1 Functions and Variables for stirling </h2>
+<h2 class="section"> 78.1 Functions and Variables for romberg </h2>
 
-
-<dl>
-<dt><u>関数:</u> <b>stirling</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>stirling</tt> (<var>z</var>,<var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>stirling</tt> (<var>z</var>,<var>n</var>,<var>pred</var>)</i>
-<a name="IDX2391"></a>
+<p><a name="romberg_005ffunction"></a>
+<a name="Item_003a-romberg"></a>
+</p><dl>
+<dt><u>関数:</u> <b>romberg</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>romberg</tt> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>romberg</tt> (<var>F</var>, <var>a</var>, <var>b</var>)</i>
+<a name="IDX2368"></a>
 </dt>
-<dd><p><code>gamma(x)</code>を <em>O(1/x^(2n-1))</em> Stirling公式で置き換えます。
-<var>n</var>が非負の整数の時、エラーを知らせます。
-オプションの三番目の引数 <code>pred</code>があると、
-<code>pred</code>が trueの時だけ Stirling公式を適用します。
+<dd><p>Romberg法による数値積分を計算します。
 </p>
-<p>参照文献: Abramowitz &amp; Stegun, &quot; Handbook of mathematical functions&quot;, 6.1.40.
+<p><code>romberg(<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code>は積分
+<code>integrate(<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>)</code>の概算を返します。
+</p>
+<p><var>expr</var>は、
+<var>x</var>が浮動小数点値にバインドされた時
+浮動小数点値に評価される式でなければいけません。
+</p>
+<p><code>romberg(<var>F</var>, <var>a</var>, <var>b</var>)</code>は積分
+<code>integrate(<var>F</var>(x), x, <var>a</var>, <var>b</var>)</code>の概算を返します。
+ここで、 <code>x</code>は <var>F</var>の名付けられない唯一の引数を表します;
+実際の引数は <code>x</code>と名付けられません。
+<var>F</var>は、引数が浮動小数点値の時、浮動小数点値を返す
+Maximaか Lispの関数でなければいけません。
+<var>F</var>は翻訳またはコンパイルされた Maxima関数を指定することができます。
+</p>
+<p>グローバル変数 <code>rombergabs</code>と <code>rombergtol</code>が
+<code>romberg</code>の精度を決定します。
+<code>romberg</code>は、連続する近似の間の絶対差が
+<code>rombergabs</code>よりも小さい時か、連続する近似に関する相対差が
+<code>rombergtol</code>よりも小さい時、成功のうちに終了します。
+従って、
+<code>rombergabs</code>が 0.0 (デフォルト)の時、
+相対誤差テストだけが <code>romberg</code>に効果を持ちます。
+</p>
+<p><code>romberg</code>は、
+あきらめる前に、せいぜい <code>rombergit</code>回、ステップサイズを半分にします;
+それゆえ関数評価の最大回数は <code>2^rombergit</code>です。
+もし <code>rombergabs</code>や
+<code>rombergtol</code>によって確立される誤差基準が満たされないなら、
+<code>romberg</code>はエラーメッセージを印字します。
+<code>romberg</code>はいつも、少なくとも <code>rombergmin</code>回の繰り返しを行います;
+これは、被積分関数が振動的な時、見せかけの終了を防ぐつもりの発見的方法です。
+</p>
+<p><code>romberg</code>は、積分変数を特定の値にバインド(する前ではなく)した後、
+被積分関数を繰り返し評価します。
+この評価ポリシーは、多次元積分を計算するための
+<code>romberg</code>の入れ子のコールを可能にします。
+しかしながら、誤差計算は入れ子の積分の誤差を考慮しないので、
+エラーは過小評価されるかもしれません。
+また、多次元問題のために特別に工夫された方法は
+より少ない関数評価で同じ精度をもたらす可能性があります。
+</p>
+<p><code>load(romberg)</code>はこの関数をロードします。
+</p>
+<p><code>QUADPACK</code>、数値積分関数のコレクションも参照してください。
 </p>
 <p>例:
-</p><pre class="example">(%i1) load (stirling)$
-
-(%i2) stirling(gamma(%alpha+x)/gamma(x),1);
-       1/2 - x             x + %alpha - 1/2
-(%o2) x        (x + %alpha)
-                                   1           1
-                            --------------- - ---- - %alpha
-                            12 (x + %alpha)   12 x
-                          %e
-(%i3) taylor(%,x,inf,1);
-                    %alpha       2    %alpha
-          %alpha   x       %alpha  - x       %alpha
-(%o3)/T/ x       + -------------------------------- + . . .
-                                 2 x
-(%i4) map('factor,%);
-                                       %alpha - 1
-         %alpha   (%alpha - 1) %alpha x
-(%o4)   x       + -------------------------------
-                                  2
-</pre>
-<p>関数　<code>stirling</code>は変数　'gamma'と関数　gammaの違いを知っています:
 </p>
-<pre class="example">(%i5) stirling(gamma + gamma(x),0);
-                                    x - 1/2   - x
-(%o5)    gamma + sqrt(2) sqrt(%pi) x        %e
-(%i6) stirling(gamma(y) + gamma(x),0);
-                         y - 1/2   - y
-(%o6) sqrt(2) sqrt(%pi) y        %e
-                                              x - 1/2   - x
-                         + sqrt(2) sqrt(%pi) x        %e
-</pre>
-<p>変数 <code>k</code>を含む項だけに
-Stirling公式を適用するためにオプションの三番目の引数を使います;
-例えば、
-</p><pre class="example">(%i7) makegamma(pochhammer(a,k)/pochhammer(b,k));
-(%o7) (gamma(b)*gamma(k+a))/(gamma(a)*gamma(k+b))
-(%i8) stirling(%,1, lambda([s], not(freeof(k,s))));
-(%o8) (%e^(b-a)*gamma(b)*(k+a)^(k+a-1/2)*(k+b)^(-k-b+1/2))/gamma(a)
-</pre><p>項 <code>gamma(a)</code>と <code>gamma(b)</code>は、
-<code>k</code>を含まないので、
-Stirling公式はこれら２つの項に適用されませんでした。
+<p>1次元積分。
 </p>
-<p>この関数を使うには最初に <code>load(&quot;stirling&quot;)</code>と書いてください。
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (romberg);
+(%o1)    /usr/share/maxima/5.11.0/share/numeric/romberg.lisp
+(%i2) f(x) := 1/((x - 1)^2 + 1/100) + 1/((x - 2)^2 + 1/1000)
+              + 1/((x - 3)^2 + 1/200);
+                    1                 1                1
+(%o2) f(x) := -------------- + --------------- + --------------
+                     2    1           2    1            2    1
+              (x - 1)  + ---   (x - 2)  + ----   (x - 3)  + ---
+                         100              1000              200
+(%i3) rombergtol : 1e-6;
+(%o3)                 9.9999999999999995E-7
+(%i4) rombergit : 15;
+(%o4)                          15
+(%i5) estimate : romberg (f(x), x, -5, 5);
+(%o5)                   173.6730736617464
+(%i6) exact : integrate (f(x), x, -5, 5);
+(%o6) 10 sqrt(10) atan(70 sqrt(10))
+ + 10 sqrt(10) atan(30 sqrt(10)) + 10 sqrt(2) atan(80 sqrt(2))
+ + 10 sqrt(2) atan(20 sqrt(2)) + 10 atan(60) + 10 atan(40)
+(%i7) abs (estimate - exact) / exact, numer;
+(%o7)                7.5527060865060088E-11
+</pre></td></tr></table>
+<p><code>romberg</code>の入れ子のコールで実装された 2次元積分。
 </p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (romberg);
+(%o1)    /usr/share/maxima/5.11.0/share/numeric/romberg.lisp
+(%i2) g(x, y) := x*y / (x + y);
+                                    x y
+(%o2)                   g(x, y) := -----
+                                   x + y
+(%i3) rombergtol : 1e-6;
+(%o3)                 9.9999999999999995E-7
+(%i4) estimate : romberg (romberg (g(x, y), y, 0, x/2), x, 1, 3);
+(%o4)                   0.81930239628356
+(%i5) assume (x &gt; 0);
+(%o5)                        [x &gt; 0]
+(%i6) integrate (integrate (g(x, y), y, 0, x/2), x, 1, 3);
+                                          3
+                                    2 log(-) - 1
+                    9                     2        9
+(%o6)       - 9 log(-) + 9 log(3) + ------------ + -
+                    2                    6         2
+(%i7) exact : radcan (%);
+                    26 log(3) - 26 log(2) - 13
+(%o7)             - --------------------------
+                                3
+(%i8) abs (estimate - exact) / exact, numer;
+(%o8)                1.3711979871851024E-10
+</pre></td></tr></table>
 <div class=categorybox>
 
-<p>Categories:&nbsp;&nbsp;<a href="maxima_100.html#Category_003a-Gamma-and-factorial-functions">Gamma and factorial functions</a> &middot;
-<a href="maxima_100.html#Category_003a-Share-packages">Share packages</a> &middot;
-<a href="maxima_100.html#Category_003a-Package-stirling">Package stirling</a>
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-romberg">Package romberg</a> &middot;
+<a href="maxima_106.html#Category_003a-Numerical-methods">Numerical methods</a>
 </div>
 </p>
 </dd></dl>
 
-<p><a name="Item_003a-stringproc"></a>
+<p><a name="rombergabs"></a>
+<a name="Item_003a-rombergabs"></a>
+</p><dl>
+<dt><u>オプション変数:</u> <b>rombergabs</b>
+<a name="IDX2369"></a>
+</dt>
+<dd><p>デフォルト値: 0.0
+</p>
+<p>グローバル変数 <code>rombergabs</code>と <code>rombergtol</code>は
+<code>romberg</code>の精度を決定します。
+<code>romberg</code>は、連続する近似の間の絶対差が
+<code>rombergabs</code>よりも小さい時か、連続する近似に関する相対差が
+<code>rombergtol</code>よりも小さい時、成功のうちに終了します。
+従って、 <code>rombergabs</code>が 0.0 (デフォルト)の時、
+相対誤差テストだけが <code>romberg</code>に効果を持ちます。
+</p>
+<p><code><a href="#rombergit">rombergit</a></code>と <code><a href="#rombergmin">rombergmin</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-romberg">Package romberg</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="rombergit"></a>
+<a name="Item_003a-rombergit"></a>
+</p><dl>
+<dt><u>オプション変数:</u> <b>rombergit</b>
+<a name="IDX2370"></a>
+</dt>
+<dd><p>デフォルト値: 11
+</p>
+<p><code>romberg</code>は、あきらめる前に、せいぜい
+<code>rombergit</code>回、ステップサイズを半分にします;
+それゆえ、関数評価の最大回数は <code>2^rombergit</code>です。
+<code>romberg</code>はいつも、少なくとも <code>rombergmin</code>回の繰り返しを行います;
+これは、被積分関数が振動的な時、見せかけの終了を防ぐつもりの発見的方法です。
+</p>
+<p><code><a href="#rombergabs">rombergabs</a></code>と <code><a href="#rombergtol">rombergtol</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-romberg">Package romberg</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="rombergmin"></a>
+<a name="Item_003a-rombergmin"></a>
+</p><dl>
+<dt><u>オプション変数:</u> <b>rombergmin</b>
+<a name="IDX2371"></a>
+</dt>
+<dd><p>デフォルト値: 0
+</p>
+<p><code>romberg</code>はいつも、少なくとも <code>rombergmin</code>回の繰り返しを行います;
+これは、被積分関数が振動的な時、見せかけの終了を防ぐつもりの発見的方法です。
+</p>
+<p><code><a href="#rombergit">rombergit</a></code>, <code><a href="#rombergabs">rombergabs</a></code>, <code><a href="#rombergtol">rombergtol</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-romberg">Package romberg</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="rombergtol"></a>
+<a name="Item_003a-rombergtol"></a>
+</p><dl>
+<dt><u>オプション変数:</u> <b>rombergtol</b>
+<a name="IDX2372"></a>
+</dt>
+<dd><p>デフォルト値: 1e-4
+</p>
+<p>グローバル変数 <code>rombergabs</code>と <code>rombergtol</code>は
+<code>romberg</code>の精度を決定されます。
+<code>romberg</code>は、連続する近似の間の絶対差が
+<code>rombergabs</code>よりも小さい時か、連続する近似に関する相対差が
+<code>rombergtol</code>よりも小さい時、成功のうちに終了します。
+従って、 <code>rombergabs</code>が 0.0 (デフォルト)の時、
+相対誤差テストだけが <code>romberg</code>に効果を持ちます。
+</p>
+<p><code><a href="#rombergit">rombergit</a></code>と <code><a href="#rombergmin">rombergmin</a></code>も参照してください。
+</p>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_106.html#Category_003a-Package-romberg">Package romberg</a>
+</div>
+</p>
+</dd></dl>
+
+<p><a name="Item_003a-simplex_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC372" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC374" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC360" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">冒頭</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">目次</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_84.html#SEC395" title="Index">見出し</a>]</td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  この文書は<em>市川 雄二</em>によって<em>5月, 20 2015</em>に<a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>を用いて生成されました。
+  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 
