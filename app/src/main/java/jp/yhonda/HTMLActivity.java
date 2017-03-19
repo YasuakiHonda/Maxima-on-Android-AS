@@ -24,6 +24,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -33,7 +34,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class HTMLActivity extends Activity {
+public class HTMLActivity extends AppCompatActivity {
 	public String urlonCreate = null;
 	WebView webview = null;
 
@@ -61,7 +62,7 @@ public class HTMLActivity extends Activity {
 		if (Build.VERSION.SDK_INT >= 11) {
 			Intent intent = this.getIntent();
 			boolean hwaccel = intent.getBooleanExtra("hwaccel", true);
-			if (hwaccel == false) {
+			if (!hwaccel) {
 				webview.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
 			}
 		}
@@ -86,7 +87,7 @@ public class HTMLActivity extends Activity {
 
 	public void loadURLonCreate() {
 		File f = new File("/data/data/jp.yhonda/files/maxout.html");
-		if (f.exists() == true) {
+		if (f.exists()) {
 			Log.v("MoA", "loadURLonCreate" + String.valueOf(f.length()));
 		}
 		Intent origIntent = this.getIntent();
@@ -99,7 +100,7 @@ public class HTMLActivity extends Activity {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (event.getAction() == KeyEvent.ACTION_DOWN
 				&& keyCode == KeyEvent.KEYCODE_BACK
-				&& webview.canGoBack() == true) {
+				&& webview.canGoBack()) {
 			webview.goBack();
 			return true;
 		}

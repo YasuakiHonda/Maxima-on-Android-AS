@@ -38,11 +38,11 @@ public final class CpuArchitecture {
 	private CpuArchitecture () {
 	}
 	
-	public static final String getCpuArchitecture() {
+	public static String getCpuArchitecture() {
 		return cpuarch;
 	}
 	
-	public static final void initCpuArchitecture() {
+	public static void initCpuArchitecture() {
 		if (! NOT_INITIALIZED.equals(cpuarch)) {
 			return;
 		}
@@ -66,7 +66,7 @@ public final class CpuArchitecture {
 		}
 	}
 	
-	public static final String getMaximaFile() {
+	public static String getMaximaFile() {
 		if (cpuarch.startsWith("not")) {
 			return cpuarch;
 		}

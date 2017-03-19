@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MOAInstallerActivity" >
 
@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="Maxima on Android installs additional 85MB of data. Please choose the install location and press Install." />
+        android:text="@string/install_instructions" />
 
     <RadioGroup
         android:id="@+id/radiogroup"
@@ -22,13 +22,13 @@
             android:id="@+id/radioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Internal Storage" />
+            android:text="@string/install_internal_storage" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="External Storage (SD Card)" />
+            android:text="@string/install_external" />
     </RadioGroup>
 
     <!-- Push the button bar to the bottom -->
@@ -36,9 +36,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1" />
-
-    <!-- Divider above the button bar -->
-    <View style="?attr/buttonBarDividerStyle" />
 
     <LinearLayout
         style="?attr/buttonBarStyle"
@@ -51,7 +48,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cancel" />
+            android:text="@string/cancel" />
 
         <Button
             android:id="@+id/button1"
@@ -59,7 +56,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Install" />
+            android:text="@string/install" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/about" android:titleCondensed="About MoA" android:title="About Maxima on Android"></item><item android:id="@+id/man" android:titleCondensed="Man" android:title="Manual"></item>
-    <item android:id="@+id/graph" android:titleCondensed="Graph" android:title="Graph"></item>
-    <item android:id="@+id/quit" android:titleCondensed="Quit" android:title="Quit"></item>
+    <item
+        android:id="@+id/about"
+        android:titleCondensed="About MoA"
+        android:title="@string/menu_about"/>
+    <item
+        android:id="@+id/man"
+        android:titleCondensed="Man"
+        android:title="@string/menu_manual"/>
+    <item
+        android:id="@+id/graph"
+        android:titleCondensed="Graph"
+        android:title="@string/menu_graph"/>
+    <item
+        android:id="@+id/quit"
+        android:titleCondensed="Quit"
+        android:title="@string/menu_quit"/>
     
-    <item android:id="@+id/session" android:title="Session">
+    <item android:id="@+id/session" android:title="@string/menu_session">
         <menu>
-            <item android:id="@+id/save" android:title="Save"/>
-            <item android:id="@+id/restore" android:title="Restore"/>
-            <item android:id="@+id/playback" android:title="Playback"/>
+            <item android:id="@+id/save" android:title="@string/menu_session_save"/>
+            <item android:id="@+id/restore" android:title="@string/menu_session_restore"/>
+            <item android:id="@+id/playback" android:title="@string/menu_session_playback"/>
         </menu>
     </item>
-    <item android:id="@+id/settings" android:title="Settings">
+    <item android:id="@+id/settings" android:title="@string/menu_settings">
         <menu>
-            <item android:id="@+id/jp" android:titleCondensed="Jp man" android:title="Japanese manual"/>
-            <item android:id="@+id/en" android:titleCondensed="En man" android:title="English manual"/>
-            <item android:id="@+id/de" android:titleCondensed="De man" android:title="German manual"/>
-            <item android:id="@+id/es" android:title="Spanish manual" android:titleCondensed="ES man"/>
-            <item android:id="@+id/pt" android:titleCondensed="Pt man" android:title="Portuguese manual"/>
-            <item android:id="@+id/ptbr" android:titleCondensed="Br Pt man" android:title="Brazilian Pt manual"/>
+            <item android:id="@+id/jp" android:titleCondensed="Jp man" android:title="@string/menu_jp_man"/>
+            <item android:id="@+id/en" android:titleCondensed="En man" android:title="@string/menu_en_man"/>
+            <item android:id="@+id/de" android:titleCondensed="De man" android:title="@string/menu_de_man"/>
+            <item android:id="@+id/es" android:titleCondensed="ES man" android:title="@string/menu_es_man"/>
+            <item android:id="@+id/pt" android:titleCondensed="Pt man" android:title="@string/menu_pt_man"/>
+            <item android:id="@+id/ptbr" android:titleCondensed="Br Pt man" android:title="@string/menu_br_pt_man"/>
         </menu>
     </item>
-    <item android:id="@+id/nextexample" android:title="Next example"></item>
+    <item
+        android:id="@+id/nextexample"
+        android:title="@string/menu_next_sample"/>
     
     
 

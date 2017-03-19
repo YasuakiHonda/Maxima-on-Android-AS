@@ -1,13 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "jp.yhonda"
-        minSdkVersion 8
-        targetSdkVersion 8
+        minSdkVersion 9
+        targetSdkVersion 22
+    }
+
+    dependencies {
+        compile 'com.android.support:support-v4:25.2.0'
+        compile 'com.android.support:appcompat-v7:25.2.0'
+        compile 'com.android.support:design:25.2.0'
+
     }
 
     buildTypes {

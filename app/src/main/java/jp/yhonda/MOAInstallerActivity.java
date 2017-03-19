@@ -29,6 +29,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.StatFs;
 import android.util.Log;
@@ -38,7 +39,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public final class MOAInstallerActivity extends Activity {
+public final class MOAInstallerActivity extends AppCompatActivity {
 	File installedDir;
 	File internalDir;
 	File externalDir;
@@ -103,7 +104,7 @@ public final class MOAInstallerActivity extends Activity {
 			intB.setEnabled(false);
 			extB.setEnabled(false);
 			okB.setEnabled(false);
-			msg.setText("Maxima on Android requires additional 32MB of the internal free storage for Maxima installation. Unfortunately there seems no enough space found on the internal storage. Please press Cancel button for now and make sure you have at least 32MB of free space. Then try to run Maxima on Android again!!");
+			msg.setText(R.string.internal_storage_insufficient);
 		} else {
 			long limitAvail = 85L;
 			if (intStorageAvail < limitAvail) {
@@ -114,7 +115,7 @@ public final class MOAInstallerActivity extends Activity {
 			}
 			if (intStorageAvail < limitAvail && extStorageAvail < limitAvail) {
 				okB.setEnabled(false);
-				msg.setText("Maxima on Android requires additional 85MB of free storage for Maxima data installation. Unfortunately there seems no enough space found on the internal and external storage. Please press Cancel button for now and make sure you have at least 85MB of free space. Then try to run Maxima on Android again!!");
+				msg.setText(R.string.storage_insufficient_for_maxima_data);
 			}
 			/* Set the default check of the radio buttons */
 			if (intStorageAvail >= limitAvail) {
@@ -156,7 +157,7 @@ public final class MOAInstallerActivity extends Activity {
 			case 0: {
 				UnzipAsyncTask uzt = new UnzipAsyncTask(this);
 				uzt.setParams(this.getAssets().open("additions.zip"),
-						internalDir.getAbsolutePath(), "Additions",
+						internalDir.getAbsolutePath(), getString(R.string.install_additions),
 						"Additions installed");
 				uzt.execute(0);
 				break;
@@ -196,7 +197,7 @@ public final class MOAInstallerActivity extends Activity {
 				Log.d("My Test", "Clicked!1.1");
 				UnzipAsyncTask uzt = new UnzipAsyncTask(this);
 				uzt.setParams(this.getAssets().open(maximaFile + ".zip"),
-						internalDir.getAbsolutePath(), "maxima binary",
+						internalDir.getAbsolutePath(), getString(R.string.install_maxima_binary),
 						"maxima binary installed");
 				uzt.execute(1);
 				break;
@@ -205,7 +206,7 @@ public final class MOAInstallerActivity extends Activity {
 				chmod755(internalDir.getAbsolutePath() + "/" + CpuArchitecture.getMaximaFile());
 				UnzipAsyncTask uzt = new UnzipAsyncTask(this);
 				uzt.setParams(this.getAssets().open("maxima-" + vers + ".zip"),
-						installedDir.getAbsolutePath(), "maxima data",
+						installedDir.getAbsolutePath(), getString(R.string.install_maxima_data),
 						"maxima data installed");
 				uzt.execute(2);
 				break;
@@ -268,7 +269,7 @@ public final class MOAInstallerActivity extends Activity {
 			Log.v("MoA","exception chmod755 1");
 		} catch (Exception e) {
 			Log.v("MoA","exception chmod755 2");
-		}		
+		}
 	}
 	
 	private void removeMaximaFiles() {

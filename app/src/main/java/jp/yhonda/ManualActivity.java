@@ -30,6 +30,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -45,7 +46,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-public class ManualActivity extends Activity implements OnTouchListener {
+public class ManualActivity extends AppCompatActivity implements OnTouchListener {
 	WebView webview = null;
 	String curURL = "";
 	Activity thisActivity;
@@ -117,7 +118,7 @@ public class ManualActivity extends Activity implements OnTouchListener {
 				if (msg.startsWith("CECB:")) {
 					copyExampleCallback(msg.substring("CECB:".length()));
 				}
-				Log.d("MyApplication",
+				Log.d("MoA",
 						cm.message() + " -- From line " + cm.lineNumber()
 								+ " of " + cm.sourceId());
 				return true;
@@ -136,13 +137,13 @@ public class ManualActivity extends Activity implements OnTouchListener {
 		// PreferenceManager.getDefaultSharedPreferences(this);
 		String serialized = settings.getString("parcel", null);
 
-		if ((manLangChanged == false) && (serialized != null)) {
+		if ((!manLangChanged) && (serialized != null)) {
 			Parcel parcel = Parcel.obtain();
 			try {
 				byte[] data = Base64.decode(serialized, 0);
 				parcel.unmarshall(data, 0, data.length);
 				parcel.setDataPosition(0);
-				bundle = parcel.readBundle();
+				bundle = parcel.readBundle(getClass().getClassLoader());
 			} finally {
 				parcel.recycle();
 			}
@@ -153,7 +154,7 @@ public class ManualActivity extends Activity implements OnTouchListener {
 
 		Editor edit = settings.edit();
 		edit.remove("parcel");
-		edit.commit();
+		edit.apply();
 	}
 
 	@Override
@@ -161,7 +162,7 @@ public class ManualActivity extends Activity implements OnTouchListener {
 		if (event.getAction() == KeyEvent.ACTION_DOWN
 				&& keyCode == KeyEvent.KEYCODE_BACK) {
 
-			if (webview.canGoBack() == true) {
+			if (webview.canGoBack()) {
 				webview.goBack();
 				return true;
 			} else {
@@ -249,7 +250,7 @@ public class ManualActivity extends Activity implements OnTouchListener {
 					.getDefaultSharedPreferences(this);
 			Editor editor = settings.edit();
 			editor.putString("parcel", serialized);
-			editor.commit();
+			editor.apply();
 		}
 		super.onPause();
 	}
@@ -307,7 +308,7 @@ public class ManualActivity extends Activity implements OnTouchListener {
 					.getDefaultSharedPreferences(this);
 			Editor editor = settings.edit();
 			editor.putFloat("man scale", sc);
-			editor.commit();
+			editor.apply();
 		}
 		return false;
 	}

@@ -3,5 +3,39 @@
 
     <string name="hello">Hello World, MaximaOnAndroidActivity!</string>
     <string name="app_name">MaximaOnAndroid</string>
+    <string name="internal_storage_insufficient">0n the internal storage. Please press Cancel button for now and make sure you have at least 32MB of free space. Then try to run Maxima on Android again!!</string>
+    <string name="storage_insufficient_for_maxima_data">Maxima on Android requires additional 85MB of free storage for Maxima data installation. Unfortunately there seems no enough space found on the internal and external storage. Please press Cancel button for now and make sure you have at least 85MB of free space. Then try to run Maxima on Android again!!</string>
+    <string name="install_in_progress">Install in progress…</string>
+    <string name="install_failure">The installation NOT completed. Please uninstall this apk and try to re-install again.</string>
+    <string name="OK">OK</string>
+    <string name="installer_title">MaximaOnAndroid Installer</string>
+    <string name="install_internal_storage">Internal Storage</string>
+    <string name="install_external">External Storage (SD Card)</string>
+    <string name="install">Install</string>
+    <string name="cancel">Cancel</string>
+    <string name="install_instructions">Maxima on Android installs additional 85MB of data. Please choose the install location and press Install.</string>
+    <string name="install_additions">Installing additions</string>
+    <string name="install_maxima_data">Installing Maxima data</string>
+    <string name="install_maxima_binary">Installing Maxima binary</string>
+    <string name="quit_hint">Use Quit in the menu.</string>
+    <string name="man_back_to_maxima">Back to Maxima</string>
+    <string name="menu_about">About Maxima on Android</string>
+    <string name="menu_graph">Graph</string>
+    <string name="menu_manual">Manual</string>
+    <string name="menu_quit">Quit</string>
+    <string name="menu_session">Session</string>
+    <string name="menu_session_save">Save</string>
+    <string name="menu_session_restore">Restore</string>
+    <string name="menu_session_playback">Playback</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_next_sample">Next Example</string>
+    <string name="menu_jp_man">Japanese manual</string>
+    <string name="menu_br_pt_man">Brazilian Pt manual</string>
+    <string name="menu_en_man">English manual</string>
+    <string name="menu_de_man">German manual</string>
+    <string name="menu_es_man">Spanish manual</string>
+    <string name="menu_pt_man">Portuguese manual</string>
+    <string name="toast_no_graph">No graph to show.</string>
+    <string name="enter">Enter</string>
 
 </resources>
