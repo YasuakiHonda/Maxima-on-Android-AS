@@ -10,6 +10,10 @@ android {
         targetSdkVersion 8
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
