@@ -2,4 +2,5 @@
 /.gradle
 /.idea
 local.properties
+*.apk
 
