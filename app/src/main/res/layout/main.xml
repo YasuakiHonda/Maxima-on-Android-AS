@@ -12,11 +12,11 @@
         android:layout_weight="1"
         android:isScrollContainer="true" >
 
-            <WebView
-                android:id="@+id/webView1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:isScrollContainer="true" />
+        <WebView
+            android:id="@+id/webView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true" />
 
     </ScrollView>
 
@@ -26,7 +26,7 @@
         android:gravity="end"
         android:orientation="horizontal" >
 
-        <EditText
+        <MultiAutoCompleteTextView
             android:id="@+id/editText1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

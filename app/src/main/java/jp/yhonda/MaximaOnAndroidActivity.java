@@ -45,6 +45,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.AutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView.Tokenizer;
+import android.widget.ArrayAdapter;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -68,7 +72,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	boolean manLangChanged = true;
 	boolean allExampleFinished = false;
 	Semaphore sem = new Semaphore(1);
-	EditText editText;
+	MultiAutoCompleteTextView editText;
 	Button enterB;
 	WebView webview;
 	ScrollView scview;
@@ -149,13 +153,17 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 		webview.addJavascriptInterface(this, "MOA");
 
-		editText = (EditText) findViewById(R.id.editText1);
+		editText = (MultiAutoCompleteTextView) findViewById(R.id.editText1);
 		editText.setOnEditorActionListener(this);
 		int newsize = settings.getInt("MCIAfontSize", -1);
 		if (newsize != -1) {
 			setMCIAfontSize(newsize);
 		}
-
+		ArrayAdapter<String> adapter =
+				new ArrayAdapter<String>(this,
+						android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.MaximaCompletionList));
+		editText.setTokenizer(new MaximaTokenizer());
+		editText.setAdapter(adapter);
 		webview.setOnTouchListener(this);
 
 		enterB = (Button) findViewById(R.id.enterB);
