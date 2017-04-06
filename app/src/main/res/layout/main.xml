@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="50"
             android:ems="10"
-            android:inputType="text|textFilter|textMultiLine"
+            android:inputType="text|textFilter"
             android:isScrollContainer="false"
             android:keepScreenOn="true"
             android:maxLines="1"

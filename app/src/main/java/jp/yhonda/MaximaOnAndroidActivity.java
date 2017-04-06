@@ -36,12 +36,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
+import android.view.*;
 import android.view.View.OnTouchListener;
 import android.webkit.ConsoleMessage;
 import android.webkit.WebChromeClient;
@@ -93,6 +88,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		} else {
 			maximaURL = "file:///android_asset/maxima_html.html";
 		}
+
 
 		SharedPreferences pref = PreferenceManager
 				.getDefaultSharedPreferences(this);
@@ -774,8 +770,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.menu, menu);
+		getMenuInflater().inflate(R.menu.menu, menu);
 		return true;
 	}
 
