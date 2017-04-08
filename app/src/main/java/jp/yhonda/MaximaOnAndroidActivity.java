@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,14 +33,10 @@ import android.content.SharedPreferences.Editor;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
+import android.view.*;
 import android.view.View.OnTouchListener;
 import android.webkit.ConsoleMessage;
 import android.webkit.WebChromeClient;
@@ -53,7 +50,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.webkit.JavascriptInterface;
 
-public class MaximaOnAndroidActivity extends Activity implements
+public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		TextView.OnEditorActionListener, OnTouchListener {
 	boolean inited=false; /* expSize initialize is done or not */
 	String[] mcmdArray = null; /* manual example input will be stored. */
@@ -92,6 +89,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 			maximaURL = "file:///android_asset/maxima_html.html";
 		}
 
+
 		SharedPreferences pref = PreferenceManager
 				.getDefaultSharedPreferences(this);
 		if (new File("/data/local/tmp/maxima-doc").exists()) {
@@ -105,7 +103,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 			if (manURL.startsWith("file:///android_asset")) {
 				Editor edit = pref.edit();
 				edit.putString("manURL", manen);
-				edit.commit();
+				edit.apply();
 			}
 		} else {
 			manURL = pref.getString("manURL", manen);
@@ -239,10 +237,9 @@ public class MaximaOnAndroidActivity extends Activity implements
 
 			} else {
 				new AlertDialog.Builder(this)
-						.setTitle("MaximaOnAndroid Installer")
-						.setMessage(
-								"The installation NOT completed. Please uninstall this apk and try to re-install again.")
-						.setPositiveButton("OK",
+						.setTitle(R.string.installer_title)
+						.setMessage(R.string.install_failure)
+						.setPositiveButton(R.string.OK,
 								new DialogInterface.OnClickListener() {
 									@Override
 									public void onClick(DialogInterface dialog,
@@ -428,7 +425,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 			SharedPreferences settings = PreferenceManager
 					.getDefaultSharedPreferences(thisActivity);
 			final String newsize = settings.getString("expSize", "");
-			if (newsize != "") {
+			if (newsize.equals("")) {
 				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");}});
 				// webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");
 			}
@@ -482,7 +479,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 							.getDefaultSharedPreferences(this);
 					Editor editor = settings.edit();
 					editor.putString("expSize", sizeString);
-					editor.commit();
+					editor.apply();
 					return true;
 				}
 				removeTmpFiles();
@@ -647,7 +644,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 
 		StringBuffer buffer = new StringBuffer();
 
-		buffer.append(input.substring(0, index) + replacement);
+		buffer.append(input.substring(0, index)).append(replacement);
 
 		if (index + pattern.length() < input.length()) {
 			String rest = input.substring(index + pattern.length(),
@@ -678,7 +675,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 		if ((new File("/data/data/jp.yhonda/files/maxout.html")).exists()) {
 			showHTML("file:///data/data/jp.yhonda/files/maxout.html", false);
 		} else {
-			Toast.makeText(this, "No graph to show.", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, getString(R.string.toast_no_graph), Toast.LENGTH_LONG).show();
 		}
 	}
 
@@ -736,7 +733,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 		if (event.getAction() == KeyEvent.ACTION_DOWN) {
 			switch (event.getKeyCode()) {
 			case KeyEvent.KEYCODE_BACK:
-				Toast.makeText(this, "Use Quit in the menu.", Toast.LENGTH_LONG)
+				Toast.makeText(this, getString(R.string.quit_hint), Toast.LENGTH_LONG)
 						.show();
 				return true;
 			}
@@ -755,7 +752,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 					.getDefaultSharedPreferences(this);
 			Editor editor = settings.edit();
 			editor.putFloat("maxima main scale", sc);
-			editor.commit();
+			editor.apply();
 			// setMCIAfontSize((int)(sc*12));
 		}
 		return false;
@@ -767,14 +764,13 @@ public class MaximaOnAndroidActivity extends Activity implements
 				.getDefaultSharedPreferences(this);
 		Editor editor = settings.edit();
 		editor.putInt("MCIAfontSize", newsize);
-		editor.commit();
+		editor.apply();
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.menu, menu);
+		getMenuInflater().inflate(R.menu.menu, menu);
 		return true;
 	}
 
@@ -851,7 +847,7 @@ public class MaximaOnAndroidActivity extends Activity implements
 					.getDefaultSharedPreferences(this);
 			Editor edit = pref.edit();
 			edit.putString("manURL", manURL);
-			edit.commit();
+			edit.apply();
 		}
 		return retval;
 	}

@@ -54,7 +54,7 @@ public final class UnzipAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 	protected void onPreExecute() {
 		// progres dialog
 		dialog = new ProgressDialog(activity);
-		dialog.setTitle("Install in progress.");
+		dialog.setTitle(R.string.install_in_progress);
 		dialog.setMessage(msg1);
 		dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 		dialog.setCancelable(false);
@@ -71,7 +71,7 @@ public final class UnzipAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 
 	@Override
 	protected void onPostExecute(Integer stage) {
-		// close the progres dialog
+		// close the progress dialog
 		if (stage == -1) {
 			activity.install(10); // indication of error
 			return;
@@ -80,7 +80,7 @@ public final class UnzipAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 		dialog.show();
 		try {
 			Thread.sleep(3000);
-		} catch (InterruptedException e) {
+		} catch (InterruptedException ignored) {
 		}
 		dialog.dismiss();
 		activity.install(stage + 1);

@@ -59,7 +59,7 @@ public final class MaximaVersion {
 		ed.putInt("major", major);
 		ed.putInt("minor", minor);
 		ed.putInt("patch", patch);
-		ed.commit();
+		ed.apply();
 	}
 
 	public long versionInteger() {
