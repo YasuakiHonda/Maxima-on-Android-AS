@@ -8,6 +8,7 @@ android {
         applicationId "jp.yhonda"
         minSdkVersion 9
         targetSdkVersion 22
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
 
     dependencies {
@@ -22,5 +23,31 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+}
+
+dependencies {
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile 'com.android.support.test:runner:0.5', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile 'com.android.support.test:rules:0.5', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    // Espresso-contrib for DatePicker, RecyclerView, Drawer actions, Accessibility checks, CountingIdlingResource
+//    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
+// Espresso-web for WebView support
+    androidTestCompile 'com.android.support.test.espresso:espresso-web:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+// Espresso-idling-resource for synchronization with background jobs
+    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+// Espresso-intents for validation and stubbing of Intents
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
     }
 }

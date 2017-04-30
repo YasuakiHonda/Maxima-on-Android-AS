@@ -23,6 +23,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -53,6 +56,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.webkit.JavascriptInterface;
+import android.content.ClipboardManager;
 
 public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		TextView.OnEditorActionListener, OnTouchListener {
@@ -119,6 +123,9 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 		webview = (WebView) findViewById(R.id.webView1);
 		webview.getSettings().setJavaScriptEnabled(true);
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			WebView.setWebContentsDebuggingEnabled(true);
+		}
 		webview.setWebViewClient(new WebViewClient() {
 			public void onPageFinished(WebView view, String url) {
 				Log.v("MoA", "onPageFinished");
@@ -370,6 +377,39 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		rbttask viewtask = new rbttask();
 		viewtask.settext(substitute(maximacmd, "<br>", ""));
 		editText.post(viewtask);
+	}
+
+	@JavascriptInterface
+	public void reuseOutput(String oNumStr) {
+		if (oNumStr.equals("nolabel")) {
+			return;
+		}
+		String olabel="$%"+oNumStr;
+		String cmdstr=":lisp ($printf nil \"$$$$$$ R0 ~a $$$$$$\" "+olabel+")";
+		try {
+			maximaProccess.maximaCmd(cmdstr + "\n");
+		} catch (IOException e) {
+			Log.d("MoA", "reuseOutput exception1");
+			e.printStackTrace();
+			exitMOA();
+		} catch (Exception e) {
+			Log.d("MoA", "reuseOutput exception2");
+			e.printStackTrace();
+			exitMOA();
+		}
+		String resString = maximaProccess.getProcessResult();
+		maximaProccess.clearStringBuilder();
+		Pattern pa= Pattern.compile(".*\\$\\$\\$\\$\\$\\$ R0 (.+) \\$\\$\\$\\$\\$\\$.*");
+		Matcher ma=pa.matcher(resString);
+		if (ma.find()) {
+			final String oText=ma.group(1).replace("\\'","'");
+			runOnUiThread(new Runnable() {@Override public void run() {editText.setText(oText);}});
+			if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
+				ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+				android.content.ClipData clip = android.content.ClipData.newPlainText("text", oText);
+				clipboardManager.setPrimaryClip(clip);
+			}
+		}
 	}
 
 	@JavascriptInterface

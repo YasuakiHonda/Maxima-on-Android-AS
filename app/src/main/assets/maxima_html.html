@@ -168,12 +168,33 @@ under test directory. The name of the file is sample-dynamic-2.html -->
 		/*
 		    Java-JS Interface function
 		 */
-		window.UpdateMath = function(TeX) {
-			console.log("UpdateMath " + TeX);
-			var text = " $$$$$$ " + escDoller(TeX) + " $$$$$$ ";
+
+		window.UpdateMath = function(pack) {
+			console.log("UpdateMath " + pack);
+			var RR=pack.match(/ *RO([1-2])/);
+			var text=" $$$$$$ ";
+			var oNumStr="";
+			if (RR[1]=="1") {
+              RR=pack.match(/ *RO1 \$%([a-zA-Z][0-9]+)(.*)/);
+              text = text + escDoller(RR[2]) + " $$$$$$ ";
+              oNumStr=RR[1].toLowerCase();
+			} else if (RR[1]=="2") {
+			  RR=pack.match(/ *RO2 (.*)/);
+			  text = text + escDoller(RR[1]) + " $$$$$$ ";
+			  oNumStr="nolabel";
+			} else {
+			  console.log("Fatal error in UpdateMath.");
+			  console.log(pack);
+			  return;
+			}
 			var mathlist = document.getElementById("MathList");
-			var tnode = document.createTextNode(text);
-			MathJax.Hub.queue.Push([ "appendNodeWithSize", window, tnode ]);
+			var divElem=document.createElement("div");
+			divElem.appendChild(document.createTextNode(text));
+			divElem.onclick=function() {
+			  console.log("reuseOutput"+oNumStr);
+			  window.MOA.reuseOutput(oNumStr);
+			}
+			MathJax.Hub.queue.Push([ "appendNodeWithSize", window, divElem ]);
 			MathJax.Hub.queue.Push([ "Typeset", MathJax.Hub, mathlist ]);
 			MathJax.Hub.queue.Push([ "scrollToEnd", window ]);
 		}
@@ -187,7 +208,7 @@ under test directory. The name of the file is sample-dynamic-2.html -->
   <!-- <div id="MathOutput" style="display:none">$$ {} $$</div> -->
   <div id="MathOutput" style="display: none">$$ {} $$</div>
   <div id="MathList" style="height: auto">
-    Maxima on Android 2.9 February 14th, 2017 (before JB MR1)<br> written by Yasuaki Honda, <br> powered by MathJax 2.1 for math rendering <br> powered by Gnuplot 4.6 for graph drawing <br>
+    Maxima on Android 3.0 alpha May 5th, 2017 (before JB MR1)<br> written by Yasuaki Honda, <br> powered by MathJax 2.1 for math rendering <br> powered by Gnuplot 4.6 for graph drawing <br>
     <br> Use menu for about MoA/quit/man/redraw graph<br> You can touch previous commands for reuse, like input history.<br> You can touch manual examples to execute them in Maxima.<br>
 
 

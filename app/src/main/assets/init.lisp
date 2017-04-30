@@ -128,7 +128,17 @@
 ($set_plot_option '((mlist) $gnuplot_out_file "/data/data/jp.yhonda/files/maxout.html"))
 (setq $draw_graph_terminal '$canvas)
   
+;;; displa support
+($load '$stringproc)
 (setq $display2d '$imaxima)
+(let ((old-displa (symbol-function 'maxima::displa)))
+  (declare (special maxima::$display2d))
+  (defun maxima::displa (form) 
+    (if (eql maxima::$display2d 'maxima::$imaxima)
+	(if (and (equal (car form) '(mlabel)) (not (null (second form))))
+	    (format t "$$$$$$ RO1 ~A ~A $$$$$$" (second form) (maxima::$tex1 (third form)))
+	   (format t "$$$$$$ RO2 ~A $$$$$$" (maxima::$tex1 form)))
+      (funcall old-displa form))))
 
 ($load '$draw)
 
