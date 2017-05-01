@@ -403,7 +403,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		Matcher ma=pa.matcher(resString);
 		if (ma.find()) {
 			final String oText=ma.group(1).replace("\\'","'");
-			runOnUiThread(new Runnable() {@Override public void run() {editText.setText(oText);}});
+			runOnUiThread(new Runnable() {@Override public void run() { editText.setText(oText); }});
 			if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
 				ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 				android.content.ClipData clip = android.content.ClipData.newPlainText("text", oText);

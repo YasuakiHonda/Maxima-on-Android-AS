@@ -67,6 +67,7 @@ under test directory. The name of the file is sample-dynamic-2.html -->
 								.appendChild(document
 										.createTextNode(textArray[i]));
 						tnode.onclick = makeOnclickRBT(escape(textArray[i]));
+						tnode.id=textArray[i];
 					} else {
 						tnode = document.createTextNode(textArray[i]);
 					}
@@ -189,6 +190,7 @@ under test directory. The name of the file is sample-dynamic-2.html -->
 			}
 			var mathlist = document.getElementById("MathList");
 			var divElem=document.createElement("div");
+			divElem.id="moa1";
 			divElem.appendChild(document.createTextNode(text));
 			divElem.onclick=function() {
 			  console.log("reuseOutput"+oNumStr);

@@ -5,6 +5,7 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.web.assertion.WebAssertion;
 import android.support.test.espresso.web.assertion.WebViewAssertions;
 import android.support.test.espresso.web.sugar.Web;
+import android.support.test.espresso.web.sugar.Web.WebInteraction;
 import android.support.test.espresso.web.webdriver.Locator;
 import android.support.test.espresso.web.matcher.DomMatchers;
 import android.support.test.rule.ActivityTestRule;
@@ -28,6 +29,7 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.replaceText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isCompletelyDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
@@ -36,6 +38,7 @@ import static android.support.test.espresso.web.assertion.WebViewAssertions.webM
 import static android.support.test.espresso.web.sugar.Web.onWebView;
 import static android.support.test.espresso.web.webdriver.DriverAtoms.findElement;
 import static android.support.test.espresso.web.webdriver.DriverAtoms.getText;
+import static android.support.test.espresso.web.webdriver.DriverAtoms.webClick;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.core.StringContains.containsString;
 
@@ -46,7 +49,7 @@ public class MaximaOnAndroidActivityTest {
     public ActivityTestRule<MaximaOnAndroidActivity> mActivityTestRule = new ActivityTestRule<>(MaximaOnAndroidActivity.class);
 
     @Test
-    public void MoAInstallandRun() {
+    public void testMoAInstallandRun() {
         intallSequence();
         waitForStartup();
         ViewInteraction multiAutoCompleteTextView = onView(
@@ -218,6 +221,43 @@ public class MaximaOnAndroidActivityTest {
         appCompatButton2.perform(click());
         waitFor(1000);
         onWebView().withElement(findElement(Locator.ID, "MathJax-Element-15"));
+    }
+
+    @Test
+    public void testReuse() {
+        /*
+        Reuse input
+        Compute something
+        Compute next thing
+        Click the first input
+        Ensure the first input is in the input area
+        */
+        ViewInteraction appCompatMultiAutoCompleteTextView = onView(
+                allOf(withId(R.id.editText1), isDisplayed()));
+        appCompatMultiAutoCompleteTextView.perform(replaceText("38*990/20145;"), closeSoftKeyboard());
+        ViewInteraction appCompatButton2 = onView(
+                allOf(withId(R.id.enterB), withText("Enter"), isDisplayed()));
+        appCompatButton2.perform(click());
+        waitFor(1000);
+        // remember the first output element which is clickable
+        WebInteraction calcResult=onWebView().withElement(findElement(Locator.ID, "moa1"));
+
+        appCompatMultiAutoCompleteTextView.perform(replaceText("sqrt(25*99*256);"), closeSoftKeyboard());
+        appCompatButton2.perform(click());
+        waitFor(1000);
+        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-2"));
+
+        onWebView().withElement(findElement(Locator.ID, "38*990/20145;")).perform(webClick());
+        appCompatMultiAutoCompleteTextView.check(matches(withText("38*990/20145;")));
+
+        /*
+        Reuse output
+        Click the first output
+        Ensure the first output is in the input area
+         */
+        calcResult.perform(webClick());
+        appCompatMultiAutoCompleteTextView.check(matches(withText("2508/1343")));
+
     }
 
     private static Matcher<View> childAtPosition(
