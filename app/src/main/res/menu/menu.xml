@@ -16,22 +16,17 @@
         android:id="@+id/quit"
         android:titleCondensed="Quit"
         android:title="@string/menu_quit"/>
-    
+
+    <item
+        android:id="@+id/preference"
+        android:titleCondensed="Preferences"
+        android:title="@string/menu_preference"/>
+
     <item android:id="@+id/session" android:title="@string/menu_session">
         <menu>
             <item android:id="@+id/save" android:title="@string/menu_session_save"/>
             <item android:id="@+id/restore" android:title="@string/menu_session_restore"/>
             <item android:id="@+id/playback" android:title="@string/menu_session_playback"/>
-        </menu>
-    </item>
-    <item android:id="@+id/settings" android:title="@string/menu_settings">
-        <menu>
-            <item android:id="@+id/jp" android:titleCondensed="Jp man" android:title="@string/menu_jp_man"/>
-            <item android:id="@+id/en" android:titleCondensed="En man" android:title="@string/menu_en_man"/>
-            <item android:id="@+id/de" android:titleCondensed="De man" android:title="@string/menu_de_man"/>
-            <item android:id="@+id/es" android:titleCondensed="ES man" android:title="@string/menu_es_man"/>
-            <item android:id="@+id/pt" android:titleCondensed="Pt man" android:title="@string/menu_pt_man"/>
-            <item android:id="@+id/ptbr" android:titleCondensed="Br Pt man" android:title="@string/menu_br_pt_man"/>
         </menu>
     </item>
     <item

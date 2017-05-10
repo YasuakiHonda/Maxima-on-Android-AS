@@ -1,5 +1,5 @@
 /*
-    Copyright 2012, 2013 Yasuaki Honda (yasuaki.honda@gmail.com)
+    Copyright 2012, 2013, 2014, 2015, 2016, 2017 Yasuaki Honda (yasuaki.honda@gmail.com)
     This file is part of MaximaOnAndroid.
 
     MaximaOnAndroid is free software: you can redistribute it and/or modify
@@ -21,6 +21,7 @@ package jp.yhonda;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Matcher;
@@ -97,25 +98,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			maximaURL = "file:///android_asset/maxima_html.html";
 		}
 
-
+		PreferenceManager.setDefaultValues(this, R.xml.preference, false);
 		SharedPreferences pref = PreferenceManager
 				.getDefaultSharedPreferences(this);
-		if (new File("/data/local/tmp/maxima-doc").exists()) {
-			manjp = "file:///data/local/tmp/maxima-doc/ja/maxima.html";
-			manen = "file:///data/local/tmp/maxima-doc/en/maxima.html";
-			mande = "file:///data/local/tmp/maxima-doc/en/de/maxima.html";
-			manes = "file:///data/local/tmp/maxima-doc/en/es/maxima.html";
-			manpt = "file:///data/local/tmp/maxima-doc/en/pt/maxima.html";
-			manptbr = "file:///data/local/tmp/maxima-doc/en/pt_BR/maxima.html";
-			manURL = pref.getString("manURL", manen);
-			if (manURL.startsWith("file:///android_asset")) {
-				Editor edit = pref.edit();
-				edit.putString("manURL", manen);
-				edit.apply();
-			}
-		} else {
-			manURL = pref.getString("manURL", manen);
-		}
+		manURL = pref.getString("manURL", manen);
 
 		setContentView(R.layout.main);
 		internalDir = this.getFilesDir();
@@ -161,11 +147,16 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		webview.addJavascriptInterface(this, "MOA");
 
 		editText = (MultiAutoCompleteTextView) findViewById(R.id.editText1);
-		editText.setOnEditorActionListener(this);
-		int newsize = settings.getInt("MCIAfontSize", -1);
-		if (newsize != -1) {
-			setMCIAfontSize(newsize);
+		editText.setTextSize((float) Integer.parseInt(settings.getString("fontSize1","20")));
+		Boolean bflag=settings.getBoolean("auto_completion_check_box_pref", true);
+		if (bflag) {
+			editText.setThreshold(2);
+		} else {
+			editText.setThreshold(100);
 		}
+
+		editText.setOnEditorActionListener(this);
+
 		ArrayAdapter<String> adapter =
 				new ArrayAdapter<String>(this,
 						android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.MaximaCompletionList));
@@ -263,6 +254,48 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 									}
 								}).show();
 			}
+		}
+	}
+
+	@Override
+	protected void onResume() {
+		Log.d("MoA","onResume");
+		super.onResume();
+		SharedPreferences sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
+		AppGlobals globals=AppGlobals.getSingleton();
+		String flag;
+
+		flag=globals.get("auto_completion_check_box_pref");
+		if (flag != null && flag.equals("true")) {
+			Boolean bflag=sharedPrefs.getBoolean("auto_completion_check_box_pref", true);
+            if (bflag) {
+                editText.setThreshold(2);
+            } else {
+                editText.setThreshold(100);
+            }
+        }
+
+		flag=globals.get("manURL");
+		if (flag!=null && flag.equals("true")) {
+			manLangChanged=true;
+			manURL=sharedPrefs.getString("manURL",manen);
+		} else {
+			manLangChanged=false;
+		}
+
+		flag=globals.get("fontSize1");
+		if (flag!=null && flag.equals("true")) {
+			editText.setTextSize((float) Integer.parseInt(sharedPrefs.getString("fontSize1","20")));
+		}
+
+		flag=globals.get("fontSize2");
+		if (flag!=null && flag.equals("true")) {
+			webview.loadUrl("javascript:window.ChangeExpSize(" + sharedPrefs.getString("fontSize2","20") + ")");
+		}
+
+		List<String> list = Arrays.asList("auto_completion_check_box_pref", "manURL", "fontSize1", "fontSize2");
+		for (String key : list) {
+			globals.set(key,"false");
 		}
 	}
 
@@ -432,33 +465,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		handler.postDelayed(task, 1000);
 	}
 
-	@JavascriptInterface
-	public void fileLoaded() {
-		Handler handler = new Handler();
-		Runnable task = new Runnable() {
-
-			@Override
-			public void run() {
-				Runnable viewtask = new Runnable() {
-					@Override
-					public void run() {
-						if (Build.VERSION.SDK_INT > 16) { // > JELLY_BEAN
-							runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:initSVGRenderer()");}});
-							// webview.loadUrl("javascript:initSVGRenderer()");
-						} else {
-							runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:initHTMLRenderer()");}});
-							// webview.loadUrl("javascript:initHTMLRenderer()");
-						}
-
-						Log.v("MoA", "fileLoaded");
-					}
-				};
-				scview.post(viewtask);
-			}
-		};
-		handler.postDelayed(task, 1000);
-	}
-
 	public boolean onEditorAction(TextView testview, int id, KeyEvent keyEvent) {
 		try {
 			Log.v("MoA", "onEditorAction");
@@ -472,8 +478,8 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		if (!inited) {
 			SharedPreferences settings = PreferenceManager
 					.getDefaultSharedPreferences(thisActivity);
-			final String newsize = settings.getString("expSize", "");
-			if (newsize.equals("")) {
+			final String newsize = settings.getString("fontSize2", "");
+			if (!newsize.equals("")) {
 				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");}});
 				// webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");
 			}
@@ -512,24 +518,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 							+ "/additions/ja/maxima.html", true);
 					return true;
 				}
-				if (cmdstr.startsWith("textSize:")) {
-					int len = "textSize:".length();
-					String sizeString = cmdstr.substring(len);
-					int textSize = Integer.parseInt(sizeString);
-					setMCIAfontSize(textSize);
-					return true;
-				}
-				if (cmdstr.startsWith("expSize:")) {
-					int len = "expSize:".length();
-					String sizeString = cmdstr.substring(len);
-					webview.loadUrl("javascript:window.ChangeExpSize("+sizeString+")");
-					SharedPreferences settings = PreferenceManager
-							.getDefaultSharedPreferences(this);
-					Editor editor = settings.edit();
-					editor.putString("expSize", sizeString);
-					editor.apply();
-					return true;
-				}
+
 				removeTmpFiles();
 				cmdstr = maxima_syntax_check(cmdstr);
 				maximaProccess.maximaCmd(cmdstr + "\n");
@@ -710,6 +699,12 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		this.startActivity(intent);
 	}
 
+    private void showPreference() {
+        Intent intent = new Intent(this, MoAPreferenceActivity.class);
+        intent.setAction(Intent.ACTION_VIEW);
+        this.startActivity(intent);
+    }
+
 	private void showManual() {
 		Intent intent = new Intent(this, ManualActivity.class);
 		intent.setAction(Intent.ACTION_VIEW);
@@ -806,15 +801,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		return false;
 	}
 
-	private void setMCIAfontSize(int newsize) {
-		editText.setTextSize((float) newsize);
-		SharedPreferences settings = PreferenceManager
-				.getDefaultSharedPreferences(this);
-		Editor editor = settings.edit();
-		editor.putInt("MCIAfontSize", newsize);
-		editor.apply();
-	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
@@ -828,6 +814,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		switch (item.getItemId()) {
 		case R.id.about:
 			showHTML("file:///android_asset/About_MoA/index.html", true);
+			retval = true;
+			break;
+		case R.id.preference:
+			showPreference();
 			retval = true;
 			break;
 		case R.id.graph:
@@ -845,36 +835,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			showManual();
 			retval = true;
 			break;
-		case R.id.jp:
-			manURL = manjp;
-			manLangChanged = true;
-			retval = true;
-			break;
-		case R.id.en:
-			manURL = manen;
-			manLangChanged = true;
-			retval = true;
-			break;
-		case R.id.de:
-			manURL = mande;
-			manLangChanged = true;
-			retval = true;
-			break;
-		case R.id.es:
-			manURL = manes;
-			manLangChanged = true;
-			retval = true;
-			break;
-		case R.id.pt:
-			manURL = manpt;
-			manLangChanged = true;
-			retval = true;
-			break;
-		case R.id.ptbr:
-			manURL = manptbr;
-			manLangChanged = true;
-			retval = true;
-			break;
 		case R.id.save:
 			sessionMenu("ssave();");
 			retval = true;
@@ -889,13 +849,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			break;
 		default:
 			return super.onOptionsItemSelected(item);
-		}
-		if (manLangChanged) {
-			SharedPreferences pref = PreferenceManager
-					.getDefaultSharedPreferences(this);
-			Editor edit = pref.edit();
-			edit.putString("manURL", manURL);
-			edit.apply();
 		}
 		return retval;
 	}

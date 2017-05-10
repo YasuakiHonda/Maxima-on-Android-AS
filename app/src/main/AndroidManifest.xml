@@ -38,6 +38,13 @@
             android:theme="@style/MOATheme" >
         </activity>
         <activity
+            android:name=".MoAPreferenceActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:parentActivityName=".MaximaOnAndroidActivity"
+            android:theme="@style/MOATheme" >
+        </activity>
+        <activity
             android:name=".MaximaOnAndroidActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"

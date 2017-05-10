@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="auto_completion_check_box_pref"
+        android:summary="Yes"
+        android:title="Use auto completion"
+        android:visibility="visible" />
+    <ListPreference
+        android:defaultValue="file:///android_asset/maxima-doc/en/maxima.html"
+        android:entries="@array/manualLanguages"
+        android:entryValues="@array/manualLanguageValues"
+        android:key="manURL"
+        android:summary="%s"
+        android:title="Language for Maxima Manual" />
+    <ListPreference
+        android:defaultValue="20"
+        android:entries="@array/fontSize"
+        android:entryValues="@array/fontSize"
+        android:key="fontSize1"
+        android:summary="%s"
+        android:title="Command input text size" />
+    <ListPreference
+        android:defaultValue="20"
+        android:entries="@array/fontSize"
+        android:entryValues="@array/fontSize"
+        android:key="fontSize2"
+        android:summary="%s"
+        android:title="Result formula font size" />
+</PreferenceScreen>
