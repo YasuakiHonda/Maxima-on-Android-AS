@@ -44,6 +44,7 @@
     <string name="man_back_to_maxima">Back to Maxima</string>
     <string name="menu_about">About Maxima on Android</string>
     <string name="menu_graph">Graph</string>
+    <string name="menu_load_script">Load script file</string>
     <string name="menu_manual">Manual</string>
     <string name="menu_quit">Quit</string>
     <string name="menu_session">Session</string>
