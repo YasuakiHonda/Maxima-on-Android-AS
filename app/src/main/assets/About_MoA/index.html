@@ -26,7 +26,7 @@
 <div data-role="page" id="page1">
     <div data-role="content">
         <h2>
-            Maxima on Android 2.9</h2>
+            Maxima on Android 3.0</h2>
         <h5>
             Copyright 2012, 2013, 2014, 2015, 2016, 2017 Yasuaki Honda
         </h5>
@@ -71,10 +71,11 @@ Then you can enjoy Maxima / Macsyma on your mobile phone or tablet.
                     What's new in this release
                 </h3>
                 <ul data-role="listview" data-inset="true">
-                <li>Maxima 5.39.0 is supported.</li>
-                    <li>Android 7.0 and 7.1 is now supported.</li>
-                <li>Japanese manual for 5.39.0 is included.</li>
-                </ul>                
+                    <li>Output reuse is implemented. On touching computation results in latex, corresponding Maxima command appears in the command input area. The same command is copied into the Android system clipboard.</li>
+                    <li>Auto completion of maxima commands in command input area is implemented.</li>
+                    <li>Preference screen is added and can be called from menu. Enabling/disabling of auto completion, Manual language selection, and the font size setting for command input area and latex output can be set in the Preference screen.</li>
+                    <li>Mathjax menu is disabled for misuse and for the support of output reuse.</li>
+                </ul>
             </div>
             <div data-role="collapsible">
                 <h3>
@@ -157,6 +158,7 @@ graph drawing view.</p>
 <p>Scaling in Maxima main view and manual view are now stored in the
 user preference so that it is kept preserved.
 </p>
+    <p>You can change the computation results font size in latex. Please go to Preference screen.</p>
 </div> <!-- Enlarge / shrink by fingers -->
 
 <div data-role="collapsible"> <!-- Maxima command input area -->
@@ -174,17 +176,22 @@ This is a standard text input field and many edit aids (such as
 software keyboard, cut and paste) are available.
 </p>
 <p>
-Here you can enter any Maxima commands. Then Maxima performs the
+Here you can enter any Maxima commands.
+</p>
+<p>
+If auto completion is enabled in the Preference screen, the auto
+completion for Maxima commands and variables are displayed. You
+can choose one from the list to enter the intended command quickly.
+</p>
+<p>
+Then Maxima performs the
 computation according to the command. The result will be rendered
 beautifully using MathJax 2.0, then displayed along with the command
 in the white space above the orange surrounded box.
 </p>
 <p>
-The font size used in the Maxima command input area can be changed. You can enter:<br>
-<strong>textSize:40</strong><br>
-in the Maxima command input area. Pressing enter key, the size of the font will become 40 pixels.
-You can specify any number instead of 40, though 10 to 50 is the range for recommendation. 
-In the future release, some GUI will replace the textSize command.
+The font size used in the Maxima command input area can be changed.
+Please go to Preference screen from menu.
 </p><br clear="left">
 </div> <!-- Maxima command input area -->
 
@@ -198,7 +205,18 @@ area. This is a very handy command history mechanism.
 </p>
 </div> <!-- Re-using the previous input by touch -->
 
+<div data-role="collapsible"> <!-- Re-using the previous input by touch -->
+    <H4>Re-using the output computation results by touch</H4>
+
+    <p>
+        All the command output/computation results displayed in latex are
+        touchable. When touched, its corresponding Maxima command appears in the Maxima command input
+        area. This is a very handy command history mechanism.
+    </p>
+</div> <!-- Re-using the previous input by touch -->
+
 <div data-role="collapsible"> <!-- Tap for Execution of Examples -->
+
 <H4>Tap for Execution of Examples</H4>
 
 <p>
@@ -478,25 +496,9 @@ maxima-init.mac from your PC/Mac.
 
 <div data-role="collapsible"> <!-- Maxima manual for Android OS 3.x, and 4.0.x -->
 <H4>Maxima manual for Android OS 3.x, and 4.0.x</H4>
-
 <p>
-Due to a bug in WebView of Android OS 3.x and 4.0.x, Maxima manual in
-MOA causes link error when navigating. From MOA 1.8, I have added a
-workaround for these OS versions.  You need to separately install
-Maxima manual using ADB (Android Debug Bridge, a tool provided in
-Android SDK).
-</p>
-<p>
-You need to download a manual package from here. Then you extract the
-zip archive. You have a folder "maxima-doc" as the result. Then, in
-the terminal program of your OS, % adb push maxima-doc
-/data/local/tmp/maxima-doc This will push the document files into
-/data/local/tmp/maxima-doc folder in your Android device.
-</p>
-<p>
-From MOA 1.8, if /data/local/tmp/maxima-doc folder exists, files in
-the folder will be used for manual viewing, and this will NOT cause
-any link error.
+The workaround of Maxima manual display failure in Android OS 3.x and 4.0.x is
+no more supported from MoA3.0.
 </p>
 </div> <!-- Maxima manual for Android OS 3.x, and 4.0.x -->
 
@@ -509,6 +511,23 @@ menu.
 </p>
 
 </div> <!-- Exiting -->
+
+<div data-role="collapsible"> <!-- Preference screen -->
+    <H4>Preference screen</H4>
+
+    <p>
+        From MOA 3.0, I have added the Preference screen to configure
+        some behavior of Maxima on Android software.<br><br>
+
+        You can enable/disable Maxima command auto completion in the Maxima
+        command input area.<br><br>
+
+        You can change the language of Maxima manual.<br><br>
+
+        You can change the font size of the command input area as well as the command output / computation results in latex format.
+    </p>
+</div> <!-- Preference screen. -->
+
 
 <div data-role="collapsible"> <!-- Misc. -->
 <H4>Misc.</H4>
