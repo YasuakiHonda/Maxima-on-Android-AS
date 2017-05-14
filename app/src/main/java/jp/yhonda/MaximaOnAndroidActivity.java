@@ -18,10 +18,42 @@
 
 package jp.yhonda;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ClipboardManager;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.webkit.ConsoleMessage;
+import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.MultiAutoCompleteTextView;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -31,40 +63,6 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.view.LayoutInflaterCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.*;
-import android.view.View.OnTouchListener;
-import android.webkit.ConsoleMessage;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.AutoCompleteTextView;
-import android.widget.MultiAutoCompleteTextView;
-import android.widget.MultiAutoCompleteTextView.Tokenizer;
-import android.widget.ArrayAdapter;
-import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.webkit.JavascriptInterface;
-import android.content.ClipboardManager;
 
 public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		TextView.OnEditorActionListener, OnTouchListener {
@@ -223,12 +221,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		Log.v("MoA", "sender = " + sender);
         if (sender == null && requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             //User has selected a script file to load.
-            Uri uri = null;
-            if (data != null) {
-                uri = data.getData();
-                //Copy file contents to input area:
-                copyScriptFileToInputArea(uri);
-            }
+            Uri uri;
+			uri = data.getData();
+            //Copy file contents to input area:
+			copyScriptFileToInputArea(uri);
         } else if (sender.equals("manualActivity")) {
 			if (resultCode == RESULT_OK) {
 				String mcmd = data.getStringExtra("maxima command");
@@ -913,12 +909,12 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 	private void copyScriptFileToInputArea(Uri fileUri) {
         //Read script file contents:
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         try {
             InputStream inputStream = getContentResolver().openInputStream(fileUri);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             stringBuilder = new StringBuilder();
-            String scriptLine = null;
+            String scriptLine;
             while((scriptLine = bufferedReader.readLine()) != null) {
                 stringBuilder.append(scriptLine).append("\n");
             }
