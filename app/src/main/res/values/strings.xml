@@ -62,5 +62,7 @@
     <string name="menu_pt_man">Portuguese manual</string>
     <string name="toast_no_graph">No graph to show.</string>
     <string name="enter">Enter</string>
+    <string name="alert_file_path">Enter file path</string>
+    <string name="ok">Ok</string>
 
 </resources>

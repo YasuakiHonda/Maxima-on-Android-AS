@@ -43,6 +43,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -882,10 +883,32 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private void selectScriptFile() {
-		Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-		intent.addCategory(intent.CATEGORY_OPENABLE);
-		intent.setType("*/*");
-		startActivityForResult(intent, READ_REQUEST_CODE);
+		if(Build.VERSION.SDK_INT < 19) {
+			//Versions earlier than KitKat do not support the document framework.
+			//Show file path input box instead:
+			android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MaximaOnAndroidActivity.this);
+			LayoutInflater inflater = this.getLayoutInflater();
+			final View layout = inflater.inflate(R.layout.scriptpathalert, null);
+			builder.setView(layout);
+			final AutoCompleteTextView textView = (AutoCompleteTextView) layout.findViewById(R.id.scriptPathInput);
+			builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.dismiss();
+					if(!textView.getText().toString().matches("")) {
+						copyScriptFileToInputArea(Uri.fromFile(new File(textView.getText().toString())));
+					}
+				}
+			});
+			android.support.v7.app.AlertDialog dialog = builder.create();
+			dialog.show();
+
+		} else {
+			Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+			intent.addCategory(intent.CATEGORY_OPENABLE);
+			intent.setType("*/*");
+			startActivityForResult(intent, READ_REQUEST_CODE);
+		}
 	}
 
 	private void copyScriptFileToInputArea(Uri fileUri) {
