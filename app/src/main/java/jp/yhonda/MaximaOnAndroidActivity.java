@@ -21,6 +21,7 @@ package jp.yhonda;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ClipboardManager;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -41,6 +42,7 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
+import android.webkit.MimeTypeMap;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -53,10 +55,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -92,6 +97,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	MaximaVersion mvers = new MaximaVersion(5, 39, 0);
 
 	private static final int READ_REQUEST_CODE = 42;
+    File temporaryScriptFile = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -664,6 +670,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			Toast.makeText(this, "All examples are executed.",
 					Toast.LENGTH_LONG).show();
 			allExampleFinished = false;
+            //Delete temporary script file:
+            if (temporaryScriptFile != null) {
+                temporaryScriptFile.delete();
+            }
 		}
 	}
 
@@ -880,7 +890,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 	private void selectScriptFile() {
 		if(Build.VERSION.SDK_INT < 19) {
-			//Versions earlier than KitKat do not support the document framework.
+			//Versions earlier than KitKat do not support the Storage Access Framework.
 			//Show file path input box instead:
 			android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MaximaOnAndroidActivity.this);
 			LayoutInflater inflater = this.getLayoutInflater();
@@ -908,20 +918,39 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private void copyScriptFileToInputArea(Uri fileUri) {
-        //Read script file contents:
-        StringBuilder stringBuilder;
+        //Copy script file contents into a temporary file:
+        File temporaryDirectory = getApplicationContext().getCacheDir();
+        File temporaryFile = null;
         try {
             InputStream inputStream = getContentResolver().openInputStream(fileUri);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            stringBuilder = new StringBuilder();
             String scriptLine;
+            temporaryFile = File.createTempFile("userscript", ".mac", temporaryDirectory);
+            OutputStream outputStream = getContentResolver().openOutputStream(Uri.fromFile(temporaryFile));
+            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
+            long writtenBytes = 0;
             while((scriptLine = bufferedReader.readLine()) != null) {
-                stringBuilder.append(scriptLine).append("\n");
+                writtenBytes += (scriptLine.length() + 1);
+                if (writtenBytes > 1E7) { //Limit the size of scripts to 10MB.
+                    throw new IOException();
+                }
+                bufferedWriter.write(scriptLine);
+                bufferedWriter.newLine();
+
             }
+            bufferedWriter.close();
         } catch (Exception e) {
             e.printStackTrace();
+            if (temporaryFile != null) {
+                temporaryFile.delete();
+            }
+            Toast.makeText(getApplicationContext(), R.string.error_loading_script_file, Toast.LENGTH_LONG).show();
             return;
         }
+        this.temporaryScriptFile = temporaryFile;   //Store temp file for later deletion
+
+        //Build maxima load command:
+        String command = "batch(\"" + temporaryFile.getAbsolutePath() + "\");";
 
         //Save state of mcmdArray:
         String[] mcmdArraySave = this.mcmdArray;
@@ -929,7 +958,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
         //Put file contents into input area:
         this.mcmdArray = new String[1];
-        this.mcmdArray[0] = stringBuilder.toString();
+        this.mcmdArray[0] = command;
         copyExampleInputToInputArea();
 
         //Restore mcmdArray to its former state:
