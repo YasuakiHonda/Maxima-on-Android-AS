@@ -670,10 +670,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			Toast.makeText(this, "All examples are executed.",
 					Toast.LENGTH_LONG).show();
 			allExampleFinished = false;
-            //Delete temporary script file:
-            if (temporaryScriptFile != null) {
-                temporaryScriptFile.delete();
-            }
+		}
+		//Delete temporary script file:
+		if (temporaryScriptFile != null) {
+			temporaryScriptFile.delete();
 		}
 	}
 
