@@ -949,20 +949,8 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
         }
         this.temporaryScriptFile = temporaryFile;   //Store temp file for later deletion
 
-        //Build maxima load command:
+        //Build maxima load command and write it to the editText:
         String command = "batch(\"" + temporaryFile.getAbsolutePath() + "\");";
-
-        //Save state of mcmdArray:
-        String[] mcmdArraySave = this.mcmdArray;
-        int mcmdArrayIndexSave = this.mcmdArrayIndex;
-
-        //Put file contents into input area:
-        this.mcmdArray = new String[1];
-        this.mcmdArray[0] = command;
-        copyExampleInputToInputArea();
-
-        //Restore mcmdArray to its former state:
-        this.mcmdArray = mcmdArraySave;
-        this.mcmdArrayIndex = mcmdArrayIndexSave;
+        this.editText.setText(command);
     }
 }
