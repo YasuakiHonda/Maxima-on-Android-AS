@@ -65,5 +65,6 @@
     <string name="alert_file_path">Enter file path</string>
     <string name="ok">Ok</string>
     <string name="error_loading_script_file">Could not load script file!</string>
+    <string name="script_file_too_large">File too large! Size must not exceed 10MB.</string>
 
 </resources>

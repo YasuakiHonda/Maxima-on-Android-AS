@@ -30,6 +30,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.ParcelFileDescriptor;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -57,11 +58,17 @@ import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.nio.channels.Channels;
+import java.nio.channels.FileChannel;
+import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -98,6 +105,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 	private static final int READ_REQUEST_CODE = 42;
     File temporaryScriptFile = null;
+    final double scriptFileMaxSize = 1E7;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -922,23 +930,19 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
         File temporaryDirectory = getApplicationContext().getCacheDir();
         File temporaryFile = null;
         try {
-            InputStream inputStream = getContentResolver().openInputStream(fileUri);
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            String scriptLine;
-            temporaryFile = File.createTempFile("userscript", ".mac", temporaryDirectory);
-            OutputStream outputStream = getContentResolver().openOutputStream(Uri.fromFile(temporaryFile));
-            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
-            long writtenBytes = 0;
-            while((scriptLine = bufferedReader.readLine()) != null) {
-                writtenBytes += (scriptLine.length() + 1);
-                if (writtenBytes > 1E7) { //Limit the size of scripts to 10MB.
-                    throw new IOException();
-                }
-                bufferedWriter.write(scriptLine);
-                bufferedWriter.newLine();
+            ParcelFileDescriptor parcelFileDescriptor = getContentResolver().openFileDescriptor(fileUri, "r");
+            FileInputStream fileInputStream = new FileInputStream(parcelFileDescriptor.getFileDescriptor());
+            FileChannel sourceChannel = fileInputStream.getChannel();
 
+            //Abort if file is too large:
+            if (sourceChannel.size() > scriptFileMaxSize) {
+                Toast.makeText(getApplicationContext(), R.string.script_file_too_large, Toast.LENGTH_LONG).show();
+                return;
             }
-            bufferedWriter.close();
+
+            temporaryFile = File.createTempFile("userscript", ".mac", temporaryDirectory);
+            FileChannel destinationChannel = new FileOutputStream(temporaryFile).getChannel();
+            destinationChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
         } catch (Exception e) {
             e.printStackTrace();
             if (temporaryFile != null) {
