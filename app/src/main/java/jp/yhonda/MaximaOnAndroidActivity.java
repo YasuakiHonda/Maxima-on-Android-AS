@@ -18,46 +18,63 @@
 
 package jp.yhonda;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ClipboardManager;
+import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.ParcelFileDescriptor;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.webkit.ConsoleMessage;
+import android.webkit.JavascriptInterface;
+import android.webkit.MimeTypeMap;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.MultiAutoCompleteTextView;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.nio.channels.Channels;
+import java.nio.channels.FileChannel;
+import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.*;
-import android.view.View.OnTouchListener;
-import android.webkit.ConsoleMessage;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.AutoCompleteTextView;
-import android.widget.MultiAutoCompleteTextView;
-import android.widget.MultiAutoCompleteTextView.Tokenizer;
-import android.widget.ArrayAdapter;
-import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.webkit.JavascriptInterface;
-import android.content.ClipboardManager;
 
 public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		TextView.OnEditorActionListener, OnTouchListener {
@@ -85,6 +102,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	File internalDir;
 	File externalDir;
 	MaximaVersion mvers = new MaximaVersion(5, 39, 1);
+
+	private static final int READ_REQUEST_CODE = 42;
+    File temporaryScriptFile = null;
+    final double scriptFileMaxSize = 1E7;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -212,7 +233,13 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			sender = "anon";
 		}
 		Log.v("MoA", "sender = " + sender);
-		if (sender.equals("manualActivity")) {
+        if (sender == null && requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            //User has selected a script file to load.
+            Uri uri;
+			uri = data.getData();
+            //Copy file contents to input area:
+			copyScriptFileToInputArea(uri);
+        } else if (sender.equals("manualActivity")) {
 			if (resultCode == RESULT_OK) {
 				String mcmd = data.getStringExtra("maxima command");
 				if (mcmd != null) {
@@ -229,32 +256,32 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				}
 			}
 		} else if (sender.equals("MOAInstallerActivity")) {
-			if (resultCode == RESULT_OK) {
+            if (resultCode == RESULT_OK) {
 				/* everything is installed properly. */
-				mvers.saveVersToSharedPrefs(this);
-				// startMaxima();
+                mvers.saveVersToSharedPrefs(this);
+                // startMaxima();
 
-				new Thread(new Runnable() {
-					@Override
-					public void run() {
-						startMaxima();
-					}
-				}).start();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        startMaxima();
+                    }
+                }).start();
 
-			} else {
-				new AlertDialog.Builder(this)
-						.setTitle(R.string.installer_title)
-						.setMessage(R.string.install_failure)
-						.setPositiveButton(R.string.OK,
-								new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialog,
-											int which) {
-										finish();
-									}
-								}).show();
-			}
-		}
+            } else {
+                new AlertDialog.Builder(this)
+                        .setTitle(R.string.installer_title)
+                        .setMessage(R.string.install_failure)
+                        .setPositiveButton(R.string.OK,
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog,
+                                                        int which) {
+                                        finish();
+                                    }
+                                }).show();
+            }
+        }
 	}
 
 	@Override
@@ -652,6 +679,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 					Toast.LENGTH_LONG).show();
 			allExampleFinished = false;
 		}
+		//Delete temporary script file:
+		if (temporaryScriptFile != null) {
+			temporaryScriptFile.delete();
+		}
 	}
 
 	private String substCRinMBOX(String str) {
@@ -847,6 +878,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			sessionMenu("playback();");
 			retval = true;
 			break;
+		case R.id.loadscript:
+            selectScriptFile();
+			break;
+
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -860,4 +895,66 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		editText.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
 				KeyEvent.KEYCODE_ENTER));
 	}
+
+	private void selectScriptFile() {
+		if(Build.VERSION.SDK_INT < 19) {
+			//Versions earlier than KitKat do not support the Storage Access Framework.
+			//Show file path input box instead:
+			android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MaximaOnAndroidActivity.this);
+			LayoutInflater inflater = this.getLayoutInflater();
+			final View layout = inflater.inflate(R.layout.scriptpathalert, null);
+			builder.setView(layout);
+			final AutoCompleteTextView textView = (AutoCompleteTextView) layout.findViewById(R.id.scriptPathInput);
+			builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.dismiss();
+					if(!textView.getText().toString().matches("")) {
+						copyScriptFileToInputArea(Uri.fromFile(new File(textView.getText().toString())));
+					}
+				}
+			});
+			android.support.v7.app.AlertDialog dialog = builder.create();
+			dialog.show();
+
+		} else {
+			Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+			intent.addCategory(intent.CATEGORY_OPENABLE);
+			intent.setType("*/*");
+			startActivityForResult(intent, READ_REQUEST_CODE);
+		}
+	}
+
+	private void copyScriptFileToInputArea(Uri fileUri) {
+        //Copy script file contents into a temporary file:
+        File temporaryDirectory = getApplicationContext().getCacheDir();
+        File temporaryFile = null;
+        try {
+            ParcelFileDescriptor parcelFileDescriptor = getContentResolver().openFileDescriptor(fileUri, "r");
+            FileInputStream fileInputStream = new FileInputStream(parcelFileDescriptor.getFileDescriptor());
+            FileChannel sourceChannel = fileInputStream.getChannel();
+
+            //Abort if file is too large:
+            if (sourceChannel.size() > scriptFileMaxSize) {
+                Toast.makeText(getApplicationContext(), R.string.script_file_too_large, Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            temporaryFile = File.createTempFile("userscript", ".mac", temporaryDirectory);
+            FileChannel destinationChannel = new FileOutputStream(temporaryFile).getChannel();
+            destinationChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (temporaryFile != null) {
+                temporaryFile.delete();
+            }
+            Toast.makeText(getApplicationContext(), R.string.error_loading_script_file, Toast.LENGTH_LONG).show();
+            return;
+        }
+        this.temporaryScriptFile = temporaryFile;   //Store temp file for later deletion
+
+        //Build maxima load command and write it to the editText:
+        String command = "batch(\"" + temporaryFile.getAbsolutePath() + "\");";
+        this.editText.setText(command);
+    }
 }

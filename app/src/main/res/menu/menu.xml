@@ -32,7 +32,11 @@
     <item
         android:id="@+id/nextexample"
         android:title="@string/menu_next_sample"/>
-    
+
+    <item
+        android:id="@+id/loadscript"
+        android:titleCondensed="Load script file"
+        android:title="@string/menu_load_script"/>
     
 
 </menu>

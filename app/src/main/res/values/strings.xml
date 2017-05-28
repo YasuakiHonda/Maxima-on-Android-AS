@@ -44,6 +44,7 @@
     <string name="man_back_to_maxima">Back to Maxima</string>
     <string name="menu_about">About Maxima on Android</string>
     <string name="menu_graph">Graph</string>
+    <string name="menu_load_script">Load script file</string>
     <string name="menu_manual">Manual</string>
     <string name="menu_quit">Quit</string>
     <string name="menu_session">Session</string>
@@ -61,5 +62,9 @@
     <string name="menu_pt_man">Portuguese manual</string>
     <string name="toast_no_graph">No graph to show.</string>
     <string name="enter">Enter</string>
+    <string name="alert_file_path">Enter file path</string>
+    <string name="ok">Ok</string>
+    <string name="error_loading_script_file">Could not load script file!</string>
+    <string name="script_file_too_large">File too large! Size must not exceed 10MB.</string>
 
 </resources>
