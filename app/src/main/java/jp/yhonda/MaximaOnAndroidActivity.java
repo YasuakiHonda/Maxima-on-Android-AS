@@ -669,6 +669,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				/* tex commands, as we are inside of $$$$$$...$$$$$$ */
 				String texStr = substCRinMBOX(resArray[i]);
 				texStr = substitute(texStr, "\n", " \\\\\\\\ ");
+				texStr = substituteMBOXVERB(texStr);
 				final String urlstr = "javascript:window.UpdateMath('" + texStr + "')";
 				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl(urlstr);}});
 				// webview.loadUrl(urlstr);
@@ -700,6 +701,21 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		}
 		resValue = resValue + tmpValue;
 		return (resValue);
+	}
+
+	static private String substituteMBOXVERB(String texStr) {
+		Pattern pat=Pattern.compile("\\\\\\\\mbox\\{\\\\\\\\verb\\|(.)\\|\\}");
+		Matcher m=pat.matcher(texStr);
+		StringBuffer sb= new StringBuffer();
+		if (m.find()) {
+			m.appendReplacement(sb,"\\\\\\\\text{$1");
+			while (m.find()) {
+				m.appendReplacement(sb, "$1");
+			}
+			m.appendTail(sb);
+			return sb.toString()+"}";
+		}
+		return(texStr);
 	}
 
 	static private String substitute(String input, String pattern,
