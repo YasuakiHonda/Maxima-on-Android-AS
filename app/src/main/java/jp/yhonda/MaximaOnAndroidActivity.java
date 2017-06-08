@@ -934,7 +934,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			dialog.show();
 
 		} else {
-			Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+			Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
 			intent.addCategory(intent.CATEGORY_OPENABLE);
 			intent.setType("*/*");
 			startActivityForResult(intent, READ_REQUEST_CODE);
