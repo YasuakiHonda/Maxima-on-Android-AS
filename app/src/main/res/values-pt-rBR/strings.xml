@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Olá Mundo, MaximaOnAndroidActivity!</string>
+    <string name="app_name">MaximaOnAndroid</string>
+    <string name="internal_storage_insufficient">No armazenamento interno. Por favor pressione o botão Cancelar por agora e tenha certeza de ter
+	pelo menos 32MB de espaço livre. Então tente novamente iniciar o Maxima on Android!!</string>
+    <string name="storage_insufficient_for_maxima_data">Maxima on Android requer 85MB adicionais de espaço livre para os dados de instalação
+	do Maxima. Infelizmente parece não haver espaço suficiente encontrado no armazenamento interno e externo. Por favor pressione o botão Cancelar por
+	agora e tenha certeza de ter pelo menos 85MB de espaço livre. Então tente iiciar novamente o Maxima on Android!!</string>
+    <string name="install_in_progress">Instalação em progresso…</string>
+    <string name="install_failure">A instalação NÃO foi completada. Por favor desinstale este apk e tente reinstalar novamente.</string>
+    <string name="OK">OK</string>
+    <string name="installer_title">Instalador MaximaOnAndroid</string>
+    <string name="install_internal_storage">Armazenamento Interno</string>
+    <string name="install_external">Armazenamento Externo (Cartão SD)</string>
+    <string name="install">Instalar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="install_instructions">Maxima on Android instala 85MB de dados adicionais.
+	Por favor selecione o local de instalação e pressione Instalar.</string>
+    <string name="install_additions">Instalando adicionais</string>
+    <string name="install_maxima_data">Instalando dados do Maxima</string>
+    <string name="install_maxima_binary">Instalando o binário do Maxima</string>
+    <string name="quit_hint">Use Sair no menu.</string>
+    <string name="man_back_to_maxima">Voltar para o Maxima</string>
+    <string name="menu_about">Sobre o Maxima on Android</string>
+    <string name="menu_graph">Gráfico</string>
+    <string name="menu_manual">Manual</string>
+    <string name="menu_quit">Sair</string>
+    <string name="menu_session">Sessão</string>
+    <string name="menu_session_save">Salvar</string>
+    <string name="menu_session_restore">Restaurar</string>
+    <string name="menu_session_playback">Reprodução</string>
+    <string name="menu_settings">Configurações</string>
+    <string name="menu_next_sample">Próximo Exemplo</string>
+    <string name="menu_jp_man">Manual em Japonês</string>
+    <string name="menu_br_pt_man">Manual em Português do Brasil</string>
+    <string name="menu_en_man">Manual em Inglês</string>
+    <string name="menu_de_man">Manual em Alemão</string>
+    <string name="menu_es_man">Manual em Espanhol</string>
+    <string name="menu_pt_man">Manual em Português</string>
+    <string name="toast_no_graph">Nenhum gráfico para mostrar.</string>
+    <string name="enter">Entrar</string>
+
+</resources>
