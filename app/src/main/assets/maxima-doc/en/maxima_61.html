@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 61. graphs</title>
+<title>Maxima 5.40.0 Manual: 61. graphs</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 61. graphs">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 61. graphs">
+<meta name="description" content="Maxima 5.40.0 Manual: 61. graphs">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 61. graphs">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,50 +66,50 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="graphs_002dpkg"></a>
-<a name="SEC290"></a>
+<a name="SEC291"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC291" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_60.html#SEC290" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC292" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 61. graphs </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC291">61.1 Introduction to graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC292">61.1 Introduction to graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC292">61.2 Functions and Variables for graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC293">61.2 Functions and Variables for graphs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-graphs"></a>
 </p><hr size="6">
 <a name="Introduction-to-graphs"></a>
-<a name="SEC291"></a>
+<a name="SEC292"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC290" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC292" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC291" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC293" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 61.1 Introduction to graphs </h2>
@@ -142,41 +142,41 @@ from <a href="http://www.graphviz.org">http://www.graphviz.org</a>. <code>draw_g
 <p><a name="Item_003a-Functions-and-Variables-for-graphs"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-graphs"></a>
-<a name="SEC292"></a>
-<table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC291" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC293" title="Next section in reading order"> &gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
-</tr></table>
-<h2 class="section"> 61.2 Functions and Variables for graphs </h2>
-
-<hr size="6">
 <a name="SEC293"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC292" title="Previous section in reading order"> &lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC294" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC292" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 61.2 Functions and Variables for graphs </h2>
+
+<hr size="6">
+<a name="SEC294"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC293" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC295" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC293" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 61.2.1 Building graphs </h3>
@@ -185,7 +185,7 @@ from <a href="http://www.graphviz.org">http://www.graphviz.org</a>. <code>draw_g
 <a name="Item_003a-create_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>create_graph</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>create_graph</tt> (<var>v_list</var>, <var>e_list</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>create_graph</tt> (<var>n</var>, <var>e_list</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>create_graph</tt> (<var>v_list</var>, <var>e_list</var>, <var>directed</var>)</i>
-<a name="IDX2022"></a>
+<a name="IDX2026"></a>
 </dt>
 <dd><p>Creates a new graph on the set of vertices <var>v_list</var> and with edges <var>e_list</var>.
 </p>
@@ -200,7 +200,7 @@ edges together with edge-weights (<code>[[e1, w1], ..., [em, wm]]</code>).
 <p>If <var>directed</var> is not <code>false</code>, a directed graph will be returned.
 </p>
 <p>Example 1: create a cycle on 3 vertices:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph([1,2,3], [[1,2], [2,3], [1,3]])$
 (%i3) print_graph(g)$
 Graph on 3 vertices with 3 edges.
@@ -210,7 +210,7 @@ Adjacencies:
   1 :  3  2
 </pre>
 <p>Example 2: create a cycle on 3 vertices with edge weights:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph([1,2,3], [[[1,2], 1.0], [[2,3], 2.0],
                           [[1,3], 3.0]])$
 (%i3) print_graph(g)$
@@ -221,7 +221,7 @@ Adjacencies:
   1 :  3  2
 </pre>
 <p>Example 3: create a directed graph:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) d : create_graph(
         [1,2,3,4],
         [
@@ -247,7 +247,7 @@ Adjacencies:
 <a name="Item_003a-copy_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>copy_graph</b><i> (<var>g</var>)</i>
-<a name="IDX2023"></a>
+<a name="IDX2027"></a>
 </dt>
 <dd><p>Returns a copy of the graph <var>g</var>.
 </p>
@@ -262,12 +262,12 @@ Adjacencies:
 <a name="Item_003a-circulant_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>circulant_graph</b><i> (<var>n</var>, <var>d</var>)</i>
-<a name="IDX2024"></a>
+<a name="IDX2028"></a>
 </dt>
 <dd><p>Returns the circulant graph with parameters <var>n</var> and <var>d</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : circulant_graph(10, [1,3])$
 (%i3) print_graph(g)$
 Graph on 10 vertices with 20 edges.
@@ -294,7 +294,7 @@ Adjacencies:
 <a name="Item_003a-clebsch_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>clebsch_graph</b><i> ()</i>
-<a name="IDX2025"></a>
+<a name="IDX2029"></a>
 </dt>
 <dd><p>Returns the Clebsch graph.
 </p>
@@ -309,7 +309,7 @@ Adjacencies:
 <a name="Item_003a-complement_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>complement_graph</b><i> (<var>g</var>)</i>
-<a name="IDX2026"></a>
+<a name="IDX2030"></a>
 </dt>
 <dd><p>Returns the complement of the graph <var>g</var>.
 </p>
@@ -324,7 +324,7 @@ Adjacencies:
 <a name="Item_003a-complete_005fbipartite_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>complete_bipartite_graph</b><i> (<var>n</var>, <var>m</var>)</i>
-<a name="IDX2027"></a>
+<a name="IDX2031"></a>
 </dt>
 <dd><p>Returns the complete bipartite graph on <var>n+m</var> vertices.
 </p>
@@ -339,7 +339,7 @@ Adjacencies:
 <a name="Item_003a-complete_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>complete_graph</b><i> (<var>n</var>)</i>
-<a name="IDX2028"></a>
+<a name="IDX2032"></a>
 </dt>
 <dd><p>Returns the complete graph on <var>n</var> vertices.
 </p>
@@ -354,7 +354,7 @@ Adjacencies:
 <a name="Item_003a-cycle_005fdigraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cycle_digraph</b><i> (<var>n</var>)</i>
-<a name="IDX2029"></a>
+<a name="IDX2033"></a>
 </dt>
 <dd><p>Returns the directed cycle on <var>n</var> vertices.
 </p>
@@ -369,7 +369,7 @@ Adjacencies:
 <a name="Item_003a-cycle_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cycle_graph</b><i> (<var>n</var>)</i>
-<a name="IDX2030"></a>
+<a name="IDX2034"></a>
 </dt>
 <dd><p>Returns the cycle on <var>n</var> vertices.
 </p>
@@ -384,7 +384,7 @@ Adjacencies:
 <a name="Item_003a-cuboctahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cuboctahedron_graph</b><i> (<var>n</var>)</i>
-<a name="IDX2031"></a>
+<a name="IDX2035"></a>
 </dt>
 <dd><p>Returns the cuboctahedron graph.
 </p>
@@ -399,7 +399,7 @@ Adjacencies:
 <a name="Item_003a-cube_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cube_graph</b><i> (<var>n</var>)</i>
-<a name="IDX2032"></a>
+<a name="IDX2036"></a>
 </dt>
 <dd><p>Returns the <var>n</var>-dimensional cube.
 </p>
@@ -414,7 +414,7 @@ Adjacencies:
 <a name="Item_003a-dodecahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>dodecahedron_graph</b><i> ()</i>
-<a name="IDX2033"></a>
+<a name="IDX2037"></a>
 </dt>
 <dd><p>Returns the dodecahedron graph.
 </p>
@@ -429,7 +429,7 @@ Adjacencies:
 <a name="Item_003a-empty_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>empty_graph</b><i> (<var>n</var>)</i>
-<a name="IDX2034"></a>
+<a name="IDX2038"></a>
 </dt>
 <dd><p>Returns the empty graph on <var>n</var> vertices.
 </p>
@@ -444,12 +444,12 @@ Adjacencies:
 <a name="Item_003a-flower_005fsnark"></a>
 </p><dl>
 <dt><u>Function:</u> <b>flower_snark</b><i> (<var>n</var>)</i>
-<a name="IDX2035"></a>
+<a name="IDX2039"></a>
 </dt>
 <dd><p>Returns the flower graph on <var>4n</var> vertices.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) f5 : flower_snark(5)$
 (%i3) chromatic_index(f5);
 (%o3)                           4
@@ -465,7 +465,7 @@ Adjacencies:
 <a name="Item_003a-from_005fadjacency_005fmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>from_adjacency_matrix</b><i> (<var>A</var>)</i>
-<a name="IDX2036"></a>
+<a name="IDX2040"></a>
 </dt>
 <dd><p>Returns the graph represented by its adjacency matrix <var>A</var>.
 </p>
@@ -480,7 +480,7 @@ Adjacencies:
 <a name="Item_003a-frucht_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>frucht_graph</b><i> ()</i>
-<a name="IDX2037"></a>
+<a name="IDX2041"></a>
 </dt>
 <dd><p>Returns the Frucht graph.
 </p>
@@ -495,12 +495,12 @@ Adjacencies:
 <a name="Item_003a-graph_005fproduct"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_product</b><i> (<var>g1</var>, <var>g1</var>)</i>
-<a name="IDX2038"></a>
+<a name="IDX2042"></a>
 </dt>
 <dd><p>Returns the direct product of graphs <var>g1</var> and <var>g2</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) grid : graph_product(path_graph(3), path_graph(4))$
 (%i3) draw_graph(grid)$
 </pre>
@@ -517,7 +517,7 @@ Adjacencies:
 <a name="Item_003a-graph_005funion"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_union</b><i> (<var>g1</var>, <var>g1</var>)</i>
-<a name="IDX2039"></a>
+<a name="IDX2043"></a>
 </dt>
 <dd><p>Returns the union (sum) of graphs <var>g1</var> and <var>g2</var>.
 </p>
@@ -532,7 +532,7 @@ Adjacencies:
 <a name="Item_003a-grid_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>grid_graph</b><i> (<var>n</var>, <var>m</var>)</i>
-<a name="IDX2040"></a>
+<a name="IDX2044"></a>
 </dt>
 <dd><p>Returns the <var>n x m</var> grid.
 </p>
@@ -547,7 +547,7 @@ Adjacencies:
 <a name="Item_003a-great_005frhombicosidodecahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>great_rhombicosidodecahedron_graph</b><i> ()</i>
-<a name="IDX2041"></a>
+<a name="IDX2045"></a>
 </dt>
 <dd><p>Returns the great rhombicosidodecahedron graph.
 </p>
@@ -562,7 +562,7 @@ Adjacencies:
 <a name="Item_003a-great_005frhombicuboctahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>great_rhombicuboctahedron_graph</b><i> ()</i>
-<a name="IDX2042"></a>
+<a name="IDX2046"></a>
 </dt>
 <dd><p>Returns the great rhombicuboctahedron graph.
 </p>
@@ -577,7 +577,7 @@ Adjacencies:
 <a name="Item_003a-grotzch_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>grotzch_graph</b><i> ()</i>
-<a name="IDX2043"></a>
+<a name="IDX2047"></a>
 </dt>
 <dd><p>Returns the Grotzch graph.
 </p>
@@ -592,7 +592,7 @@ Adjacencies:
 <a name="Item_003a-heawood_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>heawood_graph</b><i> ()</i>
-<a name="IDX2044"></a>
+<a name="IDX2048"></a>
 </dt>
 <dd><p>Returns the Heawood graph.
 </p>
@@ -607,7 +607,7 @@ Adjacencies:
 <a name="Item_003a-icosahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>icosahedron_graph</b><i> ()</i>
-<a name="IDX2045"></a>
+<a name="IDX2049"></a>
 </dt>
 <dd><p>Returns the icosahedron graph.
 </p>
@@ -622,7 +622,7 @@ Adjacencies:
 <a name="Item_003a-icosidodecahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>icosidodecahedron_graph</b><i> ()</i>
-<a name="IDX2046"></a>
+<a name="IDX2050"></a>
 </dt>
 <dd><p>Returns the icosidodecahedron graph.
 </p>
@@ -637,13 +637,13 @@ Adjacencies:
 <a name="Item_003a-induced_005fsubgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>induced_subgraph</b><i> (<var>V</var>, <var>g</var>)</i>
-<a name="IDX2047"></a>
+<a name="IDX2051"></a>
 </dt>
 <dd><p>Returns the graph induced on the subset <var>V</var> of vertices of the graph
 <var>g</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) V : [0,1,2,3,4]$
 (%i4) g : induced_subgraph(V, p)$
@@ -667,7 +667,7 @@ Adjacencies:
 <a name="Item_003a-line_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>line_graph</b><i> (<var>g</var>)</i>
-<a name="IDX2048"></a>
+<a name="IDX2052"></a>
 </dt>
 <dd><p>Returns the line graph of the graph <var>g</var>.
 </p>
@@ -682,7 +682,7 @@ Adjacencies:
 <a name="Item_003a-make_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>make_graph</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_graph</tt> (<var>vrt</var>, <var>f</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_graph</tt> (<var>vrt</var>, <var>f</var>, <var>oriented</var>)</i>
-<a name="IDX2049"></a>
+<a name="IDX2053"></a>
 </dt>
 <dd><p>Creates a graph using a predicate function <var>f</var>.
 </p>
@@ -723,7 +723,7 @@ be connected if <code>f(a,b)=true</code>.
 <a name="Item_003a-mycielski_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>mycielski_graph</b><i> (<var>g</var>)</i>
-<a name="IDX2050"></a>
+<a name="IDX2054"></a>
 </dt>
 <dd><p>Returns the mycielskian graph of the graph <var>g</var>.
 </p>
@@ -738,7 +738,7 @@ be connected if <code>f(a,b)=true</code>.
 <a name="Item_003a-new_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>new_graph</b><i> ()</i>
-<a name="IDX2051"></a>
+<a name="IDX2055"></a>
 </dt>
 <dd><p>Returns the graph with no vertices and no edges.
 </p>
@@ -753,7 +753,7 @@ be connected if <code>f(a,b)=true</code>.
 <a name="Item_003a-path_005fdigraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>path_digraph</b><i> (<var>n</var>)</i>
-<a name="IDX2052"></a>
+<a name="IDX2056"></a>
 </dt>
 <dd><p>Returns the directed path on <var>n</var> vertices.
 </p>
@@ -768,7 +768,7 @@ be connected if <code>f(a,b)=true</code>.
 <a name="Item_003a-path_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>path_graph</b><i> (<var>n</var>)</i>
-<a name="IDX2053"></a>
+<a name="IDX2057"></a>
 </dt>
 <dd><p>Returns the path on <var>n</var> vertices.
 </p>
@@ -783,7 +783,7 @@ be connected if <code>f(a,b)=true</code>.
 <a name="Item_003a-petersen_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>petersen_graph</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>petersen_graph</tt> () &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>petersen_graph</tt> (<var>n</var>, <var>d</var>)</i>
-<a name="IDX2054"></a>
+<a name="IDX2058"></a>
 </dt>
 <dd><p>Returns the petersen graph <var>P_{n,d}</var>. The default values for
 <var>n</var> and <var>d</var> are <code>n=5</code> and <code>d=2</code>.
@@ -799,7 +799,7 @@ be connected if <code>f(a,b)=true</code>.
 <a name="Item_003a-random_005fbipartite_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_bipartite_graph</b><i> (<var>a</var>, <var>b</var>, <var>p</var>)</i>
-<a name="IDX2055"></a>
+<a name="IDX2059"></a>
 </dt>
 <dd><p>Returns a random bipartite graph on <code>a+b</code> vertices. Each edge is
 present with probability <var>p</var>.
@@ -815,7 +815,7 @@ present with probability <var>p</var>.
 <a name="Item_003a-random_005fdigraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_digraph</b><i> (<var>n</var>, <var>p</var>)</i>
-<a name="IDX2056"></a>
+<a name="IDX2060"></a>
 </dt>
 <dd><p>Returns a random directed graph on <var>n</var> vertices. Each arc is present
 with probability <var>p</var>.
@@ -831,7 +831,7 @@ with probability <var>p</var>.
 <a name="Item_003a-random_005fregular_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_regular_graph</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>random_regular_graph</tt> (<var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>random_regular_graph</tt> (<var>n</var>, <var>d</var>)</i>
-<a name="IDX2057"></a>
+<a name="IDX2061"></a>
 </dt>
 <dd><p>Returns a random <var>d</var>-regular graph on <var>n</var> vertices. The default
 value for <var>d</var> is <code>d=3</code>.
@@ -847,7 +847,7 @@ value for <var>d</var> is <code>d=3</code>.
 <a name="Item_003a-random_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_graph</b><i> (<var>n</var>, <var>p</var>)</i>
-<a name="IDX2058"></a>
+<a name="IDX2062"></a>
 </dt>
 <dd><p>Returns a random graph on <var>n</var> vertices. Each edge is present with
 probability <var>p</var>.
@@ -863,7 +863,7 @@ probability <var>p</var>.
 <a name="Item_003a-random_005fgraph1"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_graph1</b><i> (<var>n</var>, <var>m</var>)</i>
-<a name="IDX2059"></a>
+<a name="IDX2063"></a>
 </dt>
 <dd><p>Returns a random graph on <var>n</var> vertices and random <var>m</var> edges.
 </p>
@@ -878,14 +878,14 @@ probability <var>p</var>.
 <a name="Item_003a-random_005fnetwork"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_network</b><i> (<var>n</var>, <var>p</var>, <var>w</var>)</i>
-<a name="IDX2060"></a>
+<a name="IDX2064"></a>
 </dt>
 <dd><p>Returns a random network on <var>n</var> vertices. Each arc is present with
 probability <var>p</var> and has a weight in the range <code>[0,w]</code>. The
 function returns a list <code>[network, source, sink]</code>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) [net, s, t] : random_network(50, 0.2, 10.0);
 (%o2)                   [DIGRAPH, 50, 51]
 (%i3) max_flow(net, s, t)$
@@ -903,7 +903,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-random_005ftournament"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_tournament</b><i> (<var>n</var>)</i>
-<a name="IDX2061"></a>
+<a name="IDX2065"></a>
 </dt>
 <dd><p>Returns a random tournament on <var>n</var> vertices.
 </p>
@@ -918,7 +918,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-random_005ftree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_tree</b><i> (<var>n</var>)</i>
-<a name="IDX2062"></a>
+<a name="IDX2066"></a>
 </dt>
 <dd><p>Returns a random tree on <var>n</var> vertices.
 </p>
@@ -933,7 +933,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-small_005frhombicosidodecahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>small_rhombicosidodecahedron_graph</b><i> ()</i>
-<a name="IDX2063"></a>
+<a name="IDX2067"></a>
 </dt>
 <dd><p>Returns the small rhombicosidodecahedron graph.
 </p>
@@ -948,7 +948,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-small_005frhombicuboctahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>small_rhombicuboctahedron_graph</b><i> ()</i>
-<a name="IDX2064"></a>
+<a name="IDX2068"></a>
 </dt>
 <dd><p>Returns the small rhombicuboctahedron graph.
 </p>
@@ -963,7 +963,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-snub_005fcube_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>snub_cube_graph</b><i> ()</i>
-<a name="IDX2065"></a>
+<a name="IDX2069"></a>
 </dt>
 <dd><p>Returns the snub cube graph.
 </p>
@@ -978,7 +978,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-snub_005fdodecahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>snub_dodecahedron_graph</b><i> ()</i>
-<a name="IDX2066"></a>
+<a name="IDX2070"></a>
 </dt>
 <dd><p>Returns the snub dodecahedron graph.
 </p>
@@ -993,7 +993,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-truncated_005fcube_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>truncated_cube_graph</b><i> ()</i>
-<a name="IDX2067"></a>
+<a name="IDX2071"></a>
 </dt>
 <dd><p>Returns the truncated cube graph.
 </p>
@@ -1008,7 +1008,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-truncated_005fdodecahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>truncated_dodecahedron_graph</b><i> ()</i>
-<a name="IDX2068"></a>
+<a name="IDX2072"></a>
 </dt>
 <dd><p>Returns the truncated dodecahedron graph.
 </p>
@@ -1024,7 +1024,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-truncated_005ficosahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>truncated_icosahedron_graph</b><i> ()</i>
-<a name="IDX2069"></a>
+<a name="IDX2073"></a>
 </dt>
 <dd><p>Returns the truncated icosahedron graph.
 </p>
@@ -1040,7 +1040,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-truncated_005ftetrahedron_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>truncated_tetrahedron_graph</b><i> ()</i>
-<a name="IDX2070"></a>
+<a name="IDX2074"></a>
 </dt>
 <dd><p>Returns the truncated tetrahedron graph.
 </p>
@@ -1055,7 +1055,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-tutte_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>tutte_graph</b><i> ()</i>
-<a name="IDX2071"></a>
+<a name="IDX2075"></a>
 </dt>
 <dd><p>Returns the Tutte graph.
 </p>
@@ -1070,7 +1070,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-underlying_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>underlying_graph</b><i> (<var>g</var>)</i>
-<a name="IDX2072"></a>
+<a name="IDX2076"></a>
 </dt>
 <dd><p>Returns the underlying graph of the directed graph <var>g</var>.
 </p>
@@ -1085,7 +1085,7 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-wheel_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>wheel_graph</b><i> (<var>n</var>)</i>
-<a name="IDX2073"></a>
+<a name="IDX2077"></a>
 </dt>
 <dd><p>Returns the wheel graph on <var>n+1</var> vertices.
 </p>
@@ -1097,21 +1097,21 @@ function returns a list <code>[network, source, sink]</code>.
 </p></dd></dl>
 
 <hr size="6">
-<a name="SEC294"></a>
+<a name="SEC295"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC293" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC295" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC294" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC296" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC292" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC293" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 61.2.2 Graph properties </h3>
@@ -1120,12 +1120,12 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-adjacency_005fmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>adjacency_matrix</b><i> (<var>gr</var>)</i>
-<a name="IDX2074"></a>
+<a name="IDX2078"></a>
 </dt>
 <dd><p>Returns the adjacency matrix of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) c5 : cycle_graph(4)$
 (%i3) adjacency_matrix(c5);
                          [ 0  1  0  1 ]
@@ -1147,12 +1147,12 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-average_005fdegree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>average_degree</b><i> (<var>gr</var>)</i>
-<a name="IDX2075"></a>
+<a name="IDX2079"></a>
 </dt>
 <dd><p>Returns the average degree of vertices in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) average_degree(grotzch_graph());
                                40
 (%o2)                          --
@@ -1169,13 +1169,13 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-biconnected_005fcomponents"></a>
 </p><dl>
 <dt><u>Function:</u> <b>biconnected_components</b><i> (<var>gr</var>)</i>
-<a name="IDX2076"></a>
+<a name="IDX2080"></a>
 </dt>
 <dd><p>Returns the (vertex sets of) 2-connected components of the graph
 <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph(
             [1,2,3,4,5,6,7],
             [
@@ -1198,14 +1198,14 @@ function returns a list <code>[network, source, sink]</code>.
 <a name="Item_003a-bipartition"></a>
 </p><dl>
 <dt><u>Function:</u> <b>bipartition</b><i> (<var>gr</var>)</i>
-<a name="IDX2077"></a>
+<a name="IDX2081"></a>
 </dt>
 <dd><p>Returns a bipartition of the vertices of the graph <var>gr</var> or an empty
 list if <var>gr</var> is not bipartite.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (graphs)$
+<pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) h : heawood_graph()$
 (%i3) [A,B]:bipartition(h);
 (%o3)  [[8, 12, 6, 10, 0, 2, 4], [13, 5, 11, 7, 9, 1, 3]]
@@ -1224,12 +1224,12 @@ list if <var>gr</var> is not bipartite.
 <a name="Item_003a-chromatic_005findex"></a>
 </p><dl>
 <dt><u>Function:</u> <b>chromatic_index</b><i> (<var>gr</var>)</i>
-<a name="IDX2078"></a>
+<a name="IDX2082"></a>
 </dt>
 <dd><p>Returns the chromatic index of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) chromatic_index(p);
 (%o3)                           4
@@ -1245,12 +1245,12 @@ list if <var>gr</var> is not bipartite.
 <a name="Item_003a-chromatic_005fnumber"></a>
 </p><dl>
 <dt><u>Function:</u> <b>chromatic_number</b><i> (<var>gr</var>)</i>
-<a name="IDX2079"></a>
+<a name="IDX2083"></a>
 </dt>
 <dd><p>Returns the chromatic number of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) chromatic_number(cycle_graph(5));
 (%o2)                           3
 (%i3) chromatic_number(cycle_graph(6));
@@ -1267,13 +1267,13 @@ list if <var>gr</var> is not bipartite.
 <a name="Item_003a-clear_005fedge_005fweight"></a>
 </p><dl>
 <dt><u>Function:</u> <b>clear_edge_weight</b><i> (<var>e</var>, <var>gr</var>)</i>
-<a name="IDX2080"></a>
+<a name="IDX2084"></a>
 </dt>
 <dd><p>Removes the weight of the edge  <var>e</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (graphs)$
+<pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph(3, [[[0,1], 1.5], [[1,2], 1.3]])$
 (%i3) get_edge_weight([0,1], g);
 (%o3)                          1.5
@@ -1292,12 +1292,12 @@ list if <var>gr</var> is not bipartite.
 <a name="Item_003a-clear_005fvertex_005flabel"></a>
 </p><dl>
 <dt><u>Function:</u> <b>clear_vertex_label</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2081"></a>
+<a name="IDX2085"></a>
 </dt>
 <dd><p>Removes the label of the vertex <var>v</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph([[0,&quot;Zero&quot;], [1, &quot;One&quot;]], [[0,1]])$
 (%i3) get_vertex_label(0, g);
 (%o3)                         Zero
@@ -1317,12 +1317,12 @@ list if <var>gr</var> is not bipartite.
 <a name="Item_003a-connected_005fcomponents"></a>
 </p><dl>
 <dt><u>Function:</u> <b>connected_components</b><i> (<var>gr</var>)</i>
-<a name="IDX2082"></a>
+<a name="IDX2086"></a>
 </dt>
 <dd><p>Returns the (vertex sets of) connected components of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g: graph_union(cycle_graph(5), path_graph(4))$
 (%i3) connected_components(g);
 (%o3)            [[1, 2, 3, 4, 0], [8, 7, 6, 5]]
@@ -1338,12 +1338,12 @@ list if <var>gr</var> is not bipartite.
 <a name="Item_003a-diameter"></a>
 </p><dl>
 <dt><u>Function:</u> <b>diameter</b><i> (<var>gr</var>)</i>
-<a name="IDX2083"></a>
+<a name="IDX2087"></a>
 </dt>
 <dd><p>Returns the diameter of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) diameter(dodecahedron_graph());
 (%o2)                           5
 </pre>
@@ -1358,7 +1358,7 @@ list if <var>gr</var> is not bipartite.
 <a name="Item_003a-edge_005fcoloring"></a>
 </p><dl>
 <dt><u>Function:</u> <b>edge_coloring</b><i> (<var>gr</var>)</i>
-<a name="IDX2084"></a>
+<a name="IDX2088"></a>
 </dt>
 <dd><p>Returns an optimal coloring of the edges of the graph <var>gr</var>.
 </p>
@@ -1366,7 +1366,7 @@ list if <var>gr</var> is not bipartite.
 coloring of the edges of <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) [ch_index, col] : edge_coloring(p);
 (%o3) [4, [[[0, 5], 3], [[5, 7], 1], [[0, 1], 1], [[1, 6], 2], 
@@ -1389,12 +1389,12 @@ coloring of the edges of <var>gr</var>.
 <a name="Item_003a-degree_005fsequence"></a>
 </p><dl>
 <dt><u>Function:</u> <b>degree_sequence</b><i> (<var>gr</var>)</i>
-<a name="IDX2085"></a>
+<a name="IDX2089"></a>
 </dt>
 <dd><p>Returns the list of vertex degrees of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) degree_sequence(random_graph(10, 0.4));
 (%o2)            [2, 2, 2, 2, 2, 2, 3, 3, 3, 3]
 </pre>
@@ -1409,7 +1409,7 @@ coloring of the edges of <var>gr</var>.
 <a name="Item_003a-edge_005fconnectivity"></a>
 </p><dl>
 <dt><u>Function:</u> <b>edge_connectivity</b><i> (<var>gr</var>)</i>
-<a name="IDX2086"></a>
+<a name="IDX2090"></a>
 </dt>
 <dd><p>Returns the edge-connectivity of the graph <var>gr</var>.
 </p>
@@ -1426,12 +1426,12 @@ coloring of the edges of <var>gr</var>.
 <a name="Item_003a-edges"></a>
 </p><dl>
 <dt><u>Function:</u> <b>edges</b><i> (<var>gr</var>)</i>
-<a name="IDX2087"></a>
+<a name="IDX2091"></a>
 </dt>
 <dd><p>Returns the list of edges (arcs) in a (directed) graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) edges(complete_graph(4));
 (%o2)   [[2, 3], [1, 3], [1, 2], [0, 3], [0, 2], [0, 1]]
 </pre>
@@ -1446,7 +1446,7 @@ coloring of the edges of <var>gr</var>.
 <a name="Item_003a-get_005fedge_005fweight"></a>
 </p><dl>
 <dt><u>Function:</u> <b>get_edge_weight</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>get_edge_weight</tt> (<var>e</var>, <var>gr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>get_edge_weight</tt> (<var>e</var>, <var>gr</var>, <var>ifnot</var>)</i>
-<a name="IDX2088"></a>
+<a name="IDX2092"></a>
 </dt>
 <dd><p>Returns the weight of the edge <var>e</var> in the graph <var>gr</var>.
 </p>
@@ -1455,7 +1455,7 @@ the edge is not present in the graph, the function signals an error or
 returns the optional argument <var>ifnot</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) c5 : cycle_graph(5)$
 (%i3) get_edge_weight([1,2], c5);
 (%o3)                           1
@@ -1475,12 +1475,12 @@ returns the optional argument <var>ifnot</var>.
 <a name="Item_003a-get_005fvertex_005flabel"></a>
 </p><dl>
 <dt><u>Function:</u> <b>get_vertex_label</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2089"></a>
+<a name="IDX2093"></a>
 </dt>
 <dd><p>Returns the label of the vertex <var>v</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph([[0,&quot;Zero&quot;], [1, &quot;One&quot;]], [[0,1]])$
 (%i3) get_vertex_label(0, g);
 (%o3)                         Zero
@@ -1496,13 +1496,13 @@ returns the optional argument <var>ifnot</var>.
 <a name="Item_003a-graph_005fcharpoly"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_charpoly</b><i> (<var>gr</var>, <var>x</var>)</i>
-<a name="IDX2090"></a>
+<a name="IDX2094"></a>
 </dt>
 <dd><p>Returns the characteristic polynomial (in variable <var>x</var>) of the graph
 <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) graph_charpoly(p, x), factor;
                                    5        4
@@ -1519,12 +1519,12 @@ returns the optional argument <var>ifnot</var>.
 <a name="Item_003a-graph_005fcenter"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_center</b><i> (<var>gr</var>)</i>
-<a name="IDX2091"></a>
+<a name="IDX2095"></a>
 </dt>
 <dd><p>Returns the center of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : grid_graph(5,5)$
 (%i3) graph_center(g);
 (%o3)                         [12]
@@ -1540,13 +1540,13 @@ returns the optional argument <var>ifnot</var>.
 <a name="Item_003a-graph_005feigenvalues"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_eigenvalues</b><i> (<var>gr</var>)</i>
-<a name="IDX2092"></a>
+<a name="IDX2096"></a>
 </dt>
 <dd><p>Returns the eigenvalues of the graph <var>gr</var>. The function returns
 eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalues">eigenvalues</a></code> function.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) graph_eigenvalues(p);
 (%o3)               [[3, - 2, 1], [1, 4, 5]]
@@ -1562,12 +1562,12 @@ eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalu
 <a name="Item_003a-graph_005fperiphery"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_periphery</b><i> (<var>gr</var>)</i>
-<a name="IDX2093"></a>
+<a name="IDX2097"></a>
 </dt>
 <dd><p>Returns the periphery of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : grid_graph(5,5)$
 (%i3) graph_periphery(g);
 (%o3)                    [24, 20, 4, 0]
@@ -1583,12 +1583,12 @@ eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalu
 <a name="Item_003a-graph_005fsize"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_size</b><i> (<var>gr</var>)</i>
-<a name="IDX2094"></a>
+<a name="IDX2098"></a>
 </dt>
 <dd><p>Returns the number of edges in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) graph_size(p);
 (%o3)                          15
@@ -1604,12 +1604,12 @@ eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalu
 <a name="Item_003a-graph_005forder"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph_order</b><i> (<var>gr</var>)</i>
-<a name="IDX2095"></a>
+<a name="IDX2099"></a>
 </dt>
 <dd><p>Returns the number of vertices in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) graph_order(p);
 (%o3)                          10
@@ -1625,12 +1625,12 @@ eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalu
 <a name="Item_003a-girth"></a>
 </p><dl>
 <dt><u>Function:</u> <b>girth</b><i> (<var>gr</var>)</i>
-<a name="IDX2096"></a>
+<a name="IDX2100"></a>
 </dt>
 <dd><p>Returns the length of the shortest cycle in <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : heawood_graph()$
 (%i3) girth(g);
 (%o3)                           6
@@ -1646,13 +1646,13 @@ eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalu
 <a name="Item_003a-hamilton_005fcycle"></a>
 </p><dl>
 <dt><u>Function:</u> <b>hamilton_cycle</b><i> (<var>gr</var>)</i>
-<a name="IDX2097"></a>
+<a name="IDX2101"></a>
 </dt>
 <dd><p>Returns the Hamilton cycle of the graph <var>gr</var> or an empty list if
 <var>gr</var> is not hamiltonian.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) c : cube_graph(3)$
 (%i3) hc : hamilton_cycle(c);
 (%o3)              [7, 3, 2, 6, 4, 0, 1, 5, 7]
@@ -1671,13 +1671,13 @@ eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalu
 <a name="Item_003a-hamilton_005fpath"></a>
 </p><dl>
 <dt><u>Function:</u> <b>hamilton_path</b><i> (<var>gr</var>)</i>
-<a name="IDX2098"></a>
+<a name="IDX2102"></a>
 </dt>
 <dd><p>Returns the Hamilton path of the graph <var>gr</var> or an empty list if
 <var>gr</var> does not have a Hamilton path.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) hp : hamilton_path(p);
 (%o3)            [0, 5, 7, 2, 1, 6, 8, 3, 4, 9]
@@ -1696,14 +1696,14 @@ eigenvalues in the same format as maxima <code><a href="maxima_23.html#eigenvalu
 <a name="Item_003a-isomorphism"></a>
 </p><dl>
 <dt><u>Function:</u> <b>isomorphism</b><i> (<var>gr1</var>, <var>gr2</var>)</i>
-<a name="IDX2099"></a>
+<a name="IDX2103"></a>
 </dt>
 <dd><p>Returns a an isomorphism between graphs/digraphs <var>gr1</var> and
 <var>gr2</var>. If <var>gr1</var> and <var>gr2</var> are not isomorphic, it returns
 an empty list.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) clk5:complement_graph(line_graph(complete_graph(5)))$
 (%i3) isomorphism(clk5, petersen_graph());
 (%o3) [9 -&gt; 0, 2 -&gt; 1, 6 -&gt; 2, 5 -&gt; 3, 0 -&gt; 4, 1 -&gt; 5, 3 -&gt; 6, 
@@ -1720,13 +1720,13 @@ an empty list.
 <a name="Item_003a-in_005fneighbors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>in_neighbors</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2100"></a>
+<a name="IDX2104"></a>
 </dt>
 <dd><p>Returns the list of in-neighbors of the vertex <var>v</var> in the directed
 graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : path_digraph(3)$
 (%i3) in_neighbors(2, p);
 (%o3)                          [1]
@@ -1744,12 +1744,12 @@ graph <var>gr</var>.
 <a name="Item_003a-is_005fbiconnected"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_biconnected</b><i> (<var>gr</var>)</i>
-<a name="IDX2101"></a>
+<a name="IDX2105"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>gr</var> is 2-connected and <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_biconnected(cycle_graph(5));
 (%o2)                         true
 (%i3) is_biconnected(path_graph(5));
@@ -1766,12 +1766,12 @@ graph <var>gr</var>.
 <a name="Item_003a-is_005fbipartite"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_bipartite</b><i> (<var>gr</var>)</i>
-<a name="IDX2102"></a>
+<a name="IDX2106"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>gr</var> is bipartite (2-colorable) and <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_bipartite(petersen_graph());
 (%o2)                         false
 (%i3) is_bipartite(heawood_graph());
@@ -1788,12 +1788,12 @@ graph <var>gr</var>.
 <a name="Item_003a-is_005fconnected"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_connected</b><i> (<var>gr</var>)</i>
-<a name="IDX2103"></a>
+<a name="IDX2107"></a>
 </dt>
 <dd><p>Returns <code>true</code> if the graph <var>gr</var> is connected and <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_connected(graph_union(cycle_graph(4), path_graph(3)));
 (%o2)                         false
 </pre>
@@ -1808,12 +1808,12 @@ graph <var>gr</var>.
 <a name="Item_003a-is_005fdigraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_digraph</b><i> (<var>gr</var>)</i>
-<a name="IDX2104"></a>
+<a name="IDX2108"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>gr</var> is a directed graph and <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_digraph(path_graph(5));
 (%o2)                         false
 (%i3) is_digraph(path_digraph(5));
@@ -1830,13 +1830,13 @@ graph <var>gr</var>.
 <a name="Item_003a-is_005fedge_005fin_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_edge_in_graph</b><i> (<var>e</var>, <var>gr</var>)</i>
-<a name="IDX2105"></a>
+<a name="IDX2109"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>e</var> is an edge (arc) in the (directed) graph <var>g</var>
 and <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) c4 : cycle_graph(4)$
 (%i3) is_edge_in_graph([2,3], c4);
 (%o3)                         true
@@ -1858,12 +1858,12 @@ and <code>false</code> otherwise.
 <a name="Item_003a-is_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_graph</b><i> (<var>gr</var>)</i>
-<a name="IDX2106"></a>
+<a name="IDX2110"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>gr</var> is a graph and <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_graph(path_graph(5));
 (%o2)                         true
 (%i3) is_graph(path_digraph(5));
@@ -1880,12 +1880,12 @@ and <code>false</code> otherwise.
 <a name="Item_003a-is_005fgraph_005for_005fdigraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_graph_or_digraph</b><i> (<var>gr</var>)</i>
-<a name="IDX2107"></a>
+<a name="IDX2111"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>gr</var> is a graph or a directed graph and <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_graph_or_digraph(path_graph(5));
 (%o2)                         true
 (%i3) is_graph_or_digraph(path_digraph(5));
@@ -1902,7 +1902,7 @@ and <code>false</code> otherwise.
 <a name="Item_003a-is_005fisomorphic"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_isomorphic</b><i> (<var>gr1</var>, <var>gr2</var>)</i>
-<a name="IDX2108"></a>
+<a name="IDX2112"></a>
 </dt>
 <dd><p>Returns <code>true</code> if graphs/digraphs <var>gr1</var> and <var>gr2</var> are isomorphic
 and <code>false</code> otherwise.
@@ -1910,7 +1910,7 @@ and <code>false</code> otherwise.
 <p>See also <code><a href="#isomorphism">isomorphism</a></code>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) clk5:complement_graph(line_graph(complete_graph(5)))$
 (%i3) is_isomorphic(clk5, petersen_graph());
 (%o3)                         true
@@ -1926,7 +1926,7 @@ and <code>false</code> otherwise.
 <a name="Item_003a-is_005fplanar"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_planar</b><i> (<var>gr</var>)</i>
-<a name="IDX2109"></a>
+<a name="IDX2113"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>gr</var> is a planar graph and <code>false</code> otherwise.
 </p>
@@ -1934,7 +1934,7 @@ and <code>false</code> otherwise.
 algorithm.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_planar(dodecahedron_graph());
 (%o2)                         true
 (%i3) is_planar(petersen_graph());
@@ -1953,13 +1953,13 @@ algorithm.
 <a name="Item_003a-is_005fsconnected"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_sconnected</b><i> (<var>gr</var>)</i>
-<a name="IDX2110"></a>
+<a name="IDX2114"></a>
 </dt>
 <dd><p>Returns <code>true</code> if the directed graph <var>gr</var> is strongly connected and
 <code>false</code> otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_sconnected(cycle_digraph(5));
 (%o2)                         true
 (%i3) is_sconnected(path_digraph(5));
@@ -1976,12 +1976,12 @@ algorithm.
 <a name="Item_003a-is_005fvertex_005fin_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_vertex_in_graph</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2111"></a>
+<a name="IDX2115"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>v</var> is a vertex in the graph <var>g</var> and <code>false</code>  otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) c4 : cycle_graph(4)$
 (%i3) is_vertex_in_graph(0, c4);
 (%o3)                         true
@@ -1999,12 +1999,12 @@ algorithm.
 <a name="Item_003a-is_005ftree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>is_tree</b><i> (<var>gr</var>)</i>
-<a name="IDX2112"></a>
+<a name="IDX2116"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>gr</var> is a tree and <code>false</code>  otherwise.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) is_tree(random_tree(4));
 (%o2)                         true
 (%i3) is_tree(graph_union(random_tree(4), random_tree(5)));
@@ -2021,12 +2021,12 @@ algorithm.
 <a name="Item_003a-laplacian_005fmatrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>laplacian_matrix</b><i> (<var>gr</var>)</i>
-<a name="IDX2113"></a>
+<a name="IDX2117"></a>
 </dt>
 <dd><p>Returns the laplacian matrix of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) laplacian_matrix(cycle_graph(5));
                    [  2   - 1   0    0   - 1 ]
                    [                         ]
@@ -2049,12 +2049,12 @@ algorithm.
 <a name="Item_003a-max_005fclique"></a>
 </p><dl>
 <dt><u>Function:</u> <b>max_clique</b><i> (<var>gr</var>)</i>
-<a name="IDX2114"></a>
+<a name="IDX2118"></a>
 </dt>
 <dd><p>Returns a maximum clique of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : random_graph(100, 0.5)$
 (%i3) max_clique(g);
 (%o3)          [6, 12, 31, 36, 52, 59, 62, 63, 80]
@@ -2070,13 +2070,13 @@ algorithm.
 <a name="Item_003a-max_005fdegree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>max_degree</b><i> (<var>gr</var>)</i>
-<a name="IDX2115"></a>
+<a name="IDX2119"></a>
 </dt>
 <dd><p>Returns the maximal degree of vertices of the graph <var>gr</var> and a
 vertex of maximal degree.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : random_graph(100, 0.02)$
 (%i3) max_degree(g);
 (%o3)                        [6, 79]
@@ -2094,7 +2094,7 @@ vertex of maximal degree.
 <a name="Item_003a-max_005fflow"></a>
 </p><dl>
 <dt><u>Function:</u> <b>max_flow</b><i> (<var>net</var>, <var>s</var>, <var>t</var>)</i>
-<a name="IDX2116"></a>
+<a name="IDX2120"></a>
 </dt>
 <dd><p>Returns a maximum flow through the network <var>net</var> with the source
 <var>s</var> and the sink <var>t</var>.
@@ -2103,7 +2103,7 @@ vertex of maximal degree.
 representing the weights of the arcs in the optimal flow.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) net : create_graph(
   [1,2,3,4,5,6],
   [[[1,2], 1.0],
@@ -2136,12 +2136,12 @@ representing the weights of the arcs in the optimal flow.
 <a name="Item_003a-max_005findependent_005fset"></a>
 </p><dl>
 <dt><u>Function:</u> <b>max_independent_set</b><i> (<var>gr</var>)</i>
-<a name="IDX2117"></a>
+<a name="IDX2121"></a>
 </dt>
 <dd><p>Returns a maximum independent set of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) d : dodecahedron_graph()$
 (%i3) mi : max_independent_set(d);
 (%o3)             [0, 3, 5, 9, 10, 11, 18, 19]
@@ -2160,12 +2160,12 @@ representing the weights of the arcs in the optimal flow.
 <a name="Item_003a-max_005fmatching"></a>
 </p><dl>
 <dt><u>Function:</u> <b>max_matching</b><i> (<var>gr</var>)</i>
-<a name="IDX2118"></a>
+<a name="IDX2122"></a>
 </dt>
 <dd><p>Returns a maximum matching of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) d : dodecahedron_graph()$
 (%i3) m : max_matching(d);
 (%o3) [[5, 7], [8, 9], [6, 10], [14, 19], [13, 18], [12, 17], 
@@ -2185,13 +2185,13 @@ representing the weights of the arcs in the optimal flow.
 <a name="Item_003a-min_005fdegree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>min_degree</b><i> (<var>gr</var>)</i>
-<a name="IDX2119"></a>
+<a name="IDX2123"></a>
 </dt>
 <dd><p>Returns the minimum degree of vertices of the graph <var>gr</var> and a
 vertex of minimum degree.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : random_graph(100, 0.1)$
 (%i3) min_degree(g);
 (%o3)                        [3, 49]
@@ -2209,7 +2209,7 @@ vertex of minimum degree.
 <a name="Item_003a-min_005fedge_005fcut"></a>
 </p><dl>
 <dt><u>Function:</u> <b>min_edge_cut</b><i> (<var>gr</var>)</i>
-<a name="IDX2120"></a>
+<a name="IDX2124"></a>
 </dt>
 <dd><p>Returns the minimum edge cut in the graph <var>gr</var>.
 </p>
@@ -2226,7 +2226,7 @@ vertex of minimum degree.
 <a name="Item_003a-min_005fvertex_005fcover"></a>
 </p><dl>
 <dt><u>Function:</u> <b>min_vertex_cover</b><i> (<var>gr</var>)</i>
-<a name="IDX2121"></a>
+<a name="IDX2125"></a>
 </dt>
 <dd><p>Returns the minimum vertex cover of the graph <var>gr</var>.
 </p>
@@ -2241,7 +2241,7 @@ vertex of minimum degree.
 <a name="Item_003a-min_005fvertex_005fcut"></a>
 </p><dl>
 <dt><u>Function:</u> <b>min_vertex_cut</b><i> (<var>gr</var>)</i>
-<a name="IDX2122"></a>
+<a name="IDX2126"></a>
 </dt>
 <dd><p>Returns the minimum vertex cut in the graph <var>gr</var>.
 </p>
@@ -2258,12 +2258,12 @@ vertex of minimum degree.
 <a name="Item_003a-minimum_005fspanning_005ftree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>minimum_spanning_tree</b><i> (<var>gr</var>)</i>
-<a name="IDX2123"></a>
+<a name="IDX2127"></a>
 </dt>
 <dd><p>Returns the minimum spanning tree of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : graph_product(path_graph(10), path_graph(10))$
 (%i3) t : minimum_spanning_tree(g)$
 (%i4) draw_graph(g, show_edges=edges(t))$
@@ -2281,12 +2281,12 @@ vertex of minimum degree.
 <a name="Item_003a-neighbors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>neighbors</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2124"></a>
+<a name="IDX2128"></a>
 </dt>
 <dd><p>Returns the list of neighbors of the vertex <var>v</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : petersen_graph()$
 (%i3) neighbors(3, p);
 (%o3)                       [4, 8, 2]
@@ -2302,12 +2302,12 @@ vertex of minimum degree.
 <a name="Item_003a-odd_005fgirth"></a>
 </p><dl>
 <dt><u>Function:</u> <b>odd_girth</b><i> (<var>gr</var>)</i>
-<a name="IDX2125"></a>
+<a name="IDX2129"></a>
 </dt>
 <dd><p>Returns the length of the shortest odd cycle in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : graph_product(cycle_graph(4), cycle_graph(7))$
 (%i3) girth(g);
 (%o3)                           4
@@ -2325,13 +2325,13 @@ vertex of minimum degree.
 <a name="Item_003a-out_005fneighbors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>out_neighbors</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2126"></a>
+<a name="IDX2130"></a>
 </dt>
 <dd><p>Returns the list of out-neighbors of the vertex <var>v</var> in the directed
 graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : path_digraph(3)$
 (%i3) in_neighbors(2, p);
 (%o3)                          [1]
@@ -2349,7 +2349,7 @@ graph <var>gr</var>.
 <a name="Item_003a-planar_005fembedding"></a>
 </p><dl>
 <dt><u>Function:</u> <b>planar_embedding</b><i> (<var>gr</var>)</i>
-<a name="IDX2127"></a>
+<a name="IDX2131"></a>
 </dt>
 <dd><p>Returns the list of facial walks in a planar embedding of <var>gr</var> and
 <code>false</code> if <var>gr</var> is not a planar graph.
@@ -2360,7 +2360,7 @@ graph <var>gr</var>.
 algorithm.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) planar_embedding(grid_graph(3,3));
 (%o2) [[3, 6, 7, 8, 5, 2, 1, 0], [4, 3, 0, 1], [3, 4, 7, 6], 
                                       [8, 7, 4, 5], [1, 2, 5, 4]]
@@ -2376,12 +2376,12 @@ algorithm.
 <a name="Item_003a-print_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>print_graph</b><i> (<var>gr</var>)</i>
-<a name="IDX2128"></a>
+<a name="IDX2132"></a>
 </dt>
 <dd><p>Prints some information about the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) c5 : cycle_graph(5)$
 (%i3) print_graph(c5)$
 Graph on 5 vertices with 5 edges.
@@ -2413,12 +2413,12 @@ Adjacencies:
 </p>
 <dl>
 <dt><u>Function:</u> <b>radius</b><i> (<var>gr</var>)</i>
-<a name="IDX2129"></a>
+<a name="IDX2133"></a>
 </dt>
 <dd><p>Returns the radius of the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) radius(dodecahedron_graph());
 (%o2)                           5
 </pre>
@@ -2433,12 +2433,12 @@ Adjacencies:
 <a name="Item_003a-set_005fedge_005fweight"></a>
 </p><dl>
 <dt><u>Function:</u> <b>set_edge_weight</b><i> (<var>e</var>, <var>w</var>, <var>gr</var>)</i>
-<a name="IDX2130"></a>
+<a name="IDX2134"></a>
 </dt>
 <dd><p>Assigns the weight <var>w</var> to the edge <var>e</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph([1, 2], [[[1,2], 1.2]])$
 (%i3) get_edge_weight([1,2], g);
 (%o3)                          1.2
@@ -2458,12 +2458,12 @@ Adjacencies:
 <a name="Item_003a-set_005fvertex_005flabel"></a>
 </p><dl>
 <dt><u>Function:</u> <b>set_vertex_label</b><i> (<var>v</var>, <var>l</var>, <var>gr</var>)</i>
-<a name="IDX2131"></a>
+<a name="IDX2135"></a>
 </dt>
 <dd><p>Assigns the label <var>l</var> to the vertex <var>v</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : create_graph([[1, &quot;One&quot;], [2, &quot;Two&quot;]], [[1,2]])$
 (%i3) get_vertex_label(1, g);
 (%o3)                          One
@@ -2483,12 +2483,12 @@ Adjacencies:
 <a name="Item_003a-shortest_005fpath"></a>
 </p><dl>
 <dt><u>Function:</u> <b>shortest_path</b><i> (<var>u</var>, <var>v</var>, <var>gr</var>)</i>
-<a name="IDX2132"></a>
+<a name="IDX2136"></a>
 </dt>
 <dd><p>Returns the shortest path from <var>u</var> to <var>v</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) d : dodecahedron_graph()$
 (%i3) path : shortest_path(0, 7, d);
 (%o3)                   [0, 1, 19, 13, 7]
@@ -2507,7 +2507,7 @@ Adjacencies:
 <a name="Item_003a-shortest_005fweighted_005fpath"></a>
 </p><dl>
 <dt><u>Function:</u> <b>shortest_weighted_path</b><i> (<var>u</var>, <var>v</var>, <var>gr</var>)</i>
-<a name="IDX2133"></a>
+<a name="IDX2137"></a>
 </dt>
 <dd><p>Returns the length of the shortest weighted path and the shortest
 weighted path from <var>u</var> to <var>v</var> in the graph <var>gr</var>.
@@ -2517,7 +2517,7 @@ path. If an edge has no weight, then it has a default weight 1.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (graphs)$
+<pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g: petersen_graph(20, 2)$
 (%i3) for e in edges(g) do set_edge_weight(e, random(1.0), g)$
 (%i4) shortest_weighted_path(0, 10, g);
@@ -2534,12 +2534,12 @@ path. If an edge has no weight, then it has a default weight 1.
 <a name="Item_003a-strong_005fcomponents"></a>
 </p><dl>
 <dt><u>Function:</u> <b>strong_components</b><i> (<var>gr</var>)</i>
-<a name="IDX2134"></a>
+<a name="IDX2138"></a>
 </dt>
 <dd><p>Returns the strong components of a directed graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) t : random_tournament(4)$
 (%i3) strong_components(t);
 (%o3)                 [[1], [0], [2], [3]]
@@ -2557,13 +2557,13 @@ path. If an edge has no weight, then it has a default weight 1.
 <a name="Item_003a-topological_005fsort"></a>
 </p><dl>
 <dt><u>Function:</u> <b>topological_sort</b><i> (<var>dag</var>)</i>
-<a name="IDX2135"></a>
+<a name="IDX2139"></a>
 </dt>
 <dd><p>Returns a topological sorting of the vertices of a directed graph
 <var>dag</var> or an empty list if <var>dag</var> is not a directed acyclic graph.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g:create_graph(
          [1,2,3,4,5],
          [
@@ -2585,7 +2585,7 @@ path. If an edge has no weight, then it has a default weight 1.
 <a name="Item_003a-vertex_005fconnectivity"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertex_connectivity</b><i> (<var>g</var>)</i>
-<a name="IDX2136"></a>
+<a name="IDX2140"></a>
 </dt>
 <dd><p>Returns the vertex connectivity of the graph <var>g</var>.
 </p>
@@ -2602,7 +2602,7 @@ path. If an edge has no weight, then it has a default weight 1.
 <a name="Item_003a-vertex_005fdegree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertex_degree</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2137"></a>
+<a name="IDX2141"></a>
 </dt>
 <dd><p>Returns the degree of the vertex <var>v</var> in the graph <var>gr</var>.
 </p>
@@ -2617,13 +2617,13 @@ path. If an edge has no weight, then it has a default weight 1.
 <a name="Item_003a-vertex_005fdistance"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertex_distance</b><i> (<var>u</var>, <var>v</var>, <var>gr</var>)</i>
-<a name="IDX2138"></a>
+<a name="IDX2142"></a>
 </dt>
 <dd><p>Returns the length of the shortest path between <var>u</var> and <var>v</var> in
 the (directed) graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) d : dodecahedron_graph()$
 (%i3) vertex_distance(0, 7, d);
 (%o3)                           4
@@ -2641,12 +2641,12 @@ the (directed) graph <var>gr</var>.
 <a name="Item_003a-vertex_005feccentricity"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertex_eccentricity</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2139"></a>
+<a name="IDX2143"></a>
 </dt>
 <dd><p>Returns the eccentricity of the vertex <var>v</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g:cycle_graph(7)$
 (%i3) vertex_eccentricity(0, g);
 (%o3)                           3
@@ -2662,12 +2662,12 @@ the (directed) graph <var>gr</var>.
 <a name="Item_003a-vertex_005fin_005fdegree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertex_in_degree</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2140"></a>
+<a name="IDX2144"></a>
 </dt>
 <dd><p>Returns the in-degree of the vertex <var>v</var> in the directed graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p5 : path_digraph(5)$
 (%i3) print_graph(p5)$
 Digraph on 5 vertices with 4 arcs.
@@ -2693,12 +2693,12 @@ Adjacencies:
 <a name="Item_003a-vertex_005fout_005fdegree"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertex_out_degree</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2141"></a>
+<a name="IDX2145"></a>
 </dt>
 <dd><p>Returns the out-degree of the vertex <var>v</var> in the directed graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) t : random_tournament(10)$
 (%i3) vertex_out_degree(0, t);
 (%o3)                           2
@@ -2716,12 +2716,12 @@ Adjacencies:
 <a name="Item_003a-vertices"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertices</b><i> (<var>gr</var>)</i>
-<a name="IDX2142"></a>
+<a name="IDX2146"></a>
 </dt>
 <dd><p>Returns the list of vertices in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) vertices(complete_graph(4));
 (%o2)                     [3, 2, 1, 0]
 </pre>
@@ -2736,7 +2736,7 @@ Adjacencies:
 <a name="Item_003a-vertex_005fcoloring"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertex_coloring</b><i> (<var>gr</var>)</i>
-<a name="IDX2143"></a>
+<a name="IDX2147"></a>
 </dt>
 <dd><p>Returns an optimal coloring of the vertices of the graph <var>gr</var>.
 </p>
@@ -2744,7 +2744,7 @@ Adjacencies:
 coloring of the vertices of <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p:petersen_graph()$
 (%i3) vertex_coloring(p);
 (%o3) [3, [[0, 2], [1, 3], [2, 2], [3, 3], [4, 1], [5, 3], 
@@ -2761,7 +2761,7 @@ coloring of the vertices of <var>gr</var>.
 <a name="Item_003a-wiener_005findex"></a>
 </p><dl>
 <dt><u>Function:</u> <b>wiener_index</b><i> (<var>gr</var>)</i>
-<a name="IDX2144"></a>
+<a name="IDX2148"></a>
 </dt>
 <dd><p>Returns the Wiener index of the graph <var>gr</var>.
 </p>
@@ -2777,21 +2777,21 @@ coloring of the vertices of <var>gr</var>.
 </p></dd></dl>
 
 <hr size="6">
-<a name="SEC295"></a>
+<a name="SEC296"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC294" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC296" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC295" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC297" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC292" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC293" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 61.2.3 Modifying graphs </h3>
@@ -2800,12 +2800,12 @@ coloring of the vertices of <var>gr</var>.
 <a name="Item_003a-add_005fedge"></a>
 </p><dl>
 <dt><u>Function:</u> <b>add_edge</b><i> (<var>e</var>, <var>gr</var>)</i>
-<a name="IDX2145"></a>
+<a name="IDX2149"></a>
 </dt>
 <dd><p>Adds the edge <var>e</var> to the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) p : path_graph(4)$
 (%i3) neighbors(0, p);
 (%o3)                          [1]
@@ -2825,12 +2825,12 @@ coloring of the vertices of <var>gr</var>.
 <a name="Item_003a-add_005fedges"></a>
 </p><dl>
 <dt><u>Function:</u> <b>add_edges</b><i> (<var>e_list</var>, <var>gr</var>)</i>
-<a name="IDX2146"></a>
+<a name="IDX2150"></a>
 </dt>
 <dd><p>Adds all edges in the list <var>e_list</var> to the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : empty_graph(3)$
 (%i3) add_edges([[0,1],[1,2]], g)$
 (%i4) print_graph(g)$
@@ -2851,12 +2851,12 @@ Adjacencies:
 <a name="Item_003a-add_005fvertex"></a>
 </p><dl>
 <dt><u>Function:</u> <b>add_vertex</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2147"></a>
+<a name="IDX2151"></a>
 </dt>
 <dd><p>Adds the vertex <var>v</var> to the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : path_graph(2)$
 (%i3) add_vertex(2, g)$
 (%i4) print_graph(g)$
@@ -2877,7 +2877,7 @@ Adjacencies:
 <a name="Item_003a-add_005fvertices"></a>
 </p><dl>
 <dt><u>Function:</u> <b>add_vertices</b><i> (<var>v_list</var>, <var>gr</var>)</i>
-<a name="IDX2148"></a>
+<a name="IDX2152"></a>
 </dt>
 <dd><p>Adds all vertices in the list <var>v_list</var> to the graph <var>gr</var>.
 </p>
@@ -2892,7 +2892,7 @@ Adjacencies:
 <a name="Item_003a-connect_005fvertices"></a>
 </p><dl>
 <dt><u>Function:</u> <b>connect_vertices</b><i> (<var>v_list</var>, <var>u_list</var>, <var>gr</var>)</i>
-<a name="IDX2149"></a>
+<a name="IDX2153"></a>
 </dt>
 <dd><p>Connects all vertices from the list <var>v_list</var> with the vertices in
 the list <var>u_list</var> in the graph <var>gr</var>.
@@ -2901,7 +2901,7 @@ the list <var>u_list</var> in the graph <var>gr</var>.
 vertices.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g : empty_graph(4)$
 (%i3) connect_vertices(0, [1,2,3], g)$
 (%i4) print_graph(g)$
@@ -2923,12 +2923,12 @@ Adjacencies:
 <a name="Item_003a-contract_005fedge"></a>
 </p><dl>
 <dt><u>Function:</u> <b>contract_edge</b><i> (<var>e</var>, <var>gr</var>)</i>
-<a name="IDX2150"></a>
+<a name="IDX2154"></a>
 </dt>
 <dd><p>Contracts the edge <var>e</var> in the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g: create_graph(
       8, [[0,3],[1,3],[2,3],[3,4],[4,5],[4,6],[4,7]])$
 (%i3) print_graph(g)$
@@ -2965,12 +2965,12 @@ Adjacencies:
 <a name="Item_003a-remove_005fedge"></a>
 </p><dl>
 <dt><u>Function:</u> <b>remove_edge</b><i> (<var>e</var>, <var>gr</var>)</i>
-<a name="IDX2151"></a>
+<a name="IDX2155"></a>
 </dt>
 <dd><p>Removes the edge <var>e</var> from the graph <var>gr</var>.
 </p>
 <p>Example:
-</p><pre class="example">(%i1) load (graphs)$
+</p><pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) c3 : cycle_graph(3)$
 (%i3) remove_edge([0,1], c3)$
 (%i4) print_graph(c3)$
@@ -2991,7 +2991,7 @@ Adjacencies:
 <a name="Item_003a-remove_005fvertex"></a>
 </p><dl>
 <dt><u>Function:</u> <b>remove_vertex</b><i> (<var>v</var>, <var>gr</var>)</i>
-<a name="IDX2152"></a>
+<a name="IDX2156"></a>
 </dt>
 <dd><p>Removes the vertex <var>v</var> from the graph <var>gr</var>.
 </p>
@@ -3002,21 +3002,21 @@ Adjacencies:
 </p></dd></dl>
 
 <hr size="6">
-<a name="SEC296"></a>
+<a name="SEC297"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC295" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC297" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC296" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC298" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC292" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC293" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 61.2.4 Reading and writing to files </h3>
@@ -3025,7 +3025,7 @@ Adjacencies:
 <a name="Item_003a-dimacs_005fexport"></a>
 </p><dl>
 <dt><u>Function:</u> <b>dimacs_export</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dimacs_export</tt> (<var>gr</var>, <var>fl</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dimacs_export</tt> (<var>gr</var>, <var>fl</var>, <var>comment1</var>, ..., <var>commentn</var>)</i>
-<a name="IDX2153"></a>
+<a name="IDX2157"></a>
 </dt>
 <dd><p>Exports the graph into the file <var>fl</var> in the DIMACS format. Optional
 comments will be added to the top of the file.
@@ -3041,7 +3041,7 @@ comments will be added to the top of the file.
 <a name="Item_003a-dimacs_005fimport"></a>
 </p><dl>
 <dt><u>Function:</u> <b>dimacs_import</b><i> (<var>fl</var>)</i>
-<a name="IDX2154"></a>
+<a name="IDX2158"></a>
 </dt>
 <dd><p>Returns the graph from file <var>fl</var> in the DIMACS format.
 </p>
@@ -3056,7 +3056,7 @@ comments will be added to the top of the file.
 <a name="Item_003a-graph6_005fdecode"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph6_decode</b><i> (<var>str</var>)</i>
-<a name="IDX2155"></a>
+<a name="IDX2159"></a>
 </dt>
 <dd><p>Returns the graph encoded in the graph6 format in the string <var>str</var>.
 </p>
@@ -3071,7 +3071,7 @@ comments will be added to the top of the file.
 <a name="Item_003a-graph6_005fencode"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph6_encode</b><i> (<var>gr</var>)</i>
-<a name="IDX2156"></a>
+<a name="IDX2160"></a>
 </dt>
 <dd><p>Returns a string which encodes the graph <var>gr</var> in the graph6 format.
 </p>
@@ -3086,7 +3086,7 @@ comments will be added to the top of the file.
 <a name="Item_003a-graph6_005fexport"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph6_export</b><i> (<var>gr_list</var>, <var>fl</var>)</i>
-<a name="IDX2157"></a>
+<a name="IDX2161"></a>
 </dt>
 <dd><p>Exports graphs in the list <var>gr_list</var> to the file <var>fl</var> in the
 graph6 format.
@@ -3102,7 +3102,7 @@ graph6 format.
 <a name="Item_003a-graph6_005fimport"></a>
 </p><dl>
 <dt><u>Function:</u> <b>graph6_import</b><i> (<var>fl</var>)</i>
-<a name="IDX2158"></a>
+<a name="IDX2162"></a>
 </dt>
 <dd><p>Returns a list of graphs from the file <var>fl</var> in the graph6 format.
 </p>
@@ -3117,7 +3117,7 @@ graph6 format.
 <a name="Item_003a-sparse6_005fdecode"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sparse6_decode</b><i> (<var>str</var>)</i>
-<a name="IDX2159"></a>
+<a name="IDX2163"></a>
 </dt>
 <dd><p>Returns the graph encoded in the sparse6 format in the string <var>str</var>.
 </p>
@@ -3132,7 +3132,7 @@ graph6 format.
 <a name="Item_003a-sparse6_005fencode"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sparse6_encode</b><i> (<var>gr</var>)</i>
-<a name="IDX2160"></a>
+<a name="IDX2164"></a>
 </dt>
 <dd><p>Returns a string which encodes the graph <var>gr</var> in the sparse6 format.
 </p>
@@ -3147,7 +3147,7 @@ graph6 format.
 <a name="Item_003a-sparse6_005fexport"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sparse6_export</b><i> (<var>gr_list</var>, <var>fl</var>)</i>
-<a name="IDX2161"></a>
+<a name="IDX2165"></a>
 </dt>
 <dd><p>Exports graphs in the list <var>gr_list</var> to the file <var>fl</var> in the
 sparse6 format.
@@ -3163,7 +3163,7 @@ sparse6 format.
 <a name="Item_003a-sparse6_005fimport"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sparse6_import</b><i> (<var>fl</var>)</i>
-<a name="IDX2162"></a>
+<a name="IDX2166"></a>
 </dt>
 <dd><p>Returns a list of graphs from the file <var>fl</var> in the sparse6 format.
 </p>
@@ -3175,21 +3175,21 @@ sparse6 format.
 </p></dd></dl>
 
 <hr size="6">
-<a name="SEC297"></a>
+<a name="SEC298"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC296" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC297" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC292" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC293" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 61.2.5 Visualization </h3>
@@ -3198,9 +3198,9 @@ sparse6 format.
 <a name="Item_003a-draw_005fgraph"></a>
 </p><dl>
 <dt><u>Function:</u> <b>draw_graph</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>draw_graph</tt> (<var>graph</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>draw_graph</tt> (<var>graph</var>, <var>option1</var>, ..., <var>optionk</var>)</i>
-<a name="IDX2163"></a>
+<a name="IDX2167"></a>
 </dt>
-<dd><p>Draws the graph using the <a href="maxima_52.html#SEC248">draw</a> package.
+<dd><p>Draws the graph using the <a href="maxima_52.html#SEC249">draw</a> package.
 </p>
 <p>The algorithm used to position vertices is specified by the optional
 argument <var>program</var>. The default value is
@@ -3210,7 +3210,7 @@ installed separately.
 </p>
 <p>Example 1:
 </p>
-<pre class="example">(%i1) load (graphs)$
+<pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g:grid_graph(10,10)$
 (%i3) m:max_matching(g)$
 (%i4) draw_graph(g,
@@ -3222,7 +3222,7 @@ installed separately.
 </p>
 <p>Example 2:
 </p>
-<pre class="example">(%i1) load (graphs)$
+<pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g:create_graph(16,
     [
      [0,1],[1,3],[2,3],[0,2],[3,4],[2,4],
@@ -3244,7 +3244,7 @@ installed separately.
 </p>
 <p>Example 3:
 </p>
-<pre class="example">(%i1) load (graphs)$
+<pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) g:create_graph(16,
     [
      [0,1],[1,3],[2,3],[0,2],[3,4],[2,4],
@@ -3268,7 +3268,7 @@ installed separately.
 </p>
 <p>Example 4:
 </p>
-<pre class="example">(%i1) load (graphs)$
+<pre class="example">(%i1) load (&quot;graphs&quot;)$
 (%i2) net : create_graph(
     [0,1,2,3,4,5],
     [
@@ -3324,7 +3324,7 @@ installed separately.
 <a name="Item_003a-draw_005fgraph_005fprogram"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>draw_graph_program</b>
-<a name="IDX2164"></a>
+<a name="IDX2168"></a>
 </dt>
 <dd><p>Default value: <var>spring_embedding</var>
 </p>
@@ -3342,7 +3342,7 @@ installed separately.
 <a name="Item_003a-show_005fid"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_id</b>
-<a name="IDX2165"></a>
+<a name="IDX2169"></a>
 </dt>
 <dd><p>Default value: <var>false</var>
 </p>
@@ -3359,7 +3359,7 @@ installed separately.
 <a name="Item_003a-show_005flabel"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_label</b>
-<a name="IDX2166"></a>
+<a name="IDX2170"></a>
 </dt>
 <dd><p>Default value: <var>false</var>
 </p>
@@ -3376,7 +3376,7 @@ installed separately.
 </p>
 <dl>
 <dt><u>draw_graph option:</u> <b>label_alignment</b>
-<a name="IDX2167"></a>
+<a name="IDX2171"></a>
 </dt>
 <dd><p>Default value: <var>center</var>
 </p>
@@ -3394,7 +3394,7 @@ be <code>left</code>, <code>center</code> or <code>right</code>.
 <a name="Item_003a-show_005fweight"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_weight</b>
-<a name="IDX2168"></a>
+<a name="IDX2172"></a>
 </dt>
 <dd><p>Default value: <var>false</var>
 </p>
@@ -3411,7 +3411,7 @@ be <code>left</code>, <code>center</code> or <code>right</code>.
 <a name="Item_003a-vertex_005ftype"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>vertex_type</b>
-<a name="IDX2169"></a>
+<a name="IDX2173"></a>
 </dt>
 <dd><p>Default value: <var>circle</var>
 </p>
@@ -3429,7 +3429,7 @@ the <code>draw</code> package for possible values.
 <a name="Item_003a-vertex_005fsize"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>vertex_size</b>
-<a name="IDX2170"></a>
+<a name="IDX2174"></a>
 </dt>
 <dd><p>The size of vertices.
 </p>
@@ -3444,7 +3444,7 @@ the <code>draw</code> package for possible values.
 <a name="Item_003a-vertex_005fcolor"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>vertex_color</b>
-<a name="IDX2171"></a>
+<a name="IDX2175"></a>
 </dt>
 <dd><p>The color used for displaying vertices.
 </p>
@@ -3459,7 +3459,7 @@ the <code>draw</code> package for possible values.
 <a name="Item_003a-show_005fvertices"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_vertices</b>
-<a name="IDX2172"></a>
+<a name="IDX2176"></a>
 </dt>
 <dd><p>Default value: []
 </p>
@@ -3476,7 +3476,7 @@ the <code>draw</code> package for possible values.
 <a name="Item_003a-show_005fvertex_005ftype"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_vertex_type</b>
-<a name="IDX2173"></a>
+<a name="IDX2177"></a>
 </dt>
 <dd><p>Defines how vertices specified in <var>show_vertices</var> are displayed.
 See the <var>point_type</var> option for the <code>draw</code> package for possible
@@ -3493,7 +3493,7 @@ values.
 <a name="Item_003a-show_005fvertex_005fsize"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_vertex_size</b>
-<a name="IDX2174"></a>
+<a name="IDX2178"></a>
 </dt>
 <dd><p>The size of vertices in <var>show_vertices</var>.
 </p>
@@ -3508,7 +3508,7 @@ values.
 <a name="Item_003a-show_005fvertex_005fcolor"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_vertex_color</b>
-<a name="IDX2175"></a>
+<a name="IDX2179"></a>
 </dt>
 <dd><p>The color used for displaying vertices in the <var>show_vertices</var> list.
 </p>
@@ -3523,7 +3523,7 @@ values.
 <a name="Item_003a-vertex_005fpartition"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>vertex_partition</b>
-<a name="IDX2176"></a>
+<a name="IDX2180"></a>
 </dt>
 <dd><p>Default value: []
 </p>
@@ -3542,7 +3542,7 @@ different color.
 </p>
 <dl>
 <dt><u>draw_graph option:</u> <b>vertex_coloring</b>
-<a name="IDX2177"></a>
+<a name="IDX2181"></a>
 </dt>
 <dd><p>Specifies coloring of the vertices. The coloring <var>col</var> must be
 specified in the format as returned by <var>vertex_coloring</var>.
@@ -3558,7 +3558,7 @@ specified in the format as returned by <var>vertex_coloring</var>.
 <a name="Item_003a-edge_005fcolor"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>edge_color</b>
-<a name="IDX2178"></a>
+<a name="IDX2182"></a>
 </dt>
 <dd><p>The color used for displaying edges.
 </p>
@@ -3573,7 +3573,7 @@ specified in the format as returned by <var>vertex_coloring</var>.
 <a name="Item_003a-edge_005fwidth"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>edge_width</b>
-<a name="IDX2179"></a>
+<a name="IDX2183"></a>
 </dt>
 <dd><p>The width of edges.
 </p>
@@ -3588,7 +3588,7 @@ specified in the format as returned by <var>vertex_coloring</var>.
 <a name="Item_003a-edge_005ftype"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>edge_type</b>
-<a name="IDX2180"></a>
+<a name="IDX2184"></a>
 </dt>
 <dd><p>Defines how edges are displayed. See the <var>line_type</var> option for the
 <code>draw</code> package.
@@ -3604,7 +3604,7 @@ specified in the format as returned by <var>vertex_coloring</var>.
 <a name="Item_003a-show_005fedges"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_edges</b>
-<a name="IDX2181"></a>
+<a name="IDX2185"></a>
 </dt>
 <dd><p>Display edges specified in the list <var>e_list</var> using a different
 color.
@@ -3620,7 +3620,7 @@ color.
 <a name="Item_003a-show_005fedge_005fcolor"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_edge_color</b>
-<a name="IDX2182"></a>
+<a name="IDX2186"></a>
 </dt>
 <dd><p>The color used for displaying edges in the <var>show_edges</var> list.
 </p>
@@ -3635,7 +3635,7 @@ color.
 <a name="Item_003a-show_005fedge_005fwidth"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_edge_width</b>
-<a name="IDX2183"></a>
+<a name="IDX2187"></a>
 </dt>
 <dd><p>The width of edges in <var>show_edges</var>.
 </p>
@@ -3650,7 +3650,7 @@ color.
 <a name="Item_003a-show_005fedge_005ftype"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>show_edge_type</b>
-<a name="IDX2184"></a>
+<a name="IDX2188"></a>
 </dt>
 <dd><p>Defines how edges in <var>show_edges</var> are displayed. See the
 <var>line_type</var> option for the <code>draw</code> package.
@@ -3666,7 +3666,7 @@ color.
 <a name="Item_003a-edge_005fpartition"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>edge_partition</b>
-<a name="IDX2185"></a>
+<a name="IDX2189"></a>
 </dt>
 <dd><p>A partition <code>[[e1,e2,...],...,[ek,...,em]]</code> of edges of the
 graph. The edges of each list in the partition will be drawn using a
@@ -3683,7 +3683,7 @@ different color.
 </p>
 <dl>
 <dt><u>draw_graph option:</u> <b>edge_coloring</b>
-<a name="IDX2186"></a>
+<a name="IDX2190"></a>
 </dt>
 <dd><p>The coloring of edges. The coloring must be specified in the
 format as returned by the function <var>edge_coloring</var>.
@@ -3699,7 +3699,7 @@ format as returned by the function <var>edge_coloring</var>.
 <a name="Item_003a-redraw"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>redraw</b>
-<a name="IDX2187"></a>
+<a name="IDX2191"></a>
 </dt>
 <dd><p>Default value: <var>false</var>
 </p>
@@ -3717,7 +3717,7 @@ have been saved from a previous drawing of the graph.
 </p>
 <dl>
 <dt><u>draw_graph option:</u> <b>head_angle</b>
-<a name="IDX2188"></a>
+<a name="IDX2192"></a>
 </dt>
 <dd><p>Default value: 15
 </p>
@@ -3734,7 +3734,7 @@ have been saved from a previous drawing of the graph.
 </p>
 <dl>
 <dt><u>draw_graph option:</u> <b>head_length</b>
-<a name="IDX2189"></a>
+<a name="IDX2193"></a>
 </dt>
 <dd><p>Default value: 0.1
 </p>
@@ -3751,7 +3751,7 @@ have been saved from a previous drawing of the graph.
 <a name="Item_003a-spring_005fembedding_005fdepth"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>spring_embedding_depth</b>
-<a name="IDX2190"></a>
+<a name="IDX2194"></a>
 </dt>
 <dd><p>Default value: 50
 </p>
@@ -3769,7 +3769,7 @@ algorithm.
 </p>
 <dl>
 <dt><u>draw_graph option:</u> <b>terminal</b>
-<a name="IDX2191"></a>
+<a name="IDX2195"></a>
 </dt>
 <dd><p>The terminal used for drawing (see the <var>terminal</var> option in the
 <code>draw</code> package).
@@ -3785,7 +3785,7 @@ algorithm.
 </p>
 <dl>
 <dt><u>draw_graph option:</u> <b>file_name</b>
-<a name="IDX2192"></a>
+<a name="IDX2196"></a>
 </dt>
 <dd><p>The filename of the drawing if terminal is not screen.
 </p>
@@ -3800,7 +3800,7 @@ algorithm.
 <a name="Item_003a-program"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>program</b>
-<a name="IDX2193"></a>
+<a name="IDX2197"></a>
 </dt>
 <dd><p>Defines the program used for positioning vertices of the graph. Can be
 one of the graphviz programs (dot, neato, twopi, circ, fdp),
@@ -3821,7 +3821,7 @@ of vertices with fixed position can be specified with the
 <a name="Item_003a-fixed_005fvertices"></a>
 </p><dl>
 <dt><u>draw_graph option:</u> <b>fixed_vertices</b>
-<a name="IDX2194"></a>
+<a name="IDX2198"></a>
 </dt>
 <dd><p>Specifies a list of vertices which will have positions fixed along a regular polygon.
 Can be used when <code>program=spring_embedding</code>.
@@ -3837,7 +3837,7 @@ Can be used when <code>program=spring_embedding</code>.
 <a name="Item_003a-vertices_005fto_005fpath"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertices_to_path</b><i> (<var>v_list</var>)</i>
-<a name="IDX2195"></a>
+<a name="IDX2199"></a>
 </dt>
 <dd><p>Converts a list <var>v_list</var> of vertices to a list of edges of the path
 defined by <var>v_list</var>.
@@ -3852,7 +3852,7 @@ defined by <var>v_list</var>.
 <a name="Item_003a-vertices_005fto_005fcycle"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vertices_to_cycle</b><i> (<var>v_list</var>)</i>
-<a name="IDX2196"></a>
+<a name="IDX2200"></a>
 </dt>
 <dd><p>Converts a list <var>v_list</var> of vertices to a list of edges of the cycle
 defined by <var>v_list</var>.
@@ -3866,8 +3866,8 @@ defined by <var>v_list</var>.
 <p><a name="Item_003a-grobner_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC290" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_62.html#SEC298" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC291" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_62.html#SEC299" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -3875,12 +3875,12 @@ defined by <var>v_list</var>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

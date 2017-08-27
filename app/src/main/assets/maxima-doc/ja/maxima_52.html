@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 52. draw</title>
+<title>Maxima 5.40.0 Manual: 52. draw</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 52. draw">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 52. draw">
+<meta name="description" content="Maxima 5.40.0 Manual: 52. draw">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 52. draw">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,34 +92,35 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="draw_002dpkg"></a>
-<a name="SEC248"></a>
+<a name="SEC249"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_51.html#SEC247" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC249" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_51.html#SEC248" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC250" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_51.html#SEC244" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_51.html#SEC245" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 52. draw </h1>
 
 <p>,</p><table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC249">52.1 Introduction to draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC250">52.1 Introduction to draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC250">52.2 Functions and Variables for draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC251">52.2 Functions and Variables for draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC255">52.3 Functions and Variables for pictures</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC256">52.3 Functions and Variables for pictures</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC256">52.4 Functions and Variables for worldmap</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC257">52.4 Functions and Variables for worldmap</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -128,21 +129,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Introduction-to-draw"></a>
 </p><hr size="6">
 <a name="Introduction-to-draw"></a>
-<a name="SEC249"></a>
+<a name="SEC250"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC248" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC249" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.1 Introduction to draw </h2>
@@ -171,21 +172,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Functions-and-Variables-for-draw"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-draw"></a>
-<a name="SEC250"></a>
+<a name="SEC251"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC249" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC251" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC250" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC252" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.2 Functions and Variables for draw </h2>
@@ -193,21 +194,21 @@ img {max-width:80%; max-height: 80%}
 
 
 <hr size="6">
-<a name="SEC251"></a>
+<a name="SEC252"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC250" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC252" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC251" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC253" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.1 Scenes </h3>
@@ -217,7 +218,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-gr2d"></a>
 </p><dl>
 <dt><u>シーン構成子:</u> <b>gr2d</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1763"></a>
+<a name="IDX1767"></a>
 </dt>
 <dd><p>関数 <code>gr2d</code>は 2Dシーンを記述するオブジェクトを作ります。
 引数は<i>グラフィックオプション</i>、<i>グラフィックオブジェクト</i>、または、
@@ -267,7 +268,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-gr3d"></a>
 </p><dl>
 <dt><u>シーン構成子:</u> <b>gr3d</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1764"></a>
+<a name="IDX1768"></a>
 </dt>
 <dd><p>関数 <code>gr3d</code>は 3dシーンを記述するオブジェクトを作ります。
 引数は<i>グラフィックオプション</i>、<i>グラフィックオブジェクト</i>、または
@@ -299,21 +300,21 @@ img {max-width:80%; max-height: 80%}
 
 
 <hr size="6">
-<a name="SEC252"></a>
+<a name="SEC253"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC251" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC253" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC252" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC254" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.2 Functions </h3>
@@ -324,7 +325,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-draw"></a>
 </p><dl>
 <dt><u>関数:</u> <b>draw</b><i> (<var>gr2d</var>, ..., <var>gr3d</var>, ..., <var>options</var>, ...)</i>
-<a name="IDX1765"></a>
+<a name="IDX1769"></a>
 </dt>
 <dd><p>一連のシーンをプロットします;
 引数は <code>gr2d</code>や <code>gr3d</code>のオブジェクトといくつかのオプションです。
@@ -382,7 +383,7 @@ End of animation sequence
 <a name="Item_003a-draw2d"></a>
 </p><dl>
 <dt><u>関数:</u> <b>draw2d</b><i> (<var>option</var>, <var>graphic_object</var>, ...)</i>
-<a name="IDX1766"></a>
+<a name="IDX1770"></a>
 </dt>
 <dd><p>この関数は
 <code>draw(gr2d(<var>options</var>, ..., <var>graphic_object</var>, ...))</code>.
@@ -408,7 +409,7 @@ End of animation sequence
 <a name="Item_003a-draw3d"></a>
 </p><dl>
 <dt><u>関数:</u> <b>draw3d</b><i> (<var>option</var>, <var>graphic_object</var>, ...)</i>
-<a name="IDX1767"></a>
+<a name="IDX1771"></a>
 </dt>
 <dd><p>この関数は
 <code>draw(gr3d(<var>options</var>, ..., <var>graphic_object</var>, ...))</code>
@@ -433,7 +434,7 @@ End of animation sequence
 <a name="Item_003a-drawf_005file"></a>
 </p><dl>
 <dt><u>関数:</u> <b>drawf_ile</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1768"></a>
+<a name="IDX1772"></a>
 </dt>
 <dd><p>現在のプロットをファイルに保存します。
 受け付けられるグラフィックオプションは以下です:
@@ -460,7 +461,7 @@ End of animation sequence
 <a name="Item_003a-multiplot_005fmode"></a>
 </p><dl>
 <dt><u>関数:</u> <b>multiplot_mode</b><i> (<var>term</var>)</i>
-<a name="IDX1769"></a>
+<a name="IDX1773"></a>
 </dt>
 <dd><p>この関数を使うと、 Maximaを端末
 <var>term</var>で 1ウィンドウマルチプロットモードとして動作させることができます;
@@ -506,7 +507,7 @@ End of animation sequence
 <a name="Item_003a-set_005fdraw_005fdefaults"></a>
 </p><dl>
 <dt><u>関数:</u> <b>set_draw_defaults</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1770"></a>
+<a name="IDX1774"></a>
 </dt>
 <dd><p>ユーザーグラフィックオプションを設定します。
 この関数は
@@ -535,21 +536,21 @@ End of animation sequence
 
 
 <hr size="6">
-<a name="SEC253"></a>
+<a name="SEC254"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC252" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC254" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC253" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC255" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.3 Graphic options </h3>
@@ -559,7 +560,7 @@ End of animation sequence
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>adapt_depth</b>
-<a name="IDX1771"></a>
+<a name="IDX1775"></a>
 </dt>
 <dd><p>デフォルト値: 10
 </p>
@@ -582,7 +583,7 @@ End of animation sequence
 <a name="Item_003a-allocation"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>allocation</b>
-<a name="IDX1772"></a>
+<a name="IDX1776"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -633,7 +634,7 @@ End of animation sequence
 <a name="Item_003a-axis_005f3d"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>axis_3d</b>
-<a name="IDX1773"></a>
+<a name="IDX1777"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -665,7 +666,7 @@ End of animation sequence
 <a name="Item_003a-axis_005fbottom"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>axis_bottom</b>
-<a name="IDX1774"></a>
+<a name="IDX1778"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -695,7 +696,7 @@ End of animation sequence
 <a name="Item_003a-axis_005fleft"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>axis_left</b>
-<a name="IDX1775"></a>
+<a name="IDX1779"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -724,7 +725,7 @@ End of animation sequence
 <a name="Item_003a-axis_005fright"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>axis_right</b>
-<a name="IDX1776"></a>
+<a name="IDX1780"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -753,7 +754,7 @@ End of animation sequence
 <a name="Item_003a-axis_005ftop"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>axis_top</b>
-<a name="IDX1777"></a>
+<a name="IDX1781"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -782,7 +783,7 @@ End of animation sequence
 <a name="Item_003a-background_005fcolor"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>background_color</b>
-<a name="IDX1778"></a>
+<a name="IDX1782"></a>
 </dt>
 <dd><p>デフォルト値: <code>white</code>
 </p>
@@ -806,7 +807,7 @@ End of animation sequence
 <a name="Item_003a-border"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>border</b>
-<a name="IDX1779"></a>
+<a name="IDX1783"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -842,7 +843,7 @@ End of animation sequence
 <a name="Item_003a-capping"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>capping</b>
-<a name="IDX1780"></a>
+<a name="IDX1784"></a>
 </dt>
 <dd><p>デフォルト値: <code>[false, false]</code>
 </p>
@@ -874,7 +875,7 @@ End of animation sequence
 <a name="Item_003a-cbrange"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>cbrange</b>
-<a name="IDX1781"></a>
+<a name="IDX1785"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -914,7 +915,7 @@ End of animation sequence
 <a name="Item_003a-cbtics"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>cbtics</b>
-<a name="IDX1782"></a>
+<a name="IDX1786"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -949,7 +950,7 @@ End of animation sequence
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>color</b>
-<a name="IDX1783"></a>
+<a name="IDX1787"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;blue&quot;</code>
 </p>
@@ -1018,7 +1019,7 @@ dark_violet      plum             purple
 <a name="Item_003a-colorbox"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>colorbox</b>
-<a name="IDX1784"></a>
+<a name="IDX1788"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1060,7 +1061,7 @@ dark_violet      plum             purple
 <a name="Item_003a-columns"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>columns</b>
-<a name="IDX1785"></a>
+<a name="IDX1789"></a>
 </dt>
 <dd><p>デフォルト値: 1
 </p>
@@ -1090,7 +1091,7 @@ dark_violet      plum             purple
 <a name="Item_003a-contour"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>contour</b>
-<a name="IDX1786"></a>
+<a name="IDX1790"></a>
 </dt>
 <dd><p>デフォルト値: <code>none</code>
 </p>
@@ -1148,7 +1149,7 @@ xy平面上と表面と2つの等高線をプロットします。
 <a name="Item_003a-contour_005flevels"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>contour_levels</b>
-<a name="IDX1787"></a>
+<a name="IDX1791"></a>
 </dt>
 <dd><p>デフォルト値: 5
 </p>
@@ -1216,7 +1217,7 @@ xy平面上と表面と2つの等高線をプロットします。
 <a name="Item_003a-data_005ffile_005fname"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>data_file_name</b>
-<a name="IDX1788"></a>
+<a name="IDX1792"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;data.gnuplot&quot;</code>
 </p>
@@ -1239,7 +1240,7 @@ Gnuplotが必要とする数値データを含むファイルの名前です。
 <a name="Item_003a-delay"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>delay</b>
-<a name="IDX1789"></a>
+<a name="IDX1793"></a>
 </dt>
 <dd><p>デフォルト値: 5
 </p>
@@ -1278,7 +1279,7 @@ End of animation sequence
 <a name="Item_003a-dimensions"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>dimensions</b>
-<a name="IDX1790"></a>
+<a name="IDX1794"></a>
 </dt>
 <dd><p>デフォルト値: <code>[600,500]</code>
 </p>
@@ -1333,7 +1334,7 @@ A4縦寸法の epsファイルが欲しいです。
 <a name="Item_003a-draw_005frealpart"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>draw_realpart</b>
-<a name="IDX1791"></a>
+<a name="IDX1795"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1369,7 +1370,7 @@ A4縦寸法の epsファイルが欲しいです。
 <a name="Item_003a-enhanced3d"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>enhanced3d</b>
-<a name="IDX1792"></a>
+<a name="IDX1796"></a>
 </dt>
 <dd><p>デフォルト値: <code>none</code>
 </p>
@@ -1521,7 +1522,7 @@ pm3dモードを設定して表面が色付けられます。
 <a name="Item_003a-error_005ftype"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>error_type</b>
-<a name="IDX1793"></a>
+<a name="IDX1797"></a>
 </dt>
 <dd><p>デフォルト値: <code>y</code>
 </p>
@@ -1538,7 +1539,7 @@ pm3dモードを設定して表面が色付けられます。
 <a name="Item_003a-file_005fname"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>file_name</b>
-<a name="IDX1794"></a>
+<a name="IDX1798"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;maxima_out&quot;</code>
 </p>
@@ -1566,7 +1567,7 @@ pm3dモードを設定して表面が色付けられます。
 <a name="Item_003a-fill_005fcolor"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>fill_color</b>
-<a name="IDX1795"></a>
+<a name="IDX1799"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;red&quot;</code>
 </p>
@@ -1585,7 +1586,7 @@ pm3dモードを設定して表面が色付けられます。
 <a name="Item_003a-fill_005fdensity"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>fill_density</b>
-<a name="IDX1796"></a>
+<a name="IDX1800"></a>
 </dt>
 <dd><p>デフォルト値: 0
 </p>
@@ -1601,7 +1602,7 @@ pm3dモードを設定して表面が色付けられます。
 <a name="Item_003a-filled_005ffunc"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>filled_func</b>
-<a name="IDX1797"></a>
+<a name="IDX1801"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1660,7 +1661,7 @@ Note that the variable in
 <a name="Item_003a-font"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>font</b>
-<a name="IDX1798"></a>
+<a name="IDX1802"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -1771,7 +1772,7 @@ Windows端末はプロット内部でフォントの変更をサポートしま�
 <a name="Item_003a-font_005fsize"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>font_size</b>
-<a name="IDX1799"></a>
+<a name="IDX1803"></a>
 </dt>
 <dd><p>デフォルト値: 10
 </p>
@@ -1797,7 +1798,7 @@ Windows端末はプロット内部でフォントの変更をサポートしま�
 <a name="Item_003a-gnuplot_005ffile_005fname"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>gnuplot_file_name</b>
-<a name="IDX1800"></a>
+<a name="IDX1804"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;maxout_xxx.gnuplot&quot;</code>
 ここで <code>&quot;xxx&quot;</code>は同時に走っているmaximaプロセスそれぞれに固有の数字です。
@@ -1829,7 +1830,7 @@ Windows端末はプロット内部でフォントの変更をサポートしま�
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>grid</b>
-<a name="IDX1801"></a>
+<a name="IDX1805"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1861,7 +1862,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-head_005fangle"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>head_angle</b>
-<a name="IDX1802"></a>
+<a name="IDX1806"></a>
 </dt>
 <dd><p>デフォルト値: 45
 </p>
@@ -1908,7 +1909,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-head_005fboth"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>head_both</b>
-<a name="IDX1803"></a>
+<a name="IDX1807"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1942,7 +1943,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-head_005flength"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>head_length</b>
-<a name="IDX1804"></a>
+<a name="IDX1808"></a>
 </dt>
 <dd><p>デフォルト値: 2
 </p>
@@ -1980,7 +1981,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-head_005ftype"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>head_type</b>
-<a name="IDX1805"></a>
+<a name="IDX1809"></a>
 </dt>
 <dd><p>デフォルト値: <code>filled</code>
 </p>
@@ -2018,7 +2019,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-interpolate_005fcolor"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>interpolate_color</b>
-<a name="IDX1806"></a>
+<a name="IDX1810"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2095,7 +2096,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-ip_005fgrid"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ip_grid</b>
-<a name="IDX1807"></a>
+<a name="IDX1811"></a>
 </dt>
 <dd><p>デフォルト値: <code>[50, 50]</code>
 </p>
@@ -2116,7 +2117,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-ip_005fgrid_005fin"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ip_grid_in</b>
-<a name="IDX1808"></a>
+<a name="IDX1812"></a>
 </dt>
 <dd><p>デフォルト値: <code>[5, 5]</code>
 </p>
@@ -2137,7 +2138,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-key"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>key</b>
-<a name="IDX1809"></a>
+<a name="IDX1813"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -2177,7 +2178,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-key_005fpos"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>key_pos</b>
-<a name="IDX1810"></a>
+<a name="IDX1814"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (空文字列)
 </p>
@@ -2220,7 +2221,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-label_005falignment"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>label_alignment</b>
-<a name="IDX1811"></a>
+<a name="IDX1815"></a>
 </dt>
 <dd><p>デフォルト値: <code>center</code>
 </p>
@@ -2259,7 +2260,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-label_005forientation"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>label_orientation</b>
-<a name="IDX1812"></a>
+<a name="IDX1816"></a>
 </dt>
 <dd><p>デフォルト値: <code>horizontal</code>
 </p>
@@ -2298,7 +2299,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-line_005ftype"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>line_type</b>
-<a name="IDX1813"></a>
+<a name="IDX1817"></a>
 </dt>
 <dd><p>デフォルト値: <code>solid</code>
 </p>
@@ -2341,7 +2342,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-line_005fwidth"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>line_width</b>
-<a name="IDX1814"></a>
+<a name="IDX1818"></a>
 </dt>
 <dd><p>デフォルト値: 1
 </p>
@@ -2381,7 +2382,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-logcb"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>logcb</b>
-<a name="IDX1815"></a>
+<a name="IDX1819"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2419,7 +2420,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>logx</b>
-<a name="IDX1816"></a>
+<a name="IDX1820"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2450,7 +2451,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-logx_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>logx_secondary</b>
-<a name="IDX1817"></a>
+<a name="IDX1821"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2490,7 +2491,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>logy</b>
-<a name="IDX1818"></a>
+<a name="IDX1822"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2518,7 +2519,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-logy_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>logy_secondary</b>
-<a name="IDX1819"></a>
+<a name="IDX1823"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2557,7 +2558,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-logz"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>logz</b>
-<a name="IDX1820"></a>
+<a name="IDX1824"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2583,7 +2584,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 
 <dl>
 <dt><u>グラフィックオプション:</u> <b>nticks</b>
-<a name="IDX1821"></a>
+<a name="IDX1825"></a>
 </dt>
 <dd><p>デフォルト値: 29
 </p>
@@ -2623,7 +2624,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>palette</b>
-<a name="IDX1822"></a>
+<a name="IDX1826"></a>
 </dt>
 <dd><p>デフォルト値: <code>color</code>
 </p>
@@ -2711,7 +2712,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-point_005fsize"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>point_size</b>
-<a name="IDX1823"></a>
+<a name="IDX1827"></a>
 </dt>
 <dd><p>デフォルト値: 1
 </p>
@@ -2750,7 +2751,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>point_type</b>
-<a name="IDX1824"></a>
+<a name="IDX1828"></a>
 </dt>
 <dd><p>デフォルト値: 1
 </p>
@@ -2810,7 +2811,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-points_005fjoined"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>points_joined</b>
-<a name="IDX1825"></a>
+<a name="IDX1829"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2859,7 +2860,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-proportional_005faxes"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>proportional_axes</b>
-<a name="IDX1826"></a>
+<a name="IDX1830"></a>
 </dt>
 <dd><p>デフォルト値: <code>none</code>
 </p>
@@ -2909,7 +2910,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-surface_005fhide"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>surface_hide</b>
-<a name="IDX1827"></a>
+<a name="IDX1831"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2937,7 +2938,7 @@ x軸の目盛毎に <code>nx</code>個の線を、y軸の目盛毎に <code>ny</
 <a name="Item_003a-terminal"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>terminal</b>
-<a name="IDX1828"></a>
+<a name="IDX1832"></a>
 </dt>
 <dd><p>デフォルト値: <code>screen</code>
 </p>
@@ -3028,7 +3029,7 @@ End of animation sequence
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>title</b>
-<a name="IDX1829"></a>
+<a name="IDX1833"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -3056,7 +3057,7 @@ End of animation sequence
 <a name="Item_003a-transform"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>transform</b>
-<a name="IDX1830"></a>
+<a name="IDX1834"></a>
 </dt>
 <dd><p>デフォルト値: <code>none</code>
 </p>
@@ -3109,7 +3110,7 @@ End of animation sequence
 <a name="Item_003a-transparent"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>transparent</b>
-<a name="IDX1831"></a>
+<a name="IDX1835"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3143,7 +3144,7 @@ End of animation sequence
 <a name="Item_003a-unit_005fvectors"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>unit_vectors</b>
-<a name="IDX1832"></a>
+<a name="IDX1836"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3177,7 +3178,7 @@ End of animation sequence
 <a name="Item_003a-user_005fpreamble"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>user_preamble</b>
-<a name="IDX1833"></a>
+<a name="IDX1837"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -3226,7 +3227,7 @@ Gnuplotの振る舞いを微調整することができます。
 <a name="Item_003a-view"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>view</b>
-<a name="IDX1834"></a>
+<a name="IDX1838"></a>
 </dt>
 <dd><p>デフォルト値: <code>[60,30]</code>
 </p>
@@ -3264,7 +3265,7 @@ Gnuplotの振る舞いを微調整することができます。
 <a name="Item_003a-wired_005fsurface"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>wired_surface</b>
-<a name="IDX1835"></a>
+<a name="IDX1839"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3295,7 +3296,7 @@ Gnuplotの振る舞いを微調整することができます。
 <a name="Item_003a-x_005fvoxel"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>x_voxel</b>
-<a name="IDX1836"></a>
+<a name="IDX1840"></a>
 </dt>
 <dd><p>デフォルト値: 10
 </p>
@@ -3318,7 +3319,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xaxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xaxis</b>
-<a name="IDX1837"></a>
+<a name="IDX1841"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3349,7 +3350,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xaxis_005fcolor"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xaxis_color</b>
-<a name="IDX1838"></a>
+<a name="IDX1842"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;black&quot;</code>
 </p>
@@ -3379,7 +3380,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xaxis_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xaxis_secondary</b>
-<a name="IDX1839"></a>
+<a name="IDX1843"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3417,7 +3418,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xaxis_005ftype"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xaxis_type</b>
-<a name="IDX1840"></a>
+<a name="IDX1844"></a>
 </dt>
 <dd><p>デフォルト値: <code>dots</code>
 </p>
@@ -3448,7 +3449,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xaxis_005fwidth"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xaxis_width</b>
-<a name="IDX1841"></a>
+<a name="IDX1845"></a>
 </dt>
 <dd><p>デフォルト値: 1
 </p>
@@ -3478,7 +3479,7 @@ x方向のボクセルの数です。
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>xlabel</b>
-<a name="IDX1842"></a>
+<a name="IDX1846"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code>
 </p>
@@ -3508,7 +3509,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xlabel_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xlabel_secondary</b>
-<a name="IDX1843"></a>
+<a name="IDX1847"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (空の文字列)
 </p>
@@ -3541,7 +3542,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xrange"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xrange</b>
-<a name="IDX1844"></a>
+<a name="IDX1848"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -3572,7 +3573,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xrange_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xrange_secondary</b>
-<a name="IDX1845"></a>
+<a name="IDX1849"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -3600,7 +3601,7 @@ x方向のボクセルの数です。
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>xtics</b>
-<a name="IDX1846"></a>
+<a name="IDX1850"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -3676,7 +3677,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xtics_005faxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xtics_axis</b>
-<a name="IDX1847"></a>
+<a name="IDX1851"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3699,7 +3700,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xtics_005frotate"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xtics_rotate</b>
-<a name="IDX1848"></a>
+<a name="IDX1852"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3720,7 +3721,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xtics_005frotate_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xtics_rotate_secondary</b>
-<a name="IDX1849"></a>
+<a name="IDX1853"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3742,7 +3743,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xtics_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xtics_secondary</b>
-<a name="IDX1850"></a>
+<a name="IDX1854"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -3763,7 +3764,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xtics_005fsecondary_005faxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xtics_secondary_axis</b>
-<a name="IDX1851"></a>
+<a name="IDX1855"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3786,7 +3787,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xu_005fgrid"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xu_grid</b>
-<a name="IDX1852"></a>
+<a name="IDX1856"></a>
 </dt>
 <dd><p>デフォルト値: 30
 </p>
@@ -3822,7 +3823,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xy_005ffile"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xy_file</b>
-<a name="IDX1853"></a>
+<a name="IDX1857"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -3846,7 +3847,7 @@ x方向のボクセルの数です。
 <a name="Item_003a-xyplane"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>xyplane</b>
-<a name="IDX1854"></a>
+<a name="IDX1858"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3877,7 +3878,7 @@ xy平面は自動的に置かれます;
 <a name="Item_003a-y_005fvoxel"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>y_voxel</b>
-<a name="IDX1855"></a>
+<a name="IDX1859"></a>
 </dt>
 <dd><p>デフォルト値: 10
 </p>
@@ -3899,7 +3900,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yaxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yaxis</b>
-<a name="IDX1856"></a>
+<a name="IDX1860"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3928,7 +3929,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yaxis_005fcolor"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yaxis_color</b>
-<a name="IDX1857"></a>
+<a name="IDX1861"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;black&quot;</code>
 </p>
@@ -3958,7 +3959,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yaxis_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yaxis_secondary</b>
-<a name="IDX1858"></a>
+<a name="IDX1862"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -3993,7 +3994,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yaxis_005ftype"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yaxis_type</b>
-<a name="IDX1859"></a>
+<a name="IDX1863"></a>
 </dt>
 <dd><p>デフォルト値: <code>dots</code>
 </p>
@@ -4023,7 +4024,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yaxis_005fwidth"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yaxis_width</b>
-<a name="IDX1860"></a>
+<a name="IDX1864"></a>
 </dt>
 <dd><p>デフォルト値: 1
 </p>
@@ -4053,7 +4054,7 @@ y方向のボクセルの数です。
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>ylabel</b>
-<a name="IDX1861"></a>
+<a name="IDX1865"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code>
 </p>
@@ -4083,7 +4084,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ylabel_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ylabel_secondary</b>
-<a name="IDX1862"></a>
+<a name="IDX1866"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code> (空の文字列)
 </p>
@@ -4121,7 +4122,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yrange"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yrange</b>
-<a name="IDX1863"></a>
+<a name="IDX1867"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -4153,7 +4154,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yrange_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yrange_secondary</b>
-<a name="IDX1864"></a>
+<a name="IDX1868"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -4188,7 +4189,7 @@ y方向のボクセルの数です。
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>ytics</b>
-<a name="IDX1865"></a>
+<a name="IDX1869"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -4209,7 +4210,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ytics_005faxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ytics_axis</b>
-<a name="IDX1866"></a>
+<a name="IDX1870"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -4233,7 +4234,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ytics_005frotate"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ytics_rotate</b>
-<a name="IDX1867"></a>
+<a name="IDX1871"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -4254,7 +4255,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ytics_005frotate_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ytics_rotate_secondary</b>
-<a name="IDX1868"></a>
+<a name="IDX1872"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -4275,7 +4276,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ytics_005fsecondary"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ytics_secondary</b>
-<a name="IDX1869"></a>
+<a name="IDX1873"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -4297,7 +4298,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ytics_005fsecondary_005faxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ytics_secondary_axis</b>
-<a name="IDX1870"></a>
+<a name="IDX1874"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -4320,7 +4321,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-yv_005fgrid"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>yv_grid</b>
-<a name="IDX1871"></a>
+<a name="IDX1875"></a>
 </dt>
 <dd><p>デフォルト値: 30
 </p>
@@ -4354,7 +4355,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-z_005fvoxel"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>z_voxel</b>
-<a name="IDX1872"></a>
+<a name="IDX1876"></a>
 </dt>
 <dd><p>デフォルト値: 10
 </p>
@@ -4374,7 +4375,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-zaxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>zaxis</b>
-<a name="IDX1873"></a>
+<a name="IDX1877"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -4404,7 +4405,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-zaxis_005fcolor"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>zaxis_color</b>
-<a name="IDX1874"></a>
+<a name="IDX1878"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;black&quot;</code>
 </p>
@@ -4436,7 +4437,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-zaxis_005ftype"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>zaxis_type</b>
-<a name="IDX1875"></a>
+<a name="IDX1879"></a>
 </dt>
 <dd><p>デフォルト値: <code>dots</code>
 </p>
@@ -4467,7 +4468,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-zaxis_005fwidth"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>zaxis_width</b>
-<a name="IDX1876"></a>
+<a name="IDX1880"></a>
 </dt>
 <dd><p>デフォルト値: 1
 </p>
@@ -4499,7 +4500,7 @@ y方向のボクセルの数です。
 </p>
 <dl>
 <dt><u>グラフィックオプション:</u> <b>zlabel</b>
-<a name="IDX1877"></a>
+<a name="IDX1881"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;&quot;</code>
 </p>
@@ -4530,7 +4531,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-zlabel_005frotate"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>zlabel_rotate</b>
-<a name="IDX1878"></a>
+<a name="IDX1882"></a>
 </dt>
 <dd><p>デフォルト値: <code>&quot;auto&quot;</code>
 </p>
@@ -4564,7 +4565,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-zrange"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>zrange</b>
-<a name="IDX1879"></a>
+<a name="IDX1883"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -4595,7 +4596,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ztics"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ztics</b>
-<a name="IDX1880"></a>
+<a name="IDX1884"></a>
 </dt>
 <dd><p>デフォルト値: <code>auto</code>
 </p>
@@ -4617,7 +4618,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ztics_005faxis"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ztics_axis</b>
-<a name="IDX1881"></a>
+<a name="IDX1885"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -4639,7 +4640,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ztics_005frotate"></a>
 </p><dl>
 <dt><u>グラフィックオプション:</u> <b>ztics_rotate</b>
-<a name="IDX1882"></a>
+<a name="IDX1886"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -4659,21 +4660,21 @@ y方向のボクセルの数です。
 
 
 <hr size="6">
-<a name="SEC254"></a>
+<a name="SEC255"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC253" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC255" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC254" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC256" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.4 Graphics objects </h3>
@@ -4684,7 +4685,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-bars"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>bars</b><i> ([<var>x1</var>,<var>h1</var>,<var>w1</var>], [<var>x2</var>,<var>h2</var>,<var>w2</var>, ...])</i>
-<a name="IDX1883"></a>
+<a name="IDX1887"></a>
 </dt>
 <dd><p>2D内に垂直バーを描画します。
 </p>
@@ -4720,7 +4721,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-cylindrical"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>cylindrical</b><i> (<var>radius</var>, <var>z</var>, <var>minz</var>, <var>maxz</var>, <var>azi</var>, <var>minazi</var>, <var>maxazi</var>)</i>
-<a name="IDX1884"></a>
+<a name="IDX1888"></a>
 </dt>
 <dd><p>円柱座標で定義された 3D関数を描画します。
 </p>
@@ -4756,7 +4757,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-elevation_005fgrid"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>elevation_grid</b><i> (<var>mat</var>,<var>x0</var>,<var>y0</var>,<var>width</var>,<var>height</var>)</i>
-<a name="IDX1885"></a>
+<a name="IDX1889"></a>
 </dt>
 <dd><p>3D空間に行列 <var>mat</var>を描画します。
 <var>x0</var>から <em><var>x0</var> + <var>width</var></em>までの横座標範囲と
@@ -4801,7 +4802,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-ellipse"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>ellipse</b><i> (<var>xc</var>, <var>yc</var>, <var>a</var>, <var>b</var>, <var>ang1</var>, <var>ang2</var>)</i>
-<a name="IDX1886"></a>
+<a name="IDX1890"></a>
 </dt>
 <dd><p>2D内で楕円や円を描画します。
 </p>
@@ -4847,7 +4848,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-errors"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>errors</b><i> ([<var>x1</var>, <var>x2</var>, &hellip;], [<var>y1</var>, <var>y2</var>, &hellip;])</i>
-<a name="IDX1887"></a>
+<a name="IDX1891"></a>
 </dt>
 <dd><p>オプション <code>error_type</code>の値に依存して、
 水平、垂直もしくは両方のエラーバーと共に点を描きます。
@@ -4902,7 +4903,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-explicit"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>explicit</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>explicit</tt> (<var>fcn</var>,<var>var</var>,<var>minval</var>,<var>maxval</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>explicit</tt> (<var>fcn</var>,<var>var1</var>,<var>minval1</var>,<var>maxval1</var>,<var>var2</var>,<var>minval2</var>,<var>maxval2</var>)</i>
-<a name="IDX1888"></a>
+<a name="IDX1892"></a>
 </dt>
 <dd><p>(<var>fcn</var>,<var>var1</var>,<var>minval1</var>,<var>maxval1</var>,<var>var2</var>,<var>minval2</var>,<var>maxval2</var>)
 2Dおよび3Dにて陽関数を描画します。
@@ -4969,7 +4970,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-image"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>image</b><i> (<var>im</var>,<var>x0</var>,<var>y0</var>,<var>width</var>,<var>height</var>)</i>
-<a name="IDX1889"></a>
+<a name="IDX1893"></a>
 </dt>
 <dd><p>2Dにてイメージを描写します。
 </p>
@@ -5075,7 +5076,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-implicit"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>implicit</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>implicit</tt> (<var>fcn</var>,<var>x</var>,<var>xmin</var>,<var>xmax</var>,<var>y</var>,<var>ymin</var>,<var>ymax</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>implicit</tt> (<var>fcn</var>,<var>x</var>,<var>xmin</var>,<var>xmax</var>,<var>y</var>,<var>ymin</var>,<var>ymax</var>,<var>z</var>,<var>zmin</var>,<var>zmax</var>)</i>
-<a name="IDX1890"></a>
+<a name="IDX1894"></a>
 </dt>
 <dd><p>(<var>fcn</var>,<var>x</var>,<var>xmin</var>,<var>xmax</var>,<var>y</var>,<var>ymin</var>,<var>ymax</var>,<var>z</var>,<var>zmin</var>,<var>zmax</var>)
 2Dおよび 3Dにて陰関数を描画します。
@@ -5138,7 +5139,7 @@ y方向のボクセルの数です。
 </p>
 <dl>
 <dt><u>グラフィックオブジェクト:</u> <b>label</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>label</tt> ([<var>string</var>,<var>x</var>,<var>y</var>],...) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>label</tt> ([<var>string</var>,<var>x</var>,<var>y</var>,<var>z</var>],...)</i>
-<a name="IDX1891"></a>
+<a name="IDX1895"></a>
 </dt>
 <dd><p>2Dと 3D内でラベルを書きます。
 </p>
@@ -5192,7 +5193,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-mesh"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>mesh</b><i> (<var>row_1</var>,<var>row_2</var>,...)</i>
-<a name="IDX1892"></a>
+<a name="IDX1896"></a>
 </dt>
 <dd><p>3Dで四角形のメッシュを描画します。
 </p>
@@ -5250,7 +5251,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-parametric"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>parametric</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>parametric</tt> (<var>xfun</var>,<var>yfun</var>,<var>par</var>,<var>parmin</var>,<var>parmax</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>parametric</tt> (<var>xfun</var>,<var>yfun</var>,<var>zfun</var>,<var>par</var>,<var>parmin</var>,<var>parmax</var>)</i>
-<a name="IDX1893"></a>
+<a name="IDX1897"></a>
 </dt>
 <dd><p>2Dおよび 3Dにてパラメトリック関数を描画します。
 </p>
@@ -5305,7 +5306,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-parametric_005fsurface"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>parametric_surface</b><i> (<var>xfun</var>, <var>yfun</var>, <var>zfun</var>, <var>par1</var>, <var>par1min</var>, <var>par1max</var>, <var>par2</var>, <var>par2min</var>, <var>par2max</var>)</i>
-<a name="IDX1894"></a>
+<a name="IDX1898"></a>
 </dt>
 <dd><p>3Dにおいてパラメトリックな表面を描画します。
 </p>
@@ -5348,7 +5349,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-points"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>points</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([[<var>x1</var>,<var>y1</var>], [<var>x2</var>,<var>y2</var>],...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([<var>x1</var>,<var>x2</var>,...], [<var>y1</var>,<var>y2</var>,...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([<var>y1</var>,<var>y2</var>,...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([[<var>x1</var>,<var>y1</var>,<var>z1</var>], [<var>x2</var>,<var>y2</var>,<var>z2</var>],...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([<var>x1</var>,<var>x2</var>,...], [<var>y1</var>,<var>y2</var>,...], [<var>z1</var>,<var>z2</var>,...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>matrix</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>1d_y_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>1d_x_array</var>, <var>1d_y_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>1d_x_array</var>, <var>1d_y_array</var>, <var>1d_z_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>2d_xy_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>2d_xyz_array</var>)</i>
-<a name="IDX1895"></a>
+<a name="IDX1899"></a>
 </dt>
 <dd><p>2Dや 3Dの中で点を描画します。
 </p>
@@ -5450,14 +5451,14 @@ y方向のボクセルの数です。
 <p>例:
 </p>
 <p>3次元のサンプル１つ、
-</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (numericalio)$
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;numericalio&quot;)$
 (%i2) s2 : read_matrix (file_search (&quot;wind.data&quot;))$
 (%i3) draw3d(title = &quot;Daily average wind speeds&quot;,
              point_size = 2,
              points(args(submatrix (s2, 4, 5))) )$
 </pre></td></tr></table>
 <p>3次元のサンプル２つ、
-</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (numericalio)$
+</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;numericalio&quot;)$
 (%i2) s2 : read_matrix (file_search (&quot;wind.data&quot;))$
 (%i3) draw3d(
          title = &quot;Daily average wind speeds. Two data sets&quot;,
@@ -5514,7 +5515,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-polar"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>polar</b><i> (<var>radius</var>,<var>ang</var>,<var>minang</var>,<var>maxang</var>)</i>
-<a name="IDX1896"></a>
+<a name="IDX1900"></a>
 </dt>
 <dd><p>極座標で定義された2D関数を描画します。
 </p>
@@ -5553,7 +5554,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-polygon"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>polygon</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>polygon</tt> ([[<var>x1</var>, <var>y1</var>], [<var>x2</var>, <var>y2</var>], &hellip;]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>polygon</tt> ([<var>x1</var>, <var>x2</var>, &hellip;], [<var>y1</var>, <var>y2</var>, &hellip;])</i>
-<a name="IDX1897"></a>
+<a name="IDX1901"></a>
 </dt>
 <dd><p>2D内でポリゴンを描画します。
 </p>
@@ -5590,7 +5591,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-quadrilateral"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>quadrilateral</b><i> (<var>point_1</var>, <var>point_2</var>, <var>point_3</var>, <var>point_4</var>)</i>
-<a name="IDX1898"></a>
+<a name="IDX1902"></a>
 </dt>
 <dd><p>四辺形を描画します。
 </p>
@@ -5634,7 +5635,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-rectangle"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>rectangle</b><i> ([<var>x1</var>,<var>y1</var>], [<var>x2</var>,<var>y2</var>])</i>
-<a name="IDX1899"></a>
+<a name="IDX1903"></a>
 </dt>
 <dd><p>2D内で長方形を描画します。
 </p>
@@ -5677,7 +5678,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-region"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>region</b><i> (<var>expr</var>,<var>var1</var>,<var>minval1</var>,<var>maxval1</var>,<var>var2</var>,<var>minval2</var>,<var>maxval2</var>)</i>
-<a name="IDX1900"></a>
+<a name="IDX1904"></a>
 </dt>
 <dd><p>平面上に不等式で定義された領域を描画します。
 </p>
@@ -5706,7 +5707,7 @@ y方向のボクセルの数です。
 <p><a name="Item_003a-spherical"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>spherical</b><i> (<var>radius</var>, <var>azi</var>, <var>minazi</var>, <var>maxazi</var>, <var>zen</var>, <var>minzen</var>, <var>maxzen</var>)</i>
-<a name="IDX1901"></a>
+<a name="IDX1905"></a>
 </dt>
 <dd><p>球座標で定義された3D関数を描画します。
 </p>
@@ -5742,7 +5743,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-triangle"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>triangle</b><i> (<var>point_1</var>, <var>point_2</var>, <var>point_3</var>)</i>
-<a name="IDX1902"></a>
+<a name="IDX1906"></a>
 </dt>
 <dd><p>三角形を描画します。
 </p>
@@ -5786,7 +5787,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-tube"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>tube</b><i> (<var>xfun</var>,<var>yfun</var>,<var>zfun</var>,<var>rfun</var>,<var>p</var>,<var>pmin</var>,<var>pmax</var>)</i>
-<a name="IDX1903"></a>
+<a name="IDX1907"></a>
 </dt>
 <dd><p>3Dにおいて径が変化する管を描画します。
 </p>
@@ -5823,7 +5824,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-vector"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>vector</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>vector</tt> ([<var>x</var>,<var>y</var>], [<var>dx</var>,<var>dy</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>vector</tt> ([<var>x</var>,<var>y</var>,<var>z</var>], [<var>dx</var>,<var>dy</var>,<var>dz</var>])</i>
-<a name="IDX1904"></a>
+<a name="IDX1908"></a>
 </dt>
 <dd><p>2Dおよび 3D内でベクトルを描画します。
 </p>
@@ -5876,21 +5877,21 @@ y方向のボクセルの数です。
 <p><a name="Item_003a-Functions-and-Variables-for-pictures"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-pictures"></a>
-<a name="SEC255"></a>
+<a name="SEC256"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC254" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC256" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC255" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC257" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.3 Functions and Variables for pictures </h2>
@@ -5901,7 +5902,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-get_005fpixel"></a>
 </p><dl>
 <dt><u>関数:</u> <b>get_pixel</b><i> (<var>pic</var>,<var>x</var>,<var>y</var>)</i>
-<a name="IDX1905"></a>
+<a name="IDX1909"></a>
 </dt>
 <dd><p>ピクチャからピクセルを返します。
 座標 <var>x</var>と <var>y</var>は 0からそれぞれ <code>width-1</code>と
@@ -5922,7 +5923,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-make_005flevel_005fpicture"></a>
 </p><dl>
 <dt><u>関数:</u> <b>make_level_picture</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_level_picture</tt> (<var>data</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_level_picture</tt> (<var>data</var>,<var>width</var>,<var>height</var>)</i>
-<a name="IDX1906"></a>
+<a name="IDX1910"></a>
 </dt>
 <dd><p>レベル <var>picture</var>オブジェクトを返します。
 <code>make_level_picture (<var>data</var>)</code>は行列 <var>data</var>から
@@ -5966,7 +5967,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-make_005frgb_005fpicture"></a>
 </p><dl>
 <dt><u>関数:</u> <b>make_rgb_picture</b><i> (<var>redlevel</var>,<var>greenlevel</var>,<var>bluelevel</var>)</i>
-<a name="IDX1907"></a>
+<a name="IDX1911"></a>
 </dt>
 <dd><p>rgb色付けされた <var>picture</var>オブジェクトを返します。
 3つ引数すべては赤、緑、青のレベルを持つレベルピクチャでなければいけません;
@@ -6007,7 +6008,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-negative_005fpicture"></a>
 </p><dl>
 <dt><u>関数:</u> <b>negative_picture</b><i> (<var>pic</var>)</i>
-<a name="IDX1908"></a>
+<a name="IDX1912"></a>
 </dt>
 <dd><p>(<var>level</var>または<var>rgb</var>)ピクチャの反転を返します。
 </p>
@@ -6024,7 +6025,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-picture_005fequalp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>picture_equalp</b><i> (<var>x</var>,<var>y</var>)</i>
-<a name="IDX1909"></a>
+<a name="IDX1913"></a>
 </dt>
 <dd><p>等しいピクチャの場合 <code>true</code>を、そうでないなら <code>false</code>を返します。
 </p>
@@ -6043,7 +6044,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-picturep"></a>
 </p><dl>
 <dt><u>関数:</u> <b>picturep</b><i> (<var>x</var>)</i>
-<a name="IDX1910"></a>
+<a name="IDX1914"></a>
 </dt>
 <dd><p>もし引数が適正なイメージなら<code>true</code>を、そうでないなら <code>false</code>を返します。
 </p>
@@ -6062,7 +6063,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-read_005fxpm"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_xpm</b><i> (<var>xpm_file</var>)</i>
-<a name="IDX1911"></a>
+<a name="IDX1915"></a>
 </dt>
 <dd><p>xpm形式のファイルを読み、ピクチャオブジェクトを返します。
 </p>
@@ -6080,7 +6081,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-rgb2level"></a>
 </p><dl>
 <dt><u>関数:</u> <b>rgb2level</b><i> (<var>pic</var>)</i>
-<a name="IDX1912"></a>
+<a name="IDX1916"></a>
 </dt>
 <dd><p><var>rgb</var>ピクチャを赤、緑、青チャンネルを平均することで
 <var>level</var>の１つに変換します。
@@ -6099,7 +6100,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-take_005fchannel"></a>
 </p><dl>
 <dt><u>関数:</u> <b>take_channel</b><i> (<var>im</var>,<var>color</var>)</i>
-<a name="IDX1913"></a>
+<a name="IDX1917"></a>
 </dt>
 <dd><p>もし引数 <var>color</var>が <code>red</code>, <code>green</code>または <code>blue</code>なら、関数
 <code>take_channel</code>はピクチャ <var>im</var>の対応する色チャンネルを返します。
@@ -6131,21 +6132,21 @@ y方向のボクセルの数です。
 <p><a name="Item_003a-Functions-and-Variables-for-worldmap"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-worldmap"></a>
-<a name="SEC256"></a>
+<a name="SEC257"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC255" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC257" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC256" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC258" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.4 Functions and Variables for worldmap </h2>
@@ -6154,21 +6155,21 @@ y方向のボクセルの数です。
 </p>
 
 <hr size="6">
-<a name="SEC257"></a>
+<a name="SEC258"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC256" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC258" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC257" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC259" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC256" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC257" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.4.1 Variable and Functions </h3>
@@ -6179,7 +6180,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-boundaries_005farray"></a>
 </p><dl>
 <dt><u>グローバル変数:</u> <b>boundaries_array</b>
-<a name="IDX1914"></a>
+<a name="IDX1918"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -6206,7 +6207,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-numbered_005fboundaries"></a>
 </p><dl>
 <dt><u>関数:</u> <b>numbered_boundaries</b><i> (<var>nlist</var>)</i>
-<a name="IDX1915"></a>
+<a name="IDX1919"></a>
 </dt>
 <dd><p>その数 (<code>boundaries_array</code>座標)でラベルされた多角形セグメント(境界)のリストを
 描画します。
@@ -6234,7 +6235,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-make_005fpoly_005fcontinent"></a>
 </p><dl>
 <dt><u>関数:</u> <b>make_poly_continent</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_poly_continent</tt> (<var>continent_name</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_poly_continent</tt> (<var>country_list</var>)</i>
-<a name="IDX1916"></a>
+<a name="IDX1920"></a>
 </dt>
 <dd><p>色付けられた大陸や国のリストを描画するのに必要なポリゴンを作ります。
 </p>
@@ -6265,7 +6266,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-make_005fpoly_005fcountry"></a>
 </p><dl>
 <dt><u>関数:</u> <b>make_poly_country</b><i> (<var>country_name</var>)</i>
-<a name="IDX1917"></a>
+<a name="IDX1921"></a>
 </dt>
 <dd><p>色付けられた国を描画するのに必要なポリゴンを作ります。
 もし島が存在するなら、 1つの国は複数のポリゴンで定義されることがあります。
@@ -6292,7 +6293,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-make_005fpolygon"></a>
 </p><dl>
 <dt><u>関数:</u> <b>make_polygon</b><i> (<var>nlist</var>)</i>
-<a name="IDX1918"></a>
+<a name="IDX1922"></a>
 </dt>
 <dd><p>境界添字から <code>polygon</code>オブジェクトを返します。
 引数 <var>nlist</var>は <code>boundaries_array</code>の成分のリストです。
@@ -6364,7 +6365,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-region_005fboundaries"></a>
 </p><dl>
 <dt><u>関数:</u> <b>region_boundaries</b><i> (<var>x1</var>,<var>y1</var>,<var>x2</var>,<var>y2</var>)</i>
-<a name="IDX1919"></a>
+<a name="IDX1923"></a>
 </dt>
 <dd><p>頂点 (<var>x1</var>,<var>y1</var>) -左上- と
 (<var>x2</var>,<var>y2</var>) -右下-の長方形に完全に含まれるグローバル変数
@@ -6393,7 +6394,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-region_005fboundaries_005fplus"></a>
 </p><dl>
 <dt><u>関数:</u> <b>region_boundaries_plus</b><i> (<var>x1</var>,<var>y1</var>,<var>x2</var>,<var>y2</var>)</i>
-<a name="IDX1920"></a>
+<a name="IDX1924"></a>
 </dt>
 <dd><p>頂点 (<var>x1</var>,<var>y1</var>) -左上- と
 (<var>x2</var>,<var>y2</var>) -右下-で定義された長方形に少なくとも1つ頂点を含まれる
@@ -6417,21 +6418,21 @@ y方向のボクセルの数です。
 </dd></dl>
 
 <hr size="6">
-<a name="SEC258"></a>
+<a name="SEC259"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC257" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC258" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC256" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC257" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.4.2 Graphic objects </h3>
@@ -6441,7 +6442,7 @@ y方向のボクセルの数です。
 <a name="Item_003a-geomap"></a>
 </p><dl>
 <dt><u>グラフィックオブジェクト:</u> <b>geomap</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>geomap</tt> (<var>numlist</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>geomap</tt> (<var>numlist</var>,<var>3Dprojection</var>)</i>
-<a name="IDX1921"></a>
+<a name="IDX1925"></a>
 </dt>
 <dd><p>2Dと 3Dに関して地図を描画します。
 </p>
@@ -6590,8 +6591,8 @@ y方向のボクセルの数です。
 <p><a name="Item_003a-drawdf_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -6599,12 +6600,12 @@ y方向のボクセルの数です。
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

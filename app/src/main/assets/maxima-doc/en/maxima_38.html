@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 38. Debugging</title>
+<title>Maxima 5.40.0 Manual: 38. Debugging</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 38. Debugging">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 38. Debugging">
+<meta name="description" content="Maxima 5.40.0 Manual: 38. Debugging">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 38. Debugging">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,52 +66,52 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="Debugging"></a>
-<a name="SEC205"></a>
+<a name="SEC206"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_37.html#SEC204" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_37.html#SEC205" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC207" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 38. Debugging </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC206">38.1 Source Level Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC207">38.1 Source Level Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC207">38.2 Keyword Commands</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC208">38.2 Keyword Commands</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC208">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">   
+<tr><td align="left" valign="top"><a href="#SEC209">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">   
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Source-Level-Debugging"></a>
 </p><hr size="6">
 <a name="Source-Level-Debugging"></a>
-<a name="SEC206"></a>
+<a name="SEC207"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC205" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC207" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC206" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC208" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.1 Source Level Debugging </h2>
@@ -227,21 +227,21 @@ evaluating the function into the Maxima, by typing <code>Alt-Control-x</code>.
 <p><a name="Item_003a-Keyword-Commands"></a>
 </p><hr size="6">
 <a name="Keyword-Commands"></a>
-<a name="SEC207"></a>
+<a name="SEC208"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC206" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC208" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC207" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC209" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.2 Keyword Commands </h2>
@@ -328,21 +328,21 @@ completing the computation
 <p><a name="Item_003a-Functions-and-Variables-for-Debugging"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Debugging"></a>
-<a name="SEC208"></a>
+<a name="SEC209"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC207" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC208" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.3 Functions and Variables for Debugging </h2>
@@ -351,7 +351,7 @@ completing the computation
 <a name="Item_003a-debugmode"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>debugmode</b>
-<a name="IDX1417"></a>
+<a name="IDX1419"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -373,7 +373,7 @@ list of debugger commands.
 <a name="Item_003a-refcheck"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>refcheck</b>
-<a name="IDX1418"></a>
+<a name="IDX1420"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -393,7 +393,7 @@ computation.
 <a name="Item_003a-setcheck"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>setcheck</b>
-<a name="IDX1419"></a>
+<a name="IDX1421"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -436,7 +436,7 @@ variable on the <code>setcheck</code> list is assigned to itself, e.g., <code>X:
 <a name="Item_003a-setcheckbreak"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>setcheckbreak</b>
-<a name="IDX1420"></a>
+<a name="IDX1422"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -461,7 +461,7 @@ Hence, one may assign a different value by assigning to <code>setval</code>.
 <a name="Item_003a-setval"></a>
 </p><dl>
 <dt><u>System variable:</u> <b>setval</b>
-<a name="IDX1421"></a>
+<a name="IDX1423"></a>
 </dt>
 <dd><p>Holds the value to which a variable is about to be set when
 a <code><a href="#setcheckbreak">setcheckbreak</a></code> occurs.
@@ -480,7 +480,7 @@ Hence, one may assign a different value by assigning to <code><a href="#setval">
 <a name="Item_003a-timer"></a>
 </p><dl>
 <dt><u>Function:</u> <b>timer</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer</tt> (all) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer</tt> ()</i>
-<a name="IDX1422"></a>
+<a name="IDX1424"></a>
 </dt>
 <dd><p>Given functions <var>f_1</var>, &hellip;, <var>f_n</var>, <code>timer</code> puts each one on the
 list of functions for which timing statistics are collected.
@@ -517,7 +517,7 @@ total time elapsed.
 <a name="Item_003a-untimer"></a>
 </p><dl>
 <dt><u>Function:</u> <b>untimer</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untimer</tt> ()</i>
-<a name="IDX1423"></a>
+<a name="IDX1425"></a>
 </dt>
 <dd><p>Given functions <var>f_1</var>, &hellip;, <var>f_n</var>,
 <code>untimer</code> removes each function from the timer list.
@@ -542,7 +542,7 @@ and puts <code>f</code> on the timer list again.
 <a name="Item_003a-timer_005fdevalue"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>timer_devalue</b>
-<a name="IDX1424"></a>
+<a name="IDX1426"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -565,7 +565,7 @@ total time.
 <a name="Item_003a-timer_005finfo"></a>
 </p><dl>
 <dt><u>Function:</u> <b>timer_info</b><i> (<var>f_1</var>, ..., <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer_info</tt> ()</i>
-<a name="IDX1425"></a>
+<a name="IDX1427"></a>
 </dt>
 <dd><p>Given functions <var>f_1</var>, ..., <var>f_n</var>, <code>timer_info</code> returns a matrix
 containing timing information for each function.
@@ -594,7 +594,7 @@ can also be obtained by the <code>get</code> function:
 <a name="Item_003a-trace"></a>
 </p><dl>
 <dt><u>Function:</u> <b>trace</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace</tt> (all) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace</tt> ()</i>
-<a name="IDX1426"></a>
+<a name="IDX1428"></a>
 </dt>
 <dd><p>Given functions <var>f_1</var>, &hellip;, <var>f_n</var>, <code>trace</code> instructs Maxima to
 print out debugging information whenever those functions are called.
@@ -630,7 +630,7 @@ function <code>f</code> is no longer on the timer list.
 <a name="Item_003a-trace_005foptions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>trace_options</b><i> (<var>f</var>, <var>option_1</var>, &hellip;, <var>option_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace_options</tt> (<var>f</var>)</i>
-<a name="IDX1427"></a>
+<a name="IDX1429"></a>
 </dt>
 <dd><p>Sets the trace options for function <var>f</var>.
 Any previous options are superseded.
@@ -704,7 +704,7 @@ on a predicate:
 <a name="Item_003a-untrace"></a>
 </p><dl>
 <dt><u>Function:</u> <b>untrace</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untrace</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untrace</tt> ()</i>
-<a name="IDX1428"></a>
+<a name="IDX1430"></a>
 </dt>
 <dd><p>Given functions <var>f_1</var>, &hellip;, <var>f_n</var>,
 <code>untrace</code> disables tracing enabled by the <code>trace</code> function.
@@ -723,8 +723,8 @@ it disabled tracing.
 <p><a name="Item_003a-alt_002ddisplay_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -732,12 +732,12 @@ it disabled tracing.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

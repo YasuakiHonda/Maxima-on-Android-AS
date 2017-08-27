@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
+<!-- Created on mayo, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.39.0: 74. stats</title>
+<title>Manual de Maxima 5.40.1.gd04f9f4: 74. stats</title>
 
-<meta name="description" content="Manual de Maxima 5.39.0: 74. stats">
-<meta name="keywords" content="Manual de Maxima 5.39.0: 74. stats">
+<meta name="description" content="Manual de Maxima 5.40.1.gd04f9f4: 74. stats">
+<meta name="keywords" content="Manual de Maxima 5.40.1.gd04f9f4: 74. stats">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -165,7 +165,7 @@ También contiene algunos ejemplos sobre cómo utilizar el paquete
 
 <dl>
 <dt><u>Función:</u> <b>inference_result</b><i> (<var>title</var>, <var>values</var>, <var>numbers</var>)</i>
-<a name="IDX2677"></a>
+<a name="IDX2681"></a>
 </dt>
 <dd><p>Construye un objeto <code>inference_result</code> del tipo devuelto por las funciones
 estadísticas. El argumento <var>title</var> es una cadena con
@@ -215,7 +215,7 @@ a este valor, hágase uso de la función <code>take_inference</code>.
 
 <dl>
 <dt><u>Función:</u> <b>inferencep</b><i> (<var>obj</var>)</i>
-<a name="IDX2678"></a>
+<a name="IDX2682"></a>
 </dt>
 <dd><p>Devuelve <code>true</code> o <code>false</code>, dependiendo de que <var>obj</var> sea un
 objeto de tipo <code>inference_result</code> o no.
@@ -229,7 +229,7 @@ objeto de tipo <code>inference_result</code> o no.
 
 <dl>
 <dt><u>Función:</u> <b>items_inference</b><i> (<var>obj</var>)</i>
-<a name="IDX2679"></a>
+<a name="IDX2683"></a>
 </dt>
 <dd><p>Devuelve una lista con los nombres de los elementos almacenados en
 <var>obj</var>, el cual debe ser un objeto de tipo <code>inference_result</code>.
@@ -257,13 +257,13 @@ todos los elementos almacenados, independientemente de que sean mostrados o no.
 
 <dl>
 <dt><u>Función:</u> <b>take_inference</b><i> (<var>n</var>, <var>obj</var>)</i>
-<a name="IDX2680"></a>
+<a name="IDX2684"></a>
 </dt>
 <dt><u>Función:</u> <b>take_inference</b><i> (<var>name</var>, <var>obj</var>)</i>
-<a name="IDX2681"></a>
+<a name="IDX2685"></a>
 </dt>
 <dt><u>Función:</u> <b>take_inference</b><i> (<var>list</var>, <var>obj</var>)</i>
-<a name="IDX2682"></a>
+<a name="IDX2686"></a>
 </dt>
 <dd><p>Si <var>n</var> es un entero positivo, devuelve el <var>n</var>-ésimo
 valor almacenado en <var>obj</var>; si el símbolo <var>name</var>
@@ -337,7 +337,7 @@ es invocada para extraer cierta información almacenada en él.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>stats_numer</b>
-<a name="IDX2683"></a>
+<a name="IDX2687"></a>
 </dt>
 <dd><p>Valor por defecto: <code>true</code>
 </p>
@@ -350,10 +350,10 @@ formato simbólico y racional.
 
 <dl>
 <dt><u>Función:</u> <b>test_mean</b><i> (<var>x</var>)</i>
-<a name="IDX2684"></a>
+<a name="IDX2688"></a>
 </dt>
 <dt><u>Función:</u> <b>test_mean</b><i> (<var>x</var>, <var>options</var> ...)</i>
-<a name="IDX2685"></a>
+<a name="IDX2689"></a>
 </dt>
 <dd><p>Es el test <var>t</var> de la media. El argumento <var>x</var> es una lista o matriz
 columna con los datos de una muestra unidimensional. También realiza el
@@ -485,10 +485,10 @@ procedimiento sólo puede aplicarse en muestras grandes.
 
 <dl>
 <dt><u>Función:</u> <b>test_means_difference</b><i> (<var>x1</var>, <var>x2</var>)</i>
-<a name="IDX2686"></a>
+<a name="IDX2690"></a>
 </dt>
 <dt><u>Función:</u> <b>test_means_difference</b><i> (<var>x1</var>, <var>x2</var>, <var>options</var> ...)</i>
-<a name="IDX2687"></a>
+<a name="IDX2691"></a>
 </dt>
 <dd><p>Este es el test <var>t</var> para la diferencia de medias con muestras.
 Los argumentos <var>x1</var> y <var>x2</var> son listas o matrices columna
@@ -629,10 +629,10 @@ iguales.
 
 <dl>
 <dt><u>Función:</u> <b>test_variance</b><i> (<var>x</var>)</i>
-<a name="IDX2688"></a>
+<a name="IDX2692"></a>
 </dt>
 <dt><u>Función:</u> <b>test_variance</b><i> (<var>x</var>, <var>options</var> ...)</i>
-<a name="IDX2689"></a>
+<a name="IDX2693"></a>
 </dt>
 <dd><p>Este es el test <var>chi^2</var> de la varianza. El argumento <var>x</var>
 es una lista o matriz columna con los datos de una muestra unidimensional
@@ -723,10 +723,10 @@ es igual o mayor que 200.
 
 <dl>
 <dt><u>Función:</u> <b>test_variance_ratio</b><i> (<var>x1</var>, <var>x2</var>)</i>
-<a name="IDX2690"></a>
+<a name="IDX2694"></a>
 </dt>
 <dt><u>Función:</u> <b>test_variance_ratio</b><i> (<var>x1</var>, <var>x2</var>, <var>options</var> ...)</i>
-<a name="IDX2691"></a>
+<a name="IDX2695"></a>
 </dt>
 <dd><p>Este es el test <var>F</var> del cociente de las varianzas para dos
 poblaciones normales. Los argumentos <var>x1</var> y <var>x2</var> son listas
@@ -821,10 +821,10 @@ a la alternativa de que la primera es mayor que la segunda.
 
 <dl>
 <dt><u>Función:</u> <b>test_proportion</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2692"></a>
+<a name="IDX2696"></a>
 </dt>
 <dt><u>Función:</u> <b>test_proportion</b><i> (<var>x</var>, <var>n</var>, <var>options</var> ...)</i>
-<a name="IDX2693"></a>
+<a name="IDX2697"></a>
 </dt>
 <dd><p>Inferencias sobre una proporción. El argumento <var>x</var> es el
 número de éxitos observados en <var>n</var> pruebas de Bernoulli
@@ -946,10 +946,10 @@ y la alternativa unilátera es <em>H_1: p&lt;1/2</em>.
 
 <dl>
 <dt><u>Función:</u> <b>test_proportions_difference</b><i> (<var>x1</var>, <var>n1</var>, <var>x2</var>, <var>n2</var>)</i>
-<a name="IDX2694"></a>
+<a name="IDX2698"></a>
 </dt>
 <dt><u>Función:</u> <b>test_proportions_difference</b><i> (<var>x1</var>, <var>n1</var>, <var>x2</var>, <var>n2</var>, <var>options</var> ...)</i>
-<a name="IDX2695"></a>
+<a name="IDX2699"></a>
 </dt>
 <dd><p>Inferencias sobre la diferencia de dos proporciones. El argumento <var>x1</var> 
 es el número de éxitos en <var>n1</var> experimentos de Bernoulli en la
@@ -1065,10 +1065,10 @@ desconocidos.
 
 <dl>
 <dt><u>Función:</u> <b>test_sign</b><i> (<var>x</var>)</i>
-<a name="IDX2696"></a>
+<a name="IDX2700"></a>
 </dt>
 <dt><u>Función:</u> <b>test_sign</b><i> (<var>x</var>, <var>options</var> ...)</i>
-<a name="IDX2697"></a>
+<a name="IDX2701"></a>
 </dt>
 <dd><p>Este es el test no paramétrico de los signos para contrastes
 sobre la mediana de una población continua. El argumento <var>x</var>
@@ -1145,10 +1145,10 @@ la muestra es 6, frente a la alternativa <em>H_1: median &gt; 6</em>.
 
 <dl>
 <dt><u>Función:</u> <b>test_signed_rank</b><i> (<var>x</var>)</i>
-<a name="IDX2698"></a>
+<a name="IDX2702"></a>
 </dt>
 <dt><u>Función:</u> <b>test_signed_rank</b><i> (<var>x</var>, <var>options</var> ...)</i>
-<a name="IDX2699"></a>
+<a name="IDX2703"></a>
 </dt>
 <dd><p>Este el test de los rangos signados de Wilcoxon para hacer inferencias sobre
 la mediana de una población continua. El argumento <var>x</var> es una lista
@@ -1252,10 +1252,10 @@ debido a la presencia de empates.
 
 <dl>
 <dt><u>Función:</u> <b>test_rank_sum</b><i> (<var>x1</var>, <var>x2</var>)</i>
-<a name="IDX2700"></a>
+<a name="IDX2704"></a>
 </dt>
 <dt><u>Función:</u> <b>test_rank_sum</b><i> (<var>x1</var>, <var>x2</var>, <var>option</var>)</i>
-<a name="IDX2701"></a>
+<a name="IDX2705"></a>
 </dt>
 <dd><p>Este es el test de Wilcoxon-Mann-Whitney para comparar las medianas
 de dos poblaciones continuas. Los dos primeros argumentos <var>x1</var>
@@ -1348,7 +1348,7 @@ alternativa es <em>H_1: median1 &lt; median2</em>.
 
 <dl>
 <dt><u>Función:</u> <b>test_normality</b><i> (<var>x</var>)</i>
-<a name="IDX2702"></a>
+<a name="IDX2706"></a>
 </dt>
 <dd><p>Test de Shapiro-Wilk para el contraste de normalidad. El argumento
 <var>x</var> es una lista de números, con tamaño muestral mayor que 2
@@ -1399,10 +1399,10 @@ de tamaño 9.
 
 <dl>
 <dt><u>Función:</u> <b>linear_regression</b><i> (<var>x</var>)</i>
-<a name="IDX2703"></a>
+<a name="IDX2707"></a>
 </dt>
 <dt><u>Función:</u> <b>linear_regression</b><i> (<var>x</var> <var>option</var>)</i>
-<a name="IDX2704"></a>
+<a name="IDX2708"></a>
 </dt>
 <dd><p>Regresión lineal múltiple, 
 <em>y_i = b0 + b1*x_1i + b2*x_2i + ... + bk*x_ki + u_i</em>,
@@ -1551,7 +1551,7 @@ v_distribution, residuals, adc, aic, bic]
 
 <dl>
 <dt><u>Función:</u> <b>pdf_signed_rank</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2705"></a>
+<a name="IDX2709"></a>
 </dt>
 <dd><p>Función de densidad de probabilidad de la distribución exacta
 del estadístico de contraste del test de los
@@ -1563,7 +1563,7 @@ rangos signados. El argumento <var>x</var> es un número real y
 
 <dl>
 <dt><u>Función:</u> <b>cdf_signed_rank</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2706"></a>
+<a name="IDX2710"></a>
 </dt>
 <dd><p>Función de probabilidad acumulada de la distribución exacta
 del estadístico de contraste del test de los
@@ -1575,7 +1575,7 @@ rangos signados. El argumento <var>x</var> es un número real y
 
 <dl>
 <dt><u>Función:</u> <b>pdf_rank_sum</b><i> (<var>x</var>, <var>n</var>, <var>m</var>)</i>
-<a name="IDX2707"></a>
+<a name="IDX2711"></a>
 </dt>
 <dd><p>Función de densidad de probabilidad de la distribución exacta
 del estadístico de contraste de Wilcoxon-Mann-Whitney.
@@ -1587,7 +1587,7 @@ El argumento <var>x</var> es un número real y
 
 <dl>
 <dt><u>Función:</u> <b>cdf_rank_sum</b><i> (<var>x</var>, <var>n</var>, <var>m</var>)</i>
-<a name="IDX2708"></a>
+<a name="IDX2712"></a>
 </dt>
 <dd><p>Función de probabilidad acumulada de la distribución exacta
 del estadístico de contraste de Wilcoxon-Mann-Whitney.
@@ -1614,7 +1614,7 @@ El argumento <var>x</var> es un número real y
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>mayo, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

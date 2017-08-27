@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 80. simplification</title>
+<title>Maxima 5.40.0 Manual: 80. simplification</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 80. simplification">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 80. simplification">
+<meta name="description" content="Maxima 5.40.0 Manual: 80. simplification">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 80. simplification">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,62 +66,62 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="simplification_002dpkg"></a>
-<a name="SEC368"></a>
+<a name="SEC369"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_79.html#SEC367" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC369" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_79.html#SEC368" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC370" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC363" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 80. simplification </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC369">80.1 Introduction to simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC370">80.1 Introduction to simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC370">80.2 Package absimp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC371">80.2 Package absimp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC371">80.3 Package facexp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC372">80.3 Package facexp</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC372">80.4 Package functs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC373">80.4 Package functs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC373">80.5 Package ineq</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC374">80.5 Package ineq</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC374">80.6 Package rducon</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC375">80.6 Package rducon</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC375">80.7 Package scifac</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC376">80.7 Package scifac</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC376">80.8 Package sqdnst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC377">80.8 Package sqdnst</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-simplification"></a>
 </p><hr size="6">
 <a name="Introduction-to-simplification"></a>
-<a name="SEC369"></a>
+<a name="SEC370"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC368" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC370" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC369" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC371" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.1 Introduction to simplification </h2>
@@ -134,21 +134,21 @@ and also some functions not related to simplification.
 <p><a name="Item_003a-Package-absimp"></a>
 </p><hr size="6">
 <a name="Package-absimp"></a>
-<a name="SEC370"></a>
+<a name="SEC371"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC369" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC371" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC370" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC372" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.2 Package absimp </h2>
@@ -163,12 +163,12 @@ as  <code>modedeclare (m, even, n, odd)</code>  for even or odd integers.
 <p><code>absimp</code> defines <code>unitramp</code> and <code>unitstep</code> functions
 in terms of <code>abs</code> and <code>signum</code>.
 </p>
-<p><code>load (absimp)</code> loads this package.
+<p><code>load (&quot;absimp&quot;)</code> loads this package.
 <code>demo (absimp)</code> shows a demonstration of this package.
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) load (absimp)$
+<pre class="example">(%i1) load (&quot;absimp&quot;)$
 (%i2) (abs (x))^2;
                                 2
 (%o2)                          x
@@ -193,21 +193,21 @@ in terms of <code>abs</code> and <code>signum</code>.
 <p><a name="Item_003a-Package-facexp"></a>
 </p><hr size="6">
 <a name="Package-facexp"></a>
-<a name="SEC371"></a>
+<a name="SEC372"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC370" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC372" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC371" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC373" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.3 Package facexp </h2>
@@ -231,7 +231,7 @@ resimplifying the whole expression again.  This function may be
 useful when the expressions are very large.
 </p>
 
-<p><code>load (facexp)</code> loads this package.
+<p><code>load (&quot;facexp&quot;)</code> loads this package.
 <code>demo (facexp)</code> shows a demonstration of this package.
 </p>
 <div class=categorybox>
@@ -246,7 +246,7 @@ useful when the expressions are very large.
 <a name="Item_003a-facsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>facsum</b><i> (<var>expr</var>, <var>arg_1</var>, ..., <var>arg_n</var>)</i>
-<a name="IDX2377"></a>
+<a name="IDX2381"></a>
 </dt>
 <dd><p>Returns  a form  of <var>expr</var>  which depends  on the
 arguments <var>arg_1</var>, ..., <var>arg_n</var>.
@@ -293,7 +293,7 @@ The <code>operator</code> form may also appear inside list arguments.
 <a name="Item_003a-nextlayerfactor"></a>
 </p><dl>
 <dt><u>Global variable:</u> <b>nextlayerfactor</b>
-<a name="IDX2378"></a>
+<a name="IDX2382"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -322,7 +322,7 @@ must be presented single-quoted whenever it appears in the argument list of <cod
 <a name="Item_003a-facsum_005fcombine"></a>
 </p><dl>
 <dt><u>Global variable:</u> <b>facsum_combine</b>
-<a name="IDX2379"></a>
+<a name="IDX2383"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -350,7 +350,7 @@ through the terms of the numerator.
 <a name="Item_003a-factorfacsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>factorfacsum</b><i> (<var>expr</var>, <var>arg_1</var>, ... <var>arg_n</var>)</i>
-<a name="IDX2380"></a>
+<a name="IDX2384"></a>
 </dt>
 <dd><p>Returns a  form of <var>expr</var>  which is
 obtained by calling  <code>facsum</code> on the factors  of <var>expr</var> with <var>arg_1</var>, ... <var>arg_n</var> as
@@ -369,7 +369,7 @@ the factor and the exponent will be processed in this way.
 <a name="Item_003a-collectterms"></a>
 </p><dl>
 <dt><u>Function:</u> <b>collectterms</b><i> (<var>expr</var>, <var>arg_1</var>, &hellip;, <var>arg_n</var>)</i>
-<a name="IDX2381"></a>
+<a name="IDX2385"></a>
 </dt>
 <dd><p>Collects all terms that contain <var>arg_1</var> ... <var>arg_n</var>.
 If several expressions have been simplified  with the following functions
@@ -406,21 +406,21 @@ large.
 <p><a name="Item_003a-Package-functs"></a>
 </p><hr size="6">
 <a name="Package-functs"></a>
-<a name="SEC372"></a>
+<a name="SEC373"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC371" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC373" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC372" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC374" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.4 Package functs </h2>
@@ -434,7 +434,7 @@ large.
 <p><a name="Item_003a-rempart"></a>
 </p><dl>
 <dt><u>Function:</u> <b>rempart</b><i> (<var>expr</var>, <var>n</var>)</i>
-<a name="IDX2382"></a>
+<a name="IDX2386"></a>
 </dt>
 <dd><p>Removes part <var>n</var> from the expression <var>expr</var>.
 </p>
@@ -454,14 +454,14 @@ then parts <var>l</var> thru <var>m</var> are removed.
 <p><a name="Item_003a-wronskian"></a>
 </p><dl>
 <dt><u>Function:</u> <b>wronskian</b><i> ([<var>f_1</var>, ..., <var>f_n</var>], <var>x</var>)</i>
-<a name="IDX2383"></a>
+<a name="IDX2387"></a>
 </dt>
 <dd><p>Returns the Wronskian matrix of the list of expressions [<var>f_1</var>, ..., <var>f_n</var>] in the variable <var>x</var>.
 The determinant of the Wronskian matrix is the Wronskian determinant of the list of expressions.
 </p>
 <p>To use <code>wronskian</code>, first <code>load(functs)</code>. Example:
 </p>
-<pre class="example">(%i1) load (functs)$
+<pre class="example">(%i1) load (&quot;functs&quot;)$
 (%i2) wronskian([f(x), g(x)],x);
                     [   f(x)       g(x)    ]
                     [                      ]
@@ -481,7 +481,7 @@ The determinant of the Wronskian matrix is the Wronskian determinant of the list
 <p><a name="Item_003a-tracematrix"></a>
 </p><dl>
 <dt><u>Function:</u> <b>tracematrix</b><i> (<var>M</var>)</i>
-<a name="IDX2384"></a>
+<a name="IDX2388"></a>
 </dt>
 <dd><p>Returns the trace (sum of the diagonal elements) of matrix <var>M</var>.
 </p>
@@ -498,7 +498,7 @@ The determinant of the Wronskian matrix is the Wronskian determinant of the list
 
 <dl>
 <dt><u>Function:</u> <b>rational</b><i> (<var>z</var>)</i>
-<a name="IDX2385"></a>
+<a name="IDX2389"></a>
 </dt>
 <dd><p>Multiplies numerator and denominator of <var>z</var> by the complex conjugate of denominator,
 thus rationalizing the denominator.
@@ -519,7 +519,7 @@ Returns canonical rational expression (CRE) form if given one, else returns gene
 <p><a name="Item_003a-nonzeroandfreeof"></a>
 </p><dl>
 <dt><u>Function:</u> <b>nonzeroandfreeof</b><i> (<var>x</var>, <var>expr</var>)</i>
-<a name="IDX2386"></a>
+<a name="IDX2390"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>expr</var> is nonzero and <code>freeof (<var>x</var>, <var>expr</var>)</code> returns <code>true</code>.
 Returns <code>false</code> otherwise.
@@ -537,7 +537,7 @@ Returns <code>false</code> otherwise.
 
 <dl>
 <dt><u>Function:</u> <b>linear</b><i> (<var>expr</var>, <var>x</var>)</i>
-<a name="IDX2387"></a>
+<a name="IDX2391"></a>
 </dt>
 <dd><p>When <var>expr</var> is an expression of the form <code><var>a</var>*<var>x</var> + <var>b</var></code>
 where <var>a</var> is nonzero, and <var>a</var> and <var>b</var> are free of <var>x</var>,
@@ -548,7 +548,7 @@ variables <var>b</var>, <var>a</var>, and <var>x</var>. Otherwise, <code>linear<
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (antid);
+<pre class="example">(%i1) load (&quot;antid&quot;);
 (%o1)  /maxima/share/integration/antid.mac
 (%i2) linear ((1 - w)*(1 - x)*z, z);
 (%o2) [bargumentb = 0, aargumenta = (w - 1) x - w + 1, 
@@ -568,7 +568,7 @@ variables <var>b</var>, <var>a</var>, and <var>x</var>. Otherwise, <code>linear<
 <a name="Item_003a-gcdivide"></a>
 </p><dl>
 <dt><u>Function:</u> <b>gcdivide</b><i> (<var>p</var>, <var>q</var>)</i>
-<a name="IDX2388"></a>
+<a name="IDX2392"></a>
 </dt>
 <dd><p>When the option variable <code>takegcd</code> is <code>true</code> which is the default,
 <code>gcdivide</code> divides the polynomials <var>p</var> and <var>q</var> by their greatest
@@ -624,7 +624,7 @@ function <code><a href="maxima_14.html#ezgcd">ezgcd</a></code> to divide the pol
 <a name="Item_003a-arithmetic"></a>
 </p><dl>
 <dt><u>Function:</u> <b>arithmetic</b><i> (<var>a</var>, <var>d</var>, <var>n</var>)</i>
-<a name="IDX2389"></a>
+<a name="IDX2393"></a>
 </dt>
 <dd><p>Returns the <var>n</var>-th term of the arithmetic series
 <code><var>a</var>, <var>a</var> + <var>d</var>, <var>a</var> + 2*<var>d</var>, ..., <var>a</var> + (<var>n</var> - 1)*<var>d</var></code>.
@@ -643,7 +643,7 @@ function <code><a href="maxima_14.html#ezgcd">ezgcd</a></code> to divide the pol
 <a name="Item_003a-geometric"></a>
 </p><dl>
 <dt><u>Function:</u> <b>geometric</b><i> (<var>a</var>, <var>r</var>, <var>n</var>)</i>
-<a name="IDX2390"></a>
+<a name="IDX2394"></a>
 </dt>
 <dd><p>Returns the <var>n</var>-th term of the geometric series
 <code><var>a</var>, <var>a</var>*<var>r</var>, <var>a</var>*<var>r</var>^2, ..., <var>a</var>*<var>r</var>^(<var>n</var> - 1)</code>.
@@ -662,7 +662,7 @@ function <code><a href="maxima_14.html#ezgcd">ezgcd</a></code> to divide the pol
 <a name="Item_003a-harmonic"></a>
 </p><dl>
 <dt><u>Function:</u> <b>harmonic</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>n</var>)</i>
-<a name="IDX2391"></a>
+<a name="IDX2395"></a>
 </dt>
 <dd><p>Returns the <var>n</var>-th term of the harmonic series
 <code><var>a</var>/<var>b</var>, <var>a</var>/(<var>b</var> + <var>c</var>), <var>a</var>/(<var>b</var> + 2*<var>c</var>), ..., <var>a</var>/(<var>b</var> + (<var>n</var> - 1)*<var>c</var>)</code>.
@@ -681,7 +681,7 @@ function <code><a href="maxima_14.html#ezgcd">ezgcd</a></code> to divide the pol
 <a name="Item_003a-arithsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>arithsum</b><i> (<var>a</var>, <var>d</var>, <var>n</var>)</i>
-<a name="IDX2392"></a>
+<a name="IDX2396"></a>
 </dt>
 <dd><p>Returns the sum of the arithmetic series from 1 to <var>n</var>.
 </p>
@@ -699,7 +699,7 @@ function <code><a href="maxima_14.html#ezgcd">ezgcd</a></code> to divide the pol
 <a name="Item_003a-geosum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>geosum</b><i> (<var>a</var>, <var>r</var>, <var>n</var>)</i>
-<a name="IDX2393"></a>
+<a name="IDX2397"></a>
 </dt>
 <dd><p>Returns the sum of the geometric series from 1 to <var>n</var>.  If <var>n</var> is
 infinity (<code>inf</code>) then a sum is finite only if the absolute value
@@ -719,7 +719,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-gaussprob"></a>
 </p><dl>
 <dt><u>Function:</u> <b>gaussprob</b><i> (<var>x</var>)</i>
-<a name="IDX2394"></a>
+<a name="IDX2398"></a>
 </dt>
 <dd><p>Returns the Gaussian probability function
 <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
@@ -738,7 +738,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-gd"></a>
 </p><dl>
 <dt><u>Function:</u> <b>gd</b><i> (<var>x</var>)</i>
-<a name="IDX2395"></a>
+<a name="IDX2399"></a>
 </dt>
 <dd><p>Returns the Gudermannian function
 <code>2*atan(%e^x)-%pi/2</code>.
@@ -757,7 +757,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-agd"></a>
 </p><dl>
 <dt><u>Function:</u> <b>agd</b><i> (<var>x</var>)</i>
-<a name="IDX2396"></a>
+<a name="IDX2400"></a>
 </dt>
 <dd><p>Returns the inverse Gudermannian function
 <code>log (tan (%pi/4 + x/2))</code>.
@@ -776,7 +776,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-vers"></a>
 </p><dl>
 <dt><u>Function:</u> <b>vers</b><i> (<var>x</var>)</i>
-<a name="IDX2397"></a>
+<a name="IDX2401"></a>
 </dt>
 <dd><p>Returns the versed sine <code>1 - cos (x)</code>.
 </p>
@@ -794,7 +794,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-covers"></a>
 </p><dl>
 <dt><u>Function:</u> <b>covers</b><i> (<var>x</var>)</i>
-<a name="IDX2398"></a>
+<a name="IDX2402"></a>
 </dt>
 <dd><p>Returns the coversed sine <code>1 - sin (<var>x</var>)</code>.
 </p>
@@ -812,7 +812,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-exsec"></a>
 </p><dl>
 <dt><u>Function:</u> <b>exsec</b><i> (<var>x</var>)</i>
-<a name="IDX2399"></a>
+<a name="IDX2403"></a>
 </dt>
 <dd><p>Returns the exsecant <code>sec (<var>x</var>) - 1</code>.
 </p>
@@ -830,7 +830,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-hav"></a>
 </p><dl>
 <dt><u>Function:</u> <b>hav</b><i> (<var>x</var>)</i>
-<a name="IDX2400"></a>
+<a name="IDX2404"></a>
 </dt>
 <dd><p>Returns the haversine <code>(1 - cos(x))/2</code>.
 </p>
@@ -848,7 +848,7 @@ of <var>r</var> is less than 1.
 <a name="Item_003a-combination"></a>
 </p><dl>
 <dt><u>Function:</u> <b>combination</b><i> (<var>n</var>, <var>r</var>)</i>
-<a name="IDX2401"></a>
+<a name="IDX2405"></a>
 </dt>
 <dd><p>Returns the number of combinations of <var>n</var> objects
 taken <var>r</var> at a time.
@@ -867,7 +867,7 @@ taken <var>r</var> at a time.
 <a name="Item_003a-permutation"></a>
 </p><dl>
 <dt><u>Function:</u> <b>permutation</b><i> (<var>n</var>, <var>r</var>)</i>
-<a name="IDX2402"></a>
+<a name="IDX2406"></a>
 </dt>
 <dd><p>Returns the number of permutations of <var>r</var> objects
 selected from a set of <var>n</var> objects.
@@ -885,21 +885,21 @@ selected from a set of <var>n</var> objects.
 <p><a name="Item_003a-Package-ineq"></a>
 </p><hr size="6">
 <a name="Package-ineq"></a>
-<a name="SEC373"></a>
+<a name="SEC374"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC372" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC374" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC373" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC375" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.5 Package ineq </h2>
@@ -1005,21 +1005,21 @@ or <code>disprule (&quot;*rule2&quot;)</code> to display the definition of the s
 <p><a name="Item_003a-Package-rducon"></a>
 </p><hr size="6">
 <a name="Package-rducon"></a>
-<a name="SEC374"></a>
+<a name="SEC375"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC373" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC375" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC374" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC376" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.6 Package rducon </h2>
@@ -1036,7 +1036,7 @@ or <code>disprule (&quot;*rule2&quot;)</code> to display the definition of the s
 <a name="Item_003a-reduce_005fconsts"></a>
 </p><dl>
 <dt><u>Function:</u> <b>reduce_consts</b><i> (<var>expr</var>)</i>
-<a name="IDX2403"></a>
+<a name="IDX2407"></a>
 </dt>
 <dd><p>Replaces constant subexpressions of <var>expr</var> with
 constructed constant atoms, saving the definition of all these
@@ -1064,7 +1064,7 @@ symbols generated by <code>reduce_consts</code> to represent constant subexpress
 <p><code>const_counter</code> (default value: 1) is the integer index used to generate unique
 symbols to represent each constant subexpression found by <code>reduce_consts</code>.
 </p>
-<p><code>load (rducon)</code> loads this function.
+<p><code>load (&quot;rducon&quot;)</code> loads this function.
 <code>demo (rducon)</code> shows a demonstration of this function.
 </p>
 <div class=categorybox>
@@ -1079,21 +1079,21 @@ symbols to represent each constant subexpression found by <code>reduce_consts</c
 <p><a name="Item_003a-Package-scifac"></a>
 </p><hr size="6">
 <a name="Package-scifac"></a>
-<a name="SEC375"></a>
+<a name="SEC376"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC374" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC376" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC375" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC377" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.7 Package scifac </h2>
@@ -1110,7 +1110,7 @@ symbols to represent each constant subexpression found by <code>reduce_consts</c
 <a name="Item_003a-gcfac"></a>
 </p><dl>
 <dt><u>Function:</u> <b>gcfac</b><i> (<var>expr</var>)</i>
-<a name="IDX2404"></a>
+<a name="IDX2408"></a>
 </dt>
 <dd><p><code>gcfac</code> is a factoring function that attempts to apply the same heuristics which
 scientists apply in trying to make expressions simpler.  <code>gcfac</code> is limited
@@ -1134,7 +1134,7 @@ factoring because of the combinatorially-difficult nature of finding
 which of all possible rearrangements of the pairs yields the most
 compact pair-factored result.
 </p>
-<p><code>load (scifac)</code> loads this function.
+<p><code>load (&quot;scifac&quot;)</code> loads this function.
 <code>demo (scifac)</code> shows a demonstration of this function.
 </p>
 <div class=categorybox>
@@ -1148,21 +1148,21 @@ compact pair-factored result.
 <p><a name="Item_003a-Package-sqdnst"></a>
 </p><hr size="6">
 <a name="Package-sqdnst"></a>
-<a name="SEC376"></a>
+<a name="SEC377"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC375" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC376" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC368" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC369" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 80.8 Package sqdnst </h2>
@@ -1171,11 +1171,11 @@ compact pair-factored result.
 <a name="Item_003a-sqrtdenest"></a>
 </p><dl>
 <dt><u>Function:</u> <b>sqrtdenest</b><i> (<var>expr</var>)</i>
-<a name="IDX2405"></a>
+<a name="IDX2409"></a>
 </dt>
 <dd><p>Denests <code>sqrt</code> of simple, numerical, binomial surds, where possible.  E.g.
 </p>
-<pre class="example">(%i1) load (sqdnst)$
+<pre class="example">(%i1) load (&quot;sqdnst&quot;)$
 (%i2) sqrt(sqrt(3)/2+1)/sqrt(11*sqrt(2)-12);
                              sqrt(3)
                         sqrt(------- + 1)
@@ -1193,7 +1193,7 @@ compact pair-factored result.
 <p>Sometimes it helps to apply <code>sqrtdenest</code> more than once, on such as
 <code>(19601-13860 sqrt(2))^(7/4)</code>.
 </p>
-<p><code>load (sqdnst)</code> loads this function.
+<p><code>load (&quot;sqdnst&quot;)</code> loads this function.
 </p>
 <div class=categorybox>
 
@@ -1208,8 +1208,8 @@ compact pair-factored result.
 <p><a name="Item_003a-solve_005frec_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1217,12 +1217,12 @@ compact pair-factored result.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

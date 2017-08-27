@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 32. Runtime Environment</title>
+<title>Maxima 5.40.0 Manual: 32. Runtime Environment</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 32. Runtime Environment">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 32. Runtime Environment">
+<meta name="description" content="Maxima 5.40.0 Manual: 32. Runtime Environment">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 32. Runtime Environment">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,52 +66,52 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="Runtime-Environment"></a>
-<a name="SEC176"></a>
+<a name="SEC177"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_31.html#SEC175" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC177" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_31.html#SEC176" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC178" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_31.html#SEC174" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_31.html#SEC175" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_33.html#SEC181" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 32. Runtime Environment </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC177">32.1 Introduction for Runtime Environment</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC178">32.1 Introduction for Runtime Environment</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC178">32.2 Interrupts</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  
+<tr><td align="left" valign="top"><a href="#SEC179">32.2 Interrupts</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC179">32.3 Functions and Variables for Runtime Environment</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC180">32.3 Functions and Variables for Runtime Environment</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-for-Runtime-Environment"></a>
 </p><hr size="6">
 <a name="Introduction-for-Runtime-Environment"></a>
-<a name="SEC177"></a>
+<a name="SEC178"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC176" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC178" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC177" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC179" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC177" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC177" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_33.html#SEC181" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 32.1 Introduction for Runtime Environment </h2>
@@ -145,21 +145,21 @@ other Maxima statements.
 <p><a name="Item_003a-Interrupts"></a>
 </p><hr size="6">
 <a name="Interrupts"></a>
-<a name="SEC178"></a>
+<a name="SEC179"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC177" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC179" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC178" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC180" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC177" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC177" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_33.html#SEC181" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 32.2 Interrupts </h2>
@@ -197,21 +197,21 @@ to resume from the point at which it was stopped.
 <p><a name="Item_003a-Functions-and-Variables-for-Runtime-Environment"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Runtime-Environment"></a>
-<a name="SEC179"></a>
+<a name="SEC180"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC178" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC179" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_33.html#SEC181" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC176" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC177" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC177" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_33.html#SEC181" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 32.3 Functions and Variables for Runtime Environment </h2>
@@ -552,11 +552,124 @@ In this example, the local time zone is 8 hours behind GMT.
 </div>
 </p></dd></dl>
 
+<p><a name="encode_005ftime"></a>
+<a name="Item_003a-encode_005ftime"></a>
+</p><dl>
+<dt><u>Function:</u> <b>encode_time</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>encode_time</tt> (<var>year</var>, <var>month</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>, <var>seconds</var>, <var>tz_offset</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>encode_time</tt> (<var>year</var>, <var>month</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>, <var>seconds</var>)</i>
+<a name="IDX1262"></a>
+</dt>
+<dd><p>Given a time and date specified by
+<var>year</var>, <var>month</var>, <var>day</var>, <var>hours</var>, <var>minutes</var>, and <var>seconds</var>,
+<code>encode_time</code> returns the number of seconds (possibly including a fractional part)
+since midnight, January 1, 1900 GMT.
+</p>
+<p><var>year</var> must be an integer greater than or equal to 1899.
+However, 1899 is allowed only if the resulting encoded time is greater than or equal to 0.
+</p>
+<p><var>month</var> must be an integer from 1 to 12, inclusive.
+</p>
+<p><var>day</var> must be an integer from 1 to <var>n</var>, inclusive,
+where <var>n</var> is the number of days in the month specified by <var>month</var>.
+</p>
+<p><var>hours</var> must be an integer from 0 to 23, inclusive.
+</p>
+<p><var>minutes</var> must be an integer from 0 to 59, inclusive.
+</p>
+<p><var>seconds</var> must be an integer, rational, or float
+greater than or equal to 0 and less than 60.
+When <var>seconds</var> is not an integer,
+<code>encode_time</code> returns a rational,
+such that the fractional part of the return value is equal to the fractional part of <var>seconds</var>.
+Otherwise, <var>seconds</var> is an integer, and the return value is likewise an integer.
+</p>
+<p><var>tz_offset</var> measures the offset of the time zone, in hours,
+east (positive) or west (negative) of GMT.
+<var>tz_offset</var> must be an integer, rational, or float between -24 and 24, inclusive.
+If <var>tz_offset</var> is not a multiple of 1/3600, 
+it is rounded to the nearest multiple of 1/3600.
+</p>
+<p>If <var>tz_offset</var> is not present, the offset of the local time zone is assumed.
+</p>
+<p>See also <code><a href="#decode_005ftime">decode_time</a></code>.
+</p>
+<p>Examples:
+</p>
+<pre class="example">(%i1) encode_time (1900, 1, 1, 0, 0, 0, 0);
+(%o1)                           0
+(%i2) encode_time (1970, 1, 1, 0, 0, 0, 0);
+(%o2)                      2208988800
+(%i3) encode_time (1970, 1, 1, 8, 30, 0, 8.5);
+(%o3)                      2208988800
+(%i4) encode_time (1969, 12, 31, 16, 0, 0, -8);
+(%o4)                      2208988800
+(%i5) encode_time (1969, 12, 31, 16, 0, 1/1000, -8);
+                          2208988800001
+(%o5)                     -------------
+                              1000
+(%i6) % - 2208988800;
+                               1
+(%o6)                         ----
+                              1000
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Time-and-date-functions">Time and date functions</a>
+</div>
+</p></dd></dl>
+
+<p><a name="decode_005ftime"></a>
+<a name="Item_003a-decode_005ftime"></a>
+</p><dl>
+<dt><u>Function:</u> <b>decode_time</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>decode_time</tt> (<var>T</var>, <var>tz_offset</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>decode_time</tt> (<var>T</var>)</i>
+<a name="IDX1263"></a>
+</dt>
+<dd><p>Given the number of seconds (possibly including a fractional part)
+since midnight, January 1, 1900 GMT,
+returns the date and time as represented by a list comprising
+the year, month, day of the month, hours, minutes, seconds, and time zone offset.
+</p>
+<p><var>tz_offset</var> measures the offset of the time zone, in hours,
+east (positive) or west (negative) of GMT.
+<var>tz_offset</var> must be an integer, rational, or float between -24 and 24, inclusive.
+If <var>tz_offset</var> is not a multiple of 1/3600, 
+it is rounded to the nearest multiple of 1/3600.
+</p>
+<p>If <var>tz_offset</var> is not present, the offset of the local time zone is assumed.
+</p>
+<p>See also <code><a href="#encode_005ftime">encode_time</a></code>.
+</p>
+<p>Examples:
+</p>
+<pre class="example">(%i1) decode_time (0, 0);
+(%o1)               [1900, 1, 1, 0, 0, 0, 0]
+(%i2) decode_time (0);
+(%o2)             [1899, 12, 31, 16, 0, 0, - 8]
+(%i3) decode_time (2208988800, 9.25);
+                                          37
+(%o3)              [1970, 1, 1, 9, 15, 0, --]
+                                          4
+(%i4) decode_time (2208988800);
+(%o4)             [1969, 12, 31, 16, 0, 0, - 8]
+(%i5) decode_time (2208988800 + 1729/1000, -6);
+                                      1729
+(%o5)           [1969, 12, 31, 18, 0, ----, - 6]
+                                      1000
+(%i6) decode_time (2208988800 + 1729/1000);
+                                      1729
+(%o6)           [1969, 12, 31, 16, 0, ----, - 8]
+                                      1000
+</pre>
+<div class=categorybox>
+
+<p>Categories:&nbsp;&nbsp;<a href="maxima_105.html#Category_003a-Time-and-date-functions">Time and date functions</a>
+</div>
+</p></dd></dl>
+
 <p><a name="absolute_005freal_005ftime"></a>
 <a name="Item_003a-absolute_005freal_005ftime"></a>
 </p><dl>
 <dt><u>Function:</u> <b>absolute_real_time</b><i> ()</i>
-<a name="IDX1262"></a>
+<a name="IDX1264"></a>
 </dt>
 <dd><p>Returns the number of seconds since midnight, January 1, 1900 GMT.
 The return value is an integer.
@@ -580,7 +693,7 @@ The return value is an integer.
 <a name="Item_003a-elapsed_005freal_005ftime"></a>
 </p><dl>
 <dt><u>Function:</u> <b>elapsed_real_time</b><i> ()</i>
-<a name="IDX1263"></a>
+<a name="IDX1265"></a>
 </dt>
 <dd><p>Returns the number of seconds (including fractions of a second)
 since Maxima was most recently started or restarted.
@@ -606,7 +719,7 @@ The return value is a floating-point number.
 <a name="Item_003a-elapsed_005frun_005ftime"></a>
 </p><dl>
 <dt><u>Function:</u> <b>elapsed_run_time</b><i> ()</i>
-<a name="IDX1264"></a>
+<a name="IDX1266"></a>
 </dt>
 <dd><p>Returns an estimate of the number of seconds (including fractions of a second)
 which Maxima has spent in computations since Maxima was most recently started
@@ -632,8 +745,8 @@ or restarted.  The return value is a floating-point number.
 <p><a name="Item_003a-Miscellaneous-Options"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC176" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_33.html#SEC180" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC177" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_33.html#SEC181" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -641,12 +754,12 @@ or restarted.  The return value is a floating-point number.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

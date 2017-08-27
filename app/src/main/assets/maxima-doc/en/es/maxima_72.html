@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
+<!-- Created on mayo, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.39.0: 72. simplification</title>
+<title>Manual de Maxima 5.40.1.gd04f9f4: 72. simplification</title>
 
-<meta name="description" content="Manual de Maxima 5.39.0: 72. simplification">
-<meta name="keywords" content="Manual de Maxima 5.39.0: 72. simplification">
+<meta name="description" content="Manual de Maxima 5.40.1.gd04f9f4: 72. simplification">
+<meta name="keywords" content="Manual de Maxima 5.40.1.gd04f9f4: 72. simplification">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -233,7 +233,7 @@ hace una demostración sobre su uso.
 
 <dl>
 <dt><u>Función:</u> <b>facsum</b><i> (<var>expr</var>, <var>arg_1</var>, ..., <var>arg_n</var>)</i>
-<a name="IDX2641"></a>
+<a name="IDX2645"></a>
 </dt>
 <dd><p>Devuelve una expresión equivalente a <var>expr</var>, la cual
 depende de los argumentos <var>arg_1</var>, ..., <var>arg_n</var>, y 
@@ -273,7 +273,7 @@ y <code>nextlayerfactor</code> se puede controlar el resultado de <code>facsum</
 
 <dl>
 <dt><u>Variable global:</u> <b>nextlayerfactor</b>
-<a name="IDX2642"></a>
+<a name="IDX2646"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -295,7 +295,7 @@ argumentos de <code>facsum</code>.
 
 <dl>
 <dt><u>Variable global:</u> <b>facsum_combine</b>
-<a name="IDX2643"></a>
+<a name="IDX2647"></a>
 </dt>
 <dd><p>Valor por defecto: <code>true</code>
 </p>
@@ -310,7 +310,7 @@ es un cociente de polinomios.
 
 <dl>
 <dt><u>Función:</u> <b>factorfacsum</b><i> (<var>expr</var>, <var>arg_1</var>, ... <var>arg_n</var>)</i>
-<a name="IDX2644"></a>
+<a name="IDX2648"></a>
 </dt>
 <dd><p>Devuelve una expresión equivalente a <var>expr</var> obtenida aplicando
 <code>facsum</code> a los factores de <var>expr</var>, de argumentos
@@ -321,7 +321,7 @@ esta manera.
 
 <dl>
 <dt><u>Función:</u> <b>collectterms</b><i> (<var>expr</var>, <var>arg_1</var>, &hellip;, <var>arg_n</var>)</i>
-<a name="IDX2645"></a>
+<a name="IDX2649"></a>
 </dt>
 <dd><p>Si algunas expresiones fueron ya simplificadas con <code>facsum</code>, <code>factorfacsum</code>,
 <code>factenexpand</code>,  <code>facexpten</code> o <code>factorfacexpten</code>, debiendo ser 
@@ -367,7 +367,7 @@ grandes.
 
 <dl>
 <dt><u>Función:</u> <b>rempart</b><i> (<var>expr</var>, <var>n</var>)</i>
-<a name="IDX2646"></a>
+<a name="IDX2650"></a>
 </dt>
 <dd><p>Elimina la parte <var>n</var> de la expresión <var>expr</var>.
 </p>
@@ -379,7 +379,7 @@ las partes desde <var>l</var> a <var>m</var> serán eliminadas.
 
 <dl>
 <dt><u>Función:</u> <b>wronskian</b><i> ([<var>f_1</var>, ..., <var>f_n</var>], <var>x</var>)</i>
-<a name="IDX2647"></a>
+<a name="IDX2651"></a>
 </dt>
 <dd><p>Devuelve la matriz wronskiana de las expresiones <var>f_1</var>, ..., <var>f_n</var>
 dependeientes de la variable <var>x</var>.
@@ -398,7 +398,7 @@ la lista de expresiones.
 
 <dl>
 <dt><u>Función:</u> <b>tracematrix</b><i> (<var>M</var>)</i>
-<a name="IDX2648"></a>
+<a name="IDX2652"></a>
 </dt>
 <dd><p>Devuelve la traza (suma de los elementos de la diagonal) de la matriz <var>M</var>.
 </p>
@@ -407,7 +407,7 @@ la lista de expresiones.
 
 <dl>
 <dt><u>Función:</u> <b>rational</b><i> (<var>z</var>)</i>
-<a name="IDX2649"></a>
+<a name="IDX2653"></a>
 </dt>
 <dd><p>Multiplica el numerador y denominador de <var>z</var> por el complejo conjugado
 del denominador, racionalizando así el denominador.
@@ -422,7 +422,7 @@ expresión en formato común.
 
 <dl>
 <dt><u>Función:</u> <b>nonzeroandfreeof</b><i> (<var>x</var>, <var>expr</var>)</i>
-<a name="IDX2650"></a>
+<a name="IDX2654"></a>
 </dt>
 <dd><p>Devuelve <code>true</code> si <var>expr</var> es diferente de cero y 
 <code>freeof (<var>x</var>, <var>expr</var>)</code> devuelve <code>true</code>.
@@ -433,7 +433,7 @@ En caso contrario devuelve <code>false</code>.
 
 <dl>
 <dt><u>Función:</u> <b>linear</b><i> (<var>expr</var>, <var>x</var>)</i>
-<a name="IDX2651"></a>
+<a name="IDX2655"></a>
 </dt>
 <dd><p>Si <var>expr</var> es una expresión de la forma <code><var>a</var>*<var>x</var> + <var>b</var></code>,
 siendo <var>a</var> no nulo y los argumentos <var>a</var> y <var>b</var> no contienen a <var>x</var>,
@@ -455,7 +455,7 @@ siendo <var>a</var> no nulo y los argumentos <var>a</var> y <var>b</var> no cont
 
 <dl>
 <dt><u>Función:</u> <b>gcdivide</b><i> (<var>p</var>, <var>q</var>)</i>
-<a name="IDX2652"></a>
+<a name="IDX2656"></a>
 </dt>
 <dd><p>Si la variable opcional <code>takegcd</code> vale <code>true</code>, que es su valor por defecto, 
 <code>gcdivide</code> divide los polinomios <var>p</var> y <var>q</var> por su
@@ -504,7 +504,7 @@ el cociente <code><var>p</var>/<var>q</var></code>.
 
 <dl>
 <dt><u>Función:</u> <b>arithmetic</b><i> (<var>a</var>, <var>d</var>, <var>n</var>)</i>
-<a name="IDX2653"></a>
+<a name="IDX2657"></a>
 </dt>
 <dd><p>Devuelve el <var>n</var>-ésimo término de la progresión aritmética
 <code><var>a</var>, <var>a</var> + <var>d</var>, <var>a</var> + 2*<var>d</var>, ..., <var>a</var> + (<var>n</var> - 1)*<var>d</var></code>.
@@ -514,7 +514,7 @@ el cociente <code><var>p</var>/<var>q</var></code>.
 
 <dl>
 <dt><u>Función:</u> <b>geometric</b><i> (<var>a</var>, <var>r</var>, <var>n</var>)</i>
-<a name="IDX2654"></a>
+<a name="IDX2658"></a>
 </dt>
 <dd><p>Devuelve el <var>n</var>-ésimo término de la progresión geométrica
 <code><var>a</var>, <var>a</var>*<var>r</var>, <var>a</var>*<var>r</var>^2, ..., <var>a</var>*<var>r</var>^(<var>n</var> - 1)</code>.
@@ -524,7 +524,7 @@ el cociente <code><var>p</var>/<var>q</var></code>.
 
 <dl>
 <dt><u>Función:</u> <b>harmonic</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>n</var>)</i>
-<a name="IDX2655"></a>
+<a name="IDX2659"></a>
 </dt>
 <dd><p>Devuelve el <var>n</var>-ésimo término de la progresión armónica
 <code><var>a</var>/<var>b</var>, <var>a</var>/(<var>b</var> + <var>c</var>), <var>a</var>/(<var>b</var> + 2*<var>c</var>), ..., <var>a</var>/(<var>b</var> + (<var>n</var> - 1)*<var>c</var>)</code>.
@@ -534,7 +534,7 @@ el cociente <code><var>p</var>/<var>q</var></code>.
 
 <dl>
 <dt><u>Función:</u> <b>arithsum</b><i> (<var>a</var>, <var>d</var>, <var>n</var>)</i>
-<a name="IDX2656"></a>
+<a name="IDX2660"></a>
 </dt>
 <dd><p>Devuelve la suma de la progresión aritmética desde hasta el <var>n</var>-ésimo término.
 </p>
@@ -543,7 +543,7 @@ el cociente <code><var>p</var>/<var>q</var></code>.
 
 <dl>
 <dt><u>Función:</u> <b>geosum</b><i> (<var>a</var>, <var>r</var>, <var>n</var>)</i>
-<a name="IDX2657"></a>
+<a name="IDX2661"></a>
 </dt>
 <dd><p>Devuelve la suma de la sucesión geométrica hasta el <var>n</var>-ésimo término.
 Si <var>n</var> es infinito (<code>inf</code>) la suma será finita sólo si el valor absoluto de 
@@ -554,7 +554,7 @@ Si <var>n</var> es infinito (<code>inf</code>) la suma será finita sólo si el va
 
 <dl>
 <dt><u>Función:</u> <b>gaussprob</b><i> (<var>x</var>)</i>
-<a name="IDX2658"></a>
+<a name="IDX2662"></a>
 </dt>
 <dd><p>Devuelve la función de densidad de probabilidad,
 normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
@@ -564,7 +564,7 @@ normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>gd</b><i> (<var>x</var>)</i>
-<a name="IDX2659"></a>
+<a name="IDX2663"></a>
 </dt>
 <dd><p>Devuelve la función de Gudermann,
 <code>2*atan(%e^x)-%pi/2</code>.
@@ -574,7 +574,7 @@ normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>agd</b><i> (<var>x</var>)</i>
-<a name="IDX2660"></a>
+<a name="IDX2664"></a>
 </dt>
 <dd><p>Devuelve la inversa de la función de Gudermann,
 <code>log (tan (%pi/4 + x/2))</code>.
@@ -584,7 +584,7 @@ normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>vers</b><i> (<var>x</var>)</i>
-<a name="IDX2661"></a>
+<a name="IDX2665"></a>
 </dt>
 <dd><p>Devuelve <code>1 - cos (x)</code>.
 </p>
@@ -593,7 +593,7 @@ normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>covers</b><i> (<var>x</var>)</i>
-<a name="IDX2662"></a>
+<a name="IDX2666"></a>
 </dt>
 <dd><p>Devuelve <code>1 - sin (<var>x</var>)</code>.
 </p>
@@ -602,7 +602,7 @@ normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>exsec</b><i> (<var>x</var>)</i>
-<a name="IDX2663"></a>
+<a name="IDX2667"></a>
 </dt>
 <dd><p>Devuelve <code>sec (<var>x</var>) - 1</code>.
 </p>
@@ -611,7 +611,7 @@ normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>hav</b><i> (<var>x</var>)</i>
-<a name="IDX2664"></a>
+<a name="IDX2668"></a>
 </dt>
 <dd><p>Devuelve <code>(1 - cos(x))/2</code>.
 </p>
@@ -620,7 +620,7 @@ normal <code>%e^(-<var>x</var>^2/2) / sqrt(2*%pi)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>combination</b><i> (<var>n</var>, <var>r</var>)</i>
-<a name="IDX2665"></a>
+<a name="IDX2669"></a>
 </dt>
 <dd><p>Calcula el número de combinaciones de <var>n</var> objetos
 tomados de <var>r</var> en <var>r</var>.
@@ -630,7 +630,7 @@ tomados de <var>r</var> en <var>r</var>.
 
 <dl>
 <dt><u>Función:</u> <b>permutation</b><i> (<var>n</var>, <var>r</var>)</i>
-<a name="IDX2666"></a>
+<a name="IDX2670"></a>
 </dt>
 <dd><p>Calcula el número de permutaciones de <var>r</var>, seleccionados
 de un conjunto de <var>n</var>.
@@ -790,7 +790,7 @@ multiplicativa.
 
 <dl>
 <dt><u>Función:</u> <b>reduce_consts</b><i> (<var>expr</var>)</i>
-<a name="IDX2667"></a>
+<a name="IDX2671"></a>
 </dt>
 <dd><p>Sustituye subexpresiones constantes de <var>expr</var> por átomos,
 guardando la definición de todos ellos en la lista de ecuaciones
@@ -854,7 +854,7 @@ hace una demostración sobre su uso.
 
 <dl>
 <dt><u>Función:</u> <b>gcfac</b><i> (<var>expr</var>)</i>
-<a name="IDX2668"></a>
+<a name="IDX2672"></a>
 </dt>
 <dd><p>Es una función de factorización que intenta aplicar la misma heurística
 que los humanos cuando tratan de hacer las expresiones más simples, limitándose
@@ -909,7 +909,7 @@ hace una demostración sobre su uso.
 
 <dl>
 <dt><u>Función:</u> <b>sqrtdenest</b><i> (<var>expr</var>)</i>
-<a name="IDX2669"></a>
+<a name="IDX2673"></a>
 </dt>
 <dd><p>Reduce expresiones en las que se encuentren raíces cuadradas anidadas,
 siempre que sea posible
@@ -955,7 +955,7 @@ siempre que sea posible
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>mayo, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

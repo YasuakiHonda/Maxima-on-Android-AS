@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 76. orthopoly</title>
+<title>Maxima 5.40.0 Manual: 76. orthopoly</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 76. orthopoly">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 76. orthopoly">
+<meta name="description" content="Maxima 5.40.0 Manual: 76. orthopoly">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 76. orthopoly">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,51 +92,52 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="orthopoly_002dpkg"></a>
-<a name="SEC349"></a>
+<a name="SEC350"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_75.html#SEC348" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_75.html#SEC349" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC351" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_75.html#SEC347" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_75.html#SEC348" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 76. orthopoly </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC350">76.1 Introduction to orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC351">76.1 Introduction to orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC357">76.2 Functions and Variables for orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC358">76.2 Functions and Variables for orthogonal polynomials</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-orthogonal-polynomials"></a>
 </p><hr size="6">
 <a name="Introduction-to-orthogonal-polynomials"></a>
-<a name="SEC350"></a>
+<a name="SEC351"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC349" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC351" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC350" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC352" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 76.1 Introduction to orthogonal polynomials </h2>
@@ -167,26 +168,26 @@ Eugen Merzbacherの<i>Quantum Mechanics</i> (2nd edition, 1970)を使います�
 </div>
 </p>
 <hr size="6">
-<a name="SEC351"></a>
+<a name="SEC352"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC350" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC352" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC351" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC353" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 76.1.1 Getting Started with orthopoly </h3>
 
-<p><code>load (orthopoly)</code>は <code>orthopoly</code>パッケージをロードします。
+<p><code>load (&quot;orthopoly&quot;)</code>は <code>orthopoly</code>パッケージをロードします。
 </p>
 <p>3次の Legendre多項式を見つけるには、
 </p>
@@ -323,21 +324,21 @@ $$P_{n}^{\left(a,a-b\right)}\left({{x}\over{2}}\right)$$
 (%o4)                         false
 </pre></td></tr></table>
 <hr size="6">
-<a name="SEC352"></a>
+<a name="SEC353"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC351" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC353" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC352" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC354" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 76.1.2 Limitations </h3>
@@ -456,21 +457,21 @@ $$P_{n}^{\left(a,a-b\right)}\left({{x}\over{2}}\right)$$
 </pre></td></tr></table>
 <p><a name="Floating-point-Evaluation"></a>
 </p><hr size="6">
-<a name="SEC353"></a>
+<a name="SEC354"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC352" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC354" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC353" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC355" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 76.1.3 Floating point Evaluation </h3>
@@ -545,21 +546,21 @@ $$P_{n}^{\left(a,a-b\right)}\left({{x}\over{2}}\right)$$
 (%o1) interval(- 0.043009481257265, 3.3750051301228864E-14)
 </pre></td></tr></table>
 <hr size="6">
-<a name="SEC354"></a>
+<a name="SEC355"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC353" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC355" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC354" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC356" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 76.1.4 Graphics and <code>orthopoly</code> </h3>
@@ -592,21 +593,21 @@ Maximaはプロットする前にそれらを多項式に評価します;
 </p>
 
 <hr size="6">
-<a name="SEC355"></a>
+<a name="SEC356"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC354" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC356" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC355" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC357" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 76.1.5 Miscellaneous Functions </h3>
@@ -686,21 +687,21 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 </p>
 
 <hr size="6">
-<a name="SEC356"></a>
+<a name="SEC357"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC355" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC357" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC356" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC358" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC351" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 76.1.6 Algorithms </h3>
@@ -721,21 +722,21 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-Functions-and-Variables-for-orthogonal-polynomials"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-orthogonal-polynomials"></a>
-<a name="SEC357"></a>
+<a name="SEC358"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC356" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC357" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC349" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC350" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 76.2 Functions and Variables for orthogonal polynomials </h2>
@@ -743,7 +744,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-assoc_005flegendre_005fp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>assoc_legendre_p</b><i> (<var>n</var>, <var>m</var>, <var>x</var>)</i>
-<a name="IDX2341"></a>
+<a name="IDX2345"></a>
 </dt>
 <dd><p>次数 <var>n</var>と位数 <var>m</var>の第一種Legendre陪函数。
 </p>
@@ -760,7 +761,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-assoc_005flegendre_005fq"></a>
 </p><dl>
 <dt><u>関数:</u> <b>assoc_legendre_q</b><i> (<var>n</var>, <var>m</var>, <var>x</var>)</i>
-<a name="IDX2342"></a>
+<a name="IDX2346"></a>
 </dt>
 <dd><p>次数 <var>n</var>と位数 <var>m</var>の第二種Legendre陪函数。
 </p>
@@ -776,7 +777,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-chebyshev_005ft"></a>
 </p><dl>
 <dt><u>関数:</u> <b>chebyshev_t</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2343"></a>
+<a name="IDX2347"></a>
 </dt>
 <dd><p><var>n</var>次の第一種 Chebyshev多項式。
 </p>
@@ -792,7 +793,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-chebyshev_005fu"></a>
 </p><dl>
 <dt><u>関数:</u> <b>chebyshev_u</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2344"></a>
+<a name="IDX2348"></a>
 </dt>
 <dd><p><var>n</var>次の第二種 Chebyshev多項式。
 </p>
@@ -808,7 +809,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-gen_005flaguerre"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gen_laguerre</b><i> (<var>n</var>, <var>a</var>, <var>x</var>)</i>
-<a name="IDX2345"></a>
+<a name="IDX2349"></a>
 </dt>
 <dd><p>次数 <var>n</var>の一般化 Laguerre多項式。
 </p>
@@ -824,7 +825,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-hermite"></a>
 </p><dl>
 <dt><u>関数:</u> <b>hermite</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2346"></a>
+<a name="IDX2350"></a>
 </dt>
 <dd><p><var>n</var>次の Hermite多項式。
 </p>
@@ -840,7 +841,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-intervalp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>intervalp</b><i> (<var>e</var>)</i>
-<a name="IDX2347"></a>
+<a name="IDX2351"></a>
 </dt>
 <dd><p>もし入力が区間なら <code>true</code>を、そうでないなら <code>false</code>を返します。
 </p>
@@ -855,7 +856,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-jacobi_005fp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>jacobi_p</b><i> (<var>n</var>, <var>a</var>, <var>b</var>, <var>x</var>)</i>
-<a name="IDX2348"></a>
+<a name="IDX2352"></a>
 </dt>
 <dd><p>Jacobiの多項式。
 </p>
@@ -877,7 +878,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-laguerre"></a>
 </p><dl>
 <dt><u>関数:</u> <b>laguerre</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2349"></a>
+<a name="IDX2353"></a>
 </dt>
 <dd><p><var>n</var>次の Laguerre多項式。
 </p>
@@ -893,7 +894,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-legendre_005fp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>legendre_p</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2350"></a>
+<a name="IDX2354"></a>
 </dt>
 <dd><p><var>n</var>次の第一種 Legendre多項式。
 </p>
@@ -909,7 +910,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-legendre_005fq"></a>
 </p><dl>
 <dt><u>関数:</u> <b>legendre_q</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2351"></a>
+<a name="IDX2355"></a>
 </dt>
 <dd><p><var>n</var>次の第二種 Legendre函数。
 </p>
@@ -925,7 +926,7 @@ Kroneckerのデルタ函数と単位階段函数を使います。
 <p><a name="Item_003a-orthopoly_005frecur"></a>
 </p><dl>
 <dt><u>関数:</u> <b>orthopoly_recur</b><i> (<var>f</var>, <var>args</var>)</i>
-<a name="IDX2352"></a>
+<a name="IDX2356"></a>
 </dt>
 <dd><p>引数 <var>args</var>を持つ直交函数族 <var>f</var>の漸化式を返します。
 再帰は多項式次数に関してです。
@@ -962,7 +963,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-orthopoly_005freturns_005fintervals"></a>
 </p><dl>
 <dt><u>変数:</u> <b>orthopoly_returns_intervals</b>
-<a name="IDX2353"></a>
+<a name="IDX2357"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -982,7 +983,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-orthopoly_005fweight"></a>
 </p><dl>
 <dt><u>関数:</u> <b>orthopoly_weight</b><i> (<var>f</var>, <var>args</var>)</i>
-<a name="IDX2354"></a>
+<a name="IDX2358"></a>
 </dt>
 <dd><p>3つの要素のリストを返します;
 一番目の要素はリスト <var>args</var>が与える引数を持つ直交多項式族 <var>f</var>の重みの公式です;
@@ -1009,7 +1010,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-pochhammer"></a>
 </p><dl>
 <dt><u>関数:</u> <b>pochhammer</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2355"></a>
+<a name="IDX2359"></a>
 </dt>
 <dd><p>Pochhammerシンボル。
 <code><var>n</var> &lt;= pochhammer_max_index</code>の非負整数 <var>n</var>に対して、式
@@ -1058,7 +1059,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-pochhammer_005fmax_005findex"></a>
 </p><dl>
 <dt><u>変数:</u> <b>pochhammer_max_index</b>
-<a name="IDX2356"></a>
+<a name="IDX2360"></a>
 </dt>
 <dd><p>デフォルト値: 100
 </p>
@@ -1087,7 +1088,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-spherical_005fbessel_005fj"></a>
 </p><dl>
 <dt><u>関数:</u> <b>spherical_bessel_j</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2357"></a>
+<a name="IDX2361"></a>
 </dt>
 <dd><p>第一種球 Bessel函数。
 </p>
@@ -1104,7 +1105,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-spherical_005fbessel_005fy"></a>
 </p><dl>
 <dt><u>関数:</u> <b>spherical_bessel_y</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2358"></a>
+<a name="IDX2362"></a>
 </dt>
 <dd><p>第二種球 Bessel函数。
 </p>
@@ -1121,7 +1122,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-spherical_005fhankel1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>spherical_hankel1</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2359"></a>
+<a name="IDX2363"></a>
 </dt>
 <dd><p>第一種球 Hankel函数。
 </p>
@@ -1138,7 +1139,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-spherical_005fhankel2"></a>
 </p><dl>
 <dt><u>関数:</u> <b>spherical_hankel2</b><i> (<var>n</var>, <var>x</var>)</i>
-<a name="IDX2360"></a>
+<a name="IDX2364"></a>
 </dt>
 <dd><p>第二種球 Hankel函数。
 </p>
@@ -1155,7 +1156,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-spherical_005fharmonic"></a>
 </p><dl>
 <dt><u>関数:</u> <b>spherical_harmonic</b><i> (<var>n</var>, <var>m</var>, <var>x</var>, <var>y</var>)</i>
-<a name="IDX2361"></a>
+<a name="IDX2365"></a>
 </dt>
 <dd><p>球調和函数。
 </p>
@@ -1171,7 +1172,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-unit_005fstep"></a>
 </p><dl>
 <dt><u>関数:</u> <b>unit_step</b><i> (<var>x</var>)</i>
-<a name="IDX2362"></a>
+<a name="IDX2366"></a>
 </dt>
 <dd><p>左連続の単位階段函数;なので
 <code>unit_step (<var>x</var>)</code>は<code><var>x</var> &lt;= 0</code>で0であり、
@@ -1191,7 +1192,7 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-ultraspherical"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ultraspherical</b><i> (<var>n</var>, <var>a</var>, <var>x</var>)</i>
-<a name="IDX2363"></a>
+<a name="IDX2367"></a>
 </dt>
 <dd><p>(Gegenbauer多項式としても知られている)超球多項式。
 </p>
@@ -1207,8 +1208,8 @@ A recursion relation for foo isn't known to Maxima
 <p><a name="Item_003a-ratpow_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC349" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC350" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1216,12 +1217,12 @@ A recursion relation for foo isn't known to Maxima
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

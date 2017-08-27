@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
+<!-- Created on mayo, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.39.0: 79. zeilberger</title>
+<title>Manual de Maxima 5.40.1.gd04f9f4: 79. zeilberger</title>
 
-<meta name="description" content="Manual de Maxima 5.39.0: 79. zeilberger">
-<meta name="keywords" content="Manual de Maxima 5.39.0: 79. zeilberger">
+<meta name="description" content="Manual de Maxima 5.40.1.gd04f9f4: 79. zeilberger">
+<meta name="keywords" content="Manual de Maxima 5.40.1.gd04f9f4: 79. zeilberger">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -252,7 +252,7 @@ el sistema lineal en el algoritmo de Zeilberger.
 
 <dl>
 <dt><u>Función:</u> <b>AntiDifference</b><i> (<var>F_k</var>, <var>k</var>)</i>
-<a name="IDX2841"></a>
+<a name="IDX2845"></a>
 </dt>
 <dd><p>Returns the hypergeometric anti-difference
 of <em>F_k</em>, if it exists.
@@ -261,7 +261,7 @@ Otherwise <code>AntiDifference</code> returns <code>no_hyp_antidifference</code>
 
 <dl>
 <dt><u>Función:</u> <b>Gosper</b><i> (<var>F_k</var>, <var>k</var>)</i>
-<a name="IDX2842"></a>
+<a name="IDX2846"></a>
 </dt>
 <dd><p>Devuelve, si existe, el elemento racional asociado a <var>F_k</var>, esto es,
 la función racional que verifica
@@ -273,7 +273,7 @@ la función racional que verifica
 
 <dl>
 <dt><u>Función:</u> <b>GosperSum</b><i> (<var>F_k</var>, <var>k</var>, <var>a</var>, <var>b</var>) </i>
-<a name="IDX2843"></a>
+<a name="IDX2847"></a>
 </dt>
 <dd><p>Devuelve la suma de los términos <em>F_k</em> desde <em><var>k</var> = <var>a</var></em> hasta
 <em><var>k</var> = <var>b</var></em> si <em>F_k</em> tiene una antidiferencia
@@ -322,7 +322,7 @@ Dependent equations eliminated:  (1)
 
 <dl>
 <dt><u>Función:</u> <b>parGosper</b><i> (<var>F_{n,k}</var>, <var>k</var>, <var>n</var>, <var>d</var>)</i>
-<a name="IDX2844"></a>
+<a name="IDX2848"></a>
 </dt>
 <dd><p>Intenta calcular una recurrecia de orden <var>d</var> para <var>F_{n,k}</var>.
 </p>
@@ -337,7 +337,7 @@ ninguna recurrencia.
 
 <dl>
 <dt><u>Función:</u> <b>Zeilberger</b><i> (<var>F_{n,k}</var>, <var>k</var>, <var>n</var>)</i>
-<a name="IDX2845"></a>
+<a name="IDX2849"></a>
 </dt>
 <dd><p>Intenta calcular la suma hipergeométrica indefinida de <var>F_{n,k}</var>.
 </p>
@@ -361,7 +361,7 @@ ninguna solución.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>max_ord</b>
-<a name="IDX2846"></a>
+<a name="IDX2850"></a>
 </dt>
 <dd><p>Valor por defecto: 5
 </p>
@@ -370,7 +370,7 @@ ninguna solución.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>simplified_output</b>
-<a name="IDX2847"></a>
+<a name="IDX2851"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -381,7 +381,7 @@ presentar las soluciones simplificadas.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>linear_solver</b>
-<a name="IDX2848"></a>
+<a name="IDX2852"></a>
 </dt>
 <dd><p>Valor por defecto: <code>linsolve</code>
 </p>
@@ -392,7 +392,7 @@ Zeilberger.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>warnings</b>
-<a name="IDX2849"></a>
+<a name="IDX2853"></a>
 </dt>
 <dd><p>Valor por defecto: <code>true</code>
 </p>
@@ -403,7 +403,7 @@ mensajes de aviso durante su ejecución.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>Gosper_in_Zeilberger</b>
-<a name="IDX2850"></a>
+<a name="IDX2854"></a>
 </dt>
 <dd><p>Valor por defecto: <code>true</code>
 </p>
@@ -415,7 +415,7 @@ En caso contrario, <code>Zeilberger</code> invoca inmediatamente a <code>parGosp
 
 <dl>
 <dt><u>Variable opcional:</u> <b>trivial_solutions</b>
-<a name="IDX2851"></a>
+<a name="IDX2855"></a>
 </dt>
 <dd><p>Valor por defecto: <code>true</code>
 </p>
@@ -425,7 +425,7 @@ la función <code>Zeilberger</code> devuelve soluciones triviales.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>mod_test</b>
-<a name="IDX2852"></a>
+<a name="IDX2856"></a>
 </dt>
 <dd><p>Valor por defecto: <code>false</code>
 </p>
@@ -436,7 +436,7 @@ para descartar sistemas sin soluciones.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>modular_linear_solver</b>
-<a name="IDX2853"></a>
+<a name="IDX2857"></a>
 </dt>
 <dd><p>Valor por defecto: <code>linsolve</code>
 </p>
@@ -447,7 +447,7 @@ resolver sistemas lineales.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>ev_point</b>
-<a name="IDX2854"></a>
+<a name="IDX2858"></a>
 </dt>
 <dd><p>Valor por defecto: <code>big_primes[10]</code>
 </p>
@@ -457,7 +457,7 @@ durante la ejecución de la prueba modular de <code>parGosper</code>.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>mod_big_prime</b>
-<a name="IDX2855"></a>
+<a name="IDX2859"></a>
 </dt>
 <dd><p>Valor por defecto: <code>big_primes[1]</code>
 </p>
@@ -467,7 +467,7 @@ modular de <code>parGosper</code>.
 
 <dl>
 <dt><u>Variable opcional:</u> <b>mod_threshold</b>
-<a name="IDX2856"></a>
+<a name="IDX2860"></a>
 </dt>
 <dd><p>Valor por defecto: 4
 </p>
@@ -492,7 +492,7 @@ de <code>parGosper</code>.
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>mayo, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

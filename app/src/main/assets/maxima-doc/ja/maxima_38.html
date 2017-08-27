@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 38. Debugging</title>
+<title>Maxima 5.40.0 Manual: 38. Debugging</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 38. Debugging">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 38. Debugging">
+<meta name="description" content="Maxima 5.40.0 Manual: 38. Debugging">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 38. Debugging">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,53 +92,54 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="Debugging"></a>
-<a name="SEC205"></a>
+<a name="SEC206"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_37.html#SEC204" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC206" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_37.html#SEC205" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC207" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 38. Debugging </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC206">38.1 Source Level Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC207">38.1 Source Level Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC207">38.2 Keyword Commands</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC208">38.2 Keyword Commands</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC208">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC209">38.3 Functions and Variables for Debugging</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Source-Level-Debugging"></a>
 </p><hr size="6">
 <a name="Source-Level-Debugging"></a>
-<a name="SEC206"></a>
+<a name="SEC207"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC205" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC207" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC206" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC208" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.1 Source Level Debugging </h2>
@@ -257,21 +258,21 @@ Maximaに評価ような、そのファイルウィンドウで利用可能な�
 <p><a name="Item_003a-Keyword-Commands"></a>
 </p><hr size="6">
 <a name="Keyword-Commands"></a>
-<a name="SEC207"></a>
+<a name="SEC208"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC206" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC208" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC207" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC209" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.2 Keyword Commands </h2>
@@ -358,21 +359,21 @@ Maximaプロンプトやデバッガープロンプトで入力できます。
 <p><a name="Item_003a-Functions-and-Variables-for-Debugging"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Debugging"></a>
-<a name="SEC208"></a>
+<a name="SEC209"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC207" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC208" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC205" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC206" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 38.3 Functions and Variables for Debugging </h2>
@@ -381,7 +382,7 @@ Maximaプロンプトやデバッガープロンプトで入力できます。
 <a name="Item_003a-debugmode"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>debugmode</b>
-<a name="IDX1418"></a>
+<a name="IDX1420"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -404,7 +405,7 @@ Maximaコードをステップ実行したりなどコマンドを入力する�
 <a name="Item_003a-refcheck"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>refcheck</b>
-<a name="IDX1419"></a>
+<a name="IDX1421"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -423,7 +424,7 @@ Maximaは計算の中で、バイドされた変数が最初に使われる度�
 <a name="Item_003a-setcheck"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>setcheck</b>
-<a name="IDX1420"></a>
+<a name="IDX1422"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -464,7 +465,7 @@ Maximaは変数またはそれらの添字付き出現が通常の割り当て�
 <a name="Item_003a-setcheckbreak"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>setcheckbreak</b>
-<a name="IDX1421"></a>
+<a name="IDX1423"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -488,7 +489,7 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-setval"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>setval</b>
-<a name="IDX1422"></a>
+<a name="IDX1424"></a>
 </dt>
 <dd><p><code><a href="#setcheckbreak">setcheckbreak</a></code>が起こった時、変数が設定されようとしている値を保持します。
 なので <code><a href="#setval">setval</a></code>に割り当てることで、違う値を割り当てることができます。
@@ -506,7 +507,7 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-timer"></a>
 </p><dl>
 <dt><u>関数:</u> <b>timer</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer</tt> (all) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer</tt> ()</i>
-<a name="IDX1423"></a>
+<a name="IDX1425"></a>
 </dt>
 <dd><p><code>timer</code>は、タイミング統計が収集される関数のリストに与えられた関数
 <var>f_1</var>, &hellip;, <var>f_n</var>それぞれを入れます。
@@ -543,7 +544,7 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-untimer"></a>
 </p><dl>
 <dt><u>関数:</u> <b>untimer</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untimer</tt> ()</i>
-<a name="IDX1424"></a>
+<a name="IDX1426"></a>
 </dt>
 <dd><p><code>untimer</code>はタイマーリストから与えられた関数
 <var>f_1</var>, &hellip;, <var>f_n</var>それぞれを削除します。
@@ -567,7 +568,7 @@ Maximaはブレイクプロンプトを出します。
 <a name="Item_003a-timer_005fdevalue"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>timer_devalue</b>
-<a name="IDX1425"></a>
+<a name="IDX1427"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -590,7 +591,7 @@ Maximaは計られる関数から他の計測される関数で費やされた�
 <a name="Item_003a-timer_005finfo"></a>
 </p><dl>
 <dt><u>関数:</u> <b>timer_info</b><i> (<var>f_1</var>, ..., <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>timer_info</tt> ()</i>
-<a name="IDX1426"></a>
+<a name="IDX1428"></a>
 </dt>
 <dd><p>関数 <var>f_1</var>, ..., <var>f_n</var>が与えられると、
 <code>timer_info</code>は関数それぞれのタイミング情報を含む行列を返します。
@@ -618,7 +619,7 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <a name="Item_003a-trace"></a>
 </p><dl>
 <dt><u>関数:</u> <b>trace</b><i> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace</tt> (all) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace</tt> ()</i>
-<a name="IDX1427"></a>
+<a name="IDX1429"></a>
 </dt>
 <dd><p>関数 <var>f_1</var>, &hellip;, <var>f_n</var>が与えられると、
 <code>trace</code>は、
@@ -660,7 +661,7 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <a name="Item_003a-trace_005foptions"></a>
 </p><dl>
 <dt><u>関数:</u> <b>trace_options</b><i> (<var>f</var>, <var>option_1</var>, &hellip;, <var>option_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>trace_options</tt> (<var>f</var>)</i>
-<a name="IDX1428"></a>
+<a name="IDX1430"></a>
 </dt>
 <dd><p>関数 <var>f</var>についてトレースオプションを設定します。
 いかなる以前のオプションも破棄されます。
@@ -738,7 +739,7 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <a name="Item_003a-untrace"></a>
 </p><dl>
 <dt><u>関数:</u> <b>untrace</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untrace</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>untrace</tt> ()</i>
-<a name="IDX1429"></a>
+<a name="IDX1431"></a>
 </dt>
 <dd><p><code>untrace</code>は、与えられた関数 <var>f_1</var>, &hellip;, <var>f_n</var>について
 <code>trace</code>関数でイネーブルされたトレースをディセーブルします。
@@ -755,8 +756,8 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <p><a name="Item_003a-alt_002ddisplay_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC205" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_39.html#SEC209" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC206" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_39.html#SEC210" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -764,12 +765,12 @@ Macymaの「ガーベッジコレクション時間」を意味しましたが�
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 35. Sets</title>
+<title>Maxima 5.40.0 Manual: 35. Sets</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 35. Sets">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 35. Sets">
+<meta name="description" content="Maxima 5.40.0 Manual: 35. Sets">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 35. Sets">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,50 +66,50 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="Sets"></a>
-<a name="SEC187"></a>
+<a name="SEC188"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_34.html#SEC186" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC188" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_34.html#SEC187" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC189" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_34.html#SEC184" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_34.html#SEC185" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 35. Sets </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC188">35.1 Introduction to Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       
+<tr><td align="left" valign="top"><a href="#SEC189">35.1 Introduction to Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC192">35.2 Functions and Variables for Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       
+<tr><td align="left" valign="top"><a href="#SEC193">35.2 Functions and Variables for Sets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-Sets"></a>
 </p><hr size="6">
 <a name="Introduction-to-Sets"></a>
-<a name="SEC188"></a>
+<a name="SEC189"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC187" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC189" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC188" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC190" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC187" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC188" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC188" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 35.1 Introduction to Sets </h2>
@@ -127,21 +127,21 @@ coefficients, partitions of nonnegative integers, and a few others.
 Maxima also defines a Kronecker delta function.
 </p>
 <hr size="6">
-<a name="SEC189"></a>
+<a name="SEC190"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC188" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC190" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC189" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC191" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC188" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC188" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC189" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 35.1.1 Usage </h3>
@@ -282,7 +282,7 @@ in a given set that do not depend on a variable <code>z</code>, use
                                     lambda ([e], freeof (z, e)));
 (%o1)               {- y + x + 4, y + x - 5}
 </pre>
-<p>The section <a href="#SEC192">Functions and Variables for Sets</a> has a complete list of
+<p>The section <a href="#SEC193">Functions and Variables for Sets</a> has a complete list of
 the set functions in Maxima.
 </p>
 <div class=categorybox>
@@ -291,21 +291,21 @@ the set functions in Maxima.
 </div>
 </p>
 <hr size="6">
-<a name="SEC190"></a>
+<a name="SEC191"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC189" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC191" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC190" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC192" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC188" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC188" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC189" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 35.1.2 Set Member Iteration </h3>
@@ -342,21 +342,21 @@ or <code>ordergreat</code>, call those functions before constructing any sets,
 and do not call <code>unorder</code>. 
 </p>
 <hr size="6">
-<a name="SEC191"></a>
+<a name="SEC192"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC190" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC192" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC191" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC193" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC188" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC188" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC189" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 35.1.3 Authors </h3>
@@ -368,21 +368,21 @@ documentation.
 <p><a name="Item_003a-Functions-and-Variables-for-Sets"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Sets"></a>
-<a name="SEC192"></a>
+<a name="SEC193"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC191" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC192" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC187" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC188" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC188" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 35.2 Functions and Variables for Sets </h2>
@@ -391,7 +391,7 @@ documentation.
 <a name="Item_003a-adjoin"></a>
 </p><dl>
 <dt><u>Function:</u> <b>adjoin</b><i> (<var>x</var>, <var>a</var>) </i>
-<a name="IDX1295"></a>
+<a name="IDX1297"></a>
 </dt>
 <dd><p>Returns the union of the set <var>a</var> with <code>{<var>x</var>}</code>.
 </p>
@@ -421,7 +421,7 @@ however, <code>adjoin</code> may be somewhat faster than <code>union</code>.
 <a name="Item_003a-belln"></a>
 </p><dl>
 <dt><u>Function:</u> <b>belln</b><i> (<var>n</var>)</i>
-<a name="IDX1296"></a>
+<a name="IDX1298"></a>
 </dt>
 <dd><p>Represents the <em>n</em>-th Bell number.
 <code>belln(n)</code> is the number of partitions of a set with <var>n</var> members.
@@ -460,7 +460,7 @@ however, <code>adjoin</code> may be somewhat faster than <code>union</code>.
 <a name="Item_003a-cardinality"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cardinality</b><i> (<var>a</var>)</i>
-<a name="IDX1297"></a>
+<a name="IDX1299"></a>
 </dt>
 <dd><p>Returns the number of distinct elements of the set <var>a</var>. 
 </p>
@@ -489,7 +489,7 @@ even when simplification is disabled.
 <a name="Item_003a-cartesian_005fproduct"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cartesian_product</b><i> (<var>b_1</var>, ... , <var>b_n</var>)</i>
-<a name="IDX1298"></a>
+<a name="IDX1300"></a>
 </dt>
 <dd><p>Returns a set of lists of the form <code>[<var>x_1</var>, ..., <var>x_n</var>]</code>, where
 <var>x_1</var>, ..., <var>x_n</var> are elements of the sets <var>b_1</var>, ... , <var>b_n</var>,
@@ -520,7 +520,7 @@ respectively.
 <a name="Item_003a-disjoin"></a>
 </p><dl>
 <dt><u>Function:</u> <b>disjoin</b><i> (<var>x</var>, <var>a</var>)</i>
-<a name="IDX1299"></a>
+<a name="IDX1301"></a>
 </dt>
 <dd><p>Returns the set <var>a</var> without the member <var>x</var>.
 If <var>x</var> is not a member of <var>a</var>, return <var>a</var> unchanged.
@@ -551,7 +551,7 @@ Of these, <code>disjoin</code> is generally faster than the others.
 <a name="Item_003a-disjointp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>disjointp</b><i> (<var>a</var>, <var>b</var>) </i>
-<a name="IDX1300"></a>
+<a name="IDX1302"></a>
 </dt>
 <dd><p>Returns <code>true</code> if and only if the sets <var>a</var> and <var>b</var> are disjoint.
 </p>
@@ -576,7 +576,7 @@ Of these, <code>disjoin</code> is generally faster than the others.
 <a name="Item_003a-divisors"></a>
 </p><dl>
 <dt><u>Function:</u> <b>divisors</b><i> (<var>n</var>)</i>
-<a name="IDX1301"></a>
+<a name="IDX1303"></a>
 </dt>
 <dd><p>Represents the set of divisors of <var>n</var>.
 </p>
@@ -630,7 +630,7 @@ yields the divisors without reevaluating <code>divisors(8)</code>.
 <a name="Item_003a-elementp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>elementp</b><i> (<var>x</var>, <var>a</var>)</i>
-<a name="IDX1302"></a>
+<a name="IDX1304"></a>
 </dt>
 <dd><p>Returns <code>true</code> if and only if <var>x</var> is a member of the 
 set <var>a</var>.
@@ -656,7 +656,7 @@ set <var>a</var>.
 <a name="Item_003a-emptyp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>emptyp</b><i> (<var>a</var>)</i>
-<a name="IDX1303"></a>
+<a name="IDX1305"></a>
 </dt>
 <dd><p>Return <code>true</code> if and only if <var>a</var> is the empty set or
 the empty list.
@@ -680,7 +680,7 @@ the empty list.
 <a name="Item_003a-equiv_005fclasses"></a>
 </p><dl>
 <dt><u>Function:</u> <b>equiv_classes</b><i> (<var>s</var>, <var>F</var>)</i>
-<a name="IDX1304"></a>
+<a name="IDX1306"></a>
 </dt>
 <dd><p>Returns a set of the equivalence classes of the set <var>s</var> with respect
 to the equivalence relation <var>F</var>.
@@ -725,7 +725,7 @@ which <code>is</code> evaluates to <code>true</code> or <code>false</code>.
 <a name="Item_003a-every"></a>
 </p><dl>
 <dt><u>Function:</u> <b>every</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>every</tt> (<var>f</var>, <var>s</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>every</tt> (<var>f</var>, <var>L_1</var>, ..., <var>L_n</var>)</i>
-<a name="IDX1305"></a>
+<a name="IDX1307"></a>
 </dt>
 <dd><p>Returns <code>true</code> if the predicate <var>f</var> is <code>true</code> for all given arguments.
 </p>
@@ -807,7 +807,7 @@ are governed by the global flag <code>prederror</code>.
 <a name="Item_003a-extremal_005fsubset"></a>
 </p><dl>
 <dt><u>Function:</u> <b>extremal_subset</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>extremal_subset</tt> (<var>s</var>, <var>f</var>, max) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>extremal_subset</tt> (<var>s</var>, <var>f</var>, min)</i>
-<a name="IDX1306"></a>
+<a name="IDX1308"></a>
 </dt>
 <dd><p>Returns the subset of <var>s</var> for which the function <var>f</var> takes on maximum or minimum values.
 </p>
@@ -835,7 +835,7 @@ list <var>s</var> for which the real-valued function <var>f</var> takes on its m
 <a name="Item_003a-flatten"></a>
 </p><dl>
 <dt><u>Function:</u> <b>flatten</b><i> (<var>expr</var>)</i>
-<a name="IDX1307"></a>
+<a name="IDX1309"></a>
 </dt>
 <dd><p>Collects arguments of subexpressions which have the same operator as <var>expr</var>
 and constructs an expression from these collected arguments.
@@ -906,7 +906,7 @@ Wrong number of arguments to mod
 <a name="Item_003a-full_005flistify"></a>
 </p><dl>
 <dt><u>Function:</u> <b>full_listify</b><i> (<var>a</var>)</i>
-<a name="IDX1308"></a>
+<a name="IDX1310"></a>
 </dt>
 <dd><p>Replaces every set operator in <var>a</var> by a list operator,
 and returns the result.
@@ -933,7 +933,7 @@ even if the main operator is not <code>set</code>.
 <a name="Item_003a-fullsetify"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fullsetify</b><i> (<var>a</var>)</i>
-<a name="IDX1309"></a>
+<a name="IDX1311"></a>
 </dt>
 <dd><p>When <var>a</var> is a list, replaces the list operator with a set operator,
 and applies <code>fullsetify</code> to each member which is a set.
@@ -962,7 +962,7 @@ because the main operator of <code>f([b])</code> isn't a list.
 <a name="Item_003a-identity"></a>
 </p><dl>
 <dt><u>Function:</u> <b>identity</b><i> (<var>x</var>)</i>
-<a name="IDX1310"></a>
+<a name="IDX1312"></a>
 </dt>
 <dd><p>Returns <var>x</var> for any argument <var>x</var>.
 </p>
@@ -979,7 +979,7 @@ are already Boolean values.
 <a name="Item_003a-integer_005fpartitions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>integer_partitions</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>integer_partitions</tt> (<var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>integer_partitions</tt> (<var>n</var>, <var>len</var>)</i>
-<a name="IDX1311"></a>
+<a name="IDX1313"></a>
 </dt>
 <dd><p>Returns integer partitions of <var>n</var>, that is,
 lists of integers which sum to <var>n</var>.
@@ -1033,7 +1033,7 @@ here is an example that finds all partitions of 10 that consist of prime numbers
 <a name="Item_003a-intersect"></a>
 </p><dl>
 <dt><u>Function:</u> <b>intersect</b><i> (<var>a_1</var>, ..., <var>a_n</var>)</i>
-<a name="IDX1312"></a>
+<a name="IDX1314"></a>
 </dt>
 <dd><p><code>intersect</code> is the same as <code>intersection</code>, which see.
 </p>
@@ -1048,7 +1048,7 @@ here is an example that finds all partitions of 10 that consist of prime numbers
 <a name="Item_003a-intersection"></a>
 </p><dl>
 <dt><u>Function:</u> <b>intersection</b><i> (<var>a_1</var>, ..., <var>a_n</var>)</i>
-<a name="IDX1313"></a>
+<a name="IDX1315"></a>
 </dt>
 <dd><p>Returns a set containing the elements that are common to the 
 sets <var>a_1</var> through <var>a_n</var>.
@@ -1084,7 +1084,7 @@ sets <var>a_1</var> through <var>a_n</var>.
 <p><a name="Item_003a-kron_005fdelta"></a>
 </p><dl>
 <dt><u>Function:</u> <b>kron_delta</b><i> (<var>x1</var>, <var>x2</var>, &hellip;, <var>xp</var>)</i>
-<a name="IDX1314"></a>
+<a name="IDX1316"></a>
 </dt>
 <dd><p>Represents the Kronecker delta function.
 </p>
@@ -1115,7 +1115,7 @@ signals an error.
 <a name="Item_003a-listify"></a>
 </p><dl>
 <dt><u>Function:</u> <b>listify</b><i> (<var>a</var>)</i>
-<a name="IDX1315"></a>
+<a name="IDX1317"></a>
 </dt>
 <dd><p>Returns a list containing the members of <var>a</var> when <var>a</var> is a set.
 Otherwise, <code>listify</code> returns <var>a</var>.
@@ -1140,7 +1140,7 @@ Otherwise, <code>listify</code> returns <var>a</var>.
 <a name="Item_003a-makeset"></a>
 </p><dl>
 <dt><u>Function:</u> <b>makeset</b><i> (<var>expr</var>, <var>x</var>, <var>s</var>)</i>
-<a name="IDX1316"></a>
+<a name="IDX1318"></a>
 </dt>
 <dd><p>Returns a set with members generated from the expression <var>expr</var>,
 where <var>x</var> is a list of variables in <var>expr</var>,
@@ -1187,7 +1187,7 @@ and each member of <var>s</var> must be a list of one element.
 <a name="Item_003a-moebius"></a>
 </p><dl>
 <dt><u>Function:</u> <b>moebius</b><i> (<var>n</var>)</i>
-<a name="IDX1317"></a>
+<a name="IDX1319"></a>
 </dt>
 <dd><p>Represents the Moebius function.
 </p>
@@ -1232,7 +1232,7 @@ and it simplifies to 0 for all other positive integers.
 <a name="Item_003a-multinomial_005fcoeff"></a>
 </p><dl>
 <dt><u>Function:</u> <b>multinomial_coeff</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>multinomial_coeff</tt> (<var>a_1</var>, ..., <var>a_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>multinomial_coeff</tt> ()</i>
-<a name="IDX1318"></a>
+<a name="IDX1320"></a>
 </dt>
 <dd><p>Returns the multinomial coefficient.
 </p>
@@ -1274,7 +1274,7 @@ evaluates to <code>(<var>a_1</var> + ... + <var>a_n</var>)!/(<var>a_1</var>! ...
 <a name="Item_003a-num_005fdistinct_005fpartitions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>num_distinct_partitions</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>num_distinct_partitions</tt> (<var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>num_distinct_partitions</tt> (<var>n</var>, list)</i>
-<a name="IDX1319"></a>
+<a name="IDX1321"></a>
 </dt>
 <dd><p>Returns the number of distinct integer partitions of <var>n</var>
 when <var>n</var> is a nonnegative integer.
@@ -1307,7 +1307,7 @@ such that <em><var>n</var> = k_1 + ... + k_m</em>.
 <a name="Item_003a-num_005fpartitions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>num_partitions</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>num_partitions</tt> (<var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>num_partitions</tt> (<var>n</var>, list)</i>
-<a name="IDX1320"></a>
+<a name="IDX1322"></a>
 </dt>
 <dd><p>Returns the number of integer partitions of <var>n</var>
 when <var>n</var> is a nonnegative integer.
@@ -1342,7 +1342,7 @@ does not actually construct the set of partitions, so it is much faster.
 <a name="Item_003a-partition_005fset"></a>
 </p><dl>
 <dt><u>Function:</u> <b>partition_set</b><i> (<var>a</var>, <var>f</var>)</i>
-<a name="IDX1321"></a>
+<a name="IDX1323"></a>
 </dt>
 <dd><p>Partitions the set <var>a</var> according to the predicate <var>f</var>.
 </p>
@@ -1374,7 +1374,7 @@ and the second comprises any other elements of <var>a</var>.
 <a name="Item_003a-permutations"></a>
 </p><dl>
 <dt><u>Function:</u> <b>permutations</b><i> (<var>a</var>)</i>
-<a name="IDX1322"></a>
+<a name="IDX1324"></a>
 </dt>
 <dd><p>Returns a set of all distinct permutations of the members of 
 the list or set <var>a</var>. Each permutation is a list, not a set. 
@@ -1405,7 +1405,7 @@ in the permutations.
 <a name="Item_003a-powerset"></a>
 </p><dl>
 <dt><u>Function:</u> <b>powerset</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>powerset</tt> (<var>a</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>powerset</tt> (<var>a</var>, <var>n</var>)</i>
-<a name="IDX1323"></a>
+<a name="IDX1325"></a>
 </dt>
 <dd><p>Returns the set of all subsets of <var>a</var>, or a subset of that set.
 </p>
@@ -1444,7 +1444,7 @@ or if <var>n</var> is not a nonnegative integer.
 <a name="Item_003a-random_005fpermutation"></a>
 </p><dl>
 <dt><u>Function:</u> <b>random_permutation</b><i> (<var>a</var>)</i>
-<a name="IDX1324"></a>
+<a name="IDX1326"></a>
 </dt>
 <dd><p>Returns a random permutation of the set or list <var>a</var>,
 as constructed by the Knuth shuffle algorithm.
@@ -1476,7 +1476,7 @@ However, the elements of the argument are not copied.
 <a name="Item_003a-setdifference"></a>
 </p><dl>
 <dt><u>Function:</u> <b>setdifference</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX1325"></a>
+<a name="IDX1327"></a>
 </dt>
 <dd><p>Returns a set containing the elements in the set <var>a</var> that are
 not in the set <var>b</var>.
@@ -1511,7 +1511,7 @@ not in the set <var>b</var>.
 <a name="Item_003a-setequalp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>setequalp</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX1326"></a>
+<a name="IDX1328"></a>
 </dt>
 <dd><p>Returns <code>true</code> if sets <var>a</var> and <var>b</var> have the same number of elements
 and <code>is(<var>x</var> = <var>y</var>)</code> is <code>true</code>
@@ -1541,7 +1541,7 @@ Otherwise, <code>setequalp</code> returns <code>false</code>.
 <a name="Item_003a-setify"></a>
 </p><dl>
 <dt><u>Function:</u> <b>setify</b><i> (<var>a</var>)</i>
-<a name="IDX1327"></a>
+<a name="IDX1329"></a>
 </dt>
 <dd><p>Constructs a set from the elements of the list <var>a</var>. Duplicate
 elements of the list <var>a</var> are deleted and the elements
@@ -1569,7 +1569,7 @@ are sorted according to the predicate <code>orderlessp</code>.
 <a name="Item_003a-setp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>setp</b><i> (<var>a</var>)</i>
-<a name="IDX1328"></a>
+<a name="IDX1330"></a>
 </dt>
 <dd><p>Returns <code>true</code> if and only if <var>a</var> is a Maxima set.
 </p>
@@ -1600,7 +1600,7 @@ as well as simplified sets.
 <a name="Item_003a-set_005fpartitions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>set_partitions</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>set_partitions</tt> (<var>a</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>set_partitions</tt> (<var>a</var>, <var>n</var>)</i>
-<a name="IDX1329"></a>
+<a name="IDX1331"></a>
 </dt>
 <dd><p>Returns the set of all partitions of <var>a</var>, or a subset of that set.
 </p>
@@ -1662,7 +1662,7 @@ equal <code>s</code>; again let's check.
 <a name="Item_003a-some"></a>
 </p><dl>
 <dt><u>Function:</u> <b>some</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>some</tt> (<var>f</var>, <var>a</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>some</tt> (<var>f</var>, <var>L_1</var>, ..., <var>L_n</var>)</i>
-<a name="IDX1330"></a>
+<a name="IDX1332"></a>
 </dt>
 <dd><p>Returns <code>true</code> if the predicate <var>f</var> is <code>true</code> for one or more given arguments.
 </p>
@@ -1747,7 +1747,7 @@ are governed by the global flag <code>prederror</code>.
 <a name="Item_003a-stirling1"></a>
 </p><dl>
 <dt><u>Function:</u> <b>stirling1</b><i> (<var>n</var>, <var>m</var>)</i>
-<a name="IDX1331"></a>
+<a name="IDX1333"></a>
 </dt>
 <dd><p>Represents the Stirling number of the first kind.
 </p>
@@ -1798,7 +1798,7 @@ or symbols declared as integers, and the first argument is nonnegative.
 <a name="Item_003a-stirling2"></a>
 </p><dl>
 <dt><u>Function:</u> <b>stirling2</b><i> (<var>n</var>, <var>m</var>)</i>
-<a name="IDX1332"></a>
+<a name="IDX1334"></a>
 </dt>
 <dd><p>Represents the Stirling number of the second kind.
 </p>
@@ -1845,7 +1845,7 @@ or symbols declared as integers, and the first argument is nonnegative.
 <a name="Item_003a-subset"></a>
 </p><dl>
 <dt><u>Function:</u> <b>subset</b><i> (<var>a</var>, <var>f</var>)</i>
-<a name="IDX1333"></a>
+<a name="IDX1335"></a>
 </dt>
 <dd><p>Returns the subset of the set <var>a</var> that satisfies the predicate <var>f</var>. 
 </p>
@@ -1875,7 +1875,7 @@ for which <var>f</var> returns anything other than <code>false</code>.
 <a name="Item_003a-subsetp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>subsetp</b><i> (<var>a</var>, <var>b</var>)</i>
-<a name="IDX1334"></a>
+<a name="IDX1336"></a>
 </dt>
 <dd><p>Returns <code>true</code> if and only if the set <var>a</var> is a subset of <var>b</var>.
 </p>
@@ -1900,7 +1900,7 @@ for which <var>f</var> returns anything other than <code>false</code>.
 <a name="Item_003a-symmdifference"></a>
 </p><dl>
 <dt><u>Function:</u> <b>symmdifference</b><i> (<var>a_1</var>, &hellip;, <var>a_n</var>)</i>
-<a name="IDX1335"></a>
+<a name="IDX1337"></a>
 </dt>
 <dd><p>Returns the symmetric difference of sets <var>a_1</var>, &hellip;, <var>a_n</var>.
 </p>
@@ -1940,7 +1940,7 @@ for which <var>f</var> returns anything other than <code>false</code>.
 <a name="Item_003a-union"></a>
 </p><dl>
 <dt><u>Function:</u> <b>union</b><i> (<var>a_1</var>, ..., <var>a_n</var>)</i>
-<a name="IDX1336"></a>
+<a name="IDX1338"></a>
 </dt>
 <dd><p>Returns the union of the sets <var>a_1</var> through <var>a_n</var>. 
 </p>
@@ -1978,8 +1978,8 @@ for which <var>f</var> returns anything other than <code>false</code>.
 <p><a name="Item_003a-Function-Definition"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_36.html#SEC193" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC188" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_36.html#SEC194" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1987,12 +1987,12 @@ for which <var>f</var> returns anything other than <code>false</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

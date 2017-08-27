@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 36. Function Definition</title>
+<title>Maxima 5.40.0 Manual: 36. Function Definition</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 36. Function Definition">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 36. Function Definition">
+<meta name="description" content="Maxima 5.40.0 Manual: 36. Function Definition">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 36. Function Definition">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,55 +92,56 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="Function-Definition"></a>
-<a name="SEC193"></a>
+<a name="SEC194"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_35.html#SEC192" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC194" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_35.html#SEC193" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC195" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_35.html#SEC187" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_35.html#SEC188" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 36. Function Definition </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC194">36.1 Introduction to Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC195">36.1 Introduction to Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC195">36.2 Function</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC196">36.2 Function</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC198">36.3 Macros</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC199">36.3 Macros</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC199">36.4 Functions and Variables for Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC200">36.4 Functions and Variables for Function Definition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-Function-Definition"></a>
 </p><hr size="6">
 <a name="Introduction-to-Function-Definition"></a>
-<a name="SEC194"></a>
+<a name="SEC195"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC193" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC195" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC194" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC196" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.1 Introduction to Function Definition </h2>
@@ -148,21 +149,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Function"></a>
 </p><hr size="6">
 <a name="Function"></a>
-<a name="SEC195"></a>
+<a name="SEC196"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC194" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC196" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC195" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC197" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.2 Function </h2>
@@ -174,21 +175,21 @@ img {max-width:80%; max-height: 80%}
 </div>
 </p>
 <hr size="6">
-<a name="SEC196"></a>
+<a name="SEC197"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC195" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC197" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC196" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC198" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC195" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC196" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 36.2.1 Ordinary functions </h3>
@@ -289,21 +290,21 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 関数内部では <code>define</code>とたぶん <code>buildq</code>を使うことが役に立ちます。
 </p>
 <hr size="6">
-<a name="SEC197"></a>
+<a name="SEC198"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC196" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC198" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC197" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC199" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC195" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC196" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 36.2.2 Array functions </h3>
@@ -343,21 +344,21 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <p><a name="Item_003a-Macros"></a>
 </p><hr size="6">
 <a name="Macros"></a>
-<a name="SEC198"></a>
+<a name="SEC199"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC197" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC199" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC198" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC200" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.3 Macros </h2>
@@ -366,7 +367,7 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <a name="Item_003a-buildq"></a>
 </p><dl>
 <dt><u>関数:</u> <b>buildq</b><i> (<var>L</var>, <var>expr</var>)</i>
-<a name="IDX1338"></a>
+<a name="IDX1340"></a>
 </dt>
 <dd><p>リスト <var>L</var>で指名された変数を式 <var>expr</var>に並列に代入します。
 <var>expr</var>は評価しません。
@@ -469,7 +470,7 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <a name="Item_003a-macroexpand"></a>
 </p><dl>
 <dt><u>関数:</u> <b>macroexpand</b><i> (<var>expr</var>)</i>
-<a name="IDX1339"></a>
+<a name="IDX1341"></a>
 </dt>
 <dd><p><code>expr</code>がマクロ関数コールの時、
 <var>expr</var>のマクロ展開を評価はせずに返します。
@@ -513,7 +514,7 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <a name="Item_003a-macroexpand1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>macroexpand1</b><i> (<var>expr</var>)</i>
-<a name="IDX1340"></a>
+<a name="IDX1342"></a>
 </dt>
 <dd><p><code>expr</code>がマクロ関数コールの時、
 <var>expr</var>のマクロ展開を評価せずに返します。
@@ -555,7 +556,7 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <a name="Item_003a-macros"></a>
 </p><dl>
 <dt><u>Global variable:</u> <b>macros</b>
-<a name="IDX1341"></a>
+<a name="IDX1343"></a>
 </dt>
 <dd><p>デフォルト値: <code>[]</code>
 </p>
@@ -576,7 +577,7 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <a name="Item_003a-splice"></a>
 </p><dl>
 <dt><u>関数:</u> <b>splice</b><i> (<var>a</var>)</i>
-<a name="IDX1342"></a>
+<a name="IDX1344"></a>
 </dt>
 <dd><p><code>splice</code>が <code>buildq</code>内部に現れた時だけ、
 アトム <var>a</var>で指名されたリストを式に接合(内挿)します;
@@ -621,21 +622,21 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <p><a name="Item_003a-Functions-and-Variables-for-Function-Definition"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-Function-Definition"></a>
-<a name="SEC199"></a>
+<a name="SEC200"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC198" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC199" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC193" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC194" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 36.4 Functions and Variables for Function Definition </h2>
@@ -644,7 +645,7 @@ Maximaセッションに入ったかのように <code>x</code>がそれ自身�
 <a name="Item_003a-apply"></a>
 </p><dl>
 <dt><u>関数:</u> <b>apply</b><i> (<var>F</var>, [<var>x_1</var>, ..., <var>x_n</var>])</i>
-<a name="IDX1343"></a>
+<a name="IDX1345"></a>
 </dt>
 <dd><p><code><var>F</var>(<var>x_1</var>, ..., <var>x_n</var>)</code>を構成し評価します。
 </p>
@@ -704,7 +705,8 @@ apply: found false where a function was expected.
 (%o4)                  %i sin(x) + cos(x)
 </pre></td></tr></table>
 <p>入れ子のリストを行列に変換する方法:
-</p><table><tr><td>&nbsp;</td><td><pre class="example">(%i1) a:[[1,2],[3,4]];
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) a:[[1,2],[3,4]];
 (%o1)                   [[1, 2], [3, 4]]
 (%i2) apply(matrix,a);
                             [ 1  2 ]
@@ -722,7 +724,7 @@ apply: found false where a function was expected.
 <a name="Item_003a-block"></a>
 </p><dl>
 <dt><u>関数:</u> <b>block</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>block</tt> ([<var>v_1</var>, &hellip;, <var>v_m</var>], <var>expr_1</var>, &hellip;, <var>expr_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>block</tt> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1344"></a>
+<a name="IDX1346"></a>
 </dt>
 <dd><p>関数 <code>block</code>は変数 <var>v_1</var>, &hellip;, <var>v_m</var>をコマンド列でローカルとすることを許可します。
 もしこれらの変数が既に束縛されているなら、
@@ -784,7 +786,7 @@ apply: found false where a function was expected.
 <a name="Item_003a-break"></a>
 </p><dl>
 <dt><u>関数:</u> <b>break</b><i> (<var>expr_1</var>, ..., <var>expr_n</var>)</i>
-<a name="IDX1345"></a>
+<a name="IDX1347"></a>
 </dt>
 <dd><p><var>expr_1</var>, ..., <var>expr_n</var>を評価し、印字し、
 それからユーザーが環境を検査し変更できるところで Maximaブレイクを引き起こします。
@@ -801,7 +803,7 @@ apply: found false where a function was expected.
 <a name="Item_003a-catch"></a>
 </p><dl>
 <dt><u>関数:</u> <b>catch</b><i> (<var>expr_1</var>, ..., <var>expr_n</var>)</i>
-<a name="IDX1346"></a>
+<a name="IDX1348"></a>
 </dt>
 <dd><p><var>expr_1</var>, ..., <var>expr_n</var>を１つずつ評価します;
 もしどれかが形式 <code>throw (arg)</code>の式の評価に至るなら、
@@ -836,7 +838,7 @@ apply: found false where a function was expected.
 <a name="Item_003a-compfile"></a>
 </p><dl>
 <dt><u>関数:</u> <b>compfile</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compfile</tt> (<var>filename</var>, <var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compfile</tt> (<var>filename</var>, functions) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compfile</tt> (<var>filename</var>, all)</i>
-<a name="IDX1347"></a>
+<a name="IDX1349"></a>
 </dt>
 <dd><p>Maxima関数を Lispに翻訳し、翻訳したコードをファイル <var>filename</var>に書き込みます。
 </p>
@@ -862,7 +864,7 @@ apply: found false where a function was expected.
 <a name="Item_003a-compile"></a>
 </p><dl>
 <dt><u>関数:</u> <b>compile</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile</tt> (functions) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile</tt> (all)</i>
-<a name="IDX1348"></a>
+<a name="IDX1350"></a>
 </dt>
 <dd><p>Maxima関数 <var>f_1</var>, ..., <var>f_n</var>を Lispに翻訳し、
 Lisp翻訳を評価し、翻訳された関数それぞれについて Lisp関数 <code>COMPILE</code>をコールします。
@@ -900,7 +902,7 @@ Lisp翻訳を評価し、翻訳された関数それぞれについて Lisp関�
 <a name="Item_003a-define"></a>
 </p><dl>
 <dt><u>関数:</u> <b>define</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (<var>f</var>(<var>x_1</var>, &hellip;, <var>x_n</var>), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (<var>f</var>[<var>x_1</var>, &hellip;, <var>x_n</var>], <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (<var>f</var>[<var>x_1</var>, &hellip;, <var>x_n</var>](<var>y_1</var>, &hellip;, <var>y_m</var>), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (funmake (<var>f</var>, [<var>x_1</var>, &hellip;, <var>x_n</var>]), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (arraymake (<var>f</var>, [<var>x_1</var>, &hellip;, <var>x_n</var>]), <var>expr</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>define</tt> (ev (<var>expr_1</var>), <var>expr_2</var>)</i>
-<a name="IDX1349"></a>
+<a name="IDX1351"></a>
 </dt>
 <dd><p>引数 <var>x_1</var>, &hellip;, <var>x_n</var>を持ち、
 <var>expr</var>の中身を持つ <var>f</var>という名前の関数を定義します。
@@ -992,7 +994,7 @@ Maxima関数か（カギ括弧でくくられた引数を持つ）配列関数�
 <a name="Item_003a-define_005fvariable"></a>
 </p><dl>
 <dt><u>関数:</u> <b>define_variable</b><i> (<var>name</var>, <var>default_value</var>, <var>mode</var>)</i>
-<a name="IDX1350"></a>
+<a name="IDX1352"></a>
 </dt>
 <dd><p>グローバル変数を Maxima環境に導入します。
 <code>define_variable</code>はユーザーが書いたパッケージで役に立ちます。
@@ -1098,7 +1100,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-dispfun"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dispfun</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispfun</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>dispfun</tt> (all)</i>
-<a name="IDX1351"></a>
+<a name="IDX1353"></a>
 </dt>
 <dd><p>ユーザー定義関数 <var>f_1</var>, ..., <var>f_n</var>の定義を表示します。
 引数それぞれは、 (<code>::=</code>で定義された)マクロ名、
@@ -1193,7 +1195,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-fullmap"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fullmap</b><i> (<var>f</var>, <var>expr_1</var>, &hellip;)</i>
-<a name="IDX1352"></a>
+<a name="IDX1354"></a>
 </dt>
 <dd><p><code>map</code>と似ていますが、
 <code>fullmap</code>は主演算子が同じでなくなるまで部分式すべてに再帰的にマッピングを続けます。
@@ -1223,7 +1225,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-fullmapl"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fullmapl</b><i> (<var>f</var>, <var>list_1</var>, &hellip;)</i>
-<a name="IDX1353"></a>
+<a name="IDX1355"></a>
 </dt>
 <dd><p><code>fullmap</code>に似ていますが、 <code>fullmapl</code>はリストや行列にのみマップします。
 </p>
@@ -1243,7 +1245,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-functions"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>functions</b>
-<a name="IDX1354"></a>
+<a name="IDX1356"></a>
 </dt>
 <dd><p>デフォルト値: <code>[]</code>
 </p>
@@ -1299,7 +1301,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-fundef"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fundef</b><i> (<var>f</var>)</i>
-<a name="IDX1355"></a>
+<a name="IDX1357"></a>
 </dt>
 <dd><p>関数 <var>f</var>の定義を返します。
 </p>
@@ -1329,7 +1331,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-funmake"></a>
 </p><dl>
 <dt><u>関数:</u> <b>funmake</b><i> (<var>F</var>, [<var>arg_1</var>, &hellip;, <var>arg_n</var>])</i>
-<a name="IDX1356"></a>
+<a name="IDX1358"></a>
 </dt>
 <dd><p>式 <code><var>F</var>(<var>arg_1</var>, ..., <var>arg_n</var>)</code>を返します。
 戻り値は整理されますが、評価されません。
@@ -1427,7 +1429,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-lambda"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lambda</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lambda</tt> ([<var>x_1</var>, &hellip;, <var>x_m</var>], <var>expr_1</var>, &hellip;, <var>expr_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lambda</tt> ([[<var>L</var>]], <var>expr_1</var>, &hellip;, <var>expr_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lambda</tt> ([<var>x_1</var>, &hellip;, <var>x_m</var>, [<var>L</var>]], <var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX1357"></a>
+<a name="IDX1359"></a>
 </dt>
 <dd><p>ラムダ式 (すなわち、匿名関数)を定義し返します。
 関数は要求された引数 <var>x_1</var>, ..., <var>x_m</var>を持ち、
@@ -1476,7 +1478,8 @@ Cannot assign to `baz_quux'.
 (%i2) f(a);
                                 2
 (%o2)                          a
-</pre></td></tr></table><ul>
+</pre></td></tr></table>
+<ul>
 <li>
 ラムダ式は
 関数評価が期待される文脈で現れるかもしれません。
@@ -1491,7 +1494,8 @@ Cannot assign to `baz_quux'.
 (%i3) map (lambda ([x], x^2), [a, b, c, d, e]);
                         2   2   2   2   2
 (%o3)                 [a , b , c , d , e ]
-</pre></td></tr></table><ul>
+</pre></td></tr></table>
+<ul>
 <li>
 引数変数はローカル変数です。
 他の変数はグローバル変数のように見えます。
@@ -1515,7 +1519,8 @@ Cannot assign to `baz_quux'.
                              %gamma
 (%o8)                        ------
                                2
-</pre></td></tr></table><ul>
+</pre></td></tr></table>
+<ul>
 <li>
 ラムダ式は入れ子にできます。
 外側のラムダ式の中のローカル変数は、
@@ -1531,7 +1536,8 @@ Cannot assign to `baz_quux'.
                              %gamma
 (%o2)                        ------
                                2
-</pre></td></tr></table><ul>
+</pre></td></tr></table>
+<ul>
 <li>
 <code>lambda</code>は引数をクォートするので、
 以下のラムダ式 <code>i</code>は &quot;<code>a</code>を掛ける&quot;関数を定義しません。
@@ -1553,7 +1559,8 @@ Cannot assign to `baz_quux'.
                                %pi
 (%o5)                          ---
                                 2
-</pre></td></tr></table><ul>
+</pre></td></tr></table>
+<ul>
 <li>
 ラムダ式は、可変の数の引数を取ることができます。
 それは、唯一のまたは最後の引数として <code>[<var>L</var>]</code>で指定されます。
@@ -1580,7 +1587,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-local"></a>
 </p><dl>
 <dt><u>関数:</u> <b>local</b><i> (<var>v_1</var>, &hellip;, <var>v_n</var>)</i>
-<a name="IDX1358"></a>
+<a name="IDX1360"></a>
 </dt>
 <dd><p>シンボル <var>v_1</var>, ..., <var>v_n</var>に関連付けられた性質を保存し、
 他の式を評価する前にすべての性質を削除し、
@@ -1622,7 +1629,7 @@ Cannot assign to `baz_quux'.
 <a name="Item_003a-macroexpansion"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>macroexpansion</b>
-<a name="IDX1359"></a>
+<a name="IDX1361"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1773,7 +1780,7 @@ x + 99 is equal to x
 <a name="Item_003a-mode_005fcheckp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>mode_checkp</b>
-<a name="IDX1360"></a>
+<a name="IDX1362"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1790,7 +1797,7 @@ x + 99 is equal to x
 <a name="Item_003a-mode_005fcheck_005ferrorp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>mode_check_errorp</b>
-<a name="IDX1361"></a>
+<a name="IDX1363"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -1808,7 +1815,7 @@ x + 99 is equal to x
 <a name="Item_003a-mode_005fcheck_005fwarnp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>mode_check_warnp</b>
-<a name="IDX1362"></a>
+<a name="IDX1364"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1826,7 +1833,7 @@ x + 99 is equal to x
 <a name="Item_003a-mode_005fdeclare"></a>
 </p><dl>
 <dt><u>関数:</u> <b>mode_declare</b><i> (<var>y_1</var>, <var>mode_1</var>, &hellip;, <var>y_n</var>, <var>mode_n</var>)</i>
-<a name="IDX1363"></a>
+<a name="IDX1365"></a>
 </dt>
 <dd><p><code>mode_declare</code>は、
 その後の関数の翻訳やコンパイルのために変数と関数のモードを宣言するのに使われます。
@@ -1879,7 +1886,7 @@ x + 99 is equal to x
 <a name="Item_003a-mode_005fidentity"></a>
 </p><dl>
 <dt><u>関数:</u> <b>mode_identity</b><i> (<var>arg_1</var>, <var>arg_2</var>)</i>
-<a name="IDX1364"></a>
+<a name="IDX1366"></a>
 </dt>
 <dd><p><code>mode_declare</code>と <code>macros</code>で、例えば
 flonumsのリストのリストや他の合成データオブジェクトを宣言するのに使われる特殊形式。
@@ -1914,7 +1921,7 @@ flonumsのリストのリストや他の合成データオブジェクトを宣�
 <a name="Item_003a-remfunction"></a>
 </p><dl>
 <dt><u>関数:</u> <b>remfunction</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remfunction</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>remfunction</tt> (all)</i>
-<a name="IDX1365"></a>
+<a name="IDX1367"></a>
 </dt>
 <dd><p>シンボル <var>f_1</var>, ..., <var>f_n</var>の関数定義をアンバインドします。
 引数は（<code>:=</code>か <code>define</code>で生成された）通常の関数名か
@@ -1939,7 +1946,7 @@ flonumsのリストのリストや他の合成データオブジェクトを宣�
 <p><a name="Item_003a-savedef"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>savedef</b>
-<a name="IDX1366"></a>
+<a name="IDX1368"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1964,7 +1971,7 @@ flonumsのリストのリストや他の合成データオブジェクトを宣�
 <a name="Item_003a-transcompile"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>transcompile</b>
-<a name="IDX1367"></a>
+<a name="IDX1369"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -1984,7 +1991,7 @@ flonumsのリストのリストや他の合成データオブジェクトを宣�
 <a name="Item_003a-translate"></a>
 </p><dl>
 <dt><u>関数:</u> <b>translate</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate</tt> (<var>f_1</var>, &hellip;, <var>f_n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate</tt> (functions) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate</tt> (all)</i>
-<a name="IDX1368"></a>
+<a name="IDX1370"></a>
 </dt>
 <dd><p>ユーザー定義関数 <var>f_1</var>, &hellip;, <var>f_n</var>を Maxima言語から Lispに翻訳し、
 Lisp翻訳を評価します。
@@ -2046,7 +2053,7 @@ Lisp翻訳を評価します。
 <a name="Item_003a-translate_005ffile"></a>
 </p><dl>
 <dt><u>関数:</u> <b>translate_file</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate_file</tt> (<var>maxima_filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>translate_file</tt> (<var>maxima_filename</var>, <var>lisp_filename</var>)</i>
-<a name="IDX1369"></a>
+<a name="IDX1371"></a>
 </dt>
 <dd><p>Maximaコードのファイルを Lispコードのファイルに翻訳します。
 <code>translate_file</code>は３つのファイル名のリストを返します:
@@ -2113,7 +2120,7 @@ Lispコードを発行します。
 <a name="Item_003a-transrun"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>transrun</b>
-<a name="IDX1370"></a>
+<a name="IDX1372"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2132,7 +2139,7 @@ Lispコードを発行します。
 <a name="Item_003a-tr_005farray_005fas_005fref"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_array_as_ref</b>
-<a name="IDX1371"></a>
+<a name="IDX1373"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2156,7 +2163,7 @@ Lispコードを発行します。
 <a name="Item_003a-tr_005fbound_005ffunction_005fapplyp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_bound_function_applyp</b>
-<a name="IDX1372"></a>
+<a name="IDX1374"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2177,7 +2184,7 @@ Maximaは警告を与えます。
 <a name="Item_003a-tr_005ffile_005ftty_005fmessagesp"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_file_tty_messagesp</b>
-<a name="IDX1373"></a>
+<a name="IDX1375"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2198,7 +2205,7 @@ UNLISPファイルに挿入されるだけです。
 <a name="Item_003a-tr_005ffloat_005fcan_005fbranch_005fcomplex"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_float_can_branch_complex</b>
-<a name="IDX1374"></a>
+<a name="IDX1376"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2223,7 +2230,7 @@ UNLISPファイルに挿入されるだけです。
 <a name="Item_003a-tr_005ffunction_005fcall_005fdefault"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_function_call_default</b>
-<a name="IDX1375"></a>
+<a name="IDX1377"></a>
 </dt>
 <dd><p>デフォルト値: <code>general</code>
 </p>
@@ -2248,7 +2255,7 @@ Maximaインタープリタと、翻訳、コンパイルされたコードの�
 <a name="Item_003a-tr_005fnumer"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_numer</b>
-<a name="IDX1376"></a>
+<a name="IDX1378"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2265,7 +2272,7 @@ Maximaインタープリタと、翻訳、コンパイルされたコードの�
 <a name="Item_003a-tr_005foptimize_005fmax_005floop"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_optimize_max_loop</b>
-<a name="IDX1377"></a>
+<a name="IDX1379"></a>
 </dt>
 <dd><p>デフォルト値: 100
 </p>
@@ -2283,7 +2290,7 @@ Maximaインタープリタと、翻訳、コンパイルされたコードの�
 <a name="Item_003a-tr_005fsemicompile"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_semicompile</b>
-<a name="IDX1378"></a>
+<a name="IDX1380"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -2303,7 +2310,7 @@ Lispコンパイラによって機械語にコンパイルされない形式を�
 <a name="Item_003a-tr_005fstate_005fvars"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>tr_state_vars</b>
-<a name="IDX1379"></a>
+<a name="IDX1381"></a>
 </dt>
 <dd><p>デフォルト値:
 </p><table><tr><td>&nbsp;</td><td><pre class="example">[transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,
@@ -2327,7 +2334,7 @@ tr_function_call_default, tr_array_as_ref,tr_numer]
 <a name="Item_003a-tr_005fwarnings_005fget"></a>
 </p><dl>
 <dt><u>関数:</u> <b>tr_warnings_get</b><i> ()</i>
-<a name="IDX1380"></a>
+<a name="IDX1382"></a>
 </dt>
 <dd><p>現在の翻訳の間に翻訳器が与える警告のリストを印字します。
 </p>
@@ -2340,7 +2347,7 @@ tr_function_call_default, tr_array_as_ref,tr_numer]
 <p><a name="Item_003a-tr_005fwarn_005fbad_005ffunction_005fcalls"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_warn_bad_function_calls</b>
-<a name="IDX1381"></a>
+<a name="IDX1383"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -2357,7 +2364,7 @@ tr_function_call_default, tr_array_as_ref,tr_numer]
 <a name="Item_003a-tr_005fwarn_005ffexpr"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_warn_fexpr</b>
-<a name="IDX1382"></a>
+<a name="IDX1384"></a>
 </dt>
 <dd><p>デフォルト値: <code>compfile</code>
 </p>
@@ -2375,7 +2382,7 @@ FEXPRは、通常、翻訳コードの中で出力すべきではありません
 <a name="Item_003a-tr_005fwarn_005fmeval"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_warn_meval</b>
-<a name="IDX1383"></a>
+<a name="IDX1385"></a>
 </dt>
 <dd><p>デフォルト値: <code>compfile</code>
 </p>
@@ -2392,7 +2399,7 @@ FEXPRは、通常、翻訳コードの中で出力すべきではありません
 <a name="Item_003a-tr_005fwarn_005fmode"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_warn_mode</b>
-<a name="IDX1384"></a>
+<a name="IDX1386"></a>
 </dt>
 <dd><p>デフォルト値: <code>all</code>
 </p>
@@ -2408,7 +2415,7 @@ FEXPRは、通常、翻訳コードの中で出力すべきではありません
 <a name="Item_003a-tr_005fwarn_005fundeclared"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_warn_undeclared</b>
-<a name="IDX1385"></a>
+<a name="IDX1387"></a>
 </dt>
 <dd><p>デフォルト値: <code>compile</code>
 </p>
@@ -2424,7 +2431,7 @@ FEXPRは、通常、翻訳コードの中で出力すべきではありません
 <a name="Item_003a-tr_005fwarn_005fundefined_005fvariable"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>tr_warn_undefined_variable</b>
-<a name="IDX1386"></a>
+<a name="IDX1388"></a>
 </dt>
 <dd><p>デフォルト値: <code>all</code>
 </p>
@@ -2440,7 +2447,7 @@ FEXPRは、通常、翻訳コードの中で出力すべきではありません
 <a name="Item_003a-compile_005ffile"></a>
 </p><dl>
 <dt><u>関数:</u> <b>compile_file</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile_file</tt> (<var>filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile_file</tt> (<var>filename</var>, <var>compiled_filename</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>compile_file</tt> (<var>filename</var>, <var>compiled_filename</var>, <var>lisp_filename</var>)</i>
-<a name="IDX1387"></a>
+<a name="IDX1389"></a>
 </dt>
 <dd><p>Maximaファイル <var>filename</var>を Lispに翻訳し、 Lispコンパイラを実行し、
 もし翻訳とコンパイルが成功したら、コンパイルされたコードを Maximaにロードします。
@@ -2481,7 +2488,7 @@ FEXPRは、通常、翻訳コードの中で出力すべきではありません
 <a name="Item_003a-declare_005ftranslated"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_translated</b><i> (<var>f_1</var>, <var>f_2</var>, &hellip;)</i>
-<a name="IDX1388"></a>
+<a name="IDX1390"></a>
 </dt>
 <dd><p>Maximaコードのファイルを Lispに翻訳する時、
 ファイルの中で見る関数が翻訳された関数としてコールされるか、
@@ -2503,8 +2510,8 @@ Lisp関数値をまだ持たないシンボルがコール時には持つだろ�
 <p><a name="Item_003a-Program-Flow"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC193" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_37.html#SEC200" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC194" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_37.html#SEC201" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -2512,12 +2519,12 @@ Lisp関数値をまだ持たないシンボルがコール時には持つだろ�
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

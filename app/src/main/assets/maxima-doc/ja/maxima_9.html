@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 9. Simplification</title>
+<title>Maxima 5.40.0 Manual: 9. Simplification</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 9. Simplification">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 9. Simplification">
+<meta name="description" content="Maxima 5.40.0 Manual: 9. Simplification">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 9. Simplification">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,6 +92,7 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="Simplification"></a>
 <a name="SEC46"></a>
 <table cellpadding="1" cellspacing="1" border="0">
@@ -100,44 +101,214 @@ img {max-width:80%; max-height: 80%}
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_8.html#SEC44" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 9. Simplification </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC47">9.1 Functions and Variables for Simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC47">9.1 Introduction to Simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC48">9.2 Functions and Variables for Simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-Simplification"></a>
+<p><a name="Item_003a-Introduction-to-Simplification"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-Simplification"></a>
+<a name="Introduction-to-Simplification"></a>
 <a name="SEC47"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC46" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC48" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC46" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 9.1 Functions and Variables for Simplification </h2>
+<h2 class="section"> 9.1 Introduction to Simplification </h2>
+
+<p>Maximaは、新しくユーザーがタイプしたコマンドそれぞれに対応してアクションのサイクルを実行します。
+これは4つのステップからなります:入力を読み「パース」すること、評価、整理、そして出力。
+パースは文法的に有効な一連のタイプされた文字を操作の残りで使うデータ構造に変換します。
+評価は名前を割り当てられた値に置き換えます。
+整理は式をユーザーや他のプログラムがより理解しやすいように書き直すことを意味します。
+出力は様々な異なるフォーマットや記法で計算結果を表示することを含みます。
+</p>
+<p>評価や整理は、どちらも「複雑さ」を取り除くことがゴールなので、時々、似た機能を持つように見えます。
+システム設計者は時々、それぞれで部分的に実行されるようにタスクを分割します。
+例えば、 <code>integrate(x,x)</code>は答えを <code>x*x/2</code>と評価し、それは、 <code>x^2/2</code>に整理されます。
+</p>
+<p>評価はいつも存在します: それは、関数、サブルーチン、変数、値、ループ、割り当てなどを持つプログラミングシステムを持つことの
+結果です。
+評価ステップでは、組み込みかユーザー定義の関数名はそれらの定義に置き換えられ、変数はそれらの値に置き換えられます。
+これは、従来のプログラミング言語の活動と大部分同じですが、
+記号数学データも扱うように拡張されました。
+目下の数学の汎用性のため、異なる可能な評価モデルがあり、
+システムは評価のプロセスの舵をとるオプションの「フラグ」を持ちます。
+See section <a href="maxima_8.html#SEC45">Functions and Variables for Evaluation</a>
+</p>
+<p>対照的に、整理の意図は、表現を再再定式化して、より小さく、理解しやすく、
+(因数分解や展開のように)特定の仕様に準じるように式の値を整備することです。
+例えば、　 <code>sin(0)</code>は <code>0</code>に、 <code>x+x</code>は <code>2*x</code>に。
+整理の結果を変えるいくつかの強力なツールがあります。
+新しく導入された関数や記号記法の知識をユーザーがMaximaに取り込むことができることの大半はシステムのこの部分だからです。
+</p>
+<p>整理は一般に4つの異なるレベルで行われます:
+</p><ul>
+<li> 内部の組み込み自動整理器、
+</li><li> プログラムやコマンド列の中の特定の場所でユーザーが明示的にコールすることができる組み込み整理ルーチン、
+</li><li> &quot;tellsimp&quot;や &quot;tellsimpafter&quot;を使って整理器とリンクされ、自動的にコールされるユーザーが書いた整理ルーチン、
+</li><li> プログラムやコマンド列の中の特定の場所でユーザーが明示的にコールすることができるユーザーが書いた整理ルーチン、
+</li></ul>
+<p>内部の整理器はMaximaの心臓部に属します。
+それは大きく複雑なプログラムの集まりであり、何年にも渡って数千のユーザーの手で改良され続けています。
+それでもやはり、特に、新しいアイデアや従来とは違う記法を試すなら、
+自分自身でプログラムに小さな(また大きな)変更を加えることが役に立つことがわかるかもしれません。
+詳細は例えば、
+<a href="https://people.eecs.berkeley.edu/~fateman/papers/intro5.txt">https://people.eecs.berkeley.edu/~fateman/papers/intro5.txt</a>
+の終わりの論文を参照してください。
+</p>
+<p>Maximaは内部的に、演算子を使った「ツリー」として、すなわち
+<code>+</code>, <code>*</code> , <code>=</code>のような「ルート」と、<var>x</var>, <var>y</var>, <var>z</var>のような変数や 関数、
+<code>x*y</code>のようなサブツリーである演算数(「リーフ」)で式を表現します。
+演算子それぞれはそれと連携した整理プログラムを持ちます。
+<code>+</code>(これは<code>a-b = a+(-1)*b)</code>なので二項演算子 <code>-</code>もカバーします)と
+<code>*</code>(これは<code>a/b = a*b^(-1)</code>なので二項演算子 <code>/</code>もカバーします)
+はかなり込み入った整理プログラムを持ちます。
+これらの整理プログラム(simplus, simptimes, simpexptなど)は
+整理器が解析中の式ツリーの中でそれぞれの算術演算子を見つけると常にコールされます。
+</p>
+<p>整理器の構造は1965年まで遡り、以来多くの手が加えられています。
+その構造は現代の専門用語で言うと、データ指示でオブジェクト指向です。
+プログラムは、式の、あるサブツリーの根に依存して適切なルーチンを再帰的に送ります。
+この汎用の概念は、
+プログラムへの非常に局所的な変更で整理プロセスへの修正を行うことができることを意味します。
+多くの場合、既存のコードを乱すことなく演算子とその整理器を追加することは概念的に簡単です。
+</p>
+<p>代数式ツリーに演算するこの汎用の整理器に加えて、
+Maximaの式のいくつかの他の表現がメソッドと整理器を分離することに注意を払います。
+例えば、<code>rat()</code>関数は、そんな形式の高速な操作を助けるために、多項式を係数のベクトルに変換します。
+他の表現にはTaylor級数や(滅多に使われない)Poisson級数があります。
+</p>
+<p>ユーザーが導入するすべての演算子は、初期状態としてそれらと連携した整理器を持ちません。
+Maximaは関数&quot;f&quot;に関して何も知らないので、 <code>f(a,b)</code>とタイプすると、
+<var>a</var>, <var>b</var>は整理されますが、 <code>f</code>については整理されません。
+いくつかの組み込み演算子でさえ整理器を持たないものがあります。
+例えば、 <code>=</code>は「整理」しません。 - それは、
+この場合左辺と右辺を参照する2つの引数を整理する以上の整理セマンティクスを持たないプレイスホルダです
+解答プログラムのようなMaximaの他の部分は等式
+、すなわち、 <code>=</code>を根に持つツリーに特別な注意を払います。
+(注意 - Maximaでは、割り当て演算は <code>:</code>です。
+すなわち、 <code>q: 4</code>はシンボル <var>q</var>の値に <code>4</code>を設定します。
+関数定義には <code>:=</code>を使います。)
+</p>
+<p>汎用整理器は、式と部分式それぞれが整理されたことを示す内部フラグと一緒に結果を返します。
+これは、すべての可能な等価式上でそれが唯一であることを保証しません。
+それは困難すぎます。(理論的に、Maximaで表現可能なものの一般性を仮定して不可能です)
+しかし、和や積の中の項の順序など、式のいくつかの面では一貫しています。
+これは他のプログラムが適切に動作するために重要です。
+</p>
+<p>Maximaの処理をゴールとして特定の好みの種類のパターンに導くたくさんのオプション変数を設定できます。
+simp:falseで整理器をオフにする最も極端なオプションを使うことさえできます。
+多くの内部ルーチンは引数が整理されていることを仮定しているので、これはお勧めしません。
+(整理器をオフにするにが尤もらしくみえる唯一のケースは、組み込み整理器をオーバーライドしたいという稀なケースです。
+その場合、一時的に整理器をオフにして、 <code><a href="maxima_34.html#tellsimp">tellsimp</a></code>,経由で新しい変換に置き換え、
+そして <code>simp:true</code>で整理器を再度オンにするかもしれません)
+</p>
+<p>あなたがユーザー定義のシンボル関数名や演算子をプロパティ (<code><a href="#additive">additive</a></code>,
+<code><a href="#lassociative">lassociative</a></code>, <code><a href="#oddfun">oddfun</a></code>, <code><a href="#antisymmetric">antisymmetric</a></code>,
+<code><a href="#linear">linear</a></code>, <code><a href="#outative">outative</a></code>, <code><a href="#commutative">commutative</a></code>,
+<code><a href="#multiplicative">multiplicative</a></code>, <code><a href="#rassociative">rassociative</a></code>, <code><a href="#evenfun">evenfun</a></code>,
+<code><a href="maxima_11.html#nary">nary</a></code>, <code><a href="#symmetric">symmetric</a></code>)と連携させることはさらに尤もらしいです。
+これらのオプションは処理する整理器をシステマティックな指示で操作します。
+</p>
+<p>例えば、 <code>declare(f,oddfun)</code>は、 <code>f</code>を奇関数と規定します。
+Maximaは <code>f(-x)</code>を <code>-f(x)</code>に整理するでしょう。
+偶関数の場合、それは <code>declare(g,evenfun)</code>であり、
+Maximaは <code>g(-x)</code>を <code>g(x)</code>に整理するでしょう。
+<code>h(x):=x^2+1</code>といったようにプログラミング関数を名前に関連づけることもできます。
+その場合、評価器はすぐに <code>h(3)</code>を <code>10</code>に、
+<code>h(a+1)</code>を <code>(a+1)^2+1</code>に置き換え、 <code>h</code>のどんなプロパティも無視されます。
+</p>
+<p>ユーザーが設定したこれらの直接関連したプロパティに加えて、
+実際の文脈からのファクトやプロパティも
+整理器の振る舞いに影響を与えるかもしれません。
+See section <a href="maxima_11.html#SEC59">Introduction to Maximas Database</a>
+</p>
+<p>例: もし <var>n</var>が整数なら、 <code>sin(n*%pi)</code>は零に整理されます。
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) sin(n*%pi);
+(%o1)                      sin(%pi n)
+(%i2) declare(n, integer);
+(%o2)                         done
+(%i3) sin(n*%pi);
+(%o3)                           0
+</pre></td></tr></table>
+<p>もし自動整理が不十分なら、
+組み込みだけれでも明示的に呼び出す整理関数 (<code><a href="maxima_14.html#ratsimp">ratsimp</a></code>,
+<code><a href="#expand">expand</a></code>, <code><a href="maxima_14.html#factor">factor</a></code>, <code><a href="#radcan">radcan</a></code>, その他)を検討できます。
+整理をあれこれの方向に進めるフラグもあります。
+<code>demoivre:true</code>を与えると、整理器は複素指数を三角関数形式に書き換えます。
+<code>exponentialize:true</code>を与えると、整理器は逆を試みます:
+三角関数形式を複素指数に。
+</p>
+<p>Maximaのどこでも、
+(Maximaユーザー言語でも実装言語のLispでも)自身の関数を書いてプログラムの中の選んだ場所で明示的に呼び出すことで
+個人的な整理の必要性に応えることができます。
+Lispはあなたに内部メカニズムすべてのハンドルを与えますが、めったにこの最大限の汎用性は必要としないでしょう。
+&quot;Tellsimp&quot;は 整理機への Lisp内部インタフェースの多くを自動的に生成するように設計されています。
+See section <a href="maxima_34.html#SEC185">Rules and Patterns</a>を参照してください。
+</p>
+<p>何年にも渡って(Maxima/Macsymaの起源は1966年まで遡ります！)
+ユーザーは関数的な振る舞いを拡張したり変えたりするたくさんの応用パッケージやツールを貢献し続けています。
+整理を修正したり拡張したりするための様々な非標準の「共有」パッケージも存在します。
+現在も進行中の実験的な材料も見てみてください。
+See section <a href="maxima_80.html#SEC369">simplification</a>
+</p>
+<p>以下の追加された材料は初めて読む時には必須ではありません。
+以下を読むことはMaximaの生産的な利用に必要ではありません。
+何が起こっているのか知りたい好奇心あるユーザーや
+(オープンソース)コードを変更したい野心的なプログラマーのためです。
+Maxima Lispコードを再定義する実験は簡単に可能です:
+Lispプログラム(例えば、 <code>cos()</code>を整理する <code>simp%cos</code>だとしましょう)の定義を変えるには、
+Maximaのテキストファイルを覗き込んで、 maximaパッケージから <code>simp%cos</code>関数を書き換えるだけです。
+</p>
+<p><a name="Item_003a-Functions-and-Variables-for-Simplification"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-Simplification"></a>
+<a name="SEC48"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC47" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC46" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 9.2 Functions and Variables for Simplification </h2>
 
 <p><a name="additive"></a>
 <a name="Item_003a-additive"></a>
@@ -1277,7 +1448,7 @@ Maximaの整理器に
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1285,12 +1456,12 @@ Maximaの整理器に
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

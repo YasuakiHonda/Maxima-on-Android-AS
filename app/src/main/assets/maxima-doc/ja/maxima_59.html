@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 59. fractals</title>
+<title>Maxima 5.40.0 Manual: 59. fractals</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 59. fractals">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 59. fractals">
+<meta name="description" content="Maxima 5.40.0 Manual: 59. fractals">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 59. fractals">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,36 +92,37 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="fractals_002dpkg"></a>
-<a name="SEC282"></a>
+<a name="SEC283"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_58.html#SEC281" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC283" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_58.html#SEC282" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC284" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_58.html#SEC279" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_58.html#SEC280" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 59. fractals </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC283">59.1 Introduction to fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC284">59.1 Introduction to fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC284">59.2 Definitions for IFS fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC285">59.2 Definitions for IFS fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC285">59.3 Definitions for complex fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC286">59.3 Definitions for complex fractals</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC286">59.4 Definitions for Koch snowflakes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC287">59.4 Definitions for Koch snowflakes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC287">59.5 Definitions for Peano maps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC288">59.5 Definitions for Peano maps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -131,21 +132,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Introduction-to-fractals"></a>
 </p><hr size="6">
 <a name="Introduction-to-fractals"></a>
-<a name="SEC283"></a>
+<a name="SEC284"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC282" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC284" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC283" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC285" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 59.1 Introduction to fractals </h2>
@@ -169,21 +170,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Definitions-for-IFS-fractals"></a>
 </p><hr size="6">
 <a name="Definitions-for-IFS-fractals"></a>
-<a name="SEC284"></a>
+<a name="SEC285"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC283" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC285" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC284" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC286" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 59.2 Definitions for IFS fractals </h2>
@@ -202,7 +203,7 @@ Press 1994を参照してください。
 <p><a name="Item_003a-sierpinskiale"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sierpinskiale</b><i> (<var>n</var>)</i>
-<a name="IDX2010"></a>
+<a name="IDX2014"></a>
 </dt>
 <dd><p>Sierpinski三角形: 3つの縮小写像; .5の縮小定数と変形;
 すべての写像は同じ縮小比です。
@@ -224,7 +225,7 @@ Press 1994を参照してください。
 <p><a name="Item_003a-treefale"></a>
 </p><dl>
 <dt><u>関数:</u> <b>treefale</b><i> (<var>n</var>)</i>
-<a name="IDX2011"></a>
+<a name="IDX2015"></a>
 </dt>
 <dd><p>すべて同じ縮小比を持つ3つの縮小写像。
 引数 <var>n</var>は十分大きく、10000以上でなければいけません、
@@ -245,7 +246,7 @@ Press 1994を参照してください。
 <p><a name="Item_003a-fernfale"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fernfale</b><i> (<var>n</var>)</i>
-<a name="IDX2012"></a>
+<a name="IDX2016"></a>
 </dt>
 <dd><p>変換を選択する確率が縮小比に関係する、4つの縮小写像。
 引数 <var>n</var>は十分大きく、10000以上でなければいけません、
@@ -266,21 +267,21 @@ Press 1994を参照してください。
 <p><a name="Item_003a-Definitions-for-complex-fractals"></a>
 </p><hr size="6">
 <a name="Definitions-for-complex-fractals"></a>
-<a name="SEC285"></a>
+<a name="SEC286"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC284" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC286" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC285" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC287" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 59.3 Definitions for complex fractals </h2>
@@ -288,7 +289,7 @@ Press 1994を参照してください。
 <p><a name="Item_003a-mandelbrot_005fset"></a>
 </p><dl>
 <dt><u>関数:</u> <b>mandelbrot_set</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX2013"></a>
+<a name="IDX2017"></a>
 </dt>
 <dd><p>Mandelbrot集合。
 </p>
@@ -316,7 +317,7 @@ Press 1994を参照してください。
 <p><a name="Item_003a-julia_005fset"></a>
 </p><dl>
 <dt><u>関数:</u> <b>julia_set</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX2014"></a>
+<a name="IDX2018"></a>
 </dt>
 <dd><p>Julia集合。
 </p>
@@ -346,7 +347,7 @@ Press 1994を参照してください。
 <a name="Item_003a-julia_005fparameter"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>julia_parameter</b>
-<a name="IDX2015"></a>
+<a name="IDX2019"></a>
 </dt>
 <dd><p>デフォルト値: <code><a href="maxima_5.html#g_t_0025i">%i</a></code>
 </p>
@@ -370,7 +371,7 @@ Press 1994を参照してください。
 <p><a name="Item_003a-julia_005fsin"></a>
 </p><dl>
 <dt><u>関数:</u> <b>julia_sin</b><i> (<var>x</var>, <var>y</var>)</i>
-<a name="IDX2016"></a>
+<a name="IDX2020"></a>
 </dt>
 <dd><p>関数 <code>julia_set</code>が変換 <code>julia_parameter+z^2</code>を実装する一方、関数
 <code>julia_sin</code>は <code>julia_parameter*sin(z)</code>を実装します。
@@ -402,21 +403,21 @@ Press 1994を参照してください。
 <p><a name="Item_003a-Definitions-for-Koch-snowflakes"></a>
 </p><hr size="6">
 <a name="Definitions-for-Koch-snowflakes"></a>
-<a name="SEC286"></a>
+<a name="SEC287"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC285" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC287" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC286" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC288" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 59.4 Definitions for Koch snowflakes </h2>
@@ -426,7 +427,7 @@ Press 1994を参照してください。
 <p><a name="Item_003a-snowmap"></a>
 </p><dl>
 <dt><u>関数:</u> <b>snowmap</b><i> (<var>ent</var>, <var>nn</var>)</i>
-<a name="IDX2017"></a>
+<a name="IDX2021"></a>
 </dt>
 <dd><p>Koch雪片集合。
 関数 <code>snowmap</code>は複素平面内の初期値の閉多角形の頂点上に雪
@@ -455,21 +456,21 @@ Koch写像をプロットします。
 <p><a name="Item_003a-Definitions-for-Peano-maps"></a>
 </p><hr size="6">
 <a name="Definitions-for-Peano-maps"></a>
-<a name="SEC287"></a>
+<a name="SEC288"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC286" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC287" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC282" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC283" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 59.5 Definitions for Peano maps </h2>
@@ -481,7 +482,7 @@ Koch写像をプロットします。
 <p><a name="Item_003a-hilbertmap"></a>
 </p><dl>
 <dt><u>関数:</u> <b>hilbertmap</b><i> (<var>nn</var>)</i>
-<a name="IDX2018"></a>
+<a name="IDX2022"></a>
 </dt>
 <dd><p>Hilbert写像。
 <var>nn</var>は(例えば 5とか)小さくなければいけません。
@@ -502,7 +503,7 @@ Koch写像をプロットします。
 <p><a name="Item_003a-sierpinskimap"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sierpinskimap</b><i> (<var>nn</var>)</i>
-<a name="IDX2019"></a>
+<a name="IDX2023"></a>
 </dt>
 <dd><p>Sierpinski写像。
 <var>nn</var>は(例えば5とか)小さくなければいけません。
@@ -523,8 +524,8 @@ Koch写像をプロットします。
 <p><a name="Item_003a-ggf_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC282" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_60.html#SEC288" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC283" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_60.html#SEC289" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -532,12 +533,12 @@ Koch写像をプロットします。
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

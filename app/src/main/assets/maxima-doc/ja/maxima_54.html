@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 54. dynamics</title>
+<title>Maxima 5.40.0 Manual: 54. dynamics</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 54. dynamics">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 54. dynamics">
+<meta name="description" content="Maxima 5.40.0 Manual: 54. dynamics">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 54. dynamics">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,62 +92,63 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="dynamics_002dpkg"></a>
-<a name="SEC263"></a>
+<a name="SEC264"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_53.html#SEC262" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC264" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_53.html#SEC263" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC265" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 54. dynamics </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC264">54.1 The dynamics package</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC265">54.1 The dynamics package</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC265">54.2 Graphical analysis of discrete dynamical systems</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC266">54.2 Graphical analysis of discrete dynamical systems</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC266">54.3 Visualization with VTK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC267">54.3 Visualization with VTK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-The-dynamics-package"></a>
 </p><hr size="6">
 <a name="The-dynamics-package"></a>
-<a name="SEC264"></a>
+<a name="SEC265"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC263" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC265" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC264" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC266" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.1 The dynamics package </h2>
 
 <p>パッケージ <code>dynamics</code>には、
 3D可視化と、アニメーション、微分差分方程式のグラフィックス解析、微分方程式の数値解のための関数が含まれています。
-微分方程式用の関数については <code><a href="maxima_22.html#SEC108">Numerical Methods</a></code>の節で記述します。
+微分方程式用の関数については <code><a href="maxima_22.html#SEC109">Numerical Methods</a></code>の節で記述します。
 離散力学系とフラクタルの様々なグラフィックス表現を生成するためのいくつかの関数と、
-Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">Plotting</a></code>の節で記述します。
+Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC63">Plotting</a></code>の節で記述します。
 </p>
 <p>このパッケージのすべての関数は初めて使われる時自動的にロードされます。
 </p>
@@ -161,21 +162,21 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <p><a name="Item_003a-Graphical-analysis-of-discrete-dynamical-systems"></a>
 </p><hr size="6">
 <a name="Graphical-analysis-of-discrete-dynamical-systems"></a>
-<a name="SEC265"></a>
+<a name="SEC266"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC264" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC265" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.2 Graphical analysis of discrete dynamical systems </h2>
@@ -184,7 +185,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-chaosgame"></a>
 </p><dl>
 <dt><u>関数:</u> <b>chaosgame</b><i> ([[<var>x1</var>, <var>y1</var>]&hellip;[<var>xm</var>, <var>ym</var>]], [<var>x0</var>, <var>y0</var>], <var>b</var>, <var>n</var>, <var>options</var>, &hellip;);</i>
-<a name="IDX1923"></a>
+<a name="IDX1927"></a>
 </dt>
 <dd><p>いわゆるカオスゲームを実装します:
 初期点 (<var>x0</var>, <var>y0</var>)をプロットし、
@@ -213,7 +214,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-evolution"></a>
 </p><dl>
 <dt><u>関数:</u> <b>evolution</b><i> (<var>F</var>, <var>y0</var>, <var>n</var>,  &hellip;, <var>options</var>, &hellip;);</i>
-<a name="IDX1924"></a>
+<a name="IDX1928"></a>
 </dt>
 <dd><p>２次元グラフに、点の水平座標が整数 0, 1, 2, ..., <var>n</var>、
 垂直座標が再帰関係
@@ -243,7 +244,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-evolution2d"></a>
 </p><dl>
 <dt><u>関数:</u> <b>evolution2d</b><i> ([<var>F</var>, <var>G</var>], [<var>u</var>, <var>v</var>], [<var>u0</var>, <var>y0</var>], <var>n</var>, <var>options</var>, &hellip;);</i>
-<a name="IDX1925"></a>
+<a name="IDX1929"></a>
 </dt>
 <dd><p>再帰関係を伴う二次元離散力学系によって定義された点列の中の最初の
 <var>n+1</var>点を二次元プロットで表示します。
@@ -281,7 +282,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-ifs"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ifs</b><i> ([<var>r1</var>, &hellip;, <var>rm</var>], [<var>A1</var>,&hellip;, <var>Am</var>], [[<var>x1</var>, <var>y1</var>], &hellip;, [<var>xm</var>, <var>ym</var>]], [<var>x0</var>, <var>y0</var>], <var>n</var>, <var>options</var>, &hellip;);</i>
-<a name="IDX1926"></a>
+<a name="IDX1930"></a>
 </dt>
 <dd><p>反復関数系法を実装します。
 この方法は関数 <code><a href="#chaosgame">chaosgame</a></code>で記述した方法に似ていますが、
@@ -322,7 +323,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-orbits"></a>
 </p><dl>
 <dt><u>関数:</u> <b>orbits</b><i> (<var>F</var>, <var>y0</var>, <var>n1</var>, <var>n2</var>, [<var>x</var>, <var>x0</var>, <var>xf</var>, <var>xstep</var>], <var>options</var>, &hellip;);</i>
-<a name="IDX1927"></a>
+<a name="IDX1931"></a>
 </dt>
 <dd><p>パラメータ <var>x</var>を持つ一次元離散力学系の族に関する軌道図を描画します;
 この種の図は一次元離散系の分岐の研究に使われます。
@@ -362,7 +363,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-staircase"></a>
 </p><dl>
 <dt><u>関数:</u> <b>staircase</b><i> (<var>F</var>, <var>y0</var>, <var>n</var>,<var>options</var>,&hellip;);</i>
-<a name="IDX1928"></a>
+<a name="IDX1932"></a>
 </dt>
 <dd><p>再帰関係によって定義された数列に関する階段図形を描画します。
 </p><table><tr><td>&nbsp;</td><td><pre class="example">        y(n+1) = F(y(n))
@@ -393,21 +394,21 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <p><a name="Item_003a-Visualization-with-VTK"></a>
 </p><hr size="6">
 <a name="Visualization-with-VTK"></a>
-<a name="SEC266"></a>
+<a name="SEC267"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC265" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC267" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC266" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC268" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.3 Visualization with VTK </h2>
@@ -419,7 +420,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-scene"></a>
 </p><dl>
 <dt><u>関数:</u> <b>scene</b><i> (<var>objects</var>, &hellip;, <var>options</var>, &hellip;);</i>
-<a name="IDX1929"></a>
+<a name="IDX1933"></a>
 </dt>
 <dd><p>空のリストもしくは いくつかの <code><a href="#scene_005fobjects">objects</a></code>と <code><a href="#scene_005foptions">options</a></code>のリストを受け付けます。
 プログラムはXmaximaを起動し、Xmaximaが3次元空間内に与えられたオブジェクトを表現し与えられたオプションを適用した外部ウィンドウを開きます。
@@ -471,21 +472,21 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 
 <p><a name="scene_005foptions"></a>
 </p><hr size="6">
-<a name="SEC267"></a>
+<a name="SEC268"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC266" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC268" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC267" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC269" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 54.3.1 Scene options </h3>
@@ -494,7 +495,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 </p>
 <dl>
 <dt><u>シーンオプション:</u> <b>azimuth</b><i> [azimuth, <var>angle</var>]</i>
-<a name="IDX1930"></a>
+<a name="IDX1934"></a>
 </dt>
 <dd><p>デフォルト値: <code>135</code>
 </p>
@@ -513,7 +514,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-background"></a>
 </p><dl>
 <dt><u>シーンオプション:</u> <b>background</b><i> [background, <var>color</var>]</i>
-<a name="IDX1931"></a>
+<a name="IDX1935"></a>
 </dt>
 <dd><p>デフォルト値: <code>black</code>
 </p>
@@ -531,7 +532,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 </p>
 <dl>
 <dt><u>シーンオプション:</u> <b>elevation</b><i> [elevation, <var>angle</var>]</i>
-<a name="IDX1932"></a>
+<a name="IDX1936"></a>
 </dt>
 <dd><p>デフォルト値: <code>30</code>
 </p>
@@ -551,7 +552,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-height"></a>
 </p><dl>
 <dt><u>シーンオプション:</u> <b>height</b><i> [height, <var>pixels</var>]</i>
-<a name="IDX1933"></a>
+<a name="IDX1937"></a>
 </dt>
 <dd><p>デフォルト値: <code>500</code>
 </p>
@@ -569,7 +570,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-restart"></a>
 </p><dl>
 <dt><u>シーンオプション:</u> <b>restart</b><i> [restart, <var>value</var>]</i>
-<a name="IDX1934"></a>
+<a name="IDX1938"></a>
 </dt>
 <dd><p>デフォルト値: <code>false</code>
 </p>
@@ -587,7 +588,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-tstep"></a>
 </p><dl>
 <dt><u>シーンオプション:</u> <b>tstep</b><i> [tstep, <var>time</var>]</i>
-<a name="IDX1935"></a>
+<a name="IDX1939"></a>
 </dt>
 <dd><p>デフォルト値: <code>10</code>
 </p>
@@ -605,7 +606,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-width"></a>
 </p><dl>
 <dt><u>シーンオプション:</u> <b>width</b><i> [width, <var>pixels</var>]</i>
-<a name="IDX1936"></a>
+<a name="IDX1940"></a>
 </dt>
 <dd><p>デフォルト値: <code>500</code>
 </p>
@@ -623,7 +624,7 @@ Mandelbrotと Julia集合については  <code><a href="maxima_12.html#SEC62">P
 <a name="Item_003a-windowname"></a>
 </p><dl>
 <dt><u>シーンオプション:</u> <b>windowname</b><i> [windowtitle, <var>name</var>]</i>
-<a name="IDX1937"></a>
+<a name="IDX1941"></a>
 </dt>
 <dd><p>デフォルト値: <code>.scene</code>
 </p>
@@ -642,7 +643,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-windowtitle"></a>
 </p><dl>
 <dt><u>シーンオプション:</u> <b>windowtitle</b><i> [windowtitle, <var>name</var>]</i>
-<a name="IDX1938"></a>
+<a name="IDX1942"></a>
 </dt>
 <dd><p>デフォルト値: <code>Xmaxima: scene</code>
 </p>
@@ -658,21 +659,21 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 
 <p><a name="scene_005fobjects"></a>
 </p><hr size="6">
-<a name="SEC268"></a>
+<a name="SEC269"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC267" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC269" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC268" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC270" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 54.3.2 Scene objects </h3>
@@ -681,7 +682,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-cone"></a>
 </p><dl>
 <dt><u>シーンオブジェクト:</u> <b>cone</b><i> [cone, <var>options</var>]</i>
-<a name="IDX1939"></a>
+<a name="IDX1943"></a>
 </dt>
 <dd><p>高さが1で、軸から0.5単位離れた頂点を持つ六角形の底面を持つ正角錐を生成します。
 オプション <code><a href="#object_005fheight">height</a></code>と <code><a href="#object_005fradius">radius</a></code>は
@@ -706,7 +707,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-cube"></a>
 </p><dl>
 <dt><u>シーンオブジェクト:</u> <b>cube</b><i> [cube, <var>options</var>]</i>
-<a name="IDX1940"></a>
+<a name="IDX1944"></a>
 </dt>
 <dd><p>単位1の辺でxy, xz, yz面と平行な面を持つ正立方体。
 オプション <code><a href="#object_005fxlength">xlength</a></code>, <code><a href="#object_005fylength">ylength</a></code>, <code><a href="#object_005fzlength">zlength</a></code> で3つの辺の長さを変えることができ、長方形の箱に変えます。
@@ -723,7 +724,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-cylinder"></a>
 </p><dl>
 <dt><u>シーンオブジェクト:</u> <b>cylinder</b><i> [cylinder, <var>options</var>]</i>
-<a name="IDX1941"></a>
+<a name="IDX1945"></a>
 </dt>
 <dd><p>高さが1で、軸から0.5単位離れた頂点を持つ六角形の底面を持つ正角柱を生成します。
 オプション <code><a href="#object_005fheight">height</a></code>, <code><a href="#object_005fradius">radius</a></code>でそれらのデフォルトを変えることができ、
@@ -743,7 +744,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-sphere"></a>
 </p><dl>
 <dt><u>シーンオブジェクト:</u> <b>sphere</b><i> [sphere, <var>options</var>]</i>
-<a name="IDX1942"></a>
+<a name="IDX1946"></a>
 </dt>
 <dd><p>0.5単位のデフォルト半径を持ち、原点に中心がある球。
 </p>
@@ -756,21 +757,21 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 
 <p><a name="object_005foptions"></a>
 </p><hr size="6">
-<a name="SEC269"></a>
+<a name="SEC270"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC268" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC269" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 54.3.3 Scene object's options </h3>
@@ -779,7 +780,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-animation"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>animation</b><i> [animation, <var>property</var>, <var>positions</var>]</i>
-<a name="IDX1943"></a>
+<a name="IDX1947"></a>
 </dt>
 <dd><p><var>property</var>は以下の 4つのオプジェクトのプロパティの1つでなければいけません:
 <code><a href="#object_005forigin">origin</a></code>, <code><a href="#object_005fscale">scale</a></code>, <code><a href="#object_005fposition">position</a></code>, <code><a href="#object_005forientation">orientation</a></code>
@@ -801,7 +802,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 </p>
 <dl>
 <dt><u>オブジェクトオプション:</u> <b>capping</b><i> [capping, <var>number</var>]</i>
-<a name="IDX1944"></a>
+<a name="IDX1948"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -819,7 +820,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-center"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>center</b><i> [center, <var>point</var>]</i>
-<a name="IDX1945"></a>
+<a name="IDX1949"></a>
 </dt>
 <dd><p>デフォルト値: <code>[0, 0, 0]</code>
 </p>
@@ -838,7 +839,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 </p>
 <dl>
 <dt><u>オブジェクトオプション:</u> <b>color</b><i> [color, <var>colorname</var>]</i>
-<a name="IDX1946"></a>
+<a name="IDX1950"></a>
 </dt>
 <dd><p>デフォルト値: <code>white</code>
 </p>
@@ -857,7 +858,7 @@ Xmaximaが <code>scene</code>グラフィックス用に生成した Tkウイン
 <a name="Item_003a-endphi"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>endphi</b><i> [endphi, <var>angle</var>]</i>
-<a name="IDX1947"></a>
+<a name="IDX1951"></a>
 </dt>
 <dd><p>デフォルト値: <code>180</code>
 </p>
@@ -880,7 +881,7 @@ z軸の正の部分から測ります。
 <a name="Item_003a-endtheta"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>endtheta</b><i> [endtheta, <var>angle</var>]</i>
-<a name="IDX1948"></a>
+<a name="IDX1952"></a>
 </dt>
 <dd><p>デフォルト値: <code>360</code>
 </p>
@@ -903,7 +904,7 @@ x軸の正の部分から測ります。
 </p>
 <dl>
 <dt><u>オブジェクトオプション:</u> <b>height</b><i> [height, <var>value</var>]</i>
-<a name="IDX1949"></a>
+<a name="IDX1953"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -921,7 +922,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-linewidth"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>linewidth</b><i> [linewidth, <var>value</var>]</i>
-<a name="IDX1950"></a>
+<a name="IDX1954"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -939,7 +940,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-opacity"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>opacity</b><i> [opacity, <var>value</var>]</i>
-<a name="IDX1951"></a>
+<a name="IDX1955"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -958,7 +959,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-orientation"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>orientation</b><i> [orientation, <var>angles</var>]</i>
-<a name="IDX1952"></a>
+<a name="IDX1956"></a>
 </dt>
 <dd><p>デフォルト値: <code>[0, 0, 0]</code>
 </p>
@@ -977,7 +978,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-origin"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>origin</b><i> [origin, <var>point</var>]</i>
-<a name="IDX1953"></a>
+<a name="IDX1957"></a>
 </dt>
 <dd><p>デフォルト値: <code>[0, 0, 0]</code>
 </p>
@@ -995,7 +996,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-phiresolution"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>phiresolution</b><i> [phiresolution, <var>num</var>]</i>
-<a name="IDX1954"></a>
+<a name="IDX1958"></a>
 </dt>
 <dd><p>デフォルト値: <code></code>
 </p>
@@ -1015,7 +1016,7 @@ x軸の正の部分から測ります。
 </p>
 <dl>
 <dt><u>オブジェクトオプション:</u> <b>points</b><i>  [points]</i>
-<a name="IDX1955"></a>
+<a name="IDX1959"></a>
 </dt>
 <dd><p>表面を描画するのに使われる三角測量の頂点のみを表示します。
 <strong>例</strong>: <code>[sphere, [points]]</code>
@@ -1033,7 +1034,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-pointsize"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>pointsize</b><i> [pointsize, <var>value</var>]</i>
-<a name="IDX1956"></a>
+<a name="IDX1960"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -1051,7 +1052,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-position"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>position</b><i> [position, <var>point</var>]</i>
-<a name="IDX1957"></a>
+<a name="IDX1961"></a>
 </dt>
 <dd><p>デフォルト値: <code>[0, 0, 0]</code>
 </p>
@@ -1069,7 +1070,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-radius"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>radius</b><i> [radius, <var>value</var>]</i>
-<a name="IDX1958"></a>
+<a name="IDX1962"></a>
 </dt>
 <dd><p>デフォルト値: <code>0.5</code>
 </p>
@@ -1087,7 +1088,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-resolution"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>resolution</b><i> [resolution, <var>number</var>]</i>
-<a name="IDX1959"></a>
+<a name="IDX1963"></a>
 </dt>
 <dd><p>デフォルト値: <code>6</code>
 </p>
@@ -1105,7 +1106,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-scale"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>scale</b><i> [scale, <var>factors</var>]</i>
-<a name="IDX1960"></a>
+<a name="IDX1964"></a>
 </dt>
 <dd><p>デフォルト値: <code>[1, 1, 1]</code>
 </p>
@@ -1125,7 +1126,7 @@ x軸の正の部分から測ります。
 <a name="Item_003a-startphi"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>startphi</b><i> [startphi, <var>angle</var>]</i>
-<a name="IDX1961"></a>
+<a name="IDX1965"></a>
 </dt>
 <dd><p>デフォルト値: <code>0</code>
 </p>
@@ -1148,7 +1149,7 @@ z軸の正の部分から測られます。
 <a name="Item_003a-starttheta"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>starttheta</b><i> [starttheta, <var>angle</var>]</i>
-<a name="IDX1962"></a>
+<a name="IDX1966"></a>
 </dt>
 <dd><p>デフォルト値: <code>0</code>
 </p>
@@ -1171,7 +1172,7 @@ x軸の正の部分から測られます。
 <a name="Item_003a-surface"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>surface</b><i> [surface]</i>
-<a name="IDX1963"></a>
+<a name="IDX1967"></a>
 </dt>
 <dd><p>オブジェクトの表面を描画します。
 表面を構築するのに使われる三角測量の線と点を表示します。
@@ -1189,7 +1190,7 @@ x軸の正の部分から測られます。
 <a name="Item_003a-thetaresolution"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>thetaresolution</b><i> [thetaresolution, <var>num</var>]</i>
-<a name="IDX1964"></a>
+<a name="IDX1968"></a>
 </dt>
 <dd><p>デフォルト値: <code></code>
 </p>
@@ -1209,7 +1210,7 @@ x軸の正の部分から測られます。
 <a name="Item_003a-track"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>track</b><i> [track, <var>positions</var>]</i>
-<a name="IDX1965"></a>
+<a name="IDX1969"></a>
 </dt>
 <dd><p><var>positions</var>は点のリストでなければいけません。
 再生ボタンを押した時、オプション <code><a href="#scene_005ftstep">tstep</a></code>で与えられた時間感覚でオプジェクト位置がリストの点すべてに連続的に変わります。
@@ -1241,7 +1242,7 @@ x軸の正の部分から測られます。
 <a name="Item_003a-xlength"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>xlength</b><i> [xlength, <var>length</var>]</i>
-<a name="IDX1966"></a>
+<a name="IDX1970"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -1260,7 +1261,7 @@ x軸の正の部分から測られます。
 <a name="Item_003a-ylength"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>ylength</b><i> [ylength, <var>length</var>]</i>
-<a name="IDX1967"></a>
+<a name="IDX1971"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -1279,7 +1280,7 @@ x軸の正の部分から測られます。
 <a name="Item_003a-zlength"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>zlength</b><i> [zlength, <var>length</var>]</i>
-<a name="IDX1968"></a>
+<a name="IDX1972"></a>
 </dt>
 <dd><p>デフォルト値: <code>1</code>
 </p>
@@ -1298,7 +1299,7 @@ x軸の正の部分から測られます。
 <a name="Item_003a-wireframe"></a>
 </p><dl>
 <dt><u>オブジェクトオプション:</u> <b>wireframe</b><i>  [wireframe]</i>
-<a name="IDX1969"></a>
+<a name="IDX1973"></a>
 </dt>
 <dd><p>表面を描画するの使われる三角測量の辺だけを表示します。
 <strong>例</strong>: <code>[cube, [wireframe]]</code>
@@ -1315,8 +1316,8 @@ x軸の正の部分から測られます。
 <p><a name="Item_003a-engineering_002dformat_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1324,12 +1325,12 @@ x軸の正の部分から測られます。
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

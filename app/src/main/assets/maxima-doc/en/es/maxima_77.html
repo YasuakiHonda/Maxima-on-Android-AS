@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
+<!-- Created on mayo, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.39.0: 77. to_poly_solve</title>
+<title>Manual de Maxima 5.40.1.gd04f9f4: 77. to_poly_solve</title>
 
-<meta name="description" content="Manual de Maxima 5.39.0: 77. to_poly_solve">
-<meta name="keywords" content="Manual de Maxima 5.39.0: 77. to_poly_solve">
+<meta name="description" content="Manual de Maxima 5.40.1.gd04f9f4: 77. to_poly_solve">
+<meta name="keywords" content="Manual de Maxima 5.40.1.gd04f9f4: 77. to_poly_solve">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -124,7 +124,7 @@ fue escrito por Barton Willis de la Universidad de Nebraska en Kearney.
 
 <dl>
 <dt><u>Operador:</u> <b>%and</b>
-<a name="IDX2814"></a>
+<a name="IDX2818"></a>
 </dt>
 <dd><p>El operador <code>%and</code> es una conjunción lógica. Maxima simplifica
 una expresión <code>%and</code> a <code>true</code>, <code>false</code> o a una expresión
@@ -206,7 +206,7 @@ ni la negación respecto de <code>%and</code>.
 
 <dl>
 <dt><u>Operador:</u> <b>%if</b><i> ( <var>bool</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX2815"></a>
+<a name="IDX2819"></a>
 </dt>
 <dd><p>El operador <code>%if</code> es un condicional. La condición <var>bool</var>
 debe tomar un valor lógico; cuando sea <code>true</code>, se devolverá
@@ -249,7 +249,7 @@ manera sencilla a formas lineales, no se simplifican.
   
 <dl>
 <dt><u>Operador:</u> <b>%or</b>
-<a name="IDX2816"></a>
+<a name="IDX2820"></a>
 </dt>
 <dd><p>El operador <code>%or</code> es una disyunción lógica. Maxima simplifica
 una expresión <code>%or</code> a <code>true</code>, <code>false</code> o a una expresión
@@ -328,7 +328,7 @@ ni la negación respecto de <code>%or</code>.
 
 <dl>
 <dt><u>Función:</u> <b>complex_number_p</b><i> (<var>x</var>)</i>
-<a name="IDX2817"></a>
+<a name="IDX2821"></a>
 </dt>
 <dd><p>La función <code>complex_number_p</code> devuelve <code>true</code> si su
 argumento es de cualquiera de las formas <code>a + %i * b</code>, <code>a</code>, <code>%i b</code> o
@@ -357,7 +357,7 @@ de precisión doble o arbitraria (<i>bigfloats</i>); para cualesquiera otros argu
 
 <dl>
 <dt><u>Función:</u> <b>compose_functions</b><i> (<var>l</var>)</i>
-<a name="IDX2818"></a>
+<a name="IDX2822"></a>
 </dt>
 <dd><p>La función <code>compose_functions(l)</code> devuelve una expresión lambda
 que es la composición de las funciones presentes en la lista <var>l</var>.
@@ -414,7 +414,7 @@ determinar que las expresiones lambda son semánticamente equivalentes:
 
 <dl>
 <dt><u>Función:</u> <b>dfloat</b><i> (<var>x</var>)</i>
-<a name="IDX2819"></a>
+<a name="IDX2823"></a>
 </dt>
 <dd><p>La función <code>dfloat</code> es similar a <code>float</code>, pero <code>dfloat</code> 
 aplica <code>rectform</code> cuando <code>float</code> no puede evaluar a un número
@@ -449,7 +449,7 @@ cuyo valor por defecto es <code>false</code> y el nombre de una función.
 
 <dl>
 <dt><u>Función:</u> <b>elim</b><i> (<var>l</var>, <var>x</var>)</i>
-<a name="IDX2820"></a>
+<a name="IDX2824"></a>
 </dt>
 <dd><p>La función <code>elim</code> elimina las variables que se indican en el conjunto
 o lista <code>x</code> del conjunto o lista de ecuaciones en <code>l</code>. Cada
@@ -522,7 +522,7 @@ y <code>resultant</code>.
 
 <dl>
 <dt><u>Función:</u> <b>elim_allbut</b><i> (<var>l</var>, <var>x</var>)</i>
-<a name="IDX2821"></a>
+<a name="IDX2825"></a>
 </dt>
 <dd><p>Es similar a <code>elim</code>, excepto por el hecho de que elimina todas las variables
 que aparecen en la lista de ecuaciones <code>l</code> que no están en <code>x</code>.
@@ -547,7 +547,7 @@ y <code>resultant</code>.
 
 <dl>
 <dt><u>Función:</u> <b>eliminate_using</b><i> (<var>l</var>, <var>e</var>, <var>x</var>)</i>
-<a name="IDX2822"></a>
+<a name="IDX2826"></a>
 </dt>
 <dd><p>Elmina el símbolo <code>x</code> de la lista o conjunto de ecuaciones
 <code>l</code> haciendo uso del pivote <code>e</code>.
@@ -584,7 +584,7 @@ y <code>resultant</code>.
 
 <dl>
 <dt><u>Función:</u> <b>fourier_elim</b><i> ([<var>eq1</var>, <var>eq2</var>, ...], [<var>var1</var>, <var>var</var>, ...])</i>
-<a name="IDX2823"></a>
+<a name="IDX2827"></a>
 </dt>
 <dd><p>La instrucción <code>fourier_elim([eq1,eq2,...], [var1,var2,...]</code> aplica el
 algoritmo de eliminación de Fourier para resolver el sistema de inecuaciones 
@@ -667,7 +667,7 @@ que son productos o cocientes de términos lineales:
 
 <dl>
 <dt><u>Función:</u> <b>isreal_p</b><i> (<var>e</var>)</i>
-<a name="IDX2824"></a>
+<a name="IDX2828"></a>
 </dt>
 <dd><p>El predicado <code>isreal_p</code> devuelve <code>true</code> si <code>e</code> representa un
 número real y <code>false</code> si no representa un punto de la recta; en cualquier
@@ -711,7 +711,7 @@ de Maxima.
 
 <dl>
 <dt><u>Función:</u> <b>new_variable</b><i> (<var>type</var>)</i>
-<a name="IDX2825"></a>
+<a name="IDX2829"></a>
 </dt>
 <dd><p>Devuelve un símbolo de la forma <code>%[z,n,r,c,g]k</code>,
 siendo <code>k</code> un número entero. Los valores admisibles para <var>type</var>
@@ -762,7 +762,7 @@ de esta manera se evitan errores como el siguiente:
 
 <dl>
 <dt><u>Función:</u> <b>nicedummies</b>
-<a name="IDX2826"></a>
+<a name="IDX2830"></a>
 </dt>
 <dd><p>La función <code>nicedummies</code> reescribe los índices,
 comenzando por cero, de las variables de una expresión qua hayan
@@ -787,7 +787,7 @@ sido introducidas por <code>new_variable</code>:
 
 <dl>
 <dt><u>Función:</u> <b>parg</b><i> (<var>x</var>)</i>
-<a name="IDX2827"></a>
+<a name="IDX2831"></a>
 </dt>
 <dd><p>La función <code>parg</code> es una versión con capacidades simplificadoras
 de la función de argumento complejo <code>carg</code>:
@@ -834,7 +834,7 @@ puede retornar valores incorrectos:
 
 <dl>
 <dt><u>Función:</u> <b>real_imagpart_to_conjugate</b><i> (<var>e</var>)</i>
-<a name="IDX2828"></a>
+<a name="IDX2832"></a>
 </dt>
 <dd><p>La función <code>real_imagpart_to_conjugate</code> reemplaza todas las
 llamadas a <code>realpart</code> y <code>imagpart</code> presentes en una expresión 
@@ -857,7 +857,7 @@ por llamadas a <code>conjugate</code>, obteniendo otra expresión equivalente:
 
 <dl>
 <dt><u>Función:</u> <b>rectform_log_if_constant</b><i> (<var>e</var>)</i>
-<a name="IDX2829"></a>
+<a name="IDX2833"></a>
 </dt>
 <dd><p>La función <code>rectform_log_if_constant</code> convierte todos los términos
 de la forma <code>log(c)</code> a <code>rectform(log(c))</code>, siendo <code>c</code> 
@@ -885,7 +885,7 @@ una expresión constante o declarada como tal.
 
 <dl>
 <dt><u>Función:</u> <b>simp_inequality</b><i> (<var>e</var>)</i>
-<a name="IDX2830"></a>
+<a name="IDX2834"></a>
 </dt>
 <dd><p>La función <code>simp_inequality</code> aplica ciertas simplificaciones
 a conjunciones y disyunciones de inecuaciones.
@@ -914,7 +914,7 @@ base de datos:
 
 <dl>
 <dt><u>Función:</u> <b>standardize_inverse_trig</b><i> (<var>e</var>)</i>
-<a name="IDX2831"></a>
+<a name="IDX2835"></a>
 </dt>
 <dd><p>Esta función aplica las identidades <code>cot(x) = atan(1/x)</code> y
 <code>acsc(x) = asin(1/x)</code> y similares con <code>asec</code>, <code>acoth</code>
@@ -931,7 +931,7 @@ y <code>acsch</code>. Consúltese Abramowitz y Stegun, ecuaciones
 
 <dl>
 <dt><u>Función:</u> <b>subst_parallel</b><i> (<var>l</var>, <var>e</var>)</i>
-<a name="IDX2832"></a>
+<a name="IDX2836"></a>
 </dt>
 <dd><p>Dada la ecuación o lista de ecuaciones <var>l</var> y la expresión
 <var>e</var>, sustituye <i>en paralelo</i> en <var>e</var> los miembros izquierdos
@@ -992,7 +992,7 @@ log: encountered log(0).
 
 <dl>
 <dt><u>Función:</u> <b>to_poly</b><i> (<var>e</var>, <var>l</var>)</i>
-<a name="IDX2833"></a>
+<a name="IDX2837"></a>
 </dt>
 <dd><p>La función <code>to_poly</code> intenta convertir la ecuación <var>e</var>
 en un sistema de polinomios, junto con restricciones en forma de
@@ -1057,7 +1057,7 @@ raíz puede hacerse lo siguiente:
 
 <dl>
 <dt><u>Función:</u> <b>to_poly_solve</b><i> (<var>e</var>, <var>l</var>, [options])</i>
-<a name="IDX2834"></a>
+<a name="IDX2838"></a>
 </dt>
 <dd><p>La función <code>to_poly_solve</code> intenta resolver las ecuaciones <var>e</var>
 de incógnitas <var>l</var>. El argumento <var>e</var> puede ser una única ecuación,
@@ -1351,7 +1351,7 @@ datos; si una incógnita se declara, por ejemplo, como entero, <code>to_poly_solv
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>mayo, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

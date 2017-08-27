@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 81. solve_rec</title>
+<title>Maxima 5.40.0 Manual: 81. solve_rec</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 81. solve_rec">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 81. solve_rec">
+<meta name="description" content="Maxima 5.40.0 Manual: 81. solve_rec">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 81. solve_rec">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,50 +66,50 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="solve_005frec_002dpkg"></a>
-<a name="SEC377"></a>
+<a name="SEC378"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_80.html#SEC376" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC378" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_80.html#SEC377" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC379" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_80.html#SEC368" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_80.html#SEC369" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_82.html#SEC380" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_82.html#SEC381" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 81. solve_rec </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC378">81.1 Introduction to solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC379">81.1 Introduction to solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC379">81.2 Functions and Variables for solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC380">81.2 Functions and Variables for solve_rec</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-solve_005frec"></a>
 </p><hr size="6">
 <a name="Introduction-to-solve_005frec"></a>
-<a name="SEC378"></a>
+<a name="SEC379"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC377" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC379" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC378" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC380" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC377" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC377" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_82.html#SEC380" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC378" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC378" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_82.html#SEC381" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 81.1 Introduction to solve_rec </h2>
@@ -139,21 +139,21 @@ coefficients.
 <p><a name="Item_003a-Functions-and-Variables-for-solve_005frec"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-solve_005frec"></a>
-<a name="SEC379"></a>
+<a name="SEC380"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC378" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_82.html#SEC380" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC379" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_82.html#SEC381" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC377" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC377" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_82.html#SEC380" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC378" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC378" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_82.html#SEC381" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 81.2 Functions and Variables for solve_rec </h2>
@@ -162,7 +162,7 @@ coefficients.
 <a name="Item_003a-reduce_005forder"></a>
 </p><dl>
 <dt><u>Function:</u> <b>reduce_order</b><i> (<var>rec</var>, <var>sol</var>, <var>var</var>)</i>
-<a name="IDX2406"></a>
+<a name="IDX2410"></a>
 </dt>
 <dd><p>Reduces the order of linear recurrence <var>rec</var> when a particular solution
 <var>sol</var> is known. The reduced reccurence can be used to get other solutions.
@@ -220,7 +220,7 @@ So the general solution is
 <a name="Item_003a-simplify_005fproducts"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>simplify_products</b>
-<a name="IDX2407"></a>
+<a name="IDX2411"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -240,7 +240,7 @@ simplify products in result.
 <a name="Item_003a-simplify_005fsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>simplify_sum</b><i> (<var>expr</var>)</i>
-<a name="IDX2408"></a>
+<a name="IDX2412"></a>
 </dt>
 <dd><p>Tries to simplify all sums appearing in <var>expr</var> to a closed form.
 </p>
@@ -276,7 +276,7 @@ simplify products in result.
 <a name="Item_003a-solve_005frec"></a>
 </p><dl>
 <dt><u>Function:</u> <b>solve_rec</b><i> (<var>eqn</var>, <var>var</var>, [<var>init</var>])</i>
-<a name="IDX2409"></a>
+<a name="IDX2413"></a>
 </dt>
 <dd><p>Solves for hypergeometrical solutions to linear recurrence <var>eqn</var> with
 polynomials coefficient in variable <var>var</var>. Optional arguments <var>init</var>
@@ -351,7 +351,7 @@ coefficient.
 <a name="Item_003a-solve_005frec_005frat"></a>
 </p><dl>
 <dt><u>Function:</u> <b>solve_rec_rat</b><i> (<var>eqn</var>, <var>var</var>, [<var>init</var>])</i>
-<a name="IDX2410"></a>
+<a name="IDX2414"></a>
 </dt>
 <dd><p>Solves for rational solutions to linear recurrences. See solve_rec for
 description of arguments.
@@ -386,7 +386,7 @@ description of arguments.
 <a name="Item_003a-product_005fuse_005fgamma"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>product_use_gamma</b>
-<a name="IDX2411"></a>
+<a name="IDX2415"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -406,7 +406,7 @@ into the expression if <code>product_use_gamma</code> is <code>true</code>.
 <a name="Item_003a-summand_005fto_005frec"></a>
 </p><dl>
 <dt><u>Function:</u> <b>summand_to_rec</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>summand_to_rec</tt> (<var>summand</var>, <var>k</var>, <var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>summand_to_rec</tt> (<var>summand</var>, [<var>k</var>, <var>lo</var>, <var>hi</var>], <var>n</var>)</i>
-<a name="IDX2412"></a>
+<a name="IDX2416"></a>
 </dt>
 <dd><p>Returns the recurrence sattisfied by the sum
 </p>
@@ -450,8 +450,8 @@ are omitted, they are assumed to be <code>lo = -inf</code> and <code>hi = inf</c
 <p><a name="Item_003a-stats_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC377" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_82.html#SEC380" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC378" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_82.html#SEC381" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -459,12 +459,12 @@ are omitted, they are assumed to be <code>lo = -inf</code> and <code>hi = inf</c
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

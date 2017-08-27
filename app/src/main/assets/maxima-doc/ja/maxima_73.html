@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 73. numericalio</title>
+<title>Maxima 5.40.0 Manual: 73. numericalio</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 73. numericalio">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 73. numericalio">
+<meta name="description" content="Maxima 5.40.0 Manual: 73. numericalio">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 73. numericalio">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,53 +92,54 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="numericalio_002dpkg"></a>
-<a name="SEC334"></a>
+<a name="SEC335"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_72.html#SEC333" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC335" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_72.html#SEC334" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_72.html#SEC331" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_72.html#SEC332" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 73. numericalio </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC335">73.1 Introduction to numericalio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC336">73.1 Introduction to numericalio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC340">73.2 Functions and Variables for plain-text input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC341">73.2 Functions and Variables for plain-text input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC341">73.3 Functions and Variables for binary input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC342">73.3 Functions and Variables for binary input and output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-numericalio"></a>
 </p><hr size="6">
 <a name="Introduction-to-numericalio"></a>
-<a name="SEC335"></a>
+<a name="SEC336"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC334" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC336" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC335" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC337" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 73.1 Introduction to numericalio </h2>
@@ -163,21 +164,21 @@ img {max-width:80%; max-height: 80%}
 </div>
 </p>
 <hr size="6">
-<a name="SEC336"></a>
+<a name="SEC337"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC335" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC337" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC336" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC338" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 73.1.1 Plain-text input and output </h3>
@@ -199,21 +200,21 @@ Lispシンボルを意味するシンボルの始まりとして認識されま�
 (分割された行をつなぎ合わせる)いかなる継続文字も認識されません。
 </p>
 <hr size="6">
-<a name="SEC337"></a>
+<a name="SEC338"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC336" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC338" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC337" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC339" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 73.1.2 Separator flag values for input </h3>
@@ -244,21 +245,21 @@ Lispシンボルを意味するシンボルの始まりとして認識されま�
 例えば、 <code>1234,,Foo</code>は <code>1234,false,Foo</code>と同じと扱われます。
 </p>
 <hr size="6">
-<a name="SEC338"></a>
+<a name="SEC339"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC337" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC339" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC338" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC340" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 73.1.3 Separator flag values for output </h3>
@@ -273,21 +274,21 @@ Lispシンボルを意味するシンボルの始まりとして認識されま�
 出力を <code>1234,,Foo</code>につぶすことはありません。
 </p>
 <hr size="6">
-<a name="SEC339"></a>
+<a name="SEC340"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC338" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC340" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC339" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC341" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC336" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 73.1.4 Binary floating-point input and output </h3>
@@ -314,21 +315,21 @@ IEEE 754の特殊値(正負の無限大、非数値、指数表現でない数)�
 <p><a name="Item_003a-Functions-and-Variables-for-plain_002dtext-input-and-output"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-plain_002dtext-input-and-output"></a>
-<a name="SEC340"></a>
+<a name="SEC341"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC339" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC341" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC340" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC342" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 73.2 Functions and Variables for plain-text input and output </h2>
@@ -336,7 +337,7 @@ IEEE 754の特殊値(正負の無限大、非数値、指数表現でない数)�
 <p><a name="Item_003a-read_005fmatrix"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_matrix</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>, <var>M</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>, <var>separator_flag</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_matrix</tt> (<var>S</var>, <var>M</var>, <var>separator_flag</var>)</i>
-<a name="IDX2315"></a>
+<a name="IDX2319"></a>
 </dt>
 <dd><p><code>read_matrix(<var>S</var>)</code>は、
 ソース<var>S</var>を読み込み、行列として内容全体を返します。
@@ -354,7 +355,7 @@ IEEE 754の特殊値(正負の無限大、非数値、指数表現でない数)�
 (もし 最初の行が列の説明を含む CSVデータを読むなら、それは役立つかもしれません。)
 </p><table><tr><td>&nbsp;</td><td><pre class="example">s : openr(&quot;data.txt&quot;);
 readline(s);  /* skip the first line */
-M : read_matrix(s, comma);  /* read the following (comma-separated) lines into matrix M */
+M : read_matrix(s, 'comma);  /* read the following (comma-separated) lines into matrix M */
 close(s);
 </pre></td></tr></table>
 <p><var>separator_flag</var>の認識される値は
@@ -372,7 +373,7 @@ close(s);
 <p><a name="Item_003a-read_005farray"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_array</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_array</tt> (<var>S</var>, <var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_array</tt> (<var>S</var>, <var>A</var>, <var>separator_flag</var>)</i>
-<a name="IDX2316"></a>
+<a name="IDX2320"></a>
 </dt>
 <dd><p><var>A</var>が一杯になるか、ソースが尽きるまで、ソース <var>S</var>を配列 <var>A</var>に読み込みます。
 入力データは列優先順に配列に読み込まれます;
@@ -395,7 +396,7 @@ close(s);
 <p><a name="Item_003a-read_005fhashed_005farray"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_hashed_array</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_hashed_array</tt> (<var>S</var>, <var>A</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_hashed_array</tt> (<var>S</var>, <var>A</var>, <var>separator_flag</var>)</i>
-<a name="IDX2317"></a>
+<a name="IDX2321"></a>
 </dt>
 <dd><p>ソース <var>S</var>が読み込まれ、ハッシュ配列として内容全体が返されます。
 ソース <var>S</var>はファイル名かストリームかもしれません。
@@ -422,10 +423,10 @@ close(s);
 <p><a name="Item_003a-read_005fnested_005flist"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_nested_list</b><i> (<var>S</var>)</i>
-<a name="IDX2318"></a>
+<a name="IDX2322"></a>
 </dt>
 <dt><u>関数:</u> <b>read_nested_list</b><i> (<var>S</var>, <var>separator_flag</var>)</i>
-<a name="IDX2319"></a>
+<a name="IDX2323"></a>
 </dt>
 <dd><p>ソース <var>S</var>を読み込み、入れ子のリストとして内容全体を返します。
 ソース <var>S</var>はファイル名かストリームかもしれません。
@@ -449,7 +450,7 @@ close(s);
 <p><a name="Item_003a-read_005flist"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_list</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>, <var>L</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>, <var>separator_flag</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_list</tt> (<var>S</var>, <var>L</var>, <var>separator_flag</var>)</i>
-<a name="IDX2320"></a>
+<a name="IDX2324"></a>
 </dt>
 <dd><p><code>read_list(<var>S</var>)</code>は、ソース
 <var>S</var>を読み込み、フラットなリストとして内容全体を返します。
@@ -474,7 +475,7 @@ close(s);
 <p><a name="Item_003a-write_005fdata"></a>
 </p><dl>
 <dt><u>関数:</u> <b>write_data</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>write_data</tt> (<var>X</var>, <var>D</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>write_data</tt> (<var>X</var>, <var>D</var>, <var>separator_flag</var>)</i>
-<a name="IDX2321"></a>
+<a name="IDX2325"></a>
 </dt>
 <dd><p>オブジェクト <var>X</var>をデスティネーション <var>D</var>に書き出します。
 </p>
@@ -513,21 +514,21 @@ close(s);
 <p><a name="Item_003a-Functions-and-Variables-for-binary-input-and-output"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-binary-input-and-output"></a>
-<a name="SEC341"></a>
+<a name="SEC342"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC340" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC341" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC334" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC335" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 73.3 Functions and Variables for binary input and output </h2>
@@ -535,7 +536,7 @@ close(s);
 <p><a name="Item_003a-assume_005fexternal_005fbyte_005forder"></a>
 </p><dl>
 <dt><u>関数:</u> <b>assume_external_byte_order</b><i> (<var>byte_order_flag</var>)</i>
-<a name="IDX2322"></a>
+<a name="IDX2326"></a>
 </dt>
 <dd><p><code>numericalio</code>にバイナリデータを読み書きするためのバイトオーダーを知らせます。
 <var>byte_order_flag</var>の2つの値が認識されます:
@@ -555,7 +556,7 @@ close(s);
 <p><a name="Item_003a-openr_005fbinary"></a>
 </p><dl>
 <dt><u>関数:</u> <b>openr_binary</b><i> (<var>file_name</var>)</i>
-<a name="IDX2323"></a>
+<a name="IDX2327"></a>
 </dt>
 <dd><p><var>file_name</var>という名前のファイルを読むための
 8ビット符号なしバイトの入力ストリームを返します。
@@ -570,7 +571,7 @@ close(s);
 <p><a name="Item_003a-openw_005fbinary"></a>
 </p><dl>
 <dt><u>関数:</u> <b>openw_binary</b><i> (<var>file_name</var>)</i>
-<a name="IDX2324"></a>
+<a name="IDX2328"></a>
 </dt>
 <dd><p><var>file_name</var>という名前のファイルに書き込むための
 8ビット符号なしバイトの出力ストリームを返します。
@@ -585,7 +586,7 @@ close(s);
 <p><a name="Item_003a-opena_005fbinary"></a>
 </p><dl>
 <dt><u>関数:</u> <b>opena_binary</b><i> (<var>file_name</var>)</i>
-<a name="IDX2325"></a>
+<a name="IDX2329"></a>
 </dt>
 <dd><p><var>file_name</var>という名前のファイルに追加するための
 8ビット符号なしバイトの出力ストリームを返します。
@@ -600,7 +601,7 @@ close(s);
 <p><a name="Item_003a-read_005fbinary_005fmatrix"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_binary_matrix</b><i> (<var>S</var>, <var>M</var>)</i>
-<a name="IDX2326"></a>
+<a name="IDX2330"></a>
 </dt>
 <dd><p><var>M</var>が一杯になるかソースが尽きるまで、ソース <var>S</var>から行列
 <var>M</var>にバイナリの 8バイト浮動小数点数を読み込みます。
@@ -621,7 +622,7 @@ close(s);
 <p><a name="Item_003a-read_005fbinary_005farray"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_binary_array</b><i> (<var>S</var>, <var>A</var>)</i>
-<a name="IDX2327"></a>
+<a name="IDX2331"></a>
 </dt>
 <dd><p><var>A</var>が一杯になるかソースが尽きるまで、ソース <var>S</var>から配列
 <var>A</var>にバイナリの 8バイト浮動小数点数を読み込みます。
@@ -642,7 +643,7 @@ close(s);
 <p><a name="Item_003a-read_005fbinary_005flist"></a>
 </p><dl>
 <dt><u>関数:</u> <b>read_binary_list</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_binary_list</tt> (<var>S</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>read_binary_list</tt> (<var>S</var>, <var>L</var>)</i>
-<a name="IDX2328"></a>
+<a name="IDX2332"></a>
 </dt>
 <dd><p><code>read_binary_list(<var>S</var>)</code>は、バイナリ
 8バイト浮動小数点数の数列としてソース
@@ -666,7 +667,7 @@ close(s);
 <p><a name="Item_003a-write_005fbinary_005fdata"></a>
 </p><dl>
 <dt><u>関数:</u> <b>write_binary_data</b><i> (<var>X</var>, <var>D</var>)</i>
-<a name="IDX2329"></a>
+<a name="IDX2333"></a>
 </dt>
 <dd><p>バイナリ 8バイトIEEE 754浮動小数点数で構成されるオブジェクト
 <var>X</var>をディスティネーション <var>D</var>に書き込みます。
@@ -698,8 +699,8 @@ close(s);
 <p><a name="Item_003a-operatingsystem_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC334" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_74.html#SEC342" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC335" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_74.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -707,12 +708,12 @@ close(s);
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

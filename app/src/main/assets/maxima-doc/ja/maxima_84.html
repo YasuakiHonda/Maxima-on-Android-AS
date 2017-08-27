@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 84. stringproc</title>
+<title>Maxima 5.40.0 Manual: 84. stringproc</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 84. stringproc">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 84. stringproc">
+<meta name="description" content="Maxima 5.40.0 Manual: 84. stringproc">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 84. stringproc">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,57 +92,58 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="stringproc_002dpkg"></a>
-<a name="SEC387"></a>
+<a name="SEC388"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC388" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_83.html#SEC387" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC389" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 84. stringproc </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC388">84.1 Introduction to String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC389">84.1 Introduction to String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC389">84.2 Input and Output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC390">84.2 Input and Output</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC390">84.3 Characters</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC391">84.3 Characters</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC391">84.4 String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC392">84.4 String Processing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC392">84.5 Octets and Utilities for Cryptography</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC393">84.5 Octets and Utilities for Cryptography</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-String-Processing"></a>
 </p><hr size="6">
 <a name="Introduction-to-String-Processing"></a>
-<a name="SEC388"></a>
+<a name="SEC389"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC387" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC389" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC388" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC390" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 84.1 Introduction to String Processing </h2>
@@ -238,21 +239,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Input-and-Output"></a>
 </p><hr size="6">
 <a name="Input-and-Output"></a>
-<a name="SEC389"></a>
+<a name="SEC390"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC388" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC390" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC389" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC391" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 84.2 Input and Output </h2>
@@ -280,7 +281,7 @@ and an integer: ~20t~d~%&quot;$
 <a name="Item_003a-close"></a>
 </p><dl>
 <dt><u>関数:</u> <b>close</b><i> (<var>stream</var>)</i>
-<a name="IDX2438"></a>
+<a name="IDX2442"></a>
 </dt>
 <dd><p><var>stream</var>を閉じて、もし <var>stream</var>が開いていたら
 <code>true</code>を返します。
@@ -298,7 +299,7 @@ and an integer: ~20t~d~%&quot;$
 <a name="Item_003a-flength"></a>
 </p><dl>
 <dt><u>関数:</u> <b>flength</b><i> (<var>stream</var>)</i>
-<a name="IDX2439"></a>
+<a name="IDX2443"></a>
 </dt>
 <dd><p><var>stream</var>はファイルからかファイルへの開いたストリームでなかればいけません。
 その時 <code>flength</code>はこのファイルの中に現在存在するバイト数を返します。
@@ -318,7 +319,7 @@ and an integer: ~20t~d~%&quot;$
 <a name="Item_003a-flush_005foutput"></a>
 </p><dl>
 <dt><u>関数:</u> <b>flush_output</b><i> (<var>stream</var>)</i>
-<a name="IDX2440"></a>
+<a name="IDX2444"></a>
 </dt>
 <dd><p><var>stream</var>をフラッシュします。
 ここで <var>stream</var>はファイルへの出力ストリームでなければいけません。
@@ -337,7 +338,7 @@ and an integer: ~20t~d~%&quot;$
 <a name="Item_003a-fposition"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fposition</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fposition</tt> (<var>stream</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fposition</tt> (<var>stream</var>, <var>pos</var>)</i>
-<a name="IDX2441"></a>
+<a name="IDX2445"></a>
 </dt>
 <dd><p>もし <var>pos</var>が使われてないなら、 <var>stream</var>の中の現在位置を返します。
 もし <var>pos</var>が使われているなら、
@@ -360,7 +361,7 @@ and an integer: ~20t~d~%&quot;$
 <a name="Item_003a-freshline"></a>
 </p><dl>
 <dt><u>関数:</u> <b>freshline</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>freshline</tt> ()  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>freshline</tt> (<var>stream</var>)</i>
-<a name="IDX2442"></a>
+<a name="IDX2446"></a>
 </dt>
 <dd><p>もし位置が行の最初でないなら
 標準出力ストリームに改行を書き込み、 <code>true</code>を返します。
@@ -381,7 +382,7 @@ and an integer: ~20t~d~%&quot;$
 <a name="Item_003a-get_005foutput_005fstream_005fstring"></a>
 </p><dl>
 <dt><u>関数:</u> <b>get_output_stream_string</b><i> (<var>stream</var>)</i>
-<a name="IDX2443"></a>
+<a name="IDX2447"></a>
 </dt>
 <dd><p>現在 <var>stream</var>に存在するすべての文字を含む文字列を返します。
 <var>stream</var>はオープンな文字列出力ストリームでなければいけません。
@@ -400,7 +401,7 @@ and an integer: ~20t~d~%&quot;$
 <a name="Item_003a-make_005fstring_005finput_005fstream"></a>
 </p><dl>
 <dt><u>関数:</u> <b>make_string_input_stream</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_string_input_stream</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_string_input_stream</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_string_input_stream</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2444"></a>
+<a name="IDX2448"></a>
 </dt>
 <dd><p><var>string</var>の一部とファイルの終了を含む入力ストリームを返します。
 オプション引数がない場合、ストリームは全体の文字列を含み、一番目の文字の前に位置されます。
@@ -424,7 +425,7 @@ t e x
 <a name="Item_003a-make_005fstring_005foutput_005fstream"></a>
 </p><dl>
 <dt><u>関数:</u> <b>make_string_output_stream</b><i> ()</i>
-<a name="IDX2445"></a>
+<a name="IDX2449"></a>
 </dt>
 <dd><p>文字を受け付ける出力ストリームを返します。
 このストリームに現在存在する文字は <a href="#get_005foutput_005fstream_005fstring">get_output_stream_string</a>を使って取り出すことができます。
@@ -454,7 +455,7 @@ t e x
 <a name="Item_003a-newline"></a>
 </p><dl>
 <dt><u>関数:</u> <b>newline</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>newline</tt> ()  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>newline</tt> (<var>stream</var>)</i>
-<a name="IDX2446"></a>
+<a name="IDX2450"></a>
 </dt>
 <dd><p>標準出力ストリームに改行を書き込みます。
 オプション引数 <var>stream</var>を使うと、そのストリームに改行を書き込みます。
@@ -475,13 +476,13 @@ t e x
 <a name="Item_003a-opena"></a>
 </p><dl>
 <dt><u>関数:</u> <b>opena</b><i> (<var>file</var>)</i>
-<a name="IDX2447"></a>
+<a name="IDX2451"></a>
 </dt>
 <dd><p><var>file</var>への文字出力ストリームを返します。
 もし存在しているファイルを開いたら、
 <code>opena</code>は <code>file</code>の終わりに要素を追加します。
 </p>
-<p>バイナリ出力に関しては <a href="maxima_73.html#SEC341">opena_binary</a>を参照してください。
+<p>バイナリ出力に関しては <a href="maxima_73.html#SEC342">opena_binary</a>を参照してください。
 </p>
 <div class=categorybox>
 
@@ -495,7 +496,7 @@ t e x
 <a name="Item_003a-openr"></a>
 </p><dl>
 <dt><u>関数:</u> <b>openr</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>openr</tt> (<var>file</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>openr</tt> (<var>file</var>, <var>encoding</var>)</i>
-<a name="IDX2448"></a>
+<a name="IDX2452"></a>
 </dt>
 <dd><p><var>file</var>への文字入力ストリームを返します。
 <code>openr</code>は <var>file</var>が存在すること仮定します。
@@ -506,7 +507,7 @@ sbclでは適切な文字列のリストは
 <a href="http://www.sbcl.org/manual/#External-Formats">http://www.sbcl.org/manual/#External-Formats</a>
 で確認することができます。
 </p>
-<p>バイナリ出力に関しては <a href="maxima_73.html#SEC341">openr_binary</a>を参照してください。
+<p>バイナリ出力に関しては <a href="maxima_73.html#SEC342">openr_binary</a>を参照してください。
 <code><a href="#close">close</a></code>, <code><a href="#openw">openw</a></code>も参照してください。
 </p>
 <table><tr><td>&nbsp;</td><td><pre class="example">(%i1) istream : openr(&quot;data.txt&quot;,&quot;EUC-JP&quot;);
@@ -527,14 +528,14 @@ sbclでは適切な文字列のリストは
 <a name="Item_003a-openw"></a>
 </p><dl>
 <dt><u>関数:</u> <b>openw</b><i> (<var>file</var>)</i>
-<a name="IDX2449"></a>
+<a name="IDX2453"></a>
 </dt>
 <dd><p><var>file</var>への文字出力ストリームを返します。
 もし <var>file</var>が存在しないなら、生成されます。
 もし存在しているファイルを開いたら、
 <code>openw</code>は <var>file</var>を破壊的に変更します。
 </p>
-<p>バイナリ出力に関しては <a href="maxima_73.html#SEC341">openw_binary</a>を参照してください。
+<p>バイナリ出力に関しては <a href="maxima_73.html#SEC342">openw_binary</a>を参照してください。
 </p>
 <p><code><a href="#close">close</a></code>, <code><a href="#openr">openr</a></code>も参照してください。
 </p>
@@ -550,7 +551,7 @@ sbclでは適切な文字列のリストは
 <a name="Item_003a-printf"></a>
 </p><dl>
 <dt><u>関数:</u> <b>printf</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>printf</tt> (<var>dest</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>printf</tt> (<var>dest</var>, <var>string</var>, <var>expr_1</var>, ..., <var>expr_n</var>)</i>
-<a name="IDX2450"></a>
+<a name="IDX2454"></a>
 </dt>
 <dd><p>制御文字列 <var>string</var>の文字を出力し、ティルデがディレクティブを導入することを観察することで
 フォーマットされた出力を生成します。
@@ -671,7 +672,7 @@ NIL
 <a name="Item_003a-readbyte"></a>
 </p><dl>
 <dt><u>関数:</u> <b>readbyte</b><i> (<var>stream</var>)</i>
-<a name="IDX2451"></a>
+<a name="IDX2455"></a>
 </dt>
 <dd><p><var>stream</var>の中の最初のバイトを削除し返します。
 <var>stream</var>はバイナリ入力ストリームでなければいけません。
@@ -704,7 +705,7 @@ NIL
 <a name="Item_003a-readchar"></a>
 </p><dl>
 <dt><u>関数:</u> <b>readchar</b><i> (<var>stream</var>)</i>
-<a name="IDX2452"></a>
+<a name="IDX2456"></a>
 </dt>
 <dd><p><var>stream</var>の一番目の文字を取り出し、返します。
 ファイルの終端になったら、 <code>readchar</code>は <code>false</code>を返します。
@@ -723,7 +724,7 @@ NIL
 <a name="Item_003a-readline"></a>
 </p><dl>
 <dt><u>関数:</u> <b>readline</b><i> (<var>stream</var>)</i>
-<a name="IDX2453"></a>
+<a name="IDX2457"></a>
 </dt>
 <dd><p><var>stream</var>の現在位置から行の終わりまでの文字を含む文字列か、
 もしファイルの終わりが来たら <code>false</code>を返します。
@@ -740,7 +741,7 @@ NIL
 <a name="Item_003a-sprint"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sprint</b><i> (<var>expr_1</var>, &hellip;, <var>expr_n</var>)</i>
-<a name="IDX2454"></a>
+<a name="IDX2458"></a>
 </dt>
 <dd><p>引数を順に評価し、一番左から始まる「一行」に表示します。
 式は数の右隣にスペース文字と共に印字され、行の長さを無視します。
@@ -768,7 +769,7 @@ NIL
 <a name="Item_003a-writebyte"></a>
 </p><dl>
 <dt><u>関数:</u> <b>writebyte</b><i> (<var>byte</var>, <var>stream</var>)</i>
-<a name="IDX2455"></a>
+<a name="IDX2459"></a>
 </dt>
 <dd><p><var>stream</var>に <var>byte</var>を書き出します。
 <var>stream</var>はバイナリ出力ストリームでなければいけません。
@@ -814,21 +815,21 @@ GNU/Linux
 <p><a name="Item_003a-Characters"></a>
 </p><hr size="6">
 <a name="Characters"></a>
-<a name="SEC390"></a>
+<a name="SEC391"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC389" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC391" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC390" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC392" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 84.3 Characters </h2>
@@ -839,7 +840,7 @@ GNU/Linux
 <a name="Item_003a-adjust_005fexternal_005fformat"></a>
 </p><dl>
 <dt><u>関数:</u> <b>adjust_external_format</b><i> ()</i>
-<a name="IDX2456"></a>
+<a name="IDX2460"></a>
 </dt>
 <dd><p>Lispリーダーの現在の外部フォーマットに関する情報を印字し、
 外部フォーマットのエンコーディングが
@@ -911,7 +912,7 @@ and has not been changed.
 <a name="Item_003a-alphacharp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>alphacharp</b><i> (<var>char</var>)</i>
-<a name="IDX2457"></a>
+<a name="IDX2461"></a>
 </dt>
 <dd><p>もし <var>char</var>がアルファベット文字なら <code>true</code>を返します。
 </p>
@@ -954,7 +955,7 @@ package stringproc: &uuml; cannot be converted into a Lisp character.
 <a name="Item_003a-alphanumericp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>alphanumericp</b><i> (<var>char</var>)</i>
-<a name="IDX2458"></a>
+<a name="IDX2462"></a>
 </dt>
 <dd><p>もし <var>char</var>がアルファベット文字か数字なら <code>true</code>を返します。
 (対応する US-ASCII文字だけが数字とみなされます)
@@ -973,7 +974,7 @@ package stringproc: &uuml; cannot be converted into a Lisp character.
 <a name="Item_003a-ascii"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ascii</b><i> (<var>int</var>)</i>
-<a name="IDX2459"></a>
+<a name="IDX2463"></a>
 </dt>
 <dd><p><code>128</code>未満の整数 <var>int</var>に対応するUS-ASCII文字を返します。
 </p>
@@ -1000,7 +1001,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 <a name="Item_003a-cequal"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cequal</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2460"></a>
+<a name="IDX2464"></a>
 </dt>
 <dd><p>もし <var>char_1</var>と <var>char_2</var>が同じ文字なら <code>true</code>を返します。
 </p>
@@ -1016,7 +1017,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 <a name="Item_003a-cequalignore"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cequalignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2461"></a>
+<a name="IDX2465"></a>
 </dt>
 <dd><p><code>cequal</code>と同様ですが、文字の大小を無視します。
 背後のLispが文字をアルファベット文字として認識できる時
@@ -1035,7 +1036,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 <a name="Item_003a-cgreaterp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cgreaterp</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2462"></a>
+<a name="IDX2466"></a>
 </dt>
 <dd><p>もし <var>char_1</var>の符号位置が <var>char_2</var>のそれより大きいなら
 <code>true</code>を返します。
@@ -1052,7 +1053,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 <a name="Item_003a-cgreaterpignore"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cgreaterpignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2463"></a>
+<a name="IDX2467"></a>
 </dt>
 <dd><p><code>cgreaterp</code>と同様ですが、文字の大小を無視します。
 背後のLispが文字をアルファベット文字として認識できる時
@@ -1071,7 +1072,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 <a name="Item_003a-charp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>charp</b><i> (<var>obj</var>)</i>
-<a name="IDX2464"></a>
+<a name="IDX2468"></a>
 </dt>
 <dd><p>もし <var>obj</var>が Maxima-文字なら <code>true</code>を返します。
 例えばイントロダクションを参照してください。
@@ -1088,7 +1089,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 <a name="Item_003a-cint"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cint</b><i> (<var>char</var>)</i>
-<a name="IDX2465"></a>
+<a name="IDX2469"></a>
 </dt>
 <dd><p>Maxima文字 <var>char</var>のUnicode符号位置を返します。
 <var>char</var>は長さ <code>1</code>でなければいけません。
@@ -1126,7 +1127,7 @@ Windows上の SBCLを使った wxMaximaでは
 <a name="Item_003a-clessp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>clessp</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2466"></a>
+<a name="IDX2470"></a>
 </dt>
 <dd><p>もし <var>char_1</var>の符号位置が <var>char_2</var>のそれより小さいなら
 <code>true</code>を返します。
@@ -1143,7 +1144,7 @@ Windows上の SBCLを使った wxMaximaでは
 <a name="Item_003a-clesspignore"></a>
 </p><dl>
 <dt><u>関数:</u> <b>clesspignore</b><i> (<var>char_1</var>, <var>char_2</var>)</i>
-<a name="IDX2467"></a>
+<a name="IDX2471"></a>
 </dt>
 <dd><p><code>clessp</code>と同様ですが、文字の大小を無視します。
 背後のLispが文字をアルファベット文字として認識できる時
@@ -1162,7 +1163,7 @@ Windows上の SBCLを使った wxMaximaでは
 <a name="Item_003a-constituent"></a>
 </p><dl>
 <dt><u>関数:</u> <b>constituent</b><i> (<var>char</var>)</i>
-<a name="IDX2468"></a>
+<a name="IDX2472"></a>
 </dt>
 <dd><p>もし <var>char</var>が、グラフィック文字ですがスペース文字でないなら、
 <code>true</code>を返します。
@@ -1189,7 +1190,7 @@ d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 <a name="Item_003a-digitcharp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>digitcharp</b><i> (<var>char</var>)</i>
-<a name="IDX2469"></a>
+<a name="IDX2473"></a>
 </dt>
 <dd><p>対応する US-ASCII文字が数字とみなされるような場合だけ
 もし <var>char</var>が数字なら <code>true</code>を返します。
@@ -1207,7 +1208,7 @@ d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 <a name="Item_003a-lowercasep"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lowercasep</b><i> (<var>char</var>)</i>
-<a name="IDX2470"></a>
+<a name="IDX2474"></a>
 </dt>
 <dd><p>もし <var>char</var>が小文字なら <code>true</code>を返します。
 </p>
@@ -1225,7 +1226,7 @@ d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 </p>
 <dl>
 <dt><u>変数:</u> <b>newline</b>
-<a name="IDX2471"></a>
+<a name="IDX2475"></a>
 </dt>
 <dd><p>改行文字(ASCII文字 10)。
 </p>
@@ -1241,7 +1242,7 @@ d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 <a name="Item_003a-space"></a>
 </p><dl>
 <dt><u>変数:</u> <b>space</b>
-<a name="IDX2472"></a>
+<a name="IDX2476"></a>
 </dt>
 <dd><p>スペース文字。
 </p>
@@ -1257,7 +1258,7 @@ d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 <a name="Item_003a-tab"></a>
 </p><dl>
 <dt><u>変数:</u> <b>tab</b>
-<a name="IDX2473"></a>
+<a name="IDX2477"></a>
 </dt>
 <dd><p>タブ文字。
 </p>
@@ -1273,7 +1274,7 @@ d e f g h i j k l m n o p q r s t u v w x y z { | } ~
 <a name="Item_003a-unicode"></a>
 </p><dl>
 <dt><u>関数:</u> <b>unicode</b><i> (<var>arg</var>)</i>
-<a name="IDX2474"></a>
+<a name="IDX2478"></a>
 </dt>
 <dd><p><var>arg</var>が定義する文字を返します。
 もし背後の LispがUnicodeのフルサポートを提供するなら
@@ -1333,7 +1334,7 @@ CMUCLも <code>unicode(name)</code>をサポートしますが、また 16ビッ
 <a name="Item_003a-unicode_005fto_005futf8"></a>
 </p><dl>
 <dt><u>関数:</u> <b>unicode_to_utf8</b><i> (<var>code_point</var>)</i>
-<a name="IDX2475"></a>
+<a name="IDX2479"></a>
 </dt>
 <dd><p>Unicode <var>code_point</var>に対応する UTF-8コードを含むリストを返します。
 </p>
@@ -1358,7 +1359,7 @@ CMUCLも <code>unicode(name)</code>をサポートしますが、また 16ビッ
 <a name="Item_003a-uppercasep"></a>
 </p><dl>
 <dt><u>関数:</u> <b>uppercasep</b><i> (<var>char</var>)</i>
-<a name="IDX2476"></a>
+<a name="IDX2480"></a>
 </dt>
 <dd><p>もし <var>char</var>が大文字なら <code>true</code>を返します。
 </p>
@@ -1376,7 +1377,7 @@ CMUCLも <code>unicode(name)</code>をサポートしますが、また 16ビッ
 <a name="Item_003a-us_005fascii_005fonly"></a>
 </p><dl>
 <dt><u>変数:</u> <b>us_ascii_only</b>
-<a name="IDX2477"></a>
+<a name="IDX2481"></a>
 </dt>
 <dd><p>このオプション変数は
 Maximaを走らせるアプリケーションが提供する文字エンコーディングが UTF-8なのに
@@ -1410,7 +1411,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-utf8_005fto_005funicode"></a>
 </p><dl>
 <dt><u>関数:</u> <b>utf8_to_unicode</b><i> (<var>list</var>)</i>
-<a name="IDX2478"></a>
+<a name="IDX2482"></a>
 </dt>
 <dd><p>1文字のUTF-8エンコーディングを含む <var>list</var>に対応する Unicode符号位置を返します。
 </p>
@@ -1426,21 +1427,21 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <p><a name="Item_003a-String-Processing"></a>
 </p><hr size="6">
 <a name="String-Processing"></a>
-<a name="SEC391"></a>
+<a name="SEC392"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC390" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC392" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC391" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC393" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 84.4 String Processing </h2>
@@ -1452,7 +1453,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-charat"></a>
 </p><dl>
 <dt><u>関数:</u> <b>charat</b><i> (<var>string</var>, <var>n</var>)</i>
-<a name="IDX2479"></a>
+<a name="IDX2483"></a>
 </dt>
 <dd><p><var>string</var>の <var>n</var>番目の文字を返します。
 <var>string</var>の一番目の文字は <var>n</var> = 1で返されます。
@@ -1473,7 +1474,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-charlist"></a>
 </p><dl>
 <dt><u>関数:</u> <b>charlist</b><i> (<var>string</var>)</i>
-<a name="IDX2480"></a>
+<a name="IDX2484"></a>
 </dt>
 <dd><p><var>string</var>の文字すべてのリストを返します。
 </p>
@@ -1491,7 +1492,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-eval_005fstring"></a>
 </p><dl>
 <dt><u>関数:</u> <b>eval_string</b><i> (<var>str</var>)</i>
-<a name="IDX2481"></a>
+<a name="IDX2485"></a>
 </dt>
 <dd><p>文字列 <var>str</var>を Maxima式としてパースし、評価します。
 文字列 <var>str</var>は終端子(ドル記号 <code>$</code>またはセミコロン <code>;</code>)
@@ -1521,7 +1522,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-parse_005fstring"></a>
 </p><dl>
 <dt><u>関数:</u> <b>parse_string</b><i> (<var>str</var>)</i>
-<a name="IDX2482"></a>
+<a name="IDX2486"></a>
 </dt>
 <dd><p>文字列 <var>str</var>を Maxima式としてパースします(評価しません)。
 文字列 <var>str</var>は終端子(ドル記号 <code>$</code>またはセミコロン <code>;</code>)
@@ -1552,7 +1553,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-scopy"></a>
 </p><dl>
 <dt><u>関数:</u> <b>scopy</b><i> (<var>string</var>)</i>
-<a name="IDX2483"></a>
+<a name="IDX2487"></a>
 </dt>
 <dd><p><var>string</var>のコピーを新しい文字列として返します。
 </p>
@@ -1567,7 +1568,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sdowncase"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sdowncase</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sdowncase</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sdowncase</tt> (<var>string</var>, <var>start</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sdowncase</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2484"></a>
+<a name="IDX2488"></a>
 </dt>
 <dd><p><a href="#supcase">supcase</a>と同様ですが、大文字を小文字に変換します。
 </p>
@@ -1582,7 +1583,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sequal"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sequal</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
-<a name="IDX2485"></a>
+<a name="IDX2489"></a>
 </dt>
 <dd><p>もし <var>string_1</var>と <var>string_2</var>が同じ文字の列を含むなら、
 <code>true</code>を返します。
@@ -1599,7 +1600,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sequalignore"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sequalignore</b><i> (<var>string_1</var>, <var>string_2</var>)</i>
-<a name="IDX2486"></a>
+<a name="IDX2490"></a>
 </dt>
 <dd><p><code>sequal</code>と同様ですが、文字の大小を無視します。
 背後のLispが文字をアルファベット文字として認識できる時
@@ -1618,7 +1619,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sexplode"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sexplode</b><i> (<var>string</var>)</i>
-<a name="IDX2487"></a>
+<a name="IDX2491"></a>
 </dt>
 <dd><p><code>sexplode</code>は関数<code>charlist</code>の別名です。
 </p>
@@ -1633,7 +1634,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-simplode"></a>
 </p><dl>
 <dt><u>関数:</u> <b>simplode</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>simplode</tt> (<var>list</var>)   &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>simplode</tt> (<var>list</var>, <var>delim</var>)</i>
-<a name="IDX2488"></a>
+<a name="IDX2492"></a>
 </dt>
 <dd><p><code>simplode</code>は式のリストを取り、それらを結合して文字列にします。
 もしデリミタ <var>delim</var>を指定しないなら、
@@ -1660,7 +1661,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sinsert"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sinsert</b><i> (<var>seq</var>, <var>string</var>, <var>pos</var>)</i>
-<a name="IDX2489"></a>
+<a name="IDX2493"></a>
 </dt>
 <dd><p><code>substring (<var>string</var>, 1, <var>pos</var> - 1)</code>と
 文字列
@@ -1686,7 +1687,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sinvertcase"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sinvertcase</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sinvertcase</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sinvertcase</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sinvertcase</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2490"></a>
+<a name="IDX2494"></a>
 </dt>
 <dd><p>位置 <var>start</var>から <var>end</var>までのそれぞれの文字を逆順にすることを除いて
 <var>string</var>を返します。
@@ -1709,7 +1710,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-slength"></a>
 </p><dl>
 <dt><u>関数:</u> <b>slength</b><i> (<var>string</var>)</i>
-<a name="IDX2491"></a>
+<a name="IDX2495"></a>
 </dt>
 <dd><p><var>string</var>の中の文字の数を返します。
 </p>
@@ -1724,7 +1725,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-smake"></a>
 </p><dl>
 <dt><u>関数:</u> <b>smake</b><i> (<var>num</var>, <var>char</var>)</i>
-<a name="IDX2492"></a>
+<a name="IDX2496"></a>
 </dt>
 <dd><p><var>num</var>個の文字 <var>char</var>を持つ新しい文字列を返します。
 </p>
@@ -1744,7 +1745,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-smismatch"></a>
 </p><dl>
 <dt><u>関数:</u> <b>smismatch</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>smismatch</tt> (<var>string_1</var>, <var>string_2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>smismatch</tt> (<var>string_1</var>, <var>string_2</var>, <var>test</var>)</i>
-<a name="IDX2493"></a>
+<a name="IDX2497"></a>
 </dt>
 <dd><p><var>string_1</var>と <var>string_2</var>が異なる
 <var>string_1</var>の最初の文字の位置、または <code>false</code>を返します。
@@ -1768,7 +1769,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-split"></a>
 </p><dl>
 <dt><u>関数:</u> <b>split</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>split</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>split</tt> (<var>string</var>, <var>delim</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>split</tt> (<var>string</var>, <var>delim</var>, <var>multiple</var>)</i>
-<a name="IDX2494"></a>
+<a name="IDX2498"></a>
 </dt>
 <dd><p><var>string</var>のすべてのトークンのリストを返します。
 それぞれのトークンはパースされていない文字列です。
@@ -1799,7 +1800,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sposition"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sposition</b><i> (<var>char</var>, <var>string</var>)</i>
-<a name="IDX2495"></a>
+<a name="IDX2499"></a>
 </dt>
 <dd><p><var>string</var>の中で <var>char</var>とマッチする最初の文字の位置を返します。
 <var>string</var>の一番目の文字は位置 1にあります。
@@ -1817,7 +1818,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sremove"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sremove</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremove</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2496"></a>
+<a name="IDX2500"></a>
 </dt>
 <dd><p><var>string</var>同様文字列を返しますが、
 <var>seq</var>とマッチする部分文字列すべてなしに返します。
@@ -1845,7 +1846,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sremovefirst"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sremovefirst</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sremovefirst</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2497"></a>
+<a name="IDX2501"></a>
 </dt>
 <dd><p><var>seq</var>とマッチする最初の文字列だけが削除されることを除いて、
 <code>sremove</code>同様です。
@@ -1861,7 +1862,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-sreverse"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sreverse</b><i> (<var>string</var>)</i>
-<a name="IDX2498"></a>
+<a name="IDX2502"></a>
 </dt>
 <dd><p><var>string</var>の文字すべてが逆順の文字列を返します。
 </p>
@@ -1877,7 +1878,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-ssearch"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ssearch</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssearch</tt> (<var>seq</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2499"></a>
+<a name="IDX2503"></a>
 </dt>
 <dd><p>文字列<var>seq</var>とマッチする <var>string</var>の最初の部分文字列の位置を返します。
 マッチのためのデフォルトのテスト関数は <code>sequal</code>です。
@@ -1902,7 +1903,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-ssort"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ssort</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssort</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssort</tt> (<var>string</var>, <var>test</var>)</i>
-<a name="IDX2500"></a>
+<a name="IDX2504"></a>
 </dt>
 <dd><p><code>test (<var>c</var>, <var>d</var>)</code>が <code>false</code>、かつ、
 <code>test (<var>d</var>, <var>c</var>)</code>が <code>true</code>であるような 2つの連続する文字
@@ -1930,7 +1931,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-ssubst"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ssubst</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2501"></a>
+<a name="IDX2505"></a>
 </dt>
 <dd><p><var>string</var>の中の <var>old</var>にマッチするすべての部分文字列を
 <var>new</var>で置き換えた文字列を返します。
@@ -1959,7 +1960,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-ssubstfirst"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ssubstfirst</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ssubstfirst</tt> (<var>new</var>, <var>old</var>, <var>string</var>, <var>test</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2502"></a>
+<a name="IDX2506"></a>
 </dt>
 <dd><p><var>old</var>とマッチする最初の部分文字列だけを置き換えることを除いて、
 <code>subst</code>と同様です。
@@ -1975,7 +1976,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-strim"></a>
 </p><dl>
 <dt><u>関数:</u> <b>strim</b><i> (<var>seq</var>,<var>string</var>)</i>
-<a name="IDX2503"></a>
+<a name="IDX2507"></a>
 </dt>
 <dd><p><var>string</var>の両端から <var>seq</var>に現れるすべての文字を除いた文字列を返します。
 </p>
@@ -1998,7 +1999,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-striml"></a>
 </p><dl>
 <dt><u>関数:</u> <b>striml</b><i> (<var>seq</var>, <var>string</var>)</i>
-<a name="IDX2504"></a>
+<a name="IDX2508"></a>
 </dt>
 <dd><p><var>string</var>の左端だけトリムすることを除いて
 <code>strim</code>と同様です。
@@ -2014,7 +2015,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-strimr"></a>
 </p><dl>
 <dt><u>関数:</u> <b>strimr</b><i> (<var>seq</var>, <var>string</var>)</i>
-<a name="IDX2505"></a>
+<a name="IDX2509"></a>
 </dt>
 <dd><p><var>string</var>の右端だけトリムすることを除いて
 <code>strim</code>と同様です。
@@ -2030,7 +2031,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-stringp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>stringp</b><i> (<var>obj</var>)</i>
-<a name="IDX2506"></a>
+<a name="IDX2510"></a>
 </dt>
 <dd><p><var>obj</var>が文字列なら <code>true</code>を返します。
 例はイントロダクションを参照してください。
@@ -2047,7 +2048,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-substring"></a>
 </p><dl>
 <dt><u>関数:</u> <b>substring</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>substring</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>substring</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2507"></a>
+<a name="IDX2511"></a>
 </dt>
 <dd><p>位置 <var>start</var>で始まり位置 <var>end</var>で終わる
 <var>string</var>の部分文字列を返します。
@@ -2073,7 +2074,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-supcase"></a>
 </p><dl>
 <dt><u>関数:</u> <b>supcase</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcase</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcase</tt> (<var>string</var>, <var>start</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>supcase</tt> (<var>string</var>, <var>start</var>, <var>end</var>)</i>
-<a name="IDX2508"></a>
+<a name="IDX2512"></a>
 </dt>
 <dd><p><var>string</var>の位置 <var>start</var>から
 <var>end</var>までの小文字を対応する大文字に置き換えた文字列を返します。
@@ -2096,7 +2097,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-tokens"></a>
 </p><dl>
 <dt><u>関数:</u> <b>tokens</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tokens</tt> (<var>string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>tokens</tt> (<var>string</var>, <var>test</var>)</i>
-<a name="IDX2509"></a>
+<a name="IDX2513"></a>
 </dt>
 <dd><p><var>string</var>から抽出されたトークンのリストを返します。
 トークンは、文字があるテスト関数を満たす部分文字列です。
@@ -2125,21 +2126,21 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <p><a name="Item_003a-Octets-and-Utilities-for-Cryptography"></a>
 </p><hr size="6">
 <a name="Octets-and-Utilities-for-Cryptography"></a>
-<a name="SEC392"></a>
+<a name="SEC393"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC391" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC392" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC387" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC388" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 84.5 Octets and Utilities for Cryptography </h2>
@@ -2147,7 +2148,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-base64"></a>
 </p><dl>
 <dt><u>関数:</u> <b>base64</b><i> (<var>arg</var>)</i>
-<a name="IDX2510"></a>
+<a name="IDX2514"></a>
 </dt>
 <dd><p><var>arg</var>の base64表現を文字列として返します。
 引数 <var>arg</var>は文字列か非負整数かオクテットのリストです。
@@ -2182,7 +2183,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-base64_005fdecode"></a>
 </p><dl>
 <dt><u>関数:</u> <b>base64_decode</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>base64_decode</tt> (<var>base64-string</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>base64_decode</tt> (<var>base64-string</var>, <var>return-type</var>)</i>
-<a name="IDX2511"></a>
+<a name="IDX2515"></a>
 </dt>
 <dd><p>デフォルトでは <code>base64_decode</code>は
 <var>base64-string</var>を元の文字列にデコードします。
@@ -2203,7 +2204,7 @@ Windows上でGCLか SBCLでビルドされた場合もそうです。
 <a name="Item_003a-crc24sum"></a>
 </p><dl>
 <dt><u>関数:</u> <b>crc24sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>crc24sum</tt> (<var>octets</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>crc24sum</tt> (<var>octets</var>, <var>return-type</var>)</i>
-<a name="IDX2512"></a>
+<a name="IDX2516"></a>
 </dt>
 <dd><p>デフォルトでは <code>crc24sum</code>は オクテットリストの
 <code>CRC24</code>チェックサムを文字列として返します。
@@ -2250,7 +2251,7 @@ WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
 <a name="Item_003a-md5sum"></a>
 </p><dl>
 <dt><u>関数:</u> <b>md5sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>md5sum</tt> (<var>arg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>md5sum</tt> (<var>arg</var>, <var>return-type</var>)</i>
-<a name="IDX2513"></a>
+<a name="IDX2517"></a>
 </dt>
 <dd><p>文字列か非負整数かオクテットのリストの
 <code>MD5</code>チェックサムを返します。
@@ -2287,7 +2288,7 @@ WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
 <a name="Item_003a-mgf1_005fsha1"></a>
 </p><dl>
 <dt><u>関数:</u> <b>mgf1_sha1</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>mgf1_sha1</tt> (<var>seed</var>, <var>len</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>mgf1_sha1</tt> (<var>seed</var>, <var>len</var>, <var>return-type</var>)</i>
-<a name="IDX2514"></a>
+<a name="IDX2518"></a>
 </dt>
 <dd><p>可変長の擬似乱数を返します。
 デフォルトでは戻り値は <var>len</var>オクテットの長さの数字です。
@@ -2319,7 +2320,7 @@ WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
 <a name="Item_003a-number_005fto_005foctets"></a>
 </p><dl>
 <dt><u>関数:</u> <b>number_to_octets</b><i> (<var>number</var>)</i>
-<a name="IDX2515"></a>
+<a name="IDX2519"></a>
 </dt>
 <dd><p><var>number</var>のオクテット表現をオクテットのリストとして返します。
 <var>number</var>は非負整数でなければいけません。
@@ -2343,7 +2344,7 @@ WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
 <a name="Item_003a-octets_005fto_005fnumber"></a>
 </p><dl>
 <dt><u>関数:</u> <b>octets_to_number</b><i> (<var>octets</var>)</i>
-<a name="IDX2516"></a>
+<a name="IDX2520"></a>
 </dt>
 <dd><p><var>octets</var>のリストの中のオクテットを連結し、数を返します。
 </p>
@@ -2360,7 +2361,7 @@ WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
 <a name="Item_003a-octets_005fto_005foid"></a>
 </p><dl>
 <dt><u>関数:</u> <b>octets_to_oid</b><i> (<var>octets</var>)</i>
-<a name="IDX2517"></a>
+<a name="IDX2521"></a>
 </dt>
 <dd><p><var>octets</var>のリストからオブジェクト識別子(OID)を計算します。
 </p>
@@ -2383,7 +2384,7 @@ WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
 <a name="Item_003a-octets_005fto_005fstring"></a>
 </p><dl>
 <dt><u>関数:</u> <b>octets_to_string</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>octets_to_string</tt> (<var>octets</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>octets_to_string</tt> (<var>octets</var>, <var>encoding</var>)</i>
-<a name="IDX2518"></a>
+<a name="IDX2522"></a>
 </dt>
 <dd><p>現在のシステムのデフォルトに従って <var>octets</var>のリストを文字列にデコードします。
 非US-ASCII文字に対応するオクテットをデコードする時、
@@ -2437,7 +2438,7 @@ ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code>
 <a name="Item_003a-oid_005fto_005foctets"></a>
 </p><dl>
 <dt><u>関数:</u> <b>oid_to_octets</b><i> (<var>oid-string</var>)</i>
-<a name="IDX2519"></a>
+<a name="IDX2523"></a>
 </dt>
 <dd><p>オブジェクト識別子(OID)を <var>octets</var>のリストに変換します。
 </p>
@@ -2454,7 +2455,7 @@ ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code>
 <a name="Item_003a-sha1sum"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sha1sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha1sum</tt> (<var>arg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha1sum</tt> (<var>arg</var>, <var>return-type</var>)</i>
-<a name="IDX2520"></a>
+<a name="IDX2524"></a>
 </dt>
 <dd><p>文字列か非負整数かオクテットのリストの <code>SHA1</code>フィンガープリントを返します。
 デフォルトの戻り値は40ヘックス文字を含む文字列です。
@@ -2490,7 +2491,7 @@ ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code>
 <a name="Item_003a-sha256sum"></a>
 </p><dl>
 <dt><u>関数:</u> <b>sha256sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha256sum</tt> (<var>arg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>sha256sum</tt> (<var>arg</var>, <var>return-type</var>)</i>
-<a name="IDX2521"></a>
+<a name="IDX2525"></a>
 </dt>
 <dd><p>文字列か非負整数かオクテットのリストの <code>SHA256</code>フィンガープリントを返します。
 デフォルトの戻り値は64ヘックス文字を含む文字列です。
@@ -2518,7 +2519,7 @@ ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code>
 <a name="Item_003a-string_005fto_005foctets"></a>
 </p><dl>
 <dt><u>関数:</u> <b>string_to_octets</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>string_to_octets</tt> (<var>string</var>)  &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>string_to_octets</tt> (<var>string</var>, <var>encoding</var>)</i>
-<a name="IDX2522"></a>
+<a name="IDX2526"></a>
 </dt>
 <dd><p>現在のシステムのデフォルトに従って
 <var>string</var>をオクテットのリストにエンコードします。
@@ -2543,8 +2544,8 @@ ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code>
 <p><a name="Item_003a-to_005fpoly_005fsolve_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC387" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_85.html#SEC393" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC388" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_85.html#SEC394" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -2552,12 +2553,12 @@ ECL: <code>utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850</code>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

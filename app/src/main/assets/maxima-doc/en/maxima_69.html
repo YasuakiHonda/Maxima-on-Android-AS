@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 69. lsquares</title>
+<title>Maxima 5.40.0 Manual: 69. lsquares</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 69. lsquares">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 69. lsquares">
+<meta name="description" content="Maxima 5.40.0 Manual: 69. lsquares">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 69. lsquares">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,50 +66,50 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="lsquares_002dpkg"></a>
-<a name="SEC323"></a>
+<a name="SEC324"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_68.html#SEC322" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC324" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_68.html#SEC323" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC325" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_68.html#SEC320" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_68.html#SEC321" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC327" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 69. lsquares </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC324">69.1 Introduction to lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC325">69.1 Introduction to lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC325">69.2 Functions and Variables for lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC326">69.2 Functions and Variables for lsquares</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-lsquares"></a>
 </p><hr size="6">
 <a name="Introduction-to-lsquares"></a>
-<a name="SEC324"></a>
+<a name="SEC325"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC323" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC325" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC324" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC326" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC323" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC324" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC324" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC327" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 69.1 Introduction to lsquares </h2>
@@ -127,21 +127,21 @@ to estimate parameters for a model from numerical data.
 <p><a name="Item_003a-Functions-and-Variables-for-lsquares"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-lsquares"></a>
-<a name="SEC325"></a>
+<a name="SEC326"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC324" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC325" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC327" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC323" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC324" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC324" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC327" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 69.2 Functions and Variables for lsquares </h2>
@@ -150,7 +150,7 @@ to estimate parameters for a model from numerical data.
 <a name="Item_003a-lsquares_005festimates"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lsquares_estimates</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lsquares_estimates</tt> (<var>D</var>, <var>x</var>, <var>e</var>, <var>a</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lsquares_estimates</tt> (<var>D</var>, <var>x</var>, <var>e</var>, <var>a</var>, initial = <var>L</var>, tol = <var>t</var>)</i>
-<a name="IDX2301"></a>
+<a name="IDX2305"></a>
 </dt>
 <dd><p>Estimate parameters <var>a</var> to best fit the equation <var>e</var>
 in the variables <var>x</var> and <var>a</var> to the data <var>D</var>,
@@ -198,7 +198,7 @@ and <code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></co
 </p>
 <p>A problem for which an exact solution is found.
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) M : matrix (
         [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
                            [ 1  1  1 ]
@@ -223,7 +223,7 @@ and <code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></co
 <p>A problem for which no exact solution is found,
 so <code>lsquares_estimates</code> resorts to numerical approximation.
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) M : matrix ([1, 1], [2, 7/4], [3, 11/4], [4, 13/4]);
                             [ 1  1  ]
                             [       ]
@@ -247,7 +247,7 @@ so <code>lsquares_estimates</code> resorts to numerical approximation.
 In case that fitting to them fails it might be possible to get rid of the
 exponential function using an logarithm.
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) yvalues:[1,3,5,60,200,203,80]$
 (%i3) time:[1,2,4,5,6,8,10]$
 (%i4) f:y=a*exp(b*t);
@@ -295,7 +295,7 @@ exponential function using an logarithm.
 <a name="Item_003a-lsquares_005festimates_005fexact"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lsquares_estimates_exact</b><i> (<var>MSE</var>, <var>a</var>)</i>
-<a name="IDX2302"></a>
+<a name="IDX2306"></a>
 </dt>
 <dd><p>Estimate parameters <var>a</var> to minimize the mean square error <var>MSE</var>,
 by constructing a system of equations and attempting to solve them symbolically via <code>solve</code>.
@@ -316,7 +316,7 @@ and <code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></co
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) M : matrix (
          [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
                            [ 1  1  1 ]
@@ -358,7 +358,7 @@ and <code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></co
 <a name="Item_003a-lsquares_005festimates_005fapproximate"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lsquares_estimates_approximate</b><i> (<var>MSE</var>, <var>a</var>, initial = <var>L</var>, tol = <var>t</var>)</i>
-<a name="IDX2303"></a>
+<a name="IDX2307"></a>
 </dt>
 <dd><p>Estimate parameters <var>a</var> to minimize the mean square error <var>MSE</var>,
 via the numerical minimization function <code>lbfgs</code>.
@@ -392,7 +392,7 @@ and <code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></co
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) M : matrix (
          [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
                            [ 1  1  1 ]
@@ -435,7 +435,7 @@ and <code><a href="#lsquares_005fresidual_005fmse">lsquares_residual_mse</a></co
 <a name="Item_003a-lsquares_005fmse"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lsquares_mse</b><i> (<var>D</var>, <var>x</var>, <var>e</var>)</i>
-<a name="IDX2304"></a>
+<a name="IDX2308"></a>
 </dt>
 <dd><p>Returns the mean square error (MSE), a summation expression, for the equation <var>e</var>
 in the variables <var>x</var>, with data <var>D</var>.
@@ -457,7 +457,7 @@ evaluated with the variables in <var>x</var> assigned values from the <code>i</c
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) M : matrix (
          [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
                            [ 1  1  1 ]
@@ -544,7 +544,7 @@ evaluated with the variables in <var>x</var> assigned values from the <code>i</c
 <a name="Item_003a-lsquares_005fresiduals"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lsquares_residuals</b><i> (<var>D</var>, <var>x</var>, <var>e</var>, <var>a</var>)</i>
-<a name="IDX2305"></a>
+<a name="IDX2309"></a>
 </dt>
 <dd><p>Returns the residuals for the equation <var>e</var>
 with specified parameters <var>a</var> and data <var>D</var>.
@@ -567,7 +567,7 @@ and assigning any remaining free variables from <var>a</var>.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) M : matrix (
          [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
                            [ 1  1  1 ]
@@ -605,7 +605,7 @@ and assigning any remaining free variables from <var>a</var>.
 <a name="Item_003a-lsquares_005fresidual_005fmse"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lsquares_residual_mse</b><i> (<var>D</var>, <var>x</var>, <var>e</var>, <var>a</var>)</i>
-<a name="IDX2306"></a>
+<a name="IDX2310"></a>
 </dt>
 <dd><p>Returns the residual mean square error (MSE) for the equation <var>e</var>
 with specified parameters <var>a</var> and data <var>D</var>.
@@ -628,7 +628,7 @@ and assigning any remaining free variables from <var>a</var>.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (lsquares)$
+<pre class="example">(%i1) load (&quot;lsquares&quot;)$
 (%i2) M : matrix (
          [1,1,1], [3/2,1,2], [9/4,2,1], [3,2,2], [2,2,1]);
                            [ 1  1  1 ]
@@ -666,7 +666,7 @@ and assigning any remaining free variables from <var>a</var>.
 <a name="Item_003a-plsquares"></a>
 </p><dl>
 <dt><u>Function:</u> <b>plsquares</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plsquares</tt> (<var>Mat</var>,<var>VarList</var>,<var>depvars</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plsquares</tt> (<var>Mat</var>,<var>VarList</var>,<var>depvars</var>,<var>maxexpon</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>plsquares</tt> (<var>Mat</var>,<var>VarList</var>,<var>depvars</var>,<var>maxexpon</var>,<var>maxdegree</var>)</i>
-<a name="IDX2307"></a>
+<a name="IDX2311"></a>
 </dt>
 <dd><p>Multivariable polynomial adjustment of a data table by the &quot;least squares&quot;
 method. <var>Mat</var> is a matrix containing the data, <var>VarList</var> is a list of variable names (one for each Mat column, but use &quot;-&quot; instead of varnames to ignore Mat columns), <var>depvars</var> is the name of a dependent variable or a list with one or more names of dependent variables (which names should be in <var>VarList</var>), <var>maxexpon</var> is the optional maximum exponent for each independent variable (1 by default), and <var>maxdegree</var> is the optional maximum polynomial degree (<var>maxexpon</var> by default); note that the sum of exponents of each term must be equal or smaller than <var>maxdegree</var>, and if <code>maxdgree = 0</code> then no limit is applied.
@@ -740,8 +740,8 @@ _Nor = a b - b - a + 1, _Nxor = 2 a b - b - a + 1]
 <p><a name="Item_003a-minpack_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_70.html#SEC326" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC324" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_70.html#SEC327" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -749,12 +749,12 @@ _Nor = a b - b - a + 1, _Nxor = 2 a b - b - a + 1]
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

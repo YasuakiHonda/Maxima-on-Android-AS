@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 48. contrib_ode</title>
+<title>Maxima 5.40.0 Manual: 48. contrib_ode</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 48. contrib_ode">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 48. contrib_ode">
+<meta name="description" content="Maxima 5.40.0 Manual: 48. contrib_ode">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 48. contrib_ode">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,36 +92,37 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="contrib_005fode_002dpkg"></a>
-<a name="SEC231"></a>
+<a name="SEC232"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_47.html#SEC230" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC232" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_47.html#SEC231" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC233" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_47.html#SEC227" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_47.html#SEC228" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 48. contrib_ode </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC232">48.1 Introduction to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC233">48.1 Introduction to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC233">48.2 Functions and Variables for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC234">48.2 Functions and Variables for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC234">48.3 Possible improvements to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC235">48.3 Possible improvements to contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC235">48.4 Test cases for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC236">48.4 Test cases for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC236">48.5 References for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC237">48.5 References for contrib_ode</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -129,23 +130,23 @@ img {max-width:80%; max-height: 80%}
 </p><hr size="6">
 <a name="Introduction-to-contrib_005fode"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC231" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC233" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC232" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC234" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 
-<a name="SEC232"></a>
+<a name="SEC233"></a>
 <h2 class="section"> 48.1 Introduction to contrib_ode </h2>
 
 <p>Maximaの常微分方程式 (ODE)ソルバ <code>ode2</code>は一階と二階の初等線形 ODEを解きます。
@@ -306,21 +307,21 @@ Lie方法は Abel方程式には試みられませんが、
 <p><a name="Item_003a-Functions-and-Variables-for-contrib_005fode"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-contrib_005fode"></a>
-<a name="SEC233"></a>
+<a name="SEC234"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC232" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC234" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC233" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC235" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 48.2 Functions and Variables for contrib_ode </h2>
@@ -328,7 +329,7 @@ Lie方法は Abel方程式には試みられませんが、
 <p><a name="Item_003a-contrib_005fode"></a>
 </p><dl>
 <dt><u>関数:</u> <b>contrib_ode</b><i> (<var>eqn</var>, <var>y</var>, <var>x</var>)</i>
-<a name="IDX1463"></a>
+<a name="IDX1465"></a>
 </dt>
 <dd><p>独立変数 <var>x</var>と従属変数 <var>y</var>に関する ODE <var>eqn</var>の解のリストを返します。
 </p>
@@ -343,7 +344,7 @@ Lie方法は Abel方程式には試みられませんが、
 <p><a name="Item_003a-odelin"></a>
 </p><dl>
 <dt><u>関数:</u> <b>odelin</b><i> (<var>eqn</var>, <var>y</var>, <var>x</var>)</i>
-<a name="IDX1464"></a>
+<a name="IDX1466"></a>
 </dt>
 <dd><p><code>odelin</code>は独立変数 <var>x</var>と従属変数 <var>y</var>に関する一階および二階線形斉次
 ODEを解きます。
@@ -369,7 +370,7 @@ Bronsteinと Lafailleによる方法を使います。
 <p><a name="Item_003a-ode_005fcheck"></a>
 </p><dl>
 <dt><u>関数:</u> <b>ode_check</b><i> (<var>eqn</var>, <var>soln</var>)</i>
-<a name="IDX1465"></a>
+<a name="IDX1467"></a>
 </dt>
 <dd><p>可能な解 <var>soln</var>を代入した後、 ODE <var>eqn</var>の値を返します。
 もし <var>soln</var>が <var>eqn</var>の解なら値はゼロと同値です。
@@ -404,7 +405,7 @@ Bronsteinと Lafailleによる方法を使います。
 <p><a name="Item_003a-method"></a>
 </p><dl>
 <dt><u>システム変数:</u> <b>method</b>
-<a name="IDX1466"></a>
+<a name="IDX1468"></a>
 </dt>
 <dd><p>変数 <code>method</code>は成功した解法に設定されます。
 </p>
@@ -418,7 +419,7 @@ Bronsteinと Lafailleによる方法を使います。
 <p><a name="Item_003a-_0025c"></a>
 </p><dl>
 <dt><u>変数:</u> <b>%c</b>
-<a name="IDX1467"></a>
+<a name="IDX1469"></a>
 </dt>
 <dd><p><code>%c</code>は一階 ODEの積分定数です。
 </p>
@@ -432,7 +433,7 @@ Bronsteinと Lafailleによる方法を使います。
 <p><a name="Item_003a-_0025k1"></a>
 </p><dl>
 <dt><u>変数:</u> <b>%k1</b>
-<a name="IDX1468"></a>
+<a name="IDX1470"></a>
 </dt>
 <dd><p><code>%k1</code>は二階 ODEの最初の積分定数です。
 </p>
@@ -446,7 +447,7 @@ Bronsteinと Lafailleによる方法を使います。
 <p><a name="Item_003a-_0025k2"></a>
 </p><dl>
 <dt><u>変数:</u> <b>%k2</b>
-<a name="IDX1469"></a>
+<a name="IDX1471"></a>
 </dt>
 <dd><p><code>%k2</code>は二階 ODEの二番目の積分定数です。
 </p>
@@ -461,7 +462,7 @@ Bronsteinと Lafailleによる方法を使います。
 <a name="Item_003a-gauss_005fa"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gauss_a</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
-<a name="IDX1470"></a>
+<a name="IDX1472"></a>
 </dt>
 <dd><p><code>gauss_a(a,b,c,x)</code>と <code>gauss_b(a,b,c,x)</code>は 2F1幾何関数です。
 それらは超幾何微分方程式
@@ -485,7 +486,7 @@ Bronsteinと Lafailleによる方法を使います。
 <a name="Item_003a-gauss_005fb"></a>
 </p><dl>
 <dt><u>関数:</u> <b>gauss_b</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
-<a name="IDX1471"></a>
+<a name="IDX1473"></a>
 </dt>
 <dd><p><code><a href="#gauss_005fa">gauss_a</a></code>を参照してください。
 </p>
@@ -500,7 +501,7 @@ Bronsteinと Lafailleによる方法を使います。
 <a name="Item_003a-dgauss_005fa"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dgauss_a</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
-<a name="IDX1472"></a>
+<a name="IDX1474"></a>
 </dt>
 <dd><p><code>gauss_a(<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
 </p>
@@ -514,7 +515,7 @@ Bronsteinと Lafailleによる方法を使います。
 <p><a name="Item_003a-dgauss_005fb"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dgauss_b</b><i> (<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</i>
-<a name="IDX1473"></a>
+<a name="IDX1475"></a>
 </dt>
 <dd><p><code>gauss_b(<var>a</var>, <var>b</var>, <var>c</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
 </p>
@@ -530,7 +531,7 @@ Bronsteinと Lafailleによる方法を使います。
 <a name="Item_003a-kummer_005fm"></a>
 </p><dl>
 <dt><u>関数:</u> <b>kummer_m</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
-<a name="IDX1474"></a>
+<a name="IDX1476"></a>
 </dt>
 <dd><p>Abramowitz and Stegun,
 <i>Handbook of Mathematical Functions</i>, Section 13.1.2の中で定義される
@@ -553,7 +554,7 @@ Kummerの M関数
 <a name="Item_003a-kummer_005fu"></a>
 </p><dl>
 <dt><u>関数:</u> <b>kummer_u</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
-<a name="IDX1475"></a>
+<a name="IDX1477"></a>
 </dt>
 <dd><p>Abramowitz and Stegun,
 <i>Handbook of Mathematical Functions</i>, Section 13.1.3の中で定義される
@@ -572,7 +573,7 @@ Kummerの U関数
 <a name="Item_003a-dkummer_005fm"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dkummer_m</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
-<a name="IDX1476"></a>
+<a name="IDX1478"></a>
 </dt>
 <dd><p><code>kummer_m(<var>a</var>, <var>b</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
 </p>
@@ -587,7 +588,7 @@ Kummerの U関数
 <a name="Item_003a-dkummer_005fu"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dkummer_u</b><i> (<var>a</var>, <var>b</var>, <var>x</var>)</i>
-<a name="IDX1477"></a>
+<a name="IDX1479"></a>
 </dt>
 <dd><p><code>kummer_u(<var>a</var>, <var>b</var>, <var>x</var>)</code>の <var>x</var>に関する導関数。
 </p>
@@ -601,7 +602,7 @@ Kummerの U関数
 <p><a name="Item_003a-bessel_005fsimplify"></a>
 </p><dl>
 <dt><u>関数:</u> <b>bessel_simplify</b><i> (<var>expr</var>)</i>
-<a name="IDX1478"></a>
+<a name="IDX1480"></a>
 </dt>
 <dd><p>Bessel関数 bessel_j, bessel_y, bessel_i, bessel_k, hankel_1, hankel_2, strauve_h, strauve_lを含む式を整理します。
 最高次数 nの関数を次数 n-1と n-2の関数で置き換えるのに
@@ -636,7 +637,7 @@ Kummerの U関数
 <p><a name="Item_003a-expintegral_005fe_005fsimplify"></a>
 </p><dl>
 <dt><u>関数:</u> <b>expintegral_e_simplify</b><i> (<var>expr</var>)</i>
-<a name="IDX1479"></a>
+<a name="IDX1481"></a>
 </dt>
 <dd><p>漸化式 (A&amp;S 5.1.14)を使って指数積分 expintegral_eを含む式を整理します。
 </p>
@@ -658,21 +659,21 @@ Kummerの U関数
 <p><a name="Item_003a-Possible-improvements-to-contrib_005fode"></a>
 </p><hr size="6">
 <a name="Possible-improvements-to-contrib_005fode"></a>
-<a name="SEC234"></a>
+<a name="SEC235"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC233" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC235" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC234" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC236" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 48.3 Possible improvements to contrib_ode </h2>
@@ -715,21 +716,21 @@ Lie対称群ルーチン <code>ode1_lie</code>に関する仕事。
 <p><a name="Item_003a-Test-cases-for-contrib_005fode"></a>
 </p><hr size="6">
 <a name="Test-cases-for-contrib_005fode"></a>
-<a name="SEC235"></a>
+<a name="SEC236"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC234" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC236" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC235" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC237" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 48.4 Test cases for contrib_ode </h2>
@@ -758,21 +759,21 @@ Murphyと Kamkeの中の Clairault方程式の知られている解すべてを�
 <p><a name="Item_003a-References-for-contrib_005fode"></a>
 </p><hr size="6">
 <a name="References-for-contrib_005fode"></a>
-<a name="SEC236"></a>
+<a name="SEC237"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC235" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC236" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC231" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC232" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 48.5 References for contrib_ode </h2>
@@ -829,8 +830,8 @@ Proceedings of ISSAC 2002, Lille, ACM Press, 23-28.
 <p><a name="Item_003a-descriptive_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC231" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_49.html#SEC237" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC232" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_49.html#SEC238" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -838,12 +839,12 @@ Proceedings of ISSAC 2002, Lille, ACM Press, 23-28.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

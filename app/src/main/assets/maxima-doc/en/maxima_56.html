@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 56. ezunits</title>
+<title>Maxima 5.40.0 Manual: 56. ezunits</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 56. ezunits">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 56. ezunits">
+<meta name="description" content="Maxima 5.40.0 Manual: 56. ezunits">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 56. ezunits">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,52 +66,52 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="ezunits_002dpkg"></a>
-<a name="SEC273"></a>
+<a name="SEC274"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_55.html#SEC272" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC274" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_55.html#SEC273" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC275" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 56. ezunits </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC274">56.1 Introduction to ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC275">56.1 Introduction to ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC275">56.2 Introduction to physical_constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC276">56.2 Introduction to physical_constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC276">56.3 Functions and Variables for ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC277">56.3 Functions and Variables for ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-ezunits"></a>
 </p><hr size="6">
 <a name="Introduction-to-ezunits"></a>
-<a name="SEC274"></a>
+<a name="SEC275"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC273" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC275" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC274" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC276" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 56.1 Introduction to ezunits </h2>
@@ -202,21 +202,21 @@ but other fundamental dimensions and units can be declared.
 <p><a name="Item_003a-Introduction-to-physical_005fconstants"></a>
 </p><hr size="6">
 <a name="Introduction-to-physical_005fconstants"></a>
-<a name="SEC275"></a>
+<a name="SEC276"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC274" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC276" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC275" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC277" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 56.2 Introduction to physical_constants </h2>
@@ -370,7 +370,7 @@ of all such symbols.
 </p>
 <p>The list of all symbols which have the <code>physical_constant</code> property.
 </p>
-<pre class="example">(%i1) load (physical_constants)$
+<pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) propvars (physical_constant);
 (%o2) [%c, %mu_0, %e_0, %Z_0, %G, %h, %h_bar, %m_P, %T_P, %l_P, 
 %t_P, %%e, %Phi_0, %G_0, %K_J, %R_K, %mu_B, %mu_N, %alpha, 
@@ -379,7 +379,7 @@ of all such symbols.
 </pre>
 <p>Properties of the physical constant <code>%c</code>.
 </p>
-<pre class="example">(%i1) load (physical_constants)$
+<pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) constantp (%c);
 (%o2)                         true
 (%i3) get (%c, description);
@@ -397,7 +397,7 @@ $$c$$
 <p>The energy equivalent of 1 pound-mass.
 The symbol <code>%c</code> persists until its value is fetched by <code>constvalue</code>.
 </p>
-<pre class="example">(%i1) load (physical_constants)$
+<pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) m * %c^2;
                                 2
 (%o2)                         %c  m
@@ -432,21 +432,21 @@ Computing conversions to base units; may take a moment.
 <p><a name="Item_003a-Functions-and-Variables-for-ezunits"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-ezunits"></a>
-<a name="SEC276"></a>
+<a name="SEC277"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC275" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC276" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 56.3 Functions and Variables for ezunits </h2>
@@ -454,7 +454,7 @@ Computing conversions to base units; may take a moment.
 <p><a name="Item_003a-_0060"></a>
 </p><dl>
 <dt><u>Operator:</u> <b>`</b>
-<a name="IDX1970"></a>
+<a name="IDX1974"></a>
 </dt>
 <dd><p>The dimensional quantity operator.
 An expression <em>a ` b</em> represents a dimensional quantity,
@@ -482,7 +482,7 @@ such terms are not added together, and no error is reported.
 </p>
 <p>SI (Systeme Internationale) units.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 10 ` m;
 (%o2)                        10 ` m
 (%i3) qty (foo);
@@ -494,7 +494,7 @@ such terms are not added together, and no error is reported.
 </pre>
 <p>&quot;Customary&quot; units.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) bar : x ` acre;
 (%o2)                       x ` acre
 (%i3) dimensions (bar);
@@ -506,7 +506,7 @@ such terms are not added together, and no error is reported.
 </pre>
 <p>Units ad hoc.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) baz : 3 ` sheep + 8 ` goat + 1 ` horse;
 (%o2)           8 ` goat + 3 ` sheep + 1 ` horse
 (%i3) subst ([sheep = 3*goat, horse = 10*goat], baz);
@@ -522,7 +522,7 @@ such terms are not added together, and no error is reported.
 </pre>
 <p>Arithmetic operations on dimensional quantities.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) 100 ` kg + 200 ` kg;
 (%o2)                       300 ` kg
 (%i3) 100 ` m^3 - 100 ` m^3;
@@ -551,7 +551,7 @@ such terms are not added together, and no error is reported.
 <p><a name="Item_003a-_0060_0060"></a>
 </p><dl>
 <dt><u>Operator:</u> <b>`</b><i>`</i>
-<a name="IDX1971"></a>
+<a name="IDX1975"></a>
 </dt>
 <dd><p>The unit conversion operator.
 An expression <em>a ` b `` c</em> converts from unit <code>b</code> to unit <code>c</code>.
@@ -577,7 +577,7 @@ unless such conversion is explicitly indicated.
 </p>
 <p>The set of known unit conversions.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) display2d : false$
 (%i3) known_unit_conversions;
 (%o3) {acre = 4840*yard^2,Btu = 1055*J,cfm = feet^3/minute,
@@ -622,7 +622,7 @@ unless such conversion is explicitly indicated.
 </pre>
 <p>Elementary unit conversions.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) 1 ` ft `` m;
 Computing conversions to base units; may take a moment. 
                             381
@@ -658,7 +658,7 @@ Computing conversions to base units; may take a moment.
 </pre>
 <p>Coercing quantities in feet and meters to one or the other.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) 100 ` m + 100 ` ft;
 (%o2)                  100 ` m + 100 ` ft
 (%i3) (100 ` m + 100 ` ft) `` ft;
@@ -677,7 +677,7 @@ Computing conversions to base units; may take a moment.
 </pre>
 <p>Dimensional analysis to find fundamental dimensions and fundamental units.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 1 ` acre * ft;
 (%o2)                      1 ` acre ft
 (%i3) dimensions (foo);
@@ -697,7 +697,7 @@ Computing conversions to base units; may take a moment.
 </pre>
 <p>Declared unit conversions.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_unit_conversion (MMBtu = 10^6*Btu, kW = 1000*W);
 (%o2)                         done
 (%i3) declare_unit_conversion (kWh = kW*hour, MWh = 1000*kWh,
@@ -725,7 +725,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-constvalue"></a>
 </p><dl>
 <dt><u>Function:</u> <b>constvalue</b><i> (<var>x</var>)</i>
-<a name="IDX1972"></a>
+<a name="IDX1976"></a>
 </dt>
 <dd><p>Shows the value and the units of one of the constants declared by package
 <code>physical_constants</code>, which includes a list of physical constants, or
@@ -738,7 +738,7 @@ recognized by <code>constantp</code>.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (physical_constants)$
+<pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) constvalue (%G);
                                      3
                                     m
@@ -758,14 +758,14 @@ recognized by <code>constantp</code>.
 <a name="Item_003a-declare_005fconstvalue"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_constvalue</b><i> (<var>a</var>, <var>x</var>)</i>
-<a name="IDX1973"></a>
+<a name="IDX1977"></a>
 </dt>
 <dd><p>Declares the value of a constant to be used in package <code>ezunits</code>. This
 function should be loaded with <code>load(ezunits)</code>. 
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_constvalue (FOO, 100 ` lbm / acre);
                                  lbm
 (%o2)                      100 ` ----
@@ -785,7 +785,7 @@ function should be loaded with <code>load(ezunits)</code>.
 <a name="Item_003a-remove_005fconstvalue"></a>
 </p><dl>
 <dt><u>Function:</u> <b>remove_constvalue</b><i> (<var>a</var>)</i>
-<a name="IDX1974"></a>
+<a name="IDX1978"></a>
 </dt>
 <dd><p>Reverts the effect of <code><a href="#declare_005fconstvalue">declare_constvalue</a></code>. This function should be
 loaded with <code>load(ezunits)</code>.
@@ -800,7 +800,7 @@ loaded with <code>load(ezunits)</code>.
 <a name="Item_003a-units"></a>
 </p><dl>
 <dt><u>Function:</u> <b>units</b><i> (<var>x</var>)</i>
-<a name="IDX1975"></a>
+<a name="IDX1979"></a>
 </dt>
 <dd><p>Returns the units of a dimensional quantity <var>x</var>,
 or returns 1 if <var>x</var> is nondimensional.
@@ -813,7 +813,7 @@ or an expression containing either or both of those.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 100 ` kg;
 (%o2)                       100 ` kg
 (%i3) bar : x ` m/s;
@@ -848,7 +848,7 @@ or an expression containing either or both of those.
 <a name="Item_003a-declare_005funits"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_units</b><i> (<var>a</var>, <var>u</var>)</i>
-<a name="IDX1976"></a>
+<a name="IDX1980"></a>
 </dt>
 <dd><p>Declares that <code><a href="#units">units</a></code> should return units <var>u</var> for <var>a</var>,
 where <var>u</var> is an expression. This function should be loaded with
@@ -856,7 +856,7 @@ where <var>u</var> is an expression. This function should be loaded with
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) units (aa);
 (%o2)                           1
 (%i3) declare_units (aa, J);
@@ -881,7 +881,7 @@ where <var>u</var> is an expression. This function should be loaded with
 <a name="Item_003a-qty"></a>
 </p><dl>
 <dt><u>Function:</u> <b>qty</b><i> (<var>x</var>)</i>
-<a name="IDX1977"></a>
+<a name="IDX1981"></a>
 </dt>
 <dd><p>Returns the nondimensional part of a dimensional quantity <var>x</var>,
 or returns <var>x</var> if <var>x</var> is nondimensional.
@@ -893,7 +893,7 @@ or an expression containing either or both of those.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 100 ` kg;
 (%o2)                       100 ` kg
 (%i3) qty (foo);
@@ -919,7 +919,7 @@ or an expression containing either or both of those.
 <a name="Item_003a-declare_005fqty"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_qty</b><i> (<var>a</var>, <var>x</var>)</i>
-<a name="IDX1978"></a>
+<a name="IDX1982"></a>
 </dt>
 <dd><p>Declares that <code><a href="#qty">qty</a></code> should return <var>x</var> for symbol <var>a</var>, where
 <var>x</var> is a nondimensional quantity. This function should be loaded
@@ -927,7 +927,7 @@ with <code>load(ezunits)</code>.
 </p>
 <p>Example:
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_qty (aa, xx);
 (%o2)                          xx
 (%i3) qty (aa);
@@ -950,7 +950,7 @@ with <code>load(ezunits)</code>.
 <a name="Item_003a-unitp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>unitp</b><i> (<var>x</var>)</i>
-<a name="IDX1979"></a>
+<a name="IDX1983"></a>
 </dt>
 <dd><p>Returns <code>true</code> if <var>x</var> is a literal dimensional expression,
 a symbol declared dimensional,
@@ -963,13 +963,13 @@ or an expression in which the main operator is declared dimensional.
 </p>
 <p><code>unitp</code> applied to a literal dimensional expression.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) unitp (100 ` kg);
 (%o2)                         true
 </pre>
 <p><code>unitp</code> applied to a symbol declared dimensional.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) unitp (foo);
 (%o2)                         false
 (%i3) declare (foo, dimensional);
@@ -979,7 +979,7 @@ or an expression in which the main operator is declared dimensional.
 </pre>
 <p><code>unitp</code> applied to an expression in which the main operator is declared dimensional.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) unitp (bar (x, y, z));
 (%o2)                         false
 (%i3) declare (bar, dimensional);
@@ -998,7 +998,7 @@ or an expression in which the main operator is declared dimensional.
 <a name="Item_003a-declare_005funit_005fconversion"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_unit_conversion</b><i> (<var>u</var> = <var>v</var>, ...)</i>
-<a name="IDX1980"></a>
+<a name="IDX1984"></a>
 </dt>
 <dd><p>Appends equations <var>u</var> = <var>v</var>, ... to the list of unit conversions
 known to the unit conversion operator <em>``</em>.
@@ -1021,7 +1021,7 @@ This limitation might be relaxed in future versions.
 </p>
 <p>Unit conversions expressed by equations of multiplicative terms.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_unit_conversion (nautical_mile = 1852 * m,
                                fortnight = 14 * day);
 (%o2)                         done
@@ -1033,7 +1033,7 @@ Computing conversions to base units; may take a moment.
 </pre>
 <p>Unit conversions expressed by equations of literal dimensional expressions.
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_unit_conversion (1 ` fluid_ounce = 2 ` tablespoon);
 (%o2)                         done
 (%i3) declare_unit_conversion (1 ` tablespoon = 3 ` teaspoon);
@@ -1053,7 +1053,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005fdimensions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_dimensions</b><i> (<var>a_1</var>, <var>d_1</var>, ..., <var>a_n</var>, <var>d_n</var>)</i>
-<a name="IDX1981"></a>
+<a name="IDX1985"></a>
 </dt>
 <dd><p>Declares <var>a_1</var>, ..., <var>a_n</var> to have dimensions <var>d_1</var>, ...,
 <var>d_n</var>, respectively.
@@ -1065,7 +1065,7 @@ If it is a list, then every symbol in <var>a_k</var> is declared to have dimensi
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) load (ezunits) $
+<pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) declare_dimensions ([x, y, z], length, [t, u], time);
 (%o2)                         done
 (%i3) dimensions (y^2/u);
@@ -1090,7 +1090,7 @@ If it is a list, then every symbol in <var>a_k</var> is declared to have dimensi
 <a name="Item_003a-remove_005fdimensions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>remove_dimensions</b><i> (<var>a_1</var>, ..., <var>a_n</var>)</i>
-<a name="IDX1982"></a>
+<a name="IDX1986"></a>
 </dt>
 <dd><p>Reverts the effect of <code>declare_dimensions</code>. This function should be
 loaded with <code>load(ezunits)</code>.
@@ -1106,13 +1106,13 @@ loaded with <code>load(ezunits)</code>.
 <a name="Item_003a-declare_005ffundamental_005fdimensions"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_fundamental_dimensions</b><i> (<var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ...)</i>
-<a name="IDX1983"></a>
+<a name="IDX1987"></a>
 </dt>
 <dt><u>Function:</u> <b>remove_fundamental_dimensions</b><i> (<var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ...)</i>
-<a name="IDX1984"></a>
+<a name="IDX1988"></a>
 </dt>
 <dt><u>Global variable:</u> <b>fundamental_dimensions</b>
-<a name="IDX1985"></a>
+<a name="IDX1989"></a>
 </dt>
 <dd><p><code>declare_fundamental_dimensions</code> declares fundamental dimensions.
 Symbols <var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ... are appended to the list of
@@ -1127,7 +1127,7 @@ By default, the list comprises several physical dimensions.
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) load (ezunits) $
+<pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) fundamental_dimensions;
 (%o2) [length, mass, time, current, temperature, quantity]
 (%i3) declare_fundamental_dimensions (money, cattle, happiness);
@@ -1151,10 +1151,10 @@ By default, the list comprises several physical dimensions.
 <a name="Item_003a-declare_005ffundamental_005funits"></a>
 </p><dl>
 <dt><u>Function:</u> <b>declare_fundamental_units</b><i> (<var>u_1</var>, <var>d_1</var>, ..., <var>u_n</var>, <var>d_n</var>)</i>
-<a name="IDX1986"></a>
+<a name="IDX1990"></a>
 </dt>
 <dt><u>Function:</u> <b>remove_fundamental_units</b><i> (<var>u_1</var>, ..., <var>u_n</var>)</i>
-<a name="IDX1987"></a>
+<a name="IDX1991"></a>
 </dt>
 <dd><p><code>declare_fundamental_units</code> declares <var>u_1</var>, ..., <var>u_n</var>
 to have dimensions <var>d_1</var>, ..., <var>d_n</var>, respectively.
@@ -1170,7 +1170,7 @@ and <code>fundamental_units(<var>d_k</var>)</code> returns <var>u_k</var> for ea
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) load (ezunits) $
+<pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) declare_fundamental_dimensions (money, cattle, happiness);
 (%o2)                         done
 (%i3) declare_fundamental_units (dollar, money, goat, cattle,
@@ -1202,10 +1202,10 @@ and <code>fundamental_units(<var>d_k</var>)</code> returns <var>u_k</var> for ea
 </p>
 <dl>
 <dt><u>Function:</u> <b>dimensions</b><i> (<var>x</var>)</i>
-<a name="IDX1988"></a>
+<a name="IDX1992"></a>
 </dt>
 <dt><u>Function:</u> <b>dimensions_as_list</b><i> (<var>x</var>)</i>
-<a name="IDX1989"></a>
+<a name="IDX1993"></a>
 </dt>
 <dd><p><code>dimensions</code> returns the dimensions of the dimensional quantity <var>x</var>
 as an expression comprising products and powers of base dimensions.
@@ -1218,7 +1218,7 @@ corresponding base dimension in the dimensions of <var>x</var>.
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) dimensions (1000 ` kg*m^2/s^3);
                                 2
                           length  mass
@@ -1235,7 +1235,7 @@ corresponding base dimension in the dimensions of <var>x</var>.
 (%o4)                        -------
                               time
 </pre>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) fundamental_dimensions;
 (%o2)  [length, mass, time, charge, temperature, quantity]
 (%i3) dimensions_as_list (1000 ` kg*m^2/s^3);
@@ -1258,7 +1258,7 @@ corresponding base dimension in the dimensions of <var>x</var>.
 <a name="Item_003a-fundamental_005funits"></a>
 </p><dl>
 <dt><u>Function:</u> <b>fundamental_units</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fundamental_units</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fundamental_units</tt> ()</i>
-<a name="IDX1990"></a>
+<a name="IDX1994"></a>
 </dt>
 <dd><p><code>fundamental_units(<var>x</var>)</code> returns the units
 associated with the fundamental dimensions of <var>x</var>.
@@ -1275,7 +1275,7 @@ as declared by <code>declare_fundamental_units</code>.
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) load (ezunits)$
+<pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) fundamental_units ();
 (%o2)                 [m, kg, s, A, K, mol]
 (%i3) fundamental_units (100 ` mile/hour);
@@ -1304,7 +1304,7 @@ as declared by <code>declare_fundamental_units</code>.
 <a name="Item_003a-dimensionless"></a>
 </p><dl>
 <dt><u>Function:</u> <b>dimensionless</b><i> (<var>L</var>)</i>
-<a name="IDX1991"></a>
+<a name="IDX1995"></a>
 </dt>
 <dd><p>Returns a basis for the dimensionless quantities which can be formed
 from a list <var>L</var> of dimensional quantities.
@@ -1313,7 +1313,7 @@ from a list <var>L</var> of dimensional quantities.
 </p>
 <p>Examples:
 </p>
-<pre class="example">(%i1) load (ezunits) $
+<pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) dimensionless ([x ` m, y ` m/s, z ` s]);
 0 errors, 0 warnings
 0 errors, 0 warnings
@@ -1325,8 +1325,8 @@ from a list <var>L</var> of dimensional quantities.
 Note that the first element on the list
 is proportional to the fine-structure constant.
 </p>
-<pre class="example">(%i1) load (ezunits) $
-(%i2) load (physical_constants) $
+<pre class="example">(%i1) load (&quot;ezunits&quot;) $
+(%i2) load (&quot;physical_constants&quot;) $
 (%i3) dimensionless([%h_bar, %m_e, %m_P, %%e, %c, %e_0]);
 0 errors, 0 warnings
 0 errors, 0 warnings
@@ -1346,7 +1346,7 @@ is proportional to the fine-structure constant.
 <a name="Item_003a-natural_005funit"></a>
 </p><dl>
 <dt><u>Function:</u> <b>natural_unit</b><i> (<var>expr</var>, [<var>v_1</var>, ..., <var>v_n</var>])</i>
-<a name="IDX1992"></a>
+<a name="IDX1996"></a>
 </dt>
 <dd><p>Finds exponents <var>e_1</var>, ..., <var>e_n</var> such that
 <code>dimension(<var>expr</var>) = dimension(<var>v_1</var>^<var>e_1</var> ... <var>v_n</var>^<var>e_n</var>)</code>.
@@ -1368,8 +1368,8 @@ is proportional to the fine-structure constant.
 <p><a name="Item_003a-f90_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1377,12 +1377,12 @@ is proportional to the fine-structure constant.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

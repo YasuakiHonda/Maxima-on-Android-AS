@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 56. ezunits</title>
+<title>Maxima 5.40.0 Manual: 56. ezunits</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 56. ezunits">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 56. ezunits">
+<meta name="description" content="Maxima 5.40.0 Manual: 56. ezunits">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 56. ezunits">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,53 +92,54 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="ezunits_002dpkg"></a>
-<a name="SEC273"></a>
+<a name="SEC274"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_55.html#SEC272" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC274" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_55.html#SEC273" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC275" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 56. ezunits </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC274">56.1 Introduction to ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC275">56.1 Introduction to ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC275">56.2 Introduction to physical_constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC276">56.2 Introduction to physical_constants</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC276">56.3 Functions and Variables for ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC277">56.3 Functions and Variables for ezunits</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-ezunits"></a>
 </p><hr size="6">
 <a name="Introduction-to-ezunits"></a>
-<a name="SEC274"></a>
+<a name="SEC275"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC273" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC275" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC274" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC276" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 56.1 Introduction to ezunits </h2>
@@ -214,21 +215,21 @@ SI基本単位や SI組立単位に適用された際、認識しますが、
 <p><a name="Item_003a-Introduction-to-physical_005fconstants"></a>
 </p><hr size="6">
 <a name="Introduction-to-physical_005fconstants"></a>
-<a name="SEC275"></a>
+<a name="SEC276"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC274" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC276" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC275" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC277" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 56.2 Introduction to physical_constants </h2>
@@ -376,7 +377,7 @@ CODATA 2006 推奨値 (<a href="http://physics.nist.gov/constants">http://physic
 </p>
 <p><code>physical_constant</code> プロパティを持つすべてのシンボルのリスト。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (physical_constants)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) propvars (physical_constant);
 (%o2) [%c, %mu_0, %e_0, %Z_0, %G, %h, %h_bar, %m_P, %T_P, %l_P,
 %t_P, %%e, %Phi_0, %G_0, %K_J, %R_K, %mu_B, %mu_N, %alpha,
@@ -385,7 +386,7 @@ CODATA 2006 推奨値 (<a href="http://physics.nist.gov/constants">http://physic
 </pre></td></tr></table>
 <p>物理定数 <code>%c</code>のプロパティ。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (physical_constants)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) constantp (%c);
 (%o2)                         true
 (%i3) get (%c, description);
@@ -403,7 +404,7 @@ $$c$$
 <p>1ポンドの質量に等価なエネルギー。
 シンボル <code>%c</code>は <code>constvalue</code>が値を取りにいくまでシンボルのままです。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (physical_constants)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) m * %c^2;
                                 2
 (%o2)                         %c  m
@@ -438,21 +439,21 @@ Computing conversions to base units; may take a moment.
 <p><a name="Item_003a-Functions-and-Variables-for-ezunits"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-ezunits"></a>
-<a name="SEC276"></a>
+<a name="SEC277"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC275" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC276" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC273" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC274" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 56.3 Functions and Variables for ezunits </h2>
@@ -460,7 +461,7 @@ Computing conversions to base units; may take a moment.
 <p><a name="Item_003a-_0060"></a>
 </p><dl>
 <dt><u>演算子:</u> <b>`</b>
-<a name="IDX1971"></a>
+<a name="IDX1975"></a>
 </dt>
 <dd><p>次元量演算子。
 式 <em>a ` b</em>は次元量を表します。
@@ -487,7 +488,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>SI (国際単位系) 単位。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 10 ` m;
 (%o2)                        10 ` m
 (%i3) qty (foo);
@@ -499,7 +500,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>&quot;慣習&quot;単位。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) bar : x ` acre;
 (%o2)                       x ` acre
 (%i3) dimensions (bar);
@@ -511,7 +512,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>アドホック単位。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) baz : 3 ` sheep + 8 ` goat + 1 ` horse;
 (%o2)           8 ` goat + 3 ` sheep + 1 ` horse
 (%i3) subst ([sheep = 3*goat, horse = 10*goat], baz);
@@ -527,7 +528,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>次元量の算術演算子
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) 100 ` kg + 200 ` kg;
 (%o2)                       300 ` kg
 (%i3) 100 ` m^3 - 100 ` m^3;
@@ -556,7 +557,7 @@ Computing conversions to base units; may take a moment.
 <p><a name="Item_003a-_0060_0060"></a>
 </p><dl>
 <dt><u>演算子:</u> <b>`</b><i>`</i>
-<a name="IDX1972"></a>
+<a name="IDX1976"></a>
 </dt>
 <dd><p>単位変換演算子。
 式 <em>a ` b `` c</em>は単位 <code>b</code>を単位 <code>c</code>に変換します。
@@ -579,7 +580,7 @@ SI単位のための組み込み変換があります。
 </p>
 <p>既知の単位変換一式。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) display2d : false$
 (%i3) known_unit_conversions;
 (%o3) {acre = 4840*yard^2,Btu = 1055*J,cfm = feet^3/minute,
@@ -624,7 +625,7 @@ SI単位のための組み込み変換があります。
 </pre></td></tr></table>
 <p>基本単位変換。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) 1 ` ft `` m;
 Computing conversions to base units; may take a moment.
                             381
@@ -660,7 +661,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>フィートとメートルを相互に強制変換。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) 100 ` m + 100 ` ft;
 (%o2)                  100 ` m + 100 ` ft
 (%i3) (100 ` m + 100 ` ft) `` ft;
@@ -679,7 +680,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>基本次元と基本単位を見つけるための次元解析
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 1 ` acre * ft;
 (%o2)                      1 ` acre ft
 (%i3) dimensions (foo);
@@ -699,7 +700,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>宣言された単位変換。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_unit_conversion (MMBtu = 10^6*Btu, kW = 1000*W);
 (%o2)                         done
 (%i3) declare_unit_conversion (kWh = kW*hour, MWh = 1000*kWh,
@@ -727,7 +728,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-constvalue"></a>
 </p><dl>
 <dt><u>関数:</u> <b>constvalue</b><i> (<var>x</var>)</i>
-<a name="IDX1973"></a>
+<a name="IDX1977"></a>
 </dt>
 <dd><p>パッケージ <code>physical_constants</code>が宣言した定数の1つの値と単位を表示します。
 パッケージは物理定数やパッケージ <code>ezunits</code>の中で宣言された新しい定数を含みます。
@@ -741,7 +742,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>物理定数の定数値。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (physical_constants)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;physical_constants&quot;)$
 (%i2) constvalue (%G);
                                      3
                                     m
@@ -761,14 +762,14 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005fconstvalue"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_constvalue</b><i> (<var>a</var>, <var>x</var>)</i>
-<a name="IDX1974"></a>
+<a name="IDX1978"></a>
 </dt>
 <dd><p>パッケージ <code>ezunits</code>の中で使われる定数の値を宣言します。
 この関数は <code>load(ezunits)</code>でロードしなければいけません。
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_constvalue (FOO, 100 ` lbm / acre);
                                  lbm
 (%o2)                      100 ` ----
@@ -788,7 +789,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-remove_005fconstvalue"></a>
 </p><dl>
 <dt><u>関数:</u> <b>remove_constvalue</b><i> (<var>a</var>)</i>
-<a name="IDX1975"></a>
+<a name="IDX1979"></a>
 </dt>
 <dd><p><code>declare_constvalue</code>の効果を戻します。
 この関数は <code>load(ezunits)</code>でロードしなければいけません。
@@ -803,7 +804,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-units"></a>
 </p><dl>
 <dt><u>関数:</u> <b>units</b><i> (<var>x</var>)</i>
-<a name="IDX1976"></a>
+<a name="IDX1980"></a>
 </dt>
 <dd><p>次元量 <var>x</var>の単位を返します。
 もし <var>x</var>が無次元なら 1を返します。
@@ -816,7 +817,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 100 ` kg;
 (%o2)                       100 ` kg
 (%i3) bar : x ` m/s;
@@ -851,7 +852,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005funits"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_units</b><i> (<var>a</var>, <var>u</var>)</i>
-<a name="IDX1977"></a>
+<a name="IDX1981"></a>
 </dt>
 <dd><p> <code><a href="#units">units</a></code>が <var>a</var>の単位 <var>u</var>を返さなければいけないことを宣言します。
  ここで <var>u</var>は式です。
@@ -859,7 +860,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) units (aa);
 (%o2)                           1
 (%i3) declare_units (aa, J);
@@ -884,7 +885,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-qty"></a>
 </p><dl>
 <dt><u>関数:</u> <b>qty</b><i> (<var>x</var>)</i>
-<a name="IDX1978"></a>
+<a name="IDX1982"></a>
 </dt>
 <dd><p>次元量 <var>x</var>の無次元パーツを返します。
 もし <var>x</var>が無次元なら <var>x</var>を返します。
@@ -896,7 +897,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) foo : 100 ` kg;
 (%o2)                       100 ` kg
 (%i3) qty (foo);
@@ -922,7 +923,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005fqty"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_qty</b><i> (<var>a</var>, <var>x</var>)</i>
-<a name="IDX1979"></a>
+<a name="IDX1983"></a>
 </dt>
 <dd><p><code><a href="#qty">qty</a></code>が シンボル <var>a</var>の <var>x</var>を返さなければいけないことを宣言します。
 ここで <var>x</var>は無次元量です。
@@ -930,7 +931,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_qty (aa, xx);
 (%o2)                          xx
 (%i3) qty (aa);
@@ -953,7 +954,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-unitp"></a>
 </p><dl>
 <dt><u>関数:</u> <b>unitp</b><i> (<var>x</var>)</i>
-<a name="IDX1980"></a>
+<a name="IDX1984"></a>
 </dt>
 <dd><p>もし
 <var>x</var>が文字通り次元式か、次元的と宣言されたシンボルか、主演算子が次元的宣言された式なら、
@@ -966,13 +967,13 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>文字通り次元式へ適用された <code>unitp</code>。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) unitp (100 ` kg);
 (%o2)                         true
 </pre></td></tr></table>
 <p>次元的と宣言されたシンボルへ適用された <code>unitp</code>。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) unitp (foo);
 (%o2)                         false
 (%i3) declare (foo, dimensional);
@@ -982,7 +983,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>主演算子が次元的と宣言された式に適用された <code>unitp</code>。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) unitp (bar (x, y, z));
 (%o2)                         false
 (%i3) declare (bar, dimensional);
@@ -1001,7 +1002,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005funit_005fconversion"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_unit_conversion</b><i> (<var>u</var> = <var>v</var>, ...)</i>
-<a name="IDX1981"></a>
+<a name="IDX1985"></a>
 </dt>
 <dd><p>式 <var>u</var> = <var>v</var>, ... を単位変換演算子
 <em>``</em>が知っている単位変換のリストに追加します。
@@ -1020,7 +1021,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>乗法項の等式で表現された単位変換。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_unit_conversion (nautical_mile = 1852 * m,
                                fortnight = 14 * day);
 (%o2)                         done
@@ -1032,7 +1033,7 @@ Computing conversions to base units; may take a moment.
 </pre></td></tr></table>
 <p>文字通り次元式の等式で表現された単位変換。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) declare_unit_conversion (1 ` fluid_ounce = 2 ` tablespoon);
 (%o2)                         done
 (%i3) declare_unit_conversion (1 ` tablespoon = 3 ` teaspoon);
@@ -1052,7 +1053,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005fdimensions"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_dimensions</b><i> (<var>a_1</var>, <var>d_1</var>, ..., <var>a_n</var>, <var>d_n</var>)</i>
-<a name="IDX1982"></a>
+<a name="IDX1986"></a>
 </dt>
 <dd><p><var>a_1</var>, ..., <var>a_n</var>がそれぞれ、次元 <var>d_1</var>, ..., <var>d_n</var>を持つと宣言します。
 </p>
@@ -1064,7 +1065,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits) $
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) declare_dimensions ([x, y, z], length, [t, u], time);
 (%o2)                         done
 (%i3) dimensions (y^2/u);
@@ -1089,7 +1090,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-remove_005fdimensions"></a>
 </p><dl>
 <dt><u>関数:</u> <b>remove_dimensions</b><i> (<var>a_1</var>, ..., <var>a_n</var>)</i>
-<a name="IDX1983"></a>
+<a name="IDX1987"></a>
 </dt>
 <dd><p><code>declare_dimensions</code>の効果を戻します。
 この関数は <code>load(ezunits)</code>でロードしなければいけません。
@@ -1104,13 +1105,13 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005ffundamental_005fdimensions"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_fundamental_dimensions</b><i> (<var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ...)</i>
-<a name="IDX1984"></a>
+<a name="IDX1988"></a>
 </dt>
 <dt><u>関数:</u> <b>remove_fundamental_dimensions</b><i> (<var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ...)</i>
-<a name="IDX1985"></a>
+<a name="IDX1989"></a>
 </dt>
 <dt><u>グローバル変数:</u> <b>fundamental_dimensions</b>
-<a name="IDX1986"></a>
+<a name="IDX1990"></a>
 </dt>
 <dd><p><code>declare_fundamental_dimensions</code>は基本次元を宣言します。
 シンボル <var>d_1</var>, <var>d_2</var>, <var>d_3</var>,
@@ -1126,7 +1127,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits) $
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) fundamental_dimensions;
 (%o2) [length, mass, time, current, temperature, quantity]
 (%i3) declare_fundamental_dimensions (money, cattle, happiness);
@@ -1150,10 +1151,10 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-declare_005ffundamental_005funits"></a>
 </p><dl>
 <dt><u>関数:</u> <b>declare_fundamental_units</b><i> (<var>u_1</var>, <var>d_1</var>, ..., <var>u_n</var>, <var>d_n</var>)</i>
-<a name="IDX1987"></a>
+<a name="IDX1991"></a>
 </dt>
 <dt><u>関数:</u> <b>remove_fundamental_units</b><i> (<var>u_1</var>, ..., <var>u_n</var>)</i>
-<a name="IDX1988"></a>
+<a name="IDX1992"></a>
 </dt>
 <dd><p><code>declare_fundamental_units</code>は <var>u_1</var>, ..., <var>u_n</var>をそれぞれ、次元
 <var>d_1</var>, ..., <var>d_n</var>を持つように宣言します。
@@ -1173,7 +1174,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits) $
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) declare_fundamental_dimensions (money, cattle, happiness);
 (%o2)                         done
 (%i3) declare_fundamental_units (dollar, money, goat, cattle, smile, happiness);
@@ -1204,10 +1205,10 @@ Computing conversions to base units; may take a moment.
 </p>
 <dl>
 <dt><u>関数:</u> <b>dimensions</b><i> (<var>x</var>)</i>
-<a name="IDX1989"></a>
+<a name="IDX1993"></a>
 </dt>
 <dt><u>関数:</u> <b>dimensions_as_list</b><i> (<var>x</var>)</i>
-<a name="IDX1990"></a>
+<a name="IDX1994"></a>
 </dt>
 <dd><p><code>dimensions</code>は基礎次元の積と冪で構成された式として次元量 <var>x</var>の次元を返します。
 </p>
@@ -1220,7 +1221,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) dimensions (1000 ` kg*m^2/s^3);
                                 2
                           length  mass
@@ -1237,7 +1238,7 @@ Computing conversions to base units; may take a moment.
 (%o4)                        -------
                               time
 </pre></td></tr></table>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) fundamental_dimensions;
 (%o2)  [length, mass, time, charge, temperature, quantity]
 (%i3) dimensions_as_list (1000 ` kg*m^2/s^3);
@@ -1260,7 +1261,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-fundamental_005funits"></a>
 </p><dl>
 <dt><u>関数:</u> <b>fundamental_units</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fundamental_units</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>fundamental_units</tt> ()</i>
-<a name="IDX1991"></a>
+<a name="IDX1995"></a>
 </dt>
 <dd><p><code>fundamental_units(<var>x</var>)</code>は
 <code>dimensions(<var>x</var>)</code>が決定するように
@@ -1279,7 +1280,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;)$
 (%i2) fundamental_units ();
 (%o2)                 [m, kg, s, A, K, mol]
 (%i3) fundamental_units (100 ` mile/hour);
@@ -1308,7 +1309,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-dimensionless"></a>
 </p><dl>
 <dt><u>関数:</u> <b>dimensionless</b><i> (<var>L</var>)</i>
-<a name="IDX1992"></a>
+<a name="IDX1996"></a>
 </dt>
 <dd><p>次元量のリスト <var>L</var>から形成できる無次元量の基底を返します。
 </p>
@@ -1316,7 +1317,7 @@ Computing conversions to base units; may take a moment.
 </p>
 <p>例:
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits) $
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;) $
 (%i2) dimensionless ([x ` m, y ` m/s, z ` s]);
 0 errors, 0 warnings
 0 errors, 0 warnings
@@ -1327,8 +1328,8 @@ Computing conversions to base units; may take a moment.
 <p>基礎物理量から派生される無次元量。
 リストの一番目の要素は微細構造定数に比例することに注意してください。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (ezunits) $
-(%i2) load (physical_constants) $
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;ezunits&quot;) $
+(%i2) load (&quot;physical_constants&quot;) $
 (%i3) dimensionless([%h_bar, %m_e, %m_P, %%e, %c, %e_0]);
 0 errors, 0 warnings
 0 errors, 0 warnings
@@ -1348,7 +1349,7 @@ Computing conversions to base units; may take a moment.
 <a name="Item_003a-natural_005funit"></a>
 </p><dl>
 <dt><u>関数:</u> <b>natural_unit</b><i> (<var>expr</var>, [<var>v_1</var>, ..., <var>v_n</var>])</i>
-<a name="IDX1993"></a>
+<a name="IDX1997"></a>
 </dt>
 <dd><p><code>dimension(<var>expr</var>) =
 dimension(<var>v_1</var>^<var>e_1</var> ... <var>v_n</var>^<var>e_n</var>)</code>であるような指数
@@ -1369,8 +1370,8 @@ dimension(<var>v_1</var>^<var>e_1</var> ... <var>v_n</var>^<var>e_n</var>)</code
 <p><a name="Item_003a-f90_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_57.html#SEC277" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC274" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_57.html#SEC278" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1378,12 +1379,12 @@ dimension(<var>v_1</var>^<var>e_1</var> ... <var>v_n</var>^<var>e_n</var>)</code
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

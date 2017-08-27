@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
+<!-- Created on mayo, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.39.0: 46. distrib</title>
+<title>Manual de Maxima 5.40.1.gd04f9f4: 46. distrib</title>
 
-<meta name="description" content="Manual de Maxima 5.39.0: 46. distrib">
-<meta name="keywords" content="Manual de Maxima 5.39.0: 46. distrib">
+<meta name="description" content="Manual de Maxima 5.40.1.gd04f9f4: 46. distrib">
+<meta name="keywords" content="Manual de Maxima 5.40.1.gd04f9f4: 46. distrib">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -261,7 +261,7 @@ Distribuciones discretas:
 <p>Para poder hacer uso del paquete <code>distrib</code> es necesario cargarlo primero tecleando
 </p><pre class="example">(%i1) load(distrib)$
 </pre>
-<p>Para comentarios, errores o sugerencias, por favor contáctese conmigo en <var>'mario ARROBA edu PUNTO xunta PUNTO es'</var>.
+<p>Para comentarios, errores o sugerencias, por favor contáctese conmigo en <var>'riotorto AT yahoo DOT com'</var>.
 </p>
 <hr size="6">
 <a name="Funciones-y-variables-para-distribuciones-continuas"></a>
@@ -287,7 +287,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>pdf_normal</b><i> (<var>x</var>,<var>m</var>,<var>s</var>)</i>
-<a name="IDX1718"></a>
+<a name="IDX1722"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de la variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -295,17 +295,17 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>cdf_normal</b><i> (<var>x</var>,<var>m</var>,<var>s</var>)</i>
-<a name="IDX1719"></a>
+<a name="IDX1723"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de la variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Esta función se define en términos de la función de error,  <code>erf</code>, de Maxima.
 </p>
 <pre class="example">(%i1) load (distrib)$
-(%i2) assume(s&gt;0)$ cdf_normal(x,m,s);
-                             x - m
-                       erf(---------)
-                           sqrt(2) s    1
-(%o3)                  -------------- + -
-                             2          2
+(%i2) cdf_normal(x,m,s);
+                                    x - m
+                              erf(---------)
+                                  sqrt(2) s    1
+(%o2)                         -------------- + -
+                                    2          2
 </pre>
 <p>Véase también <code>erf</code>.
 </p></dd></dl>
@@ -313,7 +313,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>quantile_normal</b><i> (<var>q</var>,<var>m</var>,<var>s</var>)</i>
-<a name="IDX1720"></a>
+<a name="IDX1724"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>; en otras palabras, es la inversa de  <code>cdf_normal</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p>
@@ -330,7 +330,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>mean_normal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1721"></a>
+<a name="IDX1725"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>, es decir <var>m</var>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -338,14 +338,14 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>var_normal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1722"></a>
+<a name="IDX1726"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>, es decir <var>s^2</var>.
 </p></dd></dl>
 
 <dl>
 <dt><u>Función:</u> <b>std_normal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1723"></a>
+<a name="IDX1727"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>, es decir <var>s</var>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -353,7 +353,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>skewness_normal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1724"></a>
+<a name="IDX1728"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>, que es siempre igual a 0. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -361,7 +361,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_normal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1725"></a>
+<a name="IDX1729"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>, que es siempre igual a 0. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -369,10 +369,10 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>random_normal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1726"></a>
+<a name="IDX1730"></a>
 </dt>
 <dt><u>Función:</u> <b>random_normal</b><i> (<var>m</var>,<var>s</var>,<var>n</var>)</i>
-<a name="IDX1727"></a>
+<a name="IDX1731"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Normal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Llamando a <code>random_normal</code> con un tercer argumento <var>n</var>, se simula una muestra aleatoria de tamaño <var>n</var>.
 </p>
@@ -384,7 +384,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>pdf_student_t</b><i> (<var>x</var>,<var>n</var>)</i>
-<a name="IDX1728"></a>
+<a name="IDX1732"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -392,7 +392,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>cdf_student_t</b><i> (<var>x</var>,<var>n</var>)</i>
-<a name="IDX1729"></a>
+<a name="IDX1733"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;0</em>.
 </p>
@@ -410,7 +410,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>quantile_student_t</b><i> (<var>q</var>,<var>n</var>)</i>
-<a name="IDX1730"></a>
+<a name="IDX1734"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_student_t</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -418,7 +418,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>mean_student_t</b><i> (<var>n</var>)</i>
-<a name="IDX1731"></a>
+<a name="IDX1735"></a>
 </dt>
 <dd><p>Devuelve la media de una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;0</em>, que vale siempre 0. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -426,21 +426,21 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>var_student_t</b><i> (<var>n</var>)</i>
-<a name="IDX1732"></a>
+<a name="IDX1736"></a>
 </dt>
 <dd><p>Devuelve la varianza de una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;2</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
-(%i2) assume(n&gt;2)$  var_student_t(n);
+(%i2) var_student_t(n);
                                 n
-(%o3)                         -----
+(%o2)                         -----
                               n - 2
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>std_student_t</b><i> (<var>n</var>)</i>
-<a name="IDX1733"></a>
+<a name="IDX1737"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;2</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -448,7 +448,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>skewness_student_t</b><i> (<var>n</var>)</i>
-<a name="IDX1734"></a>
+<a name="IDX1738"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;3</em>, que vale siempre 0. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -456,7 +456,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_student_t</b><i> (<var>n</var>)</i>
-<a name="IDX1735"></a>
+<a name="IDX1739"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria de Student <em>t(n)</em>, con <em>n&gt;4</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -464,10 +464,10 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>random_student_t</b><i> (<var>n</var>)</i>
-<a name="IDX1736"></a>
+<a name="IDX1740"></a>
 </dt>
 <dt><u>Función:</u> <b>random_student_t</b><i> (<var>n</var>,<var>m</var>)</i>
-<a name="IDX1737"></a>
+<a name="IDX1741"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio <em>t(n)</em>, con <em>n&gt;0</em>. Llamando a <code>random_student_t</code> con un segundo argumento <var>m</var>, se obtiene una muestra aleatoria simulada de tamaño <var>m</var>.
 </p>
@@ -487,7 +487,7 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>pdf_noncentral_student_t</b><i> (<var>x</var>,<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1738"></a>
+<a name="IDX1742"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;0</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p>
@@ -495,15 +495,15 @@ Distribuciones discretas:
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) expand(pdf_noncentral_student_t(3,5,0.1));
-       .01370030107589574 sqrt(5)
-(%o2)  --------------------------
-       sqrt(2) sqrt(14) sqrt(%pi)
-   1.654562884111515E-4 sqrt(5)
- + ----------------------------
-            sqrt(%pi)
-   .02434921505438663 sqrt(5)
- + --------------------------
-              %pi
+                           7/2                         7/2
+      0.04296414417400905 5      1.323650307289301e-6 5
+(%o2) ------------------------ + -------------------------
+         3/2   5/2                       sqrt(%pi)
+        2    14    sqrt(%pi)
+                                                        7/2
+                                   1.94793720435093e-4 5
+                                 + ------------------------
+                                             %pi
 (%i3) float(%);
 (%o3)          .02080593159405669
 </pre></dd></dl>
@@ -511,23 +511,20 @@ Distribuciones discretas:
 
 <dl>
 <dt><u>Función:</u> <b>cdf_noncentral_student_t</b><i> (<var>x</var>,<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1739"></a>
+<a name="IDX1743"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;0</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Esta función no tiene expresión compacta y se calcula numéricamente si la variable global <code>numer</code> vale <code>true</code> o si alguno de sus argumentos es un número decimal, en otro caso devuelve una expresión nominal.
-Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;0</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Esta función no tiene expresión compacta y se calcula numéricamente. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) cdf_noncentral_student_t(-2,5,-5);
-(%o2) cdf_noncentral_student_t(- 2, 5, - 5)
-(%i3) cdf_noncentral_student_t(-2.0,5,-5);
-(%o3)          .9952030093319743
+(%o2)          .9952030093319743
 </pre>
 </dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>quantile_noncentral_student_t</b><i> (<var>q</var>,<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1740"></a>
+<a name="IDX1744"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;0</em> grados de libertad y parámetro de no centralidad <em>ncp</em>; en otras palabras, se trata de la inversa de <code>cdf_noncentral_student_t</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -535,12 +532,12 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_noncentral_student_t</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1741"></a>
+<a name="IDX1745"></a>
 </dt>
 <dd><p>Devuelve la media de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;1</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p>
 <pre class="example">(%i1) load (distrib)$
-(%i2) (assume(df&gt;1), mean_noncentral_student_t(df,k));
+(%i2) mean_noncentral_student_t(df,k);
                    df - 1
              gamma(------) sqrt(df) k
                      2
@@ -554,7 +551,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_noncentral_student_t</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1742"></a>
+<a name="IDX1746"></a>
 </dt>
 <dd><p>Devuelve la varianza de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;2</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -562,7 +559,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_noncentral_student_t</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1743"></a>
+<a name="IDX1747"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;2</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -570,7 +567,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_noncentral_student_t</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1744"></a>
+<a name="IDX1748"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;3</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -578,7 +575,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_noncentral_student_t</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1745"></a>
+<a name="IDX1749"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria no central de Student <em>nc_t(n,ncp)</em>, con <em>n&gt;4</em> grados de libertad y parámetro de no centralidad <em>ncp</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -586,10 +583,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_noncentral_student_t</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1746"></a>
+<a name="IDX1750"></a>
 </dt>
 <dt><u>Función:</u> <b>random_noncentral_student_t</b><i> (<var>n</var>,<var>ncp</var>,<var>m</var>)</i>
-<a name="IDX1747"></a>
+<a name="IDX1751"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio <em>nc_t(n,ncp)</em>, con <em>n&gt;0</em>. Llamando a <code>random_noncentral_student_t</code> con un tercer argumento <var>m</var>, se obtiene una muestra aleatoria simulada de tamaño <var>m</var>.
 </p>
@@ -609,21 +606,15 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_chi2</b><i> (<var>x</var>,<var>n</var>)</i>
-<a name="IDX1748"></a>
+<a name="IDX1752"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria chi-cuadrado <em>Chi^2(n)</em>, con <em>n&gt;0</em>.
-</p>
-<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>, por lo que cuando Maxima no tiene suficiente información para obtener el resultado, devuelve una forma nominal basada en la función de densidad de la gamma.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria chi-cuadrado <em>Chi^2(n)</em>, con <em>n&gt;0</em>. La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) pdf_chi2(x,n);
-                                    n
-(%o2)                  pdf_gamma(x, -, 2)
-                                    2
-(%i3) assume(x&gt;0, n&gt;0)$  pdf_chi2(x,n);
                          n/2 - 1   - x/2
                         x        %e
-(%o4)                   ----------------
+(%o2)                   ----------------
                           n/2       n
                          2    gamma(-)
                                     2
@@ -632,7 +623,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_chi2</b><i> (<var>x</var>,<var>n</var>)</i>
-<a name="IDX1749"></a>
+<a name="IDX1753"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria chi-cuadrado <em>Chi^2(n)</em>, con <em>n&gt;0</em>.
 </p>
@@ -648,122 +639,99 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_chi2</b><i> (<var>q</var>,<var>n</var>)</i>
-<a name="IDX1750"></a>
+<a name="IDX1754"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <em>Chi^2(n)</em>, con <em>n&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_chi2</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>.
 </p>
-<p>Esta función no tiene expresión compacta y se calcula numéricamente si la variable global <code>numer</code> vale <code>true</code>, en otro caso devuelve una expresión nominal basada en la función cuantil de la gamma, puesto que la variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>.
+<p>Esta función no tiene expresión compacta y se calcula numéricamente.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) quantile_chi2(0.99,9);
 (%o2)                   21.66599433346194
-(%i3) quantile_chi2(0.99,n);
-                                        n
-(%o3)              quantile_gamma(0.99, -, 2)
-                                        2
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>mean_chi2</b><i> (<var>n</var>)</i>
-<a name="IDX1751"></a>
+<a name="IDX1755"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria  <em>Chi^2(n)</em>, con <em>n&gt;0</em>.
 </p>
-<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>, por lo que cuando Maxima no tiene suficiente información para obtener el resultado, devuelve una forma nominal basada en la media de la gamma.
+<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) mean_chi2(n);
-                                   n
-(%o2)                   mean_gamma(-, 2)
-                                   2
-(%i3) assume(n&gt;0)$ mean_chi2(n);
-(%o4)                           n
+(%o2)                           n
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_chi2</b><i> (<var>n</var>)</i>
-<a name="IDX1752"></a>
+<a name="IDX1756"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria  <em>Chi^2(n)</em>, con <em>n&gt;0</em>.
 </p>
-<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>, por lo que cuando Maxima no tiene suficiente información para obtener el resultado, devuelve una forma nominal basada en la varianza de la gamma.
+<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) var_chi2(n);
-                                   n
-(%o2)                    var_gamma(-, 2)
-                                   2
-(%i3) assume(n&gt;0)$ var_chi2(n);
-(%o4)                          2 n
+(%o2)                          2 n
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>std_chi2</b><i> (<var>n</var>)</i>
-<a name="IDX1753"></a>
+<a name="IDX1757"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria  <em>Chi^2(n)</em>, con <em>n&gt;0</em>.
 </p>
-<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>, por lo que cuando Maxima no tiene suficiente información para obtener el resultado, devuelve una forma nominal basada en la desviación típica de la gamma.
+<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) std_chi2(n);
-                                   n
-(%o2)                    std_gamma(-, 2)
-                                   2
-(%i3) assume(n&gt;0)$ std_chi2(n);
-(%o4)                    sqrt(2) sqrt(n)
+(%o2)                    sqrt(2) sqrt(n)
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>skewness_chi2</b><i> (<var>n</var>)</i>
-<a name="IDX1754"></a>
+<a name="IDX1758"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria  <em>Chi^2(n)</em>, con <em>n&gt;0</em>.
 </p>
-<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>, por lo que cuando Maxima no tiene suficiente información para obtener el resultado, devuelve una forma nominal basada en el coeficiente de asimetría de la gamma.
+<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) skewness_chi2(n);
-                                     n
-(%o2)                 skewness_gamma(-, 2)
-                                     2
-(%i3) assume(n&gt;0)$ skewness_chi2(n);
-                            2 sqrt(2)
-(%o4)                       ---------
-                             sqrt(n)
+                                     3/2
+                                    2
+(%o2)                              -------
+                                   sqrt(n)
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_chi2</b><i> (<var>n</var>)</i>
-<a name="IDX1755"></a>
+<a name="IDX1759"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria  <em>Chi^2(n)</em>, con <em>n&gt;0</em>.
 </p>
-<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>, por lo que cuando Maxima no tiene suficiente información para obtener el resultado, devuelve una forma nominal basada en el coeficiente de curtosis de la gamma.
+<p>La variable aleatoria <em>Chi^2(n)</em> equivale a una <i>Gamma</i><em>(n/2,2)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) kurtosis_chi2(n);
-                                     n
-(%o2)                 kurtosis_gamma(-, 2)
-                                     2
-(%i3) assume(n&gt;0)$ kurtosis_chi2(n);
                                12
-(%o4)                          --
+(%o2)                          --
                                n
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>random_chi2</b><i> (<var>n</var>)</i>
-<a name="IDX1756"></a>
+<a name="IDX1760"></a>
 </dt>
 <dt><u>Función:</u> <b>random_chi2</b><i> (<var>n</var>,<var>m</var>)</i>
-<a name="IDX1757"></a>
+<a name="IDX1761"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <em>Chi^2(n)</em>, con <em>n&gt;0</em>. Llamando a <code>random_chi2</code> con un segundo argumento <var>m</var>, se simulará una muestra aleatoria de tamaño <var>m</var>.
 </p>
@@ -775,7 +743,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_noncentral_chi2</b><i> (<var>x</var>,<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1758"></a>
+<a name="IDX1762"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria chi-cuadrado no centrada <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>. Para hacer uso de esta función ejecútese primero <code>load(distrib)</code>.
 </p>
@@ -784,7 +752,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_noncentral_chi2</b><i> (<var>x</var>,<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1759"></a>
+<a name="IDX1763"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria chi-cuadrado no centrada <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>.
 </p>
@@ -793,18 +761,18 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_noncentral_chi2</b><i> (<var>q</var>,<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1760"></a>
+<a name="IDX1764"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria chi-cuadrado no centrada <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>; en otras palabras, se trata de la inversa de  <code>cdf_noncentral_chi2</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>.
 </p>
-<p>Esta función no tiene expresión compacta y se calcula numéricamente si la variable global <code>numer</code> vale <code>true</code>, en otro caso devuelve una expresión nominal.
+<p>Esta función no tiene expresión compacta y se calcula numéricamente.
 </p>
 </dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>mean_noncentral_chi2</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1761"></a>
+<a name="IDX1765"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria chi-cuadrado no centrada <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>.
 </p>
@@ -813,7 +781,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_noncentral_chi2</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1762"></a>
+<a name="IDX1766"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria chi-cuadrado no centrada  <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>.
 </p>
@@ -822,7 +790,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_noncentral_chi2</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1763"></a>
+<a name="IDX1767"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria chi-cuadrado no centrada  <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>.
 </p>
@@ -831,7 +799,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_noncentral_chi2</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1764"></a>
+<a name="IDX1768"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria chi-cuadrado no centrada  <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>.
 </p>
@@ -840,7 +808,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_noncentral_chi2</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1765"></a>
+<a name="IDX1769"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria chi-cuadrado no centrada <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>.
 </p>
@@ -849,10 +817,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_noncentral_chi2</b><i> (<var>n</var>,<var>ncp</var>)</i>
-<a name="IDX1766"></a>
+<a name="IDX1770"></a>
 </dt>
 <dt><u>Función:</u> <b>random_noncentral_chi2</b><i> (<var>n</var>,<var>ncp</var>,<var>m</var>)</i>
-<a name="IDX1767"></a>
+<a name="IDX1771"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <em>nc_Chi^2(n,ncp)</em>, con <em>n&gt;0</em> y parámetro de no centralidad <em>ncp&gt;=0</em>. Llamando a <code>random_noncentral_chi2</code> con un tercer argumento <var>m</var>, se simulará una muestra aleatoria de tamaño <var>m</var>.
 </p>
@@ -863,7 +831,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_f</b><i> (<var>x</var>,<var>m</var>,<var>n</var>)</i>
-<a name="IDX1768"></a>
+<a name="IDX1772"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m,n&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -871,7 +839,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_f</b><i> (<var>x</var>,<var>m</var>,<var>n</var>)</i>
-<a name="IDX1769"></a>
+<a name="IDX1773"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m,n&gt;0</em>.
 </p>
@@ -887,11 +855,9 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_f</b><i> (<var>q</var>,<var>m</var>,<var>n</var>)</i>
-<a name="IDX1770"></a>
+<a name="IDX1774"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m,n&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_f</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>.
-</p>
-<p>Esta función no tiene expresión compacta, por lo que es evaluada numéricamente si la variable global <code>numer</code> vale <code>true</code>, en caso contrario devuelve una forma nominal.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) quantile_f(2/5,sqrt(3),5);
@@ -905,7 +871,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_f</b><i> (<var>m</var>,<var>n</var>)</i>
-<a name="IDX1771"></a>
+<a name="IDX1775"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m&gt;0, n&gt;2</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -913,7 +879,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_f</b><i> (<var>m</var>,<var>n</var>)</i>
-<a name="IDX1772"></a>
+<a name="IDX1776"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m&gt;0, n&gt;4</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -921,7 +887,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_f</b><i> (<var>m</var>,<var>n</var>)</i>
-<a name="IDX1773"></a>
+<a name="IDX1777"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m&gt;0, n&gt;4</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -929,7 +895,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_f</b><i> (<var>m</var>,<var>n</var>)</i>
-<a name="IDX1774"></a>
+<a name="IDX1778"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m&gt;0, n&gt;6</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -937,7 +903,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_f</b><i> (<var>m</var>,<var>n</var>)</i>
-<a name="IDX1775"></a>
+<a name="IDX1779"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria  <i>F</i><em>(m,n)</em>, con <em>m&gt;0, n&gt;8</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -945,10 +911,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_f</b><i> (<var>m</var>,<var>n</var>)</i>
-<a name="IDX1776"></a>
+<a name="IDX1780"></a>
 </dt>
 <dt><u>Función:</u> <b>random_f</b><i> (<var>m</var>,<var>n</var>,<var>k</var>)</i>
-<a name="IDX1777"></a>
+<a name="IDX1781"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>F</i><em>(m,n)</em>, con <em>m,n&gt;0</em>. Llamando a  <code>random_f</code> con un tercer argumento <var>k</var>, se simulará una muestra aleatoria de tamaño <var>k</var>.
 </p>
@@ -965,49 +931,41 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_exp</b><i> (<var>x</var>,<var>m</var>)</i>
-<a name="IDX1778"></a>
+<a name="IDX1782"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la densidad de Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) pdf_exp(x,m);
-                                        1
-(%o2)                 pdf_weibull(x, 1, -)
-                                        m
-(%i3) assume(x&gt;0,m&gt;0)$  pdf_exp(x,m);
                                 - m x
-(%o4)                       m %e
+(%o2)                       m %e
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>cdf_exp</b><i> (<var>x</var>,<var>m</var>)</i>
-<a name="IDX1779"></a>
+<a name="IDX1783"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la distribución de Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) cdf_exp(x,m);
-                                        1
-(%o2)                 cdf_weibull(x, 1, -)
-                                        m
-(%i3) assume(x&gt;0,m&gt;0)$  cdf_exp(x,m);
                                  - m x
-(%o4)                      1 - %e
+(%o2)                      1 - %e
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>quantile_exp</b><i> (<var>q</var>,<var>m</var>)</i>
-<a name="IDX1780"></a>
+<a name="IDX1784"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_exp</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en el cuantil de la Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) quantile_exp(0.56,5);
@@ -1021,40 +979,32 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_exp</b><i> (<var>m</var>)</i>
-<a name="IDX1781"></a>
+<a name="IDX1785"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la media de la Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) mean_exp(m);
-                                       1
-(%o2)                  mean_weibull(1, -)
-                                       m
-(%i3) assume(m&gt;0)$  mean_exp(m);
                                 1
-(%o4)                           -
+(%o2)                           -
                                 m
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_exp</b><i> (<var>m</var>)</i>
-<a name="IDX1782"></a>
+<a name="IDX1786"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la varianza de la Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) var_exp(m);
-                                       1
-(%o2)                   var_weibull(1, -)
-                                       m
-(%i3) assume(m&gt;0)$  var_exp(m);
                                1
-(%o4)                          --
+(%o2)                          --
                                 2
                                m
 </pre></dd></dl>
@@ -1062,66 +1012,54 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_exp</b><i> (<var>m</var>)</i>
-<a name="IDX1783"></a>
+<a name="IDX1787"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la desviación típica de la Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) std_exp(m);
-                                       1
-(%o2)                   std_weibull(1, -)
-                                       m
-(%i3) assume(m&gt;0)$  std_exp(m);
                                 1
-(%o4)                           -
+(%o2)                           -
                                 m
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>skewness_exp</b><i> (<var>m</var>)</i>
-<a name="IDX1784"></a>
+<a name="IDX1788"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en el coeficiente de asimetría de la Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) skewness_exp(m);
-                                         1
-(%o2)                skewness_weibull(1, -)
-                                         m
-(%i3) assume(m&gt;0)$  skewness_exp(m);
-(%o4)                           2
+(%o2)                           2
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_exp</b><i> (<var>m</var>)</i>
-<a name="IDX1785"></a>
+<a name="IDX1789"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en el coeficiente de curtosis de la Weibull.
+<p>La variable aleatoria <i>Exponencial</i><em>(m)</em> equivale a una <i>Weibull</i><em>(1,1/m)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) kurtosis_exp(m);
-                                         1
-(%o2)                kurtosis_weibull(1, -)
-                                         m
-(%i3) assume(m&gt;0)$  kurtosis_exp(m);
-(%o4)                           6
+(%o3)                           6
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>random_exp</b><i> (<var>m</var>)</i>
-<a name="IDX1786"></a>
+<a name="IDX1790"></a>
 </dt>
 <dt><u>Función:</u> <b>random_exp</b><i> (<var>m</var>,<var>k</var>)</i>
-<a name="IDX1787"></a>
+<a name="IDX1791"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Exponencial</i><em>(m)</em>, con <em>m&gt;0</em>. Llamando a <code>random_exp2</code> con un segundo argumento <var>k</var>, se simulará una muestra aleatoria de tamaño <var>k</var>.
 </p>
@@ -1133,7 +1071,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_lognormal</b><i> (<var>x</var>,<var>m</var>,<var>s</var>)</i>
-<a name="IDX1788"></a>
+<a name="IDX1792"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1141,7 +1079,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_lognormal</b><i> (<var>x</var>,<var>m</var>,<var>s</var>)</i>
-<a name="IDX1789"></a>
+<a name="IDX1793"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>.   Esta función se define en términos de la función de error, <code>erf</code>, de Maxima.
 </p>
@@ -1150,7 +1088,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
                            log(x) - m
                        erf(----------)
                            sqrt(2) s     1
-(%o3)                  --------------- + -
+(%o2)                  --------------- + -
                               2          2
 </pre>
 <p>Véase también <code>erf</code>.
@@ -1159,7 +1097,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_lognormal</b><i> (<var>q</var>,<var>m</var>,<var>s</var>)</i>
-<a name="IDX1790"></a>
+<a name="IDX1794"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_lognormal</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1167,7 +1105,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_lognormal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1791"></a>
+<a name="IDX1795"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1175,14 +1113,14 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_lognormal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1792"></a>
+<a name="IDX1796"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 <dl>
 <dt><u>Función:</u> <b>std_lognormal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1793"></a>
+<a name="IDX1797"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1190,7 +1128,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_lognormal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1794"></a>
+<a name="IDX1798"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1198,7 +1136,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_lognormal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1795"></a>
+<a name="IDX1799"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1206,10 +1144,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_lognormal</b><i> (<var>m</var>,<var>s</var>)</i>
-<a name="IDX1796"></a>
+<a name="IDX1800"></a>
 </dt>
 <dt><u>Función:</u> <b>random_lognormal</b><i> (<var>m</var>,<var>s</var>,<var>n</var>)</i>
-<a name="IDX1797"></a>
+<a name="IDX1801"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Lognormal</i><em>(m,s)</em>, con <em>s&gt;0</em>. Llamando a <code>random_lognormal</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño <var>n</var>.
 </p>
@@ -1221,7 +1159,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_gamma</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1798"></a>
+<a name="IDX1802"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1229,7 +1167,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_gamma</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1799"></a>
+<a name="IDX1803"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. 
 </p>
@@ -1245,7 +1183,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_gamma</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1800"></a>
+<a name="IDX1804"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_gamma</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1253,7 +1191,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_gamma</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1801"></a>
+<a name="IDX1805"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1261,14 +1199,14 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_gamma</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1802"></a>
+<a name="IDX1806"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 <dl>
 <dt><u>Función:</u> <b>std_gamma</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1803"></a>
+<a name="IDX1807"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1276,7 +1214,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_gamma</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1804"></a>
+<a name="IDX1808"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1284,7 +1222,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_gamma</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1805"></a>
+<a name="IDX1809"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1292,10 +1230,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_gamma</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1806"></a>
+<a name="IDX1810"></a>
 </dt>
 <dt><u>Función:</u> <b>random_gamma</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1807"></a>
+<a name="IDX1811"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Gamma</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Llamando a <code>random_gamma</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño <var>n</var>.
 </p>
@@ -1311,7 +1249,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_beta</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1808"></a>
+<a name="IDX1812"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1319,7 +1257,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_beta</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1809"></a>
+<a name="IDX1813"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>.
 </p>
@@ -1335,7 +1273,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_beta</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1810"></a>
+<a name="IDX1814"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_beta</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1343,7 +1281,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_beta</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1811"></a>
+<a name="IDX1815"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1351,14 +1289,14 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_beta</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1812"></a>
+<a name="IDX1816"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 <dl>
 <dt><u>Función:</u> <b>std_beta</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1813"></a>
+<a name="IDX1817"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1366,7 +1304,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_beta</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1814"></a>
+<a name="IDX1818"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1374,7 +1312,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_beta</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1815"></a>
+<a name="IDX1819"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1382,10 +1320,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_beta</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1816"></a>
+<a name="IDX1820"></a>
 </dt>
 <dt><u>Función:</u> <b>random_beta</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1817"></a>
+<a name="IDX1821"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio <i>Beta</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Llamando a <code>random_beta</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -1396,7 +1334,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_continuous_uniform</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1818"></a>
+<a name="IDX1822"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1404,7 +1342,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_continuous_uniform</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1819"></a>
+<a name="IDX1823"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1412,7 +1350,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_continuous_uniform</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1820"></a>
+<a name="IDX1824"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>; en otras palabras, se trata de la inversa de  <code>cdf_continuous_uniform</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1420,7 +1358,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_continuous_uniform</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1821"></a>
+<a name="IDX1825"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1428,14 +1366,14 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_continuous_uniform</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1822"></a>
+<a name="IDX1826"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 <dl>
 <dt><u>Función:</u> <b>std_continuous_uniform</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1823"></a>
+<a name="IDX1827"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1443,7 +1381,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_continuous_uniform</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1824"></a>
+<a name="IDX1828"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1451,7 +1389,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_continuous_uniform</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1825"></a>
+<a name="IDX1829"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria  <i>Uniforme Continua</i><em>(a,b)</em>, con <em>a&lt;b</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1459,10 +1397,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_continuous_uniform</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1826"></a>
+<a name="IDX1830"></a>
 </dt>
 <dt><u>Función:</u> <b>random_continuous_uniform</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1827"></a>
+<a name="IDX1831"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Uniforme Continuo</i><em>(a,b)</em>, con <em>a&lt;b</em>. Llamando a <code>random_continuous_uniform</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -1474,7 +1412,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_logistic</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1828"></a>
+<a name="IDX1832"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1482,7 +1420,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_logistic</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1829"></a>
+<a name="IDX1833"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1490,7 +1428,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_logistic</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1830"></a>
+<a name="IDX1834"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_logistic</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1498,7 +1436,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_logistic</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1831"></a>
+<a name="IDX1835"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1506,7 +1444,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_logistic</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1832"></a>
+<a name="IDX1836"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1514,7 +1452,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_logistic</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1833"></a>
+<a name="IDX1837"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1522,7 +1460,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_logistic</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1834"></a>
+<a name="IDX1838"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1530,7 +1468,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_logistic</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1835"></a>
+<a name="IDX1839"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria <i>Logística</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1538,10 +1476,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_logistic</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1836"></a>
+<a name="IDX1840"></a>
 </dt>
 <dt><u>Función:</u> <b>random_logistic</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1837"></a>
+<a name="IDX1841"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Logístico</i><em>(a,b)</em>, con <em>b&gt;0</em>. Llamando a  <code>random_logistic</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -1553,7 +1491,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_pareto</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1838"></a>
+<a name="IDX1842"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1561,7 +1499,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_pareto</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1839"></a>
+<a name="IDX1843"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1569,7 +1507,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_pareto</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1840"></a>
+<a name="IDX1844"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a,b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_pareto</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1577,7 +1515,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_pareto</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1841"></a>
+<a name="IDX1845"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a&gt;1,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1585,14 +1523,14 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_pareto</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1842"></a>
+<a name="IDX1846"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a&gt;2,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 <dl>
 <dt><u>Función:</u> <b>std_pareto</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1843"></a>
+<a name="IDX1847"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a&gt;2,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1601,7 +1539,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_pareto</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1844"></a>
+<a name="IDX1848"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a&gt;3,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1609,7 +1547,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_pareto</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1845"></a>
+<a name="IDX1849"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria de <i>Pareto</i><em>(a,b)</em>, con <em>a&gt;4,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1617,10 +1555,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_pareto</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1846"></a>
+<a name="IDX1850"></a>
 </dt>
 <dt><u>Función:</u> <b>random_pareto</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1847"></a>
+<a name="IDX1851"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Pareto</i><em>(a,b)</em>, con <em>a&gt;0,b&gt;0</em>. Llamando a  <code>random_pareto</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -1632,7 +1570,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_weibull</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1848"></a>
+<a name="IDX1852"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1640,7 +1578,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_weibull</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1849"></a>
+<a name="IDX1853"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1648,7 +1586,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_weibull</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1850"></a>
+<a name="IDX1854"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_weibull</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1656,7 +1594,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_weibull</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1851"></a>
+<a name="IDX1855"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1664,14 +1602,14 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_weibull</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1852"></a>
+<a name="IDX1856"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 <dl>
 <dt><u>Función:</u> <b>std_weibull</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1853"></a>
+<a name="IDX1857"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1680,7 +1618,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_weibull</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1854"></a>
+<a name="IDX1858"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1688,7 +1626,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_weibull</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1855"></a>
+<a name="IDX1859"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria de <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1696,10 +1634,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_weibull</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1856"></a>
+<a name="IDX1860"></a>
 </dt>
 <dt><u>Función:</u> <b>random_weibull</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1857"></a>
+<a name="IDX1861"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Weibull</i><em>(a,b)</em>, con <em>a,b&gt;0</em>. Llamando a  <code>random_weibull</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -1712,102 +1650,82 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_rayleigh</b><i> (<var>x</var>,<var>b</var>)</i>
-<a name="IDX1858"></a>
+<a name="IDX1862"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la densidad de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) pdf_rayleigh(x,b);
-                                        1
-(%o2)                 pdf_weibull(x, 2, -)
-                                        b
-(%i3) assume(x&gt;0,b&gt;0)$ pdf_rayleigh(x,b);
                                     2  2
                            2     - b  x
-(%o4)                   2 b  x %e
+(%o2)                   2 b  x %e
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>cdf_rayleigh</b><i> (<var>x</var>,<var>b</var>)</i>
-<a name="IDX1859"></a>
+<a name="IDX1863"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la distribución de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) cdf_rayleigh(x,b);
-                                        1
-(%o2)                 cdf_weibull(x, 2, -)
-                                        b
-(%i3) assume(x&gt;0,b&gt;0)$ cdf_rayleigh(x,b);
                                    2  2
                                 - b  x
-(%o4)                     1 - %e
+(%o2)                     1 - %e
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>quantile_rayleigh</b><i> (<var>q</var>,<var>b</var>)</i>
-<a name="IDX1860"></a>
+<a name="IDX1864"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_rayleigh</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en los cuantiles de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) quantile_rayleigh(0.99,b);
-                                            1
-(%o2)             quantile_weibull(0.99, 2, -)
-                                            b
-(%i3) assume(x&gt;0,b&gt;0)$ quantile_rayleigh(0.99,b);
                         2.145966026289347
-(%o4)                   -----------------
+(%o2)                   -----------------
                                 b
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>mean_rayleigh</b><i> (<var>b</var>)</i>
-<a name="IDX1861"></a>
+<a name="IDX1865"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la media de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) mean_rayleigh(b);
-                                       1
-(%o2)                  mean_weibull(2, -)
-                                       b
-(%i3) assume(b&gt;0)$ mean_rayleigh(b);
                             sqrt(%pi)
-(%o4)                       ---------
+(%o2)                       ---------
                                2 b
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_rayleigh</b><i> (<var>b</var>)</i>
-<a name="IDX1862"></a>
+<a name="IDX1866"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la varianza de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) var_rayleigh(b);
-                                       1
-(%o2)                   var_weibull(2, -)
-                                       b
-(%i3) assume(b&gt;0)$ var_rayleigh(b);
                                  %pi
                              1 - ---
                                   4
-(%o4)                        -------
+(%o2)                        -------
                                 2
                                b
 </pre></dd></dl>
@@ -1815,45 +1733,37 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_rayleigh</b><i> (<var>b</var>)</i>
-<a name="IDX1863"></a>
+<a name="IDX1867"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la desviación típica de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) std_rayleigh(b);
-                                       1
-(%o2)                   std_weibull(2, -)
-                                       b
-(%i3) assume(b&gt;0)$ std_rayleigh(b);
                                    %pi
                           sqrt(1 - ---)
                                     4
-(%o4)                     -------------
+(%o2)                     -------------
                                 b
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>skewness_rayleigh</b><i> (<var>b</var>)</i>
-<a name="IDX1864"></a>
+<a name="IDX1868"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en el coeficiente de asimetría de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) skewness_rayleigh(b);
-                                         1
-(%o2)                skewness_weibull(2, -)
-                                         b
-(%i3) assume(b&gt;0)$ skewness_rayleigh(b);
                          3/2
                       %pi      3 sqrt(%pi)
                       ------ - -----------
                         4           4
-(%o4)                 --------------------
+(%o2)                 --------------------
                                %pi 3/2
                           (1 - ---)
                                 4
@@ -1862,23 +1772,19 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_rayleigh</b><i> (<var>b</var>)</i>
-<a name="IDX1865"></a>
+<a name="IDX1869"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria de <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>.
 </p>
-<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en el coeficiente de curtosis de la Weibull.
+<p>La variable aleatoria <i>Rayleigh</i><em>(b)</em> equivale a una <i>Weibull</i><em>(2,1/b)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) kurtosis_rayleigh(b);
-                                         1
-(%o2)                kurtosis_weibull(2, -)
-                                         b
-(%i3) assume(b&gt;0)$ kurtosis_rayleigh(b);
                                   2
                              3 %pi
                          2 - ------
                                16
-(%o4)                    ---------- - 3
+(%o2)                    ---------- - 3
                               %pi 2
                          (1 - ---)
                                4
@@ -1887,10 +1793,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_rayleigh</b><i> (<var>b</var>)</i>
-<a name="IDX1866"></a>
+<a name="IDX1870"></a>
 </dt>
 <dt><u>Función:</u> <b>random_rayleigh</b><i> (<var>b</var>,<var>n</var>)</i>
-<a name="IDX1867"></a>
+<a name="IDX1871"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Rayleigh</i><em>(b)</em>, con <em>b&gt;0</em>. Llamando a  <code>random_rayleigh</code> con un segundo argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -1903,7 +1809,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_laplace</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1868"></a>
+<a name="IDX1872"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1911,7 +1817,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_laplace</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1869"></a>
+<a name="IDX1873"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1919,7 +1825,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_laplace</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1870"></a>
+<a name="IDX1874"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_laplace</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1927,7 +1833,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_laplace</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1871"></a>
+<a name="IDX1875"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1935,7 +1841,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_laplace</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1872"></a>
+<a name="IDX1876"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1943,7 +1849,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_laplace</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1873"></a>
+<a name="IDX1877"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1951,7 +1857,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_laplace</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1874"></a>
+<a name="IDX1878"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1959,7 +1865,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_laplace</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1875"></a>
+<a name="IDX1879"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis una variable aleatoria de <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1967,10 +1873,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_laplace</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1876"></a>
+<a name="IDX1880"></a>
 </dt>
 <dt><u>Función:</u> <b>random_laplace</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1877"></a>
+<a name="IDX1881"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Laplace</i><em>(a,b)</em>, con <em>b&gt;0</em>. Llamando a  <code>random_laplace</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -1983,7 +1889,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_cauchy</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1878"></a>
+<a name="IDX1882"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria de <i>Cauchy</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1991,7 +1897,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_cauchy</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1879"></a>
+<a name="IDX1883"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Cauchy</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -1999,7 +1905,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_cauchy</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1880"></a>
+<a name="IDX1884"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Cauchy</i><em>(a,b)</em>, con <em>b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_cauchy</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2007,10 +1913,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_cauchy</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1881"></a>
+<a name="IDX1885"></a>
 </dt>
 <dt><u>Función:</u> <b>random_cauchy</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1882"></a>
+<a name="IDX1886"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Cauchy</i><em>(a,b)</em>, con <em>b&gt;0</em>. Llamando a  <code>random_cauchy</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -2023,7 +1929,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_gumbel</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1883"></a>
+<a name="IDX1887"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2031,7 +1937,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_gumbel</b><i> (<var>x</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1884"></a>
+<a name="IDX1888"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2039,7 +1945,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_gumbel</b><i> (<var>q</var>,<var>a</var>,<var>b</var>)</i>
-<a name="IDX1885"></a>
+<a name="IDX1889"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_gumbel</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2047,20 +1953,20 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_gumbel</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1886"></a>
+<a name="IDX1890"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
-(%i2) assume(b&gt;0)$  mean_gumbel(a,b);
-(%o3)                     %gamma b + a
+(%i2) mean_gumbel(a,b);
+(%o2)                     %gamma b + a
 </pre><p>donde el símbolo <code>%gamma</code> representa la constante de Euler-Mascheroni. Véase también <code>%gamma</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_gumbel</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1887"></a>
+<a name="IDX1891"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2068,7 +1974,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_gumbel</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1888"></a>
+<a name="IDX1892"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2076,25 +1982,24 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_gumbel</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1889"></a>
+<a name="IDX1893"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
-(%i2) assume(b&gt;0)$ skewness_gumbel(a,b);
-                       12 sqrt(6) zeta(3)
-(%o3)                  ------------------
-                                 3
-                              %pi
-(%i4) numer:true$ skewness_gumbel(a,b);
-(%o5)                   1.139547099404649
+(%i2) skewness_gumbel(a,b);
+                                  3/2
+                               2 6    zeta(3)
+(%o2)                          --------------
+                                       3
+                                    %pi
 </pre><p>donde <code>zeta</code> representa la función zeta de Riemann.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_gumbel</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1890"></a>
+<a name="IDX1894"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria de <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2102,10 +2007,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_gumbel</b><i> (<var>a</var>,<var>b</var>)</i>
-<a name="IDX1891"></a>
+<a name="IDX1895"></a>
 </dt>
 <dt><u>Función:</u> <b>random_gumbel</b><i> (<var>a</var>,<var>b</var>,<var>n</var>)</i>
-<a name="IDX1892"></a>
+<a name="IDX1896"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Gumbel</i><em>(a,b)</em>, con <em>b&gt;0</em>. Llamando a  <code>random_gumbel</code> con un tercer argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -2140,7 +2045,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_general_finite_discrete</b><i> (<var>x</var>,<var>v</var>)</i>
-<a name="IDX1893"></a>
+<a name="IDX1897"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de densidad de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>, tal que <code>Pr(X=i) = v_i</code>. El vector <em>v</em> puede ser una lista de expresiones no negativas, cuyas componentes se normalizarán para obtener un vector de probabilidades. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p>
@@ -2158,7 +2063,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_general_finite_discrete</b><i> (<var>x</var>,<var>v</var>)</i>
-<a name="IDX1894"></a>
+<a name="IDX1898"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>.
 </p>
@@ -2182,7 +2087,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_general_finite_discrete</b><i> (<var>q</var>,<var>v</var>)</i>
-<a name="IDX1895"></a>
+<a name="IDX1899"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>.
 </p>
@@ -2192,7 +2097,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_general_finite_discrete</b><i> (<var>v</var>)</i>
-<a name="IDX1896"></a>
+<a name="IDX1900"></a>
 </dt>
 <dd><p>Devuelve la media de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>.
 </p>
@@ -2202,7 +2107,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_general_finite_discrete</b><i> (<var>v</var>)</i>
-<a name="IDX1897"></a>
+<a name="IDX1901"></a>
 </dt>
 <dd><p>Devuelve la varianza de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>.
 </p>
@@ -2212,7 +2117,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_general_finite_discrete</b><i> (<var>v</var>)</i>
-<a name="IDX1898"></a>
+<a name="IDX1902"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>.
 </p>
@@ -2222,7 +2127,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_general_finite_discrete</b><i> (<var>v</var>)</i>
-<a name="IDX1899"></a>
+<a name="IDX1903"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>.
 </p>
@@ -2232,7 +2137,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_general_finite_discrete</b><i> (<var>v</var>)</i>
-<a name="IDX1900"></a>
+<a name="IDX1904"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>.
 </p>
@@ -2242,10 +2147,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_general_finite_discrete</b><i> (<var>v</var>)</i>
-<a name="IDX1901"></a>
+<a name="IDX1905"></a>
 </dt>
 <dt><u>Función:</u> <b>random_general_finite_discrete</b><i> (<var>v</var>,<var>m</var>)</i>
-<a name="IDX1902"></a>
+<a name="IDX1906"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio de una variable aleatoria general discreta finita, con vector de probabilidades <em>v</em>. Llamando a <code>random_general_finite_discrete</code> con un segundo argumento <var>n</var>, se simulará una muestra aleatoria de tamaño <var>n</var>.
 </p>
@@ -2261,17 +2166,17 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_binomial</b><i> (<var>x</var>,<var>n</var>,<var>p</var>)</i>
-<a name="IDX1903"></a>
+<a name="IDX1907"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>cdf_binomial</b><i> (<var>x</var>,<var>n</var>,<var>p</var>)</i>
-<a name="IDX1904"></a>
+<a name="IDX1908"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) cdf_binomial(5,7,1/6);
@@ -2285,60 +2190,60 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_binomial</b><i> (<var>q</var>,<var>n</var>,<var>p</var>)</i>
-<a name="IDX1905"></a>
+<a name="IDX1909"></a>
 </dt>
-<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo; en otras palabras, se trata de la inversa de  <code>cdf_binomial</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo; en otras palabras, se trata de la inversa de  <code>cdf_binomial</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>mean_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1906"></a>
+<a name="IDX1910"></a>
 </dt>
-<dd><p>Devuelve la media de  una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la media de  una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1907"></a>
+<a name="IDX1911"></a>
 </dt>
-<dd><p>Devuelve la varianza de  una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la varianza de  una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>std_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1908"></a>
+<a name="IDX1912"></a>
 </dt>
-<dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>skewness_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1909"></a>
+<a name="IDX1913"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1910"></a>
+<a name="IDX1914"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria binomial  <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria binomial  <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>random_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1911"></a>
+<a name="IDX1915"></a>
 </dt>
 <dt><u>Función:</u> <b>random_binomial</b><i> (<var>n</var>,<var>p</var>,<var>m</var>)</i>
-<a name="IDX1912"></a>
+<a name="IDX1916"></a>
 </dt>
-<dd><p>Devuelve un valor aleatorio  <i>Binomial</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> entero positivo. Llamando a  <code>random_binomial</code> con un tercer argumento <var>m</var>, se simulará una muestra aleatoria de tamaño  <var>m</var>.
+<dd><p>Devuelve un valor aleatorio  <i>Binomial</i><em>(n,p)</em>, con <em>0 \leq p \leq 1</em> y <em>n</em> entero positivo. Llamando a  <code>random_binomial</code> con un tercer argumento <var>m</var>, se simulará una muestra aleatoria de tamaño  <var>m</var>.
 </p>
 <p>El algoritmo de simulación es el descrito en Kachitvichyanukul, V. y Schmeiser, B.W. (1988) <var>Binomial Random Variate Generation</var>. Communications of the ACM, 31, Feb., 216.
 </p>
@@ -2348,7 +2253,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_poisson</b><i> (<var>x</var>,<var>m</var>)</i>
-<a name="IDX1913"></a>
+<a name="IDX1917"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria de <i>Poisson</i><em>(m)</em>, con <em>m&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2356,7 +2261,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_poisson</b><i> (<var>x</var>,<var>m</var>)</i>
-<a name="IDX1914"></a>
+<a name="IDX1918"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Poisson</i><em>(m)</em>, con <em>m&gt;0</em>.
 </p>
@@ -2370,7 +2275,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_poisson</b><i> (<var>q</var>,<var>m</var>)</i>
-<a name="IDX1915"></a>
+<a name="IDX1919"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Poisson</i><em>(m)</em>, con <em>m&gt;0</em>; en otras palabras, se trata de la inversa de  <code>cdf_poisson</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2378,7 +2283,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_poisson</b><i> (<var>m</var>)</i>
-<a name="IDX1916"></a>
+<a name="IDX1920"></a>
 </dt>
 <dd><p>Devuelve la media de una variable aleatoria de <i>Poisson</i><em>(m)</em>, con  <em>m&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2386,7 +2291,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_poisson</b><i> (<var>m</var>)</i>
-<a name="IDX1917"></a>
+<a name="IDX1921"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria de <i>Poisson</i><em>(m)</em>, con  <em>m&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2394,7 +2299,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_poisson</b><i> (<var>m</var>)</i>
-<a name="IDX1918"></a>
+<a name="IDX1922"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Poisson</i><em>(m)</em>, con <em>m&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2402,7 +2307,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_poisson</b><i> (<var>m</var>)</i>
-<a name="IDX1919"></a>
+<a name="IDX1923"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Poisson</i><em>(m)</em>, con <em>m&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2410,7 +2315,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_poisson</b><i> (<var>m</var>)</i>
-<a name="IDX1920"></a>
+<a name="IDX1924"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria de <i>Poisson</i><em>(m)</em>, con <em>m&gt;0</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2418,10 +2323,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_poisson</b><i> (<var>m</var>)</i>
-<a name="IDX1921"></a>
+<a name="IDX1925"></a>
 </dt>
 <dt><u>Función:</u> <b>random_poisson</b><i> (<var>m</var>,<var>n</var>)</i>
-<a name="IDX1922"></a>
+<a name="IDX1926"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <i>Poisson</i><em>(m)</em>, con <em>m&gt;0</em>. Llamando a  <code>random_poisson</code> con un segundo argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
@@ -2433,128 +2338,116 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_bernoulli</b><i> (<var>x</var>,<var>p</var>)</i>
-<a name="IDX1923"></a>
+<a name="IDX1927"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>.
 </p>
-<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la función de probabilidad de la binomial.
+<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) pdf_bernoulli(1,p);
-(%o2)                 pdf_binomial(1, 1, p)
-(%i3) assume(0&lt;p,p&lt;1)$ pdf_bernoulli(1,p);
-(%o4)                           p
+(%o2)                           p
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>cdf_bernoulli</b><i> (<var>x</var>,<var>p</var>)</i>
-<a name="IDX1924"></a>
+<a name="IDX1928"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>quantile_bernoulli</b><i> (<var>q</var>,<var>p</var>)</i>
-<a name="IDX1925"></a>
+<a name="IDX1929"></a>
 </dt>
-<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>; en otras palabras, se trata de la inversa de  <code>cdf_bernoulli</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>; en otras palabras, se trata de la inversa de  <code>cdf_bernoulli</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>mean_bernoulli</b><i> (<var>p</var>)</i>
-<a name="IDX1926"></a>
+<a name="IDX1930"></a>
 </dt>
-<dd><p>Devuelve la media de  una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>.
+<dd><p>Devuelve la media de  una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>.
 </p>
-<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la media de la binomial.
+<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) mean_bernoulli(p);
-(%o2)                  mean_binomial(1, p)
-(%i3) assume(0&lt;p,p&lt;1)$ mean_bernoulli(p);
-(%o4)                           p
+(%o2)                           p
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_bernoulli</b><i> (<var>p</var>)</i>
-<a name="IDX1927"></a>
+<a name="IDX1931"></a>
 </dt>
-<dd><p>Devuelve la varianza de  una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>.
+<dd><p>Devuelve la varianza de  una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>.
 </p>
-<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la varianza de la binomial.
+<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) var_bernoulli(p);
-(%o2)                  var_binomial(1, p)
-(%i3) assume(0&lt;p,p&lt;1)$ var_bernoulli(p);
-(%o4)                       (1 - p) p
+(%o2)                       (1 - p) p
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>std_bernoulli</b><i> (<var>p</var>)</i>
-<a name="IDX1928"></a>
+<a name="IDX1932"></a>
 </dt>
-<dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>.
+<dd><p>Devuelve la desviación típica de  una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>.
 </p>
-<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en la desviación típica de la binomial.
+<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) std_bernoulli(p);
-(%o2)                  std_binomial(1, p)
-(%i3) assume(0&lt;p,p&lt;1)$ std_bernoulli(p);
-(%o4)                  sqrt(1 - p) sqrt(p)
+(%o2)                           sqrt((1 - p) p)
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>skewness_bernoulli</b><i> (<var>p</var>)</i>
-<a name="IDX1929"></a>
+<a name="IDX1933"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>.
+<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>.
 </p>
-<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en el coeficiente de asimetría de la binomial.
+<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) skewness_bernoulli(p);
-(%o2)                skewness_binomial(1, p)
-(%i3) assume(0&lt;p,p&lt;1)$ skewness_bernoulli(p);
-                             1 - 2 p
-(%o4)                  -------------------
-                       sqrt(1 - p) sqrt(p)
+                                    1 - 2 p
+(%o2)                           ---------------
+                                sqrt((1 - p) p)
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_bernoulli</b><i> (<var>p</var>)</i>
-<a name="IDX1930"></a>
+<a name="IDX1934"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de curtosis una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>.
+<dd><p>Devuelve el coeficiente de curtosis una variable aleatoria de <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>.
 </p>
-<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>, por lo que si Maxima no tiene suficiente información para calcular el resultado, devolverá una forma nominal basada en el coeficiente de curtosis de la binomial.
+<p>La variable aleatoria <i>Bernoulli</i><em>(p)</em> equivale a una <i>Binomial</i><em>(1,p)</em>.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) kurtosis_bernoulli(p);
-(%o2)                kurtosis_binomial(1, p)
-(%i3) assume(0&lt;p,p&lt;1)$ kurtosis_bernoulli(p);
                          1 - 6 (1 - p) p
-(%o4)                    ---------------
+(%o2)                    ---------------
                             (1 - p) p
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>random_bernoulli</b><i> (<var>p</var>)</i>
-<a name="IDX1931"></a>
+<a name="IDX1935"></a>
 </dt>
 <dt><u>Función:</u> <b>random_bernoulli</b><i> (<var>p</var>,<var>n</var>)</i>
-<a name="IDX1932"></a>
+<a name="IDX1936"></a>
 </dt>
-<dd><p>Devuelve un valor aleatorio  <i>Bernoulli</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Llamando a  <code>random_bernoulli</code> con un segundo argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
+<dd><p>Devuelve un valor aleatorio  <i>Bernoulli</i><em>(p)</em>, con <em>0 \leq p \leq 1</em>. Llamando a  <code>random_bernoulli</code> con un segundo argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
 <p>Es aplicación directa de la función <code>random</code> de Maxima.
 </p>
@@ -2564,76 +2457,76 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_geometric</b><i> (<var>x</var>,<var>p</var>)</i>
-<a name="IDX1933"></a>
+<a name="IDX1937"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>cdf_geometric</b><i> (<var>x</var>,<var>p</var>)</i>
-<a name="IDX1934"></a>
+<a name="IDX1938"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>quantile_geometric</b><i> (<var>q</var>,<var>p</var>)</i>
-<a name="IDX1935"></a>
+<a name="IDX1939"></a>
 </dt>
-<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>; en otras palabras, se trata de la inversa de  <code>cdf_geometric</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>; en otras palabras, se trata de la inversa de  <code>cdf_geometric</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>mean_geometric</b><i> (<var>p</var>)</i>
-<a name="IDX1936"></a>
+<a name="IDX1940"></a>
 </dt>
-<dd><p>Devuelve la media de  una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la media de  una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_geometric</b><i> (<var>p</var>)</i>
-<a name="IDX1937"></a>
+<a name="IDX1941"></a>
 </dt>
-<dd><p>Devuelve la varianza de  una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la varianza de  una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>std_geometric</b><i> (<var>p</var>)</i>
-<a name="IDX1938"></a>
+<a name="IDX1942"></a>
 </dt>
-<dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>skewness_geometric</b><i> (<var>p</var>)</i>
-<a name="IDX1939"></a>
+<a name="IDX1943"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_geometric</b><i> (<var>p</var>)</i>
-<a name="IDX1940"></a>
+<a name="IDX1944"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria <i>Geométrica</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>random_geometric</b><i> (<var>p</var>)</i>
-<a name="IDX1941"></a>
+<a name="IDX1945"></a>
 </dt>
 <dt><u>Función:</u> <b>random_geometric</b><i> (<var>p</var>,<var>n</var>)</i>
-<a name="IDX1942"></a>
+<a name="IDX1946"></a>
 </dt>
-<dd><p>Devuelve un valor aleatorio <i>Geométrico</i><em>(p)</em>, con <em>0&lt;p&lt;1</em>. Llamando a  <code>random_geometric</code> con un segundo argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
+<dd><p>Devuelve un valor aleatorio <i>Geométrico</i><em>(p)</em>, con <em>0 &lt; p \leq 1</em>. Llamando a  <code>random_geometric</code> con un segundo argumento <var>n</var>, se simulará una muestra aleatoria de tamaño  <var>n</var>.
 </p>
 <p>El algoritmo está basado en la simulación de ensayos de Bernoulli.
 </p>
@@ -2643,7 +2536,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_discrete_uniform</b><i> (<var>x</var>,<var>n</var>)</i>
-<a name="IDX1943"></a>
+<a name="IDX1947"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2651,7 +2544,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>cdf_discrete_uniform</b><i> (<var>x</var>,<var>n</var>)</i>
-<a name="IDX1944"></a>
+<a name="IDX1948"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2659,7 +2552,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>quantile_discrete_uniform</b><i> (<var>q</var>,<var>n</var>)</i>
-<a name="IDX1945"></a>
+<a name="IDX1949"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo; en otras palabras, se trata de la inversa de  <code>cdf_discrete_uniform</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2667,7 +2560,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>mean_discrete_uniform</b><i> (<var>n</var>)</i>
-<a name="IDX1946"></a>
+<a name="IDX1950"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2675,7 +2568,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>var_discrete_uniform</b><i> (<var>n</var>)</i>
-<a name="IDX1947"></a>
+<a name="IDX1951"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2683,7 +2576,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>std_discrete_uniform</b><i> (<var>n</var>)</i>
-<a name="IDX1948"></a>
+<a name="IDX1952"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2691,7 +2584,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>skewness_discrete_uniform</b><i> (<var>n</var>)</i>
-<a name="IDX1949"></a>
+<a name="IDX1953"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2699,7 +2592,7 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_discrete_uniform</b><i> (<var>n</var>)</i>
-<a name="IDX1950"></a>
+<a name="IDX1954"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de curtosis de una variable aleatoria <i>Uniforme Discreta</i><em>(n)</em>, con <em>n</em> entero positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2707,10 +2600,10 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>random_discrete_uniform</b><i> (<var>n</var>)</i>
-<a name="IDX1951"></a>
+<a name="IDX1955"></a>
 </dt>
 <dt><u>Función:</u> <b>random_discrete_uniform</b><i> (<var>n</var>,<var>m</var>)</i>
-<a name="IDX1952"></a>
+<a name="IDX1956"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio  <em>Uniforme Discreto(n)</em>, con <em>n</em> entero positivo. Llamando a  <code>random_discrete_uniform</code> con un segundo argumento <var>m</var>, se simulará una muestra aleatoria de tamaño  <var>m</var>.
 </p>
@@ -2722,13 +2615,13 @@ Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 
 <dl>
 <dt><u>Función:</u> <b>pdf_hypergeometric</b><i> (<var>x</var>,<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1953"></a>
+<a name="IDX1957"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una 
 variable aleatoria <i>Hipergeométrica</i><em>(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> 
 enteros positivos y <em>n&lt;=n1+n2</em>. Siendo <var>n1</var> el número de objetos de la clase A, 
 <var>n2</var> el número de objetos de la clase B y <var>n</var> el tamaño de una muestra sin 
-reemplazamiento, esta función devuelve la probabilidad del suceso 
+reemplazo, esta función devuelve la probabilidad del suceso 
 &quot;extraer exactamente <var>x</var> objetos de la clase A&quot;.
 </p>
 <p>Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
@@ -2737,7 +2630,7 @@ reemplazamiento, esta función devuelve la probabilidad del suceso
 
 <dl>
 <dt><u>Función:</u> <b>cdf_hypergeometric</b><i> (<var>x</var>,<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1954"></a>
+<a name="IDX1958"></a>
 </dt>
 <dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución of una variable 
 aleatoria <i>Hipergeométrica</i><em>(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> enteros 
@@ -2749,7 +2642,7 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 
 <dl>
 <dt><u>Función:</u> <b>quantile_hypergeometric</b><i> (<var>q</var>,<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1955"></a>
+<a name="IDX1959"></a>
 </dt>
 <dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Hipergeométrica</i><em>(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> enteros positivos y <em>n&lt;=n1+n2</em>; en otras palabras, se trata de la inversa de  <code>cdf_hypergeometric</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2757,7 +2650,7 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 
 <dl>
 <dt><u>Función:</u> <b>mean_hypergeometric</b><i> (<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1956"></a>
+<a name="IDX1960"></a>
 </dt>
 <dd><p>Devuelve la media de  una variable aleatoria uniforme discreta <em>Hyp(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> enteros positivos y <em>n&lt;=n1+n2</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2765,7 +2658,7 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 
 <dl>
 <dt><u>Función:</u> <b>var_hypergeometric</b><i> (<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1957"></a>
+<a name="IDX1961"></a>
 </dt>
 <dd><p>Devuelve la varianza de  una variable aleatoria <i>Hipergeométrica</i><em>(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> enteros positivos y <em>n&lt;=n1+n2</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2773,7 +2666,7 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 
 <dl>
 <dt><u>Función:</u> <b>std_hypergeometric</b><i> (<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1958"></a>
+<a name="IDX1962"></a>
 </dt>
 <dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Hipergeométrica</i><em>(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> enteros positivos y <em>n&lt;=n1+n2</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2781,7 +2674,7 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 
 <dl>
 <dt><u>Función:</u> <b>skewness_hypergeometric</b><i> (<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1959"></a>
+<a name="IDX1963"></a>
 </dt>
 <dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Hipergeométrica</i><em>(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> enteros positivos y <em>n&lt;=n1+n2</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
@@ -2789,10 +2682,10 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 
 <dl>
 <dt><u>Función:</u> <b>random_hypergeometric</b><i> (<var>n1</var>,<var>n2</var>,<var>n</var>)</i>
-<a name="IDX1960"></a>
+<a name="IDX1964"></a>
 </dt>
 <dt><u>Función:</u> <b>random_hypergeometric</b><i> (<var>n1</var>,<var>n2</var>,<var>n</var>,<var>m</var>)</i>
-<a name="IDX1961"></a>
+<a name="IDX1965"></a>
 </dt>
 <dd><p>Devuelve un valor aleatorio <i>Hipergeométrico</i><em>(n1,n2,n)</em>, con <var>n1</var>, <var>n2</var> y <var>n</var> enteros positivos y <em>n&lt;=n1+n2</em>. Llamando a  <code>random_hypergeometric</code> con un cuarto argumento <var>m</var>, se simulará una muestra aleatoria de tamaño  <var>m</var>.
 </p>
@@ -2804,84 +2697,82 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 
 <dl>
 <dt><u>Función:</u> <b>pdf_negative_binomial</b><i> (<var>x</var>,<var>n</var>,<var>p</var>)</i>
-<a name="IDX1962"></a>
+<a name="IDX1966"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de probabilidad de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> y <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>cdf_negative_binomial</b><i> (<var>x</var>,<var>n</var>,<var>p</var>)</i>
-<a name="IDX1963"></a>
+<a name="IDX1967"></a>
 </dt>
-<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> positivo.
+<dd><p>Devuelve el valor correspondiente a <var>x</var> de la función de distribución de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> y <em>n</em> positivo.
 </p>
 <pre class="example">(%i1) load (distrib)$
 (%i2) cdf_negative_binomial(3,4,1/8);
                             3271
 (%o2)                      ------
                            524288
-(%i3) float(%);
-(%o3)              .006238937377929687
 </pre></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>quantile_negative_binomial</b><i> (<var>q</var>,<var>n</var>,<var>p</var>)</i>
-<a name="IDX1964"></a>
+<a name="IDX1968"></a>
 </dt>
-<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> positivo; en otras palabras, se trata de la inversa de  <code>cdf_negative_binomial</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el <var>q</var>-cuantil de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> y <em>n</em> positivo; en otras palabras, se trata de la inversa de  <code>cdf_negative_binomial</code>. El argumento <var>q</var> debe ser un número de <em>[0,1]</em>. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>mean_negative_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1965"></a>
+<a name="IDX1969"></a>
 </dt>
-<dd><p>Devuelve la media de  una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la media de  una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>var_negative_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1966"></a>
+<a name="IDX1970"></a>
 </dt>
-<dd><p>Devuelve la varianza de  una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la varianza de  una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>std_negative_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1967"></a>
+<a name="IDX1971"></a>
 </dt>
-<dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve la desviación típica de  una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>skewness_negative_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1968"></a>
+<a name="IDX1972"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el coeficiente de asimetría de una variable aleatoria <i>Binomial Negativa</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>kurtosis_negative_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1969"></a>
+<a name="IDX1973"></a>
 </dt>
-<dd><p>Devuelve el coeficiente de curtosis una variable aleatoria binomial negativa  <em>NB(n,p)</em>, con <em>0&lt;p&lt;1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
+<dd><p>Devuelve el coeficiente de curtosis una variable aleatoria binomial negativa  <em>NB(n,p)</em>, con <em>0 &lt; p \leq 1</em> and <em>n</em> positivo. Para hacer uso de esta función, ejecútese primero <code>load(distrib)</code>.
 </p></dd></dl>
 
 
 <dl>
 <dt><u>Función:</u> <b>random_negative_binomial</b><i> (<var>n</var>,<var>p</var>)</i>
-<a name="IDX1970"></a>
+<a name="IDX1974"></a>
 </dt>
 <dt><u>Función:</u> <b>random_negative_binomial</b><i> (<var>n</var>,<var>p</var>,<var>m</var>)</i>
-<a name="IDX1971"></a>
+<a name="IDX1975"></a>
 </dt>
-<dd><p>Devuelve un valor aleatorio <i>Binomial Negativo</i><em>(n,p)</em>, con <em>0&lt;p&lt;1</em> y <em>n</em> positivo. Llamando a  <code>random_negative_binomial</code> con un tercer argumento <var>m</var>, se simulará una muestra aleatoria de tamaño  <var>m</var>.
+<dd><p>Devuelve un valor aleatorio <i>Binomial Negativo</i><em>(n,p)</em>, con <em>0 &lt; p \leq 1</em> y <em>n</em> positivo. Llamando a  <code>random_negative_binomial</code> con un tercer argumento <var>m</var>, se simulará una muestra aleatoria de tamaño  <var>m</var>.
 </p>
 <p>Algoritmo descrito en Devroye, L. (1986) <var>Non-Uniform Random Variate Generation</var>. Springer Verlag, p. 480.
 </p>
@@ -2906,7 +2797,7 @@ positivos y <em>n&lt;=n1+n2</em>. Véase <code>pdf_hypergeometric</code> para una
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>mayo, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

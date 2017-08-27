@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 64. interpol</title>
+<title>Maxima 5.40.0 Manual: 64. interpol</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 64. interpol">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 64. interpol">
+<meta name="description" content="Maxima 5.40.0 Manual: 64. interpol">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 64. interpol">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,50 +66,50 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="interpol_002dpkg"></a>
-<a name="SEC309"></a>
+<a name="SEC310"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_63.html#SEC308" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC310" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_63.html#SEC309" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC311" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_63.html#SEC307" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_63.html#SEC308" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_65.html#SEC312" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_65.html#SEC313" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 64. interpol </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC310">64.1 Introduction to interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC311">64.1 Introduction to interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC311">64.2 Functions and Variables for interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC312">64.2 Functions and Variables for interpol</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-interpol"></a>
 </p><hr size="6">
 <a name="Introduction-to-interpol"></a>
-<a name="SEC310"></a>
+<a name="SEC311"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC309" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC311" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC310" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC312" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC309" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC309" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_65.html#SEC312" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC310" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC310" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_65.html#SEC313" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 64.1 Introduction to interpol </h2>
@@ -129,21 +129,21 @@ splines methods for polynomial interpolation.
 <p><a name="Item_003a-Functions-and-Variables-for-interpol"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-interpol"></a>
-<a name="SEC311"></a>
+<a name="SEC312"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC310" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_65.html#SEC312" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC311" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_65.html#SEC313" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC309" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC309" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_65.html#SEC312" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC310" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC310" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_65.html#SEC313" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 64.2 Functions and Variables for interpol </h2>
@@ -153,7 +153,7 @@ splines methods for polynomial interpolation.
 <a name="Item_003a-lagrange"></a>
 </p><dl>
 <dt><u>Function:</u> <b>lagrange</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lagrange</tt> (<var>points</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lagrange</tt> (<var>points</var>, <var>option</var>)</i>
-<a name="IDX2241"></a>
+<a name="IDX2245"></a>
 </dt>
 <dd><p>Computes the polynomial interpolation by the Lagrangian method. Argument <var>points</var> must be either:
 </p>
@@ -261,7 +261,7 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <a name="Item_003a-charfun2"></a>
 </p><dl>
 <dt><u>Function:</u> <b>charfun2</b><i> (<var>x</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX2242"></a>
+<a name="IDX2246"></a>
 </dt>
 <dd><p>Returns <code>true</code> if number <var>x</var> belongs to the interval <em>[a, b)</em>, and <code>false</code> otherwise.
 </p>
@@ -277,7 +277,7 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <a name="Item_003a-linearinterpol"></a>
 </p><dl>
 <dt><u>Function:</u> <b>linearinterpol</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>linearinterpol</tt> (<var>points</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>linearinterpol</tt> (<var>points</var>, <var>option</var>)</i>
-<a name="IDX2243"></a>
+<a name="IDX2247"></a>
 </dt>
 <dd><p>Computes the polynomial interpolation by the linear method. Argument <var>points</var> must be either:
 </p>
@@ -357,7 +357,7 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <a name="Item_003a-cspline"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cspline</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>cspline</tt> (<var>points</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>cspline</tt> (<var>points</var>, <var>option1</var>, <var>option2</var>, ...)</i>
-<a name="IDX2244"></a>
+<a name="IDX2248"></a>
 </dt>
 <dd><p>Computes the polynomial interpolation by the cubic splines method. Argument <var>points</var> must be either:
 </p>
@@ -467,7 +467,7 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <a name="Item_003a-ratinterpol"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ratinterpol</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ratinterpol</tt> (<var>points</var>, <var>numdeg</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>ratinterpol</tt> (<var>points</var>, <var>numdeg</var>, <var>option1</var>)</i>
-<a name="IDX2245"></a>
+<a name="IDX2249"></a>
 </dt>
 <dd><p>Generates a rational interpolator for data given by <var>points</var> and the degree of the numerator
 being equal to <var>numdeg</var>; the degree of the denominator is calculated
@@ -490,7 +490,7 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <code>'varname</code>, default <code>'x</code>, is the name of the independent variable.
 </li></ul>
 
-<p>See also <code><a href="#lagrange">lagrange</a></code>,  <code><a href="#linearinterpol">linearinterpol</a></code>,  <code><a href="#cspline">cspline</a></code>,  <code><a href="maxima_70.html#minpack_005flsquares">minpack_lsquares</a></code>,  and <a href="maxima_66.html#SEC315">lbfgs</a>
+<p>See also <code><a href="#lagrange">lagrange</a></code>,  <code><a href="#linearinterpol">linearinterpol</a></code>,  <code><a href="#cspline">cspline</a></code>,  <code><a href="maxima_70.html#minpack_005flsquares">minpack_lsquares</a></code>,  and <a href="maxima_66.html#SEC316">lbfgs</a>
 </p>
 <p>Examples:
 </p>
@@ -515,8 +515,8 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <p><a name="Item_003a-lapack_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC309" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_65.html#SEC312" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC310" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_65.html#SEC313" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -524,12 +524,12 @@ a list of numbers, <code>p: [4,6,3]</code>, in which case the abscissas will be 
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

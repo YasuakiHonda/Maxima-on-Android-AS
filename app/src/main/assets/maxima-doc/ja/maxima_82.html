@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 82. stats</title>
+<title>Maxima 5.40.0 Manual: 82. stats</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 82. stats">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 82. stats">
+<meta name="description" content="Maxima 5.40.0 Manual: 82. stats">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 82. stats">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,55 +92,56 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="stats_002dpkg"></a>
-<a name="SEC380"></a>
+<a name="SEC381"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_81.html#SEC379" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC381" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_81.html#SEC380" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC382" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 82. stats </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC381">82.1 Introduction to stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC382">82.1 Introduction to stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC382">82.2 Functions and Variables for inference_result</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC383">82.2 Functions and Variables for inference_result</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC383">82.3 Functions and Variables for stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC384">82.3 Functions and Variables for stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC384">82.4 Functions and Variables for special distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC385">82.4 Functions and Variables for special distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-stats"></a>
 </p><hr size="6">
 <a name="Introduction-to-stats"></a>
-<a name="SEC381"></a>
+<a name="SEC382"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC380" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC382" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC381" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC383" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.1 Introduction to stats </h2>
@@ -178,21 +179,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Functions-and-Variables-for-inference_005fresult"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-inference_005fresult"></a>
-<a name="SEC382"></a>
+<a name="SEC383"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC381" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC383" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC382" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC384" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.2 Functions and Variables for inference_result </h2>
@@ -201,7 +202,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-inference_005fresult"></a>
 </p><dl>
 <dt><u>関数:</u> <b>inference_result</b><i> (<var>title</var>, <var>values</var>, <var>numbers</var>)</i>
-<a name="IDX2417"></a>
+<a name="IDX2421"></a>
 </dt>
 <dd><p>statsの関数が返す型の <code>inference_result</code>オブジェクトを構成します。
 引数 <var>title</var>は手続き名の文字列です;
@@ -258,7 +259,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-inferencep"></a>
 </p><dl>
 <dt><u>関数:</u> <b>inferencep</b><i> (<var>obj</var>)</i>
-<a name="IDX2418"></a>
+<a name="IDX2422"></a>
 </dt>
 <dd><p><var>obj</var>が <code>inference_result</code>オブジェクトか否かに依存して、
 <code>true</code>か <code>false</code>を返します。
@@ -279,7 +280,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-items_005finference"></a>
 </p><dl>
 <dt><u>関数:</u> <b>items_inference</b><i> (<var>obj</var>)</i>
-<a name="IDX2419"></a>
+<a name="IDX2423"></a>
 </dt>
 <dd><p><var>obj</var>に格納された項目名のリストを返します。
 <var>obj</var>は <code>inference_result</code>オブジェクトでなければいけません。
@@ -315,7 +316,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-take_005finference"></a>
 </p><dl>
 <dt><u>関数:</u> <b>take_inference</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>take_inference</tt> (<var>n</var>, <var>obj</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>take_inference</tt> (<var>name</var>, <var>obj</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>take_inference</tt> (<var>list</var>, <var>obj</var>)</i>
-<a name="IDX2420"></a>
+<a name="IDX2424"></a>
 </dt>
 <dd><p>もし <var>n</var>が正の整数なら、
 <var>obj</var>に格納された <var>n</var>番目の値を返します。
@@ -376,21 +377,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Functions-and-Variables-for-stats"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-stats"></a>
-<a name="SEC383"></a>
+<a name="SEC384"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC382" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC384" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC383" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC385" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.3 Functions and Variables for stats </h2>
@@ -400,7 +401,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-stats_005fnumer"></a>
 </p><dl>
 <dt><u>オプション変数:</u> <b>stats_numer</b>
-<a name="IDX2421"></a>
+<a name="IDX2425"></a>
 </dt>
 <dd><p>デフォルト値: <code>true</code>
 </p>
@@ -423,7 +424,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-test_005fmean"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_mean</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_mean</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_mean</tt> (<var>x</var>, <var>options</var> ...)</i>
-<a name="IDX2422"></a>
+<a name="IDX2426"></a>
 </dt>
 <dd><p>これは平均t検定です。
 引数 <var>x</var>は1次元標本を含むリストか列行列です。
@@ -564,7 +565,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-test_005fmeans_005fdifference"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_means_difference</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_means_difference</tt> (<var>x1</var>, <var>x2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_means_difference</tt> (<var>x1</var>, <var>x2</var>, <var>options</var> ...)</i>
-<a name="IDX2423"></a>
+<a name="IDX2427"></a>
 </dt>
 <dd><p>これは2つの標本の平均の差 <var>t</var>検定です。
 引数 <var>x1</var>と <var>x2</var>は2つの独立標本を含むリストか列行列です。
@@ -714,7 +715,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-test_005fvariance"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_variance</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance</tt> (<var>x</var>, <var>options</var>, ...)</i>
-<a name="IDX2424"></a>
+<a name="IDX2428"></a>
 </dt>
 <dd><p>これは分散 <var>chi^2</var>検定です。
 引数 <var>x</var>は
@@ -817,7 +818,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-test_005fvariance_005fratio"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_variance_ratio</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance_ratio</tt> (<var>x1</var>, <var>x2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance_ratio</tt> (<var>x1</var>, <var>x2</var>, <var>options</var> ...)</i>
-<a name="IDX2425"></a>
+<a name="IDX2429"></a>
 </dt>
 <dd><p>これは2つの正規母集団の分散比 <var>F</var>検定です。
 引数 <var>x1</var>と <var>x2</var>は
@@ -919,7 +920,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-test_005fproportion"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_proportion</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportion</tt> (<var>x</var>, <var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportion</tt> (<var>x</var>, <var>n</var>, <var>options</var> ...)</i>
-<a name="IDX2426"></a>
+<a name="IDX2430"></a>
 </dt>
 <dd><p>出現率推定。
 引数 <var>x</var>は
@@ -1051,7 +1052,7 @@ Yates補正が適用されるかどうかを示します。
 <a name="Item_003a-test_005fproportions_005fdifference"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_proportions_difference</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportions_difference</tt> (<var>x1</var>, <var>n1</var>, <var>x2</var>, <var>n2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportions_difference</tt> (<var>x1</var>, <var>n1</var>, <var>x2</var>, <var>n2</var>, <var>options</var> &hellip;)</i>
-<a name="IDX2427"></a>
+<a name="IDX2431"></a>
 </dt>
 <dd><p>2つの出現率の差の推定。
 引数 <var>x1</var>は
@@ -1170,7 +1171,7 @@ p値に従うと、対立を受け入れる十分な証拠はありません。
 <a name="Item_003a-test_005fsign"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_sign</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_sign</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_sign</tt> (<var>x</var>, <var>options</var> &hellip;)</i>
-<a name="IDX2428"></a>
+<a name="IDX2432"></a>
 </dt>
 <dd><p>これは連続母集団のメジアンに関するノンパラメトリック符号検定です。
 引数 <var>x</var>は1次元標本を含むリストか列行列です。
@@ -1246,7 +1247,7 @@ p値に従うと、対立を受け入れる十分な証拠はありません。
 <a name="Item_003a-test_005fsigned_005frank"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_signed_rank</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_signed_rank</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_signed_rank</tt> (<var>x</var>, <var>options</var> &hellip;)</i>
-<a name="IDX2429"></a>
+<a name="IDX2433"></a>
 </dt>
 <dd><p>これは
 連続母集団のメジアンに関する推定を行う
@@ -1355,7 +1356,7 @@ since there are ties.
 <a name="Item_003a-test_005frank_005fsum"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_rank_sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_rank_sum</tt> (<var>x1</var>, <var>x2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_rank_sum</tt> (<var>x1</var>, <var>x2</var>, <var>option</var>)</i>
-<a name="IDX2430"></a>
+<a name="IDX2434"></a>
 </dt>
 <dd><p>これは
 2つの連続母集団のメジアンを比較するWilcoxon-Mann-Whitney検定です。
@@ -1459,7 +1460,7 @@ since there are ties.
 <a name="Item_003a-test_005fnormality"></a>
 </p><dl>
 <dt><u>関数:</u> <b>test_normality</b><i> (<var>x</var>)</i>
-<a name="IDX2431"></a>
+<a name="IDX2435"></a>
 </dt>
 <dd><p>正規性のShapiro-Wilk検定。
 引数 <var>x</var>は
@@ -1509,7 +1510,7 @@ since there are ties.
 <a name="Item_003a-linear_005fregression"></a>
 </p><dl>
 <dt><u>関数:</u> <b>linear_regression</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>linear_regression</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>linear_regression</tt> (<var>x</var> <var>option</var>)</i>
-<a name="IDX2432"></a>
+<a name="IDX2436"></a>
 </dt>
 <dd><p>重回帰 <em>y_i = b0 + b1*x_1i + b2*x_2i + ... + bk*x_ki + u_i</em>。
 ここで <em>u_i</em>は <em>N(0,sigma)</em>個の独立確率変数です。
@@ -1638,21 +1639,21 @@ v_distribution, residuals, adc, aic, bic]
 <p><a name="Item_003a-Functions-and-Variables-for-special-distributions"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-special-distributions"></a>
-<a name="SEC384"></a>
+<a name="SEC385"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC383" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC384" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.4 Functions and Variables for special distributions </h2>
@@ -1662,7 +1663,7 @@ v_distribution, residuals, adc, aic, bic]
 <a name="Item_003a-pdf_005fsigned_005frank"></a>
 </p><dl>
 <dt><u>関数:</u> <b>pdf_signed_rank</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2433"></a>
+<a name="IDX2437"></a>
 </dt>
 <dd><p>符号順位統計の正確確率分布の確率密度関数。
 引数 <var>x</var>は実数であり、
@@ -1681,7 +1682,7 @@ v_distribution, residuals, adc, aic, bic]
 <a name="Item_003a-cdf_005fsigned_005frank"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cdf_signed_rank</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2434"></a>
+<a name="IDX2438"></a>
 </dt>
 <dd><p>符号順位統計の正確確率分布の累積密度関数。
 引数 <var>x</var>は実数であり、
@@ -1700,7 +1701,7 @@ v_distribution, residuals, adc, aic, bic]
 <a name="Item_003a-pdf_005frank_005fsum"></a>
 </p><dl>
 <dt><u>関数:</u> <b>pdf_rank_sum</b><i> (<var>x</var>, <var>n</var>, <var>m</var>)</i>
-<a name="IDX2435"></a>
+<a name="IDX2439"></a>
 </dt>
 <dd><p>順位和統計の正確確率分布の確率密度関数。
 引数 <var>x</var>は実数であり、
@@ -1719,7 +1720,7 @@ v_distribution, residuals, adc, aic, bic]
 <a name="Item_003a-cdf_005frank_005fsum"></a>
 </p><dl>
 <dt><u>関数:</u> <b>cdf_rank_sum</b><i> (<var>x</var>, <var>n</var>, <var>m</var>)</i>
-<a name="IDX2436"></a>
+<a name="IDX2440"></a>
 </dt>
 <dd><p>順位和統計の正確確率分布の累積密度関数。
 引数 <var>x</var>は実数であり、
@@ -1737,8 +1738,8 @@ v_distribution, residuals, adc, aic, bic]
 <p><a name="Item_003a-stirling_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1746,12 +1747,12 @@ v_distribution, residuals, adc, aic, bic]
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

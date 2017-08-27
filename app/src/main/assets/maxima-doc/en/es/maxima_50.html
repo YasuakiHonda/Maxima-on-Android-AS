@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
+<!-- Created on mayo, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.39.0: 50. ezunits</title>
+<title>Manual de Maxima 5.40.1.gd04f9f4: 50. ezunits</title>
 
-<meta name="description" content="Manual de Maxima 5.39.0: 50. ezunits">
-<meta name="keywords" content="Manual de Maxima 5.39.0: 50. ezunits">
+<meta name="description" content="Manual de Maxima 5.40.1.gd04f9f4: 50. ezunits">
+<meta name="keywords" content="Manual de Maxima 5.40.1.gd04f9f4: 50. ezunits">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -438,7 +438,7 @@ Computing conversions to base units; may take a moment.
 
 <dl>
 <dt><u>Operador:</u> <b>`</b>
-<a name="IDX2202"></a>
+<a name="IDX2206"></a>
 </dt>
 <dd><p>Operador de magnitud dimensional. 
 Una expresión tal como <em>a ` b</em> representa una magnitud dimensional, siendo
@@ -533,7 +533,7 @@ dimensiones; estos términos serán sumados sin emitirse mensaje de error.
 
 <dl>
 <dt><u>Operador:</u> <b>`</b><i>`</i>
-<a name="IDX2203"></a>
+<a name="IDX2207"></a>
 </dt>
 <dd><p>Operador de conversión de unidades.
 Una expresión tal como <em>a ` b `` c</em> convierte las unidades <code>b</code>
@@ -699,13 +699,13 @@ Computing conversions to base units; may take a moment.
 
 <dl>
 <dt><u>Función:</u> <b>constvalue</b><i> (<var>x</var>)</i>
-<a name="IDX2204"></a>
+<a name="IDX2208"></a>
 </dt>
 <dt><u>Función:</u> <b>declare_constvalue</b><i> (<var>a</var>, <var>x</var>)</i>
-<a name="IDX2205"></a>
+<a name="IDX2209"></a>
 </dt>
 <dt><u>Función:</u> <b>remove_constvalue</b><i> (<var>a</var>)</i>
-<a name="IDX2206"></a>
+<a name="IDX2210"></a>
 </dt>
 <dd><p>Devuelve la constante declarada para un símbolo.
 Los valores constantes se declaran con <code>declare_constvalue</code>.
@@ -751,10 +751,10 @@ de las constantes físicas.
 
 <dl>
 <dt><u>Función:</u> <b>units</b><i> (<var>x</var>)</i>
-<a name="IDX2207"></a>
+<a name="IDX2211"></a>
 </dt>
 <dt><u>Función:</u> <b>declare_units</b><i> (<var>a</var>, <var>u</var>)</i>
-<a name="IDX2208"></a>
+<a name="IDX2212"></a>
 </dt>
 <dd><p>Devuelve las unidades de la magnitud dimensional <var>x</var>,
 o 1 en caso de que <var>x</var> sea adimensional.
@@ -821,10 +821,10 @@ debe devolver <var>u</var>, siendo <var>u</var> una expresión.
 
 <dl>
 <dt><u>Función:</u> <b>qty</b><i> (<var>x</var>)</i>
-<a name="IDX2209"></a>
+<a name="IDX2213"></a>
 </dt>
 <dt><u>Función:</u> <b>declare_qty</b><i> (<var>a</var>, <var>x</var>)</i>
-<a name="IDX2210"></a>
+<a name="IDX2214"></a>
 </dt>
 <dd><p><code>qty</code> devuelve la parte adimensional de la magnitud dimensional <var>x</var>,
 o <var>x</var>, si <var>x</var> es adimensional.
@@ -876,7 +876,7 @@ debe devolver <var>x</var>, siendo <var>x</var> una magnitud dimensional.
 
 <dl>
 <dt><u>Función:</u> <b>unitp</b><i> (<var>x</var>)</i>
-<a name="IDX2211"></a>
+<a name="IDX2215"></a>
 </dt>
 <dd><p>Devuelve <code>true</code> si <var>x</var> es una expresión dimensional
 literal, un símbolo declarado como dimensional o
@@ -919,7 +919,7 @@ principal se declara dimensional.
 
 <dl>
 <dt><u>Función:</u> <b>declare_unit_conversion</b><i> (<var>u</var> = <var>v</var>, ...)</i>
-<a name="IDX2212"></a>
+<a name="IDX2216"></a>
 </dt>
 <dd><p>Añade las ecuaciones <var>u</var> = <var>v</var>, ... a la lista de conversiones
 de unidades conocidas por el operador de conversión <em>``</em>.
@@ -968,10 +968,10 @@ Computing conversions to base units; may take a moment.
 
 <dl>
 <dt><u>Función:</u> <b>declare_dimensions</b><i> (<var>a_1</var>, <var>d_1</var>, ..., <var>a_n</var>, <var>d_n</var>)</i>
-<a name="IDX2213"></a>
+<a name="IDX2217"></a>
 </dt>
 <dt><u>Función:</u> <b>remove_dimensions</b><i> (<var>a_1</var>, ..., <var>a_n</var>)</i>
-<a name="IDX2214"></a>
+<a name="IDX2218"></a>
 </dt>
 <dd><p><code>declare_dimensions</code> declara <var>a_1</var>, ..., <var>a_n</var>
 con las dimensiones <var>d_1</var>, ..., <var>d_n</var>, respectivamente.
@@ -1005,13 +1005,13 @@ declara de dimensión <var>d_k</var>.
 
 <dl>
 <dt><u>Función:</u> <b>declare_fundamental_dimensions</b><i> (<var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ...)</i>
-<a name="IDX2215"></a>
+<a name="IDX2219"></a>
 </dt>
 <dt><u>Función:</u> <b>remove_fundamental_dimensions</b><i> (<var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ...)</i>
-<a name="IDX2216"></a>
+<a name="IDX2220"></a>
 </dt>
 <dt><u>Variable global:</u> <b>fundamental_dimensions</b>
-<a name="IDX2217"></a>
+<a name="IDX2221"></a>
 </dt>
 <dd><p><code>declare_fundamental_dimensions</code> declara dimensiones fundamentales.
 Los símbolos <var>d_1</var>, <var>d_2</var>, <var>d_3</var>, ... se añaden a la lista
@@ -1044,10 +1044,10 @@ Por defecto, la lista comprende algunas dimensiones físicas.
 
 <dl>
 <dt><u>Función:</u> <b>declare_fundamental_units</b><i> (<var>u_1</var>, <var>d_1</var>, ..., <var>u_n</var>, <var>d_n</var>)</i>
-<a name="IDX2218"></a>
+<a name="IDX2222"></a>
 </dt>
 <dt><u>Función:</u> <b>remove_fundamental_units</b><i> (<var>u_1</var>, ..., <var>u_n</var>)</i>
-<a name="IDX2219"></a>
+<a name="IDX2223"></a>
 </dt>
 <dd><p><code>declare_fundamental_units</code> declara <var>u_1</var>, ..., <var>u_n</var>
 de dimensiones <var>d_1</var>, ..., <var>d_n</var>, respectivamente.
@@ -1089,10 +1089,10 @@ y <code>fundamental_units(<var>d_k</var>)</code> devuelve <var>u_k</var> para ca
 
 <dl>
 <dt><u>Función:</u> <b>dimensions</b><i> (<var>x</var>)</i>
-<a name="IDX2220"></a>
+<a name="IDX2224"></a>
 </dt>
 <dt><u>Función:</u> <b>dimensions_as_list</b><i> (<var>x</var>)</i>
-<a name="IDX2221"></a>
+<a name="IDX2225"></a>
 </dt>
 <dd><p><code>dimensions</code> devuelve las dimensiones de la magnitud dimensional <var>x</var>
 en forma de expresión que contiene productos y potencias de dimensiones
@@ -1143,10 +1143,10 @@ fundamentales correspondientes.
 
 <dl>
 <dt><u>Función:</u> <b>fundamental_units</b><i> (<var>x</var>)</i>
-<a name="IDX2222"></a>
+<a name="IDX2226"></a>
 </dt>
 <dt><u>Función:</u> <b>fundamental_units</b><i> ()</i>
-<a name="IDX2223"></a>
+<a name="IDX2227"></a>
 </dt>
 <dd><p><code>fundamental_units(<var>x</var>)</code> devuelve las unidades
 asociadas a las dimensiones fundamentales de <var>x</var>,
@@ -1185,7 +1185,7 @@ fundamentales conocidas, tal como fueron declaradas por <code>declare_fundamenta
 
 <dl>
 <dt><u>Función:</u> <b>dimensionless</b><i> (<var>L</var>)</i>
-<a name="IDX2224"></a>
+<a name="IDX2228"></a>
 </dt>
 <dd><p>Devuelve una expresión sin dimensiones que se puede formar
 a partir de una lista <var>L</var> de cantidades dimensionales 
@@ -1221,7 +1221,7 @@ constante de estructura fina.
 
 <dl>
 <dt><u>Función:</u> <b>natural_unit</b><i> (<var>expr</var>, [<var>v_1</var>, ..., <var>v_n</var>])</i>
-<a name="IDX2225"></a>
+<a name="IDX2229"></a>
 </dt>
 <dd><p>Busca los exponentes <var>e_1</var>, ..., <var>e_n</var> tales que
 <code>dimension(<var>expr</var>) = dimension(<var>v_1</var>^<var>e_1</var> ... <var>v_n</var>^<var>e_n</var>)</code>.
@@ -1251,7 +1251,7 @@ constante de estructura fina.
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>mayo, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

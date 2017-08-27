@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 54. dynamics</title>
+<title>Maxima 5.40.0 Manual: 54. dynamics</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 54. dynamics">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 54. dynamics">
+<meta name="description" content="Maxima 5.40.0 Manual: 54. dynamics">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 54. dynamics">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,52 +66,52 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="dynamics_002dpkg"></a>
-<a name="SEC263"></a>
+<a name="SEC264"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_53.html#SEC262" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC264" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_53.html#SEC263" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC265" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 54. dynamics </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC264">54.1 The dynamics package</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC265">54.1 The dynamics package</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC265">54.2 Graphical analysis of discrete dynamical systems</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC266">54.2 Graphical analysis of discrete dynamical systems</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC266">54.3 Visualization with VTK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC267">54.3 Visualization with VTK</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-The-dynamics-package"></a>
 </p><hr size="6">
 <a name="The-dynamics-package"></a>
-<a name="SEC264"></a>
+<a name="SEC265"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC263" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC265" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC264" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC266" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.1 The dynamics package </h2>
@@ -119,8 +119,8 @@ img {max-width:80%; max-height: 80%}
 <p>Package <code>dynamics</code> includes functions for 3D visualization,
 animations, graphical analysis of differential and difference equations
 and numerical solution of differential equations. The functions for
-differential equations are described in the section on <code><a href="maxima_22.html#SEC108">Numerical Methods</a></code> and the functions to plot the Mandelbrot and Julia
-sets are described in the section on <code><a href="maxima_12.html#SEC62">Plotting</a></code>.
+differential equations are described in the section on <code><a href="maxima_22.html#SEC109">Numerical Methods</a></code> and the functions to plot the Mandelbrot and Julia
+sets are described in the section on <code><a href="maxima_12.html#SEC63">Plotting</a></code>.
 </p>
 <p>All the functions in this package will be loaded automatically the first
 time they are used.
@@ -135,21 +135,21 @@ time they are used.
 <p><a name="Item_003a-Graphical-analysis-of-discrete-dynamical-systems"></a>
 </p><hr size="6">
 <a name="Graphical-analysis-of-discrete-dynamical-systems"></a>
-<a name="SEC265"></a>
+<a name="SEC266"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC264" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC265" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.2 Graphical analysis of discrete dynamical systems </h2>
@@ -158,7 +158,7 @@ time they are used.
 <a name="Item_003a-chaosgame"></a>
 </p><dl>
 <dt><u>Function:</u> <b>chaosgame</b><i> ([[<var>x1</var>, <var>y1</var>]&hellip;[<var>xm</var>, <var>ym</var>]], [<var>x0</var>, <var>y0</var>], <var>b</var>, <var>n</var>, <var>options</var>, &hellip;);</i>
-<a name="IDX1922"></a>
+<a name="IDX1926"></a>
 </dt>
 <dd><p>Implements the so-called chaos game: the initial point (<var>x0</var>,
 <var>y0</var>) is plotted and then one of the <var>m</var> points
@@ -188,7 +188,7 @@ same as for <code><a href="maxima_12.html#plot2d">plot2d</a></code>.
 <a name="Item_003a-evolution"></a>
 </p><dl>
 <dt><u>Function:</u> <b>evolution</b><i> (<var>F</var>, <var>y0</var>, <var>n</var>,  &hellip;, <var>options</var>, &hellip;);</i>
-<a name="IDX1923"></a>
+<a name="IDX1927"></a>
 </dt>
 <dd><p>Draws <var>n+1</var> points in a two-dimensional graph, where the horizontal
 coordinates of the points are the integers 0, 1, 2, ..., <var>n</var>, and
@@ -220,7 +220,7 @@ depend on <var>y</var>, but any other variable can be used),
 <a name="Item_003a-evolution2d"></a>
 </p><dl>
 <dt><u>Function:</u> <b>evolution2d</b><i> ([<var>F</var>, <var>G</var>], [<var>u</var>, <var>v</var>], [<var>u0</var>, <var>y0</var>], <var>n</var>, <var>options</var>, &hellip;);</i>
-<a name="IDX1924"></a>
+<a name="IDX1928"></a>
 </dt>
 <dd><p>Shows, in a two-dimensional plot, the first <var>n+1</var> points in the
 sequence of points defined by the two-dimensional discrete dynamical
@@ -259,7 +259,7 @@ same as for <code><a href="maxima_12.html#plot2d">plot2d</a></code>.
 <a name="Item_003a-ifs"></a>
 </p><dl>
 <dt><u>Function:</u> <b>ifs</b><i> ([<var>r1</var>, &hellip;, <var>rm</var>], [<var>A1</var>,&hellip;, <var>Am</var>], [[<var>x1</var>, <var>y1</var>], &hellip;, [<var>xm</var>, <var>ym</var>]], [<var>x0</var>, <var>y0</var>], <var>n</var>, <var>options</var>, &hellip;);</i>
-<a name="IDX1925"></a>
+<a name="IDX1929"></a>
 </dt>
 <dd><p>Implements the Iterated Function System method. This method is similar
 to the method described in the function <code><a href="#chaosgame">chaosgame</a></code>. but instead of
@@ -301,7 +301,7 @@ options are the same as for <code><a href="maxima_12.html#plot2d">plot2d</a></co
 <a name="Item_003a-orbits"></a>
 </p><dl>
 <dt><u>Function:</u> <b>orbits</b><i> (<var>F</var>, <var>y0</var>, <var>n1</var>, <var>n2</var>, [<var>x</var>, <var>x0</var>, <var>xf</var>, <var>xstep</var>], <var>options</var>, &hellip;);</i>
-<a name="IDX1926"></a>
+<a name="IDX1930"></a>
 </dt>
 <dd><p>Draws the orbits diagram for a family of one-dimensional
 discrete dynamical systems, with one parameter <var>x</var>; that kind of
@@ -345,7 +345,7 @@ in the vertical direction.
 <a name="Item_003a-staircase"></a>
 </p><dl>
 <dt><u>Function:</u> <b>staircase</b><i> (<var>F</var>, <var>y0</var>, <var>n</var>,<var>options</var>,&hellip;);</i>
-<a name="IDX1927"></a>
+<a name="IDX1931"></a>
 </dt>
 <dd><p>Draws a staircase diagram for the sequence defined by the recurrence
 relation
@@ -377,21 +377,21 @@ reached. The options are the same as for <code><a href="maxima_12.html#plot2d">p
 <p><a name="Item_003a-Visualization-with-VTK"></a>
 </p><hr size="6">
 <a name="Visualization-with-VTK"></a>
-<a name="SEC266"></a>
+<a name="SEC267"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC265" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC267" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC266" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC268" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 54.3 Visualization with VTK </h2>
@@ -405,7 +405,7 @@ some system might come in a separate package).
 <a name="Item_003a-scene"></a>
 </p><dl>
 <dt><u>Function:</u> <b>scene</b><i> (<var>objects</var>, &hellip;, <var>options</var>, &hellip;);</i>
-<a name="IDX1928"></a>
+<a name="IDX1932"></a>
 </dt>
 <dd><p>Accepts an empty list or a list of several <code><a href="#scene_005fobjects">objects</a></code>
 and <code><a href="#scene_005foptions">options</a></code>. The program launches Xmaxima, which
@@ -465,21 +465,21 @@ option of plot2d.
 
 <p><a name="scene_005foptions"></a>
 </p><hr size="6">
-<a name="SEC267"></a>
+<a name="SEC268"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC266" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC268" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC267" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC269" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 54.3.1 Scene options </h3>
@@ -488,7 +488,7 @@ option of plot2d.
 </p>
 <dl>
 <dt><u>Scene option:</u> <b>azimuth</b><i> [azimuth, <var>angle</var>]</i>
-<a name="IDX1929"></a>
+<a name="IDX1933"></a>
 </dt>
 <dd><p>Default value: <code>135</code>
 </p>
@@ -507,7 +507,7 @@ direction of the y axis and the x axis will appear on the right.
 <a name="Item_003a-background"></a>
 </p><dl>
 <dt><u>Scene option:</u> <b>background</b><i> [background, <var>color</var>]</i>
-<a name="IDX1930"></a>
+<a name="IDX1934"></a>
 </dt>
 <dd><p>Default value: <code>black</code>
 </p>
@@ -525,7 +525,7 @@ hexadecimal red-green-blue strings (see the <code><a href="maxima_12.html#color"
 </p>
 <dl>
 <dt><u>Scene option:</u> <b>elevation</b><i> [elevation, <var>angle</var>]</i>
-<a name="IDX1931"></a>
+<a name="IDX1935"></a>
 </dt>
 <dd><p>Default value: <code>30</code>
 </p>
@@ -545,7 +545,7 @@ down from the horizontal.
 <a name="Item_003a-height"></a>
 </p><dl>
 <dt><u>Scene option:</u> <b>height</b><i> [height, <var>pixels</var>]</i>
-<a name="IDX1932"></a>
+<a name="IDX1936"></a>
 </dt>
 <dd><p>Default value: <code>500</code>
 </p>
@@ -563,7 +563,7 @@ positive integer number.
 <a name="Item_003a-restart"></a>
 </p><dl>
 <dt><u>Scene option:</u> <b>restart</b><i> [restart, <var>value</var>]</i>
-<a name="IDX1933"></a>
+<a name="IDX1937"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -582,7 +582,7 @@ end of the list is reached. Writing just &quot;restart&quot; is equivalent to
 <a name="Item_003a-tstep"></a>
 </p><dl>
 <dt><u>Scene option:</u> <b>tstep</b><i> [tstep, <var>time</var>]</i>
-<a name="IDX1934"></a>
+<a name="IDX1938"></a>
 </dt>
 <dd><p>Default value: <code>10</code>
 </p>
@@ -600,7 +600,7 @@ consecutive animation frames. <var>time</var> must be a real number.
 <a name="Item_003a-width"></a>
 </p><dl>
 <dt><u>Scene option:</u> <b>width</b><i> [width, <var>pixels</var>]</i>
-<a name="IDX1935"></a>
+<a name="IDX1939"></a>
 </dt>
 <dd><p>Default value: <code>500</code>
 </p>
@@ -618,7 +618,7 @@ positive integer number.
 <a name="Item_003a-windowname"></a>
 </p><dl>
 <dt><u>Scene option:</u> <b>windowname</b><i> [windowtitle, <var>name</var>]</i>
-<a name="IDX1936"></a>
+<a name="IDX1940"></a>
 </dt>
 <dd><p>Default value: <code>.scene</code>
 </p>
@@ -637,7 +637,7 @@ value <code>.scene</code> implies that a new top level window will be created.
 <a name="Item_003a-windowtitle"></a>
 </p><dl>
 <dt><u>Scene option:</u> <b>windowtitle</b><i> [windowtitle, <var>name</var>]</i>
-<a name="IDX1937"></a>
+<a name="IDX1941"></a>
 </dt>
 <dd><p>Default value: <code>Xmaxima: scene</code>
 </p>
@@ -653,21 +653,21 @@ window created by <code>scene</code>.
 
 <p><a name="scene_005fobjects"></a>
 </p><hr size="6">
-<a name="SEC268"></a>
+<a name="SEC269"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC267" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC269" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC268" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC270" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 54.3.2 Scene objects </h3>
@@ -676,7 +676,7 @@ window created by <code>scene</code>.
 <a name="Item_003a-cone"></a>
 </p><dl>
 <dt><u>Scene object:</u> <b>cone</b><i> [cone, <var>options</var>]</i>
-<a name="IDX1938"></a>
+<a name="IDX1942"></a>
 </dt>
 <dd><p>Creates a regular pyramid with height equal to 1 and a hexagonal base
 with vertices 0.5 units away from the axis. Options
@@ -706,7 +706,7 @@ axis when the play button is pressed.
 <a name="Item_003a-cube"></a>
 </p><dl>
 <dt><u>Scene object:</u> <b>cube</b><i> [cube, <var>options</var>]</i>
-<a name="IDX1939"></a>
+<a name="IDX1943"></a>
 </dt>
 <dd><p>A cube with edges of 1 unit and faces parallel to the xy, xz and yz
 planes. The lengths of the three edges can be changed with options
@@ -725,7 +725,7 @@ the faces can be rotated with option <code><a href="#object_005forientation">ori
 <a name="Item_003a-cylinder"></a>
 </p><dl>
 <dt><u>Scene object:</u> <b>cylinder</b><i> [cylinder, <var>options</var>]</i>
-<a name="IDX1940"></a>
+<a name="IDX1944"></a>
 </dt>
 <dd><p>Creates a regular prism with height equal to 1 and a hexagonal base with
 vertices 0.5 units away from the axis. Options
@@ -748,7 +748,7 @@ be at the origin; use options <code><a href="#object_005forientation">orientatio
 <a name="Item_003a-sphere"></a>
 </p><dl>
 <dt><u>Scene object:</u> <b>sphere</b><i> [sphere, <var>options</var>]</i>
-<a name="IDX1941"></a>
+<a name="IDX1945"></a>
 </dt>
 <dd><p>A sphere with default radius of 0.5 units and center at the origin. 
 </p>
@@ -761,21 +761,21 @@ be at the origin; use options <code><a href="#object_005forientation">orientatio
 
 <p><a name="object_005foptions"></a>
 </p><hr size="6">
-<a name="SEC269"></a>
+<a name="SEC270"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC268" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC269" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC266" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC267" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 54.3.3 Scene object's options </h3>
@@ -784,7 +784,7 @@ be at the origin; use options <code><a href="#object_005forientation">orientatio
 <a name="Item_003a-animation"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>animation</b><i> [animation, <var>property</var>, <var>positions</var>]</i>
-<a name="IDX1942"></a>
+<a name="IDX1946"></a>
 </dt>
 <dd><p><var>property</var> should be one of the following 4 object's properties:
 <code><a href="#object_005forigin">origin</a></code>, <code><a href="#object_005fscale">scale</a></code>,
@@ -809,7 +809,7 @@ the animation restart after the play button is pressed again.
 </p>
 <dl>
 <dt><u>Object option:</u> <b>capping</b><i> [capping, <var>number</var>]</i>
-<a name="IDX1943"></a>
+<a name="IDX1947"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -828,7 +828,7 @@ of 0 makes it invisible.
 <a name="Item_003a-center"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>center</b><i> [center, <var>point</var>]</i>
-<a name="IDX1944"></a>
+<a name="IDX1948"></a>
 </dt>
 <dd><p>Default value: <code>[0, 0, 0]</code>
 </p>
@@ -848,7 +848,7 @@ or cube it will be at half its height and in a sphere at its center.
 </p>
 <dl>
 <dt><u>Object option:</u> <b>color</b><i> [color, <var>colorname</var>]</i>
-<a name="IDX1945"></a>
+<a name="IDX1949"></a>
 </dt>
 <dd><p>Default value: <code>white</code>
 </p>
@@ -866,7 +866,7 @@ red-green-blue strings (see the <code><a href="maxima_12.html#color">color</a></
 <a name="Item_003a-endphi"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>endphi</b><i> [endphi, <var>angle</var>]</i>
-<a name="IDX1946"></a>
+<a name="IDX1950"></a>
 </dt>
 <dd><p>Default value: <code>180</code>
 </p>
@@ -890,7 +890,7 @@ part of the sphere's surface.
 <a name="Item_003a-endtheta"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>endtheta</b><i> [endtheta, <var>angle</var>]</i>
-<a name="IDX1947"></a>
+<a name="IDX1951"></a>
 </dt>
 <dd><p>Default value: <code>360</code>
 </p>
@@ -914,7 +914,7 @@ the sphere's surface.
 </p>
 <dl>
 <dt><u>Object option:</u> <b>height</b><i> [height, <var>value</var>]</i>
-<a name="IDX1948"></a>
+<a name="IDX1952"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -932,7 +932,7 @@ or a cylinder.
 <a name="Item_003a-linewidth"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>linewidth</b><i> [linewidth, <var>value</var>]</i>
-<a name="IDX1949"></a>
+<a name="IDX1953"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -950,7 +950,7 @@ used. <var>value</var> must be a positive number.
 <a name="Item_003a-opacity"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>opacity</b><i> [opacity, <var>value</var>]</i>
-<a name="IDX1950"></a>
+<a name="IDX1954"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -969,7 +969,7 @@ completely opaque object.
 <a name="Item_003a-orientation"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>orientation</b><i> [orientation, <var>angles</var>]</i>
-<a name="IDX1951"></a>
+<a name="IDX1955"></a>
 </dt>
 <dd><p>Default value: <code>[0, 0, 0]</code>
 </p>
@@ -989,7 +989,7 @@ the x axis of the object to the y axis of the reference frame.
 <a name="Item_003a-origin"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>origin</b><i> [origin, <var>point</var>]</i>
-<a name="IDX1952"></a>
+<a name="IDX1956"></a>
 </dt>
 <dd><p>Default value: <code>[0, 0, 0]</code>
 </p>
@@ -1008,7 +1008,7 @@ real numbers, or 3 real numbers separated by commas.
 <a name="Item_003a-phiresolution"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>phiresolution</b><i> [phiresolution, <var>num</var>]</i>
-<a name="IDX1953"></a>
+<a name="IDX1957"></a>
 </dt>
 <dd><p>Default value: <code></code>
 </p>
@@ -1030,7 +1030,7 @@ will be divided. <var>num</var> must be a positive integer.
 </p>
 <dl>
 <dt><u>Object option:</u> <b>points</b><i>  [points]</i>
-<a name="IDX1954"></a>
+<a name="IDX1958"></a>
 </dt>
 <dd><p>Only the vertices of the triangulation used to render the surface will
 be shown. <strong>Example</strong>: <code>[sphere, [points]]</code>
@@ -1049,7 +1049,7 @@ be shown. <strong>Example</strong>: <code>[sphere, [points]]</code>
 <a name="Item_003a-pointsize"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>pointsize</b><i> [pointsize, <var>value</var>]</i>
-<a name="IDX1955"></a>
+<a name="IDX1959"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -1067,7 +1067,7 @@ used. <var>value</var> must be a positive number.
 <a name="Item_003a-position"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>position</b><i> [position, <var>point</var>]</i>
-<a name="IDX1956"></a>
+<a name="IDX1960"></a>
 </dt>
 <dd><p>Default value: <code>[0, 0, 0]</code>
 </p>
@@ -1085,7 +1085,7 @@ real numbers, or 3 real numbers separated by commas.
 <a name="Item_003a-radius"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>radius</b><i> [radius, <var>value</var>]</i>
-<a name="IDX1957"></a>
+<a name="IDX1961"></a>
 </dt>
 <dd><p>Default value: <code>0.5</code>
 </p>
@@ -1103,7 +1103,7 @@ vertices in a cylinder or a cone. <var>value</var> must be a positive number.
 <a name="Item_003a-resolution"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>resolution</b><i> [resolution, <var>number</var>]</i>
-<a name="IDX1958"></a>
+<a name="IDX1962"></a>
 </dt>
 <dd><p>Default value: <code>6</code>
 </p>
@@ -1121,7 +1121,7 @@ edges in the base of a cone or a cylinder.
 <a name="Item_003a-scale"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>scale</b><i> [scale, <var>factors</var>]</i>
-<a name="IDX1959"></a>
+<a name="IDX1963"></a>
 </dt>
 <dd><p>Default value: <code>[1, 1, 1]</code>
 </p>
@@ -1143,7 +1143,7 @@ unchanged.
 <a name="Item_003a-startphi"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>startphi</b><i> [startphi, <var>angle</var>]</i>
-<a name="IDX1960"></a>
+<a name="IDX1964"></a>
 </dt>
 <dd><p>Default value: <code>0</code>
 </p>
@@ -1167,7 +1167,7 @@ part of the sphere's surface.
 <a name="Item_003a-starttheta"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>starttheta</b><i> [starttheta, <var>angle</var>]</i>
-<a name="IDX1961"></a>
+<a name="IDX1965"></a>
 </dt>
 <dd><p>Default value: <code>0</code>
 </p>
@@ -1191,7 +1191,7 @@ the sphere's surface.
 <a name="Item_003a-surface"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>surface</b><i> [surface]</i>
-<a name="IDX1962"></a>
+<a name="IDX1966"></a>
 </dt>
 <dd><p>The surfaces of the object will be rendered and the lines and points of
 the triangulation used to build the surface will not be shown. This is
@@ -1209,7 +1209,7 @@ the default behavior, which can be changed using either the option
 <a name="Item_003a-thetaresolution"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>thetaresolution</b><i> [thetaresolution, <var>num</var>]</i>
-<a name="IDX1963"></a>
+<a name="IDX1967"></a>
 </dt>
 <dd><p>Default value: <code></code>
 </p>
@@ -1231,7 +1231,7 @@ will be divided. <var>num</var> must be a positive integer.
 <a name="Item_003a-track"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>track</b><i> [track, <var>positions</var>]</i>
-<a name="IDX1964"></a>
+<a name="IDX1968"></a>
 </dt>
 <dd><p><var>positions</var> should be a list of points. When the play button is
 pressed, the object position will be changed sequentially through all
@@ -1268,7 +1268,7 @@ be neglected:
 <a name="Item_003a-xlength"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>xlength</b><i> [xlength, <var>length</var>]</i>
-<a name="IDX1965"></a>
+<a name="IDX1969"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -1287,7 +1287,7 @@ number. See also <code><a href="#object_005fylength">ylength</a></code> and
 <a name="Item_003a-ylength"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>ylength</b><i> [ylength, <var>length</var>]</i>
-<a name="IDX1966"></a>
+<a name="IDX1970"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -1306,7 +1306,7 @@ number. See also <code><a href="#object_005fxlength">xlength</a></code> and
 <a name="Item_003a-zlength"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>zlength</b><i> [zlength, <var>length</var>]</i>
-<a name="IDX1967"></a>
+<a name="IDX1971"></a>
 </dt>
 <dd><p>Default value: <code>1</code>
 </p>
@@ -1325,7 +1325,7 @@ number. See also <code><a href="#object_005fxlength">xlength</a></code> and
 <a name="Item_003a-wireframe"></a>
 </p><dl>
 <dt><u>Object option:</u> <b>wireframe</b><i>  [wireframe]</i>
-<a name="IDX1968"></a>
+<a name="IDX1972"></a>
 </dt>
 <dd><p>Only the edges of the triangulation used to render the surface will be
 shown. <strong>Example</strong>: <code>[cube, [wireframe]]</code>
@@ -1343,8 +1343,8 @@ shown. <strong>Example</strong>: <code>[cube, [wireframe]]</code>
 <p><a name="Item_003a-engineering_002dformat_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC263" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_55.html#SEC270" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC264" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_55.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1352,12 +1352,12 @@ shown. <strong>Example</strong>: <code>[cube, [wireframe]]</code>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 82. stats</title>
+<title>Maxima 5.40.0 Manual: 82. stats</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 82. stats">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 82. stats">
+<meta name="description" content="Maxima 5.40.0 Manual: 82. stats">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 82. stats">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,54 +66,54 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="stats_002dpkg"></a>
-<a name="SEC380"></a>
+<a name="SEC381"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_81.html#SEC379" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC381" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_81.html#SEC380" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC382" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_81.html#SEC377" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_81.html#SEC378" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 82. stats </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC381">82.1 Introduction to stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC382">82.1 Introduction to stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC382">82.2 Functions and Variables for inference_result</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC383">82.2 Functions and Variables for inference_result</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC383">82.3 Functions and Variables for stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC384">82.3 Functions and Variables for stats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC384">82.4 Functions and Variables for special distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC385">82.4 Functions and Variables for special distributions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-stats"></a>
 </p><hr size="6">
 <a name="Introduction-to-stats"></a>
-<a name="SEC381"></a>
+<a name="SEC382"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC380" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC382" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC381" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC383" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.1 Introduction to stats </h2>
@@ -151,21 +151,21 @@ files. See <code>descriptive</code> and <code>numericalio</code> for more detail
 <p><a name="Item_003a-Functions-and-Variables-for-inference_005fresult"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-inference_005fresult"></a>
-<a name="SEC382"></a>
+<a name="SEC383"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC381" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC383" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC382" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC384" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.2 Functions and Variables for inference_result </h2>
@@ -174,7 +174,7 @@ files. See <code>descriptive</code> and <code>numericalio</code> for more detail
 <a name="Item_003a-inference_005fresult"></a>
 </p><dl>
 <dt><u>Function:</u> <b>inference_result</b><i> (<var>title</var>, <var>values</var>, <var>numbers</var>)</i>
-<a name="IDX2413"></a>
+<a name="IDX2417"></a>
 </dt>
 <dd><p>Constructs an <code>inference_result</code> object of the type returned by the
 stats functions. Argument <var>title</var> is a
@@ -231,7 +231,7 @@ not displayed; to access its value, make use of function <code>take_inference</c
 <a name="Item_003a-inferencep"></a>
 </p><dl>
 <dt><u>Function:</u> <b>inferencep</b><i> (<var>obj</var>)</i>
-<a name="IDX2414"></a>
+<a name="IDX2418"></a>
 </dt>
 <dd><p>Returns <code>true</code> or <code>false</code>, depending on whether <var>obj</var> is an
 <code>inference_result</code> object or not.
@@ -252,7 +252,7 @@ not displayed; to access its value, make use of function <code>take_inference</c
 <a name="Item_003a-items_005finference"></a>
 </p><dl>
 <dt><u>Function:</u> <b>items_inference</b><i> (<var>obj</var>)</i>
-<a name="IDX2415"></a>
+<a name="IDX2419"></a>
 </dt>
 <dd><p>Returns a list with the names of the items stored in <var>obj</var>, which must
 be an <code>inference_result</code> object.
@@ -288,7 +288,7 @@ of all items, no matter they are displayed or not.
 <a name="Item_003a-take_005finference"></a>
 </p><dl>
 <dt><u>Function:</u> <b>take_inference</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>take_inference</tt> (<var>n</var>, <var>obj</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>take_inference</tt> (<var>name</var>, <var>obj</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>take_inference</tt> (<var>list</var>, <var>obj</var>)</i>
-<a name="IDX2416"></a>
+<a name="IDX2420"></a>
 </dt>
 <dd><p>Returns the <var>n</var>-th value stored in <var>obj</var> if <var>n</var> is a positive integer,
 or the item named <var>name</var> if this is the name of an item. If the first
@@ -347,21 +347,21 @@ called in order to extract some information stored in it.
 <p><a name="Item_003a-Functions-and-Variables-for-stats"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-stats"></a>
-<a name="SEC383"></a>
+<a name="SEC384"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC382" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC384" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC383" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC385" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.3 Functions and Variables for stats </h2>
@@ -371,7 +371,7 @@ called in order to extract some information stored in it.
 <a name="Item_003a-stats_005fnumer"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>stats_numer</b>
-<a name="IDX2417"></a>
+<a name="IDX2421"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -393,7 +393,7 @@ results are given in symbolic and rational format.
 <a name="Item_003a-test_005fmean"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_mean</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_mean</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_mean</tt> (<var>x</var>, <var>options</var> ...)</i>
-<a name="IDX2418"></a>
+<a name="IDX2422"></a>
 </dt>
 <dd><p>This is the mean <var>t</var>-test. Argument <var>x</var> is a list or a column matrix
 containing a one dimensional sample. It also performs an asymptotic test
@@ -529,7 +529,7 @@ this procedure should be applied to large samples.
 <a name="Item_003a-test_005fmeans_005fdifference"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_means_difference</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_means_difference</tt> (<var>x1</var>, <var>x2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_means_difference</tt> (<var>x1</var>, <var>x2</var>, <var>options</var> ...)</i>
-<a name="IDX2419"></a>
+<a name="IDX2423"></a>
 </dt>
 <dd><p>This is the difference of means <var>t</var>-test for two samples.
 Arguments <var>x1</var> and <var>x2</var> are lists or column matrices
@@ -667,7 +667,7 @@ equal.
 <a name="Item_003a-test_005fvariance"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_variance</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance</tt> (<var>x</var>, <var>options</var>, ...)</i>
-<a name="IDX2420"></a>
+<a name="IDX2424"></a>
 </dt>
 <dd><p>This is the variance <var>chi^2</var>-test. Argument <var>x</var> is a list or a column matrix
 containing a one dimensional sample taken from a normal population.
@@ -764,7 +764,7 @@ is equal to or greater than 200.
 <a name="Item_003a-test_005fvariance_005fratio"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_variance_ratio</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance_ratio</tt> (<var>x1</var>, <var>x2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_variance_ratio</tt> (<var>x1</var>, <var>x2</var>, <var>options</var> ...)</i>
-<a name="IDX2421"></a>
+<a name="IDX2425"></a>
 </dt>
 <dd><p>This is the variance ratio <var>F</var>-test for two normal populations.
 Arguments <var>x1</var> and <var>x2</var> are lists or column matrices
@@ -864,7 +864,7 @@ against the alternative that the first is greater than the second.
 <a name="Item_003a-test_005fproportion"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_proportion</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportion</tt> (<var>x</var>, <var>n</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportion</tt> (<var>x</var>, <var>n</var>, <var>options</var> ...)</i>
-<a name="IDX2422"></a>
+<a name="IDX2426"></a>
 </dt>
 <dd><p>Inferences on a proportion. Argument <var>x</var> is the number of successes
 in <var>n</var> trials in a Bernoulli experiment with unknown probability.
@@ -987,7 +987,7 @@ is <em>H_0: p=1/2</em> against the one sided alternative <em>H_1: p&lt;1/2</em>.
 <a name="Item_003a-test_005fproportions_005fdifference"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_proportions_difference</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportions_difference</tt> (<var>x1</var>, <var>n1</var>, <var>x2</var>, <var>n2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_proportions_difference</tt> (<var>x1</var>, <var>n1</var>, <var>x2</var>, <var>n2</var>, <var>options</var> &hellip;)</i>
-<a name="IDX2423"></a>
+<a name="IDX2427"></a>
 </dt>
 <dd><p>Inferences on the difference of two proportions. Argument <var>x1</var> is the number of successes
 in <var>n1</var> trials in a Bernoulli experiment in the first population, and <var>x2</var> and <var>n2</var>
@@ -1098,7 +1098,7 @@ distribution when the data are unknown.
 <a name="Item_003a-test_005fsign"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_sign</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_sign</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_sign</tt> (<var>x</var>, <var>options</var> &hellip;)</i>
-<a name="IDX2424"></a>
+<a name="IDX2428"></a>
 </dt>
 <dd><p>This is the non parametric sign test for the median of a continuous population.
 Argument <var>x</var> is a list or a column matrix containing a one dimensional sample.
@@ -1172,7 +1172,7 @@ against the alternative <em>H_1: median &gt; 6</em>.
 <a name="Item_003a-test_005fsigned_005frank"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_signed_rank</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_signed_rank</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_signed_rank</tt> (<var>x</var>, <var>options</var> &hellip;)</i>
-<a name="IDX2425"></a>
+<a name="IDX2429"></a>
 </dt>
 <dd><p>This is the Wilcoxon signed rank test to make inferences about the median of a
 continuous population. Argument <var>x</var> is a list or a column matrix
@@ -1274,7 +1274,7 @@ since there are ties.
 <a name="Item_003a-test_005frank_005fsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_rank_sum</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_rank_sum</tt> (<var>x1</var>, <var>x2</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>test_rank_sum</tt> (<var>x1</var>, <var>x2</var>, <var>option</var>)</i>
-<a name="IDX2426"></a>
+<a name="IDX2430"></a>
 </dt>
 <dd><p>This is the Wilcoxon-Mann-Whitney test for comparing the medians of two
 continuous populations. The first two arguments <var>x1</var> and <var>x2</var> are lists
@@ -1371,7 +1371,7 @@ normal approximation. The alternative hypothesis is
 <a name="Item_003a-test_005fnormality"></a>
 </p><dl>
 <dt><u>Function:</u> <b>test_normality</b><i> (<var>x</var>)</i>
-<a name="IDX2427"></a>
+<a name="IDX2431"></a>
 </dt>
 <dd><p>Shapiro-Wilk test for normality. Argument <var>x</var> is a list of numbers, and sample
 size must be greater than 2 and less or equal than 5000, otherwise, function
@@ -1418,7 +1418,7 @@ with the following results:
 <a name="Item_003a-linear_005fregression"></a>
 </p><dl>
 <dt><u>Function:</u> <b>linear_regression</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>linear_regression</tt> (<var>x</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>linear_regression</tt> (<var>x</var> <var>option</var>)</i>
-<a name="IDX2428"></a>
+<a name="IDX2432"></a>
 </dt>
 <dd><p>Multivariate linear regression, 
 <em>y_i = b0 + b1*x_1i + b2*x_2i + ... + bk*x_ki + u_i</em>,
@@ -1548,21 +1548,21 @@ v_distribution, residuals, adc, aic, bic]
 <p><a name="Item_003a-Functions-and-Variables-for-special-distributions"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-special-distributions"></a>
-<a name="SEC384"></a>
+<a name="SEC385"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC383" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC384" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC380" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC381" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 82.4 Functions and Variables for special distributions </h2>
@@ -1572,7 +1572,7 @@ v_distribution, residuals, adc, aic, bic]
 <a name="Item_003a-pdf_005fsigned_005frank"></a>
 </p><dl>
 <dt><u>Function:</u> <b>pdf_signed_rank</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2429"></a>
+<a name="IDX2433"></a>
 </dt>
 <dd><p>Probability density function of the exact distribution of the
 signed rank statistic. Argument <var>x</var> is a real
@@ -1591,7 +1591,7 @@ number and <var>n</var> a positive integer.
 <a name="Item_003a-cdf_005fsigned_005frank"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cdf_signed_rank</b><i> (<var>x</var>, <var>n</var>)</i>
-<a name="IDX2430"></a>
+<a name="IDX2434"></a>
 </dt>
 <dd><p>Cumulative density function of the exact distribution of the
 signed rank statistic. Argument <var>x</var> is a real
@@ -1610,7 +1610,7 @@ number and <var>n</var> a positive integer.
 <a name="Item_003a-pdf_005frank_005fsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>pdf_rank_sum</b><i> (<var>x</var>, <var>n</var>, <var>m</var>)</i>
-<a name="IDX2431"></a>
+<a name="IDX2435"></a>
 </dt>
 <dd><p>Probability density function of the exact distribution of the
 rank sum statistic. Argument <var>x</var> is a real
@@ -1629,7 +1629,7 @@ number and <var>n</var> and <var>m</var> are both positive integers.
 <a name="Item_003a-cdf_005frank_005fsum"></a>
 </p><dl>
 <dt><u>Function:</u> <b>cdf_rank_sum</b><i> (<var>x</var>, <var>n</var>, <var>m</var>)</i>
-<a name="IDX2432"></a>
+<a name="IDX2436"></a>
 </dt>
 <dd><p>Cumulative density function of the exact distribution of the
 rank sum statistic. Argument <var>x</var> is a real
@@ -1648,8 +1648,8 @@ number and <var>n</var> and <var>m</var> are both positive integers.
 <p><a name="Item_003a-stirling_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC380" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_83.html#SEC385" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC381" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_83.html#SEC386" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1657,12 +1657,12 @@ number and <var>n</var> and <var>m</var> are both positive integers.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 9. Simplification</title>
+<title>Maxima 5.40.0 Manual: 9. Simplification</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 9. Simplification">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 9. Simplification">
+<meta name="description" content="Maxima 5.40.0 Manual: 9. Simplification">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 9. Simplification">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -73,44 +73,235 @@ img {max-width:80%; max-height: 80%}
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima_8.html#SEC44" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 9. Simplification </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC47">9.1 Functions and Variables for Simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
+<tr><td align="left" valign="top"><a href="#SEC47">9.1 Introduction to Simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC48">9.2 Functions and Variables for Simplification</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  
 </td></tr>
 </table>
 
-<p><a name="Item_003a-Functions-and-Variables-for-Simplification"></a>
+<p><a name="Item_003a-Introduction-to-Simplification"></a>
 </p><hr size="6">
-<a name="Functions-and-Variables-for-Simplification"></a>
+<a name="Introduction-to-Simplification"></a>
 <a name="SEC47"></a>
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC46" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC48" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="#SEC46" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
-<h2 class="section"> 9.1 Functions and Variables for Simplification </h2>
+<h2 class="section"> 9.1 Introduction to Simplification </h2>
+
+<p>Maxima performs a cycle of actions in response to each new user-typed command. This 
+consists of four steps: reading or &quot;parsing&quot; the input, evaluation, simplification 
+and output. Parsing converts a syntactically valid sequence of typed characters into 
+a data structure to be used for the rest of the operations. Evaluation includes 
+replacing names with their assigned values. Simplification means rewriting an 
+expression to be easier for the user or other programs to understand. Output includes 
+displaying computational results in a variety of different formats and notations.
+</p>
+<p>Evaluation and simplification sometimes appear to have similar functionality as they 
+both have the goal of removing &quot;complexity&quot; and system designers have sometimes divided a 
+task so that it is performed partly in each. For example, <code>integrate(x,x)</code> evaluates 
+the answer as <code>x*x/2</code>, which is then simplified to <code>x^2/2</code>.
+</p>
+<p>Evaluation is always present: it is the consequence of having a programming system with 
+functions, subroutines, variables, values, loops, assignments and so on. In the 
+evaluation step, built-in or user-defined function names are replaced by their definitions, 
+variables are replaced by their values. This is largely the same as activities of a 
+conventional programming language, but extended to work with symbolic mathematical data. 
+Because of the generality of the mathematics at hand, there are different possible models 
+of evaluation and so the systems has optional &quot;flags&quot; that can steer the process of 
+evaluation. See section <a href="maxima_8.html#SEC45">Functions and Variables for Evaluation</a>.
+</p>
+<p>By contrast, the intent of simplification is to maintain the value of an expression 
+while re-formulating its representation to be smaller, simpler to understand, or to 
+conform to particular specifications (like factored, expanded). For
+example, <code>sin(0)</code> to <code>0</code> or <code>x+x to 2*x</code>.
+There are several powerful tools to alter the results 
+of simplification, since it is largely in this part of the system that a user can 
+incorporate knowledge of newly introduced functions or symbolic notation into Maxima.
+</p>
+<p>Simplification is generally done at four different levels:
+</p><ul>
+<li> The internal, built-in automated simplifier,
+</li><li> Built-in simplification routines that can be explicitly called by the user
+      at selected places in a program or command sequence,
+</li><li> User-written simplification routines, linked to the simplifier by using
+      &quot;tellsimp&quot; or &quot;tellsimpafter&quot; and called automatically,
+</li><li> User-written routines that can be explicitly called by the user at selected 
+      places in a program or command sequence.
+</li></ul>
+<p>The internal simplifier belongs to the heart of Maxima. It is a large and 
+complicated collection of programs, and it has been refined over many years and by 
+thousands of users. Nevertheless, especially if you are trying out novel ideas or 
+unconventional notation, you may find it helpful to make small (or large) changes 
+to the program yourself. For details see for example the paper at the end of
+<a href="https://people.eecs.berkeley.edu/~fateman/papers/intro5.txt">https://people.eecs.berkeley.edu/~fateman/papers/intro5.txt</a>.
+</p>
+<p>Maxima internally represents expressions as &quot;trees&quot; with operators or &quot;roots&quot;
+like <code>+</code>, <code>*</code> , <code>=</code> and operands (&quot;leaves&quot;) which are variables like
+<var>x</var>, <var>y</var>, <var>z</var>, functions
+or sub-trees, like <code>x*y</code>. Each operator has a simplification program
+associated with it.  <code>+</code> (which also covers binary <code>-</code> since
+<code>a-b = a+(-1)*b)</code> and <code>*</code> (which also covers <code>/</code> 
+since <code>a/b = a*b^(-1)</code>) have rather elaborate simplification programs. These 
+simplification programs (simplus, simptimes, simpexpt, etc.) are called whenever 
+the simplifier encounters the respective arithmetic operators in an expression 
+tree to be analyzed. 
+</p>
+<p>The structure of the simplifier dates back to 1965, and many hands have worked 
+on it through the years. The structure turns out to be, in modern jargon, data-
+directed, or object-oriented. The program dispatches to the appropriate routine 
+depending on the root of some sub-tree of the expression, recursively. This general
+notion means you can make modifications to the simplification process by very local 
+changes to the program. In many cases it is conceptually straightforward to add an 
+operator and add its simplification routine without disturbing existing code.
+</p>
+<p>We note that in addition to this general simplifier operating on algebraic 
+expression trees, there are several other representations of expressions in 
+Maxima which have separate methods and simplifiers. For example, the
+<code>rat()</code> function converts polynomials to vectors of coefficients to
+assist in rapid manipulation of such forms. Other representations include
+Taylor series and the (rarely used) Poisson series.
+</p>
+<p>All operators introduced by the user initially have no simplification
+programs associated with them.  Maxima does not know anything about
+function &quot;f&quot;  and so typing <code>f(a,b)</code> will result in simplifying
+<var>a</var>,<var>b</var>, but not <code>f</code>. 
+Even some built-in operators have no simplifications. For example,
+<code>=</code> does not &quot;simplify&quot; - it is a place-holder with no
+simplification semantics other 
+than to simplify its two arguments, in this case referred to as the left and 
+right sides. Other parts of Maxima such as the solve program take special 
+note of equations, that is, trees with <code>=</code> as the root. 
+(Note - in Maxima, the assignment operation is <code>:</code> . That is, <code>q: 4</code>
+sets the value of the symbol <var>q</var> to <code>4</code>.
+Function definition is done with <code>:=</code>. )
+</p>
+<p>The general simplifier returns results with an internal flag indicating the 
+expression and each sub-expression has been simplified. This does not 
+guarantee that it is unique over all possible equivalent expressions. That's 
+too hard (theoretically, not possible given the generality of what can be 
+expressed in Maxima). However, some aspects of the expression, such as the 
+ordering of terms in a sum or product, are made uniform. This is important 
+for the other programs to work properly.
+</p>
+<p>You can set a number of option variables which direct Maxima's processing to 
+favor particular kinds of patterns as being goals. You can even use the most 
+extreme option which is to turn the simplifier off by simp:false. We do not 
+recommend this since many internal routines expect their arguments to be 
+simplified. (About the only time it seems plausible to turn off the simplifier 
+is in the rare case that you want to over-ride a built-in simplification. 
+In that case  you might temporarily disable the simplifier, put in the new 
+transformation via <code><a href="maxima_34.html#tellsimp">tellsimp</a></code>, and then re-enable the simplifier
+by <code>simp:true</code>.)
+</p>
+<p>It is more plausible for you to associate user-defined symbolic function names 
+or operators with properties (<code><a href="#additive">additive</a></code>,
+<code><a href="#lassociative">lassociative</a></code>, <code><a href="#oddfun">oddfun</a></code>, <code><a href="#antisymmetric">antisymmetric</a></code>,
+<code><a href="#linear">linear</a></code>, <code><a href="#outative">outative</a></code>, <code><a href="#commutative">commutative</a></code>, 
+<code><a href="#multiplicative">multiplicative</a></code>, <code><a href="#rassociative">rassociative</a></code>, <code><a href="#evenfun">evenfun</a></code>,
+<code><a href="maxima_11.html#nary">nary</a></code> and <code><a href="#symmetric">symmetric</a></code>). These options steer 
+the simplifier processing in systematic directions.
+</p>
+<p>For example, <code>declare(f,oddfun)</code> specifies that <code>f</code> is an odd function.
+Maxima will simplify <code>f(-x)</code> to <code>-f(x)</code>. In the case of an even
+function, that is <code>declare(g,evenfun)</code>, 
+Maxima will simplify <code>g(-x)</code> to <code>g(x)</code>. You can also associate a
+programming function with a name such as <code>h(x):=x^2+1</code>. In that case the
+evaluator will immediately replace 
+<code>h(3)</code> by <code>10</code>, and <code>h(a+1)</code> by <code>(a+1)^2+1</code>, so any properties
+of <code>h</code> will be ignored.
+</p>
+<p>In addition to these directly related properties set up by the user, facts and 
+properties from the actual context may have an impact on the simplifier's behavior, 
+too. See section <a href="maxima_11.html#SEC59">Introduction to Maximas Database</a>.
+</p>
+<p>Example: <code>sin(n*%pi)</code> is simplified to zero, if <var>n</var> is an integer.
+</p>
+<pre class="example">(%i1) sin(n*%pi);
+(%o1)                      sin(%pi n)
+(%i2) declare(n, integer);
+(%o2)                         done
+(%i3) sin(n*%pi);
+(%o3)                           0
+</pre>
+<p>If automated simplification is not sufficient, you can consider a variety of 
+built-in, but explicitly called simplfication functions (<code><a href="maxima_14.html#ratsimp">ratsimp</a></code>,
+<code><a href="#expand">expand</a></code>, <code><a href="maxima_14.html#factor">factor</a></code>, <code><a href="#radcan">radcan</a></code> and others). There are
+also flags that will push simplification into one or another direction.
+Given <code>demoivre:true</code> the simplifier rewrites 
+complex exponentials as trigonometric forms. Given <code>exponentialize:true</code>
+the  simplifier tries to do the reverse: rewrite trigonometric forms as complex 
+exponentials.
+</p>
+<p>As everywhere in Maxima, by writing your own functions (be it in the Maxima 
+user language or in the implementation language Lisp) and explicitly calling them 
+at selected places in the program, you can respond to your individual 
+simplification needs. Lisp gives you a handle on all the internal mechanisms, but 
+you rarely need this full generality. &quot;Tellsimp&quot; is designed to generate much 
+of the Lisp internal interface into the simplifier automatically.
+See See section <a href="maxima_34.html#SEC185">Rules and Patterns</a>.
+</p>
+<p>Over the years (Maxima/Macsyma's origins date back to about 1966!) users have 
+contributed numerous application packages and tools to extend or alter its 
+functional behavior. Various non-standard and &quot;share&quot; packages exist to modify 
+or extend simplification as well. You are invited to look into this more 
+experimental material where work is still in progress. See section <a href="maxima_80.html#SEC369">simplification</a>
+</p>
+<p>The following appended material is optional on a first reading, and reading it 
+is not necessary for productive use of Maxima. It is for the curious user who 
+wants to understand what is going on, or the ambitious programmer who might 
+wish to change the (open-source) code. Experimentation with redefining Maxima 
+Lisp code is easily possible: to change the definition of a Lisp program (say 
+the one that simplifies <code>cos()</code>, named <code>simp%cos</code>), you simply
+load into Maxima a text file that will overwrite the <code>simp%cos</code> function
+from the maxima package.
+</p>
+<p><a name="Item_003a-Functions-and-Variables-for-Simplification"></a>
+</p><hr size="6">
+<a name="Functions-and-Variables-for-Simplification"></a>
+<a name="SEC48"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC47" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC46" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 9.2 Functions and Variables for Simplification </h2>
 
 <p><a name="additive"></a>
 <a name="Item_003a-additive"></a>
@@ -1238,7 +1429,7 @@ denominator to be canceled thus simplifying the expression to be
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC46" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_10.html#SEC48" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_10.html#SEC49" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -1246,12 +1437,12 @@ denominator to be canceled thus simplifying the expression to be
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

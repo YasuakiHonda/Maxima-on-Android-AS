@@ -18,6 +18,7 @@ import android.view.ViewParent;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 import org.hamcrest.TypeSafeMatcher;
 import org.hamcrest.core.IsInstanceOf;
 import org.junit.Rule;
@@ -41,6 +42,9 @@ import static android.support.test.espresso.web.webdriver.DriverAtoms.getText;
 import static android.support.test.espresso.web.webdriver.DriverAtoms.webClick;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.core.StringContains.containsString;
+import static android.support.test.espresso.web.assertion.WebViewAssertions.webContent;
+import static android.support.test.espresso.web.matcher.DomMatchers.elementById;
+import static android.support.test.espresso.web.matcher.DomMatchers.withTextContent;
 
 @RunWith(AndroidJUnit4.class)
 public class MaximaOnAndroidActivityTest {
@@ -111,6 +115,8 @@ public class MaximaOnAndroidActivityTest {
         appCompatButton2.perform(click());
         waitFor(1000);
         onWebView().withElement(findElement(Locator.ID, "MathJax-Element-1"));
+        onWebView().check(webContent(
+                elementById("MathJax-Element-1", withTextContent(" \\mbox{ Is  }n\\mbox{  an  }{\\it integer}\\mbox{ ? }  "))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("y;"), closeSoftKeyboard());
         appCompatButton2.perform(click());

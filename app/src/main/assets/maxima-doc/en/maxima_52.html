@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 52. draw</title>
+<title>Maxima 5.40.0 Manual: 52. draw</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 52. draw">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 52. draw">
+<meta name="description" content="Maxima 5.40.0 Manual: 52. draw">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 52. draw">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,33 +66,33 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="draw_002dpkg"></a>
-<a name="SEC248"></a>
+<a name="SEC249"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_51.html#SEC247" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC249" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_51.html#SEC248" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC250" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_51.html#SEC244" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_51.html#SEC245" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 52. draw </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC249">52.1 Introduction to draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC250">52.1 Introduction to draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC250">52.2 Functions and Variables for draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC251">52.2 Functions and Variables for draw</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC255">52.3 Functions and Variables for pictures</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC256">52.3 Functions and Variables for pictures</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC256">52.4 Functions and Variables for worldmap</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC257">52.4 Functions and Variables for worldmap</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
@@ -101,21 +101,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Introduction-to-draw"></a>
 </p><hr size="6">
 <a name="Introduction-to-draw"></a>
-<a name="SEC249"></a>
+<a name="SEC250"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC248" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC249" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.1 Introduction to draw </h2>
@@ -144,21 +144,21 @@ img {max-width:80%; max-height: 80%}
 <p><a name="Item_003a-Functions-and-Variables-for-draw"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-draw"></a>
-<a name="SEC250"></a>
+<a name="SEC251"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC249" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC251" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC250" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC252" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.2 Functions and Variables for draw </h2>
@@ -167,21 +167,21 @@ img {max-width:80%; max-height: 80%}
 
 
 <hr size="6">
-<a name="SEC251"></a>
+<a name="SEC252"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC250" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC252" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC251" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC253" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.1 Scenes </h3>
@@ -191,7 +191,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-gr2d"></a>
 </p><dl>
 <dt><u>Scene constructor:</u> <b>gr2d</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1762"></a>
+<a name="IDX1766"></a>
 </dt>
 <dd><p>Function <code>gr2d</code> builds an object describing a 2D scene. Arguments are
 <i>graphic options</i>, <i>graphic objects</i>, or lists containing both graphic options and objects.
@@ -241,7 +241,7 @@ and <code><a href="#draw2d">draw2d</a></code>.
 <a name="Item_003a-gr3d"></a>
 </p><dl>
 <dt><u>Scene constructor:</u> <b>gr3d</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1763"></a>
+<a name="IDX1767"></a>
 </dt>
 <dd><p>Function <code>gr3d</code> builds an object describing a 3d scene. Arguments are
 <i>graphic options</i>, <i>graphic objects</i>, or lists containing both graphic options
@@ -270,21 +270,21 @@ dimensions:<br>
 
 
 <hr size="6">
-<a name="SEC252"></a>
+<a name="SEC253"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC251" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC253" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC252" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC254" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.2 Functions </h3>
@@ -295,7 +295,7 @@ dimensions:<br>
 <a name="Item_003a-draw"></a>
 </p><dl>
 <dt><u>Function:</u> <b>draw</b><i> (<var>gr2d</var>, ..., <var>gr3d</var>, ..., <var>options</var>, ...)</i>
-<a name="IDX1764"></a>
+<a name="IDX1768"></a>
 </dt>
 <dd><p>Plots a series of scenes; its arguments are <code>gr2d</code> and/or <code>gr3d</code> 
 objects, together with some options, or lists of scenes and options.
@@ -353,7 +353,7 @@ See also <code><a href="#gr2d">gr2d</a></code>, <code><a href="#gr3d">gr3d</a></
 <a name="Item_003a-draw2d"></a>
 </p><dl>
 <dt><u>Function:</u> <b>draw2d</b><i> (<var>option</var>, <var>graphic_object</var>, ...)</i>
-<a name="IDX1765"></a>
+<a name="IDX1769"></a>
 </dt>
 <dd><p>This function is a short cut for
 <code>draw(gr2d(<var>options</var>, ..., <var>graphic_object</var>, ...))</code>.
@@ -378,7 +378,7 @@ See also <code><a href="#gr2d">gr2d</a></code>, <code><a href="#gr3d">gr3d</a></
 <a name="Item_003a-draw3d"></a>
 </p><dl>
 <dt><u>Function:</u> <b>draw3d</b><i> (<var>option</var>, <var>graphic_object</var>, ...)</i>
-<a name="IDX1766"></a>
+<a name="IDX1770"></a>
 </dt>
 <dd><p>This function is a short cut for
 <code>draw(gr3d(<var>options</var>, ..., <var>graphic_object</var>, ...))</code>.
@@ -400,7 +400,7 @@ See also <code><a href="#gr2d">gr2d</a></code>, <code><a href="#gr3d">gr3d</a></
 <a name="Item_003a-draw_005ffile"></a>
 </p><dl>
 <dt><u>Function:</u> <b>draw_file</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1767"></a>
+<a name="IDX1771"></a>
 </dt>
 <dd><p>Saves the current plot into a file. Accepted graphics options are:
 <code>terminal</code>, <code>dimensions</code> and <code>file_name</code>. 
@@ -426,7 +426,7 @@ See also <code><a href="#gr2d">gr2d</a></code>, <code><a href="#gr3d">gr3d</a></
 <a name="Item_003a-multiplot_005fmode"></a>
 </p><dl>
 <dt><u>Function:</u> <b>multiplot_mode</b><i> (<var>term</var>)</i>
-<a name="IDX1768"></a>
+<a name="IDX1772"></a>
 </dt>
 <dd><p>This function enables Maxima to work in one-window multiplot mode with terminal
 <var>term</var>; accepted arguments for this function are <code>screen</code>, 
@@ -470,7 +470,7 @@ have to disable this working mode before changing to another terminal.
 <a name="Item_003a-set_005fdraw_005fdefaults"></a>
 </p><dl>
 <dt><u>Function:</u> <b>set_draw_defaults</b><i> (<var>graphic option</var>, ..., <var>graphic object</var>, ...)</i>
-<a name="IDX1769"></a>
+<a name="IDX1773"></a>
 </dt>
 <dd><p>Sets user graphics options. This function is useful for plotting a sequence
 of graphics with common graphics options. Calling this function without
@@ -500,21 +500,21 @@ arguments removes user defaults.
 
 
 <hr size="6">
-<a name="SEC253"></a>
+<a name="SEC254"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC252" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC254" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC253" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC255" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.3 Graphics options </h3>
@@ -524,7 +524,7 @@ arguments removes user defaults.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>adapt_depth</b>
-<a name="IDX1770"></a>
+<a name="IDX1774"></a>
 </dt>
 <dd><p>Default value: 10
 </p>
@@ -546,7 +546,7 @@ arguments removes user defaults.
 <a name="Item_003a-allocation"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>allocation</b>
-<a name="IDX1771"></a>
+<a name="IDX1775"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -598,7 +598,7 @@ All quantities must be given in relative coordinates, between 0 and 1.
 <a name="Item_003a-axis_005f3d"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>axis_3d</b>
-<a name="IDX1772"></a>
+<a name="IDX1776"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -628,7 +628,7 @@ does not matter.
 <a name="Item_003a-axis_005fbottom"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>axis_bottom</b>
-<a name="IDX1773"></a>
+<a name="IDX1777"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -658,7 +658,7 @@ does not matter.
 <a name="Item_003a-axis_005fleft"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>axis_left</b>
-<a name="IDX1774"></a>
+<a name="IDX1778"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -687,7 +687,7 @@ does not matter.
 <a name="Item_003a-axis_005fright"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>axis_right</b>
-<a name="IDX1775"></a>
+<a name="IDX1779"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -716,7 +716,7 @@ does not matter.
 <a name="Item_003a-axis_005ftop"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>axis_top</b>
-<a name="IDX1776"></a>
+<a name="IDX1780"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -745,7 +745,7 @@ does not matter.
 <a name="Item_003a-background_005fcolor"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>background_color</b>
-<a name="IDX1777"></a>
+<a name="IDX1781"></a>
 </dt>
 <dd><p>Default value: <code>white</code>
 </p>
@@ -771,7 +771,7 @@ does not matter.
 <a name="Item_003a-border"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>border</b>
-<a name="IDX1778"></a>
+<a name="IDX1782"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -807,7 +807,7 @@ according to <code>line_type</code> and <code>line_width</code>.
 <a name="Item_003a-capping"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>capping</b>
-<a name="IDX1779"></a>
+<a name="IDX1783"></a>
 </dt>
 <dd><p>Default value: <code>[false, false]</code>
 </p>
@@ -839,7 +839,7 @@ and <code>capping = true</code> is equivalent to <code>capping = [true, true]</c
 <a name="Item_003a-cbrange"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>cbrange</b>
-<a name="IDX1780"></a>
+<a name="IDX1784"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -880,7 +880,7 @@ does not matter.
 <a name="Item_003a-cbtics"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>cbtics</b>
-<a name="IDX1781"></a>
+<a name="IDX1785"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -915,7 +915,7 @@ no effect.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>color</b>
-<a name="IDX1782"></a>
+<a name="IDX1786"></a>
 </dt>
 <dd><p>Default value: <code>blue</code>
 </p>
@@ -987,7 +987,7 @@ dark_violet      plum             purple
 <a name="Item_003a-colorbox"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>colorbox</b>
-<a name="IDX1783"></a>
+<a name="IDX1787"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1033,7 +1033,7 @@ Color scale and 3D coloured object.
 <a name="Item_003a-columns"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>columns</b>
-<a name="IDX1784"></a>
+<a name="IDX1788"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -1065,7 +1065,7 @@ does not matter. It can be also used as an argument of function <code>draw</code
 <a name="Item_003a-contour"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>contour</b>
-<a name="IDX1785"></a>
+<a name="IDX1789"></a>
 </dt>
 <dd><p>Default value: <code>none</code>
 </p>
@@ -1126,7 +1126,7 @@ does not matter.
 <a name="Item_003a-contour_005flevels"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>contour_levels</b>
-<a name="IDX1786"></a>
+<a name="IDX1790"></a>
 </dt>
 <dd><p>Default value: 5
 </p>
@@ -1194,7 +1194,7 @@ levels can be adjusted to give simple labels.
 <a name="Item_003a-data_005ffile_005fname"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>data_file_name</b>
-<a name="IDX1787"></a>
+<a name="IDX1791"></a>
 </dt>
 <dd><p>Default value: <code>&quot;data.gnuplot&quot;</code>
 </p>
@@ -1219,7 +1219,7 @@ does not matter. It can be also used as an argument of function <code>draw</code
 <a name="Item_003a-delay"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>delay</b>
-<a name="IDX1788"></a>
+<a name="IDX1792"></a>
 </dt>
 <dd><p>Default value: 5
 </p>
@@ -1258,7 +1258,7 @@ any other case.
 <a name="Item_003a-dimensions"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>dimensions</b>
-<a name="IDX1789"></a>
+<a name="IDX1793"></a>
 </dt>
 <dd><p>Default value: <code>[600,500]</code>
 </p>
@@ -1315,7 +1315,7 @@ We want an eps file with A4 portrait dimensions.
 <a name="Item_003a-draw_005frealpart"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>draw_realpart</b>
-<a name="IDX1790"></a>
+<a name="IDX1794"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -1350,7 +1350,7 @@ the function does not give a real value.
 <a name="Item_003a-enhanced3d"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>enhanced3d</b>
-<a name="IDX1791"></a>
+<a name="IDX1795"></a>
 </dt>
 <dd><p>Default value: <code>none</code>
 </p>
@@ -1497,7 +1497,7 @@ being <code>k</code> an ordering parameter.
 <a name="Item_003a-error_005ftype"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>error_type</b>
-<a name="IDX1792"></a>
+<a name="IDX1796"></a>
 </dt>
 <dd><p>Default value: <code>y</code>
 </p>
@@ -1515,7 +1515,7 @@ instead of crosses.
 <a name="Item_003a-file_005fname"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>file_name</b>
-<a name="IDX1793"></a>
+<a name="IDX1797"></a>
 </dt>
 <dd><p>Default value: <code>&quot;maxima_out&quot;</code>
 </p>
@@ -1547,7 +1547,7 @@ does not matter. It can be also used as an argument of function <code>draw</code
 <a name="Item_003a-fill_005fcolor"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>fill_color</b>
-<a name="IDX1794"></a>
+<a name="IDX1798"></a>
 </dt>
 <dd><p>Default value: <code>&quot;red&quot;</code>
 </p>
@@ -1570,7 +1570,7 @@ does not matter. It can be also used as an argument of function <code>draw</code
 <a name="Item_003a-fill_005fdensity"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>fill_density</b>
-<a name="IDX1795"></a>
+<a name="IDX1799"></a>
 </dt>
 <dd><p>Default value: 0
 </p>
@@ -1587,7 +1587,7 @@ the intensity of the <code>fill_color</code> in <code>bars</code> objects.
 <a name="Item_003a-filled_005ffunc"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>filled_func</b>
-<a name="IDX1796"></a>
+<a name="IDX1800"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1635,7 +1635,7 @@ See also <code><a href="#fill_005fcolor">fill_color</a></code> and <code><a href
 <a name="Item_003a-font"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>font</b>
-<a name="IDX1797"></a>
+<a name="IDX1801"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -1745,7 +1745,7 @@ Default is <code>&quot;Times-Roman&quot;</code>.
 <a name="Item_003a-font_005fsize"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>font_size</b>
-<a name="IDX1798"></a>
+<a name="IDX1802"></a>
 </dt>
 <dd><p>Default value: 10
 </p>
@@ -1771,7 +1771,7 @@ does not matter.
 <a name="Item_003a-gnuplot_005ffile_005fname"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>gnuplot_file_name</b>
-<a name="IDX1799"></a>
+<a name="IDX1803"></a>
 </dt>
 <dd><p>Default value: <code>&quot;maxout_xxx.gnuplot&quot;</code> with <code>&quot;xxx&quot;</code>
 being a number that is unique to each concurrently-running
@@ -1807,7 +1807,7 @@ does not matter. It can be also used as an argument of function <code>draw</code
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>grid</b>
-<a name="IDX1800"></a>
+<a name="IDX1804"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1843,7 +1843,7 @@ does not matter.
 <a name="Item_003a-head_005fangle"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>head_angle</b>
-<a name="IDX1801"></a>
+<a name="IDX1805"></a>
 </dt>
 <dd><p>Default value: 45
 </p>
@@ -1892,7 +1892,7 @@ the segment.
 <a name="Item_003a-head_005fboth"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>head_both</b>
-<a name="IDX1802"></a>
+<a name="IDX1806"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -1926,7 +1926,7 @@ If <code>false</code>, only one arrow is plotted.
 <a name="Item_003a-head_005flength"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>head_length</b>
-<a name="IDX1803"></a>
+<a name="IDX1807"></a>
 </dt>
 <dd><p>Default value: 2
 </p>
@@ -1964,7 +1964,7 @@ If <code>false</code>, only one arrow is plotted.
 <a name="Item_003a-head_005ftype"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>head_type</b>
-<a name="IDX1804"></a>
+<a name="IDX1808"></a>
 </dt>
 <dd><p>Default value: <code>filled</code>
 </p>
@@ -2001,7 +2001,7 @@ values are: <code>filled</code> (closed and filled arrow heads), <code>empty</co
 <a name="Item_003a-interpolate_005fcolor"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>interpolate_color</b>
-<a name="IDX1805"></a>
+<a name="IDX1809"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2081,7 +2081,7 @@ optimal number of interpolated surface points.
 <a name="Item_003a-ip_005fgrid"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ip_grid</b>
-<a name="IDX1806"></a>
+<a name="IDX1810"></a>
 </dt>
 <dd><p>Default value: <code>[50, 50]</code>
 </p>
@@ -2102,7 +2102,7 @@ optimal number of interpolated surface points.
 <a name="Item_003a-ip_005fgrid_005fin"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ip_grid_in</b>
-<a name="IDX1807"></a>
+<a name="IDX1811"></a>
 </dt>
 <dd><p>Default value: <code>[5, 5]</code>
 </p>
@@ -2123,7 +2123,7 @@ optimal number of interpolated surface points.
 <a name="Item_003a-key"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>key</b>
-<a name="IDX1808"></a>
+<a name="IDX1812"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -2164,7 +2164,7 @@ and <code><a href="#parametric_005fsurface">parametric_surface</a></code>.
 <a name="Item_003a-key_005fpos"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>key_pos</b>
-<a name="IDX1809"></a>
+<a name="IDX1813"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -2208,7 +2208,7 @@ does not matter.
 <a name="Item_003a-label_005falignment"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>label_alignment</b>
-<a name="IDX1810"></a>
+<a name="IDX1814"></a>
 </dt>
 <dd><p>Default value: <code>center</code>
 </p>
@@ -2247,7 +2247,7 @@ respect to the given coordinates. Possible values are: <code>center</code>,
 <a name="Item_003a-label_005forientation"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>label_orientation</b>
-<a name="IDX1811"></a>
+<a name="IDX1815"></a>
 </dt>
 <dd><p>Default value: <code>horizontal</code>
 </p>
@@ -2286,7 +2286,7 @@ Package <code>draw</code> needs always data to draw an scene.
 <a name="Item_003a-line_005ftype"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>line_type</b>
-<a name="IDX1812"></a>
+<a name="IDX1816"></a>
 </dt>
 <dd><p>Default value: <code>solid</code>
 </p>
@@ -2329,7 +2329,7 @@ and <code>dot_dash</code>, which are not available in <code>png</code>, <code>jp
 <a name="Item_003a-line_005fwidth"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>line_width</b>
-<a name="IDX1813"></a>
+<a name="IDX1817"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -2371,7 +2371,7 @@ Its value must be a positive number.
 <a name="Item_003a-logcb"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>logcb</b>
-<a name="IDX1814"></a>
+<a name="IDX1818"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2410,7 +2410,7 @@ does not matter.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>logx</b>
-<a name="IDX1815"></a>
+<a name="IDX1819"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2441,7 +2441,7 @@ does not matter, with the exception that it should be written before any
 <a name="Item_003a-logx_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>logx_secondary</b>
-<a name="IDX1816"></a>
+<a name="IDX1820"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2483,7 +2483,7 @@ does not matter.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>logy</b>
-<a name="IDX1817"></a>
+<a name="IDX1821"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2513,7 +2513,7 @@ does not matter.
 <a name="Item_003a-logy_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>logy_secondary</b>
-<a name="IDX1818"></a>
+<a name="IDX1822"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2554,7 +2554,7 @@ does not matter.
 <a name="Item_003a-logz"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>logz</b>
-<a name="IDX1819"></a>
+<a name="IDX1823"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2583,7 +2583,7 @@ does not matter.
 
 <dl>
 <dt><u>Graphic option:</u> <b>nticks</b>
-<a name="IDX1820"></a>
+<a name="IDX1824"></a>
 </dt>
 <dd><p>Default value: 29
 </p>
@@ -2623,7 +2623,7 @@ number of points that will be shown in parametric and polar curves.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>palette</b>
-<a name="IDX1821"></a>
+<a name="IDX1825"></a>
 </dt>
 <dd><p>Default value: <code>color</code>
 </p>
@@ -2712,7 +2712,7 @@ in red, and higher values in yellow.
 <a name="Item_003a-point_005fsize"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>point_size</b>
-<a name="IDX1822"></a>
+<a name="IDX1826"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -2751,7 +2751,7 @@ set to <code>dot</code>.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>point_type</b>
-<a name="IDX1823"></a>
+<a name="IDX1827"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -2810,7 +2810,7 @@ a point style: <code>$none</code> (-1), <code>dot</code> (0), <code>plus</code> 
 <a name="Item_003a-points_005fjoined"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>points_joined</b>
-<a name="IDX1824"></a>
+<a name="IDX1828"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2859,7 +2859,7 @@ or to the xy-plane (3D).
 <a name="Item_003a-proportional_005faxes"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>proportional_axes</b>
-<a name="IDX1825"></a>
+<a name="IDX1829"></a>
 </dt>
 <dd><p>Default value: <code>none</code>
 </p>
@@ -2911,7 +2911,7 @@ does not matter.
 <a name="Item_003a-surface_005fhide"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>surface_hide</b>
-<a name="IDX1826"></a>
+<a name="IDX1830"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -2941,7 +2941,7 @@ does not matter.
 <a name="Item_003a-terminal"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>terminal</b>
-<a name="IDX1827"></a>
+<a name="IDX1831"></a>
 </dt>
 <dd><p>Default value: <code>screen</code>
 </p>
@@ -3029,7 +3029,7 @@ any other case.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>title</b>
-<a name="IDX1828"></a>
+<a name="IDX1832"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -3058,7 +3058,7 @@ does not matter.
 <a name="Item_003a-transform"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>transform</b>
-<a name="IDX1829"></a>
+<a name="IDX1833"></a>
 </dt>
 <dd><p>Default value: <code>none</code>
 </p>
@@ -3110,7 +3110,7 @@ used in the definitions of the graphic objects.
 <a name="Item_003a-transparent"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>transparent</b>
-<a name="IDX1830"></a>
+<a name="IDX1834"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3144,7 +3144,7 @@ filled according to <code>fill_color</code>.
 <a name="Item_003a-unit_005fvectors"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>unit_vectors</b>
-<a name="IDX1831"></a>
+<a name="IDX1835"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3178,7 +3178,7 @@ vectors are plotted with its original length.
 <a name="Item_003a-user_005fpreamble"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>user_preamble</b>
-<a name="IDX1832"></a>
+<a name="IDX1836"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -3226,7 +3226,7 @@ does not matter.
 <a name="Item_003a-view"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>view</b>
-<a name="IDX1833"></a>
+<a name="IDX1837"></a>
 </dt>
 <dd><p>Default value: <code>[60,30]</code>
 </p>
@@ -3266,7 +3266,7 @@ does not matter.
 <a name="Item_003a-wired_005fsurface"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>wired_surface</b>
-<a name="IDX1834"></a>
+<a name="IDX1838"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3298,7 +3298,7 @@ does not matter.
 <a name="Item_003a-x_005fvoxel"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>x_voxel</b>
-<a name="IDX1835"></a>
+<a name="IDX1839"></a>
 </dt>
 <dd><p>Default value: 10
 </p>
@@ -3321,7 +3321,7 @@ object <code><a href="#region">region</a></code>.
 <a name="Item_003a-xaxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xaxis</b>
-<a name="IDX1836"></a>
+<a name="IDX1840"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3353,7 +3353,7 @@ does not matter.
 <a name="Item_003a-xaxis_005fcolor"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xaxis_color</b>
-<a name="IDX1837"></a>
+<a name="IDX1841"></a>
 </dt>
 <dd><p>Default value: <code>&quot;black&quot;</code>
 </p>
@@ -3384,7 +3384,7 @@ does not matter.
 <a name="Item_003a-xaxis_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xaxis_secondary</b>
-<a name="IDX1838"></a>
+<a name="IDX1842"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3421,7 +3421,7 @@ respect to the second <var>x</var> axis, which will be drawn on top of the scene
 <a name="Item_003a-xaxis_005ftype"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xaxis_type</b>
-<a name="IDX1839"></a>
+<a name="IDX1843"></a>
 </dt>
 <dd><p>Default value: <code>dots</code>
 </p>
@@ -3452,7 +3452,7 @@ does not matter.
 <a name="Item_003a-xaxis_005fwidth"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xaxis_width</b>
-<a name="IDX1840"></a>
+<a name="IDX1844"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -3483,7 +3483,7 @@ does not matter.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>xlabel</b>
-<a name="IDX1841"></a>
+<a name="IDX1845"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code>
 </p>
@@ -3514,7 +3514,7 @@ does not matter.
 <a name="Item_003a-xlabel_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xlabel_secondary</b>
-<a name="IDX1842"></a>
+<a name="IDX1846"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -3549,7 +3549,7 @@ does not matter.
 <a name="Item_003a-xrange"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xrange</b>
-<a name="IDX1843"></a>
+<a name="IDX1847"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -3582,7 +3582,7 @@ does not matter.
 <a name="Item_003a-xrange_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xrange_secondary</b>
-<a name="IDX1844"></a>
+<a name="IDX1848"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -3610,7 +3610,7 @@ does not matter.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>xtics</b>
-<a name="IDX1845"></a>
+<a name="IDX1849"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -3685,7 +3685,7 @@ does not matter.
 <a name="Item_003a-xtics_005faxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xtics_axis</b>
-<a name="IDX1846"></a>
+<a name="IDX1850"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3708,7 +3708,7 @@ does not matter.
 <a name="Item_003a-xtics_005frotate"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xtics_rotate</b>
-<a name="IDX1847"></a>
+<a name="IDX1851"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3730,7 +3730,7 @@ does not matter.
 <a name="Item_003a-xtics_005frotate_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xtics_rotate_secondary</b>
-<a name="IDX1848"></a>
+<a name="IDX1852"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3753,7 +3753,7 @@ does not matter.
 <a name="Item_003a-xtics_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xtics_secondary</b>
-<a name="IDX1849"></a>
+<a name="IDX1853"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -3774,7 +3774,7 @@ does not matter.
 <a name="Item_003a-xtics_005fsecondary_005faxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xtics_secondary_axis</b>
-<a name="IDX1850"></a>
+<a name="IDX1854"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3797,7 +3797,7 @@ does not matter.
 <a name="Item_003a-xu_005fgrid"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xu_grid</b>
-<a name="IDX1851"></a>
+<a name="IDX1855"></a>
 </dt>
 <dd><p>Default value: 30
 </p>
@@ -3833,7 +3833,7 @@ build the grid of sample points.
 <a name="Item_003a-xy_005ffile"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xy_file</b>
-<a name="IDX1852"></a>
+<a name="IDX1856"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -3858,7 +3858,7 @@ does not matter.
 <a name="Item_003a-xyplane"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>xyplane</b>
-<a name="IDX1853"></a>
+<a name="IDX1857"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3889,7 +3889,7 @@ does not matter.
 <a name="Item_003a-y_005fvoxel"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>y_voxel</b>
-<a name="IDX1854"></a>
+<a name="IDX1858"></a>
 </dt>
 <dd><p>Default value: 10
 </p>
@@ -3911,7 +3911,7 @@ object <code><a href="#region">region</a></code>.
 <a name="Item_003a-yaxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yaxis</b>
-<a name="IDX1855"></a>
+<a name="IDX1859"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -3941,7 +3941,7 @@ does not matter.
 <a name="Item_003a-yaxis_005fcolor"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yaxis_color</b>
-<a name="IDX1856"></a>
+<a name="IDX1860"></a>
 </dt>
 <dd><p>Default value: <code>&quot;black&quot;</code>
 </p>
@@ -3972,7 +3972,7 @@ does not matter.
 <a name="Item_003a-yaxis_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yaxis_secondary</b>
-<a name="IDX1857"></a>
+<a name="IDX1861"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4007,7 +4007,7 @@ and <code>ytics_axis_secondary</code>
 <a name="Item_003a-yaxis_005ftype"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yaxis_type</b>
-<a name="IDX1858"></a>
+<a name="IDX1862"></a>
 </dt>
 <dd><p>Default value: <code>dots</code>
 </p>
@@ -4038,7 +4038,7 @@ does not matter.
 <a name="Item_003a-yaxis_005fwidth"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yaxis_width</b>
-<a name="IDX1859"></a>
+<a name="IDX1863"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -4069,7 +4069,7 @@ does not matter.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>ylabel</b>
-<a name="IDX1860"></a>
+<a name="IDX1864"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code>
 </p>
@@ -4100,7 +4100,7 @@ does not matter.
 <a name="Item_003a-ylabel_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ylabel_secondary</b>
-<a name="IDX1861"></a>
+<a name="IDX1865"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code> (empty string)
 </p>
@@ -4139,7 +4139,7 @@ does not matter.
 <a name="Item_003a-yrange"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yrange</b>
-<a name="IDX1862"></a>
+<a name="IDX1866"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -4173,7 +4173,7 @@ does not matter.
 <a name="Item_003a-yrange_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yrange_secondary</b>
-<a name="IDX1863"></a>
+<a name="IDX1867"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -4211,7 +4211,7 @@ does not matter.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>ytics</b>
-<a name="IDX1864"></a>
+<a name="IDX1868"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -4232,7 +4232,7 @@ does not matter.
 <a name="Item_003a-ytics_005faxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ytics_axis</b>
-<a name="IDX1865"></a>
+<a name="IDX1869"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4256,7 +4256,7 @@ does not matter.
 <a name="Item_003a-ytics_005frotate"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ytics_rotate</b>
-<a name="IDX1866"></a>
+<a name="IDX1870"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4279,7 +4279,7 @@ does not matter.
 <a name="Item_003a-ytics_005frotate_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ytics_rotate_secondary</b>
-<a name="IDX1867"></a>
+<a name="IDX1871"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4302,7 +4302,7 @@ does not matter.
 <a name="Item_003a-ytics_005fsecondary"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ytics_secondary</b>
-<a name="IDX1868"></a>
+<a name="IDX1872"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -4323,7 +4323,7 @@ does not matter.
 <a name="Item_003a-ytics_005fsecondary_005faxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ytics_secondary_axis</b>
-<a name="IDX1869"></a>
+<a name="IDX1873"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4346,7 +4346,7 @@ does not matter.
 <a name="Item_003a-yv_005fgrid"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>yv_grid</b>
-<a name="IDX1870"></a>
+<a name="IDX1874"></a>
 </dt>
 <dd><p>Default value: 30
 </p>
@@ -4381,7 +4381,7 @@ build the grid of sample points.
 <a name="Item_003a-z_005fvoxel"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>z_voxel</b>
-<a name="IDX1871"></a>
+<a name="IDX1875"></a>
 </dt>
 <dd><p>Default value: 10
 </p>
@@ -4401,7 +4401,7 @@ by the 3d <code>implicit</code> object.
 <a name="Item_003a-zaxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>zaxis</b>
-<a name="IDX1872"></a>
+<a name="IDX1876"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4433,7 +4433,7 @@ does not matter.
 <a name="Item_003a-zaxis_005fcolor"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>zaxis_color</b>
-<a name="IDX1873"></a>
+<a name="IDX1877"></a>
 </dt>
 <dd><p>Default value: <code>&quot;black&quot;</code>
 </p>
@@ -4466,7 +4466,7 @@ does not matter.
 <a name="Item_003a-zaxis_005ftype"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>zaxis_type</b>
-<a name="IDX1874"></a>
+<a name="IDX1878"></a>
 </dt>
 <dd><p>Default value: <code>dots</code>
 </p>
@@ -4499,7 +4499,7 @@ does not matter.
 <a name="Item_003a-zaxis_005fwidth"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>zaxis_width</b>
-<a name="IDX1875"></a>
+<a name="IDX1879"></a>
 </dt>
 <dd><p>Default value: 1
 </p>
@@ -4531,7 +4531,7 @@ does not matter.
 </p>
 <dl>
 <dt><u>Graphic option:</u> <b>zlabel</b>
-<a name="IDX1876"></a>
+<a name="IDX1880"></a>
 </dt>
 <dd><p>Default value: <code>&quot;&quot;</code>
 </p>
@@ -4564,7 +4564,7 @@ does not matter.
 <a name="Item_003a-zlabel_005frotate"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>zlabel_rotate</b>
-<a name="IDX1877"></a>
+<a name="IDX1881"></a>
 </dt>
 <dd><p>Default value: <code>&quot;auto&quot;</code>
 </p>
@@ -4599,7 +4599,7 @@ does not matter.
 <a name="Item_003a-zrange"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>zrange</b>
-<a name="IDX1878"></a>
+<a name="IDX1882"></a>
 </dt>
 <dd><p>Default value: <code>auto</code>
 </p>
@@ -4632,7 +4632,7 @@ does not matter.
 <a name="Item_003a-ztics"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ztics</b>
-<a name="IDX1879"></a>
+<a name="IDX1883"></a>
 </dt>
 <dd><p>Default value: <code>true</code>
 </p>
@@ -4654,7 +4654,7 @@ does not matter.
 <a name="Item_003a-ztics_005faxis"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ztics_axis</b>
-<a name="IDX1880"></a>
+<a name="IDX1884"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4676,7 +4676,7 @@ does not matter.
 <a name="Item_003a-ztics_005frotate"></a>
 </p><dl>
 <dt><u>Graphic option:</u> <b>ztics_rotate</b>
-<a name="IDX1881"></a>
+<a name="IDX1885"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -4697,21 +4697,21 @@ does not matter.
 
 
 <hr size="6">
-<a name="SEC254"></a>
+<a name="SEC255"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC253" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC255" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC254" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC256" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC250" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC251" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.2.4 Graphics objects </h3>
@@ -4722,7 +4722,7 @@ does not matter.
 <a name="Item_003a-bars"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>bars</b><i> ([<var>x1</var>,<var>h1</var>,<var>w1</var>], [<var>x2</var>,<var>h2</var>,<var>w2</var>, ...])</i>
-<a name="IDX1882"></a>
+<a name="IDX1886"></a>
 </dt>
 <dd><p>Draws vertical bars in 2D.
 </p>
@@ -4763,7 +4763,7 @@ and widths <var>w1</var>, <var>w2</var>, ...
 <a name="Item_003a-cylindrical"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>cylindrical</b><i> (<var>radius</var>, <var>z</var>, <var>minz</var>, <var>maxz</var>, <var>azi</var>, <var>minazi</var>, <var>maxazi</var>)</i>
-<a name="IDX1883"></a>
+<a name="IDX1887"></a>
 </dt>
 <dd><p>Draws 3D functions defined in cylindrical coordinates.
 </p>
@@ -4797,7 +4797,7 @@ from <var>minazi</var> to <var>maxazi</var>.
 <a name="Item_003a-elevation_005fgrid"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>elevation_grid</b><i> (<var>mat</var>,<var>x0</var>,<var>y0</var>,<var>width</var>,<var>height</var>)</i>
-<a name="IDX1884"></a>
+<a name="IDX1888"></a>
 </dt>
 <dd><p>Draws matrix <var>mat</var> in 3D space. <var>z</var> values are taken from <var>mat</var>,
 the abscissas range from <var>x0</var> to <em><var>x0</var> + <var>width</var></em>
@@ -4838,7 +4838,7 @@ See also <code><a href="#mesh">mesh</a></code>.
 <a name="Item_003a-ellipse"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>ellipse</b><i> (<var>xc</var>, <var>yc</var>, <var>a</var>, <var>b</var>, <var>ang1</var>, <var>ang2</var>)</i>
-<a name="IDX1885"></a>
+<a name="IDX1889"></a>
 </dt>
 <dd><p>Draws ellipses and circles in 2D.
 </p>
@@ -4883,7 +4883,7 @@ equal to angle <var>ang2</var>.
 <a name="Item_003a-errors"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>errors</b><i> ([<var>x1</var>, <var>x2</var>, &hellip;], [<var>y1</var>, <var>y2</var>, &hellip;])</i>
-<a name="IDX1886"></a>
+<a name="IDX1890"></a>
 </dt>
 <dd><p>Draws points with error bars, horizontally, vertically or both, depending on the
 value of option <code>error_type</code>.
@@ -4935,7 +4935,7 @@ arguments must be of the form <code>[x, y, ydelta]</code> or
 <a name="Item_003a-explicit"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>explicit</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>explicit</tt> (<var>fcn</var>,<var>var</var>,<var>minval</var>,<var>maxval</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>explicit</tt> (<var>fcn</var>,<var>var1</var>,<var>minval1</var>,<var>maxval1</var>,<var>var2</var>,<var>minval2</var>,<var>maxval2</var>)</i>
-<a name="IDX1887"></a>
+<a name="IDX1891"></a>
 </dt>
 <dd><p>Draws explicit functions in 2D and 3D.
 </p>
@@ -4997,7 +4997,7 @@ variable <var>var2</var> taking values from <var>minval2</var> to <var>maxval2</
 <a name="Item_003a-image"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>image</b><i> (<var>im</var>,<var>x0</var>,<var>y0</var>,<var>width</var>,<var>height</var>)</i>
-<a name="IDX1888"></a>
+<a name="IDX1892"></a>
 </dt>
 <dd><p>Renders images in 2D.
 </p>
@@ -5101,7 +5101,7 @@ contains more elaborated examples.
 <a name="Item_003a-implicit"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>implicit</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>implicit</tt> (<var>fcn</var>,<var>x</var>,<var>xmin</var>,<var>xmax</var>,<var>y</var>,<var>ymin</var>,<var>ymax</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>implicit</tt> (<var>fcn</var>,<var>x</var>,<var>xmin</var>,<var>xmax</var>,<var>y</var>,<var>ymin</var>,<var>ymax</var>,<var>z</var>,<var>zmin</var>,<var>zmax</var>)</i>
-<a name="IDX1889"></a>
+<a name="IDX1893"></a>
 </dt>
 <dd><p>Draws implicit functions in 2D and 3D.
 </p>
@@ -5160,7 +5160,7 @@ from <var>zmin</var> to <var>zmax</var>. This object implements the <i>marching 
 </p>
 <dl>
 <dt><u>Graphic object:</u> <b>label</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>label</tt> ([<var>string</var>,<var>x</var>,<var>y</var>],...) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>label</tt> ([<var>string</var>,<var>x</var>,<var>y</var>,<var>z</var>],...)</i>
-<a name="IDX1890"></a>
+<a name="IDX1894"></a>
 </dt>
 <dd><p>Writes labels in 2D and 3D.
 </p>
@@ -5212,7 +5212,7 @@ from <var>zmin</var> to <var>zmax</var>. This object implements the <i>marching 
 <a name="Item_003a-mesh"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>mesh</b><i> (<var>row_1</var>,<var>row_2</var>,...)</i>
-<a name="IDX1891"></a>
+<a name="IDX1895"></a>
 </dt>
 <dd><p>Draws a quadrangular mesh in 3D.
 </p>
@@ -5269,7 +5269,7 @@ in some sense it's a generalization of the <code>elevation_grid</code> object.
 <a name="Item_003a-parametric"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>parametric</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>parametric</tt> (<var>xfun</var>,<var>yfun</var>,<var>par</var>,<var>parmin</var>,<var>parmax</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>parametric</tt> (<var>xfun</var>,<var>yfun</var>,<var>zfun</var>,<var>par</var>,<var>parmin</var>,<var>parmax</var>)</i>
-<a name="IDX1892"></a>
+<a name="IDX1896"></a>
 </dt>
 <dd><p>Draws parametric functions in 2D and 3D.
 </p>
@@ -5322,7 +5322,7 @@ with parameter <var>par</var> taking values from <var>parmin</var> to <var>parma
 <a name="Item_003a-parametric_005fsurface"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>parametric_surface</b><i> (<var>xfun</var>, <var>yfun</var>, <var>zfun</var>, <var>par1</var>, <var>par1min</var>, <var>par1max</var>, <var>par2</var>, <var>par2min</var>, <var>par2max</var>)</i>
-<a name="IDX1893"></a>
+<a name="IDX1897"></a>
 </dt>
 <dd><p>Draws parametric surfaces in 3D.
 </p>
@@ -5365,7 +5365,7 @@ with parameter <var>par</var> taking values from <var>parmin</var> to <var>parma
 <a name="Item_003a-points"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>points</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([[<var>x1</var>,<var>y1</var>], [<var>x2</var>,<var>y2</var>],...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([<var>x1</var>,<var>x2</var>,...], [<var>y1</var>,<var>y2</var>,...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([<var>y1</var>,<var>y2</var>,...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([[<var>x1</var>,<var>y1</var>,<var>z1</var>], [<var>x2</var>,<var>y2</var>,<var>z2</var>],...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> ([<var>x1</var>,<var>x2</var>,...], [<var>y1</var>,<var>y2</var>,...], [<var>z1</var>,<var>z2</var>,...]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>matrix</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>1d_y_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>1d_x_array</var>, <var>1d_y_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>1d_x_array</var>, <var>1d_y_array</var>, <var>1d_z_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>2d_xy_array</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>points</tt> (<var>2d_xyz_array</var>)</i>
-<a name="IDX1894"></a>
+<a name="IDX1898"></a>
 </dt>
 <dd><p>Draws points in 2D and 3D.
 </p>
@@ -5459,14 +5459,14 @@ or with three rows, <code>points (<var>2d_xyz_array</var>)</code> plots the corr
 <p>Examples:
 </p>
 <p>One tridimensional sample,
-</p><pre class="example">(%i1) load (numericalio)$
+</p><pre class="example">(%i1) load (&quot;numericalio&quot;)$
 (%i2) s2 : read_matrix (file_search (&quot;wind.data&quot;))$
 (%i3) draw3d(title = &quot;Daily average wind speeds&quot;,
              point_size = 2,
              points(args(submatrix (s2, 4, 5))) )$
 </pre>
 <p>Two tridimensional samples,
-</p><pre class="example">(%i1) load (numericalio)$
+</p><pre class="example">(%i1) load (&quot;numericalio&quot;)$
 (%i2) s2 : read_matrix (file_search (&quot;wind.data&quot;))$
 (%i3) draw3d(
          title = &quot;Daily average wind speeds. Two data sets&quot;,
@@ -5523,7 +5523,7 @@ or with three rows, <code>points (<var>2d_xyz_array</var>)</code> plots the corr
 <a name="Item_003a-polar"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>polar</b><i> (<var>radius</var>,<var>ang</var>,<var>minang</var>,<var>maxang</var>)</i>
-<a name="IDX1895"></a>
+<a name="IDX1899"></a>
 </dt>
 <dd><p>Draws 2D functions defined in polar coordinates.
 </p>
@@ -5563,7 +5563,7 @@ or with three rows, <code>points (<var>2d_xyz_array</var>)</code> plots the corr
 <a name="Item_003a-polygon"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>polygon</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>polygon</tt> ([[<var>x1</var>, <var>y1</var>], [<var>x2</var>, <var>y2</var>], &hellip;]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>polygon</tt> ([<var>x1</var>, <var>x2</var>, &hellip;], [<var>y1</var>, <var>y2</var>, &hellip;])</i>
-<a name="IDX1896"></a>
+<a name="IDX1900"></a>
 </dt>
 <dd><p>Draws polygons in 2D.
 </p>
@@ -5600,7 +5600,7 @@ the plane a polygon with vertices <code>[<var>x1</var>, <var>y1</var>]</code>, <
 <a name="Item_003a-quadrilateral"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>quadrilateral</b><i> (<var>point_1</var>, <var>point_2</var>, <var>point_3</var>, <var>point_4</var>)</i>
-<a name="IDX1897"></a>
+<a name="IDX1901"></a>
 </dt>
 <dd><p>Draws a quadrilateral.
 </p>
@@ -5644,7 +5644,7 @@ and <code>[<var>x4</var>, <var>y4</var>, <var>z4</var>]</code>.
 <a name="Item_003a-rectangle"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>rectangle</b><i> ([<var>x1</var>,<var>y1</var>], [<var>x2</var>,<var>y2</var>])</i>
-<a name="IDX1898"></a>
+<a name="IDX1902"></a>
 </dt>
 <dd><p>Draws rectangles in 2D.
 </p>
@@ -5687,7 +5687,7 @@ and <code>[<var>x4</var>, <var>y4</var>, <var>z4</var>]</code>.
 <a name="Item_003a-region"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>region</b><i> (<var>expr</var>,<var>var1</var>,<var>minval1</var>,<var>maxval1</var>,<var>var2</var>,<var>minval2</var>,<var>maxval2</var>)</i>
-<a name="IDX1899"></a>
+<a name="IDX1903"></a>
 </dt>
 <dd><p>Plots a region on the plane defined by inequalities.
 </p>
@@ -5714,7 +5714,7 @@ defined by <em>[<var>minval1</var>, <var>maxval1</var>]</em> and <em>[<var>minva
 <a name="Item_003a-spherical"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>spherical</b><i> (<var>radius</var>, <var>azi</var>, <var>minazi</var>, <var>maxazi</var>, <var>zen</var>, <var>minzen</var>, <var>maxzen</var>)</i>
-<a name="IDX1900"></a>
+<a name="IDX1904"></a>
 </dt>
 <dd><p>Draws 3D functions defined in spherical coordinates.
 </p>
@@ -5746,7 +5746,7 @@ from <var>minzen</var> to <var>maxzen</var>.
 <a name="Item_003a-triangle"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>triangle</b><i> (<var>point_1</var>, <var>point_2</var>, <var>point_3</var>)</i>
-<a name="IDX1901"></a>
+<a name="IDX1905"></a>
 </dt>
 <dd><p>Draws a triangle.
 </p>
@@ -5786,7 +5786,7 @@ and <code>[<var>x3</var>,<var>y3</var>]</code>.
 <a name="Item_003a-tube"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>tube</b><i> (<var>xfun</var>,<var>yfun</var>,<var>zfun</var>,<var>rfun</var>,<var>p</var>,<var>pmin</var>,<var>pmax</var>)</i>
-<a name="IDX1902"></a>
+<a name="IDX1906"></a>
 </dt>
 <dd><p>Draws a tube in 3D with varying diameter.
 </p>
@@ -5823,7 +5823,7 @@ the parametric curve and perpendicular to it.
 <a name="Item_003a-vector"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>vector</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>vector</tt> ([<var>x</var>,<var>y</var>], [<var>dx</var>,<var>dy</var>]) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>vector</tt> ([<var>x</var>,<var>y</var>,<var>z</var>], [<var>dx</var>,<var>dy</var>,<var>dz</var>])</i>
-<a name="IDX1903"></a>
+<a name="IDX1907"></a>
 </dt>
 <dd><p>Draws vectors in 2D and 3D.
 </p>
@@ -5878,21 +5878,21 @@ origin in <code>[<var>x</var>,<var>y</var>,<var>z</var>]</code>.
 <p><a name="Item_003a-Functions-and-Variables-for-pictures"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-pictures"></a>
-<a name="SEC255"></a>
+<a name="SEC256"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC254" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC256" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC255" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC257" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.3 Functions and Variables for pictures </h2>
@@ -5903,7 +5903,7 @@ origin in <code>[<var>x</var>,<var>y</var>,<var>z</var>]</code>.
 <a name="Item_003a-get_005fpixel"></a>
 </p><dl>
 <dt><u>Function:</u> <b>get_pixel</b><i> (<var>pic</var>,<var>x</var>,<var>y</var>)</i>
-<a name="IDX1904"></a>
+<a name="IDX1908"></a>
 </dt>
 <dd><p>Returns pixel from picture. Coordinates <var>x</var> and <var>y</var> range from 0 to
 <code>width-1</code> and <code>height-1</code>, respectively.
@@ -5922,7 +5922,7 @@ origin in <code>[<var>x</var>,<var>y</var>,<var>z</var>]</code>.
 <a name="Item_003a-make_005flevel_005fpicture"></a>
 </p><dl>
 <dt><u>Function:</u> <b>make_level_picture</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_level_picture</tt> (<var>data</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_level_picture</tt> (<var>data</var>,<var>width</var>,<var>height</var>)</i>
-<a name="IDX1905"></a>
+<a name="IDX1909"></a>
 </dt>
 <dd><p>Returns a levels <var>picture</var> object. <code>make_level_picture (<var>data</var>)</code>
 builds the <var>picture</var> object from matrix <var>data</var>.
@@ -5967,7 +5967,7 @@ greater than 255 are set to 255.
 <a name="Item_003a-make_005frgb_005fpicture"></a>
 </p><dl>
 <dt><u>Function:</u> <b>make_rgb_picture</b><i> (<var>redlevel</var>,<var>greenlevel</var>,<var>bluelevel</var>)</i>
-<a name="IDX1906"></a>
+<a name="IDX1910"></a>
 </dt>
 <dd><p>Returns an rgb-coloured <var>picture</var> object. All three arguments must
 be levels picture; with red, green and blue levels.
@@ -6011,7 +6011,7 @@ from 0 to 255. Each pixel is represented by three consecutive numbers
 <a name="Item_003a-negative_005fpicture"></a>
 </p><dl>
 <dt><u>Function:</u> <b>negative_picture</b><i> (<var>pic</var>)</i>
-<a name="IDX1907"></a>
+<a name="IDX1911"></a>
 </dt>
 <dd><p>Returns the negative of a (<var>level</var> or <var>rgb</var>) picture.
 </p>
@@ -6029,7 +6029,7 @@ from 0 to 255. Each pixel is represented by three consecutive numbers
 <a name="Item_003a-picture_005fequalp"></a>
 </p><dl>
 <dt><u>Function:</u> <b>picture_equalp</b><i> (<var>x</var>,<var>y</var>)</i>
-<a name="IDX1908"></a>
+<a name="IDX1912"></a>
 </dt>
 <dd><p>Returns <code>true</code> in case of equal pictures, and <code>false</code> otherwise.
 </p>
@@ -6048,7 +6048,7 @@ from 0 to 255. Each pixel is represented by three consecutive numbers
 <a name="Item_003a-picturep"></a>
 </p><dl>
 <dt><u>Function:</u> <b>picturep</b><i> (<var>x</var>)</i>
-<a name="IDX1909"></a>
+<a name="IDX1913"></a>
 </dt>
 <dd><p>Returns <code>true</code> if the argument is a well formed image,
 and <code>false</code> otherwise.
@@ -6067,7 +6067,7 @@ and <code>false</code> otherwise.
 <a name="Item_003a-read_005fxpm"></a>
 </p><dl>
 <dt><u>Function:</u> <b>read_xpm</b><i> (<var>xpm_file</var>)</i>
-<a name="IDX1910"></a>
+<a name="IDX1914"></a>
 </dt>
 <dd><p>Reads a file in xpm and returns a picture object.
 </p>
@@ -6085,7 +6085,7 @@ and <code>false</code> otherwise.
 <a name="Item_003a-rgb2level"></a>
 </p><dl>
 <dt><u>Function:</u> <b>rgb2level</b><i> (<var>pic</var>)</i>
-<a name="IDX1911"></a>
+<a name="IDX1915"></a>
 </dt>
 <dd><p>Transforms an <var>rgb</var> picture into a <var>level</var> one by
 averaging the red, green and blue channels.
@@ -6104,7 +6104,7 @@ averaging the red, green and blue channels.
 <a name="Item_003a-take_005fchannel"></a>
 </p><dl>
 <dt><u>Function:</u> <b>take_channel</b><i> (<var>im</var>,<var>color</var>)</i>
-<a name="IDX1912"></a>
+<a name="IDX1916"></a>
 </dt>
 <dd><p>If argument <var>color</var> is <code>red</code>, <code>green</code> or <code>blue</code>,
 function <code>take_channel</code> returns the corresponding color channel of
@@ -6137,21 +6137,21 @@ Example:
 <p><a name="Item_003a-Functions-and-Variables-for-worldmap"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-worldmap"></a>
-<a name="SEC256"></a>
+<a name="SEC257"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC255" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC257" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC256" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC258" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 52.4 Functions and Variables for worldmap </h2>
@@ -6161,21 +6161,21 @@ Example:
 </p>
 
 <hr size="6">
-<a name="SEC257"></a>
+<a name="SEC258"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC256" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC258" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC257" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC259" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC256" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC257" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.4.1 Variables and Functions </h3>
@@ -6186,7 +6186,7 @@ Example:
 <a name="Item_003a-boundaries_005farray"></a>
 </p><dl>
 <dt><u>Global variable:</u> <b>boundaries_array</b>
-<a name="IDX1913"></a>
+<a name="IDX1917"></a>
 </dt>
 <dd><p>Default value: <code>false</code>
 </p>
@@ -6213,7 +6213,7 @@ point quantities, the coordinates of a polygonal segment or map boundary.
 <a name="Item_003a-numbered_005fboundaries"></a>
 </p><dl>
 <dt><u>Function:</u> <b>numbered_boundaries</b><i> (<var>nlist</var>)</i>
-<a name="IDX1914"></a>
+<a name="IDX1918"></a>
 </dt>
 <dd><p>Draws a list of polygonal segments (boundaries), labeled by
 its numbers (<code>boundaries_array</code> coordinates). This is of great
@@ -6242,7 +6242,7 @@ help when building new geographical entities.
 <a name="Item_003a-make_005fpoly_005fcontinent"></a>
 </p><dl>
 <dt><u>Function:</u> <b>make_poly_continent</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_poly_continent</tt> (<var>continent_name</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>make_poly_continent</tt> (<var>country_list</var>)</i>
-<a name="IDX1915"></a>
+<a name="IDX1919"></a>
 </dt>
 <dd><p>Makes the necessary polygons to draw a colored continent
 or a list of countries.
@@ -6274,7 +6274,7 @@ or a list of countries.
 <a name="Item_003a-make_005fpoly_005fcountry"></a>
 </p><dl>
 <dt><u>Function:</u> <b>make_poly_country</b><i> (<var>country_name</var>)</i>
-<a name="IDX1916"></a>
+<a name="IDX1920"></a>
 </dt>
 <dd><p>Makes the necessary polygons to draw a colored country.
 If islands exist, one country can be defined with more than
@@ -6302,7 +6302,7 @@ just one polygon.
 <a name="Item_003a-make_005fpolygon"></a>
 </p><dl>
 <dt><u>Function:</u> <b>make_polygon</b><i> (<var>nlist</var>)</i>
-<a name="IDX1917"></a>
+<a name="IDX1921"></a>
 </dt>
 <dd><p>Returns a <code>polygon</code> object from boundary indices. Argument
 <var>nlist</var> is a list of components of <code>boundaries_array</code>.
@@ -6374,7 +6374,7 @@ polygon can be drawn.
 <a name="Item_003a-region_005fboundaries"></a>
 </p><dl>
 <dt><u>Function:</u> <b>region_boundaries</b><i> (<var>x1</var>,<var>y1</var>,<var>x2</var>,<var>y2</var>)</i>
-<a name="IDX1918"></a>
+<a name="IDX1922"></a>
 </dt>
 <dd><p>Detects polygonal segments of global variable <code>boundaries_array</code>
 fully contained in the rectangle with vertices (<var>x1</var>,<var>y1</var>) -upper left- 
@@ -6402,7 +6402,7 @@ and (<var>x2</var>,<var>y2</var>) -bottom right-.
 <a name="Item_003a-region_005fboundaries_005fplus"></a>
 </p><dl>
 <dt><u>Function:</u> <b>region_boundaries_plus</b><i> (<var>x1</var>,<var>y1</var>,<var>x2</var>,<var>y2</var>)</i>
-<a name="IDX1919"></a>
+<a name="IDX1923"></a>
 </dt>
 <dd><p>Detects polygonal segments of global variable <code>boundaries_array</code>
 containing at least one vertex in the rectangle defined by vertices (<var>x1</var>,<var>y1</var>)
@@ -6428,21 +6428,21 @@ containing at least one vertex in the rectangle defined by vertices (<var>x1</va
 
 
 <hr size="6">
-<a name="SEC258"></a>
+<a name="SEC259"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC257" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC258" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC256" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC257" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h3 class="subsection"> 52.4.2 Graphic objects </h3>
@@ -6452,7 +6452,7 @@ containing at least one vertex in the rectangle defined by vertices (<var>x1</va
 <a name="Item_003a-geomap"></a>
 </p><dl>
 <dt><u>Graphic object:</u> <b>geomap</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>geomap</tt> (<var>numlist</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>geomap</tt> (<var>numlist</var>,<var>3Dprojection</var>)</i>
-<a name="IDX1920"></a>
+<a name="IDX1924"></a>
 </dt>
 <dd><p>Draws cartographic maps in 2D and 3D.
 </p>
@@ -6594,8 +6594,8 @@ for more elaborated examples.
 <p><a name="Item_003a-drawdf_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC248" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_53.html#SEC259" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_53.html#SEC260" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -6603,12 +6603,12 @@ for more elaborated examples.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

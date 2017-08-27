@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on December, 11 2016 by texi2html 1.76 -->
+<!-- Created on May, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 78. romberg</title>
+<title>Maxima 5.40.0 Manual: 78. romberg</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 78. romberg">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 78. romberg">
+<meta name="description" content="Maxima 5.40.0 Manual: 78. romberg">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 78. romberg">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -58,7 +58,7 @@ img {max-width:80%; max-height: 80%}
 -->
 </style>
 
-<link rel="icon" href="figures/favicon.ico"/>
+<link rel="icon" href="figures/favicon.ico">
 
 
 </head>
@@ -66,48 +66,48 @@ img {max-width:80%; max-height: 80%}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <a name="romberg_002dpkg"></a>
-<a name="SEC360"></a>
+<a name="SEC361"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC361" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_77.html#SEC360" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC362" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_77.html#SEC358" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_77.html#SEC359" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC363" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 78. romberg </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC361">78.1 Functions and Variables for romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC362">78.1 Functions and Variables for romberg</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Functions-and-Variables-for-romberg"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-romberg"></a>
-<a name="SEC361"></a>
+<a name="SEC362"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC360" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC361" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC363" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC360" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC360" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC361" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC361" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC363" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 78.1 Functions and Variables for romberg </h2>
@@ -116,7 +116,7 @@ img {max-width:80%; max-height: 80%}
 <a name="Item_003a-romberg"></a>
 </p><dl>
 <dt><u>Function:</u> <b>romberg</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>romberg</tt> (<var>expr</var>, <var>x</var>, <var>a</var>, <var>b</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>romberg</tt> (<var>F</var>, <var>a</var>, <var>b</var>)</i>
-<a name="IDX2364"></a>
+<a name="IDX2368"></a>
 </dt>
 <dd><p>Computes a numerical integration by Romberg's method.
 </p>
@@ -165,7 +165,7 @@ the same accuracy with fewer function evaluations.
 </p>
 <p>A 1-dimensional integration.
 </p>
-<pre class="example">(%i1) load (romberg);
+<pre class="example">(%i1) load (&quot;romberg&quot;);
 (%o1)    /usr/share/maxima/5.11.0/share/numeric/romberg.lisp
 (%i2) f(x) := 1/((x - 1)^2 + 1/100) + 1/((x - 2)^2 + 1/1000)
               + 1/((x - 3)^2 + 1/200);
@@ -189,7 +189,7 @@ the same accuracy with fewer function evaluations.
 </pre>
 <p>A 2-dimensional integration, implemented by nested calls to <code>romberg</code>.
 </p>
-<pre class="example">(%i1) load (romberg);
+<pre class="example">(%i1) load (&quot;romberg&quot;);
 (%o1)    /usr/share/maxima/5.11.0/share/numeric/romberg.lisp
 (%i2) g(x, y) := x*y / (x + y);
                                     x y
@@ -226,7 +226,7 @@ the same accuracy with fewer function evaluations.
 <a name="Item_003a-rombergabs"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>rombergabs</b>
-<a name="IDX2365"></a>
+<a name="IDX2369"></a>
 </dt>
 <dd><p>Default value: 0.0
 </p>
@@ -251,7 +251,7 @@ only the relative error test has any effect on <code>romberg</code>.
 <a name="Item_003a-rombergit"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>rombergit</b>
-<a name="IDX2366"></a>
+<a name="IDX2370"></a>
 </dt>
 <dd><p>Default value: 11
 </p>
@@ -273,7 +273,7 @@ this is a heuristic intended to prevent spurious termination when the integrand 
 <a name="Item_003a-rombergmin"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>rombergmin</b>
-<a name="IDX2367"></a>
+<a name="IDX2371"></a>
 </dt>
 <dd><p>Default value: 0
 </p>
@@ -293,7 +293,7 @@ this is a heuristic intended to prevent spurious termination when the integrand 
 <a name="Item_003a-rombergtol"></a>
 </p><dl>
 <dt><u>Option variable:</u> <b>rombergtol</b>
-<a name="IDX2368"></a>
+<a name="IDX2372"></a>
 </dt>
 <dd><p>Default value: 1e-4
 </p>
@@ -318,8 +318,8 @@ only the relative error test has any effect on <code>romberg</code>.
 <p><a name="Item_003a-simplex_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC360" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_79.html#SEC362" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC361" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_79.html#SEC363" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -327,12 +327,12 @@ only the relative error test has any effect on <code>romberg</code>.
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_89.html#SEC425" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_89.html#SEC426" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>December, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>May, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

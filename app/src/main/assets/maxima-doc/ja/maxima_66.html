@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on December, 27 2016 by texi2html 1.76 -->
+<!-- Created on June, 5 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Maxima 5.39.0 Manual: 66. lbfgs</title>
+<title>Maxima 5.40.0 Manual: 66. lbfgs</title>
 
-<meta name="description" content="Maxima 5.39.0 Manual: 66. lbfgs">
-<meta name="keywords" content="Maxima 5.39.0 Manual: 66. lbfgs">
+<meta name="description" content="Maxima 5.40.0 Manual: 66. lbfgs">
+<meta name="keywords" content="Maxima 5.40.0 Manual: 66. lbfgs">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -92,51 +92,52 @@ img {max-width:80%; max-height: 80%}
 <gcse:search></gcse:search>
 </div>
 
+
 <a name="lbfgs_002dpkg"></a>
-<a name="SEC315"></a>
+<a name="SEC316"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="maxima_65.html#SEC314" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC316" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="maxima_65.html#SEC315" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC317" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="maxima_65.html#SEC312" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_65.html#SEC313" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_67.html#SEC318" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_67.html#SEC319" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h1 class="chapter"> 66. lbfgs </h1>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC316">66.1 Introduction to lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC317">66.1 Introduction to lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC317">66.2 Functions and Variables for lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC318">66.2 Functions and Variables for lbfgs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <p><a name="Item_003a-Introduction-to-lbfgs"></a>
 </p><hr size="6">
 <a name="Introduction-to-lbfgs"></a>
-<a name="SEC316"></a>
+<a name="SEC317"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC315" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC317" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC316" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC318" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC315" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC315" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_67.html#SEC318" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC316" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC316" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_67.html#SEC319" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 66.1 Introduction to lbfgs </h2>
@@ -170,21 +171,21 @@ scale optimization&quot;. <i>Mathematical Programming B</i> 45:503-528 (1989)
 <p><a name="Item_003a-Functions-and-Variables-for-lbfgs"></a>
 </p><hr size="6">
 <a name="Functions-and-Variables-for-lbfgs"></a>
-<a name="SEC317"></a>
+<a name="SEC318"></a>
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC316" title="Previous section in reading order"> &lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_67.html#SEC318" title="Next section in reading order"> &gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC317" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_67.html#SEC319" title="Next section in reading order"> &gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
-<td valign="middle" align="left">[<a href="#SEC315" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="#SEC315" title="Up section"> Up </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_67.html#SEC318" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC316" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC316" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_67.html#SEC319" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <h2 class="section"> 66.2 Functions and Variables for lbfgs </h2>
@@ -193,7 +194,7 @@ scale optimization&quot;. <i>Mathematical Programming B</i> 45:503-528 (1989)
 <a name="Item_003a-lbfgs"></a>
 </p><dl>
 <dt><u>関数:</u> <b>lbfgs</b><i> &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lbfgs</tt> (<var>FOM</var>, <var>X</var>, <var>X0</var>, <var>epsilon</var>, <var>iprint</var>) &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;<tt>lbfgs</tt> ([<var>FOM</var>, <var>grad</var>] <var>X</var>, <var>X0</var>, <var>epsilon</var>, <var>iprint</var>)</i>
-<a name="IDX2256"></a>
+<a name="IDX2260"></a>
 </dt>
 <dd><p>初期見積もり <var>X0</var>から始めて
 変数リスト <var>X</var>上での、
@@ -291,7 +292,7 @@ FGCOMPUTEが計算したのと同じ FOM。
 問題の変数が添字付き変数であることに注意してください。
 FOMは <em>u[k] = 1</em>(<em>k = 1, ..., 8</em>)で 0に等しい厳密な最小を持ちます。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lbfgs)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;lbfgs&quot;)$
 (%i2) t1[j] := 1 - u[j];
 (%o2)                     t1  := 1 - u
                             j         j
@@ -371,7 +372,7 @@ FOMは予言値 <em>F(X[i])</em>と観測値 <em>Y[i]</em>の二乗平均差で�
 この例では、 <em>F</em>のパラメータに関して <code>lbfgs</code>は近似値を計算し、
 <code>plot2d</code>は <em>F</em>の観測データとの比較を表示します。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lbfgs)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;lbfgs&quot;)$
 (%i2) FOM : '((1/length(X))*sum((F(X[i]) - Y[i])^2, i, 1,
                                                 length(X)));
                                2
@@ -429,7 +430,7 @@ FOMは予言値 <em>F(X[i])</em>と観測値 <em>Y[i]</em>の二乗平均差で�
 <p>FOMの勾配が(自動的に計算される代わりに)指定されます。
 FOMとその勾配の両方を関数として <code>lbfgs</code>に渡します。
 </p>
-<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (lbfgs)$
+<table><tr><td>&nbsp;</td><td><pre class="example">(%i1) load (&quot;lbfgs&quot;)$
 (%i2) F(a, b, c) := (a - 5)^2 + (b - 3)^4 + (c - 2)^6$
 (%i3) define(F_grad(a, b, c),
              map (lambda ([x], diff (F(a, b, c), x)), [a, b, c]))$
@@ -475,7 +476,7 @@ FOMとその勾配の両方を関数として <code>lbfgs</code>に渡します�
 <a name="Item_003a-lbfgs_005fnfeval_005fmax"></a>
 </p><dl>
 <dt><u>変数:</u> <b>lbfgs_nfeval_max</b>
-<a name="IDX2257"></a>
+<a name="IDX2261"></a>
 </dt>
 <dd><p>デフォルト値: 100
 </p>
@@ -494,7 +495,7 @@ FOMとその勾配の両方を関数として <code>lbfgs</code>に渡します�
 <a name="Item_003a-lbfgs_005fncorrections"></a>
 </p><dl>
 <dt><u>変数:</u> <b>lbfgs_ncorrections</b>
-<a name="IDX2258"></a>
+<a name="IDX2262"></a>
 </dt>
 <dd><p>デフォルト値: 25
 </p>
@@ -511,8 +512,8 @@ Hessian行列に適用された修正回数です。
 <p><a name="Item_003a-lindstedt_002dpkg"></a>
 </p><hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC315" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="maxima_67.html#SEC318" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC316" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="maxima_67.html#SEC319" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -520,12 +521,12 @@ Hessian行列に適用された修正回数です。
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left">[<a href="maxima.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
-<td valign="middle" align="left">[<a href="maxima_90.html#SEC428" title="Index">Index</a>]</td>
+<td valign="middle" align="left">[<a href="maxima_90.html#SEC429" title="Index">Index</a>]</td>
 <td valign="middle" align="left">[<a href="maxima_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>市川雄二</em> on <em>December, 27 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>市川雄二</em> on <em>June, 5 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Created on diciembre, 11 2016 by texi2html 1.76 -->
+<!-- Created on mayo, 30 2017 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual de Maxima 5.39.0: 52. finance</title>
+<title>Manual de Maxima 5.40.1.gd04f9f4: 52. finance</title>
 
-<meta name="description" content="Manual de Maxima 5.39.0: 52. finance">
-<meta name="keywords" content="Manual de Maxima 5.39.0: 52. finance">
+<meta name="description" content="Manual de Maxima 5.40.1.gd04f9f4: 52. finance">
+<meta name="keywords" content="Manual de Maxima 5.40.1.gd04f9f4: 52. finance">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -148,7 +148,7 @@ paquete, debe cargarla escribiendo <code>load(finance)$</code>.
 
 <dl>
 <dt><u>Function:</u> <b>days360</b><i> (<var>año1</var>,<var>mes1</var>,<var>dia1</var>,<var>año2</var>,<var>mes2</var>,<var>dia2</var>)</i>
-<a name="IDX2227"></a>
+<a name="IDX2231"></a>
 </dt>
 <dd><p>Calcula la distancia entre 2 fechas, asumiendo años de 360 dias y meses de 30 días.
 </p>
@@ -162,7 +162,7 @@ paquete, debe cargarla escribiendo <code>load(finance)$</code>.
 
 <dl>
 <dt><u>Function:</u> <b>fv</b><i> (<var>rate</var>,<var>PV</var>,<var>num</var>)</i>
-<a name="IDX2228"></a>
+<a name="IDX2232"></a>
 </dt>
 <dd><p>Calcular el Valor Futuro a partir de uno en el Presente para una tasa de interés dada.
 <var>rate</var> es la tasa de interés, <var>PV</var> es el valor prestente y <var>num</var> es el número
@@ -178,7 +178,7 @@ de periodos.
 
 <dl>
 <dt><u>Function:</u> <b>pv</b><i> (<var>rate</var>,<var>FV</var>,<var>num</var>)</i>
-<a name="IDX2229"></a>
+<a name="IDX2233"></a>
 </dt>
 <dd><p>Calcula el valor actual de un valor futuro dada la tasa de interés. <var>rate</var> es
 la tasa de interés, <var>FV</var> es el valor futuro y <var>num</var> es el número
@@ -194,7 +194,7 @@ de periodos.
 
 <dl>
 <dt><u>Function:</u> <b>graph_flow</b><i> (<var>val</var>)</i>
-<a name="IDX2230"></a>
+<a name="IDX2234"></a>
 </dt>
 <dd><p>Grafica el flujo de caja en una línea de tiempo, los valores positivos
 están en azul y hacia arriba; los negativos están en rojo y hacia
@@ -211,7 +211,7 @@ La dirección del flujo está dada por el signo de los valores.
 
 <dl>
 <dt><u>Function:</u> <b>annuity_pv</b><i> (<var>rate</var>,<var>PV</var>,<var>num</var>)</i>
-<a name="IDX2231"></a>
+<a name="IDX2235"></a>
 </dt>
 <dd><p>Calcula una anualidad conociendo el valor presente (tipo deuda),
 para unos pagos periódicos y constantes. <var>rate</var> es la tasa
@@ -228,7 +228,7 @@ número de periodos.
 
 <dl>
 <dt><u>Function:</u> <b>annuity_fv</b><i> (<var>rate</var>,<var>FV</var>,<var>num</var>)</i>
-<a name="IDX2232"></a>
+<a name="IDX2236"></a>
 </dt>
 <dd><p>Calcula una anualidad conociendo el valor deseado (valor futuro),
 para una serie de pagos periódicos y constantes. <var>rate</var> es la tasa
@@ -245,7 +245,7 @@ número de periodos.
 
 <dl>
 <dt><u>Function:</u> <b>geo_annuity_pv</b><i> (<var>rate</var>,<var>growing_rate</var>,<var>PV</var>,<var>num</var>)</i>
-<a name="IDX2233"></a>
+<a name="IDX2237"></a>
 </dt>
 <dd><p>Calcula una anualidad conociendo el valor presente (tipo deuda)
 en una serie de pagos periodicos crecientes.  <var>rate</var> es la tasa de interés, <var>growing_rate</var>
@@ -261,7 +261,7 @@ es el crecimiento de los pagos, <var>PV</var> es el valor presente, y <var>num</
 
 <dl>
 <dt><u>Function:</u> <b>geo_annuity_fv</b><i> (<var>rate</var>,<var>growing_rate</var>,<var>FV</var>,<var>num</var>)</i>
-<a name="IDX2234"></a>
+<a name="IDX2238"></a>
 </dt>
 <dd><p>Calcular una anualidad conociendo el valor deseado (valor futuro)
 en una serie de pagos periodicos crecientes.  <var>rate</var> es la tasa de interés, <var>growing_rate</var>
@@ -276,7 +276,7 @@ es el crecimiento de los pagos, <var>FV</var> es el valor futuro, y <var>num</va
 
 <dl>
 <dt><u>Function:</u> <b>amortization</b><i> (<var>rate</var>,<var>amount</var>,<var>num</var>)</i>
-<a name="IDX2235"></a>
+<a name="IDX2239"></a>
 </dt>
 <dd><p>La tabla de amortización determinada por una tasa.
 Siendo <var>rate</var> es la tasa de interés, <var>amount</var> es el valor de la deuda,
@@ -305,7 +305,7 @@ and <var>num</var> es el número de periodos.
 
 <dl>
 <dt><u>Function:</u> <b>arit_amortization</b><i> (<var>rate</var>,<var>increment</var>,<var>amount</var>,<var>num</var>)</i>
-<a name="IDX2236"></a>
+<a name="IDX2240"></a>
 </dt>
 <dd><p>La tabla de amortización determinada por una tasa específica y unos pagos crecientes
 se puede hallar con <code>arit_amortization</code>.
@@ -338,7 +338,7 @@ es el valor de la deuda, and <var>num</var> es el número de periodos.
 
 <dl>
 <dt><u>Function:</u> <b>geo_amortization</b><i> (<var>rate</var>,<var>growing_rate</var>,<var>amount</var>,<var>num</var>)</i>
-<a name="IDX2237"></a>
+<a name="IDX2241"></a>
 </dt>
 <dd><p>La tabla de amortización determinada por la tasa, el valor de la deuda,
 y el número de periodos se puede hallar con <code>geo_amortization</code>.
@@ -371,7 +371,7 @@ es el valor de la deuda, y <var>num</var> es el numero de periodos.
 
 <dl>
 <dt><u>Function:</u> <b>saving</b><i> (<var>rate</var>,<var>amount</var>,<var>num</var>)</i>
-<a name="IDX2238"></a>
+<a name="IDX2242"></a>
 </dt>
 <dd><p>La tabla que presenta los valores para un ahorro constante y
 periódico se pueden hallar con <code>saving</code>.
@@ -404,7 +404,7 @@ periodos durante los que se ahorrará.
 
 <dl>
 <dt><u>Function:</u> <b>npv</b><i> (<var>rate</var>,<var>val</var>)</i>
-<a name="IDX2239"></a>
+<a name="IDX2243"></a>
 </dt>
 <dd><p>Calcular el valor presente neto de una serie de valores para evaluar la
 viabilidad de un proyecto.
@@ -420,7 +420,7 @@ viabilidad de un proyecto.
 
 <dl>
 <dt><u>Function:</u> <b>irr</b><i> (<var>val</var>,<var>IO</var>)</i>
-<a name="IDX2240"></a>
+<a name="IDX2244"></a>
 </dt>
 <dd><p>Tasa interna de retorno (en inglés Internal Rate of Return - IRR), es el
 valor de tasa que hace que el Valor Presente Neto (NPV) sea cero.
@@ -438,7 +438,7 @@ valor de tasa que hace que el Valor Presente Neto (NPV) sea cero.
 
 <dl>
 <dt><u>Function:</u> <b>benefit_cost</b><i> (<var>rate</var>,<var>input</var>,<var>output</var>)</i>
-<a name="IDX2241"></a>
+<a name="IDX2245"></a>
 </dt>
 <dd><p>Calcular la relación Beneficio/Costo, Beneficio es el Valor Presente Neto (NPV)
 de los flujos de caja positivos (inputs), y Costo es el Valor Presente Neto
@@ -473,7 +473,7 @@ y <var>output</var> es una lista con los egresos.
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Viktor T. Toth</em> on <em>diciembre, 11 2016</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated by <em>Viktor T. Toth</em> on <em>mayo, 30 2017</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
  </font>
  <br>
 

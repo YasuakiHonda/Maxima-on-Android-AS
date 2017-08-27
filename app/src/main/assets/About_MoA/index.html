@@ -26,7 +26,7 @@
 <div data-role="page" id="page1">
     <div data-role="content">
         <h2>
-            Maxima on Android 3.0</h2>
+            Maxima on Android 3.1</h2>
         <h5>
             Copyright 2012, 2013, 2014, 2015, 2016, 2017 Yasuaki Honda
         </h5>
@@ -71,11 +71,24 @@ Then you can enjoy Maxima / Macsyma on your mobile phone or tablet.
                     What's new in this release
                 </h3>
                 <ul data-role="listview" data-inset="true">
-                    <li>Output reuse is implemented. On touching computation results in latex, corresponding Maxima command appears in the command input area. The same command is copied into the Android system clipboard.</li>
-                    <li>Auto completion of maxima commands in command input area is implemented.</li>
-                    <li>Preference screen is added and can be called from menu. Enabling/disabling of auto completion, Manual language selection, and the font size setting for command input area and latex output can be set in the Preference screen.</li>
-                    <li>Mathjax menu is disabled for misuse and for the support of output reuse.</li>
+                    <li>Load Script File menu is added. You can select .mac files on SD card, internal flash, Google Drive, or Dropbox and it is loaded into Maxima.</li>
+                    <li>Maxima 5.40.0 is supported.</li>
+                    <li>declare(f,antisymmetric) works as expected.</li>
+                    <li>diff(jacobi_sn(u,m),m) works as expected.</li>
+                    <li>run_testsuite() command is now supported.</li>
+                    <li>Maxima 5.40.0 embedded in MoA 3.1 passed all the tests using run_testsuite() except the problem 145 (line 1079) of rtest14.</li>
+
                 </ul>
+            </div>
+            <div data-role="collapsible">
+                <h3>
+                    Contributions
+                </h3>
+                <ul data-role="listview" data-inset="true">
+                    <li>Load Script File menu is a contribution by Kadabash.</li>
+                    <li>Misc changes including Material Design is a contribution by liushuyu.</li>
+                </ul>
+                <p>Thanks for your contributions!!</p>
             </div>
             <div data-role="collapsible">
                 <h3>
@@ -293,7 +306,37 @@ example(allroots);
 </pre>
 </div> <!-- Maxima Command Examples -->
 
-<div data-role="collapsible"> <!-- Dropbox support -->
+<div data-role="collapsible"> <!-- Load Script File -->
+<H4>Load Script File</H4>
+
+    <p>
+        "Load script file" menu item can be used to load .mac files from any storage supported on Android.
+        Such storage includes SD card, local flash, Dropbox, and Google Drive.
+    </p>
+    <p>
+        On choosing this menu item from the application menu, you are prompted choose a file from
+        Download folder. You can select any one of the .mac files from here. Alternatively, you can
+        tap upper left three bar button to see available storage services.
+    </p>
+    <p>
+        On tapping Google Drive, for example, you are prompted to choose a file stored in Google Drive
+        with your account.
+    </p>
+    <p>
+        After choosing a file, you will be back in Maxima, with Command Input Area is filled with
+        a load file command. The file name appeared here is the temporarily created one. Just pressing
+        Enter will load the script file.
+    </p>
+    <p>
+        Limitation: As the file name is always changed to the temporarily created one, you cannot
+        load() command in the script file you are trying to load. So the use of this feature is rather
+        limited to loading a simple command sequence.
+    </p>
+
+</div> <!-- Maxima Command Examples -->
+
+
+    <div data-role="collapsible"> <!-- Dropbox support -->
 <H4>Dropbox support</H4>
 
 <p>
