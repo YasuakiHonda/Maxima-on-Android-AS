@@ -42,32 +42,14 @@ import android.widget.TextView;
 public final class MOAInstallerActivity extends AppCompatActivity {
 	File installedDir;
 	File internalDir;
-	File externalDir;
-	Button okB;
-	Button cancelB;
-	RadioButton intB;
-	RadioButton extB;
-	RadioGroup rgroup;
 	TextView msg;
 	long intStorageAvail;
-	long extStorageAvail;
 	Activity me;
 	public Activity parent;
-	String systembindir = "/system/bin/";
 
 	private long internalFlashAvail() {
 		StatFs fs = new StatFs(internalDir.getAbsolutePath());
-		return (((long) (fs.getAvailableBlocks()))
-				* ((long) (fs.getBlockSize())) / (1024L * 1024L));
-	}
-
-	private long externalFlashAvail() {
-		if (externalDir == null) {
-			return 0L;
-		}
-		StatFs fs = new StatFs(externalDir.getAbsolutePath());
-		return (((long) (fs.getAvailableBlocks()))
-				* ((long) (fs.getBlockSize())) / (1024L * 1024L));
+		return (fs.getAvailableBytes()/(1024*1024));
 	}
 
 	@Override
@@ -76,74 +58,25 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 		setContentView(R.layout.moainstallerview);
 		me = this;
 		internalDir = this.getFilesDir();
-		externalDir = this.getExternalFilesDir(null);
-		okB = (Button) findViewById(R.id.button1);
-		cancelB = (Button) findViewById(R.id.button2);
-		okB.setOnClickListener(ok_or_cancel_listener);
-		cancelB.setOnClickListener(ok_or_cancel_listener);
-		intB = (RadioButton) findViewById(R.id.radioButton1);
-		extB = (RadioButton) findViewById(R.id.radioButton2);
-		rgroup = (RadioGroup) findViewById(R.id.radiogroup);
 		msg = (TextView) findViewById(R.id.checkedTextView1);
-		if ((new File("/system/xbin/chmod")).exists()) {
-			// Support for CyanogenMod
-			systembindir = "/system/xbin/";
-		}
 
-		removeMaximaFiles();
+		if (!removeMaximaFiles()) {
+			msg.setText(R.string.deletion_of_existing_files__failed);
+			install(10);
+		}
 
 		intStorageAvail = Math.abs(internalFlashAvail() - 5);
-		extStorageAvail = Math.abs(externalFlashAvail() - 5);
-		intB.setText(intB.getText() + " (" + String.valueOf(intStorageAvail)
-				+ "MB)");
-		extB.setText(extB.getText() + " (" + String.valueOf(extStorageAvail)
-				+ "MB)");
 
-		long limitMaximaBinary = 32L;
-		if (intStorageAvail < limitMaximaBinary) {
-			intB.setEnabled(false);
-			extB.setEnabled(false);
-			okB.setEnabled(false);
-			msg.setText(R.string.internal_storage_insufficient);
-		} else {
-			long limitAvail = 85L;
-			if (intStorageAvail < limitAvail) {
-				intB.setEnabled(false);
-			}
-			if (extStorageAvail < limitAvail) {
-				extB.setEnabled(false);
-			}
-			if (intStorageAvail < limitAvail && extStorageAvail < limitAvail) {
-				okB.setEnabled(false);
-				msg.setText(R.string.storage_insufficient_for_maxima_data);
-			}
-			/* Set the default check of the radio buttons */
-			if (intStorageAvail >= limitAvail) {
-				rgroup.check(R.id.radioButton1);
-			}
-			if (extStorageAvail >= limitAvail) {
-				rgroup.check(R.id.radioButton2);
-			}
+		long minimumStorageSize = 85L;
+		if (intStorageAvail < minimumStorageSize) {
+			msg.setText(R.string.storage_insufficient_for_maxima_data);
+			install(10);
 		}
+		installedDir = internalDir;
+		install(0); // at the UnzipAsyncTask, install(1), install(2) and install(3)
+		// will be called.
 	}
 
-	Button.OnClickListener ok_or_cancel_listener = new Button.OnClickListener() {
-		public void onClick(View view) {
-			if (view == okB) {
-				if (rgroup.getCheckedRadioButtonId() == R.id.radioButton1) {
-					installedDir = internalDir;
-				} else if (rgroup.getCheckedRadioButtonId() == R.id.radioButton2) {
-					installedDir = externalDir;
-				}
-				install(0); // at the UnzipAsyncTask, install(1), install(2) and install(3)
-							// will be called.
-			} else if (view == cancelB) {
-				Log.v("tako", "Cancel pressed.");
-				install(10);
-			}
-
-		}
-	};
 
 	public void install(int stage) {
 		// Where to Install
@@ -163,12 +96,16 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 				break;
 			}
 			case 1: {
-				chmod755(internalDir.getAbsolutePath() + "/additions/gnuplot/bin/gnuplot");
-				chmod755(internalDir.getAbsolutePath() + "/additions/gnuplot/bin/gnuplot.x86");
-				chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/bin/qepcad");
-				chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/bin/qepcad.x86");
-				chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/qepcad.sh");
-				chmod755(internalDir.getAbsolutePath() + "/additions/cpuarch.sh");
+				if (!(chmod755(internalDir.getAbsolutePath() + "/additions/gnuplot/bin/gnuplot") &&
+						chmod755(internalDir.getAbsolutePath() + "/additions/gnuplot/bin/gnuplot.x86") &&
+						chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/bin/qepcad") &&
+						chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/bin/qepcad.x86") &&
+						chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/qepcad.sh") &&
+						chmod755(internalDir.getAbsolutePath() + "/additions/cpuarch.sh"))) {
+					Log.v("MoA","chmod755 failed.");
+					install(10);
+					me.finish();
+				}
 				CpuArchitecture.initCpuArchitecture();
 				if (CpuArchitecture.getCpuArchitecture().startsWith("not")){
 					Log.v("MoA","Install of additions failed.");
@@ -257,32 +194,17 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 		fileInputStream.close();
 	}
 
-	private void chmod755(String filename) {
-		List<String> list = new ArrayList<String>();
-		list.add(systembindir + "chmod");
-		list.add("744");
-		list.add(filename);
-		CommandExec sce = new CommandExec();
-		try {
-			sce.execCommand(list);
-		} catch (IOException e) {
-			Log.v("MoA","exception chmod755 1");
-		} catch (Exception e) {
-			Log.v("MoA","exception chmod755 2");
-		}
+	private boolean chmod755(String filename) {
+		return (new File(filename).setExecutable(true,true));
 	}
 	
-	private void removeMaximaFiles() {
+	private boolean removeMaximaFiles() {
 		MaximaVersion prevVers = new MaximaVersion();
 		prevVers.loadVersFromSharedPrefs(this);
 		String maximaDirName = "/maxima-" + prevVers.versionString();
 		String maximaDirPath = null;
 		if ((new File(internalDir.getAbsolutePath() + maximaDirName)).exists()) {
 			maximaDirPath = internalDir.getAbsolutePath() + maximaDirName;
-		} else if ((externalDir != null)
-				&& (new File(externalDir.getAbsolutePath() + maximaDirName))
-						.exists()) {
-			maximaDirPath = externalDir.getAbsolutePath() + maximaDirName;
 		} else {
 			maximaDirPath = null;
 		}
@@ -295,23 +217,25 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 				internalDir.getAbsolutePath() + "/additions", maximaDirPath };
 		for (int i = 0; i < filelist.length; i++) {
 			if ((filelist[i] != null) && (new File(filelist[i])).exists()) {
-				List<String> list = new ArrayList<String>();
-				list = new ArrayList<String>();
-				list.add(systembindir + "rm");
-				list.add("-R");
-				list.add(filelist[i]);
-				CommandExec sce = new CommandExec();
-				try {
-					sce.execCommand(list);
-				} catch (IOException e) {
-					Log.d("MoA", "exception10");
-					e.printStackTrace();
-				} catch (Exception e) {
-					Log.d("MoA", "exception11");
-					e.printStackTrace();
-				}
+				boolean res=recursiveRemoveFileDirectory(filelist[i]);
+				if (res=false) return false;
 			}
 		}
+		return true;
+	}
+
+	private boolean recursiveRemoveFileDirectory(String filename) {
+		File file=new File(filename);
+		if (!file.exists()) {
+			return true;
+		}
+		if (file.isDirectory()) {
+			for (File node: file.listFiles()) {
+				boolean res=recursiveRemoveFileDirectory(node.getAbsolutePath());
+				if (res=false) return false;
+			}
+		}
+		return file.delete();
 	}
 
 }

@@ -55,7 +55,6 @@ public class MaximaOnAndroidActivityTest2 {
 
     @Test
     public void maximaOnAndroidActivityTest2() {
-        intallSequence();
         waitForStartup();
 
         String[] manLang = { "Brasilian Portuguese",
@@ -93,23 +92,9 @@ public class MaximaOnAndroidActivityTest2 {
             linearLayout.perform(click());
 
             ViewInteraction checkedTextView = onView(
-                    allOf(withId(android.R.id.text1), withText(manLang[c]),
-                            childAtPosition(
-                                    allOf(withClassName(is("com.android.internal.app.AlertController$RecycleListView")),
-                                            withParent(withClassName(is("android.widget.LinearLayout")))),
-                                    c),
-                            isDisplayed()));
+                    allOf(withText(manLang[c]), isDisplayed()));
             checkedTextView.perform(click());
-/*
-            ViewInteraction checkedTextView = onView(
-                    allOf(withId(android.R.id.text1), withText(manLang[c]),
-                            childAtPosition(
-                                    allOf(withClassName(endsWith("RecycleListView")),
-                                            withParent(withClassName(endsWith("FrameLayout")))),
-                                    c),
-                            isDisplayed()));
-            checkedTextView.perform(click());
-*/
+
             // Go back to Maxima
             pressBack();
             // Press menu
@@ -153,27 +138,6 @@ public class MaximaOnAndroidActivityTest2 {
             }
         };
     }
-    private static void intallSequence() {
-        try {
-            // if started with Installer Activity, we press Install button to continue for installation.
-            ViewInteraction button = onView(
-                    allOf(withId(R.id.button1),
-                            childAtPosition(
-                                    childAtPosition(
-                                            IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
-                                            3),
-                                    1),
-                            isDisplayed()));
-            button.check(matches(isDisplayed()));
-
-            ViewInteraction appCompatButton = onView(
-                    allOf(withId(R.id.button1), withText("Install"), isDisplayed()));
-            appCompatButton.perform(click());
-        } catch (Exception e) {
-            Log.v("MoA","skip install screen");
-        }
-    }
-
     private static void waitFor(int sec) {
         try {
             Thread.sleep(sec);

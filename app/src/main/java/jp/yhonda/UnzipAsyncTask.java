@@ -26,6 +26,7 @@ import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -35,11 +36,11 @@ public final class UnzipAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 	byte[] _fileIOBuffer = new byte[CHUNK_SIZE];
 	InputStream inst;
 	String directory;
-	private MOAInstallerActivity activity;
+	private Activity activity;
 	private ProgressDialog dialog;
 	private String msg1, msg2;
 
-	public UnzipAsyncTask(MOAInstallerActivity anActivity) {
+	public UnzipAsyncTask(Activity anActivity) {
 		this.activity = anActivity;
 	}
 
@@ -73,7 +74,7 @@ public final class UnzipAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 	protected void onPostExecute(Integer stage) {
 		// close the progress dialog
 		if (stage == -1) {
-			activity.install(10); // indication of error
+			((MOAInstallerActivity)activity).install(10); // indication of error
 			return;
 		}
 		dialog.setMessage(msg2);
@@ -83,7 +84,7 @@ public final class UnzipAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 		} catch (InterruptedException ignored) {
 		}
 		dialog.dismiss();
-		activity.install(stage + 1);
+		((MOAInstallerActivity)activity).install(stage + 1);
 	}
 
 	@Override

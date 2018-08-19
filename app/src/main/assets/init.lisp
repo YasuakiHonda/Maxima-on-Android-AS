@@ -756,3 +756,26 @@
 					   (powers (cdr ris) 2))
 				      1 0)
 			     (half)))))))))
+
+
+;;; lesfac.lisp
+;;; facrplus seems not working... redefined here.
+(defun facrplus (x y)
+  (let ((a (car x))
+        (b (cdr x))
+        (c (car y))
+        (d (cdr y))
+        dummy)
+    (multiple-value-setq (x a c) (dopgcdcofacts a c))
+    (multiple-value-setq (y b d) (fpgcdco b d))
+    (setq a (makprod (pplus (pflatten (ptimeschk a d))
+                            (pflatten (ptimeschk b c))) nil))
+    (setq b (ptimeschk b d))
+    (cond ($algebraic
+           (setq y (ptimeschk y b))
+           (multiple-value-setq (dummy y a) (fpgcdco y a)) ;for unexpected gcd
+           (cons (ptimes x a) y))
+          (t
+           (multiple-value-setq (c y b) (cdinf y b nil))
+           (multiple-value-setq (dummy y a) (fpgcdco y a))
+           (cons (ptimes x a) (ptimeschk y (ptimeschk c b)))))))

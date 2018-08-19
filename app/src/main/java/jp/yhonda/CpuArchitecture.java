@@ -71,17 +71,9 @@ public final class CpuArchitecture {
 			return cpuarch;
 		}
 		if (cpuarch.equals(X86)) {
-			if (Build.VERSION.SDK_INT >= 21) { // Lollipop requires pie
-				return("maxima.x86.pie");
-			} else {
-				return("maxima.x86");
-			}
+			return("maxima.x86.pie");
 		} else if (cpuarch.equals(ARM)) {
-			if (Build.VERSION.SDK_INT >= 21) { // Lollipop requires pie
-				return("maxima.pie");
-			} else {
-				return("maxima");
-			}			
+			return("maxima.pie");
 		}
 		return cpuarch;
 	}

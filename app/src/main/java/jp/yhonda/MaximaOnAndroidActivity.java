@@ -100,8 +100,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	ScrollView scview;
 	CommandExec maximaProccess;
 	File internalDir;
-	File externalDir;
-	MaximaVersion mvers = new MaximaVersion(5, 40, 0);
+	MaximaVersion mvers = new MaximaVersion(5, 41, 0);
 
 	private static final int READ_REQUEST_CODE = 42;
     File temporaryScriptFile = null;
@@ -112,27 +111,19 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		Log.d("MoA", "onCreate()");
 		super.onCreate(savedInstanceState);
 
-		if (Build.VERSION.SDK_INT > 16) { // > JELLY_BEAN
-			maximaURL = "file:///android_asset/maxima_svg.html";
-			// maximaURL="http://192.168.0.20/~yasube/maxima_svg.html";
-		} else {
-			maximaURL = "file:///android_asset/maxima_html.html";
-		}
+		maximaURL = "file:///android_asset/maxima_svg.html";
 
 		PreferenceManager.setDefaultValues(this, R.xml.preference, false);
-		SharedPreferences pref = PreferenceManager
+		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(this);
-		manURL = pref.getString("manURL", manen);
+		manURL = settings.getString("manURL", manen);
 
 		setContentView(R.layout.main);
 		internalDir = this.getFilesDir();
-		externalDir = this.getExternalFilesDir(null);
 
 		webview = (WebView) findViewById(R.id.webView1);
 		webview.getSettings().setJavaScriptEnabled(true);
-		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-			WebView.setWebContentsDebuggingEnabled(true);
-		}
+		WebView.setWebContentsDebuggingEnabled(true);
 		webview.setWebViewClient(new WebViewClient() {
 			public void onPageFinished(WebView view, String url) {
 				Log.v("MoA", "onPageFinished");
@@ -144,16 +135,12 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			}
 
 		});
-		SharedPreferences settings = PreferenceManager
-				.getDefaultSharedPreferences(thisActivity);
 		float sc = settings.getFloat("maxima main scale", 1.5f);
 		Log.v("MoA", "onCreate sc=" + Float.toString(sc));
 		webview.setInitialScale((int) (100 * sc));
 
 		webview.getSettings().setBuiltInZoomControls(true);
-		if (Build.VERSION.SDK_INT > 11) {
-			webview.getSettings().setDisplayZoomControls(false);
-		}
+		webview.getSettings().setDisplayZoomControls(false);
 
 		webview.setWebChromeClient(new WebChromeClient() {
 			public boolean onConsoleMessage(ConsoleMessage cm) {
@@ -204,9 +191,8 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				|| !maximaBinaryExists()
 				|| !((new File(internalDir + "/additions")).exists())
 				|| !((new File(internalDir + "/init.lisp")).exists())
-				|| (!(new File(internalDir + "/maxima-" + mvers.versionString()))
-						.exists() && !(new File(externalDir + "/maxima-"
-						+ mvers.versionString())).exists())) {
+				|| !(new File(internalDir + "/maxima-" + mvers.versionString()))
+						.exists()) {
 			Intent intent = new Intent(this, MOAInstallerActivity.class);
 			intent.setAction(Intent.ACTION_VIEW);
 			intent.putExtra("version", mvers.versionString());
@@ -342,9 +328,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		*/
 		runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl(maximaURL);}});
 		if (!(new File(internalDir + "/maxima-" + mvers.versionString()))
-				.exists()
-				&& !(new File(externalDir + "/maxima-" + mvers.versionString()))
-						.exists()) {
+				.exists()) {
 			this.finish();
 		}
 		List<String> list = new ArrayList<String>();

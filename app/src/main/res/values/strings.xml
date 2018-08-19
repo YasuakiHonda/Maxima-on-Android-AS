@@ -28,6 +28,7 @@
     <string name="app_name">MaximaOnAndroid</string>
     <string name="internal_storage_insufficient">0n the internal storage. Please press Cancel button for now and make sure you have at least 32MB of free space. Then try to run Maxima on Android again!!</string>
     <string name="storage_insufficient_for_maxima_data">Maxima on Android requires additional 85MB of free storage for Maxima data installation. Unfortunately there seems no enough space found on the internal and external storage. Please press Cancel button for now and make sure you have at least 85MB of free space. Then try to run Maxima on Android again!!</string>
+    <string name="deletion_of_existing_files__failed">Deletion of existing files failed.</string>
     <string name="install_in_progress">Install in progress…</string>
     <string name="install_failure">The installation NOT completed. Please uninstall this apk and try to re-install again.</string>
     <string name="OK">OK</string>
@@ -36,7 +37,7 @@
     <string name="install_external">External Storage (SD Card)</string>
     <string name="install">Install</string>
     <string name="cancel">Cancel</string>
-    <string name="install_instructions">Maxima on Android installs additional 85MB of data. Please choose the install location and press Install.</string>
+    <string name="install_instructions">Maxima on Android installs additional 85MB of data. Checking available storage space.</string>
     <string name="install_additions">Installing additions</string>
     <string name="install_maxima_data">Installing Maxima data</string>
     <string name="install_maxima_binary">Installing Maxima binary</string>

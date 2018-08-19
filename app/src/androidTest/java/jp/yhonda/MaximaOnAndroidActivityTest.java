@@ -54,7 +54,6 @@ public class MaximaOnAndroidActivityTest {
 
     @Test
     public void testMoAInstallandRun() {
-        intallSequence();
         waitForStartup();
         ViewInteraction multiAutoCompleteTextView = onView(
                 allOf(withId(R.id.editText1),
@@ -84,7 +83,6 @@ public class MaximaOnAndroidActivityTest {
 
     @Test
     public void testMiscOutputSequence() {
-        intallSequence();
         waitForStartup();
         ViewInteraction appCompatMultiAutoCompleteTextView = onView(
                 allOf(withId(R.id.editText1), isDisplayed()));
@@ -105,7 +103,6 @@ public class MaximaOnAndroidActivityTest {
 
     @Test
     public void testMiscInputSequence() {
-        intallSequence();
         waitForStartup();
         ViewInteraction appCompatMultiAutoCompleteTextView = onView(
                 allOf(withId(R.id.editText1), isDisplayed()));
@@ -156,7 +153,6 @@ public class MaximaOnAndroidActivityTest {
 
     @Test
     public void testCSetup() {
-        intallSequence();
         waitForStartup();
         ViewInteraction appCompatMultiAutoCompleteTextView = onView(
                 allOf(withId(R.id.editText1), isDisplayed()));
@@ -292,27 +288,6 @@ public class MaximaOnAndroidActivityTest {
             e.printStackTrace();
         }
 
-    }
-
-    private static void intallSequence() {
-        try {
-            // if started with Installer Activity, we press Install button to continue for installation.
-            ViewInteraction button = onView(
-                    allOf(withId(R.id.button1),
-                            childAtPosition(
-                                    childAtPosition(
-                                            IsInstanceOf.<View>instanceOf(android.widget.LinearLayout.class),
-                                            3),
-                                    1),
-                            isDisplayed()));
-            button.check(matches(isDisplayed()));
-
-            ViewInteraction appCompatButton = onView(
-                    allOf(withId(R.id.button1), withText("Install"), isDisplayed()));
-            appCompatButton.perform(click());
-        } catch (Exception e) {
-            Log.v("MoA","skip install screen");
-        }
     }
 
     private static void waitForStartup() {

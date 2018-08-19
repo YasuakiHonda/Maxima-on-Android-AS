@@ -2,15 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.yhonda"
     android:installLocation="auto"
-    android:versionCode="25"
-    android:versionName="3.1" >
+    android:versionCode="26"
+    android:versionName="3.2" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="8" />
 
     <application
         android:hardwareAccelerated="true"
