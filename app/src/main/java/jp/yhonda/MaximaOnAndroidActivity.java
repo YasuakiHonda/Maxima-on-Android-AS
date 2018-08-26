@@ -571,11 +571,12 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			if (isGraphFile()) {
 				List<String> list = new ArrayList<String>();
 				if (CpuArchitecture.getCpuArchitecture().equals(CpuArchitecture.X86)) {
-					list.add(internalDir + "/additions/gnuplot/bin/gnuplot.x86");
+					// list.add(internalDir + "/additions/gnuplot/bin/gnuplot.x86");
+					list.add("/data/data/jp.yhonda/files/additions/gnuplot/bin/gnuplot.x86");
 				} else {
 					list.add(internalDir + "/additions/gnuplot/bin/gnuplot");
 				}
-				list.add(internalDir + "/maxout" + maximaProccess.getPID() + ".gnuplot");
+				list.add("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
 				CommandExec gnuplotcom = new CommandExec();
 				try {
 					gnuplotcom.execCommand(list);

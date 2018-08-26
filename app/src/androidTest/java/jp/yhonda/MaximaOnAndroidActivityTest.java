@@ -221,7 +221,7 @@ public class MaximaOnAndroidActivityTest {
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("christof(mcs);"), closeSoftKeyboard());
         appCompatButton2.perform(click());
-        waitFor(1000);
+        waitFor(2000);
         onWebView().withElement(findElement(Locator.ID, "MathJax-Element-15"));
     }
 

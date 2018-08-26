@@ -37,7 +37,7 @@
     <string name="install_external">External Storage (SD Card)</string>
     <string name="install">Install</string>
     <string name="cancel">Cancel</string>
-    <string name="install_instructions">Maxima on Android installs additional 85MB of data. Checking available storage space.</string>
+    <string name="install_instructions">Maxima on Android installs additional 85MB of data. Checking available storage space. With sufficient storage available, additional install starts automatically.</string>
     <string name="install_additions">Installing additions</string>
     <string name="install_maxima_data">Installing Maxima data</string>
     <string name="install_maxima_binary">Installing Maxima binary</string>

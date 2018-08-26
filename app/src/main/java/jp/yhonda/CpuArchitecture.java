@@ -23,13 +23,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Build;
-import android.util.Log;
 
 import jp.yhonda.CommandExec;
 
 public final class CpuArchitecture {
-	static final String X86="x86"; 
-	static final String ARM="arm"; 
+	static final String X86="x86";
+	static final String ARM="arm";
 	static final String NOT_SUPPORTED="not supported"; 
 	static final String NOT_INITIALIZED="not initialized"; 
 
@@ -43,26 +42,13 @@ public final class CpuArchitecture {
 	}
 	
 	public static void initCpuArchitecture() {
-		if (! NOT_INITIALIZED.equals(cpuarch)) {
-			return;
-		}
-		if ((new File("/data/data/jp.yhonda/files/additions/cpuarch.sh")).exists()) {
-			CommandExec cmd = new CommandExec();
-			List<String> list = new ArrayList<String>();
-			list.add("/data/data/jp.yhonda/files/additions/cpuarch.sh");
-			try {
-				cmd.execCommand(list);
-			} catch (Exception e) {
-				Log.d("MoA", "CpuArchitecture exception1");
-			}
-			String res=cmd.getProcessResult().trim();
-			if (res.equals(X86)) {
-				cpuarch=X86;
-			} else if (res.equals(ARM)) {
-				cpuarch=ARM;
-			} else if (res.equals(NOT_SUPPORTED)) {
-				cpuarch=NOT_SUPPORTED;
-			}
+		String res=Build.CPU_ABI.toLowerCase();
+		if (res.contains(X86)) {
+			cpuarch=X86;
+		} else if (res.contains(ARM)) {
+			cpuarch=ARM;
+		} else if (res.equals(NOT_SUPPORTED)) {
+			cpuarch=NOT_SUPPORTED;
 		}
 	}
 	
@@ -75,6 +61,6 @@ public final class CpuArchitecture {
 		} else if (cpuarch.equals(ARM)) {
 			return("maxima.pie");
 		}
-		return cpuarch;
+		return NOT_SUPPORTED;
 	}
 }

@@ -119,6 +119,11 @@ public class MaximaOnAndroidActivityTest2 {
             pressBack();
         }
     }
+    @Test
+    public void AboutMoA() {
+        waitForStartup();
+
+    }
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {

@@ -6,14 +6,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title></title>
-  
-  
-  
+
+
+
+    <link rel="stylesheet" href="file:///android_asset/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="file:///android_asset/jquery.mobile-1.4.5/jquery-1.12.4.min.js"></script>
+    <script src="file:///android_asset/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<!-- jQuery 1.9.1 and jQuery Mobile 1.3.1
   <link rel="stylesheet" href="file:///android_asset/jquery.mobile-1.3.1/jquery.mobile-1.3.1.min.css">
-    
-  <!-- jQuery and jQuery Mobile -->
   <script src="file:///android_asset/jquery.mobile-1.3.1/jquery-1.9.1.min.js"></script>
   <script src="file:///android_asset/jquery.mobile-1.3.1/jquery.mobile-1.3.1.min.js"></script>
+-->
   <style type="text/css">
    img {
     float:left;
@@ -26,9 +30,9 @@
 <div data-role="page" id="page1">
     <div data-role="content">
         <h2>
-            Maxima on Android 3.1</h2>
+            Maxima on Android 3.2</h2>
         <h5>
-            Copyright 2012, 2013, 2014, 2015, 2016, 2017 Yasuaki Honda
+            Copyright 2012, 2013, 2014, 2015, 2016, 2017, 2018 Yasuaki Honda
         </h5>
         <div data-role="collapsible-set" data-theme="a" data-content-theme="d">
             <div data-role="collapsible">
@@ -52,15 +56,19 @@ sin(x), cos(x), log(x), exp(x), zeta(s).
 Maxima on Android is a port of Maxima on the Android operating system. Thanks 
 to Sylvain Ageneau' effort on porting Embeddable Common Lisp (ECL) to the Android OS, 
 the latest Maxima code runs nicely on ECL on Android with very small changes to 
-the source code.
+the Maxima source code.
 </p>
 <p>
-Maxima on Android is a combination of many open source software: ECL on Android, MathJax, Gnuplot, Jquery Mobile, and Maxima itself. I wrote roughly 1600 lines of Java code and 150 lines of HTML including Javascript code. The result images can be viewed below:
+Maxima on Android is a combination of many open source software: ECL on Android, MathJax, Gnuplot,
+    Jquery Mobile, and Maxima itself. I wrote roughly 1600 lines of Java code and 150 lines of
+    HTML including Javascript code. The result images can be viewed below:
 </p>
 <img src="screen-shot1.png" height=250>
 <img src="plot3d.png" height=250>
 <p>
-The installation of the software requires total of 90MB on the storage. 30MB needs to be installed on the internal storage. The rest 60MB can be installed either on the external or the internal storage. The first run of the apk will ask you where you want the 60MB to be installed.
+The installation of the software requires total of 150MB on the storage. On the beginning
+    of the first run of this software, it additionally installs Maxima, Gnuplot and Qepcad native binaries and their
+    related files to the local storage.
 </p>
 <p>
 Then you can enjoy Maxima / Macsyma on your mobile phone or tablet.
@@ -70,32 +78,30 @@ Then you can enjoy Maxima / Macsyma on your mobile phone or tablet.
                 <h3>
                     What's new in this release
                 </h3>
-                <ul data-role="listview" data-inset="true">
-                    <li>Load Script File menu is added. You can select .mac files on SD card, internal flash, Google Drive, or Dropbox and it is loaded into Maxima.</li>
-                    <li>Maxima 5.40.0 is supported.</li>
-                    <li>declare(f,antisymmetric) works as expected.</li>
-                    <li>diff(jacobi_sn(u,m),m) works as expected.</li>
-                    <li>run_testsuite() command is now supported.</li>
-                    <li>Maxima 5.40.0 embedded in MoA 3.1 passed all the tests using run_testsuite() except the problem 145 (line 1079) of rtest14.</li>
 
-                </ul>
+                    <li>Maxima 5.41.0 is supported.</li>
+                    <li>Maxima 5.41.0 embedded in MoA 3.2 passed all the tests using run_testsuite().</li>
+                    <li>Support for the older versions of Android OS has ended. Kitkat (Android 4.4,
+                        API level 19) and above is the minimum requirement.</li>
+                    <li>Support for SDCard for additional installation has ended. Everything will be
+                    installed on the internal storage.</li>
+                    <li>Internally, MathJax is updated to from 2.1 to 2.7.5. JQuery Mobile is updated
+                    from 1.3.1 to 1.4.5.</li>
+
             </div>
             <div data-role="collapsible">
                 <h3>
                     Contributions
                 </h3>
-                <ul data-role="listview" data-inset="true">
                     <li>Load Script File menu is a contribution by Kadabash.</li>
                     <li>Misc changes including Material Design is a contribution by liushuyu.</li>
-                </ul>
                 <p>Thanks for your contributions!!</p>
             </div>
             <div data-role="collapsible">
                 <h3>
                     Restrictions
                 </h3>
-<ul data-role="listview" data-inset="true">
-    
+    <li>Minimum requirement of Android OS is Kitkat Android 4.4 API level 19.</li>
     <li>In some cases, :lisp command may produce an error when line termination is
     automatically completed with '$'.</li>
     <li>Some Android phone (e.g., SH-01G by Sharp Corp., Japan) displays output formula
@@ -106,44 +112,13 @@ Then you can enjoy Maxima / Macsyma on your mobile phone or tablet.
     <li>Package plotdf is not supported. Use drawdf instead.</li>
     <li>unit package and ezunit package seem not working</li>
     <li>load(opsubst) does not work. load('opsubst) does work.</li>
-</ul>
+
             </div>
             <div data-role="collapsible">
                 <h3>
                     MoA User Manual
                 </h3>
 <div data-role="collapsible-set" data-theme="c" data-content-theme="d"> <!-- Manual -->
-<div data-role="collapsible">  <!-- Coice of place to install -->
-<H4>Choice of place to install</H4>
-
-<p>
- When Maxima on Android is first invoked, it installs additional data
- of 85MB, extracting from the APK. For those whose mobile devices'
- internal memory may be small, I give a choice for you where this 85MB
- to be installed.
-</p>
-
-<p>
-<img src="MOAInstaller.png" height=250>
-When first run, the program will display the messages seen in the left
-picture (without showing the progress dialog box). You may choose the
-internal or external storage. If the available capacity is less than
-necessary, the one (or both) choice will be grayed out. After
-selecting one radio button, you can click "Install" button or "Cancel"
-button.
-</p>
-<p>
-If you press "Install" button, the installation starts and the
-progress dialog box appears on the screen until installation finishes.
-</p>
-<p>
-If you press "Cancel" button, this additional install process is
-terminated and nothing will be installed in addition. Then entire
-program will quit itself. Later run of this program will start again
-from this install window in such a case as necessary binary and data
-are not yet installed.<br clear="left">
-</p>
-</div> <!-- Coice of place to install -->
 
 <div data-role="collapsible">  <!-- Start up screen -->
 <H4>Start up screen</H4>
@@ -247,7 +222,7 @@ line of the session example is copied to the Maxima command input
 area.
 </p>
 <p>
-You can type "enter" key to execute the command, or you can edit it as
+You can press "enter" key to execute the command, or you can edit it as
 usual before execution.
 </p><br clear="left">
 <p>
@@ -342,23 +317,23 @@ example(allroots);
 <p>
 Dropbox is one of the best known cloud storage services in the world. Maxima on Android 
 now supports Dropbox to provide the following functionality:
-<u>
+
 <li>To share Maxima code on PC with Android devices</li>
 <li>To write / edit Maxima code on Android devices</li>
 <li>To support loading the Maxima code in Dropbox into Maxima on Android</li>
-</u>
+
 </p>
 <p>
 Let us assume that
-<u>
+
 <li>you have an account of Dropbox,</li> 
 <li>you installed Dropbox application on your Android device and your PC, and</li>
 <li>sharing files through Dropbox between your Android device and PC already works</li>
-</u> 
+
 </p>
 <p>
 Here is step by step instructions on how to load shared files in Maxima on Android:
-<u>
+
 <li>You create a test.txt which contains couple of lines of Maxima codes,</li>
 <li>You put the file into Dropbox folder on your PC to share it,</li>
 <li>You make sure the file is there on your Dropbox application on your Android device, </li>
@@ -368,7 +343,7 @@ Here is step by step instructions on how to load shared files in Maxima on Andro
 <li>Run or return to Maxima on Android</li>
 <li>load(test); or load("test.txt");</li>
 <li>batch(test); should also work</li>
-</u>
+
 Repeating editing and exporting is the typical development cycle. Editing can be
 carried out either on Android or PC.  
 </p> 
@@ -537,14 +512,6 @@ maxima-init.mac from your PC/Mac.
 </p>
 </div> <!-- User level customization in maxima-init.mac -->
 
-<div data-role="collapsible"> <!-- Maxima manual for Android OS 3.x, and 4.0.x -->
-<H4>Maxima manual for Android OS 3.x, and 4.0.x</H4>
-<p>
-The workaround of Maxima manual display failure in Android OS 3.x and 4.0.x is
-no more supported from MoA3.0.
-</p>
-</div> <!-- Maxima manual for Android OS 3.x, and 4.0.x -->
-
 <div data-role="collapsible"> <!-- Exiting -->
 <H4>Exiting</H4>
 
@@ -592,7 +559,7 @@ this software. Please choose About MoA in the menu.
               <div data-role="collapsible-set" data-theme="a" data-content-theme="d">
                 <div data-role="collapsible">
                 <h4>Maxima on Android</h4>
-                    <p>Copyright 2012, 2013, 2014, 2015, 2016 Yasuaki Honda (yasuaki.honda@gmail.com)</p>
+                    <p>Copyright 2012, 2013, 2014, 2015, 2016, 2017, 2018 Yasuaki Honda (yasuaki.honda@gmail.com)</p>
     <p>MaximaOnAndroid is a combination of many open source software. 
     All such open source software are governed by their own license terms.
     They appear in other sections of this document. 
@@ -644,16 +611,12 @@ this software. Please choose About MoA in the menu.
   <br>
   This license covers all of the ECL program except for the files:
 </p>
-<ul data-role="listview" data-theme="g" data-inset="true">
     <li>src/lsp/loop2.lsp   ; Symbolic's LOOP macro</li>
     <li>src/lsp/pprint.lsp  ; CMUCL's pretty printer</li>
     <li>src/lsp/format.lsp  ; CMUCL's format </li>
-</ul>
 and the directories:
-<ul data-role="listview" data-theme="g" data-inset="true">     
     <li>contrib/        ; User contributed extensions</li>
     <li>src/clx/        ; portable CLX library from Telent</li>
-</ul>
 <p>
   Look the precise copyright of these extensions in the corresponding
   files.
