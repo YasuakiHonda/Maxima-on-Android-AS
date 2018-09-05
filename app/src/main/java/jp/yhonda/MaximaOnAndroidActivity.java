@@ -920,6 +920,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 		} else {
 			Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//			Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
 			intent.addCategory(intent.CATEGORY_OPENABLE);
 			intent.setType("*/*");
 			startActivityForResult(intent, READ_REQUEST_CODE);
@@ -927,6 +928,29 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private void copyScriptFileToInputArea(Uri fileUri) {
+		try {
+			File temporaryDirectory = getApplicationContext().getCacheDir();
+			FileInputStream stream = (FileInputStream)(getApplicationContext().getContentResolver().openInputStream(fileUri));
+			FileChannel sourceChannel = stream.getChannel();
+
+			//Abort if file is too large:
+			if (sourceChannel.size() > scriptFileMaxSize) {
+				Toast.makeText(getApplicationContext(), R.string.script_file_too_large, Toast.LENGTH_LONG).show();
+				return;
+			}
+
+			File temporaryFile = File.createTempFile("userscript", ".mac", temporaryDirectory);
+			FileChannel destinationChannel = new FileOutputStream(temporaryFile).getChannel();
+			destinationChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+			String command = "batch(\"" + temporaryFile.getAbsolutePath() + "\");";
+			this.editText.setText(command);
+
+			//Build maxima load command and write it to the editText:
+		} catch (Exception e) {
+			Toast.makeText(getApplicationContext(),"Failed to load script file.", Toast.LENGTH_LONG);
+			return;
+		}
+	/*
         //Copy script file contents into a temporary file:
         File temporaryDirectory = getApplicationContext().getCacheDir();
         File temporaryFile = null;
@@ -957,5 +981,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
         //Build maxima load command and write it to the editText:
         String command = "batch(\"" + temporaryFile.getAbsolutePath() + "\");";
         this.editText.setText(command);
+    */
     }
 }
