@@ -1,15 +1,15 @@
 Source code distribution of Maxima on Android
 written by Yasuaki Honda (yasuaki.honda@gmail.com)
 
-Copyright 2012,2013,2014,2015,2016,2017 Yasuaki Honda, Chiba, Japan
+Copyright 2012,2013,2014,2015,2016,2017,2018,2019 Yasuaki Honda, Chiba, Japan
 
 Development Environment of the author:
-- iMac with Mac OS 10.12.3
-- Android Studio 2.2.3
+- iMac with Mac OS 10.15
+- Android Studio 3.1.4
 - Up to date Android SDK
 - Android NDK r12
 
-All the compiled binaries for maxima, gnuplot, and qepcad with x86 and ARM are 
+All the compiled binaries for maxima, gnuplot, and qepcad for ARM are
 included in the asset folder.
 
 This repository is provided in the hope that anyone can easily start the development of 
@@ -20,7 +20,7 @@ You can find all the license terms in the assets-About_MoA-index.html file. Here
 copy of the same language:
 
 Maxima on Android
-Copyright 2012, 2013, 2014, 2015, 2016 Yasuaki Honda (yasuaki.honda@gmail.com)
+Copyright 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Yasuaki Honda (yasuaki.honda@gmail.com)
     MaximaOnAndroid is a combination of many open source software. 
     All such open source software are governed by their own license terms.
     They appear in other sections of this document. 
