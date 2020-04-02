@@ -1,0 +1,33 @@
+language: android
+before_install:
+  - jdk_switcher use oraclejdk8
+  - jdk_switcher home oraclejdk8
+  - java -Xmx32m -version
+  - javac -J-Xmx32m -version
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
+    - $HOME/.m2/repository/
+android:
+  components:
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    - platform-tools
+    - tools
+
+    # The BuildTools version used by your project
+    - build-tools-25.0.2
+    - build-tools-23.0.1
+
+    # The SDK version used to compile your project
+    - android-17
+    - android-25
+
+    # Additional components
+    - extra-google-m2repository
+    - extra-android-m2repository
