@@ -218,7 +218,7 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 		for (int i = 0; i < filelist.length; i++) {
 			if ((filelist[i] != null) && (new File(filelist[i])).exists()) {
 				boolean res=recursiveRemoveFileDirectory(filelist[i]);
-				if (res=false) return false;
+				if (res==false) return false;
 			}
 		}
 		return true;
@@ -232,7 +232,7 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 		if (file.isDirectory()) {
 			for (File node: file.listFiles()) {
 				boolean res=recursiveRemoveFileDirectory(node.getAbsolutePath());
-				if (res=false) return false;
+				if (res==false) return false;
 			}
 		}
 		return file.delete();
