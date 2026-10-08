@@ -30,7 +30,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -185,19 +185,15 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		boolean retval = false;
-		switch (item.getItemId()) {
-		case R.id.gomaxima:
+		int itemId = item.getItemId();
+		if (itemId == R.id.gomaxima) {
 			Intent intent = new Intent(this, MaximaOnAndroidActivity.class);
 			setResult(RESULT_OK, intent);
 			intent.putExtra("sender", "ManualActivity");
 			finish();
-			retval = true;
-			break;
-		default:
-			retval = false;
+			return true;
 		}
-		return retval;
+		return false;
 	}
 
 	private void addJSforCopyExample() {

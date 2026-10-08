@@ -32,7 +32,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.ParcelFileDescriptor;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -842,51 +842,39 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		boolean retval = false;
-		switch (item.getItemId()) {
-		case R.id.about:
+		int itemId = item.getItemId();
+		if (itemId == R.id.about) {
 			showHTML("file:///android_asset/About_MoA/index.html", true);
-			retval = true;
-			break;
-		case R.id.preference:
+			return true;
+		} else if (itemId == R.id.preference) {
 			showPreference();
-			retval = true;
-			break;
-		case R.id.graph:
+			return true;
+		} else if (itemId == R.id.graph) {
 			showGraph();
-			retval = true;
-			break;
-		case R.id.quit:
+			return true;
+		} else if (itemId == R.id.quit) {
 			exitMOA();
-			retval = true;
-			break;
-		case R.id.nextexample:
+			return true;
+		} else if (itemId == R.id.nextexample) {
 			copyExampleInputToInputArea();
-			break;
-		case R.id.man:
+			return false;
+		} else if (itemId == R.id.man) {
 			showManual();
-			retval = true;
-			break;
-		case R.id.save:
+			return true;
+		} else if (itemId == R.id.save) {
 			sessionMenu("ssave();");
-			retval = true;
-			break;
-		case R.id.restore:
+			return true;
+		} else if (itemId == R.id.restore) {
 			sessionMenu("srestore();");
-			retval = true;
-			break;
-		case R.id.playback:
+			return true;
+		} else if (itemId == R.id.playback) {
 			sessionMenu("playback();");
-			retval = true;
-			break;
-		case R.id.loadscript:
-            selectScriptFile();
-			break;
-
-		default:
-			return super.onOptionsItemSelected(item);
+			return true;
+		} else if (itemId == R.id.loadscript) {
+			selectScriptFile();
+			return false;
 		}
-		return retval;
+		return super.onOptionsItemSelected(item);
 	}
 
 	private void sessionMenu(String cmd) {
@@ -901,7 +889,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		if(Build.VERSION.SDK_INT < 19) {
 			//Versions earlier than KitKat do not support the Storage Access Framework.
 			//Show file path input box instead:
-			android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MaximaOnAndroidActivity.this);
+			androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(MaximaOnAndroidActivity.this);
 			LayoutInflater inflater = this.getLayoutInflater();
 			final View layout = inflater.inflate(R.layout.scriptpathalert, null);
 			builder.setView(layout);
@@ -915,7 +903,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 					}
 				}
 			});
-			android.support.v7.app.AlertDialog dialog = builder.create();
+			androidx.appcompat.app.AlertDialog dialog = builder.create();
 			dialog.show();
 
 		} else {
