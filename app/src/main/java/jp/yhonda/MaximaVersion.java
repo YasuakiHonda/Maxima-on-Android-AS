@@ -39,12 +39,6 @@ public final class MaximaVersion {
 		this.patch = patch;
 	}
 
-	MaximaVersion(int vers[]) {
-		this.major = vers[0];
-		this.minor = vers[1];
-		this.patch = vers[2];
-	}
-
 	public void loadVersFromSharedPrefs(Context context) {
 		SharedPreferences pref = context.getSharedPreferences("maxima",
 				Context.MODE_PRIVATE);

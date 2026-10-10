@@ -18,24 +18,18 @@
 
 package jp.yhonda;
 
-import java.io.File;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.webkit.ConsoleMessage;
-import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+/** Shows a local page: a graph (maxout.html) or the About page. */
 public class HTMLActivity extends AppCompatActivity {
-	public String urlonCreate = null;
 	WebView webview = null;
 
 	@Override
@@ -46,12 +40,10 @@ public class HTMLActivity extends AppCompatActivity {
 		webview.getSettings().setJavaScriptEnabled(true);
 		// Graphs are loaded from file:///data/... (maxout.html); file access is off by default since targetSdk 30.
 		webview.getSettings().setAllowFileAccess(true);
-		webview.setWebViewClient(new WebViewClient() {
-		});
+		webview.setWebViewClient(new WebViewClient());
 		webview.getSettings().setBuiltInZoomControls(true);
 		webview.getSettings().setUseWideViewPort(true);
 		webview.getSettings().setLoadWithOverviewMode(true);
-		webview.addJavascriptInterface(this, "MOA");
 		webview.setWebChromeClient(new WebChromeClient() {
 			public boolean onConsoleMessage(ConsoleMessage cm) {
 				Log.d("MyApplication",
@@ -61,41 +53,13 @@ public class HTMLActivity extends AppCompatActivity {
 			}
 		});
 
-		if (Build.VERSION.SDK_INT >= 11) {
-			Intent intent = this.getIntent();
-			boolean hwaccel = intent.getBooleanExtra("hwaccel", true);
-			if (!hwaccel) {
-				webview.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
-			}
+		if (!getIntent().getBooleanExtra("hwaccel", true)) {
+			webview.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
 		}
 
-		loadURLonCreate();
-
-	}
-
-	@JavascriptInterface
-	public void setFocus() {
-		class focussor implements Runnable {
-			@Override
-			public void run() {
-				webview.requestFocus(View.FOCUS_DOWN);
-				webview.loadUrl("javascript:textarea1Focus();");
-			}
-		}
-		Log.v("MoA HTML", "setFocus is called");
-		focussor ftask = new focussor();
-		webview.post(ftask);
-	}
-
-	public void loadURLonCreate() {
-		File f = new File(getFilesDir(), "maxout.html");
-		if (f.exists()) {
-			Log.v("MoA", "loadURLonCreate" + String.valueOf(f.length()));
-		}
-		Intent origIntent = this.getIntent();
-		String urlonCreate = origIntent.getStringExtra("url");
-		webview.setContentDescription(urlonCreate);
-		webview.loadUrl(urlonCreate);
+		String url = getIntent().getStringExtra("url");
+		webview.setContentDescription(url);
+		webview.loadUrl(url);
 	}
 
 	@Override

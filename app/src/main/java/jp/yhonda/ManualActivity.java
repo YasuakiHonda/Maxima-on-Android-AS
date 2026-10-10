@@ -25,7 +25,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
@@ -59,9 +58,7 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 		webview = (WebView) findViewById(R.id.webViewInHTMLActivity);
 		webview.getSettings().setJavaScriptEnabled(true);
 		webview.getSettings().setBuiltInZoomControls(true);
-		if (Build.VERSION.SDK_INT > 11) {
-			webview.getSettings().setDisplayZoomControls(false);
-		}
+		webview.getSettings().setDisplayZoomControls(false);
 		webview.getSettings().setUseWideViewPort(true);
 		webview.getSettings().setLoadWithOverviewMode(true);
 
@@ -133,8 +130,6 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 		webview.setContentDescription(urlinIntent);
 
 		Bundle bundle = null;
-		// SharedPreferences settings =
-		// PreferenceManager.getDefaultSharedPreferences(this);
 		String serialized = settings.getString("parcel", null);
 
 		if ((!manLangChanged) && (serialized != null)) {

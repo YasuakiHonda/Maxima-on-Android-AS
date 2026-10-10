@@ -17,8 +17,6 @@
  */
 package jp.yhonda;
 
-import android.util.Log;
-
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.List;

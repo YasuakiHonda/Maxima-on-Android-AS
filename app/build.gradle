@@ -33,6 +33,11 @@ android {
         }
     }
 
+    lint {
+        // The build (lintDebug, check) fails on any lint error.
+        abortOnError = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -42,6 +47,8 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.8.0'
     implementation 'androidx.core:core:1.19.1'
+
+    testImplementation 'junit:junit:4.13.2'
 
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
     androidTestImplementation 'androidx.test.espresso:espresso-web:3.7.0'

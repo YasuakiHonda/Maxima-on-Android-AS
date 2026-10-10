@@ -14,6 +14,14 @@ Building
   build instead, run native/docker-build.sh all and build with
   -Pmoa.nativeDir=native/out.
 
+Testing
+- ./gradlew testDebugUnitTest   JVM unit tests (app/src/test)
+- ./gradlew lintDebug           Android Lint; any error fails the build
+- ./gradlew check               both of the above
+- ./gradlew connectedDebugAndroidTest
+                                instrumented tests (app/src/androidTest) on a
+                                connected device/emulator
+
 This repository is provided in the hope that anyone can easily start the development of 
 Maxima on Android using Google's Android Studio.
 
