@@ -50,6 +50,7 @@ jobs:
           The source archives below are the unmodified upstream sources; the patches and
           build scripts are under native/ at ${GITHUB_SHA}.
           NOTES
-          gh release create "$TAG" --title "$TAG" --notes-file notes.md \
+          title="Maxima ${MAXIMA_VERSION} · ECL ${ECL_VERSION} · gnuplot ${GNUPLOT_VERSION} · QEPCAD B ${QEPCAD_VERSION} (${TAG})"
+          gh release create "$TAG" --title "$title" --notes-file notes.md \
             native/out/moa-native.zip native/out/moa-native.zip.sha256 \
             native/.build/dl/*

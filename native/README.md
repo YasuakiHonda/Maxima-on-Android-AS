@@ -69,9 +69,11 @@ The app build (`app/build.gradle`, `prepare<Variant>NativeBundle`) unpacks
 
 ## Publishing a release
 
-1. Push a tag `native-<n>`. The `native` workflow builds everything and creates
-   a release with `moa-native.zip`, its checksum and the upstream source
-   archives.
+1. Push a tag `native-maxima-<maxima version>-<build>`, e.g.
+   `native-maxima-5.50.0-1`; increase the build number when anything else
+   changes (another component, a patch, the NDK). The `native` workflow builds
+   everything and creates a release with `moa-native.zip`, its checksum and the
+   upstream source archives.
 2. Put the tag and the SHA-256 from the release notes into `prebuilt.properties`
    and commit.
 
