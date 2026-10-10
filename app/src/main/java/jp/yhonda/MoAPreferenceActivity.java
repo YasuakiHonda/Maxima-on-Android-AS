@@ -32,6 +32,7 @@ public final class MoAPreferenceActivity extends PreferenceActivity implements O
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preference);
+        SystemBars.setUpPlain(this);
     }
 
     @Override

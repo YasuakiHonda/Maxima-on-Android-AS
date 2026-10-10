@@ -33,6 +33,7 @@ import android.os.StatFs;
 import android.util.Log;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -55,6 +56,13 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		SystemBars.setUp(this);
+		// Leaving half-way would leave Maxima unusable; installing takes seconds.
+		getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+			@Override
+			public void handleOnBackPressed() {
+			}
+		});
 		setContentView(R.layout.moainstallerview);
 		msg = findViewById(R.id.installStatus);
 		final String version = getIntent().getStringExtra("version");

@@ -29,10 +29,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
 import android.preference.PreferenceManager;
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -52,6 +52,12 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		SystemBars.setUp(this);
+		// Back goes back in the manual's history first, then returns to Maxima.
+		getOnBackPressedDispatcher().addCallback(this, backInPage);
+		Intent backToMaxima = new Intent(this, MaximaOnAndroidActivity.class);
+		backToMaxima.putExtra("sender", "manualActivity");
+		setResult(RESULT_OK, backToMaxima);
 		Log.v("MoAMan", "onCreate");
 		thisActivity = this;
 		setContentView(R.layout.htmlactivity);
@@ -63,6 +69,11 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 		webview.getSettings().setLoadWithOverviewMode(true);
 
 		webview.setWebViewClient(new WebViewClient() {
+			@Override
+			public void doUpdateVisitedHistory(WebView view, String url, boolean isReload) {
+				backInPage.setEnabled(view.canGoBack());
+			}
+
 			public void onPageFinished(WebView view, String url) {
 				Log.v("MoAMan", "onPageFinished");
 				SharedPreferences settings = PreferenceManager
@@ -143,6 +154,7 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 				parcel.recycle();
 			}
 			webview.restoreState(bundle);
+			backInPage.setEnabled(webview.canGoBack());
 		} else {
 			webview.loadUrl(urlinIntent);
 		}
@@ -152,23 +164,13 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 		edit.apply();
 	}
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (event.getAction() == KeyEvent.ACTION_DOWN
-				&& keyCode == KeyEvent.KEYCODE_BACK) {
-
-			if (webview.canGoBack()) {
-				webview.goBack();
-				return true;
-			} else {
-				Intent intent = new Intent(this, MaximaOnAndroidActivity.class);
-				setResult(RESULT_OK, intent);
-				intent.putExtra("sender", "manualActivity");
-				finish();
-			}
+	/* Enabled only while the manual has a page history to go back to. */
+	private final OnBackPressedCallback backInPage = new OnBackPressedCallback(false) {
+		@Override
+		public void handleOnBackPressed() {
+			webview.goBack();
 		}
-		return super.onKeyDown(keyCode, event);
-	}
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

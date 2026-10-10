@@ -49,6 +49,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.pm.PackageInfoCompat;
 
@@ -106,6 +107,15 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	public void onCreate(Bundle savedInstanceState) {
 		Log.d("MoA", "onCreate()");
 		super.onCreate(savedInstanceState);
+		SystemBars.setUp(this);
+		// Back does not leave the console (Maxima would be stopped); quit is in the menu.
+		getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+			@Override
+			public void handleOnBackPressed() {
+				Toast.makeText(MaximaOnAndroidActivity.this, getString(R.string.quit_hint),
+						Toast.LENGTH_LONG).show();
+			}
+		});
 
 		maximaURL = "file:///android_asset/maxima_svg.html";
 
@@ -284,6 +294,10 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	protected void onDestroy() {
 		PreferenceManager.getDefaultSharedPreferences(this)
 				.unregisterOnSharedPreferenceChangeListener(settingsListener);
+		// A new activity starts its own Maxima; do not leave this one running.
+		if (maximaProccess != null) {
+			maximaProccess.destroy();
+		}
 		super.onDestroy();
 	}
 
@@ -673,19 +687,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	private void saveInstalledAppVersionCode() {
 		getSharedPreferences("maxima", MODE_PRIVATE).edit()
 				.putLong("appVersionCode", appVersionCode()).apply();
-	}
-
-	@Override
-	public boolean dispatchKeyEvent(KeyEvent event) {
-		if (event.getAction() == KeyEvent.ACTION_DOWN) {
-			switch (event.getKeyCode()) {
-			case KeyEvent.KEYCODE_BACK:
-				Toast.makeText(this, getString(R.string.quit_hint), Toast.LENGTH_LONG)
-						.show();
-				return true;
-			}
-		}
-		return super.dispatchKeyEvent(event);
 	}
 
 	@Override

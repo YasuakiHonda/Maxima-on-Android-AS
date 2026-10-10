@@ -97,4 +97,11 @@ public class CommandExec {
 	public void clearStringBuilder() {
 		this.sb.delete(0, this.sb.length());
 	}
+
+	/** Stops the process (if it was started). */
+	public void destroy() {
+		if (process != null) {
+			process.destroy();
+		}
+	}
 }

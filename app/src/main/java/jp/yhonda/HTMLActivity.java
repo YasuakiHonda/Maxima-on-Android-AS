@@ -20,27 +20,41 @@ package jp.yhonda;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.webkit.ConsoleMessage;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 /** Shows a local page: a graph (maxout.html) or the About page. */
 public class HTMLActivity extends AppCompatActivity {
 	WebView webview = null;
+	/* Back goes back in the page history first; enabled only while there is one. */
+	private final OnBackPressedCallback backInPage = new OnBackPressedCallback(false) {
+		@Override
+		public void handleOnBackPressed() {
+			webview.goBack();
+		}
+	};
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		SystemBars.setUp(this);
+		getOnBackPressedDispatcher().addCallback(this, backInPage);
 		setContentView(R.layout.htmlactivity);
 		webview = (WebView) findViewById(R.id.webViewInHTMLActivity);
 		webview.getSettings().setJavaScriptEnabled(true);
 		// Graphs are loaded from file:///data/... (maxout.html); file access is off by default since targetSdk 30.
 		webview.getSettings().setAllowFileAccess(true);
-		webview.setWebViewClient(new WebViewClient());
+		webview.setWebViewClient(new WebViewClient() {
+			@Override
+			public void doUpdateVisitedHistory(WebView view, String url, boolean isReload) {
+				backInPage.setEnabled(view.canGoBack());
+			}
+		});
 		webview.getSettings().setBuiltInZoomControls(true);
 		webview.getSettings().setUseWideViewPort(true);
 		webview.getSettings().setLoadWithOverviewMode(true);
@@ -60,16 +74,5 @@ public class HTMLActivity extends AppCompatActivity {
 		String url = getIntent().getStringExtra("url");
 		webview.setContentDescription(url);
 		webview.loadUrl(url);
-	}
-
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (event.getAction() == KeyEvent.ACTION_DOWN
-				&& keyCode == KeyEvent.KEYCODE_BACK
-				&& webview.canGoBack()) {
-			webview.goBack();
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
 	}
 }
