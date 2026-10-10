@@ -1,0 +1,35 @@
+Android: build without GNU readline.
+
+readline is not part of the NDK; QEPCAD only uses it for terminal input.
+
+diff --color -ruN a/source/db/readlineistream.h b/source/db/readlineistream.h
+--- a/source/db/readlineistream.h	2021-03-01 22:24:45.000000000 +0100
++++ b/source/db/readlineistream.h	2026-10-09 11:44:21.548226527 +0200
+@@ -7,8 +7,27 @@
+  * editing, history and, eventually, tab-completion.
+  ***************************************************************/
+ #include <iostream>
++#ifdef __ANDROID__
++/* There is no readline on Android. QEPCAD only uses it when stdin is a
++   terminal; Maxima on Android always feeds it from a file. Provide the
++   two calls it needs: plain line input and a no-op history. */
++#include <cstdio>
++#include <cstdlib>
++static FILE *rl_instream = 0;
++static inline char *readline(const char *)
++{
++  char *line = 0;
++  size_t n = 0;
++  ssize_t len = getline(&line, &n, rl_instream ? rl_instream : stdin);
++  if (len < 0) { free(line); return 0; }
++  if (len > 0 && line[len-1] == '\n') line[len-1] = '\0';
++  return line;
++}
++static inline void add_history(const char *) { }
++#else
+ #include <readline/readline.h>
+ #include <readline/history.h>
++#endif
+ #include <cstring>
+ using namespace std;
+ 

@@ -1,0 +1,64 @@
+/*
+ratsimpx2.mac
+Copyright (C) 2014 ehito
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+or the following URL: http://www.gnu.org/licenses/gpl-2.0.html.
+*/
+defrule(fto01,false,0=1);
+defrule(tto00,true,0=0);
+
+map(kill,["%replies","%eq"]);
+map(infix,["%replies","%eq"]);
+matchdeclare([aa,bb,cc],true); 
+"%neg"(aa):=(aa)%implies(0=1);
+"%replies"(aa,bb):=(bb)%implies(aa);
+"%eq"(aa,bb):=((aa)%implies(bb))%and((bb)%implies(aa));
+
+defrule(sf1,aa>=bb,bb<=aa);
+defrule(sf2,aa>bb,bb<aa);
+defrule(fr1,aa=bb,xthru(aa)=xthru(bb));
+defrule(fr2,aa<bb,xthru(aa)<xthru(bb));
+defrule(fr3,aa<=bb,xthru(aa)<=xthru(bb));
+defrule(fr4,aa#bb, %neg(xthru(aa)=xthru(bb)));
+defrule(fr5,%not(aa), %neg(aa));
+
+matchdeclare(rr,lambda([x],is(denom(x)#1)));
+defrule(cd1,rr=cc,(num(rr)=cc*denom(rr)) %and (denom(rr)#0));
+defrule(cd2,cc=rr,(num(rr)=cc*denom(rr)) %and (denom(rr)#0));
+defrule(cd3,cc<=rr, 
+       ( (0<denom(rr)) %and (cc*denom(rr)<=num(rr)) ) %or
+       ( (denom(rr)<0) %and (num(rr)<=cc*denom(rr)) ) );
+defrule(cd4,cc<rr, 
+       ( (0<denom(rr)) %and (cc*denom(rr)<num(rr)) ) %or
+       ( (denom(rr)<0) %and (num(rr)<cc*denom(rr)) ) );
+defrule(cd5,rr<=cc, 
+       ( (denom(rr)<0) %and (cc*denom(rr)<=num(rr)) ) %or
+       ( (0<denom(rr)) %and (num(rr)<=cc*denom(rr)) ) );
+defrule(cd6,rr<cc, 
+       ( (denom(rr)<0) %and (cc*denom(rr)<num(rr)) ) %or
+       ( (0<denom(rr)) %and (num(rr)<cc*denom(rr)) ) );
+
+ratsimpx1(x):=applyb1(x,fto01,tto00,sf1,sf2,fr1,fr2,fr3,fr4,fr5,cd1,cd2,cd3,cd4,cd5,cd6);
+ratsimpx2(x):=ratsimpx1(ratsimpx1(x));
+
+adddm(f):=block([dmX,dmY],
+  if atom(f) then return(f),
+  if is(op(f)="/") then 
+    (part(f,1)+dmX^2-1+(1-dmX)*(1+dmX))
+   /(part(f,2)+dmY+dmY/part(f,2)-dmY*(1+1/part(f,2))) else f)$
+Strict():=simp:false$
+nzden(f):=block([g:scanmap(adddm,f,bottomup)],simp:true,qe([],g))$
+nzdenqe(l,f):=block([g:scanmap(adddm,f,bottomup)],simp:true,qe(l,g))$
