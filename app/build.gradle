@@ -39,6 +39,11 @@ android {
     }
 
     testOptions {
+        // Run instrumented tests without window animations: Android drops touches
+        // on a window that is still fading in (InputDispatcher "window opacity is
+        // below the threshold"), so a click right after an activity starts was lost.
+        animationsDisabled = true
+
         managedDevices {
             allDevices {
                 // Emulator managed by Gradle for the instrumented tests, on the
