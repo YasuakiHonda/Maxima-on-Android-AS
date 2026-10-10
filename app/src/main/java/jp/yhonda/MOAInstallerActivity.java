@@ -46,8 +46,11 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 	private static final String TAG = "MoA";
 	private static final long REQUIRED_MB = 85;
 
-	/** Files and directories left by earlier versions (maxima-x.y.z dirs are found separately). */
-	private static final String[] OLD_FILES = { "init.lisp", "additions", "maxima-userdir",
+	/**
+	 * Files and directories left by earlier versions (maxima-x.y.z dirs are found separately).
+	 * maxima-userdir is kept: it holds the user's maxima-init.mac and packages.
+	 */
+	private static final String[] OLD_FILES = { "init.lisp", "additions",
 			"x86", "maxima", "maxima.x86", "maxima.pie", "maxima.x86.pie" };
 
 	private final ExecutorService executor = Executors.newSingleThreadExecutor();
