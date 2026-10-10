@@ -38,6 +38,31 @@ android {
         abortOnError = true
     }
 
+    testOptions {
+        managedDevices {
+            allDevices {
+                // Emulator managed by Gradle for the instrumented tests, on the
+                // targeted Android version:
+                //   ./gradlew pixel7Api36DebugAndroidTest
+                // The google image is used because the app needs WebView.
+                pixel7Api36(com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = 'Pixel 7'
+                    apiLevel = 36
+                    systemImageSource = 'google'
+                }
+                // The same with 16 KB memory pages: the native programs must
+                // run there too (Google Play requires 16 KB support).
+                //   ./gradlew pixel7Api36Ps16kDebugAndroidTest
+                pixel7Api36Ps16k(com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = 'Pixel 7'
+                    apiLevel = 36
+                    systemImageSource = 'google'
+                    pageAlignment = com.android.build.api.dsl.ManagedVirtualDevice.PageAlignment.FORCE_16KB_PAGES
+                }
+            }
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17

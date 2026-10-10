@@ -18,9 +18,11 @@ Testing
 - ./gradlew testDebugUnitTest   JVM unit tests (app/src/test)
 - ./gradlew lintDebug           Android Lint; any error fails the build
 - ./gradlew check               both of the above
+- ./gradlew pixel7Api36DebugAndroidTest
+                                instrumented tests (app/src/androidTest) on an
+                                emulator that Gradle downloads and manages
 - ./gradlew connectedDebugAndroidTest
-                                instrumented tests (app/src/androidTest) on a
-                                connected device/emulator
+                                the same tests on a connected device/emulator
 
 This repository is provided in the hope that anyone can easily start the development of 
 Maxima on Android using Google's Android Studio.
