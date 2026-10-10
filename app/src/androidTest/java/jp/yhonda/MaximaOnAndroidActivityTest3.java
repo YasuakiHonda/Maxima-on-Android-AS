@@ -1,14 +1,14 @@
 package jp.yhonda;
 
 
-import android.support.test.espresso.DataInteraction;
-import android.support.test.espresso.ViewInteraction;
-import android.support.test.espresso.web.assertion.WebViewAssertions;
-import android.support.test.espresso.web.matcher.DomMatchers;
-import android.support.test.espresso.web.sugar.Web;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
+import androidx.test.espresso.DataInteraction;
+import androidx.test.espresso.ViewInteraction;
+import androidx.test.espresso.web.assertion.WebViewAssertions;
+import androidx.test.espresso.web.matcher.DomMatchers;
+import androidx.test.espresso.web.sugar.Web;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -20,21 +20,21 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static android.support.test.espresso.Espresso.onData;
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
-import static android.support.test.espresso.Espresso.pressBack;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static android.support.test.espresso.action.ViewActions.replaceText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withClassName;
-import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static android.support.test.espresso.web.sugar.Web.onWebView;
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
+import static androidx.test.espresso.Espresso.onData;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
+import static androidx.test.espresso.Espresso.pressBack;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.espresso.web.sugar.Web.onWebView;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.is;
@@ -44,7 +44,7 @@ import static org.hamcrest.Matchers.is;
 public class MaximaOnAndroidActivityTest3 {
 
     @Rule
-    public ActivityTestRule<MaximaOnAndroidActivity> mActivityTestRule = new ActivityTestRule<>(MaximaOnAndroidActivity.class);
+    public ActivityScenarioRule<MaximaOnAndroidActivity> mActivityScenarioRule = new ActivityScenarioRule<>(MaximaOnAndroidActivity.class);
 
     @Test
     public void maximaOnAndroidActivityTest3() {
@@ -52,12 +52,7 @@ public class MaximaOnAndroidActivityTest3 {
         openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
 
         ViewInteraction appCompatTextView = onView(
-                allOf(withId(R.id.title), withText("About Maxima on Android"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.support.v7.view.menu.ListMenuItemView")),
-                                        0),
-                                0),
+                allOf(withId(androidx.appcompat.R.id.title), withText("About Maxima on Android"),
                         isDisplayed()));
         appCompatTextView.perform(click());
 
@@ -76,12 +71,7 @@ public class MaximaOnAndroidActivityTest3 {
         openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
 
         ViewInteraction appCompatTextView2 = onView(
-                allOf(withId(R.id.title), withText("Preferences"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.support.v7.view.menu.ListMenuItemView")),
-                                        0),
-                                0),
+                allOf(withId(androidx.appcompat.R.id.title), withText("Preferences"),
                         isDisplayed()));
         appCompatTextView2.perform(click());
 
@@ -106,12 +96,7 @@ public class MaximaOnAndroidActivityTest3 {
         openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
 
         ViewInteraction appCompatTextView3 = onView(
-                allOf(withId(R.id.title), withText("Manual"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.support.v7.view.menu.ListMenuItemView")),
-                                        0),
-                                0),
+                allOf(withId(androidx.appcompat.R.id.title), withText("Manual"),
                         isDisplayed()));
         appCompatTextView3.perform(click());
 
@@ -125,7 +110,7 @@ public class MaximaOnAndroidActivityTest3 {
         }
 
         ViewInteraction webView2 = onView(
-                allOf(withId(R.id.webViewInHTMLActivity), withContentDescription("file:///android_asset/maxima-doc/ja/maxima.html"),
+                allOf(withId(R.id.webViewInHTMLActivity), withContentDescription("file:///android_asset/maxima-doc/ja/index.html"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -180,12 +165,7 @@ public class MaximaOnAndroidActivityTest3 {
         openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
 
         ViewInteraction appCompatTextView4 = onView(
-                allOf(withId(R.id.title), withText("Graph"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.support.v7.view.menu.ListMenuItemView")),
-                                        0),
-                                0),
+                allOf(withId(androidx.appcompat.R.id.title), withText("Graph"),
                         isDisplayed()));
         appCompatTextView4.perform(click());
 
@@ -195,12 +175,7 @@ public class MaximaOnAndroidActivityTest3 {
         openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
 
         ViewInteraction appCompatTextView6 = onView(
-                allOf(withId(R.id.title), withText("Quit"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.support.v7.view.menu.ListMenuItemView")),
-                                        0),
-                                0),
+                allOf(withId(androidx.appcompat.R.id.title), withText("Quit"),
                         isDisplayed()));
         appCompatTextView6.perform(click());
 
@@ -233,7 +208,8 @@ public class MaximaOnAndroidActivityTest3 {
 
     }
     private static void waitForStartup() {
-        waitFor(1000);
-        onWebView().check(WebViewAssertions.webContent(DomMatchers.containingTextInBody("Maxima")));
+        // The first start unpacks Maxima's data; wait for the banner.
+        jp.yhonda.TestUtil.waitUntil(() -> onWebView().check(WebViewAssertions.webContent(
+                DomMatchers.containingTextInBody("Maxima"))), 60000);
     }
 }

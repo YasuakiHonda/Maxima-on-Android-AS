@@ -1,53 +1,185 @@
+import java.security.MessageDigest
+import java.util.zip.ZipInputStream
+
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    namespace 'jp.yhonda'
+    compileSdk 37
 
     defaultConfig {
         applicationId "jp.yhonda"
-        minSdkVersion 19
-        targetSdkVersion 27
-        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
-    }
+        minSdk 23
+        targetSdk 36
+        versionCode 29
+        versionName "4.0.0"
 
-    dependencies {
-        implementation 'com.android.support:support-v4:25.3.1'
-        implementation 'com.android.support:appcompat-v7:25.3.1'
-        implementation 'com.android.support:design:25.3.1'
-
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
         }
+    }
+
+    packaging {
+        jniLibs {
+            // The lib*.so files are executables (maxima, gnuplot, qepcad) that are run
+            // from nativeLibraryDir, so they must be extracted at install time and left as-is.
+            useLegacyPackaging = true
+            keepDebugSymbols += '**/*.so'
+        }
+    }
+
+    lint {
+        // The build (lintDebug, check) fails on any lint error.
+        abortOnError = true
+    }
+
+    testOptions {
+        // Run instrumented tests without window animations: Android drops touches
+        // on a window that is still fading in (InputDispatcher "window opacity is
+        // below the threshold"), so a click right after an activity starts was lost.
+        animationsDisabled = true
+
+        managedDevices {
+            allDevices {
+                // Emulator managed by Gradle for the instrumented tests, on the
+                // targeted Android version:
+                //   ./gradlew pixel7Api36DebugAndroidTest
+                // The google image is used because the app needs WebView.
+                pixel7Api36(com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = 'Pixel 7'
+                    apiLevel = 36
+                    systemImageSource = 'google'
+                }
+                // The same with 16 KB memory pages: the native programs must
+                // run there too (Google Play requires 16 KB support).
+                //   ./gradlew pixel7Api36Ps16kDebugAndroidTest
+                pixel7Api36Ps16k(com.android.build.api.dsl.ManagedVirtualDevice) {
+                    device = 'Pixel 7'
+                    apiLevel = 36
+                    systemImageSource = 'google'
+                    pageAlignment = com.android.build.api.dsl.ManagedVirtualDevice.PageAlignment.FORCE_16KB_PAGES
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+    implementation 'androidx.activity:activity:1.13.0'
+    implementation 'androidx.appcompat:appcompat:1.8.0'
+    implementation 'androidx.core:core:1.19.1'
+
+    testImplementation 'junit:junit:4.13.2'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-web:3.7.0'
+    androidTestImplementation 'androidx.test:runner:1.7.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+}
+
+// ---------------------------------------------------------------------------
+// Native binaries (maxima, gnuplot, qepcad) and their data files are built by
+// native/build.sh from pinned upstream sources and shipped as one archive,
+// moa-native.zip. Each variant gets them as generated jniLibs/assets.
+// See native/README.md.
+// ---------------------------------------------------------------------------
+
+abstract class PrepareNativeBundle extends DefaultTask {
+    /** A local moa-native.zip (from -Pmoa.nativeDir); otherwise the release is downloaded. */
+    @Optional @InputFile @PathSensitive(PathSensitivity.NONE)
+    abstract RegularFileProperty getLocalBundle()
+
+    @Input abstract Property<String> getUrl()
+    @Input abstract Property<String> getSha256()
+    @Internal abstract DirectoryProperty getCacheDir()
+
+    @OutputDirectory abstract DirectoryProperty getJniLibsDir()
+    @OutputDirectory abstract DirectoryProperty getAssetsDir()
+
+    @TaskAction
+    void prepare() {
+        File bundle = localBundle.present ? localBundle.get().asFile : download()
+        extract(bundle, 'jniLibs/', jniLibsDir.get().asFile)
+        extract(bundle, 'assets/', assetsDir.get().asFile)
     }
-    androidTestImplementation 'com.android.support.test:runner:0.5', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+
+    private File download() {
+        String expected = sha256.get().trim().toLowerCase()
+        if (expected.isEmpty()) {
+            throw new GradleException('native/prebuilt.properties has no sha256 for ' +
+                    url.get() + '; publish a native release or build with ' +
+                    '-Pmoa.nativeDir=native/out (see native/README.md)')
+        }
+        File cached = new File(cacheDir.get().asFile, expected + '.zip')
+        if (cached.isFile() && sha256Of(cached) == expected) {
+            return cached
+        }
+        cached.parentFile.mkdirs()
+        File part = new File(cached.path + '.part')
+        logger.lifecycle("Downloading ${url.get()}")
+        new URL(url.get()).withInputStream { input -> part.withOutputStream { it << input } }
+        String actual = sha256Of(part)
+        if (actual != expected) {
+            part.delete()
+            throw new GradleException("Checksum mismatch for ${url.get()}: expected $expected, got $actual")
+        }
+        if (!part.renameTo(cached)) {
+            throw new GradleException("Cannot move $part to $cached")
+        }
+        return cached
     }
-    androidTestImplementation 'com.android.support.test:rules:0.5', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+
+    private static String sha256Of(File file) {
+        MessageDigest md = MessageDigest.getInstance('SHA-256')
+        file.eachByte(1 << 16) { byte[] buf, int n -> md.update(buf, 0, n) }
+        return md.digest().encodeHex().toString()
     }
-    // Espresso-contrib for DatePicker, RecyclerView, Drawer actions, Accessibility checks, CountingIdlingResource
-//    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
-// Espresso-web for WebView support
-    androidTestImplementation 'com.android.support.test.espresso:espresso-web:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+
+    /** Unpacks the entries under prefix into dest (replacing its contents). */
+    private static void extract(File zip, String prefix, File dest) {
+        dest.deleteDir()
+        dest.mkdirs()
+        String root = dest.canonicalPath + File.separator
+        new ZipInputStream(new FileInputStream(zip)).withCloseable { zin ->
+            def entry
+            while ((entry = zin.nextEntry) != null) {
+                if (entry.directory || !entry.name.startsWith(prefix)) continue
+                File out = new File(dest, entry.name.substring(prefix.length()))
+                if (!out.canonicalPath.startsWith(root)) {
+                    throw new GradleException("Bad entry in ${zip}: ${entry.name}")
+                }
+                out.parentFile.mkdirs()
+                out.withOutputStream { it << zin }
+            }
+        }
     }
-// Espresso-idling-resource for synchronization with background jobs
-    androidTestImplementation 'com.android.support.test.espresso:espresso-idling-resource:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
-// Espresso-intents for validation and stubbing of Intents
-    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+}
+
+def prebuilt = new Properties()
+rootProject.file('native/prebuilt.properties').withInputStream { prebuilt.load(it) }
+def nativeDir = providers.gradleProperty('moa.nativeDir')
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        def task = tasks.register("prepare${variant.name.capitalize()}NativeBundle", PrepareNativeBundle) {
+            if (nativeDir.present) {
+                localBundle.set(rootProject.layout.projectDirectory.file(nativeDir.get() + '/moa-native.zip'))
+            }
+            url.set("https://github.com/${prebuilt.repo}/releases/download/${prebuilt.tag}/moa-native.zip")
+            sha256.set(prebuilt.getProperty('sha256', ''))
+            cacheDir.set(new File(gradle.gradleUserHomeDir, 'caches/moa-native'))
+        }
+        variant.sources.jniLibs.addGeneratedSourceDirectory(task) { it.jniLibsDir }
+        variant.sources.assets.addGeneratedSourceDirectory(task) { it.assetsDir }
     }
 }

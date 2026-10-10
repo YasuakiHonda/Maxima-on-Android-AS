@@ -20,22 +20,18 @@ package jp.yhonda;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ClipData;
 import android.content.ClipboardManager;
-import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.ParcelFileDescriptor;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -43,35 +39,31 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
-import android.webkit.MimeTypeMap;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.pm.PackageInfoCompat;
+
 import java.io.File;
-import java.io.FileDescriptor;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.nio.channels.Channels;
-import java.nio.channels.FileChannel;
-import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -84,12 +76,8 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	Activity thisActivity = this;
 	String maximaURL = null;
 
-	String manjp = "file:///android_asset/maxima-doc/ja/maxima.html";
-	String manen = "file:///android_asset/maxima-doc/en/maxima.html";
-	String mande = "file:///android_asset/maxima-doc/en/de/maxima.html";
-	String manes = "file:///android_asset/maxima-doc/en/es/maxima.html";
-	String manpt = "file:///android_asset/maxima-doc/en/pt/maxima.html";
-	String manptbr = "file:///android_asset/maxima-doc/en/pt_BR/maxima.html";
+	String manjp = "file:///android_asset/maxima-doc/ja/index.html";
+	String manen = "file:///android_asset/maxima-doc/en/index.html";
 	String manURL;
 	boolean manLangChanged = true;
 	boolean allExampleFinished = false;
@@ -100,23 +88,43 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	ScrollView scview;
 	CommandExec maximaProccess;
 	File internalDir;
-	MaximaVersion mvers = new MaximaVersion(5, 41, 0);
+	MaximaVersion mvers = new MaximaVersion(5, 50, 0);
 
 	private static final int READ_REQUEST_CODE = 42;
-    File temporaryScriptFile = null;
-    final double scriptFileMaxSize = 1E7;
+	private static final long SCRIPT_FILE_MAX_SIZE = 10000000L;
+
+	/* Settings changed in MoAPreferenceActivity; applied in onResume(). */
+	private final Set<String> changedSettings = new HashSet<String>();
+	private final SharedPreferences.OnSharedPreferenceChangeListener settingsListener =
+			new SharedPreferences.OnSharedPreferenceChangeListener() {
+				@Override
+				public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+					changedSettings.add(key);
+				}
+			};
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		Log.d("MoA", "onCreate()");
 		super.onCreate(savedInstanceState);
+		SystemBars.setUp(this);
+		// Back does not leave the console (Maxima would be stopped); quit is in the menu.
+		getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+			@Override
+			public void handleOnBackPressed() {
+				Toast.makeText(MaximaOnAndroidActivity.this, getString(R.string.quit_hint),
+						Toast.LENGTH_LONG).show();
+			}
+		});
 
 		maximaURL = "file:///android_asset/maxima_svg.html";
 
 		PreferenceManager.setDefaultValues(this, R.xml.preference, false);
 		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(this);
-		manURL = settings.getString("manURL", manen);
+		manURL = migrateManualURL(settings);
+		settings.registerOnSharedPreferenceChangeListener(settingsListener);
+		deleteTemporaryScripts();
 
 		setContentView(R.layout.main);
 		internalDir = this.getFilesDir();
@@ -188,6 +196,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		long thisVerNo = mvers.versionInteger();
 
 		if ((thisVerNo > verNo)
+				|| installedAppVersionCode() != appVersionCode()
 				|| !maximaBinaryExists()
 				|| !((new File(internalDir + "/additions")).exists())
 				|| !((new File(internalDir + "/init.lisp")).exists())
@@ -198,7 +207,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			intent.putExtra("version", mvers.versionString());
 			this.startActivityForResult(intent, 0);
 		} else {
-			// startMaxima();
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
@@ -211,42 +219,26 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		Log.v("MoA", "onActivityResult()");
-		// super.onActivityResult(requestCode, resultCode, data);
-		String sender;
-		if (data != null) {
-			sender = data.getStringExtra("sender");
-		} else {
-			sender = "anon";
-		}
+		super.onActivityResult(requestCode, resultCode, data);
+		String sender = (data != null) ? data.getStringExtra("sender") : null;
 		Log.v("MoA", "sender = " + sender);
-        if (sender == null && requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            //User has selected a script file to load.
-            Uri uri;
-			uri = data.getData();
-            //Copy file contents to input area:
-			copyScriptFileToInputArea(uri);
-        } else if (sender.equals("manualActivity")) {
+		if (requestCode == READ_REQUEST_CODE) {
+			// The user has selected a script file to load.
+			if (resultCode == RESULT_OK && data != null && data.getData() != null) {
+				copyScriptFileToInputArea(data.getData());
+			}
+		} else if ("manualActivity".equals(sender)) {
 			if (resultCode == RESULT_OK) {
 				String mcmd = data.getStringExtra("maxima command");
 				if (mcmd != null) {
 					copyExample(mcmd);
 				}
 			}
-		} else if (sender.equals("FBActivity")) {
-			if (resultCode == RESULT_OK) {
-				String mcmd = data.getStringExtra("maxima command");
-				if (mcmd != null) {
-					editText.setText(mcmd);
-					editText.setSelection(mcmd.length());
-					editText.requestFocus();
-				}
-			}
-		} else if (sender.equals("MOAInstallerActivity")) {
+		} else if ("MOAInstallerActivity".equals(sender)) {
             if (resultCode == RESULT_OK) {
 				/* everything is installed properly. */
                 mvers.saveVersToSharedPrefs(this);
-                // startMaxima();
-
+                saveInstalledAppVersionCode();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -275,41 +267,38 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		Log.d("MoA","onResume");
 		super.onResume();
 		SharedPreferences sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
-		AppGlobals globals=AppGlobals.getSingleton();
-		String flag;
 
-		flag=globals.get("auto_completion_check_box_pref");
-		if (flag != null && flag.equals("true")) {
-			Boolean bflag=sharedPrefs.getBoolean("auto_completion_check_box_pref", true);
-            if (bflag) {
-                editText.setThreshold(2);
-            } else {
-                editText.setThreshold(100);
-            }
-        }
+		if (changedSettings.contains("auto_completion_check_box_pref")) {
+			editText.setThreshold(sharedPrefs.getBoolean("auto_completion_check_box_pref", true) ? 2 : 100);
+		}
 
-		flag=globals.get("manURL");
-		if (flag!=null && flag.equals("true")) {
+		if (changedSettings.contains("manURL")) {
 			manLangChanged=true;
-			manURL=sharedPrefs.getString("manURL",manen);
+			manURL=migrateManualURL(sharedPrefs);
 		} else {
 			manLangChanged=false;
 		}
 
-		flag=globals.get("fontSize1");
-		if (flag!=null && flag.equals("true")) {
+		if (changedSettings.contains("fontSize1")) {
 			editText.setTextSize((float) Integer.parseInt(sharedPrefs.getString("fontSize1","20")));
 		}
 
-		flag=globals.get("fontSize2");
-		if (flag!=null && flag.equals("true")) {
+		if (changedSettings.contains("fontSize2")) {
 			webview.loadUrl("javascript:window.ChangeExpSize(" + sharedPrefs.getString("fontSize2","20") + ")");
 		}
 
-		List<String> list = Arrays.asList("auto_completion_check_box_pref", "manURL", "fontSize1", "fontSize2");
-		for (String key : list) {
-			globals.set(key,"false");
+		changedSettings.clear();
+	}
+
+	@Override
+	protected void onDestroy() {
+		PreferenceManager.getDefaultSharedPreferences(this)
+				.unregisterOnSharedPreferenceChangeListener(settingsListener);
+		// A new activity starts its own Maxima; do not leave this one running.
+		if (maximaProccess != null) {
+			maximaProccess.destroy();
 		}
+		super.onDestroy();
 	}
 
 	private void startMaxima() {
@@ -320,24 +309,26 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			Log.d("MoA", "exception1");
 			e1.printStackTrace();
 		}
-		
-		CpuArchitecture.initCpuArchitecture();
 
-		/*
-		webview.loadUrl(maximaURL);
-		*/
 		runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl(maximaURL);}});
 		if (!(new File(internalDir + "/maxima-" + mvers.versionString()))
 				.exists()) {
 			this.finish();
 		}
 		List<String> list = new ArrayList<String>();
-		list.add(internalDir + "/" + CpuArchitecture.getMaximaFile());
+		list.add(NativeBinaries.path(this, NativeBinaries.MAXIMA));
 		list.add("--init-lisp=" + internalDir + "/init.lisp");
-	
+		// Maxima creates its user directory before reading init.lisp, and the
+		// app process has no HOME. init.lisp points gnuplot_command at MOA_GNUPLOT.
+		Map<String, String> env = new HashMap<String, String>();
+		env.put("HOME", internalDir.getAbsolutePath());
+		env.put("MAXIMA_USERDIR", internalDir + "/maxima-userdir");
+		env.put("MOA_GNUPLOT", NativeBinaries.path(this, NativeBinaries.GNUPLOT));
+		env.put("GNUPLOT_JS_DIR", internalDir + "/additions/gnuplot/js");
+
 		maximaProccess = new CommandExec();
 		try {
-			maximaProccess.execCommand(list);
+			maximaProccess.execCommand(list, env);
 		} catch (Exception e) {
 			Log.d("MoA", "exception2");
 			exitMOA();
@@ -349,43 +340,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 	private void copyExample(String mcmd) {
 		Log.d("MoA", "copyExample()");
-		String[] mcmd2 = mcmd.split("\n\\(%");
-		mcmd2[0] = mcmd2[0].replaceFirst("^\\(%", "");
-		for (int i = 0; i < mcmd2.length; i++) {
-			mcmd2[i] = mcmd2[i].replaceAll("\n", " ");
-		}
-
-		int j = 0;
-		for (int i = 0; i < mcmd2.length; i++) {
-			if (mcmd2[i].startsWith("i")) {
-				j++;
-			}
-		}
-		mcmdArray = new String[j];
-		j = 0;
-		for (int i = 0; i < mcmd2.length; i++) {
-			if (mcmd2[i].startsWith("i")) {
-				int a = mcmd2[i].indexOf(" ");
-				mcmdArray[j] = mcmd2[i].substring(a + 1);
-				a = mcmdArray[j].lastIndexOf(";");
-				if (a > 0) {
-					mcmdArray[j] = mcmdArray[j].substring(0, a + 1); /*
-																	 * to
-																	 * include ;
-																	 */
-				} else {
-					a = mcmdArray[j].lastIndexOf("$");
-					if (a > 0) {
-						mcmdArray[j] = mcmdArray[j].substring(0, a + 1); /*
-																		 * to
-																		 * include
-																		 * $
-																		 */
-					}
-				}
-				j++;
-			}
-		}
+		mcmdArray = MaximaText.exampleCommands(mcmd);
 		mcmdArrayIndex = 0;
 		copyExampleInputToInputArea();
 	}
@@ -448,32 +403,20 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		if (ma.find()) {
 			final String oText=ma.group(1).replace("\\'","'");
 			runOnUiThread(new Runnable() {@Override public void run() { editText.setText(oText); }});
-			if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-				ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-				android.content.ClipData clip = android.content.ClipData.newPlainText("text", oText);
-				clipboardManager.setPrimaryClip(clip);
-			}
+			ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+			clipboardManager.setPrimaryClip(ClipData.newPlainText("text", oText));
 		}
 	}
 
 	@JavascriptInterface
 	public void scrollToEnd() {
-		Handler handler = new Handler();
-		Runnable task = new Runnable() {
-
+		// Called from JavaScript (not the UI thread); give MathJax time to render.
+		scview.postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				Runnable viewtask = new Runnable() {
-					@Override
-					public void run() {
-						scview.fullScroll(ScrollView.FOCUS_DOWN);
-						Log.v("MoA", "scroll!");
-					}
-				};
-				scview.post(viewtask);
+				scview.fullScroll(ScrollView.FOCUS_DOWN);
 			}
-		};
-		handler.postDelayed(task, 1000);
+		}, 1000);
 	}
 
 	public boolean onEditorAction(TextView testview, int id, KeyEvent keyEvent) {
@@ -492,7 +435,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			final String newsize = settings.getString("fontSize2", "");
 			if (!newsize.equals("")) {
 				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");}});
-				// webview.loadUrl("javascript:window.ChangeExpSize("+newsize+")");
 			}
 			inited=true;
 		}
@@ -501,7 +443,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		String cmdstr = editText.getText().toString();
 		if ((keyEvent == null) || (keyEvent.getAction() == KeyEvent.ACTION_UP)) {
 			try {
-				// cmdstr = editText.getText().toString();
 				if (cmdstr.equals("")) {
 					return true;
 				}
@@ -516,17 +457,15 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				if (cmdstr.equals("quit();"))
 					exitMOA();
 				if (cmdstr.equals("aboutme;")) {
-					showHTML("file:///android_asset/docs/aboutMOA.html", true);
+					showHTML("file:///android_asset/About_MoA/index.html", true);
 					return true;
 				}
 				if (cmdstr.equals("man;")) {
-					showHTML("file://" + internalDir
-							+ "/additions/en/maxima.html", true);
+					showHTML(manen, true);
 					return true;
 				}
 				if (cmdstr.equals("manj;")) {
-					showHTML("file://" + internalDir
-							+ "/additions/ja/maxima.html", true);
+					showHTML(manjp, true);
 					return true;
 				}
 
@@ -546,13 +485,18 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			final String cmdstr2 = cmdstr;
 			runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.UpdateInput('"
 					+ escapeChars(cmdstr2) + "<br>" + "')");}});
-//			webview.loadUrl("javascript:window.UpdateInput('"
-//					+ escapeChars(cmdstr) + "<br>" + "')");
 			String resString = maximaProccess.getProcessResult();
 			maximaProccess.clearStringBuilder();
 			while (isStartQepcadString(resString)) {
 				List<String> list = new ArrayList<String>();
-				list.add("/data/data/jp.yhonda/files/additions/qepcad/qepcad.sh");
+				// qepcad reads its help file from $qe/bin and talks to maxima via files.
+				list.add("/system/bin/sh");
+				list.add("-c");
+				list.add("qe=\"$3\"; export qe; exec \"$0\" < \"$1\" > \"$2\"");
+				list.add(NativeBinaries.path(this, NativeBinaries.QEPCAD));
+				list.add(internalDir + "/qepcad_input.txt");
+				list.add(internalDir + "/qepcad_output.txt");
+				list.add(internalDir + "/additions/qepcad");
 				CommandExec qepcadcom = new CommandExec();
 				try {
 					qepcadcom.execCommand(list);
@@ -568,25 +512,9 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				maximaProccess.clearStringBuilder();
 			}
 
-			if (isGraphFile()) {
-				List<String> list = new ArrayList<String>();
-				if (CpuArchitecture.getCpuArchitecture().equals(CpuArchitecture.X86)) {
-					// list.add(internalDir + "/additions/gnuplot/bin/gnuplot.x86");
-					list.add("/data/data/jp.yhonda/files/additions/gnuplot/bin/gnuplot.x86");
-				} else {
-					list.add(internalDir + "/additions/gnuplot/bin/gnuplot");
-				}
-				list.add("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
-				CommandExec gnuplotcom = new CommandExec();
-				try {
-					gnuplotcom.execCommand(list);
-				} catch (Exception e) {
-					Log.d("MoA", "exception6");
-				}
-				if ((new File("/data/data/jp.yhonda/files/maxout.html"))
-						.exists()) {
-					showGraph();
-				}
+			// Maxima runs gnuplot itself; a plot command leaves maxout.html.
+			if (new File(internalDir, "maxout.html").exists()) {
+				showGraph();
 			}
 
 			displayMaximaCmdResults(resString);
@@ -611,32 +539,11 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private String maxima_syntax_check(String cmd) {
-		/*
-		 * Search the last char which is not white spaces. If the last char is
-		 * semi-colon or dollar, that is OK. Otherwise, semi-colon is added at
-		 * the end.
-		 */
-		int i = cmd.length() - 1;
-		assert (i >= 0);
-		char c = ';';
-		while (i >= 0) {
-			c = cmd.charAt(i);
-			if (c == ' ' || c == '\t') {
-				i--;
-			} else {
-				break;
-			}
-		}
-
-		if (c == ';' || c == '$') {
-			return (cmd.substring(0, i + 1));
-		} else {
-			return (cmd.substring(0, i + 1) + ';');
-		}
+		return MaximaText.terminateCommand(cmd);
 	}
 
 	private String escapeChars(String cmd) {
-		return substitute(cmd, "'", "\\'");
+		return MaximaText.escapeQuotes(cmd);
 	}
 
 	private void displayMaximaCmdResults(String resString) {
@@ -649,7 +556,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 					continue;
 				final String htmlStr = substitute(resArray[i], "\n", "<br>");
 				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl("javascript:window.UpdateText('" + htmlStr + "')");}});
-				// webview.loadUrl("javascript:window.UpdateText('" + htmlStr + "')");
 			} else {
 				/* tex commands, as we are inside of $$$$$$...$$$$$$ */
 				String texStr = substCRinMBOX(resArray[i]);
@@ -657,7 +563,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				texStr = substituteMBOXVERB(texStr);
 				final String urlstr = "javascript:window.UpdateMath('" + texStr + "')";
 				runOnUiThread(new Runnable() {@Override public void run() {webview.loadUrl(urlstr);}});
-				// webview.loadUrl(urlstr);
 			}
 		}
 		if (allExampleFinished == true) {
@@ -665,62 +570,19 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 					Toast.LENGTH_LONG).show();
 			allExampleFinished = false;
 		}
-		//Delete temporary script file:
-		if (temporaryScriptFile != null) {
-			temporaryScriptFile.delete();
-		}
 	}
 
 	private String substCRinMBOX(String str) {
-		String resValue = "";
-		String tmpValue = str;
-		int p;
-		while ((p = tmpValue.indexOf("mbox{")) != -1) {
-			resValue = resValue + tmpValue.substring(0, p) + "mbox{";
-			int p2 = tmpValue.indexOf("}", p + 5);
-			assert (p2 > 0);
-			String tmp2Value = tmpValue.substring(p + 5, p2);
-			resValue = resValue
-					+ substitute(tmp2Value, "\n", "}\\\\\\\\ \\\\mbox{");
-			tmpValue = tmpValue.substring(p2, tmpValue.length());
-		}
-		resValue = resValue + tmpValue;
-		return (resValue);
+		return MaximaText.splitMboxLines(str);
 	}
 
 	static private String substituteMBOXVERB(String texStr) {
-		Pattern pat=Pattern.compile("\\\\\\\\mbox\\{\\\\\\\\verb\\|(.)\\|\\}");
-		Matcher m=pat.matcher(texStr);
-		StringBuffer sb= new StringBuffer();
-		if (m.find()) {
-			m.appendReplacement(sb,"\\\\\\\\text{$1");
-			while (m.find()) {
-				m.appendReplacement(sb, "$1");
-			}
-			m.appendTail(sb);
-			return sb.toString()+"}";
-		}
-		return(texStr);
+		return MaximaText.mergeVerbChars(texStr);
 	}
 
 	static private String substitute(String input, String pattern,
 			String replacement) {
-		int index = input.indexOf(pattern);
-
-		if (index == -1) {
-			return input;
-		}
-
-		StringBuffer buffer = new StringBuffer();
-
-		buffer.append(input.substring(0, index)).append(replacement);
-
-		if (index + pattern.length() < input.length()) {
-			String rest = input.substring(index + pattern.length(),
-					input.length());
-			buffer.append(substitute(rest, pattern, replacement));
-		}
-		return buffer.toString();
+		return MaximaText.substitute(input, pattern, replacement);
 	}
 
 	private void showHTML(String url, boolean hwaccel) {
@@ -747,36 +609,32 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private void showGraph() {
-		if ((new File("/data/data/jp.yhonda/files/maxout.html")).exists()) {
-			showHTML("file:///data/data/jp.yhonda/files/maxout.html", false);
+		File graph = new File(internalDir, "maxout.html");
+		if (graph.exists()) {
+			showHTML("file://" + graph.getAbsolutePath(), false);
 		} else {
 			Toast.makeText(this, getString(R.string.toast_no_graph), Toast.LENGTH_LONG).show();
 		}
 	}
 
 	private void removeTmpFiles() {
-		File a = new File("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
+		// gnuplot scripts and data written by plot2d/plot3d/draw
+		File[] scripts = internalDir.listFiles();
+		if (scripts != null) {
+			for (File f : scripts) {
+				if (f.isFile() && f.getName().endsWith(".gnuplot")) {
+					f.delete();
+				}
+			}
+		}
+		File a = new File(internalDir, "maxout.html");
 		if (a.exists()) {
 			a.delete();
 		}
-		a = new File("/data/data/jp.yhonda/files/maxout.html");
+		a = new File(internalDir, "qepcad_input.txt");
 		if (a.exists()) {
 			a.delete();
 		}
-		a = new File("/data/data/jp.yhonda/files/qepcad_input.txt");
-		if (a.exists()) {
-			a.delete();
-		}
-	}
-
-	private Boolean isGraphFile() {
-		File a = new File("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
-		return (a.exists());
-	}
-
-	private Boolean isQepcadFile() {
-		File a = new File("/data/data/jp.yhonda/files/qepcad_input.txt");
-		return (a.exists());
 	}
 
 	private void exitMOA() {
@@ -793,27 +651,42 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		finish();
 	}
 	
-	private boolean maximaBinaryExists() {
-		CpuArchitecture.initCpuArchitecture();
-		String res=CpuArchitecture.getMaximaFile();
-		if (res.startsWith("not")) {
-			return false;
+	/*
+	 * The manual moved from maxima-doc/[en/]<lang>/maxima.html (Maxima 5.41) to
+	 * maxima-doc/<lang>/index.html; map a stored choice to the new layout.
+	 */
+	private String migrateManualURL(SharedPreferences settings) {
+		String url = settings.getString("manURL", manen);
+		String migrated = MaximaText.migratedManualUrl(url);
+		if (migrated != null) {
+			url = migrated;
+			settings.edit().putString("manURL", url).apply();
 		}
-		return((new File(internalDir.getAbsolutePath()+"/"+res)).exists());
-		
+		return url;
 	}
 
-	@Override
-	public boolean dispatchKeyEvent(KeyEvent event) {
-		if (event.getAction() == KeyEvent.ACTION_DOWN) {
-			switch (event.getKeyCode()) {
-			case KeyEvent.KEYCODE_BACK:
-				Toast.makeText(this, getString(R.string.quit_hint), Toast.LENGTH_LONG)
-						.show();
-				return true;
-			}
+	private boolean maximaBinaryExists() {
+		return NativeBinaries.get(this, NativeBinaries.MAXIMA).exists();
+	}
+
+	/* An app update may change the bundled additions, so reinstall them. */
+	private long appVersionCode() {
+		try {
+			return PackageInfoCompat.getLongVersionCode(
+					getPackageManager().getPackageInfo(getPackageName(), 0));
+		} catch (PackageManager.NameNotFoundException e) {
+			return -1;
 		}
-		return super.dispatchKeyEvent(event);
+	}
+
+	private long installedAppVersionCode() {
+		return getSharedPreferences("maxima", MODE_PRIVATE)
+				.getLong("appVersionCode", -1);
+	}
+
+	private void saveInstalledAppVersionCode() {
+		getSharedPreferences("maxima", MODE_PRIVATE).edit()
+				.putLong("appVersionCode", appVersionCode()).apply();
 	}
 
 	@Override
@@ -828,7 +701,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			Editor editor = settings.edit();
 			editor.putFloat("maxima main scale", sc);
 			editor.apply();
-			// setMCIAfontSize((int)(sc*12));
 		}
 		return false;
 	}
@@ -842,51 +714,39 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		boolean retval = false;
-		switch (item.getItemId()) {
-		case R.id.about:
+		int itemId = item.getItemId();
+		if (itemId == R.id.about) {
 			showHTML("file:///android_asset/About_MoA/index.html", true);
-			retval = true;
-			break;
-		case R.id.preference:
+			return true;
+		} else if (itemId == R.id.preference) {
 			showPreference();
-			retval = true;
-			break;
-		case R.id.graph:
+			return true;
+		} else if (itemId == R.id.graph) {
 			showGraph();
-			retval = true;
-			break;
-		case R.id.quit:
+			return true;
+		} else if (itemId == R.id.quit) {
 			exitMOA();
-			retval = true;
-			break;
-		case R.id.nextexample:
+			return true;
+		} else if (itemId == R.id.nextexample) {
 			copyExampleInputToInputArea();
-			break;
-		case R.id.man:
+			return false;
+		} else if (itemId == R.id.man) {
 			showManual();
-			retval = true;
-			break;
-		case R.id.save:
+			return true;
+		} else if (itemId == R.id.save) {
 			sessionMenu("ssave();");
-			retval = true;
-			break;
-		case R.id.restore:
+			return true;
+		} else if (itemId == R.id.restore) {
 			sessionMenu("srestore();");
-			retval = true;
-			break;
-		case R.id.playback:
+			return true;
+		} else if (itemId == R.id.playback) {
 			sessionMenu("playback();");
-			retval = true;
-			break;
-		case R.id.loadscript:
-            selectScriptFile();
-			break;
-
-		default:
-			return super.onOptionsItemSelected(item);
+			return true;
+		} else if (itemId == R.id.loadscript) {
+			selectScriptFile();
+			return false;
 		}
-		return retval;
+		return super.onOptionsItemSelected(item);
 	}
 
 	private void sessionMenu(String cmd) {
@@ -898,89 +758,65 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private void selectScriptFile() {
-		if(Build.VERSION.SDK_INT < 19) {
-			//Versions earlier than KitKat do not support the Storage Access Framework.
-			//Show file path input box instead:
-			android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MaximaOnAndroidActivity.this);
-			LayoutInflater inflater = this.getLayoutInflater();
-			final View layout = inflater.inflate(R.layout.scriptpathalert, null);
-			builder.setView(layout);
-			final AutoCompleteTextView textView = (AutoCompleteTextView) layout.findViewById(R.id.scriptPathInput);
-			builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					dialog.dismiss();
-					if(!textView.getText().toString().matches("")) {
-						copyScriptFileToInputArea(Uri.fromFile(new File(textView.getText().toString())));
-					}
-				}
-			});
-			android.support.v7.app.AlertDialog dialog = builder.create();
-			dialog.show();
-
-		} else {
-			Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-//			Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-			intent.addCategory(intent.CATEGORY_OPENABLE);
-			intent.setType("*/*");
-			startActivityForResult(intent, READ_REQUEST_CODE);
-		}
+		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+		intent.addCategory(Intent.CATEGORY_OPENABLE);
+		intent.setType("*/*");
+		startActivityForResult(intent, READ_REQUEST_CODE);
 	}
 
+	/*
+	 * Copies the selected script into the cache directory (the content URI is
+	 * not a file Maxima can open) and puts a batch() command for it into the
+	 * input field.
+	 */
 	private void copyScriptFileToInputArea(Uri fileUri) {
-		try {
-			File temporaryDirectory = getApplicationContext().getCacheDir();
-			FileInputStream stream = (FileInputStream)(getApplicationContext().getContentResolver().openInputStream(fileUri));
-			FileChannel sourceChannel = stream.getChannel();
-
-			//Abort if file is too large:
-			if (sourceChannel.size() > scriptFileMaxSize) {
-				Toast.makeText(getApplicationContext(), R.string.script_file_too_large, Toast.LENGTH_LONG).show();
-				return;
+		deleteTemporaryScripts();
+		File script = null;
+		boolean tooLarge = false;
+		try (InputStream in = getContentResolver().openInputStream(fileUri)) {
+			if (in == null) {
+				throw new IOException("Cannot open " + fileUri);
 			}
-
-			File temporaryFile = File.createTempFile("userscript", ".mac", temporaryDirectory);
-			FileChannel destinationChannel = new FileOutputStream(temporaryFile).getChannel();
-			destinationChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
-			String command = "batch(\"" + temporaryFile.getAbsolutePath() + "\");";
-			this.editText.setText(command);
-
-			//Build maxima load command and write it to the editText:
-		} catch (Exception e) {
-			Toast.makeText(getApplicationContext(),"Failed to load script file.", Toast.LENGTH_LONG);
+			script = File.createTempFile("userscript", ".mac", getCacheDir());
+			try (OutputStream out = new FileOutputStream(script)) {
+				byte[] buffer = new byte[64 * 1024];
+				long total = 0;
+				int n;
+				while ((n = in.read(buffer)) != -1) {
+					total += n;
+					if (total > SCRIPT_FILE_MAX_SIZE) {
+						tooLarge = true;
+						break;
+					}
+					out.write(buffer, 0, n);
+				}
+			}
+		} catch (IOException | SecurityException e) {
+			Log.e("MoA", "Cannot load script " + fileUri, e);
+			if (script != null) {
+				script.delete();
+			}
+			Toast.makeText(this, R.string.error_loading_script_file, Toast.LENGTH_LONG).show();
 			return;
 		}
-	/*
-        //Copy script file contents into a temporary file:
-        File temporaryDirectory = getApplicationContext().getCacheDir();
-        File temporaryFile = null;
-        try {
-            ParcelFileDescriptor parcelFileDescriptor = getContentResolver().openFileDescriptor(fileUri, "r");
-            FileInputStream fileInputStream = new FileInputStream(parcelFileDescriptor.getFileDescriptor());
-            FileChannel sourceChannel = fileInputStream.getChannel();
+		if (tooLarge) {
+			script.delete();
+			Toast.makeText(this, R.string.script_file_too_large, Toast.LENGTH_LONG).show();
+			return;
+		}
+		editText.setText("batch(\"" + script.getAbsolutePath() + "\");");
+	}
 
-            //Abort if file is too large:
-            if (sourceChannel.size() > scriptFileMaxSize) {
-                Toast.makeText(getApplicationContext(), R.string.script_file_too_large, Toast.LENGTH_LONG).show();
-                return;
-            }
-
-            temporaryFile = File.createTempFile("userscript", ".mac", temporaryDirectory);
-            FileChannel destinationChannel = new FileOutputStream(temporaryFile).getChannel();
-            destinationChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
-        } catch (Exception e) {
-            e.printStackTrace();
-            if (temporaryFile != null) {
-                temporaryFile.delete();
-            }
-            Toast.makeText(getApplicationContext(), R.string.error_loading_script_file, Toast.LENGTH_LONG).show();
-            return;
-        }
-        this.temporaryScriptFile = temporaryFile;   //Store temp file for later deletion
-
-        //Build maxima load command and write it to the editText:
-        String command = "batch(\"" + temporaryFile.getAbsolutePath() + "\");";
-        this.editText.setText(command);
-    */
-    }
+	/* Copies made by copyScriptFileToInputArea() for earlier scripts. */
+	private void deleteTemporaryScripts() {
+		File[] files = getCacheDir().listFiles();
+		if (files == null) {
+			return;
+		}
+		for (File f : files) {
+			if (f.getName().startsWith("userscript") && f.getName().endsWith(".mac")) {
+				f.delete();
+			}
+		}
+	}
 }

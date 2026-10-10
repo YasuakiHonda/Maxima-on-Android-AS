@@ -17,11 +17,10 @@
  */
 package jp.yhonda;
 
-import android.util.Log;
-
 import java.io.InputStream;
-import java.lang.reflect.Field;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -34,7 +33,15 @@ public class CommandExec {
 
 	public void execCommand(List<String> commandList) throws IOException,
 			Exception {
+		execCommand(commandList, Collections.<String, String>emptyMap());
+	}
+
+	public void execCommand(List<String> commandList, Map<String, String> env)
+			throws IOException, Exception {
 		builder = new ProcessBuilder(commandList);
+		builder.environment().putAll(env);
+		// Maxima reports e.g. syntax errors on stderr; show them like other output.
+		builder.redirectErrorStream(true);
 		// process starts
 		process = builder.start();
 		is = process.getInputStream();
@@ -91,25 +98,10 @@ public class CommandExec {
 		this.sb.delete(0, this.sb.length());
 	}
 
-	public String getPID() {
-		long pid = -1;
-		try {
-			Field f = process.getClass().getDeclaredField("pid");
-			f.setAccessible(true);
-			pid = f.getLong(process);
-			f.setAccessible(false);
-		} catch (Exception e) {
-			pid = -1;
+	/** Stops the process (if it was started). */
+	public void destroy() {
+		if (process != null) {
+			process.destroy();
 		}
-		if (pid != -1) return (String.valueOf(pid));
-		try {
-			Field f = process.getClass().getDeclaredField("id");
-			f.setAccessible(true);
-			pid = f.getLong(process);
-			f.setAccessible(false);
-		} catch (Exception e) {
-			pid = -1;
-		}
-		return (String.valueOf(pid));
 	}
 }

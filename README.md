@@ -3,14 +3,26 @@ written by Yasuaki Honda (yasuaki.honda@gmail.com)
 
 Copyright 2012,2013,2014,2015,2016,2017,2018,2019 Yasuaki Honda, Chiba, Japan
 
-Development Environment of the author:
-- iMac with Mac OS 10.15
-- Android Studio 3.1.4
-- Up to date Android SDK
-- Android NDK r12
+Building
+- Android Studio / Gradle (the wrapper is included): ./gradlew assembleDebug
+- The app runs Maxima 5.50.0 (ECL 26.5.5), gnuplot and QEPCAD B as native
+  programs for arm64-v8a and x86_64, and shows the Maxima 5.50.0 manual and
+  MathJax-rendered output in web views. None of these are committed: they are
+  built from pinned upstream sources by the scripts in native/ (see
+  native/README.md) and published as a GitHub Release; the Gradle build
+  downloads the release named in native/prebuilt.properties. To use a local
+  build instead, run native/docker-build.sh all and build with
+  -Pmoa.nativeDir=native/out.
 
-All the compiled binaries for maxima, gnuplot, and qepcad for ARM are
-included in the asset folder.
+Testing
+- ./gradlew testDebugUnitTest   JVM unit tests (app/src/test)
+- ./gradlew lintDebug           Android Lint; any error fails the build
+- ./gradlew check               both of the above
+- ./gradlew pixel7Api36DebugAndroidTest
+                                instrumented tests (app/src/androidTest) on an
+                                emulator that Gradle downloads and manages
+- ./gradlew connectedDebugAndroidTest
+                                the same tests on a connected device/emulator
 
 This repository is provided in the hope that anyone can easily start the development of 
 Maxima on Android using Google's Android Studio.

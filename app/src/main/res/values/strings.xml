@@ -9,12 +9,12 @@
         <item>Spanish</item>
     </string-array>
     <string-array name="manualLanguageValues">
-        <item>file:///android_asset/maxima-doc/en/pt_BR/maxima.html</item>
-        <item>file:///android_asset/maxima-doc/en/maxima.html</item>
-        <item>file:///android_asset/maxima-doc/en/de/maxima.html</item>
-        <item>file:///android_asset/maxima-doc/ja/maxima.html</item>
-        <item>file:///android_asset/maxima-doc/en/pt/maxima.html</item>
-        <item>file:///android_asset/maxima-doc/en/es/maxima.html</item>
+        <item>file:///android_asset/maxima-doc/pt_BR/index.html</item>
+        <item>file:///android_asset/maxima-doc/en/index.html</item>
+        <item>file:///android_asset/maxima-doc/de/index.html</item>
+        <item>file:///android_asset/maxima-doc/ja/index.html</item>
+        <item>file:///android_asset/maxima-doc/pt/index.html</item>
+        <item>file:///android_asset/maxima-doc/es/index.html</item>
     </string-array>
 
     <string-array name="fontSize">

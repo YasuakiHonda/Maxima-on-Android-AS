@@ -1,0 +1,37 @@
+How to install
+- Download qepmax-master.zip from Github by clicking the button 
+"Download ZIP" and save it in your home directory.
+- cd ~; unzip qepmax-master.zip
+then directory ~/qepmax-master is created.
+
+- Download http://www.usna.edu/CS/~qepcad/INSTALL/qepcad-B.1.69.tar.gz
+and save it in your home directory.
+- cd ~; tar xvfz qepcad-B.1.69.tar.gz
+then directory ~/qesource is created.
+
+- add the followings in your maxima-init.mac
+
+file_search_maxima:append(["~/qepmax-master/###.{mac,mc}"],file_search_maxima);
+file_search_lisp:append(["~/qepmax-master/###.{lisp,lsp}"],file_search_lisp);
+qepcad_installed_dir:"~/qesource";
+
+
+
+- Download http://www.usna.edu/CS/~qepcad/INSTALL/saclib2.2.6.tar.gz
+and save it in your home directory.
+- cd ~; tar xvfz saclib2.2.6.tar.gz
+then directory ~/saclib2.2.6 is created.
+
+Building saclib
+Please follow the instructions in ~/saclib2.2.6/README.
+
+Building qepcad
+Please follow the instructions in ~/qesource/README.
+
+
+Supported platforms:
+Tested qepcad and qepmax package on Mac OS X 10.9.2, Ubuntu 13.10, and 
+Debian Linux 7.4. Other Linux/Unix variants should be OK, though
+not tested.
+
+There is no way to use this package on Windows OS for now.

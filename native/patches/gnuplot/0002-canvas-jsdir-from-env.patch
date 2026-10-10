@@ -1,0 +1,20 @@
+canvas terminal: take the default jsdir from $GNUPLOT_JS_DIR.
+
+The JavaScript support files are installed in the app's data directory,
+which is only known at runtime; without this the path is compiled in.
+
+--- a/term/canvas.trm	2026-06-02 17:53:25.000000000 +0200
++++ b/term/canvas.trm	2026-10-09 12:55:57.616820099 +0200
+@@ -414,6 +414,12 @@
+      *        when the page is viewed.
+      */
+     if (CANVAS_scriptdir == NULL) {
++	/* The install location is only known at runtime (Android app data). */
++	const char *env_jsdir = getenv("GNUPLOT_JS_DIR");
++	if (env_jsdir && *env_jsdir)
++	    CANVAS_scriptdir = strdup(env_jsdir);
++    }
++    if (CANVAS_scriptdir == NULL) {
+ #ifdef GNUPLOT_JS_DIR
+ # if defined(_WIN32) || defined(MSDOS) || defined(OS2)
+ 	CANVAS_scriptdir = RelativePathToGnuplot(GNUPLOT_JS_DIR);

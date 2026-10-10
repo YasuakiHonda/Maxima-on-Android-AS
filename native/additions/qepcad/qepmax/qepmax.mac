@@ -1,0 +1,325 @@
+/*
+Qepmax.mac 
+Copyright (C) 2013, 2014 Yasuaki Honda
+Copyrigth (C) 2013 Reinhard Oldenburg
+Copyright (C) 2014 ehito
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+or the following URL: http://www.gnu.org/licenses/gpl-2.0.html.
+
+You can contact one of the author by email:
+Yasuaki dot Honda at Gmail dot Com
+*/
+
+/*
+
+User command: qe(QFList, exp)
+where QFList is a list of either [A,var] or [E,var], and
+exp is a logical expression with polinomials.
+[A,var] means For all var, and [E,var] means There exists var.
+The output of qe() is the logically equivarent formula to exp,
+but does not contain quantified variables (those appeared in QFList).
+
+Example:
+(%i1) qe([[E,x],[E,y]],x^2+y^2=1 %and m=x+2*y);
+(%o1) m^2-5<=0
+
+
+
+qepcad command input file format
+ [ comment ]
+ ( var1, var2, ,,, vark )
+ number
+ (Quantifier var1)(Quantifier var2)...(Q varN)[ exp op exp op ... op exp].
+ finish
+
+Internal function qepcad(): takes above (except the first one) as
+arguments and write them out into a specific file. The exp needs to be
+surrounded with [ ], so this translation is performed by calling
+the internal function writeLogicalExp().
+Then qepcad program is invoked with passing the specific file as the
+input redirection. The output is caught into another specific file as
+the output redirect.
+
+Internal function readQepcad():
+The output file is analized to find the result expression.
+The output expression format is different from the standard maxima
+syntax. The difference is that multiplication is written as a single
+white space, rather than the astarisk which is used in maxima.
+
+Internal function ?qepcadhelp():
+We lex the output expression to find such multiplication and insert
+the maxima multiplication (astarisk). With lex, we can find the pattern of
+<Number><variable> or
+<variable><variable>
+then we insert the astarisk to construct the output expression string.
+
+Finally we use Maxima's parse_string() to parse the output expression string.
+
+*/
+
+load(to_poly_solve);
+load("qepmax-support.lisp");
+
+if (not(member('qepcad_installed_dir,values))) then
+  qepcad_installed_dir:"~/qepmax/qesource";
+
+if (not(member('qepcad_input_file,values))) then
+  qepcad_input_file:sconcat(maxima_tempdir,"/qepcad_input.txt");
+
+if (not(member('qepcad_output_file,values))) then
+  qepcad_output_file:sconcat(maxima_tempdir,"/qepcad_output.txt");
+
+if (not(member('qepcad_file_pattern,values))) then
+  qepcad_file_pattern:sconcat(maxima_tempdir,"/qepcad_*.txt");
+
+if (not(member('qepcad_option,values))) then
+  qepcad_option:" +N20000000 +L10000 ";
+
+debug_qepmax:false;
+infix("/=",80,80);
+infix("%implies",60,60);
+
+/*
+Public function: toimplx(x), defined in toimplx.mac.
+x is a logical expression with operators : andx, orx, negx, implx.
+toimplx(x) generates a logical expression only using implx.
+Rational functions appeared in x are treated with care for its
+domain.
+load("toimplx.mac");
+*/
+load("ratsimpx2.mac");
+load("opsubst");
+
+/*
+Function mtox1(exp) accepts maxima conjunctive and
+disjunctive logical expression
+(such as aa %and cc %and dd) and translate it to
+toimplx format (such as aa andx cc andx dd).
+
+mtox1(exp):=block([op,arglist,newop,inflag],
+  inflag:true,
+  if (atom(exp)) then return(false),
+  op:op(exp),arglist:args(exp),
+  newop:transop(op),
+  if(newop = false) then return(false),
+  mtoxrec(newop,arglist));
+
+transop(mop):=block([andxop,orxop,mandop,morop],
+  mandop:inpart('(aa %and bb),0),
+  morop:inpart('(aa %or bb),0),
+  andxop:inpart('(aa andx bb),0),
+  orxop:inpart('(aa orx bb),0),
+  if (mop=mandop) then return(andxop),
+  if (mop=morop) then return(orxop),
+  return(false));
+  
+mtoxrec(op,alist):=
+  if(length(alist)=2) then
+    opsubst(op,"[",alist)
+  else
+    opsubst(op,"[",[first(alist),mtoxrec(op,rest(alist))]);
+
+defrule(implx2orand,(aa) implx (bb),(aa) %implies (bb));
+toorand(x):=applyb1(toimplx(x),implx2orand);
+matchdeclare([aa,bb,cc,dd,ee],true);
+defrule(mtox20, %not(aa), negx(aa));
+defrule(mtox30, aa %implies bb, (aa) implx (bb));
+defrule(mtox40, aa # bb, negx(aa=bb));
+defrule(mtox50, false, 0=1);
+defrule(mtox51, true, 0=0);
+
+mtox(MTF):=applyb1(MTF,mtox1,mtox20,mtox30,mtox40,mtox50,mtox51);
+qe(QVList, MTF):=qe_old(QVList,toorand(toimplx(mtox(MTF))));
+*/
+qe(QVList, MTF):=
+if (simp=false) then
+    block([g:scanmap(adddm,MTF, bottomup)],
+          simp:true,qe_old(QVList,ratsimpx2(g)))
+else
+    qe_old(QVList,ratsimpx2(MTF));
+
+qe_old(qs,expr):= block([],
+                      /* print("converted to"), print(newexpr), */
+                      QCC(qs,expr));
+
+QCC(qs,expr):=block([vs:listofvars(expr),fv:[],i,gv:map(lambda([x],x[2]),qs)],
+  map(lambda([x],
+      if (not listp(x)) or length(x)#2 then
+        error("qe: syntax error in quantified variable list. It should look like: [[A,x],[E,y]]."),
+      if (not(member(x[1],[A,E,F,G,C]))) and (not XQF_syntax_check(x[1])) then
+        error("qe: quantifier should be one of A,E,F,G,C,Xk")),
+    qs),
+  if expr=true or expr=false then return(expr),
+  for i:1 thru length(vs) do if not(member(vs[i],gv)) then fv:append(fv,[vs[i]]),
+  if qs=[] then (gv:[tempvar],qs:[[A,tempvar]]),
+  block([etfv],
+    etfv:correctETFvars(expr),
+    fv:etfVarOrder(fv,etfv)),
+  qepcad(append(fv,gv),length(fv),qs,expr));
+
+XQF_syntax_check(vsymbol):=block([vstr:string(vsymbol), i],
+  if (substring(vstr,1,2)#"X") then error("qe: quantifier should be one of A,E,F,G,C,Xk"),
+  if (slength(vstr)<2) then error("qe: Quantifier X should look like Xk, where k is an integer: X1, X5, X10"),
+  for i:2 thru slength(vstr) do
+    if (not(digitcharp(substring(vstr,i,i+1)))) then error("qe: Quantifier X should look like Xk, where k is an integer: X1, X5, X10"),
+  return(true));
+
+etfVarOrder(freevarlist, etfvarlist) := block([head,retlist],
+  retlist:freevarlist,
+  if etfvarlist=[] then return(retlist),
+  head:first(etfvarlist),
+  if member(head,retlist) then
+    retlist:append(delete(head,retlist),[head]),
+  return(etfVarOrder(retlist,rest(etfvarlist))));
+
+
+qepcad(varlist, numfreevar, QFList, formula) := (
+    system(sconcat("rm -f ",qepcad_file_pattern)),
+    qepcad1(varlist, numfreevar, QFList, formula),
+    system(sconcat("bash -c 'export qe=",qepcad_installed_dir,"; $qe/bin/qepcad ",qepcad_option," < ",
+        qepcad_input_file,
+        " &> ",
+        qepcad_output_file, "'")),
+    readQepcad());
+    
+qepcad1(varlist, numfreevar, QFList, formula) :=
+  block([file, ost, old_display_mode:display2d,noErr:false],
+    if length(varlist)=0 then error("qepcad: varlist is a list of at least one varibles; found: ", varlist),
+    file:qepcad_input_file,
+    ost:openw(file),
+    display2d:false,
+    prepare_for_qepcad(),
+    errcatch(
+      printf(ost,"[ Generated by qepcad.mac ]~%"),
+      printf(ost,"( "),
+      for i:1 thru length(varlist) do
+        printf(ost, "~a ~a", varlist[i], if (i<length(varlist)) then "," else ""),
+      printf(ost,")~%"),
+      printf(ost,"~d~%", numfreevar),
+      for i:1 thru length(QFList) do block([QFS,QFV],[QFS,QFV]:QFList[i],
+        printf(ost,"(~a ~a)", QFS, QFV)),
+      printf(ost, "[ ~a ].~%finish~%", writeLogicalExp(formula,varlist)),
+      noErr:true
+      ),
+    restore_maxima(),
+    display2d:old_display_mode,
+    close(ost),
+    if not(noErr) then error("qepcad1 detected error while creating", qepcad_input_file));
+
+readQepcad() :=
+  block([file:qepcad_output_file,
+         delim:"An equivalent quantifier-free",
+         end:"=====================  The End",
+         instr, err:false,
+         res:"", ist],
+     ist:openr(file),  /* print("RETURN"), print(flength(ist)), */
+     if ist="" then error("QEPCAD failed"),
+     for instr:readline(ist) next readline(ist) while (flength(ist)>0 and stringp(instr) and ssearch(delim,instr) = false) do block([],
+       /* print(["read",instr]),*/ if ssearch("Error",instr) # false or ssearch("Failure",instr) # false then (err:true, /*print("exit with FAIL"),*/ return(FAIL) ) else instr),
+       if not(err) then for instr:readline(ist) next readline(ist) 
+       while (not(err) and flength(ist)>0 and stringp(instr) and ssearch(end,instr) = false and ssearch("Error",instr) = false and ssearch("Failure",instr) = false) do
+       block([],  res:concat(res,instr), if ssearch("Error",instr) # false or ssearch("Failure",instr) # false then error("qepcad error") ),
+     close(ist),
+     if err then FAIL else (
+       /* print("EINGELESEN"), print(res),*/
+       parse_string(concat(?qepcadlex(res)," ;"))));
+
+writeLogicalExp(lexp,varlist) := block([op, res:""],
+  if not(atom(lexp)) then op:op(lexp),
+  if atom(lexp) then return(string(lexp)) 
+  else if op = false then return(string(lexp))
+  else if isETF(lexp) then block([],
+    varOrderCheck(lhs(lexp),part(rhs(lexp),2),varlist),
+    if op="#" then op:"/=",
+    res:sconcat("[",lhs(lexp),op,"_root_",part(rhs(lexp),1),"(",part(rhs(lexp),2),")","]"),
+    return(res))
+  else if isETF2(lexp) then block([],
+    varOrderCheck(rhs(lexp),part(lhs(lexp),2),varlist),
+    if op="#" then op:"/="
+    else if op=">" then op:"<"
+    else if op="<" then op:">"
+    else if op=">=" then op:"<="
+    else if op="<=" then op:">=",
+    res:sconcat("[",rhs(lexp),op,"_root_",part(lhs(lexp),1),"(",part(lhs(lexp),2),")","]"),
+    return(res))
+  else if isLogicalOp(op) then block([],
+    res:"[",
+    for i:1 thru length(lexp) do block([],
+      res:sconcat(res, "[", writeLogicalExp(part(lexp,i),varlist), "]"),
+      if (i<length(lexp)) then res:sconcat(res," ",qepLogicalSymbol(op)," ")),
+    res:sconcat(res," ]"),
+    return(res))
+  else
+   block([exp2:opsubst("/=","#",lexp)],
+      return(string(exp2)))  );
+
+varOrderCheck(var, exp, varlist):=block([p1],
+  p1:first(sublist_indices(varlist,lambda([xx],var=xx))),
+  for varname in listofvars(exp) do 
+    if p1<first(sublist_indices(varlist,lambda([xx],varname=xx))) then
+      error("Variable ",varname," must be declared before variable ",var,"."));
+    
+
+correctETFvars(lexp) := block([op],
+  if not(atom(lexp)) then op:op(lexp),
+  if atom(lexp) then return([])
+  else if op = false then return([])
+  else if isETF(lexp) then return([lhs(lexp)])
+  else if isETF2(lexp) then return([rhs(lexp)])
+  else if isLogicalOp(op) then block([res:[]],
+    for i:1 thru length(lexp) do 
+      res:append(res,correctETFvars(part(lexp,i))),
+    return(res))
+  else
+    return([]));
+
+isETF(exp):=is(atom(exp)=false) and isOrderOp(op(exp)) and is(atom(rhs(exp))=false) and is(op(rhs(exp))=op(etf_root(k,exp1)));
+
+isETF2(exp):=is(atom(exp)=false) and isOrderOp(op(exp)) and is(atom(lhs(exp))=false) and is(op(lhs(exp))=op(etf_root(k,exp1)));
+
+isOrderOp(op):=is(op=">") or is(op="<") or is(op=">=") or is(op="<=") or is(op="=") or is(op="#");
+
+versionCode():=block([vlist],
+  vlist:map(parse_string,split(args(build_info())[1],".")),
+  vlist[3]+100*(vlist[2]+100*vlist[1]));
+
+if versionCode()<53600 then
+  (isLogicalOp(op) := is(op=?%and) or is(op=?%or) or is(op="%implies"),
+   qepLogicalSymbol(op) := if (op=?%and) then "/\\" else if (op=?%or) then "\\/" else if (op="%implies") then "==>")
+
+else
+  (isLogicalOp(op) := is(op="%and") or is(op="%or") or is(op="%implies"),
+  qepLogicalSymbol(op) := if (op="%and") then "/\\" else if (op="%or") then "\\/" else if (op="%implies") then "==>");
+
+
+
+
+/*
+Qepcad B can may be in infinite loop if syntax error exists in
+the input file.
+You can terminate the qe() command by typing ctrl-C if maxima
+is invoked in the shell, and ctrl-C ctrl-C if maxima is in
+Emacs.
+
+Even after doing so, the qepcad process still may continue to
+run, wasting CPU time. If this is the case, you can use
+kill_qepcad();
+command from Maxima prompt.
+*/
+qepmax_installed_dir: pathname_directory(load_pathname);
+
+kill_qepcad():=block([],
+  system(sconcat(qepmax_installed_dir, "kill_qepcad.sh &> /dev/null")));

@@ -1,0 +1,88 @@
+Add an Android (arm64-v8a, x86_64) system-dependent configuration.
+
+saclib only ships sysdep ports for Linux/macOS/Solaris, and its Linux
+hfloats.h path includes glibc-only <ieee754.h>. Install with
+(cd sysdep/android && ./install) instead of bin/sconf.
+
+diff --color -ruN a/include/hfloats.h b/include/hfloats.h
+--- a/include/hfloats.h	2021-03-01 22:20:56.000000000 +0100
++++ b/include/hfloats.h	2026-10-09 11:44:10.226299153 +0200
+@@ -24,6 +24,10 @@
+ #include <fenv.h>
+ #endif
+ 
++#ifdef __ANDROID__
++#include <fenv.h>
++#endif
++
+ #include "sysdep.h"
+ 
+ /* ----------------------------------------*/
+@@ -83,6 +87,12 @@
+ #define rounddown() fesetround(FE_DOWNWARD)
+ #define roundup() fesetround(FE_UPWARD)
+ #endif
++
++/* Android */
++#ifdef _ANDROID_
++#define rounddown() fesetround(FE_DOWNWARD)
++#define roundup() fesetround(FE_UPWARD)
++#endif
+ 
+ /* ----------------------------------------*/
+ /*            Hardware intervals           */
+diff --color -ruN a/sysdep/android/GC.c b/sysdep/android/GC.c
+--- a/sysdep/android/GC.c	1970-01-01 01:00:00.000000000 +0100
++++ b/sysdep/android/GC.c	2026-10-09 11:55:29.311481561 +0200
+@@ -0,0 +1,33 @@
++/*======================================================================
++                           GC()
++
++Garbage collection entry-point (Android: arm64-v8a, x86_64).
++
++GCSI() treats every word between its stack argument and the bottom of
++the stack as a potential root, so all registers that may hold pointers
++must be in memory first. __builtin_unwind_init() makes the compiler
++save every callee-saved register in this frame (the same technique as
++the Boehm GC); GCSI() then runs from a frame below it, so the saved
++registers are scanned. setjmp() cannot be used for this: bionic
++mangles the register values it stores in a jmp_buf. The dummy-register
++trick of the Linux port is not reliable with current compilers.
++======================================================================*/
++
++#include "saclib.h"
++
++static void GC_scan(void) __attribute__((noinline));
++
++void GC(void)
++{
++     __builtin_unwind_init();
++     GC_scan();
++     /* Not a tail call: this frame must stay live during the scan. */
++     __asm__ __volatile__("" : : : "memory");
++}
++
++static void GC_scan(void)
++{
++     Word top_of_stack;
++
++     GCSI(sizeof(Word),(char *)&top_of_stack);
++}
+diff --color -ruN a/sysdep/android/install b/sysdep/android/install
+--- a/sysdep/android/install	1970-01-01 01:00:00.000000000 +0100
++++ b/sysdep/android/install	2026-10-09 11:44:10.213839924 +0200
+@@ -0,0 +1,4 @@
++#!/bin/bash
++echo "Installing android system dependent files ..."
++'cp' -f GC.c $saclib/src/
++'cp' -f sysdep.h $saclib/include
+diff --color -ruN a/sysdep/android/sysdep.h b/sysdep/android/sysdep.h
+--- a/sysdep/android/sysdep.h	1970-01-01 01:00:00.000000000 +0100
++++ b/sysdep/android/sysdep.h	2026-10-09 11:44:10.210839881 +0200
+@@ -0,0 +1,6 @@
++#ifndef _LITTLE_ENDIAN_
++#define _LITTLE_ENDIAN_
++#endif
++#undef _BIG_ENDIAN_
++#define _ANDROID_
++#define __WORDSIZE 64

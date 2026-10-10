@@ -1,56 +1,50 @@
 package jp.yhonda;
 
 
-import android.support.test.espresso.ViewInteraction;
-import android.support.test.espresso.web.assertion.WebAssertion;
-import android.support.test.espresso.web.assertion.WebViewAssertions;
-import android.support.test.espresso.web.sugar.Web;
-import android.support.test.espresso.web.sugar.Web.WebInteraction;
-import android.support.test.espresso.web.webdriver.Locator;
-import android.support.test.espresso.web.matcher.DomMatchers;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
-import android.util.Log;
+import androidx.test.espresso.ViewInteraction;
+import androidx.test.espresso.web.assertion.WebViewAssertions;
+import androidx.test.espresso.web.sugar.Web;
+import androidx.test.espresso.web.sugar.Web.WebInteraction;
+import androidx.test.espresso.web.webdriver.Locator;
+import androidx.test.espresso.web.matcher.DomMatchers;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
-import org.hamcrest.Matchers;
 import org.hamcrest.TypeSafeMatcher;
 import org.hamcrest.core.IsInstanceOf;
 import org.junit.Rule;
+import org.w3c.dom.Element;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static android.support.test.espresso.action.ViewActions.replaceText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isCompletelyDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static android.support.test.espresso.web.assertion.WebViewAssertions.webMatches;
-import static android.support.test.espresso.web.sugar.Web.onWebView;
-import static android.support.test.espresso.web.webdriver.DriverAtoms.findElement;
-import static android.support.test.espresso.web.webdriver.DriverAtoms.getText;
-import static android.support.test.espresso.web.webdriver.DriverAtoms.webClick;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.espresso.web.sugar.Web.onWebView;
+import static androidx.test.espresso.web.webdriver.DriverAtoms.findElement;
+import static androidx.test.espresso.web.webdriver.DriverAtoms.webClick;
 import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.core.StringContains.containsString;
-import static android.support.test.espresso.web.assertion.WebViewAssertions.webContent;
-import static android.support.test.espresso.web.matcher.DomMatchers.elementById;
-import static android.support.test.espresso.web.matcher.DomMatchers.withTextContent;
+import static org.hamcrest.Matchers.notNullValue;
+import static androidx.test.espresso.web.assertion.WebViewAssertions.webContent;
+import static androidx.test.espresso.web.matcher.DomMatchers.elementById;
+import static androidx.test.espresso.web.matcher.DomMatchers.withTextContent;
 
 @RunWith(AndroidJUnit4.class)
 public class MaximaOnAndroidActivityTest {
 
     @Rule
-    public ActivityTestRule<MaximaOnAndroidActivity> mActivityTestRule = new ActivityTestRule<>(MaximaOnAndroidActivity.class);
+    public ActivityScenarioRule<MaximaOnAndroidActivity> mActivityScenarioRule = new ActivityScenarioRule<>(MaximaOnAndroidActivity.class);
 
     @Test
     public void testMoAInstallandRun() {
@@ -73,12 +67,12 @@ public class MaximaOnAndroidActivityTest {
                 allOf(withId(R.id.enterB), withText("Enter"), isDisplayed()));
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-1"));
+        onWebView().check(webContent(elementById("MathJax-Element-1", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("integrate(sin(x)*exp(-x),x,0,inf)"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-2"));
+        onWebView().check(webContent(elementById("MathJax-Element-2", notNullValue(Element.class))));
     }
 
     @Test
@@ -91,13 +85,13 @@ public class MaximaOnAndroidActivityTest {
                 allOf(withId(R.id.enterB), withText("Enter"), isDisplayed()));
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-1"));
+        onWebView().check(webContent(elementById("MathJax-Element-1", notNullValue(Element.class))));
 
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("\"$$$$\""), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-2"));
+        onWebView().check(webContent(elementById("MathJax-Element-2", notNullValue(Element.class))));
 
     }
 
@@ -111,44 +105,44 @@ public class MaximaOnAndroidActivityTest {
                 allOf(withId(R.id.enterB), withText("Enter"), isDisplayed()));
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-1"));
+        onWebView().check(webContent(elementById("MathJax-Element-1", notNullValue(Element.class))));
         onWebView().check(webContent(
-                elementById("MathJax-Element-1", withTextContent(" \\mbox{ Is  }n\\mbox{  an  }{\\it integer}\\mbox{ ? }  "))));
+                elementById("MathJax-Element-1", withTextContent(" \\text{Is }n\\text{ an }{\\it integer}\\text{?}  "))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("y;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-2"));
+        onWebView().check(webContent(elementById("MathJax-Element-2", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("asksign(x);"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-3"));
+        onWebView().check(webContent(elementById("MathJax-Element-3", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("neg;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-4"));
+        onWebView().check(webContent(elementById("MathJax-Element-4", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("integrate(x^n,x);"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-5"));
+        onWebView().check(webContent(elementById("MathJax-Element-5", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("yes;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-6"));
+        onWebView().check(webContent(elementById("MathJax-Element-6", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("integrate(exp(n*x),x,0,inf);"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-7"));
+        onWebView().check(webContent(elementById("MathJax-Element-7", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("neg;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-8"));
+        onWebView().check(webContent(elementById("MathJax-Element-8", notNullValue(Element.class))));
     }
 
     @Test
@@ -161,22 +155,22 @@ public class MaximaOnAndroidActivityTest {
                 allOf(withId(R.id.enterB), withText("Enter"), isDisplayed()));
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-1"));
+        onWebView().check(webContent(elementById("MathJax-Element-1", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("csetup();"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-2"));
+        onWebView().check(webContent(elementById("MathJax-Element-2", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("4"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-3"));
+        onWebView().check(webContent(elementById("MathJax-Element-3", notNullValue(Element.class))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("n;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-4"));//Do you want to enter matrix?
+        onWebView().check(webContent(elementById("MathJax-Element-4", notNullValue(Element.class))));//Do you want to enter matrix?
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("1;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
@@ -206,23 +200,23 @@ public class MaximaOnAndroidActivityTest {
         appCompatMultiAutoCompleteTextView.perform(replaceText("-d;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-5"));//Enter functional dependencies
+        onWebView().check(webContent(elementById("MathJax-Element-5", notNullValue(Element.class))));//Enter functional dependencies
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("dependes([a,d],x);"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-6"));//Do you want to see matrix?
+        onWebView().check(webContent(elementById("MathJax-Element-6", notNullValue(Element.class))));//Do you want to see matrix?
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("y;"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-7"));//done
+        onWebView().check(webContent(elementById("MathJax-Element-7", notNullValue(Element.class))));//done
 
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("christof(mcs);"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(2000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-15"));
+        onWebView().check(webContent(elementById("MathJax-Element-15", notNullValue(Element.class))));
     }
 
     @Test
@@ -247,7 +241,7 @@ public class MaximaOnAndroidActivityTest {
         appCompatMultiAutoCompleteTextView.perform(replaceText("sqrt(25*99*256);"), closeSoftKeyboard());
         appCompatButton2.perform(click());
         waitFor(1000);
-        onWebView().withElement(findElement(Locator.ID, "MathJax-Element-2"));
+        onWebView().check(webContent(elementById("MathJax-Element-2", notNullValue(Element.class))));
 
         onWebView().withElement(findElement(Locator.ID, "38*990/20145;")).perform(webClick());
         appCompatMultiAutoCompleteTextView.check(matches(withText("38*990/20145;")));
@@ -291,7 +285,8 @@ public class MaximaOnAndroidActivityTest {
     }
 
     private static void waitForStartup() {
-        waitFor(1000);
-        Web.onWebView().check(WebViewAssertions.webContent(DomMatchers.containingTextInBody("Maxima")));
+        // The first start unpacks Maxima's data; wait for the banner.
+        jp.yhonda.TestUtil.waitUntil(() -> onWebView().check(WebViewAssertions.webContent(
+                DomMatchers.containingTextInBody("Maxima"))), 60000);
     }
 }

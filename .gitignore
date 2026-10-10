@@ -78,12 +78,14 @@ Thumbs.db
 # Legacy Eclipse project files
 .classpath
 .project
+.settings/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 *.ear
 

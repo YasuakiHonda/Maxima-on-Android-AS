@@ -22,7 +22,7 @@ public class MaximaTokenizer implements MultiAutoCompleteTextView.Tokenizer {
         int i = cursor;
         int len = text.length();
         while (i < len) {
-            if (delimiter.indexOf(text.charAt(i)) >0) {
+            if (delimiter.indexOf(text.charAt(i)) >= 0) {
                 return i;
             } else {
                 i++;

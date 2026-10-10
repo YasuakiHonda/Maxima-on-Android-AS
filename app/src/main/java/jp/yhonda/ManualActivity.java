@@ -25,15 +25,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -53,19 +52,28 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		SystemBars.setUp(this);
+		// Back goes back in the manual's history first, then returns to Maxima.
+		getOnBackPressedDispatcher().addCallback(this, backInPage);
+		Intent backToMaxima = new Intent(this, MaximaOnAndroidActivity.class);
+		backToMaxima.putExtra("sender", "manualActivity");
+		setResult(RESULT_OK, backToMaxima);
 		Log.v("MoAMan", "onCreate");
 		thisActivity = this;
 		setContentView(R.layout.htmlactivity);
 		webview = (WebView) findViewById(R.id.webViewInHTMLActivity);
 		webview.getSettings().setJavaScriptEnabled(true);
 		webview.getSettings().setBuiltInZoomControls(true);
-		if (Build.VERSION.SDK_INT > 11) {
-			webview.getSettings().setDisplayZoomControls(false);
-		}
+		webview.getSettings().setDisplayZoomControls(false);
 		webview.getSettings().setUseWideViewPort(true);
 		webview.getSettings().setLoadWithOverviewMode(true);
 
 		webview.setWebViewClient(new WebViewClient() {
+			@Override
+			public void doUpdateVisitedHistory(WebView view, String url, boolean isReload) {
+				backInPage.setEnabled(view.canGoBack());
+			}
+
 			public void onPageFinished(WebView view, String url) {
 				Log.v("MoAMan", "onPageFinished");
 				SharedPreferences settings = PreferenceManager
@@ -133,8 +141,6 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 		webview.setContentDescription(urlinIntent);
 
 		Bundle bundle = null;
-		// SharedPreferences settings =
-		// PreferenceManager.getDefaultSharedPreferences(this);
 		String serialized = settings.getString("parcel", null);
 
 		if ((!manLangChanged) && (serialized != null)) {
@@ -148,6 +154,7 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 				parcel.recycle();
 			}
 			webview.restoreState(bundle);
+			backInPage.setEnabled(webview.canGoBack());
 		} else {
 			webview.loadUrl(urlinIntent);
 		}
@@ -157,23 +164,13 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 		edit.apply();
 	}
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (event.getAction() == KeyEvent.ACTION_DOWN
-				&& keyCode == KeyEvent.KEYCODE_BACK) {
-
-			if (webview.canGoBack()) {
-				webview.goBack();
-				return true;
-			} else {
-				Intent intent = new Intent(this, MaximaOnAndroidActivity.class);
-				setResult(RESULT_OK, intent);
-				intent.putExtra("sender", "manualActivity");
-				finish();
-			}
+	/* Enabled only while the manual has a page history to go back to. */
+	private final OnBackPressedCallback backInPage = new OnBackPressedCallback(false) {
+		@Override
+		public void handleOnBackPressed() {
+			webview.goBack();
 		}
-		return super.onKeyDown(keyCode, event);
-	}
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -185,19 +182,15 @@ public class ManualActivity extends AppCompatActivity implements OnTouchListener
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		boolean retval = false;
-		switch (item.getItemId()) {
-		case R.id.gomaxima:
+		int itemId = item.getItemId();
+		if (itemId == R.id.gomaxima) {
 			Intent intent = new Intent(this, MaximaOnAndroidActivity.class);
 			setResult(RESULT_OK, intent);
 			intent.putExtra("sender", "ManualActivity");
 			finish();
-			retval = true;
-			break;
-		default:
-			retval = false;
+			return true;
 		}
-		return retval;
+		return false;
 	}
 
 	private void addJSforCopyExample() {
