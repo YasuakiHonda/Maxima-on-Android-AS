@@ -35,7 +35,6 @@ import android.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -48,7 +47,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.ScrollView;
@@ -886,33 +884,11 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private void selectScriptFile() {
-		if(Build.VERSION.SDK_INT < 19) {
-			//Versions earlier than KitKat do not support the Storage Access Framework.
-			//Show file path input box instead:
-			androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(MaximaOnAndroidActivity.this);
-			LayoutInflater inflater = this.getLayoutInflater();
-			final View layout = inflater.inflate(R.layout.scriptpathalert, null);
-			builder.setView(layout);
-			final AutoCompleteTextView textView = (AutoCompleteTextView) layout.findViewById(R.id.scriptPathInput);
-			builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					dialog.dismiss();
-					if(!textView.getText().toString().matches("")) {
-						copyScriptFileToInputArea(Uri.fromFile(new File(textView.getText().toString())));
-					}
-				}
-			});
-			androidx.appcompat.app.AlertDialog dialog = builder.create();
-			dialog.show();
-
-		} else {
-			Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-//			Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-			intent.addCategory(intent.CATEGORY_OPENABLE);
-			intent.setType("*/*");
-			startActivityForResult(intent, READ_REQUEST_CODE);
-		}
+		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//		Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+		intent.addCategory(intent.CATEGORY_OPENABLE);
+		intent.setType("*/*");
+		startActivityForResult(intent, READ_REQUEST_CODE);
 	}
 
 	private void copyScriptFileToInputArea(Uri fileUri) {
