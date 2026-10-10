@@ -110,7 +110,7 @@ public class MaximaOnAndroidActivityTest3 {
         }
 
         ViewInteraction webView2 = onView(
-                allOf(withId(R.id.webViewInHTMLActivity), withContentDescription("file:///android_asset/maxima-doc/ja/maxima.html"),
+                allOf(withId(R.id.webViewInHTMLActivity), withContentDescription("file:///android_asset/maxima-doc/ja/index.html"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),

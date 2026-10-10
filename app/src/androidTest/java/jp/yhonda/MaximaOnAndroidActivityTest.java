@@ -107,7 +107,7 @@ public class MaximaOnAndroidActivityTest {
         waitFor(1000);
         onWebView().check(webContent(elementById("MathJax-Element-1", notNullValue(Element.class))));
         onWebView().check(webContent(
-                elementById("MathJax-Element-1", withTextContent(" \\mbox{ Is  }n\\mbox{  an  }{\\it integer}\\mbox{ ? }  "))));
+                elementById("MathJax-Element-1", withTextContent(" \\text{Is }n\\text{ an }{\\it integer}\\text{?}  "))));
 
         appCompatMultiAutoCompleteTextView.perform(replaceText("y;"), closeSoftKeyboard());
         appCompatButton2.perform(click());

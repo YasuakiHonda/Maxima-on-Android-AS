@@ -9,7 +9,7 @@
         android:title="Use auto completion"
         android:visibility="visible" />
     <ListPreference
-        android:defaultValue="file:///android_asset/maxima-doc/en/maxima.html"
+        android:defaultValue="file:///android_asset/maxima-doc/en/index.html"
         android:entries="@array/manualLanguages"
         android:entryValues="@array/manualLanguageValues"
         android:key="manURL"

@@ -26,6 +26,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ import android.os.Handler;
 import android.os.ParcelFileDescriptor;
 import android.preference.PreferenceManager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.pm.PackageInfoCompat;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -69,7 +71,9 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Semaphore;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -82,12 +86,8 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	Activity thisActivity = this;
 	String maximaURL = null;
 
-	String manjp = "file:///android_asset/maxima-doc/ja/maxima.html";
-	String manen = "file:///android_asset/maxima-doc/en/maxima.html";
-	String mande = "file:///android_asset/maxima-doc/en/de/maxima.html";
-	String manes = "file:///android_asset/maxima-doc/en/es/maxima.html";
-	String manpt = "file:///android_asset/maxima-doc/en/pt/maxima.html";
-	String manptbr = "file:///android_asset/maxima-doc/en/pt_BR/maxima.html";
+	String manjp = "file:///android_asset/maxima-doc/ja/index.html";
+	String manen = "file:///android_asset/maxima-doc/en/index.html";
 	String manURL;
 	boolean manLangChanged = true;
 	boolean allExampleFinished = false;
@@ -98,7 +98,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	ScrollView scview;
 	CommandExec maximaProccess;
 	File internalDir;
-	MaximaVersion mvers = new MaximaVersion(5, 41, 0);
+	MaximaVersion mvers = new MaximaVersion(5, 50, 0);
 
 	private static final int READ_REQUEST_CODE = 42;
     File temporaryScriptFile = null;
@@ -114,7 +114,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		PreferenceManager.setDefaultValues(this, R.xml.preference, false);
 		SharedPreferences settings = PreferenceManager
 				.getDefaultSharedPreferences(this);
-		manURL = settings.getString("manURL", manen);
+		manURL = migrateManualURL(settings);
 
 		setContentView(R.layout.main);
 		internalDir = this.getFilesDir();
@@ -186,6 +186,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		long thisVerNo = mvers.versionInteger();
 
 		if ((thisVerNo > verNo)
+				|| installedAppVersionCode() != appVersionCode()
 				|| !maximaBinaryExists()
 				|| !((new File(internalDir + "/additions")).exists())
 				|| !((new File(internalDir + "/init.lisp")).exists())
@@ -243,6 +244,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
             if (resultCode == RESULT_OK) {
 				/* everything is installed properly. */
                 mvers.saveVersToSharedPrefs(this);
+                saveInstalledAppVersionCode();
                 // startMaxima();
 
                 new Thread(new Runnable() {
@@ -289,7 +291,7 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		flag=globals.get("manURL");
 		if (flag!=null && flag.equals("true")) {
 			manLangChanged=true;
-			manURL=sharedPrefs.getString("manURL",manen);
+			manURL=migrateManualURL(sharedPrefs);
 		} else {
 			manLangChanged=false;
 		}
@@ -318,8 +320,6 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			Log.d("MoA", "exception1");
 			e1.printStackTrace();
 		}
-		
-		CpuArchitecture.initCpuArchitecture();
 
 		/*
 		webview.loadUrl(maximaURL);
@@ -330,12 +330,19 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			this.finish();
 		}
 		List<String> list = new ArrayList<String>();
-		list.add(internalDir + "/" + CpuArchitecture.getMaximaFile());
+		list.add(NativeBinaries.path(this, NativeBinaries.MAXIMA));
 		list.add("--init-lisp=" + internalDir + "/init.lisp");
-	
+		// Maxima creates its user directory before reading init.lisp, and the
+		// app process has no HOME. init.lisp points gnuplot_command at MOA_GNUPLOT.
+		Map<String, String> env = new HashMap<String, String>();
+		env.put("HOME", internalDir.getAbsolutePath());
+		env.put("MAXIMA_USERDIR", internalDir + "/maxima-userdir");
+		env.put("MOA_GNUPLOT", NativeBinaries.path(this, NativeBinaries.GNUPLOT));
+		env.put("GNUPLOT_JS_DIR", internalDir + "/additions/gnuplot/js");
+
 		maximaProccess = new CommandExec();
 		try {
-			maximaProccess.execCommand(list);
+			maximaProccess.execCommand(list, env);
 		} catch (Exception e) {
 			Log.d("MoA", "exception2");
 			exitMOA();
@@ -514,17 +521,15 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				if (cmdstr.equals("quit();"))
 					exitMOA();
 				if (cmdstr.equals("aboutme;")) {
-					showHTML("file:///android_asset/docs/aboutMOA.html", true);
+					showHTML("file:///android_asset/About_MoA/index.html", true);
 					return true;
 				}
 				if (cmdstr.equals("man;")) {
-					showHTML("file://" + internalDir
-							+ "/additions/en/maxima.html", true);
+					showHTML(manen, true);
 					return true;
 				}
 				if (cmdstr.equals("manj;")) {
-					showHTML("file://" + internalDir
-							+ "/additions/ja/maxima.html", true);
+					showHTML(manjp, true);
 					return true;
 				}
 
@@ -550,7 +555,14 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 			maximaProccess.clearStringBuilder();
 			while (isStartQepcadString(resString)) {
 				List<String> list = new ArrayList<String>();
-				list.add("/data/data/jp.yhonda/files/additions/qepcad/qepcad.sh");
+				// qepcad reads its help file from $qe/bin and talks to maxima via files.
+				list.add("/system/bin/sh");
+				list.add("-c");
+				list.add("qe=\"$3\"; export qe; exec \"$0\" < \"$1\" > \"$2\"");
+				list.add(NativeBinaries.path(this, NativeBinaries.QEPCAD));
+				list.add(internalDir + "/qepcad_input.txt");
+				list.add(internalDir + "/qepcad_output.txt");
+				list.add(internalDir + "/additions/qepcad");
 				CommandExec qepcadcom = new CommandExec();
 				try {
 					qepcadcom.execCommand(list);
@@ -566,25 +578,9 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 				maximaProccess.clearStringBuilder();
 			}
 
-			if (isGraphFile()) {
-				List<String> list = new ArrayList<String>();
-				if (CpuArchitecture.getCpuArchitecture().equals(CpuArchitecture.X86)) {
-					// list.add(internalDir + "/additions/gnuplot/bin/gnuplot.x86");
-					list.add("/data/data/jp.yhonda/files/additions/gnuplot/bin/gnuplot.x86");
-				} else {
-					list.add(internalDir + "/additions/gnuplot/bin/gnuplot");
-				}
-				list.add("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
-				CommandExec gnuplotcom = new CommandExec();
-				try {
-					gnuplotcom.execCommand(list);
-				} catch (Exception e) {
-					Log.d("MoA", "exception6");
-				}
-				if ((new File("/data/data/jp.yhonda/files/maxout.html"))
-						.exists()) {
-					showGraph();
-				}
+			// Maxima runs gnuplot itself; a plot command leaves maxout.html.
+			if (new File(internalDir, "maxout.html").exists()) {
+				showGraph();
 			}
 
 			displayMaximaCmdResults(resString);
@@ -745,35 +741,36 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 	}
 
 	private void showGraph() {
-		if ((new File("/data/data/jp.yhonda/files/maxout.html")).exists()) {
-			showHTML("file:///data/data/jp.yhonda/files/maxout.html", false);
+		File graph = new File(internalDir, "maxout.html");
+		if (graph.exists()) {
+			showHTML("file://" + graph.getAbsolutePath(), false);
 		} else {
 			Toast.makeText(this, getString(R.string.toast_no_graph), Toast.LENGTH_LONG).show();
 		}
 	}
 
 	private void removeTmpFiles() {
-		File a = new File("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
+		// gnuplot scripts and data written by plot2d/plot3d/draw
+		File[] scripts = internalDir.listFiles();
+		if (scripts != null) {
+			for (File f : scripts) {
+				if (f.isFile() && f.getName().endsWith(".gnuplot")) {
+					f.delete();
+				}
+			}
+		}
+		File a = new File(internalDir, "maxout.html");
 		if (a.exists()) {
 			a.delete();
 		}
-		a = new File("/data/data/jp.yhonda/files/maxout.html");
+		a = new File(internalDir, "qepcad_input.txt");
 		if (a.exists()) {
 			a.delete();
 		}
-		a = new File("/data/data/jp.yhonda/files/qepcad_input.txt");
-		if (a.exists()) {
-			a.delete();
-		}
-	}
-
-	private Boolean isGraphFile() {
-		File a = new File("/data/data/jp.yhonda/files/maxout" + maximaProccess.getPID() + ".gnuplot");
-		return (a.exists());
 	}
 
 	private Boolean isQepcadFile() {
-		File a = new File("/data/data/jp.yhonda/files/qepcad_input.txt");
+		File a = new File(internalDir, "qepcad_input.txt");
 		return (a.exists());
 	}
 
@@ -791,14 +788,42 @@ public class MaximaOnAndroidActivity extends AppCompatActivity implements
 		finish();
 	}
 	
-	private boolean maximaBinaryExists() {
-		CpuArchitecture.initCpuArchitecture();
-		String res=CpuArchitecture.getMaximaFile();
-		if (res.startsWith("not")) {
-			return false;
+	/*
+	 * The manual moved from maxima-doc/[en/]<lang>/maxima.html (Maxima 5.41) to
+	 * maxima-doc/<lang>/index.html; map a stored choice to the new layout.
+	 */
+	private String migrateManualURL(SharedPreferences settings) {
+		String url = settings.getString("manURL", manen);
+		Matcher m = Pattern.compile("maxima-doc/(?:en/)?([A-Za-z_]+)/maxima\\.html$").matcher(url);
+		if (m.find()) {
+			url = "file:///android_asset/maxima-doc/" + m.group(1) + "/index.html";
+			settings.edit().putString("manURL", url).apply();
 		}
-		return((new File(internalDir.getAbsolutePath()+"/"+res)).exists());
-		
+		return url;
+	}
+
+	private boolean maximaBinaryExists() {
+		return NativeBinaries.get(this, NativeBinaries.MAXIMA).exists();
+	}
+
+	/* An app update may change the bundled additions, so reinstall them. */
+	private long appVersionCode() {
+		try {
+			return PackageInfoCompat.getLongVersionCode(
+					getPackageManager().getPackageInfo(getPackageName(), 0));
+		} catch (PackageManager.NameNotFoundException e) {
+			return -1;
+		}
+	}
+
+	private long installedAppVersionCode() {
+		return getSharedPreferences("maxima", MODE_PRIVATE)
+				.getLong("appVersionCode", -1);
+	}
+
+	private void saveInstalledAppVersionCode() {
+		getSharedPreferences("maxima", MODE_PRIVATE).edit()
+				.putLong("appVersionCode", appVersionCode()).apply();
 	}
 
 	@Override

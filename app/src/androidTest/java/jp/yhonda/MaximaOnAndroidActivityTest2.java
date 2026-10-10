@@ -65,12 +65,6 @@ public class MaximaOnAndroidActivityTest2 {
                 "Japanese",
                 "Portuguese",
                 "Spanish"};
-        String[] manXPATH = {"/html/body/p[1]/i",
-                "/html/body/p[2]",
-                "/html/body/p[1]",
-                "/html/body/p[2]",
-                "/html/body/p[1]/em",
-                "/html/body/p[1]/em"};
         String[] manSentence = {"Maxima é um sistema de álgebra computacional, implementado em Lisp.",
                 "Maxima is a computer algebra system, implemented in Lisp.",
                 "Maxima ist ein Computeralgebrasystem, das in Lisp programmiert ist.",
@@ -88,9 +82,11 @@ public class MaximaOnAndroidActivityTest2 {
             // Go back to Maxima and open the manual
             pressBack();
             openMenuAndSelect("Manual");
-            // The manual in the chosen language is displayed
+            // The manual in the chosen language is displayed: its first paragraph
+            // mentioning Lisp. (Read via getText(): the DOM-based matchers garble
+            // non-ASCII text.)
             waitUntil(() -> onWebView()
-                    .withElement(findElement(Locator.XPATH, manXPATH[lang]))
+                    .withElement(findElement(Locator.XPATH, "(//p[contains(., 'Lisp')])[1]"))
                     .check(webMatches(getText(), containsString(manSentence[lang]))), 15000);
             // Go back to Maxima
             pressBack();

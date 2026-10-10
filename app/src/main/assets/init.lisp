@@ -20,13 +20,21 @@
 */
 |#
 
+;;; The installer writes *maxima-dir* and *moa-files-dir* (the app's files
+;;; directory, with a trailing slash) before here.
+(defvar *moa-files-dir*
+  (namestring (merge-pathnames "../" (concatenate 'string *maxima-dir* "/"))))
+(defun moa-file (name) (concatenate 'string *moa-files-dir* name))
+
 ;;; set up maxima_tempdir
-(ensure-directories-exist "/data/data/jp.yhonda/files/")
+(ensure-directories-exist *moa-files-dir*)
 
 (defun maxima::getpid () (si::getpid))
 (defun maxima-getenv (a)
     (cond ((string-equal a "MAXIMA_PREFIX") *maxima-dir*)
-          ((string-equal a "MAXIMA_TEMPDIR") "/data/data/jp.yhonda/files/")))
+          ((string-equal a "MAXIMA_TEMPDIR") *moa-files-dir*)
+          ;; Maxima >= 5.4x creates the user dir at startup; there is no HOME.
+          ((string-equal a "MAXIMA_USERDIR") (moa-file "maxima-userdir"))))
 (setq *maxima-default-layout-autotools* "false")
 (setq *autoconf-prefix* *maxima-dir*)
 (setq *maxima-source-root* *maxima-dir*)
@@ -259,27 +267,42 @@
 
 ;;; Dropbox support
 (let ((top (pop $file_search_maxima))) 
-    (push "/sdcard/Download/$$$.txt" $file_search_maxima) 
+    (push "/sdcard/Download/###.txt" $file_search_maxima) 
     (push top $file_search_maxima))
 (let ((top (pop $file_type_maxima))) 
     (push "txt" $file_type_maxima) 
     (push top $file_type_maxima))
 
-;;; qepcad support
-(defun $system (&rest args)
+;;; system() support: qepcad is run by the app, everything else by the shell.
+;;; defmfun turns compiled calls to $system into calls to $system-impl, so
+;;; both have to be replaced. Maxima's own version runs /bin/sh, which only
+;;; exists on Android 10 and later.
+(defun moa-system (&rest args)
   (let ((bashline "bash -c 'export qe="))
-    (if (>= (string> (first args) bashline) 
-            (length bashline))
+    (if (and (stringp (first args))
+             (>= (or (string> (first args) bashline) 0)
+                 (length bashline)))
       ;; perform qepcad
       (progn
         (format t "start qepcad~A" *prompt-suffix*)
-        (read-line)))))
+        (read-line))
+      (ext:run-program "/system/bin/sh"
+                       (list "-c" (format nil "~{~a~^ ~}" args))
+                       :output *standard-output*))))
+(setf (symbol-function '$system) #'moa-system)
+(setf (symbol-function '$system-impl) #'moa-system)
 
+;;; gnuplot is shipped as a native library; the app passes its path.
+(let ((gnuplot (ext:getenv "MOA_GNUPLOT")))
+  (when gnuplot (setq $gnuplot_command gnuplot)))
+
+;;; Maxima >= 5.4x search templates are Lisp wildcard paths: ### is the file
+;;; name, and {a,b} alternatives are no longer supported.
 (let ((top (pop $file_search_lisp))) 
-    (push "/data/data/jp.yhonda/files/additions/qepcad/qepmax/$$$.{lsp,lisp,fasl}" $file_search_lisp) 
+    (push (moa-file "additions/qepcad/qepmax/###.lisp") $file_search_lisp) 
     (push top $file_search_lisp))
 (let ((top (pop $file_search_maxima))) 
-    (push "/data/data/jp.yhonda/files/additions/qepcad/qepmax/$$$.{mac,mc}" $file_search_maxima) 
+    (push (moa-file "additions/qepcad/qepmax/###.mac") $file_search_maxima) 
     (push top $file_search_maxima))
 
 
@@ -287,24 +310,24 @@
   (if (not (boundp '$qepcad_installed_dir))                                 
       (add2lnc '$qepcad_installed_dir $values))                             
   (defparameter $qepcad_installed_dir                                              
-                "/data/data/jp.yhonda/files/additions/qepcad")
+                (moa-file "additions/qepcad"))
   (if (not (boundp '$qepcad_input_file))                                 
       (add2lnc '$qepcad_input_file $values))                             
   (defparameter $qepcad_input_file                                              
-                "/data/data/jp.yhonda/files/qepcad_input.txt")           
+                (moa-file "qepcad_input.txt"))           
   (if (not (boundp '$qepcad_output_file))                                       
       (add2lnc '$qepcad_output_file $values))                                   
   (defparameter $qepcad_output_file                                             
-                "/data/data/jp.yhonda/files/qepcad_output.txt")
+                (moa-file "qepcad_output.txt"))
   (if (not (boundp '$qepcad_file_pattern))                                       
       (add2lnc '$qepcad_file_pattern $values))                                   
-  (defparameter $qepcad_file_pattern "/data/data/jp.yhonda/files/qepcad*.txt")
+  (defparameter $qepcad_file_pattern (moa-file "qepcad*.txt"))
   (if (not (boundp '$qepcad_option))                                       
       (add2lnc '$qepcad_option $values))                                   
   (defparameter $qepcad_option " +N20000000 +L100000 "))
 
 ;;; always save support
-(defvar *save_file* "/data/data/jp.yhonda/files/saveddata")
+(defvar *save_file* (moa-file "saveddata"))
 (defun $ssave () (meval `(($save) ,*save_file* $labels ((mequal) $linenum $linenum))) t)
 (defun $srestore () (load *save_file*) t)
 
@@ -312,7 +335,7 @@
 
 ($set_plot_option '((mlist) $plot_format $gnuplot))
 ($set_plot_option '((mlist) $gnuplot_term $canvas))
-($set_plot_option '((mlist) $gnuplot_out_file "/data/data/jp.yhonda/files/maxout.html"))
+($set_plot_option `((mlist) $gnuplot_out_file ,(moa-file "maxout.html")))
 (setq $draw_graph_terminal '$canvas)
   
 ;;; displa support
@@ -327,20 +350,30 @@
 	   (format t "$$$$$$ RO2 ~A $$$$$$" (maxima::$tex1 form)))
       (funcall old-displa form))))
 
+;;; lisp-utils/defsystem.lisp must be loaded.
+;;; Share packages such as draw, graphs and linearalgebra build themselves with
+;;; (mk:oos ... :compile), which needs a C compiler for ECL. There is none on
+;;; the device, so load their sources instead. MK:OOS is a copy of
+;;; MK:OPERATE-ON-SYSTEM, so both are replaced.
+($load "lisp-utils/defsystem")
+(let ((oos (symbol-function 'mk::operate-on-system)))
+  (flet ((moa-oos (name operation &rest args)
+           (apply oos name (if (eq operation :compile) :load operation)
+                  :load-source-instead-of-binary t args)))
+    (setf (symbol-function 'mk::operate-on-system) #'moa-oos
+          (symbol-function 'mk::oos) #'moa-oos)))
+
 ($load '$draw)
 
-($set_draw_defaults                                                             
+($set_draw_defaults                                                            
    '((mequal simp) $terminal $canvas)                                           
-   '((mequal simp) $file_name "/data/data/jp.yhonda/files/maxout"))             
+   `((mequal simp) $file_name ,(moa-file "maxout")))             
 
 ;;; /data/local/tmp/maxima-init.mac
 (setq $file_search_maxima                                                  
-        ($append '((mlist) "/data/local/tmp/###.{mac,mc}")                  
+        ($append '((mlist) "/data/local/tmp/###.mac")                  
                  $file_search_maxima))                               
 (if (probe-file "/data/local/tmp/maxima-init.mac") ($load "/data/local/tmp/maxima-init.mac"))
-
-;;; lisp-utils/defsystem.lisp must be loaded.
-($load "lisp-utils/defsystem")
 
 
 ;;; some functions in matrun.lisp does not work. They are redefined here.

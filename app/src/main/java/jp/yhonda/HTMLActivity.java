@@ -44,6 +44,8 @@ public class HTMLActivity extends AppCompatActivity {
 		setContentView(R.layout.htmlactivity);
 		webview = (WebView) findViewById(R.id.webViewInHTMLActivity);
 		webview.getSettings().setJavaScriptEnabled(true);
+		// Graphs are loaded from file:///data/... (maxout.html); file access is off by default since targetSdk 30.
+		webview.getSettings().setAllowFileAccess(true);
 		webview.setWebViewClient(new WebViewClient() {
 		});
 		webview.getSettings().setBuiltInZoomControls(true);
@@ -86,7 +88,7 @@ public class HTMLActivity extends AppCompatActivity {
 	}
 
 	public void loadURLonCreate() {
-		File f = new File("/data/data/jp.yhonda/files/maxout.html");
+		File f = new File(getFilesDir(), "maxout.html");
 		if (f.exists()) {
 			Log.v("MoA", "loadURLonCreate" + String.valueOf(f.length()));
 		}

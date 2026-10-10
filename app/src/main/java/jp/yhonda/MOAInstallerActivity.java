@@ -23,20 +23,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.StatFs;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public final class MOAInstallerActivity extends AppCompatActivity {
@@ -63,6 +56,7 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 		if (!removeMaximaFiles()) {
 			msg.setText(R.string.deletion_of_existing_files__failed);
 			install(10);
+			return;
 		}
 
 		intStorageAvail = Math.abs(internalFlashAvail() - 5);
@@ -71,16 +65,18 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 		if (intStorageAvail < minimumStorageSize) {
 			msg.setText(R.string.storage_insufficient_for_maxima_data);
 			install(10);
+			return;
 		}
 		installedDir = internalDir;
-		install(0); // at the UnzipAsyncTask, install(1), install(2) and install(3)
+		install(0); // at the UnzipAsyncTask, install(1) and install(2)
 		// will be called.
 	}
 
 
 	public void install(int stage) {
 		// Where to Install
-		// maxima, init.lisp : internalDir
+		// maxima, gnuplot, qepcad : nativeLibraryDir (extracted by the package installer)
+		// additions, init.lisp : internalDir
 		// maxima-5.X.0 : installedDir
 		Intent data = null;
 		Intent origIntent = this.getIntent();
@@ -96,59 +92,27 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 				break;
 			}
 			case 1: {
-				if (!(chmod755(internalDir.getAbsolutePath() + "/additions/gnuplot/bin/gnuplot") &&
-						chmod755(internalDir.getAbsolutePath() + "/additions/gnuplot/bin/gnuplot.x86") &&
-						chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/bin/qepcad") &&
-						chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/bin/qepcad.x86") &&
-						chmod755(internalDir.getAbsolutePath() + "/additions/qepcad/qepcad.sh") &&
-						chmod755(internalDir.getAbsolutePath() + "/additions/cpuarch.sh"))) {
-					Log.v("MoA","chmod755 failed.");
+				if (!NativeBinaries.get(this, NativeBinaries.MAXIMA).exists()) {
+					Log.v("MoA","maxima binary not found in nativeLibraryDir.");
 					install(10);
-					me.finish();
-				}
-				CpuArchitecture.initCpuArchitecture();
-				if (CpuArchitecture.getCpuArchitecture().startsWith("not")){
-					Log.v("MoA","Install of additions failed.");
-					install(10);
-					me.finish();
-				}
-				// Existence of file x86 is used in qepcad.sh
-				if (CpuArchitecture.getCpuArchitecture().equals(CpuArchitecture.X86)) {
-					File x86File=new File(internalDir.getAbsolutePath()+"/x86");
-					if (!x86File.exists()) {
-						x86File.createNewFile();
-					}
-				}
-				String maximaFile=CpuArchitecture.getMaximaFile();
-				if (maximaFile.startsWith("not")) {
-					Log.v("MoA","Install of additions failed.");
-					install(10);
-					me.finish();
+					return;
 				}
 				String initlispPath = internalDir.getAbsolutePath()
 						+ "/init.lisp";
 				String firstLine = "(setq *maxima-dir* \""
 						+ installedDir.getAbsolutePath() + "/maxima-" + vers
-						+ "\")\n";
+						+ "\")\n"
+						+ "(defvar *moa-files-dir* \""
+						+ internalDir.getAbsolutePath() + "/\")\n";
 				copyFileFromAssetsToLocal("init.lisp", initlispPath, firstLine);
-				Log.d("My Test", "Clicked!1.1");
-				UnzipAsyncTask uzt = new UnzipAsyncTask(this);
-				uzt.setParams(this.getAssets().open(maximaFile + ".zip"),
-						internalDir.getAbsolutePath(), getString(R.string.install_maxima_binary),
-						"maxima binary installed");
-				uzt.execute(1);
-				break;
-			}
-			case 2: {
-				chmod755(internalDir.getAbsolutePath() + "/" + CpuArchitecture.getMaximaFile());
 				UnzipAsyncTask uzt = new UnzipAsyncTask(this);
 				uzt.setParams(this.getAssets().open("maxima-" + vers + ".zip"),
 						installedDir.getAbsolutePath(), getString(R.string.install_maxima_data),
 						"maxima data installed");
-				uzt.execute(2);
+				uzt.execute(1);
 				break;
 			}
-			case 3: {
+			case 2: {
 				data = new Intent();
 				data.putExtra("sender", "MOAInstallerActivity");
 				setResult(RESULT_OK, data);
@@ -194,10 +158,6 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 		fileInputStream.close();
 	}
 
-	private boolean chmod755(String filename) {
-		return (new File(filename).setExecutable(true,true));
-	}
-	
 	private boolean removeMaximaFiles() {
 		MaximaVersion prevVers = new MaximaVersion();
 		prevVers.loadVersFromSharedPrefs(this);
@@ -214,7 +174,8 @@ public final class MOAInstallerActivity extends AppCompatActivity {
 				internalDir.getAbsolutePath() + "/maxima.x86",
 				internalDir.getAbsolutePath() + "/maxima.pie",
 				internalDir.getAbsolutePath() + "/maxima.x86.pie",
-				internalDir.getAbsolutePath() + "/additions", maximaDirPath };
+				internalDir.getAbsolutePath() + "/additions",
+				internalDir.getAbsolutePath() + "/maxima-userdir", maximaDirPath };
 		for (int i = 0; i < filelist.length; i++) {
 			if ((filelist[i] != null) && (new File(filelist[i])).exists()) {
 				boolean res=recursiveRemoveFileDirectory(filelist[i]);
